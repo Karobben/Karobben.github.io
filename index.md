@@ -3,7 +3,7 @@
 ## A General Index is Here
 
 
-# [R](R/indes.html)
+# [R](R/index.html)
 
 ## GGplot
 
