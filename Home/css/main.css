@@ -249,7 +249,7 @@ button:focus {
 }
 
 #blog .blog-item-img img { /*图片*/
-  width: 90%;
+  width: 200px;
   height:200px;
   border-radius: 40px;
 }
