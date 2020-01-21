@@ -2,6 +2,7 @@
 
 ## A General Index is Here
 
+# [Home Page](home.html)
 
 # [R](R/index.html)
 
