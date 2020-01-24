@@ -295,12 +295,14 @@ button:focus {
 }
 .container{
   max-width: 100%;
-  padding-left: 300px;
+  padding-left: 280px;
 }
 
-
+.wrapper{
+  padding:3px;
+}
 #blog .blog-item-wrapper {
-  max-width:350px;
+  max-width:310px;
   float: left;
   background: #fff;
   border-radius: 3px; /*圆角*/
