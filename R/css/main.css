@@ -181,7 +181,7 @@ a:not([href]):not([tabindex]):focus, a:not([href]):not([tabindex]):hover {
 
 .dropdown-content a {
   color: black;
-  padding: #px #px;
+  padding: #px;
   text-decoration: none;
   display: block;
   
@@ -288,7 +288,6 @@ button:focus {
 /* ==========================================================================
    Blog 
    ========================================================================== */
-
 .row{
   max-width: 100%;
   
@@ -299,10 +298,12 @@ button:focus {
 }
 
 .wrapper{
+  width:300px;
   padding:3px;
 }
-#blog .blog-item-wrapper {
+.blog-item-wrapper {
   max-width:310px;
+  min-width:310px;
   float: left;
   background: #fff;
   border-radius: 3px; /*圆角*/
@@ -310,53 +311,53 @@ button:focus {
   -webkit-transition: transform 0.2s linear, -webkit-box-shadow 0.2s linear;
   -moz-transition: transform 0.2s linear, -moz-box-shadow 0.2s linear;
   transition: transform 0.2s linear, box-shadow 0.2s linear;
-  
+  padding-left: ;
 }
 
-#blog .blog-item-wrapper:hover {
+.blog-item-wrapper:hover {
   box-shadow: 0px 10px 50px 0px rgba(84, 110, 122, 0.35);
   -webkit-transform: translateY(-50px); /*悬停动画*/
   transform: translateY(-10px);
 }
 
-#blog .blog-item-wrapper:hover .blog-item-img:before {
+.blog-item-wrapper:hover .blog-item-img:before {
   opacity: 1;
 }
 
-#blog .blog-item-img {
+.blog-item-img {
   position: relative;
+  width: 300px;
 }
 
-#blog .blog-item-img img { /*图片*/
-  width: 100%;
-  border-radius: 40px;
+.blog-item-img img { /*图片*/
+  width: 310px;
 }
 
-#blog .blog-item-text {
+.blog-item-text {
   padding: 10px 30px;
 }
 
-#blog .blog-item-text .date {
+.blog-item-text .date {
   font-size: 14px;
   margin-bottom: 10px;
 }
 
-#blog .blog-item-text .date i {
+.blog-item-text .date i {
   margin-right: 7px;
 }
 
-#blog .blog-item-text h3 {
+.blog-item-text h3 {
   line-height: 26px;
   font-size: 18px;
   font-weight: 500;
   margin-bottom: 10px;
 }
 
-#blog .blog-item-text h3 a {
+.blog-item-text h3 a {
   color: #263238;
 }
 
-#blog .blog-item-text h3 a:hover {
+.blog-item-text h3 a:hover {
   color: #0066cc;
 }
 
@@ -391,3 +392,4 @@ button:focus {
   color: teal;
   font-size: 18px;
 }
+

@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>R</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <link href="http://cdn.bootcss.com/highlight.js/8.0/styles/monokai_sublime.min.css" rel="stylesheet">  
+    <script src="http://cdn.bootcss.com/highlight.js/8.0/highlight.min.js"></script>  
+    <script >hljs.initHighlightingOnLoad();</script>  
+
+    <script>
+      var _hmt = _hmt || [];
+      (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?8442e6ecc87d878298ba7d3bd0a5484c";
+        var s = document.getElementsByTagName("script")[0]; 
+        s.parentNode.insertBefore(hm, s);
+      })();
+    </script>
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
+    </script>
+  </head> 
+
+  <!-- sider bar
+  ================================================== -->
+  <header class="s-header">
+    <nav class="header__nav-wrap">
+        <ul class="header__nav" >
+            <li ><a href="../index.html" title="" style="color: white;">Home</a></li><br>
+            <li style="color: white;"><a  style="color: white;" href="https://www.yuque.com/liuwenkan/bni63i/exvh1q">R base</a></li>
+            <li class="dropdown">
+                <button class="dropbtn">ggplot</button>              
+                <div class="dropdown-content">            
+                <a href="R-gitgg.html">
+                  ggextral in github</a>
+                <a href="https://www.yuque.com/liuwenkan/bni63i/bu4wnw">Map</a>                 
+                </div>  
+            </li>
+            <li class="dropdown">
+                <button class="dropbtn">Data Science</button>              
+                <div class="dropdown-content">            
+                <a href="R-Normaliz.html"> Normalization</a>            
+                </div>  
+            </li>
+            <li ><a href='https://www.yuque.com/liuwenkan/bni63i' style="color: white;">Yuque Notes</a></li>
+        </ul> <!-- end header__nav -->
+    </nav> <!-- end header__nav-wrap -->
+</header> <!-- end s-header -->
+
+
+
+
+
+
+  <body>
+      
+    <!-- Header Section Start -->
+    <header id="slider-area">  
+      <nav class="navbar navbar-expand-md fixed-top scrolling-navbar bg-white">
+        <div class="container">          
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav mr-auto w-100 justify-content-end">
+              <li class="nav-item">
+                <a class="nav-link page-scroll" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link page-scroll" href="https://www.yuque.com/liuwenkan/bni63i">R</a>
+              </li>  
+              <li class="nav-item">
+                <a class="nav-link page-scroll" href="https://www.yuque.com/liuwenkan/kkgzbw">Python</a>
+              </li>                            
+              <li class="nav-item">
+                <a class="nav-link page-scroll" href="https://www.yuque.com/liuwenkan/nttf8x">Bash</a>
+              </li>            
+              <li class="nav-item">
+                <a class="nav-link page-scroll" href="https://www.yuque.com/liuwenkan/vbip5a">Ptotocol</a>
+              </li> 
+              <li class="nav-item">
+                <a class="nav-link page-scroll" href="https://www.yuque.com/liuwenkan">Notes</a>
+              </li>    
+              <li class="nav-item">
+                <a class="nav-link page-scroll" href="https://www.yuque.com/liuwenkan/tza8ge">Others</a>
+              </li>
+            </ul>              
+          </div>
+        </div>
+      </nav> 
+
+    </header>
+    <!-- Header Section End --> 
+
+    <!-- Blog Section -->
+    <section id="blog" class="section" style="max-width:75%;">
+      <!-- Container Starts -->
+      <div class="container" >
+        <div class="section-header" style="padding-top:60px;">    
+        <img src="" width="400px" style="float:right;">   
+        <h2 style="padding-top:100px; font-size:60px;">Data Normalization</h2>
+        <p style="padding-top:20px; font-size:20px;">Karobben<br>20 Jan 2020<br></p>
+        </div>
+      </div>
+    </section>
+    <!-- blog Section End -->
+
+    <!-- Section 1-->
+    <div style="padding-left:310px;padding-right:320px;">
+        <div>
+            <h2 id='a1'>1 Max-Min</h2>
+        </div>
+        <div ng-include="'template/header.html'" ></div>    
+        <div>
+            <pre>
+                <code class="lang-javascript">
+    for(ii in 1:ncol(a)){
+        a[,ii] <- (a[,ii]-min(a[,ii]))/(max(a[,ii])-min(a[,ii]))
+    }
+                </code>
+            </pre>
+        </div>
+    </div>
+    <!-- Section 1 End-->
+
+    <!-- Section 2-->
+    <div style="padding-left:310px;padding-right:320px;">
+        <div>
+            <h2 id='a1'>2 Z-score</h2>
+        </div>
+        <div ng-include="'template/header.html'" ></div>    
+        <div>
+            <pre>
+                <code class="lang-javascript">
+    for(ii in 1:ncol(a)){
+        a[,ii] <- (a[,ii]-mean(a[,ii]))/sd(a[,ii])
+    }
+                </code>
+            </pre>
+        </div>
+    </div>
+    <!-- Section 2 End-->
+
+    <!-- Section 3-->
+    <div style="padding-left:310px;padding-right:320px;">
+        <div>
+            <h2 id='a1'>3 Soft-max Normalization</h2>
+        </div>
+        <div ng-include="'template/header.html'" ></div>    
+        <div>
+            <pre>
+                <code class="lang-javascript">
+    for(ii in 1:ncol(a)){
+        a[,ii] <- pnorm((a[,ii]-mean(a[,ii]))/sd(a[,ii]))
+    }                
+                </code>
+            </pre>
+        </div>
+    </div>
+    <!-- Section 3 End-->
+
+    <!-- Section 4-->
+    <div style="padding-left:310px;padding-right:320px;">
+        <div>
+            <h2 id='a1'>4 Logistic/Softmax</h2>
+        </div>
+        <div ng-include="'template/header.html'" ></div>    
+        <div>
+            <pre>
+                <code class="lang-javascript">
+    for(ii in 1:ncol(a)){
+        a[,ii] <- 1/(1+ exp(-a[,ii]))
+    }
+                </code>
+            </pre>
+        </div>
+    </div>
+    <!-- Section 4 End-->
+
+    <!-- Section 5-->
+    <div style="padding-left:310px;padding-right:320px;">
+        <div>
+            <h2 id='a1'>5 模糊量化模式</h2>
+        </div>
+        <div ng-include="'template/header.html'" ></div>    
+        <div>
+            <pre>
+                <code class="lang-javascript">
+    for(ii in 1:ncol(a)){
+        x<- a[,ii]
+        a[,ii] <- 1/2 +1/2sin(pi/(max(x)-mean(x))(x-max(x)-mean(x)/2)) *x
+    }
+                </code>
+            </pre>
+        </div>
+    </div>
+    <!-- Section 5 End-->
+
+    <!-- Section 6-->
+    <div style="padding-left:310px;padding-right:320px;">
+        <div>
+            <h2 id='a1'>6 log</h2>
+        </div>
+        <div ng-include="'template/header.html'" ></div>    
+        <div>
+            <pre>
+                <code class="lang-javascript">
+    for(ii in 1:ncol(a)){
+    a[,ii][which(a[,ii]>0)] <- log(a[,ii][which(a[,ii]>0)],10)/log(max(a[,ii]),10)
+    a[,ii][which(a[,ii]<0)] <- log(a[,ii][which(a[,ii]<0)](-1),10)(-1)/log(mean(a[,ii]) *(-1))
+    }
+            </code>
+            </pre>
+        </div>
+    </div>
+    <!-- Section 6 End-->
+
+    <!-- Section 7-->
+    <div style="padding-left:310px;padding-right:320px;">
+        <div>
+            <h2 id='a1'>7 atan</h2>
+        </div>
+        <div ng-include="'template/header.html'" ></div>    
+        <div>
+            <pre>
+                <code class="lang-javascript">
+    for(ii in 1:ncol(a)){
+    a[,ii][which(a[,ii]>0)] <- atan(a[,ii][which(a[,ii]>0)])*2/pi
+    a[,ii][which(a[,ii]<0)] <- atan(a[,ii][which(a[,ii]<0)])2/pi (-1)
+    }
+            </code>
+            </pre>
+        </div>
+    </div>
+    <!-- Section 7 End-->
+
+
+    <!-- Footer Section Start -->
+     
+      <!-- Copyright Start  -->
+      <div id="copyright">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="site-info float-left">
+                <li>Karobben  2020</li>
+              </div>           
+              <div class="float-right">  
+                <li>contack me: <a href="mailto:a591465908@outlook.com">e-mail</a> </li>
+              </div>
+              <li align = "center">
+                <span id="busuanzi_container_site_pv">~<span id="busuanzi_value_site_pv"></span>~</span>
+              </span>
+              </li>   
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Copyright End -->
+
+
+    </footer>
+    <!-- Footer Section End --> 
+
+    <!-- Go To Top Link -->
+    <a href="#" class="back-to-top">
+      <i class="lni-arrow-up"></i>
+    </a>
+
+    <div id="loader">
+      <div class="spinner">
+        <div class="double-bounce1"></div>
+        <div class="double-bounce2"></div>
+      </div>
+    </div>    
+
+    <!-- jQuery first, then Tether, then Bootstrap JS. -->
+
+    
+      
+
+    
+  </body>
+</html>

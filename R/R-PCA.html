@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>R</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <link href="http://cdn.bootcss.com/highlight.js/8.0/styles/monokai_sublime.min.css" rel="stylesheet">  
+    <script src="http://cdn.bootcss.com/highlight.js/8.0/highlight.min.js"></script>  
+    <script >hljs.initHighlightingOnLoad();</script>  
+
+    <script>
+      var _hmt = _hmt || [];
+      (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?8442e6ecc87d878298ba7d3bd0a5484c";
+        var s = document.getElementsByTagName("script")[0]; 
+        s.parentNode.insertBefore(hm, s);
+      })();
+    </script>
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
+    </script>
+  </head> 
+
+  <!-- sider bar
+  ================================================== -->
+  <header class="s-header">
+    <nav class="header__nav-wrap">
+        <ul class="header__nav" >
+            <li ><a href="../index.html" title="" style="color: white;">Home</a></li><br>
+            <li style="color: white;"><a  style="color: white;" href="https://www.yuque.com/liuwenkan/bni63i/exvh1q">R base</a></li>
+            <li class="dropdown">
+                <button class="dropbtn">ggplot</button>              
+                <div class="dropdown-content">            
+                <a href="R-gitgg.html">
+                  ggextral in github</a>
+                <a href="https://www.yuque.com/liuwenkan/bni63i/bu4wnw">Map</a>                 
+                </div>  
+            </li>
+            <li class="dropdown">
+                <button class="dropbtn">Data Science</button>              
+                <div class="dropdown-content">            
+                <a href="R-Normaliz.html"> Normalization</a>            
+                </div>  
+            </li>
+            <li ><a href='https://www.yuque.com/liuwenkan/bni63i' style="color: white;">Yuque Notes</a></li>
+        </ul> <!-- end header__nav -->
+    </nav> <!-- end header__nav-wrap -->
+</header> <!-- end s-header -->
+
+
+
+
+
+  <body>
+      
+    <!-- Header Section Start -->
+    <header id="slider-area">  
+      <nav class="navbar navbar-expand-md fixed-top scrolling-navbar bg-white">
+        <div class="container">          
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav mr-auto w-100 justify-content-end">
+              <li class="nav-item">
+                <a class="nav-link page-scroll" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link page-scroll" href="https://www.yuque.com/liuwenkan/bni63i">R</a>
+              </li>  
+              <li class="nav-item">
+                <a class="nav-link page-scroll" href="https://www.yuque.com/liuwenkan/kkgzbw">Python</a>
+              </li>                            
+              <li class="nav-item">
+                <a class="nav-link page-scroll" href="https://www.yuque.com/liuwenkan/nttf8x">Bash</a>
+              </li>            
+              <li class="nav-item">
+                <a class="nav-link page-scroll" href="https://www.yuque.com/liuwenkan/vbip5a">Ptotocol</a>
+              </li> 
+              <li class="nav-item">
+                <a class="nav-link page-scroll" href="https://www.yuque.com/liuwenkan">Notes</a>
+              </li>    
+              <li class="nav-item">
+                <a class="nav-link page-scroll" href="https://www.yuque.com/liuwenkan/tza8ge">Others</a>
+              </li>
+            </ul>              
+          </div>
+        </div>
+      </nav> 
+
+    </header>
+    <!-- Header Section End --> 
+    <!-- Blog Section -->
+    <section id="blog" class="section" style="max-width:75%;">
+      <!-- Container Starts -->
+      <div class="container" >
+        <div class="section-header" style="padding-top:60px;">
+        <img src="https://cdn.nlark.com/yuque/0/2020/png/691897/1579799187944-daf761fa-ba6f-4e21-9494-39c3a32fdf2d.png">
+        <h2 style="font-size:60px;">PCR</h2>
+        <p style=" font-size:20px;">Karobben<br>24 Jan 2020<br></p>
+        </div>
+      </div>
+    </section>
+    <!-- blog Section End -->
+
+    <!-- Section 1-->
+    <div style="padding-left:310px;padding-right:320px;">
+        <div>
+            <h2 id='a1'>1 prcomp</h2>
+        </div>
+        <div ng-include="'template/header.html'" ></div>    
+        <div>
+            <pre>
+                <code class="lang-javascript">
+    # install ggbioplot
+    #install_github("vqv/ggbiplot")
+    #install.packages('plyr') 
+    data(wine)
+    wine.pca <- prcomp(wine, scale. = TRUE)
+    # bioplot
+    ggbiplot(wine.pca, obs.scale = 1, var.scale = 1,
+              groups = wine.class, ellipse = TRUE, circle = TRUE) +
+      scale_color_discrete(name = '') +
+      theme_light()
+                                  </code>
+            </pre>
+        </div>
+    </div>
+    <div style="padding-left:310px;padding-right:320px;" align='center'>
+      <img src="https://cdn.nlark.com/yuque/0/2020/png/691897/1579799187944-daf761fa-ba6f-4e21-9494-39c3a32fdf2d.png">
+    </div>
+    <!-- Section 1 End-->
+  
+    <!-- Section 2-->
+    <div style="padding-left:310px;padding-right:320px;">
+        <div>
+            <h2 id='a2'>2 Psych</h2>
+        </div>
+        <div ng-include="'template/header.html'" ></div>    
+        <div>
+            <pre>
+              <code class="lang-javascript">
+    library(psych)
+    library(ggplot2)
+    PC <- principal(wine, nfactors=2, rotate ="none")
+    pc <- data.frame(PC$scores)
+    p  <- ggplot(pc, aes(x=PC1, y=PC2,color=wine.class )) +
+      geom_point(size=4,alpha=0.5)+ 
+      theme(axis.text= element_text(size=20))+ 
+      theme(panel.grid.major =element_blank(), 
+            panel.grid.minor = element_line(color="steelblue"),
+            panel.background = element_blank(),
+            axis.line = element_line(colour = "black"))+ 
+      stat_ellipse(lwd=1,level = 0.8)
+                </code>
+            </pre>
+        </div>
+    </div>
+    <div style="padding-left:310px;padding-right:320px;" align='center'>
+      <img src="https://cdn.nlark.com/yuque/0/2020/png/691897/1579799575464-cf509636-d7bd-4f96-9df1-4965616515df.png">
+    </div>
+    <!-- Section 2 End-->
+    
+    <!-- Section 3-->
+    <div style="padding-left:310px;padding-right:320px;">
+        <div>
+            <h2 id='a3'>3 qplot</h2>
+        </div>
+        <div ng-include="'template/header.html'" ></div>    
+        <div>
+            <pre>
+                <code class="lang-javascript">
+    library(ggplot2)
+    qplot(x=PC1,y=PC2, data=pc,colour=factor(wine.class))+theme(legend.position="none")+stat_ellipse(lwd=1,level = 0.8)                </code>
+            </pre>
+        </div>
+    </div>
+    <div style="padding-left:310px;padding-right:320px;" align='center'>
+      <img src="https://cdn.nlark.com/yuque/0/2020/png/691897/1579799657726-3910122d-ac04-4ef7-aa14-fffab4d3b9c9.png">
+    </div>
+
+
+    <!-- Section 3 End-->
+
+    <!-- Section 4-->
+    <div style="padding-left:310px;padding-right:320px;">
+        <div>
+            <h2 id='a4'>Arguments for ggbioplot</h2>
+        </div>
+        <div ng-include="'template/header.html'" ></div>    
+        <div>
+            <pre>
+                <code class="lang-javascript">
+    ggbiplot(pcobj, choices = 1:2, scale = 1, pc.biplot =
+    TRUE, obs.scale = 1 - scale, var.scale = scale, groups =
+    NULL, ellipse = FALSE, ellipse.prob = 0.68, labels =
+    NULL, labels.size = 3, alpha = 1, var.axes = TRUE, circle
+    = FALSE, circle.prob = 0.69, varname.size = 3,
+    varname.adjust = 1.5, varname.abbrev = FALSE, ...)
+    pcobj # prcomp()或princomp()返回结果
+    choices # 选择轴，默认1：2
+    scale # covariance biplot (scale = 1), form biplot (scale = 0). When scale = 1, the inner product between the variables approximates the covariance and the distance between the points approximates the Mahalanobis distance.
+    obs.scale # 标准化观测值
+    var.scale # 标准化变异
+    pc.biplot # 兼容 biplot.princomp()
+    groups # 组信息，并按组上色
+    ellipse # 添加组椭圆
+    ellipse.prob # 置信区间
+    labels #向量名称
+    labels.size #名称大小
+    alpha  #点透明度 (0 = TRUEransparent, 1 = opaque)
+    circle #绘制相关环(only applies when prcomp was called with scale = TRUE and when var.scale = 1)
+    var.axes  #绘制变量线-菌相关
+    varname.size  #变量名大小
+    varname.adjust #标签与箭头距离 >= 1 means farther from the arrow
+    varname.abbrev # 标签是否缩写
+                </code>
+            </pre>
+        </div>
+    </div>
+    <!-- Section 4 End-->
+
+
+    <!-- Footer Section Start -->
+     
+      <!-- Copyright Start  -->
+      <div id="copyright">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="site-info float-left">
+                <li>Karobben  2020</li>
+              </div>           
+              <div class="float-right">  
+                <li>contack me: <a href="mailto:a591465908@outlook.com">e-mail</a> </li>
+              </div>
+              <li align = "center">
+                <span id="busuanzi_container_site_pv">~<span id="busuanzi_value_site_pv"></span>~</span>
+              </span>
+              </li>   
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Copyright End -->
+
+
+    </footer>
+    <!-- Footer Section End --> 
+
+    <!-- Go To Top Link -->
+    <a href="#" class="back-to-top">
+      <i class="lni-arrow-up"></i>
+    </a>
+
+    <div id="loader">
+      <div class="spinner">
+        <div class="double-bounce1"></div>
+        <div class="double-bounce2"></div>
+      </div>
+    </div>    
+
+    <!-- jQuery first, then Tether, then Bootstrap JS. -->
+
+    
+      
+
+    
+  </body>
+</html>

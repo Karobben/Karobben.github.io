@@ -1,196 +1,356 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>R</title>
+    <link href="css/style.css" rel="stylesheet" />
+    <script src="js/modernizr-transitions.js"></script>
+</head>
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/main.css">   
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/main.css">   
 
 
-    <script>
-      var _hmt = _hmt || [];
-      (function() {
-        var hm = document.createElement("script");
-        hm.src = "https://hm.baidu.com/hm.js?8442e6ecc87d878298ba7d3bd0a5484c";
-        var s = document.getElementsByTagName("script")[0]; 
-        s.parentNode.insertBefore(hm, s);
-      })();
-    </script>
-    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
-    </script>
-  </head> 
+<script>
+    var _hmt = _hmt || [];
+    (function() {
+    var hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?8442e6ecc87d878298ba7d3bd0a5484c";
+    var s = document.getElementsByTagName("script")[0]; 
+    s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
 
-  <!-- sider bar
-  ================================================== -->
-  <header class="s-header">
+
+<!-- sider bar
+================================================== -->
+<!-- Header Section Start -->
+<header id="slider-area">  
+    <nav class="navbar navbar-expand-md fixed-top scrolling-navbar bg-white">
+        <div class="container">          
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav mr-auto w-100 justify-content-end">
+            <li class="nav-item">
+                <a class="nav-link page-scroll" href="../index.html">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link page-scroll" href="https://www.yuque.com/liuwenkan/bni63i">R</a>
+            </li>  
+            <li class="nav-item">
+                <a class="nav-link page-scroll" href="https://www.yuque.com/liuwenkan/kkgzbw">Python</a>
+            </li>                            
+            <li class="nav-item">
+                <a class="nav-link page-scroll" href="https://www.yuque.com/liuwenkan/nttf8x">Bash</a>
+            </li>            
+            <li class="nav-item">
+                <a class="nav-link page-scroll" href="https://www.yuque.com/liuwenkan/vbip5a">Ptotocol</a>
+            </li> 
+            <li class="nav-item">
+                <a class="nav-link page-scroll" href="https://www.yuque.com/liuwenkan">Notes</a>
+            </li>    
+            <li class="nav-item">
+                <a class="nav-link page-scroll" href="https://www.yuque.com/liuwenkan/tza8ge">Others</a>
+            </li>
+            </ul>              
+        </div>
+        </div>
+    </nav> 
+
+</header>
+<!-- Header Section End --> 
+
+<header class="s-header">
     <nav class="header__nav-wrap">
-        <ul class="header__nav">
+        <ul class="header__nav" >
             <li ><a href="../index.html" title="" style="color: white;">Home</a></li><br>
-            <li style="color: white;">R base</li>
+            <li style="color: white;"><a  style="color: white;" href="https://www.yuque.com/liuwenkan/bni63i/exvh1q">R base</a></li>
             <li class="dropdown">
-              <button class="dropbtn">ggplot</button>              
-              <div class="dropdown-content">            
-                <a href="http://www.php.cn/">ggextral in github</a>
-                <a href="http://www.php.cn/">Map</a>                 
-              </div>  
+                <button class="dropbtn">ggplot</button>              
+                <div class="dropdown-content">            
+                <a href="R-gitgg.html">
+                  ggextral in github</a>
+                <a href="https://www.yuque.com/liuwenkan/bni63i/bu4wnw">Map</a>                 
+                </div>  
             </li>
             <li class="dropdown">
-              <button class="dropbtn">Data Science</button>              
-              <div class="dropdown-content">            
-                <a href="http://www.php.cn/"> Normalization</a>            
-              </div>  
+                <button class="dropbtn">Data Science</button>              
+                <div class="dropdown-content">            
+                <a href="R-Normaliz.html"> Normalization</a>            
+                </div>  
             </li>
             <li ><a href='https://www.yuque.com/liuwenkan/bni63i' style="color: white;">Yuque Notes</a></li>
         </ul> <!-- end header__nav -->
     </nav> <!-- end header__nav-wrap -->
-  </header> <!-- end s-header -->
+</header> <!-- end s-header -->
 
 
+<head><p style="padding-bottom:30px;">Karobben</p></head>
+<body style="padding-left:270px;">
+    <!-- Navigation -->
 
+    <!-- End Top Bar -->
+    <div class="content-wrapper">
+        <section id="main-content">
 
-
-
-  <body>
-    <!-- Header Section Start -->
-    <header id="slider-area">  
-      <nav class="navbar navbar-expand-md fixed-top scrolling-navbar bg-white">
-        <div class="container">          
-          <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav mr-auto w-100 justify-content-end">
-              <li class="nav-item">
-                <a class="nav-link page-scroll" href="../index.html">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link page-scroll" href="https://www.yuque.com/liuwenkan/bni63i">R</a>
-              </li>  
-              <li class="nav-item">
-                <a class="nav-link page-scroll" href="https://www.yuque.com/liuwenkan/kkgzbw">Python</a>
-              </li>                            
-              <li class="nav-item">
-                <a class="nav-link page-scroll" href="https://www.yuque.com/liuwenkan/nttf8x">Bash</a>
-              </li>            
-              <li class="nav-item">
-                <a class="nav-link page-scroll" href="https://www.yuque.com/liuwenkan/vbip5a">Ptotocol</a>
-              </li> 
-              <li class="nav-item">
-                <a class="nav-link page-scroll" href="https://www.yuque.com/liuwenkan">Notes</a>
-              </li>    
-              <li class="nav-item">
-                <a class="nav-link page-scroll" href="https://www.yuque.com/liuwenkan/tza8ge">Others</a>
-              </li>
-            </ul>              
-          </div>
-        </div>
-      </nav> 
-
-    </header>
-    <!-- Header Section End --> 
-
-    <!-- Blog Section -->
-    <section id="blog" class="section" >
-      <!-- Container Starts -->
-      <div class="container" >
-        <div class="section-header" >          
-        </div>
-        <div class="row" >
-
-          <div class="wrapper">
-            <!-- Python - Blog Item Starts -->
-            <div class="blog-item-wrapper" >
-                <div class="blog-item-img">
-                  <a href="R-gitgg.html">
-                    <img  src="img/gitplot.png" alt="" >
-                  </a>                
-                </div>
-                  <div class="blog-item-text"> 
-                  <div class="date">24 Jan 2020</div>
-                  <h3><a href="R-gitgg.html">GGgithub</a></h3>
-                  <div class="meta-tags">
-                    <span>60 ggplot related repository and raked by most starts.<br>
-                      I wiil update my blog and intruduce most of the library in this list. <br>
-                      Enjoy~
-                    </span><br>
-                  </div>
-                  </div>
-            </div>      
-          </div>
-          <!-- Blog Item Wrapper Ends-->
-          <div class="wrapper">
-            <!-- Python - Blog Item Starts -->
-            <div class="blog-item-wrapper"  >
-              <div class="blog-item-img">
-                <a href="https://www.yuque.com/liuwenkan/bni63i">
-                  <img  src="img/yuque.png" alt="" >
-                </a>                
-              </div>
-                <div class="blog-item-text"> 
-                <div class="date">24 Jan 2020</div>
-                <h3><a href="https://www.yuque.com/liuwenkan/bni63i">Yuque Notes</a></h3>
-                <div class="meta-tags">
-                  <span>Lot's of notes about statistic graphics, data science, and R base of R.<br>
-                    You can find some tutorials with lots of graphics here.
-                  </span><br>
-                </div>
-                </div>
-            </div>
-          </div>
-
-          <!-- Blog Item Wrapper Ends-->
+            <div class="row">
+                <div id="container" class="large-12 columns transitions-enabled large-centered clearfix">
+                  <!-- GGgithub -->
+                    <div class="box col3">
+                        <div class="blog-item-wrapper" >
+                            <div class="blog-item-img">
+                              <a href="R-gitgg.html">
+                                <img  src="img/gitplot.png" alt="" >
+                              </a>                
+                            </div>
+                              <div class="blog-item-text"> 
+                              <div class="date">24 Jan 2020</div>
+                              <h3><a href="R-gitgg.html">GGgithub</a></h3>
+                              <div class="meta-tags">
+                                <span>60 ggplot related repository and raked by most starts.<br>
+                                  I wiil update my blog and intruduce most of the library in this list. <br>
+                                  Enjoy~
+                                </span><br>
+                              </div>
+                              </div>
+                        </div>      
+                    </div>
+                  <!-- YuqueNotes -->
+                  <div class="box col3">
+                        <div class="blog-item-wrapper"  >
+                            <div class="blog-item-img">
+                              <a href="https://www.yuque.com/liuwenkan/bni63i">
+                                <img  src="img/yuque.png" alt="" >
+                              </a>                
+                            </div>
+                              <div class="blog-item-text"> 
+                              <div class="date">24 Jan 2020</div>
+                              <h3><a href="https://www.yuque.com/liuwenkan/bni63i">Yuque Notes</a></h3>
+                              <div class="meta-tags">
+                                <span>Lot's of notes about statistic graphics, data science, and R base of R.<br>
+                                  You can find some tutorials with lots of graphics here.
+                                </span><br>
+                              </div>
+                              </div>
+                          </div>
+                    </div>
+                  <!-- PCR -->
+                  <div class="box col3">
+                    <div class="blog-item-wrapper"  >
+                        <div class="blog-item-img">
+                          <a href="R-PCA.html">
+                            <img  src="https://cdn.nlark.com/yuque/0/2020/png/691897/1579799187944-daf761fa-ba6f-4e21-9494-39c3a32fdf2d.png" alt="" >
+                          </a>                
+                        </div>
+                          <div class="blog-item-text"> 
+                          <div class="date">24 Jan 2020</div>
+                          <h3><a href="R-PCA.html">PCR plot</a></h3>
+                          <div class="meta-tags">
+                            <span>ggbioplot, ggplot are tested for PCA plot.<br>
           
-         
-        </div>
-      </div>
-    </section>
-    <!-- blog Section End -->
-
-
-    
-    
-    <!-- Footer Section Start -->
-     
-      <!-- Copyright Start  -->
-      <div id="copyright">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-12">
-              <div class="site-info float-left">
-                <li>Karobben  2020</li>
-              </div>           
-              <div class="float-right">  
-                <li>contack me: <a href="mailto:a591465908@outlook.com">e-mail</a> </li>
-              </div>
-              <li align = "center">
-                <span id="busuanzi_container_site_pv">~<span id="busuanzi_value_site_pv"></span>~</span>
-              </span>
-              </li>   
+                            </span><br>
+                          </div>
+                          </div>
+                      </div>
+                  </div>
+                  <!-- DATA -->
+                  <div class="box col3">
+                      <div class="blog-item-wrapper"  >
+                          <div class="blog-item-img">
+                            <a href="R-Normaliz.html">
+                              <img  src="" alt="" >
+                            </a>                
+                          </div>
+                            <div class="blog-item-text"> 
+                            <h3><a href="R-Normaliz.html">Data Normolization</a></h3>
+                            <div class="date">24 Jan 2020</div>
+                            <div class="meta-tags">
+                              <span><br>
+                                1. Z-score<br>
+                                2. Soft-max<br>
+                                3. Logistic/Softmax
+                              </span><br>
+                            </div>
+                          </div>
+                      </div>
+                  </div>
+                  <!-- geom_polygon -->
+                  <div class="box col3">
+                    <div class="blog-item-wrapper"  >
+                        <div class="blog-item-img">
+                          <a href="https://www.yuque.com/liuwenkan/bni63i/bu4wnw">
+                            <img  src="https://cdn.nlark.com/yuque/0/2020/png/691897/1579465902517-0cd86c41-84f1-4840-8255-bd53afaa944d.png?x-oss-process=image/resize,w_746" alt="" >
+                          </a>                
+                        </div>
+                          <div class="blog-item-text"> 
+                          <h3><a href="https://www.yuque.com/liuwenkan/bni63i/bu4wnw">geom_polygon()</a></h3>
+                          <div class="date">24 Jan 2020</div>
+                          <div class="meta-tags">
+                            <span><br>
+                              World map<br>
+                              Connect two point with curve line<br>
+                              Plot the Earth Ball
+                            </span><br>
+                          </div>
+                          </div>
+                      </div>
+                  </div>
+                  <!-- gg3d  -->
+                  <div class="box col3">
+                      <div class="blog-item-wrapper"  >
+                          <div class="blog-item-img">
+                            <a href="https://www.yuque.com/liuwenkan/bni63i/hgbauc">
+                              <img  src="https://cdn.nlark.com/yuque/0/2020/gif/691897/1579405619050-608f97b7-5cef-4e77-b0fb-90b924fdd5e3.gif" alt="" >
+                            </a>                
+                          </div>
+                            <div class="blog-item-text"> 
+                            <h3><a href="https://www.yuque.com/liuwenkan/bni63i/hgbauc">GG3d</a></h3>
+                            <div class="date">24 Jan 2020</div>
+                            <div class="meta-tags">
+                              <span><br>
+                                What is "theta" and "phi" in ggplot3d<br>
+                              </span><br>
+                            </div>
+                          </div>
+                      </div>
+                  </div>
+                  <!-- geom_map -->
+                  <div class="box col3">
+                      <div class="blog-item-wrapper"  >
+                          <div class="blog-item-img">
+                            <a href="https://www.yuque.com/liuwenkan/bni63i/lg90t5">
+                              <img  src="https://cdn.nlark.com/yuque/0/2020/png/691897/1579786627467-be905073-1422-4905-a312-f8a4108449a9.png?x-oss-process=image/resize,w_746" alt="" >
+                            </a>                
+                          </div>
+                            <div class="blog-item-text"> 
+                            <h3><a href="https://www.yuque.com/liuwenkan/bni63i/lg90t5">geom_map()</a></h3>
+                            <div class="date">25 Jan 2020</div>
+                            <div class="meta-tags">
+                              <span><br>
+                                Plot map with geom_map function<br>
+                              </span><br>
+                            </div>
+                            </div>
+                        </div>
+                  </div>
+                  <!-- Calender -->
+                  <div class="box col3">
+                    <div class="blog-item-wrapper"  >
+                        <div class="blog-item-img">
+                          <a href="https://www.yuque.com/liuwenkan/bni63i/vk3t5q">
+                            <img  src="https://cdn.nlark.com/yuque/0/2020/png/691897/1579752347484-ce2f1a96-b99a-44ab-81f8-83d9dfaf3e56.png?x-oss-process=image/resize,w_746" alt="" >
+                          </a>                
+                        </div>
+                          <div class="blog-item-text"> 
+                          <h3><a href="https://www.yuque.com/liuwenkan/bni63i/vk3t5q">Calendar</a></h3>
+                          <div class="date">25 Jan 2020</div>
+                          <div class="meta-tags">
+                            <span><br>
+                              Draw Heatmap in Calender with ggplot <br>
+                            </span><br>
+                          </div>
+                          </div>
+                      </div>
+                  </div>
+                  <!-- Correlation -->
+                  <div class="box col3">
+                      <div class="blog-item-wrapper"  >
+                          <div class="blog-item-img">
+                            <a href="https://www.yuque.com/liuwenkan/bni63i/xxqm11">
+                              <img  src="https://cdn.nlark.com/yuque/0/2020/png/691897/1579788489000-83635ab7-5935-4c40-afd9-8b42533f0d9d.png" alt="" >
+                            </a>                
+                          </div>
+                            <div class="blog-item-text"> 
+                            <h3><a href="https://www.yuque.com/liuwenkan/bni63i/xxqm11">Correlation</a></h3>
+                            <div class="date">25 Jan 2020</div>
+                            <div class="meta-tags">
+                            </div>
+                            </div>
+                        </div>
+                  </div>
+                  <!-- NetWork -->
+                  <div class="box col3">
+                    <div class="blog-item-wrapper"  >
+                        <div class="blog-item-img">
+                          <a href="https://www.yuque.com/liuwenkan/bni63i/ubuvr4">
+                            <img  width='310px' src="https://cdn.nlark.com/yuque/0/2020/gif/691897/1579790116707-76bbd3ea-acd7-416c-827d-b36beb672608.gif" alt="" >
+                          </a>                
+                        </div>
+                          <div class="blog-item-text"> 
+                          <h3><a href="https://www.yuque.com/liuwenkan/bni63i/ubuvr4">NetWorkPlot</a></h3>
+                          <div class="date">25 Jan 2020</div>
+                          <div class="meta-tags">
+                        </div>
+                        </div>
+                    </div>
+                  </div>
+                  <!-- pheatmap -->
+                  <div class="box col3">
+                    <div class="blog-item-wrapper"  >
+                        <div class="blog-item-img">
+                          <a href="https://www.yuque.com/liuwenkan/bni63i/cn8rp5">
+                            <img  src="https://cdn.nlark.com/yuque/0/2020/png/691897/1579958638022-54f7fd13-ff7d-4a6b-a094-6d75603ed5a9.png" alt="" >
+                          </a>                
+                        </div>
+                          <div class="blog-item-text"> 
+                          <h3><a href="https://www.yuque.com/liuwenkan/bni63i/cn8rp5">Pheatmap</a></h3>
+                          <div class="date">25 Jan 2020</div>
+                          <div class="meta-tags">
+                          </div>
+                        </div>
+                    </div>
+                  </div>
+          </div>
+                <!--/container -->
             </div>
+
+
+        </section>
+    </div>
+
+
+    <!-- Copyright Start  -->
+    <div id="copyright">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="site-info float-left">
+              <li>Karobben  2020</li>
+            </div>           
+            <div class="float-right">  
+              <li>contack me: <a href="mailto:a591465908@outlook.com">e-mail</a> </li>
+            </div>
+            <li align = "center">
+              <span id="busuanzi_container_site_pv">~<span id="busuanzi_value_site_pv"></span>~</span>
+            </span>
+            </li>   
           </div>
         </div>
       </div>
-      <!-- Copyright End -->
-
-
-    </footer>
-    <!-- Footer Section End --> 
-
-    <!-- Go To Top Link -->
-    <a href="#" class="back-to-top">
-      <i class="lni-arrow-up"></i>
-    </a>
-
-    <div id="loader">
-      <div class="spinner">
-        <div class="double-bounce1"></div>
-        <div class="double-bounce2"></div>
-      </div>
-    </div>    
-
-    <!-- jQuery first, then Tether, then Bootstrap JS. -->
-
+    </div>
+    <!-- Copyright End -->
     
-      
+    <script src="js/jquery.js"></script>
+    <script src="js/foundation.min.js"></script>
+    <script>
+        $(document).foundation();
+    </script>
+    <script src="js/jquery.masonry.js"></script>
+    <script>
+        var $containter = $('#container');
+        $containter.imagesLoaded(function() {
+            $containter.masonry({
+                itemSelector: '.box',
+                isAnimated: !Modernizr.csstransitions,
+                isFitWidth: true
+            });
+        });
+    </script>
+</body>
 
-    
-  </body>
 </html>
