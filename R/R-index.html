@@ -22,11 +22,9 @@
     s.parentNode.insertBefore(hm, s);
     })();
 </script>
-<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
-</script>
 
 
-<!-- sider bar
+<!-- Head bar
 ================================================== -->
 <!-- Header Section Start -->
 <header id="slider-area">  
@@ -63,26 +61,27 @@
 </header>
 <!-- Header Section End --> 
 
+<!-- sider bar -->
 <header class="s-header">
     <nav class="header__nav-wrap">
         <ul class="header__nav" >
-            <li ><a href="../index.html" title="" style="color: white;">Home</a></li><br>
-            <li style="color: white;"><a  style="color: white;" href="https://www.yuque.com/liuwenkan/bni63i/exvh1q">R base</a></li>
-            <li class="dropdown">
-                <button class="dropbtn">ggplot</button>              
-                <div class="dropdown-content">            
-                <a href="R-gitgg.html">
-                  ggextral in github</a>
-                <a href="https://www.yuque.com/liuwenkan/bni63i/bu4wnw">Map</a>                 
-                </div>  
-            </li>
-            <li class="dropdown">
-                <button class="dropbtn">Data Science</button>              
-                <div class="dropdown-content">            
-                <a href="R-Normaliz.html"> Normalization</a>            
-                </div>  
-            </li>
-            <li ><a href='https://www.yuque.com/liuwenkan/bni63i' style="color: white;">Yuque Notes</a></li>
+          <li ><a href="../index.html" title="" style="color: white;font-size:40px;">Karobben</a></li><br>
+          <li style="color: white;"><a  style="color: white;" href="https://www.yuque.com/liuwenkan/bni63i/exvh1q">R base</a></li>
+          <li class="dropdown">
+            <button class="dropbtn">ggplot</button>              
+            <div class="dropdown-content">            
+            <a href="R-gitgg.html">
+              ggextral in github</a>
+            <a href="https://www.yuque.com/liuwenkan/bni63i/bu4wnw">Map</a>                 
+            </div>  
+          </li>
+          <li class="dropdown">
+            <button class="dropbtn">Data Science</button>              
+            <div class="dropdown-content">            
+            <a href="R-Normaliz.html"> Normalization</a>            
+            </div>  
+          </li>
+          <li ><a href='https://www.yuque.com/liuwenkan/bni63i' style="color: white;">Yuque Notes</a></li>
         </ul> <!-- end header__nav -->
     </nav> <!-- end header__nav-wrap -->
 </header> <!-- end s-header -->
@@ -94,8 +93,7 @@
 
     <!-- End Top Bar -->
     <div class="content-wrapper">
-        <section id="main-content">
-
+        <div id="main-content">
             <div class="row">
                 <div id="container" class="large-12 columns transitions-enabled large-centered clearfix">
                   <!-- GGgithub -->
@@ -137,7 +135,17 @@
                               </div>
                           </div>
                     </div>
-                  <!-- PCR -->
+                  <!-- Cat -->
+                  <div class="box col3">
+                    <div class="blog-item-wrapper"  >
+                        <div class="blog-item-img">
+                          <a href="#">
+                            <img  src="img/cat.jpg" alt="" >
+                          </a>                
+                          </div>
+                      </div>
+                  </div>
+                  <!-- PCA -->
                   <div class="box col3">
                     <div class="blog-item-wrapper"  >
                         <div class="blog-item-img">
@@ -147,7 +155,7 @@
                         </div>
                           <div class="blog-item-text"> 
                           <div class="date">24 Jan 2020</div>
-                          <h3><a href="R-PCA.html">PCR plot</a></h3>
+                          <h3><a href="R-PCA.html">PCA plot</a></h3>
                           <div class="meta-tags">
                             <span>ggbioplot, ggplot are tested for PCA plot.<br>
           
@@ -186,7 +194,7 @@
                           </a>                
                         </div>
                           <div class="blog-item-text"> 
-                          <h3><a href="https://www.yuque.com/liuwenkan/bni63i/bu4wnw">geom_polygon()</a></h3>
+                          <h3><a href="https://www.yuque.com/liuwenkan/bni63i/bu4wnw">geom_polygon</a></h3>
                           <div class="date">24 Jan 2020</div>
                           <div class="meta-tags">
                             <span><br>
@@ -203,7 +211,7 @@
                       <div class="blog-item-wrapper"  >
                           <div class="blog-item-img">
                             <a href="https://www.yuque.com/liuwenkan/bni63i/hgbauc">
-                              <img  src="img/gg3d.gif" alt="" >
+                              <img  src="img/gg3d.png" alt="" >
                             </a>                
                           </div>
                             <div class="blog-item-text"> 
@@ -226,7 +234,7 @@
                             </a>                
                           </div>
                             <div class="blog-item-text"> 
-                            <h3><a href="https://www.yuque.com/liuwenkan/bni63i/lg90t5">geom_map()</a></h3>
+                            <h3><a href="https://www.yuque.com/liuwenkan/bni63i/lg90t5">geom_map</a></h3>
                             <div class="date">25 Jan 2020</div>
                             <div class="meta-tags">
                               <span><br>
@@ -267,6 +275,8 @@
                             <h3><a href="https://www.yuque.com/liuwenkan/bni63i/xxqm11">Correlation</a></h3>
                             <div class="date">25 Jan 2020</div>
                             <div class="meta-tags">
+                              <div class="meta-tags">
+                              </div>    
                             </div>
                             </div>
                         </div>
@@ -283,7 +293,34 @@
                           <h3><a href="https://www.yuque.com/liuwenkan/bni63i/ubuvr4">NetWorkPlot</a></h3>
                           <div class="date">25 Jan 2020</div>
                           <div class="meta-tags">
+                            <div class="meta-tags">
+                              <span><br>
+                                Draw Interactivable NetWork by Plotly with ggplot grammar! <br>
+                              </span><br>
+                            </div>  
                         </div>
+                        </div>
+                    </div>
+                  </div>
+                  <!-- bind2d -->
+                  <div class="box col3">
+                    <div class="blog-item-wrapper"  >
+                        <div class="blog-item-img">
+                          <a href="https://www.yuque.com/liuwenkan/bni63i/onogzz">
+                            <img  src="img/bin2d.png" alt="" >
+                          </a>                
+                        </div>
+                          <div class="blog-item-text"> 
+                          <h3><a href="https://www.yuque.com/liuwenkan/bni63i/onogzz">geom_bin2d</a></h3>
+                          <div class="date">26 Jan 2020</div>
+                          <div class="meta-tags">
+                            <div class="meta-tags">
+                              <span><br>
+                                geom_bin2d is a great function to counter and display the dencity of scatter plot.<br>
+                              </span><br>
+                            </div>
+  
+                          </div>
                         </div>
                     </div>
                   </div>
@@ -299,18 +336,236 @@
                           <h3><a href="https://www.yuque.com/liuwenkan/bni63i/cn8rp5">Pheatmap</a></h3>
                           <div class="date">25 Jan 2020</div>
                           <div class="meta-tags">
+                            <div class="meta-tags">
+                              <span><br>
+                                One of the most Elegant way to draw heatmap is using pheamap!<br>
+                              </span><br>
+                            </div>
+  
                           </div>
                         </div>
                     </div>
                   </div>
+                  <!-- hex -->
+                  <div class="box col3">
+                    <div class="blog-item-wrapper"  >
+                        <div class="blog-item-img">
+                          <a href="https://www.yuque.com/liuwenkan/bni63i/edsprn">
+                            <img  src="img/hex.png" alt="" >
+                          </a>                
+                        </div>
+                          <div class="blog-item-text"> 
+                          <h3><a href="https://www.yuque.com/liuwenkan/bni63i/edsprn">geom_hex</a></h3>
+                          <div class="date">26 Jan 2020</div>
+                          <div class="meta-tags">
+                            <div class="meta-tags">
+                              <span><br>
+                                It is similar to the geom_bin2d with display the basic unit with hexagons instead of bins. <br>
+                              </span><br>
+                            </div>  
+                          </div>
+                        </div>
+                    </div>
+                  </div>
+                  <!-- quantile -->
+                  <div class="box col3">
+                    <div class="blog-item-wrapper"  >
+                        <div class="blog-item-img">
+                          <a href="https://www.yuque.com/liuwenkan/bni63i/igye37">
+                            <img  src="img/quantile.png" alt="" >
+                          </a>                
+                        </div>
+                          <div class="blog-item-text"> 
+                          <h3><a href="https://www.yuque.com/liuwenkan/bni63i/igye37">geom_quantile</a></h3>
+                          <div class="date">26 Jan 2020</div>
+                          <div class="meta-tags">
+                            <span><br>
+                              Draw regration line as a pice of cake!<br>
+                            </span><br>
+                          </div>
+                        </div>
+                    </div>
+                  </div>
+                  <!-- segment -->
+                  <div class="box col3">
+                    <div class="blog-item-wrapper"  >
+                        <div class="blog-item-img">
+                          <a href="https://www.yuque.com/liuwenkan/bni63i/zpzhrp">
+                            <img  src="img/segment.png" alt="" >
+                          </a>                
+                        </div>
+                          <div class="blog-item-text"> 
+                          <h3><a href="https://www.yuque.com/liuwenkan/bni63i/zpzhrp">geom_hex</a></h3>
+                          <div class="date">26 Jan 2020</div>
+                          <div class="meta-tags">
+                            <span><br>
+                              Looks useful in some spcific situation <br>
+                            </span><br>
+                          </div>
+                        </div>
+                    </div>
+                  </div>
+                  <!-- sf -->
+                  <div class="box col3">
+                    <div class="blog-item-wrapper"  >
+                        <div class="blog-item-img">
+                          <a href="https://www.yuque.com/liuwenkan/bni63i/ias74h">
+                            <img  src="img/sf.png" alt="" >
+                          </a>                
+                        </div>
+                          <div class="blog-item-text"> 
+                          <h3><a href="https://www.yuque.com/liuwenkan/bni63i/ias74h">geom_sf</a></h3>
+                          <div class="date">26 Jan 2020</div>
+                          <div class="meta-tags">
+                            <span><br>
+                              With geom_sf, we can very easily interprat "shp" format data to map.<br>
+                            </span><br>
+                          </div>
+                        </div>
+                    </div>
+                  </div>
+                  <!-- tufteboxplot -->
+                  <div class="box col3">
+                    <div class="blog-item-wrapper"  >
+                        <div class="blog-item-img">
+                          <a href="https://www.yuque.com/liuwenkan/bni63i/rpmu6k">
+                            <img  src="img/tufteboxplot.png" alt="" >
+                          </a>                
+                        </div>
+                          <div class="blog-item-text"> 
+                          <h3><a href="https://www.yuque.com/liuwenkan/bni63i/rpmu6k">geom_tufteboxplot</a></h3>
+                          <div class="date">26 Jan 2020</div>
+                          <div class="meta-tags">
+                            <span><br>
+                              If you tired with box plot, this one could be a good optional choice for you.<br>
+                            </span><br>
+                          </div>
+                        </div>
+                    </div>
+                  </div>
+                  <!-- violin -->
+                  <div class="box col3">
+                    <div class="blog-item-wrapper"  >
+                        <div class="blog-item-img">
+                          <a href="https://www.yuque.com/liuwenkan/bni63i/xsahgy">
+                            <img  src="img/violin.png" alt="" >
+                          </a>                
+                        </div>
+                          <div class="blog-item-text"> 
+                          <h3><a href="https://www.yuque.com/liuwenkan/bni63i/xsahgy">geom_violin</a></h3>
+                          <div class="date">26 Jan 2020</div>
+                          <div class="meta-tags">
+                            <span><br>
+                              It is very similar to the box plot but could show more distribution imformation<br>
+                            </span><br>
+                          </div>
+                        </div>
+                    </div>
+                  </div>
+                  <!-- density -->
+                  <div class="box col3">
+                    <div class="blog-item-wrapper"  >
+                        <div class="blog-item-img">
+                          <a href="https://www.yuque.com/liuwenkan/bni63i/pop2go#tcYcw">
+                            <img  src="img/density.png" alt="" >
+                          </a>                
+                        </div>
+                          <div class="blog-item-text"> 
+                          <h3><a href="https://www.yuque.com/liuwenkan/bni63i/pop2go#tcYcw">Density</a></h3>
+                          <div class="date">26 Jan 2020</div>
+                          <div class="meta-tags">
+                            <span><br>
+                              As it's show in above, I bet you'd like to go to explor by yourselevs.<br>                            </span><br>
+                          </div>
+                        </div>
+                    </div>
+                  </div>
+                  <!-- Extral Lines -->
+                  <div class="box col3">
+                    <div class="blog-item-wrapper"  >
+                        <div class="blog-item-img">
+                          <a href="https://www.yuque.com/liuwenkan/bni63i/ys0krd">
+                            <img  src="img/ExLine.png" alt="" >
+                          </a>                
+                        </div>
+                          <div class="blog-item-text"> 
+                          <h3><a href="https://www.yuque.com/liuwenkan/bni63i/ys0krd">Extral Lines</a></h3>
+                          <div class="date">26 Jan 2020</div>
+                          <div class="meta-tags">
+                            <span><br>
+                              If you want to add some lines, why not to check this post?<br>
+                            </span><br>
+                          </div>
+                        </div>
+                    </div>
+                  </div>
+                  <!-- ggradar -->
+                  <div class="box col3">
+                    <div class="blog-item-wrapper"  >
+                        <div class="blog-item-img">
+                          <a href="https://www.yuque.com/liuwenkan/bni63i/ft92v9">
+                            <img  src="img/radar.png" alt="" >
+                          </a>                
+                        </div>
+                          <div class="blog-item-text"> 
+                          <h3><a href="https://www.yuque.com/liuwenkan/bni63i/ft92v9">ggradar</a></h3>
+                          <div class="date">26 Jan 2020</div>
+                          <div class="meta-tags">
+                            <span><br>
+                              An easy radar<br>
+                            </span><br>
+                          </div>
+                        </div>
+                    </div>
+                  </div>
+                  <!-- gganimate -->
+                  <div class="box col3">
+                    <div class="blog-item-wrapper"  >
+                        <div class="blog-item-img">
+                          <a href="https://www.yuque.com/liuwenkan/bni63i/vs9098">
+                            <img  src="img/animate.gif" alt="" >
+                          </a>                
+                        </div>
+                          <div class="blog-item-text"> 
+                          <h3><a href="https://www.yuque.com/liuwenkan/bni63i/vs9098">gganimate</a></h3>
+                          <div class="date">26 Jan 2020</div>
+                          <div class="meta-tags">
+                            <span><br>
+                              It is one of the best library for R, and the best extend library for ggplot!<br>
+                            </span><br>
+                          </div>
+                        </div>
+                    </div>
+                  </div>
+                  <!-- curve -->
+                  <div class="box col3">
+                    <div class="blog-item-wrapper"  >
+                        <div class="blog-item-img">
+                          <a href="https://www.yuque.com/liuwenkan/bni63i/vxt6g2">
+                            <img  src="img/curve.png" alt="" >
+                          </a>                
+                        </div>
+                          <div class="blog-item-text"> 
+                          <h3><a href="https://www.yuque.com/liuwenkan/bni63i/vxt6g2">geom_curve</a></h3>
+                          <div class="date">26 Jan 2020</div>
+                          <div class="meta-tags">
+                            <span><br>
+                              The best and Easest way to connect a group of point with curve lines!<br>
+                            </span><br>
+                          </div>
+                        </div>
+                    </div>
+                  </div>
+
           </div>
                 <!--/container -->
             </div>
-
-
         </section>
     </div>
-
+    <span style="text-align:center;">
+      <p style="font-size:45px">Karobben</p><br>
+      <p style="font-size:25px">More is comming soon...</p>
+    </span>
 
     <!-- Copyright Start  -->
     <div id="copyright">
@@ -334,10 +589,7 @@
     <!-- Copyright End -->
     
     <script src="js/jquery.js"></script>
-    <script src="js/foundation.min.js"></script>
-    <script>
-        $(document).foundation();
-    </script>
+
     <script src="js/jquery.masonry.js"></script>
     <script>
         var $containter = $('#container');
