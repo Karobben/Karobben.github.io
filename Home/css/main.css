@@ -125,6 +125,30 @@ a:not([href]):not([tabindex]):focus, a:not([href]):not([tabindex]):hover {
   width: 100%;
 }
 .tlinks{text-indent:-9999px;height:0;line-height:0;font-size:0;overflow:hidden;}
+
+
+
+.profile{
+
+position: absolute;;
+
+margin:auto;
+
+left:0;
+
+right: 0;
+
+top: 65px;
+
+width: 15%;
+
+height:100px;
+
+}
+
+
+
+
 /* ==========================================================================
    2.2 Buttons
    ========================================================================== */
