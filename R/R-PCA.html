@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>R</title>
+    <title>PCA Computing and visualizing in R|R 语言 PCA</title>
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -24,30 +24,29 @@
     </script>
   </head> 
 
-  <!-- sider bar
-  ================================================== -->
-  <header class="s-header">
-    <nav class="header__nav-wrap">
-        <ul class="header__nav" >
-            <li ><a href="../index.html" title="" style="color: white;">Home</a></li><br>
-            <li style="color: white;"><a  style="color: white;" href="https://www.yuque.com/liuwenkan/bni63i/exvh1q">R base</a></li>
-            <li class="dropdown">
-                <button class="dropbtn">ggplot</button>              
-                <div class="dropdown-content">            
-                <a href="R-gitgg.html">
-                  ggextral in github</a>
-                <a href="https://www.yuque.com/liuwenkan/bni63i/bu4wnw">Map</a>                 
-                </div>  
-            </li>
-            <li class="dropdown">
-                <button class="dropbtn">Data Science</button>              
-                <div class="dropdown-content">            
-                <a href="R-Normaliz.html"> Normalization</a>            
-                </div>  
-            </li>
-            <li ><a href='https://www.yuque.com/liuwenkan/bni63i' style="color: white;">Yuque Notes</a></li>
-        </ul> <!-- end header__nav -->
-    </nav> <!-- end header__nav-wrap -->
+<!-- sider bar -->
+<header class="s-header">
+  <nav class="header__nav-wrap">
+      <ul class="header__nav" >
+        <li ><a href="../index.html" title="" style="color: white;font-size:40px;">Karobben</a></li><br>
+        <li style="color: white;"><a  style="color: white;" href="https://www.yuque.com/liuwenkan/bni63i/exvh1q">R base</a></li>
+        <li class="dropdown">
+          <button class="dropbtn">ggplot</button>              
+          <div class="dropdown-content">            
+          <a href="R-gitgg.html">
+            ggextral in github</a>
+          <a href="https://www.yuque.com/liuwenkan/bni63i/bu4wnw">Map</a>                 
+          </div>  
+        </li>
+        <li class="dropdown">
+          <button class="dropbtn">Data Science</button>              
+          <div class="dropdown-content">            
+          <a href="R-Normaliz.html"> Normalization</a>            
+          </div>  
+        </li>
+        <li ><a href='https://www.yuque.com/liuwenkan/bni63i' style="color: white;">Yuque Notes</a></li>
+      </ul> <!-- end header__nav -->
+  </nav> <!-- end header__nav-wrap -->
 </header> <!-- end s-header -->
 
 
@@ -95,8 +94,8 @@
       <!-- Container Starts -->
       <div class="container" >
         <div class="section-header" style="padding-top:60px;">
-        <img src="https://cdn.nlark.com/yuque/0/2020/png/691897/1579799187944-daf761fa-ba6f-4e21-9494-39c3a32fdf2d.png">
-        <h2 style="font-size:60px;">PCR</h2>
+        <img src="img/PCA/Head.png">
+        <h2 style="padding-top:60px; font-size:60px;">Principal Component Analysis<br>(PCA) in R</h2>
         <p style=" font-size:20px;">Karobben<br>24 Jan 2020<br></p>
         </div>
       </div>
@@ -112,22 +111,22 @@
         <div>
             <pre>
                 <code class="lang-javascript">
-    # install ggbioplot
-    #install_github("vqv/ggbiplot")
-    #install.packages('plyr') 
-    data(wine)
-    wine.pca <- prcomp(wine, scale. = TRUE)
-    # bioplot
-    ggbiplot(wine.pca, obs.scale = 1, var.scale = 1,
-              groups = wine.class, ellipse = TRUE, circle = TRUE) +
-      scale_color_discrete(name = '') +
-      theme_light()
+# install ggbioplot
+# install_github("vqv/ggbiplot")
+# install.packages('plyr') 
+data(wine)
+wine.pca <- prcomp(wine, scale. = TRUE)
+# bioplot
+ggbiplot(wine.pca, obs.scale = 1, var.scale = 1,
+          groups = wine.class, ellipse = TRUE, circle = TRUE) +
+  scale_color_discrete(name = '') +
+  theme_light()
                                   </code>
             </pre>
         </div>
     </div>
     <div style="padding-left:310px;padding-right:320px;" align='center'>
-      <img src="https://cdn.nlark.com/yuque/0/2020/png/691897/1579799187944-daf761fa-ba6f-4e21-9494-39c3a32fdf2d.png">
+      <img src="img/PCA/Head.png">
     </div>
     <!-- Section 1 End-->
   
@@ -140,24 +139,24 @@
         <div>
             <pre>
               <code class="lang-javascript">
-    library(psych)
-    library(ggplot2)
-    PC <- principal(wine, nfactors=2, rotate ="none")
-    pc <- data.frame(PC$scores)
-    p  <- ggplot(pc, aes(x=PC1, y=PC2,color=wine.class )) +
-      geom_point(size=4,alpha=0.5)+ 
-      theme(axis.text= element_text(size=20))+ 
-      theme(panel.grid.major =element_blank(), 
-            panel.grid.minor = element_line(color="steelblue"),
-            panel.background = element_blank(),
-            axis.line = element_line(colour = "black"))+ 
-      stat_ellipse(lwd=1,level = 0.8)
+library(psych)
+library(ggplot2)
+PC <- principal(wine, nfactors=2, rotate ="none")
+pc <- data.frame(PC$scores)
+p  <- ggplot(pc, aes(x=PC1, y=PC2,color=wine.class )) +
+  geom_point(size=4,alpha=0.5)+ 
+  theme(axis.text= element_text(size=20))+ 
+  theme(panel.grid.major =element_blank(), 
+        panel.grid.minor = element_line(color="steelblue"),
+        panel.background = element_blank(),
+        axis.line = element_line(colour = "black"))+ 
+  stat_ellipse(lwd=1,level = 0.8)
                 </code>
             </pre>
         </div>
     </div>
     <div style="padding-left:310px;padding-right:320px;" align='center'>
-      <img src="https://cdn.nlark.com/yuque/0/2020/png/691897/1579799575464-cf509636-d7bd-4f96-9df1-4965616515df.png">
+      <img src="img/PCA/Psych.png">
     </div>
     <!-- Section 2 End-->
     
@@ -170,13 +169,16 @@
         <div>
             <pre>
                 <code class="lang-javascript">
-    library(ggplot2)
-    qplot(x=PC1,y=PC2, data=pc,colour=factor(wine.class))+theme(legend.position="none")+stat_ellipse(lwd=1,level = 0.8)                </code>
+library(ggplot2)
+qplot(x=PC1,y=PC2, data=pc,colour=factor(wine.class))+
+  theme(legend.position="none")+
+  stat_ellipse(lwd=1,level = 0.8)
+                </code>
             </pre>
         </div>
     </div>
     <div style="padding-left:310px;padding-right:320px;" align='center'>
-      <img src="https://cdn.nlark.com/yuque/0/2020/png/691897/1579799657726-3910122d-ac04-4ef7-aa14-fffab4d3b9c9.png">
+      <img src="img/PCA/qplot.png">
     </div>
 
 
@@ -191,29 +193,31 @@
         <div>
             <pre>
                 <code class="lang-javascript">
-    ggbiplot(pcobj, choices = 1:2, scale = 1, pc.biplot =
-    TRUE, obs.scale = 1 - scale, var.scale = scale, groups =
-    NULL, ellipse = FALSE, ellipse.prob = 0.68, labels =
-    NULL, labels.size = 3, alpha = 1, var.axes = TRUE, circle
-    = FALSE, circle.prob = 0.69, varname.size = 3,
-    varname.adjust = 1.5, varname.abbrev = FALSE, ...)
-    pcobj # prcomp()或princomp()返回结果
-    choices # 选择轴，默认1：2
-    scale # covariance biplot (scale = 1), form biplot (scale = 0). When scale = 1, the inner product between the variables approximates the covariance and the distance between the points approximates the Mahalanobis distance.
-    obs.scale # 标准化观测值
-    var.scale # 标准化变异
-    pc.biplot # 兼容 biplot.princomp()
-    groups # 组信息，并按组上色
-    ellipse # 添加组椭圆
-    ellipse.prob # 置信区间
-    labels #向量名称
-    labels.size #名称大小
-    alpha  #点透明度 (0 = TRUEransparent, 1 = opaque)
-    circle #绘制相关环(only applies when prcomp was called with scale = TRUE and when var.scale = 1)
-    var.axes  #绘制变量线-菌相关
-    varname.size  #变量名大小
-    varname.adjust #标签与箭头距离 >= 1 means farther from the arrow
-    varname.abbrev # 标签是否缩写
+ggbiplot(pcobj, choices = 1:2, scale = 1, pc.biplot =
+TRUE, obs.scale = 1 - scale, var.scale = scale, groups =
+NULL, ellipse = FALSE, ellipse.prob = 0.68, labels =
+NULL, labels.size = 3, alpha = 1, var.axes = TRUE, circle
+= FALSE, circle.prob = 0.69, varname.size = 3,
+varname.adjust = 1.5, varname.abbrev = FALSE, ...)
+pcobj # prcomp()或princomp()返回结果
+choices # 选择轴，默认1：2
+scale # covariance biplot (scale = 1), form biplot (scale = 0). 
+      # When scale = 1, the inner product between the variables
+      # approximates the covariance and the distance between the points approximates the Mahalanobis distance.
+obs.scale # 标准化观测值
+var.scale # 标准化变异
+pc.biplot # 兼容 biplot.princomp()
+groups # 组信息，并按组上色
+ellipse # 添加组椭圆
+ellipse.prob # 置信区间
+labels #向量名称
+labels.size #名称大小
+alpha  #点透明度 (0 = TRUEransparent, 1 = opaque)
+circle #绘制相关环(only applies when prcomp was called with scale = TRUE and when var.scale = 1)
+var.axes  #绘制变量线-菌相关
+varname.size  #变量名大小
+varname.adjust #标签与箭头距离 >= 1 means farther from the arrow
+varname.abbrev # 标签是否缩写
                 </code>
             </pre>
         </div>
