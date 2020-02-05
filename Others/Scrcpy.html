@@ -79,26 +79,27 @@
         <img src="img/scrcpy_1.png" style="float:right; padding-top: 80px;padding-left: 30px; width: 330px;">
         <h2 style="padding-top:60px; font-size:60px;">How to install scrcpy<br>in Deepin 15.11</h2>
         <p style=" font-size:20px;"><br>Karobben<br>5 Feb 2020<br></p>
-        <p align="left" style=" font-size:20px;"><br><br>
-          Scrcpy is an powful open source crassplatform softerware which could projet
-          your android phone to the computer. And it is interactable, it means you can control your
-          phone with keyboard and mouse (You can imput english only). Scrcpy is extreamly
-          easy to install at Ubuntu with the help of apt, but it is unavallable in deepin. Howevery,
-          you can still using "snap" to install it as a pice of cack, in some region only.
-          Because in other place like China, snap install are too slow to use. So, groups
-          of people may inavitablly to build scrcpy by source code. It is easy for the people
-          who familiar with mason and nijia, but it is a nightmare for people like me, who
-          even hard to reading the error codes. So, I spend few hourse to figure out how to
-          build this app in deepin 15.11 and to help the people like me to save the day.
+        <p align="left" style=" font-size:20px;line-height:35px;"><br><br>
+          Scrcpy is a powful open source crassplatform software which could project your 
+          android phone to the computer. And it is Interoperable, it means you can control
+          your phone with keyboard and mouse (You can input English only). Scrcpy is 
+          extremely easy to install at Ubuntu with the help of apt. But this way is unavallable
+          in Deepin. However, you can still use "snap" to install it as a pice of cack 
+          in some regions. However, in other places like China, snap install are too
+          slow to use. So, groups of people may inavitablly build scrcpy by source codes.
+          It is easy for the people who are familiar with mason and nijia, but it is
+          a nightmare for people like me, who find it is even hard to read the error
+          codes. As a reuslt, I spent a few hours trying to figure out how to build this
+          app in Deepin 15.11. So, I'd like to share the post and help the people like me to save the day.
           <br><br>
-          I tried to install the latest version(1.12.1), but I have no idea why it ask me for
-          "scrcpy-server-v1.11.jar". So, I tried building V1.12.1 with scrcpy-server-v1.11.jar,
-          It works in meson and nijia when you conigure and build scrcpy, and when you run the
-          scrcpy, everything just looks like fine, terminal resbonded with correct codes,
-          and my phone responded it. But there is no window jump out to the screen. Creepy wired.
-          So, I deleted all packages and installed the version V1.11.1, and boom, it finally works!
-          Cheer! 
-        <br></p>
+          I tried to install the latest version(1.12.1), but I have no idea why it asks me 
+          for the "scrcpy-server-v1.11.jar". So, I tried building V1.12.1 with scrcpy-server-v1.11.jar. 
+          It works in meson and nijia when you run conigure and build. When I run 
+          the scrcpy, everything just looks fine. Terminal resbonded well and my 
+          phone responded it, too. But there is no window jump out to the monitor. 
+          Creepy weird. So, I deleted all packages and installed the version V1.11.1, and 
+          boom, it finally works! Cheer! 
+          <br></p>
         </div>
       </div>
 
@@ -125,7 +126,7 @@ sudo apt install adb ffmpeg libsdl2-2.0.0 make gcc pkg-config meson ninja-build 
 </pre>
 
         </div>
-        <p style="font-size:20px;padding: 10px;">If apt is running slow, please go to switch an aporpriate <a href="https://www.deepin.org/en/mirrors/packages/">source mirror</a><br>
+        <p style="font-size:20px;padding: 10px;">If the apt is running slow, please go switch to an appropriate <a href="https://www.deepin.org/en/mirrors/packages/">source mirror</a>.<br>
           <a href="https://bbs.deepin.org/forum.php?mod=viewthread&tid=176469">An example of how to change your source</a>:
 <div class="Terminal">
   <img src="../Home/img/Terminal.png" height="30px">
@@ -240,7 +241,7 @@ needed by 'server/scrcpy-server', missing and no known rule to make it
       <!-- Section 4-->
       <div id="blog" class="section" style="padding-left:290px;">
         <div>
-            <h2 id='a1'>4 Porject your Androird phone</h2>
+            <h2 id='a1'>4 Project your Androird phone via USB</h2>
         </div>
         <div ng-include="'template/header.html'" ></div>    
         <p style="font-size:20px;padding: 10px;">
@@ -253,19 +254,258 @@ needed by 'server/scrcpy-server', missing and no known rule to make it
   Terminal
   <img src="../Home/img/Terminal2.png" height="30px" align='right' style="padding-right:5px;">
 </div>        
-<pre class='code'>
-<code class="lang-javascript">
+<pre class='code'><code>
 wget -c https://github.com/Genymobile/scrcpy/releases/download/v1.11/scrcpy-server-v1.11
 wget -c https://github.com/Genymobile/scrcpy/archive/v1.11.tar.gz
 
 mv scrcpy-server-v1.11 scrcpy-server-v1.11.jar
 tar -zxvf v1.11.tar.gz
 </code>
+</pre>  
+        <br >
+        <h2 id='a1'>Project your Androird phone without USB</h2>
+        <p style="font-size:20px;padding: 10px;">
+          For Wireless Connection, Following the instructor:
+          <br>
+        </p>
+<div class="Terminal">
+  <img src="../Home/img/Terminal.png" height="30px">
+  Terminal
+  <img src="../Home/img/Terminal2.png" height="30px" align='right' style="padding-right:5px;">
+</div>        
+<pre class='code'><code>
+# Connect your phone via USB
+adb tcpip 5555
+
+# Now, disconnect the USB, and input:
+adb connect 192.168.3.2:5555
+scrcpy --bit-rate 4M
+</code>
+</pre>
+
+        <p style="font-size:20px;padding: 10px;">
+          If rise error:
+          <br>
+        </p>
+<div class="Terminal">
+  <img src="../Home/img/Terminal.png" height="30px">
+  Terminal
+  <img src="../Home/img/Terminal2.png" height="30px" align='right' style="padding-right:5px;">
+</div>        
+<pre class='code' style="color: tomato;"><code>
+INFO: scrcpy 1.11 <https://github.com/Genymobile/scrcpy>
+[100%] /data/local/tmp/scrcpy-server
+bind: Address already in use
+ERROR: Could not listen on port 27183
+</code>
+</pre>
+
+        <p style="font-size:20px;padding: 10px;">
+          Than:
+          <br>
+        </p>
+<div class="Terminal">
+  <img src="../Home/img/Terminal.png" height="30px">
+  Terminal
+  <img src="../Home/img/Terminal2.png" height="30px" align='right' style="padding-right:5px;">
+</div>        
+<pre class='code'><code>
+scrcpy -p 1234
+</code>
 </pre>
       </div>
-      <br><br><br>
+      <br>
       <!-- Section 4 End-->
+
+      <p style="font-size:20px;padding-left: 290px;">
+        Arguments:
+      </p>
+      <br>
+        <div style="padding-left: 290px;">
+        <div class="Terminal">
+          <img src="../Home/img/Terminal.png" height="30px">
+          Terminal
+          <img src="../Home/img/Terminal2.png" height="30px" align='right' style="padding-right:5px;">
+        </div>        
+<pre class='code'style="padding-left: 20px; max-height:500px;"><code>
+  --always-on-top
+  Make scrcpy window always on top (above other windows).
+
+-b, --bit-rate value
+  Encode the video at the given bit-rate, expressed in bits/s.
+  Unit suffixes are supported: 'K' (x1000) and 'M' (x1000000).
+  Default is 8000000.
+
+--crop width:height:x:y
+  Crop the device screen on the server.
+  The values are expressed in the device natural orientation
+  (typically, portrait for a phone, landscape for a tablet).
+  Any --max-size value is computed on the cropped size.
+
+-f, --fullscreen
+  Start in fullscreen.
+
+-h, --help
+  Print this help.
+
+--max-fps value
+  Limit the frame rate of screen capture (only supported on
+  devices with Android >= 10).
+
+-m, --max-size value
+  Limit both the width and height of the video to value. The
+  other dimension is computed so that the device aspect-ratio
+  is preserved.
+  Default is 0 (unlimited).
+
+-n, --no-control
+  Disable device control (mirror the device in read-only).
+
+-N, --no-display
+  Do not display device (only when screen recording is
+  enabled).
+
+-p, --port port
+  Set the TCP port the client listens on.
+  Default is 27183.
+
+--prefer-text
+  Inject alpha characters and space as text events instead of
+  key events.
+  This avoids issues when combining multiple keys to enter a
+  special character, but breaks the expected behavior of alpha
+  keys in games (typically WASD).
+
+--push-target path
+  Set the target directory for pushing files to the device by
+  drag & drop. It is passed as-is to "adb push".
+  Default is "/sdcard/".
+
+-r, --record file.mp4
+  Record screen to file.
+  The format is determined by the --record-format option if
+  set, or by the file extension (.mp4 or .mkv).
+
+--record-format format
+  Force recording format (either mp4 or mkv).
+
+--render-expired-frames
+  By default, to minimize latency, scrcpy always renders the
+  last available decoded frame, and drops any previous ones.
+  This flag forces to render all frames, at a cost of a
+  possible increased latency.
+
+-s, --serial serial
+  The device serial number. Mandatory only if several devices
+  are connected to adb.
+
+-S, --turn-screen-off
+  Turn the device screen off immediately.
+
+-t, --show-touches
+  Enable "show touches" on start, disable on quit.
+  It only shows physical touches (not clicks from scrcpy).
+
+-v, --version
+  Print the version of scrcpy.
+
+--window-borderless
+  Disable window decorations (display borderless window).
+
+--window-title text
+  Set a custom window title.
+
+--window-x value
+  Set the initial window horizontal position.
+  Default is -1 (automatic).
+
+--window-y value
+  Set the initial window vertical position.
+  Default is -1 (automatic).
+
+--window-width value
+  Set the initial window width.
+  Default is 0 (automatic).
+
+--window-height value
+  Set the initial window width.
+  Default is 0 (automatic).
+
+Shortcuts:
+
+Ctrl+f
+  switch fullscreen mode
+
+Ctrl+g
+  resize window to 1:1 (pixel-perfect)
+
+Ctrl+x
+Double-click on black borders
+  resize window to remove black borders
+
+Ctrl+h
+Middle-click
+  click on HOME
+
+Ctrl+b
+Ctrl+Backspace
+Right-click (when screen is on)
+  click on BACK
+
+Ctrl+s
+  click on APP_SWITCH
+
+Ctrl+m
+  click on MENU
+
+Ctrl+Up
+  click on VOLUME_UP
+
+Ctrl+Down
+  click on VOLUME_DOWN
+
+Ctrl+p
+  click on POWER (turn screen on/off)
+
+Right-click (when screen is off)
+  power on
+
+Ctrl+o
+  turn device screen off (keep mirroring)
+
+Ctrl+n
+expand notification panel
+
+Ctrl+Shift+n
+collapse notification panel
+
+Ctrl+c
+  copy device clipboard to computer
+
+Ctrl+v
+  paste computer clipboard to device
+
+Ctrl+Shift+v
+  copy computer clipboard to device
+
+Ctrl+i
+  enable/disable FPS counter (print frames/second in logs)
+
+Drag & drop APK file
+  install APK from computer
+</code>
+        </pre>
+        </div>
+        <br>
+        <p style="font-size:20px;padding-left: 290px;">
+          For more features, please go to <a href="https://gitee.com/mirrors/scrcpy#features">github</a>
+          <br>
+        </p>
+  
+  
     </section>
+    <br><br><br><br><br>
+
     <!-- blog Section End -->
 
     <!-- Footer Section Start -->
