@@ -393,3 +393,23 @@ button:focus {
   font-size: 18px;
 }
 
+.Terminal{
+  max-width: 900px;
+  background-color: black;
+  color: #ffffff;
+  padding-left: 10px;
+  font-size: large;
+  font-size: 20px;
+  font-family: monospace;
+  border-radius: 5px 5px 0px 0px; 
+}
+
+.code{
+  max-width:  900px;
+  background-color: rgb(65, 65, 65);
+  color: rgb(0, 205, 0);
+  padding-left: 5px;
+  font-family: monospace;
+  font-size: 18px;
+  border-radius: 0px 0px 10px 10px; 
+}

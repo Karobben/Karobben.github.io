@@ -7,10 +7,6 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/main.css">
 
-    <link href="http://cdn.bootcss.com/highlight.js/8.0/styles/monokai_sublime.min.css" rel="stylesheet">  
-    <script src="http://cdn.bootcss.com/highlight.js/8.0/highlight.min.js"></script>  
-    <script >hljs.initHighlightingOnLoad();</script>  
-
     <script>
       var _hmt = _hmt || [];
       (function() {
@@ -35,6 +31,8 @@
           <div class="dropdown-content">            
           <a href="R-gitgg.html">
             ggextral in github</a>
+            <a href="R-PCA.html">
+              PCA</a>
           <a href="https://www.yuque.com/liuwenkan/bni63i/bu4wnw">Map</a>                 
           </div>  
         </li>
@@ -65,7 +63,7 @@
                 <a class="nav-link page-scroll" href="#">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link page-scroll" href="https://www.yuque.com/liuwenkan/bni63i">R</a>
+                <a class="nav-link page-scroll" href="R-index.html">R</a>
               </li>  
               <li class="nav-item">
                 <a class="nav-link page-scroll" href="https://www.yuque.com/liuwenkan/kkgzbw">Python</a>
@@ -77,7 +75,7 @@
                 <a class="nav-link page-scroll" href="https://www.yuque.com/liuwenkan/vbip5a">Ptotocol</a>
               </li> 
               <li class="nav-item">
-                <a class="nav-link page-scroll" href="https://www.yuque.com/liuwenkan">Notes</a>
+                <a class="nav-link page-scroll" href="https://www.yuque.com/liuwenkan/add8a6">Notes</a>
               </li>    
               <li class="nav-item">
                 <a class="nav-link page-scroll" href="https://www.yuque.com/liuwenkan/tza8ge">Others</a>
@@ -89,6 +87,7 @@
 
     </header>
     <!-- Header Section End --> 
+
     <!-- Blog Section -->
     <section id="blog" class="section" style="max-width:75%;">
       <!-- Container Starts -->
@@ -99,8 +98,7 @@
         <p style=" font-size:20px;">Karobben<br>24 Jan 2020<br></p>
         </div>
       </div>
-    </section>
-    <!-- blog Section End -->
+
 
     <!-- Section 1-->
     <div style="padding-left:310px;padding-right:320px;">
@@ -109,8 +107,13 @@
         </div>
         <div ng-include="'template/header.html'" ></div>    
         <div>
-            <pre>
-                <code class="lang-javascript">
+<div class="Terminal">
+  <img src="../Home/img/Terminal.png" height="30px">
+  R
+  <img src="../Home/img/Terminal2.png" height="30px" align='right' style="padding-right:5px;">
+</div>        
+<pre class='code'>
+<code class="lang-javascript">          
 # install ggbioplot
 # install_github("vqv/ggbiplot")
 # install.packages('plyr') 
@@ -121,8 +124,8 @@ ggbiplot(wine.pca, obs.scale = 1, var.scale = 1,
           groups = wine.class, ellipse = TRUE, circle = TRUE) +
   scale_color_discrete(name = '') +
   theme_light()
-                                  </code>
-            </pre>
+</code>
+</pre>
         </div>
     </div>
     <div style="padding-left:310px;padding-right:320px;" align='center'>
@@ -137,8 +140,13 @@ ggbiplot(wine.pca, obs.scale = 1, var.scale = 1,
         </div>
         <div ng-include="'template/header.html'" ></div>    
         <div>
-            <pre>
-              <code class="lang-javascript">
+<div class="Terminal">
+  <img src="../Home/img/Terminal.png" height="30px">
+  R
+  <img src="../Home/img/Terminal2.png" height="30px" align='right' style="padding-right:5px;">
+</div>        
+<pre class='code'>
+<code class="lang-javascript">          
 library(psych)
 library(ggplot2)
 PC <- principal(wine, nfactors=2, rotate ="none")
@@ -151,8 +159,8 @@ p  <- ggplot(pc, aes(x=PC1, y=PC2,color=wine.class )) +
         panel.background = element_blank(),
         axis.line = element_line(colour = "black"))+ 
   stat_ellipse(lwd=1,level = 0.8)
-                </code>
-            </pre>
+</code>
+</pre>
         </div>
     </div>
     <div style="padding-left:310px;padding-right:320px;" align='center'>
@@ -167,14 +175,21 @@ p  <- ggplot(pc, aes(x=PC1, y=PC2,color=wine.class )) +
         </div>
         <div ng-include="'template/header.html'" ></div>    
         <div>
-            <pre>
-                <code class="lang-javascript">
+
+
+<div class="Terminal">
+  <img src="../Home/img/Terminal.png" height="30px">
+  R
+  <img src="../Home/img/Terminal2.png" height="30px" align='right' style="padding-right:5px;">
+</div>        
+<pre class='code'>
+<code class="lang-javascript">
 library(ggplot2)
 qplot(x=PC1,y=PC2, data=pc,colour=factor(wine.class))+
   theme(legend.position="none")+
   stat_ellipse(lwd=1,level = 0.8)
-                </code>
-            </pre>
+</code>
+</pre>
         </div>
     </div>
     <div style="padding-left:310px;padding-right:320px;" align='center'>
@@ -191,8 +206,13 @@ qplot(x=PC1,y=PC2, data=pc,colour=factor(wine.class))+
         </div>
         <div ng-include="'template/header.html'" ></div>    
         <div>
-            <pre>
-                <code class="lang-javascript">
+<div class="Terminal">
+  <img src="../Home/img/Terminal.png" height="30px">
+  Terminal
+  <img src="../Home/img/Terminal2.png" height="30px" align='right' style="padding-right:5px;">
+</div>        
+<pre class='code'>
+<code>
 ggbiplot(pcobj, choices = 1:2, scale = 1, pc.biplot =
 TRUE, obs.scale = 1 - scale, var.scale = scale, groups =
 NULL, ellipse = FALSE, ellipse.prob = 0.68, labels =
@@ -218,12 +238,13 @@ var.axes  #绘制变量线-菌相关
 varname.size  #变量名大小
 varname.adjust #标签与箭头距离 >= 1 means farther from the arrow
 varname.abbrev # 标签是否缩写
-                </code>
-            </pre>
+</code>
+</pre>
         </div>
     </div>
     <!-- Section 4 End-->
-
+    </section>
+    <!-- blog Section End -->
 
     <!-- Footer Section Start -->
      

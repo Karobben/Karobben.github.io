@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>How to install scrcpy in deepin 15.11 | Karobben blog</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../R/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../R/css/main.css">
+
+    <script>
+      var _hmt = _hmt || [];
+      (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?8442e6ecc87d878298ba7d3bd0a5484c";
+        var s = document.getElementsByTagName("script")[0]; 
+        s.parentNode.insertBefore(hm, s);
+      })();
+    </script>
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
+    </script>
+  </head> 
+
+<!-- sider bar -->
+<header class="s-header">
+  <nav class="header__nav-wrap">
+      <ul class="header__nav" >
+        <li ><a href="../index.html" title="" style="color: white;font-size:40px;">Karobben</a></li><br>
+        <li style="color: white;"><a  style="color: white;" href="https://www.yuque.com/liuwenkan/bni63i/exvh1q">R base</a></li>
+      </ul> <!-- end header__nav -->
+  </nav> <!-- end header__nav-wrap -->
+</header> <!-- end s-header -->
+
+
+
+
+
+  <body>
+      
+    <!-- Header Section Start -->
+    <header id="slider-area">  
+      <nav class="navbar navbar-expand-md fixed-top scrolling-navbar bg-white">
+        <div class="container">          
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav mr-auto w-100 justify-content-end">
+              <li class="nav-item">
+                <a class="nav-link page-scroll" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link page-scroll" href="../R/R-index.html">R</a>
+              </li>  
+              <li class="nav-item">
+                <a class="nav-link page-scroll" href="https://www.yuque.com/liuwenkan/kkgzbw">Python</a>
+              </li>                            
+              <li class="nav-item">
+                <a class="nav-link page-scroll" href="https://www.yuque.com/liuwenkan/nttf8x">Bash</a>
+              </li>            
+              <li class="nav-item">
+                <a class="nav-link page-scroll" href="https://www.yuque.com/liuwenkan/vbip5a">Ptotocol</a>
+              </li> 
+              <li class="nav-item">
+                <a class="nav-link page-scroll" href="https://www.yuque.com/liuwenkan/add8a6">Notes</a>
+              </li>    
+              <li class="nav-item">
+                <a class="nav-link page-scroll" href="https://www.yuque.com/liuwenkan/tza8ge">Others</a>
+              </li>
+            </ul>              
+          </div>
+        </div>
+      </nav> 
+
+    </header>
+    <!-- Header Section End --> 
+
+    <!-- Blog Section -->
+    <section id="blog" class="section" style="padding-right:10%;max-width: 1600px;">
+      <!-- Container Starts -->
+      <div class="container"  >
+        <div class="section-header" style="padding-top:60px;">
+        <img src="img/Re_scrcpy_1.png" style="float:right; padding-top: 80px;padding-left: 30px; width: 330px;">
+        <h2 style="padding-top:60px; font-size:60px;">How to install scrcpy<br>in Deepin 15.11</h2>
+        <p style=" font-size:20px;"><br>Karobben<br>5 Feb 2020<br></p>
+        <p align="left" style=" font-size:20px;"><br><br>
+          Scrcpy is an powful open source crassplatform softerware which could projet
+          your android phone to the computer. And it is interactable, it means you can control your
+          phone with keyboard and mouse (You can imput english only). Scrcpy is extreamly
+          easy to install at Ubuntu with the help of apt, but it is unavallable in deepin. Howevery,
+          you can still using "snap" to install it as a pice of cack, in some region only.
+          Because in other place like China, snap install are too slow to use. So, groups
+          of people may inavitablly to build scrcpy by source code. It is easy for the people
+          who familiar with mason and nijia, but it is a nightmare for people like me, who
+          even hard to reading the error codes. So, I spend few hourse to figure out how to
+          build this app in deepin 15.11 and to help the people like me to save the day.
+          <br><br>
+          I tried to install the latest version(1.12.1), but I have no idea why it ask me for
+          "scrcpy-server-v1.11.jar". So, I tried building V1.12.1 with scrcpy-server-v1.11.jar,
+          It works in meson and nijia when you conigure and build scrcpy, and when you run the
+          scrcpy, everything just looks like fine, terminal resbonded with correct codes,
+          and my phone responded it. But there is no window jump out to the screen. Creepy wired.
+          So, I deleted all packages and installed the version V1.11.1, and boom, it finally works!
+          Cheer! 
+        <br></p>
+        </div>
+      </div>
+
+
+
+      <!-- Section 1-->
+      <div id="blog" class="section" style="padding-left:290px;padding-right:10%;">
+        <div>
+            <h2 id='a1'>1 Set up your environment</h2>
+        </div>
+        <div ng-include="'template/header.html'" ></div>    
+        <div>
+          <br>
+<div class="Terminal">
+  <img src="../Home/img/Terminal.png" height="30px">
+  Terminal
+  <img src="../Home/img/Terminal2.png" height="30px" align='right' style="padding-right:5px;">
+</div>          
+<pre class='code'>
+<code class="lang-javascript">
+sudo apt install adb ffmpeg libsdl2-2.0.0 make gcc pkg-config meson ninja-build \
+  libavcodec-dev libavformat-dev libavutil-dev libsdl2-dev
+</code>
+</pre>
+
+        </div>
+        <p style="font-size:20px;padding: 10px;">If apt is running slow, please go to switch an aporpriate <a href="https://www.deepin.org/en/mirrors/packages/">source mirror</a><br>
+          <a href="https://bbs.deepin.org/forum.php?mod=viewthread&tid=176469">An example of how to change your source</a>:
+<div class="Terminal">
+  <img src="../Home/img/Terminal.png" height="30px">
+  Terminal
+  <img src="../Home/img/Terminal2.png" height="30px" align='right' style="padding-right:5px;">
+</div>
+<pre class='code'>
+<code class="lang-javascript">
+## Generated by deepin-installer
+deb [by-hash=force] http://ftp.sjtu.edu.cn/deepin panda main contrib non-free
+#deb-src http://ftp.sjtu.edu.cn/deepin panda main contrib non-free
+</code>
+</pre>
+        </p>
+      </div>
+      <br><br><br>
+      <!-- Section 1 End-->
+
+      <!-- Section 2-->
+      <div id="blog" class="section" style="padding-left:290px;padding-right:10%;">
+        <div>
+            <h2 id='a1'>2 Dowloading Source Packages</h2>
+            <br>
+        </div>
+        <div ng-include="'template/header.html'" ></div>    
+        <p style="font-size:20px;padding: 10px;">Releas location: <a href="https://github.com/Genymobile/scrcpy/releases/tag/v1.11">Genymobile Github</a>
+          Download the files in red boxs.
+          In this section, we need to add ".jar" to the tail of scrcpy-server-v1.11 and install it later.
+          And this is why I can't build it correctly at first two hours.
+          <br>
+        </p>
+<div class="Terminal">
+  <img src="../Home/img/Terminal.png" height="30px">
+  Terminal
+  <img src="../Home/img/Terminal2.png" height="30px" align='right' style="padding-right:5px;">
+</div>        
+<pre class='code'>
+<code class="lang-javascript">
+wget -c https://github.com/Genymobile/scrcpy/releases/download/v1.11/scrcpy-server-v1.11
+wget -c https://github.com/Genymobile/scrcpy/archive/v1.11.tar.gz
+
+mv scrcpy-server-v1.11 scrcpy-server-v1.11.jar
+tar -zxvf v1.11.tar.gz
+</code>
+</pre>
+        </p>
+      </div>
+      <div style="padding-left:310px;padding-right:320px;" align='center'>
+        <img src="img/scrcpy_2.png">
+      </div>
+      <br><br><br>
+      <!-- Section 2 End-->
+
+      <!-- Section 3-->
+      <div id="blog" class="section" style="padding-left:290px;padding-right:10%;">
+        <div>
+            <h2 id='a1'>3 Install</h2>
+        </div>
+        <div ng-include="'template/header.html'" ></div>    
+        <p style="font-size:20px;padding: 10px;">
+          Install the server<br>
+        </p>
+<div class="Terminal">
+  <img src="../Home/img/Terminal.png" height="30px">
+  Terminal
+  <img src="../Home/img/Terminal2.png" height="30px" align='right' style="padding-right:5px;">
+</div>        
+<pre class='code'>
+<code class="lang-javascript">
+sudo install scrcpy-server-v1.11.jar /usr/local/bin/scrcpy-server.jar
+</code>
+</pre>
+<p style="font-size:20px;padding: 10px;">
+  Configure and Build<br>
+</p>
+<div class="Terminal">
+  <img src="../Home/img/Terminal.png" height="30px">
+  Terminal
+  <img src="../Home/img/Terminal2.png" height="30px" align='right' style="padding-right:5px;">
+</div>
+<pre class='code'>
+<code class="lang-javascript">
+cd scrcpy
+meson build --buildtype release --strip -Db_lto=true  -Dprebuilt_server=../scrcpy-server-v1.11.jar
+cd build
+ninja
+sudo ninja install
+</code>
+</pre>
+          <p style="font-size:20px;padding: 10px;">
+            You might receve this error<br>
+          </p>
+<div class="Terminal">
+  <img src="../Home/img/Terminal.png" height="30px">
+  Terminal
+  <img src="../Home/img/Terminal2.png" height="30px" align='right' style="padding-right:5px;">
+</div>          
+<pre class='code' style="color: tomato;">
+<code class="lang-javascript">
+ninja: error: '/home/ken/Soft/scrcpy-server-v1.11.jar', 
+needed by 'server/scrcpy-server', missing and no known rule to make it  
+</code>
+</pre>
+          <p style="font-size:20px;padding: 10px;">
+            You can fix it by cp or move scrcpy-server-v1.11.jar to '/home/ken/Soft/scrcpy-server-v1.11.jar', in this example. <br>
+          </p>
+
+      </div>
+      <br><br><br>
+      <!-- Section 3 End-->
+
+      <!-- Section 4-->
+      <div id="blog" class="section" style="padding-left:290px;padding-right:10%;">
+        <div>
+            <h2 id='a1'>4 Porject your Androird phone</h2>
+        </div>
+        <div ng-include="'template/header.html'" ></div>    
+        <p style="font-size:20px;padding: 10px;">
+          Connect your Androird Phone via USB, and open USB developer mode and make sure 
+          you enable USB debugging on your Android device.
+          <br>
+        </p>
+<div class="Terminal">
+  <img src="../Home/img/Terminal.png" height="30px">
+  Terminal
+  <img src="../Home/img/Terminal2.png" height="30px" align='right' style="padding-right:5px;">
+</div>        
+<pre class='code'>
+<code class="lang-javascript">
+wget -c https://github.com/Genymobile/scrcpy/releases/download/v1.11/scrcpy-server-v1.11
+wget -c https://github.com/Genymobile/scrcpy/archive/v1.11.tar.gz
+
+mv scrcpy-server-v1.11 scrcpy-server-v1.11.jar
+tar -zxvf v1.11.tar.gz
+</code>
+</pre>
+      </div>
+      <br><br><br>
+      <!-- Section 4 End-->
+    </section>
+    <!-- blog Section End -->
+
+    <!-- Footer Section Start -->
+     
+    <!-- Copyright Start  -->
+    <div id="copyright">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="site-info float-left">
+              <li>Karobben  2020</li>
+            </div>           
+            <div class="float-right">  
+              <li>contack me: <a href="mailto:a591465908@outlook.com">a591465908@outlook.com</a> </li>
+            </div>
+            <li align = "center">
+              <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+              <span id="busuanzi_container_site_pv">~<span id="busuanzi_value_site_pv"></span>~</span>
+            </span>
+            </li>   
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Copyright End -->
+
+    </footer>
+    <!-- Footer Section End --> 
+
+    <!-- Go To Top Link -->
+    <a href="#" class="back-to-top">
+      <i class="lni-arrow-up"></i>
+    </a>
+
+    <div id="loader">
+      <div class="spinner">
+        <div class="double-bounce1"></div>
+        <div class="double-bounce2"></div>
+      </div>
+    </div>    
+
+    <!-- jQuery first, then Tether, then Bootstrap JS. -->
+
+    
+      
+
+    
+  </body>
+</html>
