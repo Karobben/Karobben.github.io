@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>How to install scrcpy in deepin 15.11 | Karobben blog</title>
+    <title>How to install scrcpy in Linux deepin 15.11 | Karobben blog</title>
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="../R/css/bootstrap.min.css">
@@ -12,13 +12,13 @@
       (function() {
         var hm = document.createElement("script");
         hm.src = "https://hm.baidu.com/hm.js?8442e6ecc87d878298ba7d3bd0a5484c";
-        var s = document.getElementsByTagName("script")[0]; 
+        var s = document.getElementsByTagName("script")[0];
         s.parentNode.insertBefore(hm, s);
       })();
     </script>
     <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
     </script>
-  </head> 
+  </head>
 
 <!-- sider bar -->
 <header class="s-header">
@@ -35,41 +35,41 @@
 
 
   <body>
-      
+
     <!-- Header Section Start -->
-    <header id="slider-area">  
+    <header id="slider-area">
       <nav class="navbar navbar-expand-md fixed-top scrolling-navbar bg-white">
-        <div class="container">          
+        <div class="container">
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav mr-auto w-100 justify-content-end">
               <li class="nav-item">
-                <a class="nav-link page-scroll" href="#">Home</a>
+                <a class="nav-link page-scroll" href="../index.html">Home</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link page-scroll" href="../R/R-index.html">R</a>
-              </li>  
+              </li>
               <li class="nav-item">
                 <a class="nav-link page-scroll" href="https://www.yuque.com/liuwenkan/python">Python</a>
-              </li>                            
+              </li>
               <li class="nav-item">
                 <a class="nav-link page-scroll" href="https://www.yuque.com/liuwenkan/linux">Bash</a>
-              </li>            
+              </li>
               <li class="nav-item">
                 <a class="nav-link page-scroll" href="https://www.yuque.com/liuwenkan/vbip5a">Ptotocol</a>
-              </li> 
+              </li>
               <li class="nav-item">
                 <a class="nav-link page-scroll" href="https://www.yuque.com/liuwenkan/add8a6">Notes</a>
-              </li>    
+              </li>
               <li class="nav-item">
                 <a class="nav-link page-scroll" href="https://www.yuque.com/liuwenkan/tza8ge">Others</a>
               </li>
-            </ul>              
+            </ul>
           </div>
         </div>
-      </nav> 
+      </nav>
 
     </header>
-    <!-- Header Section End --> 
+    <!-- Header Section End -->
 
     <!-- Blog Section -->
     <section id="blog" class="section" style="padding-right:10%;max-width: 1600px;">
@@ -80,11 +80,11 @@
         <h2 style="padding-top:60px; font-size:60px;">How to install scrcpy<br>in Deepin 15.11</h2>
         <p style=" font-size:20px;"><br>Karobben<br>5 Feb 2020<br></p>
         <p align="left" style=" font-size:20px;line-height:35px;"><br><br>
-          Scrcpy is a powful open source crassplatform software which could project your 
+          Scrcpy is a powful open source crassplatform software which could project your
           android phone to the computer. And it is Interoperable, it means you can control
-          your phone with keyboard and mouse (You can input English only). Scrcpy is 
+          your phone with keyboard and mouse (You can input English only). Scrcpy is
           extremely easy to install at Ubuntu with the help of apt. But this way is unavallable
-          in Deepin. However, you can still use "snap" to install it as a pice of cack 
+          in Deepin. However, you can still use "snap" to install it as a pice of cack
           in some regions. However, in other places like China, snap install are too
           slow to use. So, groups of people may inavitablly build scrcpy by source codes.
           It is easy for the people who are familiar with mason and nijia, but it is
@@ -92,13 +92,13 @@
           codes. As a reuslt, I spent a few hours trying to figure out how to build this
           app in Deepin 15.11. So, I'd like to share the post and help the people like me to save the day.
           <br><br>
-          I tried to install the latest version(1.12.1), but I have no idea why it asks me 
-          for the "scrcpy-server-v1.11.jar". So, I tried building V1.12.1 with scrcpy-server-v1.11.jar. 
-          It works in meson and nijia when you run conigure and build. When I run 
-          the scrcpy, everything just looks fine. Terminal resbonded well and my 
-          phone responded it, too. But there is no window jump out to the monitor. 
-          Creepy weird. So, I deleted all packages and installed the version V1.11.1, and 
-          boom, it finally works! Cheer! 
+          I tried to install the latest version(1.12.1), but I have no idea why it asks me
+          for the "scrcpy-server-v1.11.jar". So, I tried building V1.12.1 with scrcpy-server-v1.11.jar.
+          It works in meson and nijia when you run conigure and build. When I run
+          the scrcpy, everything just looks fine. Terminal resbonded well and my
+          phone responded it, too. But there is no window jump out to the monitor.
+          Creepy weird. So, I deleted all packages and installed the version V1.11.1, and
+          boom, it finally works! Cheer!
           <br></p>
         </div>
       </div>
@@ -110,14 +110,14 @@
         <div>
             <h2 id='a1'>1 Set up your environment</h2>
         </div>
-        <div ng-include="'template/header.html'" ></div>    
+        <div ng-include="'template/header.html'" ></div>
         <div>
           <br>
 <div class="Terminal">
   <img src="../Home/img/Terminal.png" height="30px">
   Terminal
   <img src="../Home/img/Terminal2.png" height="30px" align='right' style="padding-right:5px;">
-</div>          
+</div>
 <pre class='code'>
 <code class="lang-javascript">
 sudo apt install adb ffmpeg libsdl2-2.0.0 make gcc pkg-config meson ninja-build \
@@ -151,7 +151,7 @@ deb [by-hash=force] http://ftp.sjtu.edu.cn/deepin panda main contrib non-free
             <h2 id='a1'>2 Dowloading Source Packages</h2>
             <br>
         </div>
-        <div ng-include="'template/header.html'" ></div>    
+        <div ng-include="'template/header.html'" ></div>
         <p style="font-size:20px;padding: 10px;">Releas location: <a href="https://github.com/Genymobile/scrcpy/releases/tag/v1.11">Genymobile Github</a>
           Download the files in red boxs.
           In this section, we need to add ".jar" to the tail of scrcpy-server-v1.11 and install it later.
@@ -162,7 +162,7 @@ deb [by-hash=force] http://ftp.sjtu.edu.cn/deepin panda main contrib non-free
   <img src="../Home/img/Terminal.png" height="30px">
   Terminal
   <img src="../Home/img/Terminal2.png" height="30px" align='right' style="padding-right:5px;">
-</div>        
+</div>
 <pre class='code'>
 <code class="lang-javascript">
 wget -c https://github.com/Genymobile/scrcpy/releases/download/v1.11/scrcpy-server-v1.11
@@ -185,7 +185,7 @@ tar -zxvf v1.11.tar.gz
         <div>
             <h2 id='a1'>3 Install</h2>
         </div>
-        <div ng-include="'template/header.html'" ></div>    
+        <div ng-include="'template/header.html'" ></div>
         <p style="font-size:20px;padding: 10px;">
           Install the server<br>
         </p>
@@ -193,7 +193,7 @@ tar -zxvf v1.11.tar.gz
   <img src="../Home/img/Terminal.png" height="30px">
   Terminal
   <img src="../Home/img/Terminal2.png" height="30px" align='right' style="padding-right:5px;">
-</div>        
+</div>
 <pre class='code'>
 <code class="lang-javascript">
 sudo install scrcpy-server-v1.11.jar /usr/local/bin/scrcpy-server.jar
@@ -223,11 +223,11 @@ sudo ninja install
   <img src="../Home/img/Terminal.png" height="30px">
   Terminal
   <img src="../Home/img/Terminal2.png" height="30px" align='right' style="padding-right:5px;">
-</div>          
+</div>
 <pre class='code' style="color: tomato;">
 <code class="lang-javascript">
-ninja: error: '/home/ken/Soft/scrcpy-server-v1.11.jar', 
-needed by 'server/scrcpy-server', missing and no known rule to make it  
+ninja: error: '/home/ken/Soft/scrcpy-server-v1.11.jar',
+needed by 'server/scrcpy-server', missing and no known rule to make it
 </code>
 </pre>
           <p style="font-size:20px;padding: 10px;">
@@ -243,9 +243,9 @@ needed by 'server/scrcpy-server', missing and no known rule to make it
         <div>
             <h2 id='a1'>4 Project your Androird phone via USB</h2>
         </div>
-        <div ng-include="'template/header.html'" ></div>    
+        <div ng-include="'template/header.html'" ></div>
         <p style="font-size:20px;padding: 10px;">
-          Connect your Androird Phone via USB, and open USB developer mode and make sure 
+          Connect your Androird Phone via USB, and open USB developer mode and make sure
           you enable USB debugging on your Android device.
           <br>
         </p>
@@ -253,7 +253,7 @@ needed by 'server/scrcpy-server', missing and no known rule to make it
   <img src="../Home/img/Terminal.png" height="30px">
   Terminal
   <img src="../Home/img/Terminal2.png" height="30px" align='right' style="padding-right:5px;">
-</div>        
+</div>
 <pre class='code'><code>
 wget -c https://github.com/Genymobile/scrcpy/releases/download/v1.11/scrcpy-server-v1.11
 wget -c https://github.com/Genymobile/scrcpy/archive/v1.11.tar.gz
@@ -261,7 +261,7 @@ wget -c https://github.com/Genymobile/scrcpy/archive/v1.11.tar.gz
 mv scrcpy-server-v1.11 scrcpy-server-v1.11.jar
 tar -zxvf v1.11.tar.gz
 </code>
-</pre>  
+</pre>
         <br >
         <h2 id='a1'>Project your Androird phone without USB</h2>
         <p style="font-size:20px;padding: 10px;">
@@ -272,7 +272,7 @@ tar -zxvf v1.11.tar.gz
   <img src="../Home/img/Terminal.png" height="30px">
   Terminal
   <img src="../Home/img/Terminal2.png" height="30px" align='right' style="padding-right:5px;">
-</div>        
+</div>
 <pre class='code'><code>
 # Connect your phone via USB
 adb tcpip 5555
@@ -291,7 +291,7 @@ scrcpy --bit-rate 4M
   <img src="../Home/img/Terminal.png" height="30px">
   Terminal
   <img src="../Home/img/Terminal2.png" height="30px" align='right' style="padding-right:5px;">
-</div>        
+</div>
 <pre class='code' style="color: tomato;"><code>
 INFO: scrcpy 1.11 <https://github.com/Genymobile/scrcpy>
 [100%] /data/local/tmp/scrcpy-server
@@ -308,7 +308,7 @@ ERROR: Could not listen on port 27183
   <img src="../Home/img/Terminal.png" height="30px">
   Terminal
   <img src="../Home/img/Terminal2.png" height="30px" align='right' style="padding-right:5px;">
-</div>        
+</div>
 <pre class='code'><code>
 scrcpy -p 1234
 </code>
@@ -326,7 +326,7 @@ scrcpy -p 1234
           <img src="../Home/img/Terminal.png" height="30px">
           Terminal
           <img src="../Home/img/Terminal2.png" height="30px" align='right' style="padding-right:5px;">
-        </div>        
+        </div>
 <pre class='code'style="padding-left: 20px; max-height:500px;"><code>
   --always-on-top
   Make scrcpy window always on top (above other windows).
@@ -501,15 +501,15 @@ Drag & drop APK file
           For more features, please go to <a href="https://gitee.com/mirrors/scrcpy#features">github</a>
           <br>
         </p>
-  
-  
+
+
     </section>
     <br><br><br><br><br>
 
     <!-- blog Section End -->
 
     <!-- Footer Section Start -->
-     
+
     <!-- Copyright Start  -->
     <div id="copyright">
       <div class="container">
@@ -517,15 +517,15 @@ Drag & drop APK file
           <div class="col-md-12">
             <div class="site-info float-left">
               <li>Karobben  2020</li>
-            </div>           
-            <div class="float-right">  
+            </div>
+            <div class="float-right">
               <li>contack me: <a href="mailto:a591465908@outlook.com">a591465908@outlook.com</a> </li>
             </div>
             <li align = "center">
               <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
               <span id="busuanzi_container_site_pv">~<span id="busuanzi_value_site_pv"></span>~</span>
             </span>
-            </li>   
+            </li>
           </div>
         </div>
       </div>
@@ -533,7 +533,7 @@ Drag & drop APK file
     <!-- Copyright End -->
 
     </footer>
-    <!-- Footer Section End --> 
+    <!-- Footer Section End -->
 
     <!-- Go To Top Link -->
     <a href="#" class="back-to-top">
@@ -545,13 +545,13 @@ Drag & drop APK file
         <div class="double-bounce1"></div>
         <div class="double-bounce2"></div>
       </div>
-    </div>    
+    </div>
 
     <!-- jQuery first, then Tether, then Bootstrap JS. -->
 
-    
-      
 
-    
+
+
+
   </body>
 </html>
