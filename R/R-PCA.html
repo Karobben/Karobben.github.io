@@ -249,6 +249,29 @@ varname.abbrev # 标签是否缩写
     </section>
     <!-- blog Section End -->
 
+
+    <!-- Link Gitalk 的支持文件  -->
+    <div style="padding-left:300px;padding-right: 20%;">
+      <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+      <script src="https://unpkg.com/gitalk@latest/dist/gitalk.min.js"></script> 
+      <div id="gitalk-container"></div>     <script type="text/javascript">
+          var gitalk = new Gitalk({
+  
+          // gitalk的主要参数
+              clientID: '96c208ade65e80e3aaac',
+              clientSecret: '86e9240674a3815b0ddc31dababdb4998d5562f4',
+              repo: 'OAuth-Application',
+              owner: 'Karobben',
+              admin: ['Karobben'],
+              id:window.location.pathname,
+  
+          });
+          gitalk.render('gitalk-container');
+      </script> 
+    </div>
+    <!-- Gitalk end -->
+
+
     <!-- Footer Section Start -->
      
     <!-- Copyright Start  -->
