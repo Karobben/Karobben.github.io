@@ -285,6 +285,62 @@ button:focus {
 }
 
 
+
+/* For English Sentences*/
+.dropbtn_E {
+
+  background-color: white;
+  text-align: left;
+
+  padding: #px;
+
+  font-size: #px;
+
+  border: none;
+
+}
+
+.drop_En {
+
+  position: relative;
+  font-size: 25px;
+  display: inline-block;
+  background-color: lightgrey;
+}
+
+.dropdown_En {
+
+  display: none;
+  font-size: 24px;
+  position: absolute;
+
+  background-color: lightgrey;
+
+  min-width: #px;
+
+  z-index: 1;
+
+}
+
+.dropdown_En a {
+
+  color: black;
+
+  padding: #px #px;
+
+  text-decoration: none;
+
+  display: block;
+
+}
+
+.dropdown_En a:hover {background-color: white;}
+
+.drop_En:hover .dropdown_En {display: block;}
+
+.drop_En:hover .dropbtn_E {background-color: grey;}
+
+
 /* ==========================================================================
    Blog 
    ========================================================================== */
