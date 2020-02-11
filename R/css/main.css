@@ -367,7 +367,6 @@ button:focus {
   -webkit-transition: transform 0.2s linear, -webkit-box-shadow 0.2s linear;
   -moz-transition: transform 0.2s linear, -moz-box-shadow 0.2s linear;
   transition: transform 0.2s linear, box-shadow 0.2s linear;
-  padding-left: ;
 }
 
 .blog-item-wrapper:hover {
@@ -468,4 +467,15 @@ button:focus {
   font-family: monospace;
   font-size: 18px;
   border-radius: 0px 0px 10px 10px; 
+}
+
+.post{
+  font-size: 20px;
+  line-height:35px;
+}
+
+.post-s{
+  font-size: 20px;
+  line-height:35px;
+  font-style: italic;
 }
