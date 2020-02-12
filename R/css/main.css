@@ -479,3 +479,83 @@ button:focus {
   line-height:35px;
   font-style: italic;
 }
+
+
+
+/* ==========================================================================
+   Other model 
+   ========================================================================== */
+
+.Paper-box{
+  color: rgb(0, 0, 0);
+  padding-top:30px;
+
+}
+.Paper-item-wrapper {
+  padding: 0px;
+  max-width: 100%;
+  min-width:100%;
+  float: left;
+  background: rgb(219, 208, 208);
+  border-radius: 3px; /*圆角*/
+  box-shadow: 0px 10px 50px 0px rgba(84, 110, 122, 0.15);
+  -webkit-transition: transform 0.2s linear, -webkit-box-shadow 0.2s linear;
+  -moz-transition: transform 0.2s linear, -moz-box-shadow 0.2s linear;
+  transition: transform 0.2s linear, box-shadow 0.2s linear;
+}
+
+.Paper-item-wrapper:hover {
+  box-shadow: 0px 10px 50px 0px rgba(84, 110, 122, 0.35);
+  -webkit-transform: translateY(-50px); /*悬停动画*/
+  transform: translateY(-10px);
+}
+
+.Paper-item-wrapper:hover .blog-item-img:before {
+  opacity: 1;
+}
+
+.Paper-item-img{
+  width: 200px;
+  height: 200px;
+  float: left;
+}
+
+.Paper-item-text {
+  padding-top: 50px;
+  padding-left:  220px;
+  padding-right:  10%;
+}
+
+.Paper-item-text h3 {
+  line-height: 25px;
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 10px;
+  text-align : left ;
+}
+
+.Paper-item-text h3 a {
+  color: #263238;
+}
+
+.Paper-item-text h3 a:hover {
+  color: #0066cc;
+}
+
+.Paper-item-text date {
+  color: #263238;
+  font-size: 14px;
+  line-height: 20px;
+  float: left;
+  padding-left: 10px;
+}
+
+.Paper-item-text p {
+  line-height: 24px;
+  color: #263238;
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 10px;
+  text-align : left ;
+  padding-top: 3px;
+}
