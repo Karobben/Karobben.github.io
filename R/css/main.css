@@ -486,17 +486,17 @@ button:focus {
    Other model 
    ========================================================================== */
 
+
 .Paper-box{
-  color: rgb(0, 0, 0);
-  padding-top:30px;
+  padding: 5px;
 
 }
 .Paper-item-wrapper {
   padding: 0px;
   max-width: 100%;
   min-width:100%;
-  float: left;
-  background: rgb(219, 208, 208);
+  min-height:200px;
+  background: rgb(222, 230, 241);
   border-radius: 3px; /*圆角*/
   box-shadow: 0px 10px 50px 0px rgba(84, 110, 122, 0.15);
   -webkit-transition: transform 0.2s linear, -webkit-box-shadow 0.2s linear;
@@ -507,7 +507,8 @@ button:focus {
 .Paper-item-wrapper:hover {
   box-shadow: 0px 10px 50px 0px rgba(84, 110, 122, 0.35);
   -webkit-transform: translateY(-50px); /*悬停动画*/
-  transform: translateY(-10px);
+  transform: translateX(-15px);
+
 }
 
 .Paper-item-wrapper:hover .blog-item-img:before {
@@ -518,6 +519,7 @@ button:focus {
   width: 200px;
   height: 200px;
   float: left;
+  margin: auto;  
 }
 
 .Paper-item-text {
