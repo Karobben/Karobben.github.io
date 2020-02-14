@@ -491,6 +491,7 @@ button:focus {
   padding: 5px;
 
 }
+
 .Paper-item-wrapper {
   padding: 0px;
   max-width: 100%;
@@ -556,6 +557,61 @@ button:focus {
 }
 
 .Paper-item-text p {
+  line-height: 24px;
+  color: #263238;
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 10px;
+  text-align : left ;
+  padding-top: 3px;
+}
+
+.Notes-box{
+  padding: 5px;
+  float: left;
+  max-width: 250px;
+  max-height: 100px;
+
+}
+
+.Notes-item-wrapper {
+  padding: 5px;
+  max-width: 100%;
+  min-width:100%;
+  min-height:206px;
+  background: rgb(234, 240, 243);
+  border-radius: 10px; /*圆角*/
+  border: solid;
+  border-color: rgb(65, 118, 148);
+  box-shadow: 0px 10px 50px 0px rgba(84, 110, 122, 0.15);
+  -webkit-transition: transform 0.2s linear, -webkit-box-shadow 0.2s linear;
+  -moz-transition: transform 0.2s linear, -moz-box-shadow 0.2s linear;
+  transition: transform 0.2s linear, box-shadow 0.2s linear;
+}
+
+.Notes-item-wrapper:hover {
+  box-shadow: 0px 10px 50px 0px rgba(84, 110, 122, 0.35);
+  -webkit-transform: translateY(-50px); /*悬停动画*/
+  transform: translateY(-20px);
+
+}
+
+.Notes-item-text h3 a {
+  color: #263238;
+}
+
+.Notes-item-text h3 a:hover {
+  color: #0066cc;
+}
+
+.Notes-item-text date {
+  color: #263238;
+  font-size: 14px;
+  line-height: 20px;
+  padding-left: 10px;
+}
+
+.Notes-item-text p {
   line-height: 24px;
   color: #263238;
   font-size: 16px;
