@@ -495,9 +495,11 @@ button:focus {
   padding: 0px;
   max-width: 100%;
   min-width:100%;
-  min-height:200px;
-  background: rgb(222, 230, 241);
-  border-radius: 3px; /*圆角*/
+  min-height:206px;
+  background: rgb(234, 240, 243);
+  border-radius: 10px; /*圆角*/
+  border: solid;
+  border-color: rgb(65, 118, 148);
   box-shadow: 0px 10px 50px 0px rgba(84, 110, 122, 0.15);
   -webkit-transition: transform 0.2s linear, -webkit-box-shadow 0.2s linear;
   -moz-transition: transform 0.2s linear, -moz-box-shadow 0.2s linear;
@@ -518,6 +520,7 @@ button:focus {
 .Paper-item-img{
   width: 200px;
   height: 200px;
+  border-radius: 10px 0px 0px 10px; 
   float: left;
   margin: auto;  
 }
