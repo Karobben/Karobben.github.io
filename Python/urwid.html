@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Urwid Introduction for Beginners| Karobben blog</title>
+    <link rel="icon" href="../Home/img/tag.png" type="image/gif" />  
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../R/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../R/css/main.css">
+
+    <script>
+      var _hmt = _hmt || [];
+      (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?8442e6ecc87d878298ba7d3bd0a5484c";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+    </script>
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
+    </script>
+  </head>
+
+<!-- sider bar -->
+<header class="s-header">
+  <nav class="header__nav-wrap">
+      <ul class="header__nav" >
+        <li ><a href="../index.html" title="" style="color: white;font-size:40px;">Karobben</a></li><br>
+        <li style="font-size: 28px;padding-bottom: 10px;"><a  style="color: white;" href="P-index.html"><b>Python</b></a></li>
+        <li style="font-size: 28px;padding-bottom: 10px;"><a  style="color: white;" href="https://www.yuque.com/liuwenkan/python"><b>Yueque</b></a></li>
+        <li style="color: white;"><a  style="color: white;" href="urwid.html">Urwid</a></li>
+      </ul> <!-- end header__nav -->
+  </nav> <!-- end header__nav-wrap -->
+</header> <!-- end s-header -->
+
+
+
+
+
+  <body>
+
+    <!-- Header Section Start -->
+    <header id="slider-area">
+      <nav class="navbar navbar-expand-md fixed-top scrolling-navbar bg-white">
+        <div class="container">
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav mr-auto w-100 justify-content-end">
+              <li class="nav-item">
+                <a class="nav-link page-scroll" href="../index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link page-scroll" href="../R/R-index.html">R</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link page-scroll" href="../Python/P-index.html">Python</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link page-scroll" href="https://www.yuque.com/liuwenkan/linux">Bash</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link page-scroll" href="https://www.yuque.com/liuwenkan/vbip5a">Ptotocol</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link page-scroll" href="https://www.yuque.com/liuwenkan/add8a6">Notes</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link page-scroll" href="O-index.html">Others</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+    </header>
+    <!-- Header Section End -->
+
+    <!-- Blog Section -->
+    <section id="blog" class="section" style="padding-right:10%;max-width: 1600px;">
+      <!-- Container Starts -->
+      <div class="container"  >
+        <div class="section-header" style="padding-top:60px;">
+        <h2 style="padding-top:60px; font-size:60px;">Urwid Introduction for Beginners</h2>
+        <p style=" font-size:20px;"><br>Karobben<br>18 Feb 2020<br></p>
+        <p align="left" style=" font-size:20px;line-height:35px;"><br><br>
+          Urwid is a very powerful <b>TUI lib</b>. The most important thing is it is a <b>Python lib</b>!
+          Yeah!!! Cheers!!! Let's write a TUI Script with our favorite language, Python!
+          <br><br>
+          Urwid proved an elegant Turoiral in the <a href="http://urwid.org/tutorial/index.html">main page</a> 
+          and lot zs of examples at <a href="https://github.com/urwid/urwid/tree/master/examples">GitHub</a>.
+          We can write and run hello world, create menus, click buttons, 
+          input text in Editor, ect.. But what if I want to combine all these widgets?
+          Of course, you can find thorough details from the <a href="http://urwid.org/manual/widgets.html#included-widgets">Manual Page</a>.
+          <img src="img/urwid_m1.jpg" style="float: left;padding-right:10px;" width="310px"> And the layout style shows on 
+          <a  target="_blank" href="img/urwid_m.jpg">the left</a>. It looks awesome, looks cool,
+          but <b>what does it mean?</b> How can I understand those little boxes and bins? And how can it guide me
+          to combine all different widgets with <b>ZORE ERROR</b> output? (Technically, it is impossible to
+          write a script with zore error, zore bug, excepted the "Hello Word" Widget ^ ^). I believe
+          that I am not the only one who feels confused and exhausted about how to align and juxtapose
+          different Basic Widgets in Decoration Widgets. So, I tried to understand the codes from
+          examples line by line. I started with <b>pop_up.py</b>, which has the shortest lines among examples.
+          Here I learned that I can use <b>Columns</b> to juxtapose two bottons. And then, I moved on <b>bigtext.py</b>,
+          which has more complicated widgets. This time, I learend that except for the Text, Button, Pile, Filler,
+          there are Attrrap, Columns, ListBox, Fram, etc.. And now, look at the layout graphic as I
+          showed before, everything becomes so clear and easy to understand. And soon, I started to try
+          to build different widgets and combine them together, to form my first TUI App: A Bili_Monitor:</p>
+          <p>
+          <img src="img/Bli_head.jpg" style="padding-top: 20px;padding-bottom: 20px; width: 500px;">
+          </p>
+          <p  align="left" style=" font-size:20px;line-height:35px;">
+          Since it is very important to know 
+          the Widgets and it is significant to handle different widgets to create your Script, let's start with 
+          <a  target="_blank" href="img/urwid_m.jpg">the layout style picture</a> here.
+          <p>
+          <img src="img/urwid_m1.jpg" style="padding-top: 20px;padding-bottom: 20px; width: 500px;">
+          </p>
+          <p  align="left" style=" font-size:20px;line-height:35px;">
+          Basically, there are two kinds of widgets. One is Basic Widgets (Basic and Graphic Widgets, B. Widgets, for short), which has Text, Edit, Buttons, Divider...<br>
+          Another is Decoration & Container Widgets(D. Widgets, for short), which can insert one or more B. widgets to a D. widgets. Even more,
+          you can even juxtapose D. widgets into a D. Widget.
+        </p>
+        <div style="clear:both;"></div>
+        <p align="left" style=" font-size:20px;line-height:35px;"><br>
+          As the <a  target="_blank" href="img/urwid_m.jpg">picture</a> shows, the first bin is divided into 3 categories with a specific specific specific color.
+          And this is important for understanding the second bin. For example, The Column has two
+          colors, blue and pink. Which means, it could insert with B. widgets, like SolidFill, Text.
+          As for the Padding widget, it could handle all widgets since it has three colors. So, let's look at
+          specific examples.
+        </p>
+        </div>
+      </div>
+
+
+
+      <!--ection 1-->
+      <div id="blog" class="section" style="padding-left:290px;">
+        <div>
+            <h2 id='a1'>1 Clolumns</h2>
+        </div>
+        <div ng-include="'template/header.html'" ></div>
+        <p style="font-size:20px;padding: 10px;">
+        </p>
+        <div>
+          <br>
+<div class="Terminal">
+  <img src="../Home/img/Terminal.png" height="30px">
+  Terminal
+  <img src="../Home/img/Terminal2.png" height="30px" align='right' style="padding-right:5px;">
+</div>
+<pre class='code'>
+<code>
+import urwid
+
+button1 = urwid.Button(u'Left')
+button2 = urwid.Button(u'Right')
+
+W = urwid.Columns([
+    urwid.Padding(button1, 'left'),
+    urwid.Padding(button2, 'right',10),
+])
+
+fill = urwid.Filler(W)
+loop = urwid.MainLoop(fill)
+loop.run()
+</code>
+</pre>
+<p align='center'>
+<img  src="img/urwid_c.jpg" alt="">
+</p>
+        </div>
+      </div>
+      <br><br><br>
+      <!-- Section 1 End-->
+
+      <!-- Section 2-->
+      <div id="blog" class="section" style="padding-left:290px;">
+        <div>
+            <h2 id='a1'>2 ListBox</h2>
+            <br>
+        </div>
+        <div ng-include="'template/header.html'" ></div>
+        <p style="font-size:20px;padding: 10px;">
+        </p>
+<div class="Terminal">
+  <img src="../Home/img/Terminal.png" height="30px">
+  Terminal
+  <img src="../Home/img/Terminal2.png" height="30px" align='right' style="padding-right:5px;">
+</div>
+<pre class='code'>
+<code>
+import urwid
+
+Text = urwid.Text(u'Hello World','center')
+button1 = urwid.Button(u'Left')
+button2 = urwid.Button(u'Right')
+
+W = urwid.Columns([
+    urwid.Padding(button1, 'left'),
+    urwid.Padding(button2, 'right',10),
+])
+W = urwid.ListBox(urwid.SimpleListWalker([Text,W]))
+
+loop = urwid.MainLoop(W)
+loop.run()
+  </code>
+</pre>
+        </p>
+        <p align='center'>
+          <img  src="img/urwid_b.jpg" alt="">
+        </p> 
+      </div>
+      <div style="padding-left:310px;padding-right:320px;" align='center'>
+      </div>
+      <br><br><br>
+      <!-- Section 2 End-->
+
+        <p style="font-size:20px;padding-left: 290px;">
+          To be continue...<br>
+          For more Chinese information, please go to <a href="https://www.yuque.com/liuwenkan/python/urwid">Yuque Notes</a>
+          <br>
+        </p>
+
+        <div style="padding-left: 300px;padding-top: 100px;">
+        <a href="#" style="font-size: 25px;float: left;"><- This is the first</a>
+        <a href="#" style="font-size: 25px;float: right;">This is the last -></a>
+        </div>
+    
+
+    </section>
+    <br><br><br><br><br>
+
+    <!-- blog Section End -->
+
+
+    <!-- Link Gitalk 的支持文件  -->
+    <div style="padding-left:300px;padding-right: 20%;">
+      <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+      <script src="https://unpkg.com/gitalk@latest/dist/gitalk.min.js"></script> 
+      <div id="gitalk-container"></div>     <script type="text/javascript">
+          var gitalk = new Gitalk({
+  
+          // gitalk的主要参数
+              clientID: '96c208ade65e80e3aaac',
+              clientSecret: '86e9240674a3815b0ddc31dababdb4998d5562f4',
+              repo: 'OAuth-Application',
+              owner: 'Karobben',
+              admin: ['Karobben'],
+              id:window.location.pathname,
+  
+          });
+          gitalk.render('gitalk-container');
+      </script> 
+    </div>
+    <!-- Gitalk end -->
+
+
+    <!-- Footer Section Start -->
+
+    <!-- Copyright Start  -->
+    <div id="copyright">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="site-info float-left">
+              <li>Karobben  2020</li>
+            </div>
+            <div class="float-right">
+              <li>contack me: <a href="mailto:a591465908@outlook.com">a591465908@outlook.com</a> </li>
+            </div>
+            <li align = "center">
+              <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+              <span id="busuanzi_container_site_pv">~<span id="busuanzi_value_site_pv"></span>~</span>
+            </span>
+            </li>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Copyright End -->
+
+    </footer>
+    <!-- Footer Section End -->
+
+    <!-- Go To Top Link -->
+    <a href="#" class="back-to-top">
+      <i class="lni-arrow-up"></i>
+    </a>
+
+    <div id="loader">
+      <div class="spinner">
+        <div class="double-bounce1"></div>
+        <div class="double-bounce2"></div>
+      </div>
+    </div>
+
+    <!-- jQuery first, then Tether, then Bootstrap JS. -->
+
+
+
+
+
+  </body>
+</html>
