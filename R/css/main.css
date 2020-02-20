@@ -300,6 +300,19 @@ button:focus {
 
 }
 
+.dropbtn_E fr{
+  background-color: rgb(255, 159, 159);
+}
+
+.dropbtn_E fg{
+  background-color: rgb(193, 238, 145);
+}
+
+.dropbtn_E fb{
+  background-color: rgb(119, 197, 219);
+}
+
+
 .drop_En {
 
   position: relative;
