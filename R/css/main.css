@@ -633,3 +633,38 @@ button:focus {
   text-align : left ;
   padding-top: 3px;
 }
+
+
+
+
+/* ==========================================================================
+   Other model 
+   ========================================================================== */
+
+
+
+.Docs{
+  padding-left: 20px;
+  font-size: 25px;
+  height:25px;
+  clear:both;
+
+}
+
+
+.Docs count{
+  font-size: 15px;
+  float: right;
+}
+
+.Docs_count{
+  padding-left: 15px;
+  padding-top: 10px;
+  font-size: 15px;
+  padding-bottom: 20px;
+}
+
+.Docs_count data{
+  float: right;
+}
+
