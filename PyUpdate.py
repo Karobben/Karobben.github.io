@@ -41,7 +41,4 @@ for i in List:
         i = i.replace('\n    ','--')
         Result += i +"\n"
 
-print(Result)
-
-
 Substitude(Result)
