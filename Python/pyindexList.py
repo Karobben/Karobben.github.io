@@ -2,6 +2,13 @@
 
 import requests
 
+'''
+import Cookies and headers
+'''
+import sys
+sys.path.append("../..")
+import Cookis
+
 def Str2Dic(List):
     List  = List.replace('\n ','\n')
     List = List.split('\n')[:-1]
@@ -50,9 +57,7 @@ def Get_Stat(ID):
 
 PAGE_HEAD = "#########pyscript start##########"
 PAGE_TAIL = "#########pyscript end##########"
-headers = {
-"X-Auth-Token":"SboLOMTuWC8yvdryxbzj0xvDPjFwOKZhNGYSfxZZ"
-}
+headers = Cookis.Yuque_X_Auth_Token
 
 url = "https://www.yuque.com/api/v2/repos/liuwenkan/python"
 Data = requests.get(url,headers=headers).json()
@@ -73,7 +78,8 @@ for i in Result:
 
 Page = Page
 
-F = open('test.html','r').read()
+F = open('P-index.html','r').read()
 Test = F[:(F.find(PAGE_HEAD)+len(PAGE_HEAD))]+"\n"+Page+"\n"+F[F.find(PAGE_TAIL):]
-F = open('test.html','w')
+F = open('P-index.html','w')
 F.write(Test)
+F.close()
