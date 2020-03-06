@@ -25,7 +25,7 @@ url = "https://github.com/Karobben/Karobben.github.io/commits/master"
 
 GET  = requests.get(url,headers=Cookis.Git_commit_header)
 soup = BeautifulSoup(GET.text, features='lxml')
-TXT = soup.find('div',{'class':"list commit-list"}).get_text()
+TXT = soup.find('div',{'class':"commits-listing commits-listing-padded js-navigation-container js-active-navigation-container"}).get_text()
 
 List = TXT.split('\n\n')
 Result = ""
