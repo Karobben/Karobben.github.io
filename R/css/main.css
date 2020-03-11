@@ -314,11 +314,12 @@ button:focus {
 
 
 .drop_En {
-
+  padding-top: 30px;
+  width: 100%;
   position: relative;
   font-size: 25px;
   display: inline-block;
-  background-color: lightgrey;
+  background-color: rgb(255, 255, 255); 
 }
 
 .dropdown_En {
