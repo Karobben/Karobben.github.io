@@ -8,7 +8,7 @@ Test
 
 Img1
 <img src='img/OIP.jpeg'>
-<img src='img/2.jpg'>  
+<img src='https://github.com/Karobben/Yuque_Notes/tree/master/LearnNotes/img/2.jpg'>  
 Img2
 ![avatar](/media/ken/Data/Github/Yuque/LearnNotes/img/OIP.jpeg)
 
