@@ -697,5 +697,11 @@ def Setupview():
 
 ```
 
-![deepin-screen-recorder_Select area_20200314002713.gif](https://cdn.nlark.com/yuque/0/2020/gif/691897/1584116870885-9493e05a-004d-43c5-a105-3cbd527048c0.gif#align=left&display=inline&height=333&name=deepin-screen-recorder_Select%20area_20200314002713.gif&originHeight=333&originWidth=662&size=152669&status=done&style=none&width=662)<br />--------------------------------------------------------------------------------------------------------------------------------------------<br />github: [https://github.com/Karobben](https://github.com/Karobben)<br />blog: [Karobben.github.io](https://karobben.github.io/) <br />R 语言画图索引:[https://karobben.github.io/R/R-index.html](https://karobben.github.io/R/R-index.html)<br />
+![deepin-screen-recorder_Select area_20200314002713.gif](https://cdn.nlark.com/yuque/0/2020/gif/691897/1584116870885-9493e05a-004d-43c5-a105-3cbd527048c0.gif#align=left&display=inline&height=333&name=deepin-screen-recorder_Select%20area_20200314002713.gif&originHeight=333&originWidth=662&size=152669&status=done&style=none&width=662)
 
+
+---  
+[Github](https://github.com/Karobben)  
+[Blog](http://Karobben.github.io)  
+[Bilibili](https://space.bilibili.com/393056819)  
+[R 语言画图索引](https://karobben.github.io/R/R-index.html)
