@@ -2,7 +2,7 @@
 url: paperrnaseqfish1
 ---
 
-# Transcriptomic analysis of juvenile Chinese sea bass (*Lateolabrax maculatus*) anesthetized by MS-222 (tricaine methanesulfonate) and eugenol
+# Transcriptomic analysis of juvenile Chinese sea bass (Lateolabrax maculatus) anesthetized by MS-222 (tricaine methanesulfonate) and eugenol
 
 
 Cite: Dong, H., Wang, W., Duan, Y. et al. Transcriptomic analysis of juvenile Chinese sea bass (Lateolabrax maculatus) anesthetized by MS-222 (tricaine methanesulfonate) and eugenol. Fish Physiol Biochem (2020). https://doi.org/10.1007/s10695-019-00755-x
@@ -75,26 +75,26 @@ repeat detection
 - SNP and SSR detection
 
 >## Transcriptome sequence assembly
-  - Raw reads
-  - Clean reads
-  - Unigenes
-  - Annotated Genes
+> - Raw reads
+>  - Clean reads
+>  - Unigenes
+>  - Annotated Genes
 >
 >## Annotation and function analysis
-- COG (p1)
-- GO (p2)
-- KEGG (p3)  
+>- COG (p1)
+>- GO (p2)
+>- KEGG (p3)  
 >
 >Table (sample, Raw reads)
 > ## Differentially expressed genes
-- Unigenes  
-  - DEGs count(unique genes, annotated genes)
-  - (Charts & tables)
-- GO
-  - Unique/interested  Go-Terms
-  - Charts
-- KEGG
-  - Unique/interested pathways  
+>- Unigenes  
+>  - DEGs count(unique genes, annotated genes)
+>  - (Charts & tables)
+>- GO
+>  - Unique/interested  Go-Terms
+>  - Charts
+>- KEGG
+>  - Unique/interested pathways  
 >
 >## SNP and SSR detection
 Skip
@@ -106,29 +106,61 @@ Skip
 2. Pathways associated with human diseases and metabolism were found in **both samples**.  
 3. E group is intrested in **detoxification** and **xenobiotics**; M group is interested in **organismal system**
 
-## P2-
-1. Stress-> stress related diseases -> imbalance
+## P2-Comparative
+1. **Stress**
+```mermaid
+graph LR;
+Stress-->|Stress Related|Diseases;
+Diseases-->|Change|Oxidants;
+Diseases-->|Change|Anesthetic;
+Diseases-->|Change|Antioxidants;
+Antioxidants-.->|Reduce|Stress;
+```
+2. **Eugenol is less harmful than MS-222**
+- Eugenol group: 22 DEGs involved in 30 different pathways related xenobiotics biodegradation and metabolism, which means <span style="color:salmon;"><b>detoxification activities of the livers</b></span>.
+- MS-222 group: higher levels of AST, ALT, AKP, which reveals MS-222 cause <span style="color:salmon;"><b>more damages to livers</b></span>.(explain: can not be metabolized)
+3. **GST** (Glutathione-S-transferase)
+- BG: low activity of GST means low detoxification ability.
+- Different responses of facing MS-222 in different species from previous research.
+- Our result: *L. maculatus* is more vulnerable.
+4. **A smaller number of DEGs** may reveals lees intervention of E  compared with M. (PS: = = smaller...)
+5. Additionally, eugenol is **natural** and may easier to metabolized.  
+(PS: ... Good, I just learned another skill to fill more words on discussion section)
 
+## P3 Stress & Metabolism
+1. BG: liver glucose oxidation is enhanced. Amino acid evolved in gluconeogenesis during the stress responses.
+2. Those pathways are **enriched in both groups**.
+3. Recent start verified *point 1*.
 
+## P4 Pathways involved in environmental information processing
+- Jak-STAT signaling, PI3KAkt signaling, TNF signaling, and cytokine-cytokine receptor interaction.
+- BG: HPI->Cotisol; stress can inhibit inflammatory cytokine production and induce apoptosis, proliferation, and phagocytosis of immune cells.
+Here: More DEGs related immune-related pathways are found in E group.
+- BG: stress affects HPG and may affect reprodctive performance;
+Here: Some DEGs involved in productive activities are found in M group.
+- BG: Lethimonier observed that stress-induced cortisol inhibited vitellogenesis,
+Here: We found it here, too.
+- Conclusion: MS-222 is more harmful than eugenol.
 
+## P5 Gill & Livers
+Result:  not change the original functions of the organs
 
-
-
-
-
-
-
-
-
-
-
+## P6 Conclusion
+MS-222 revealed that all these anesthetics regulate the metabolic and immune pathways in the fish, and MS-222 may trigger more damages on the fish liver and reproduction.
 
 ---
+# Related papers:  
+Morais S, Pratoomyot J, Taggart JB, Bron JE, Guy DR, Bell JG, Tocher DR (2011b) Genotype-specific responses in Atlantic salmon (Salmo salar) subject to dietary fish oil replacement by vegetable oil: a liver transcriptomic analysis. BMC Genomics 12:255
+
+Morais S, Edvardsen RB, Tocher DR, Bell JG (2012a) Transcriptomic analyses of intestinal gene expression of juvenile Atlantic cod (Gadus morhua) fed diets with Camelina oil as replacement for fish oil. Comp Biochem Physiol B Biochem Mol Biol 161:283–293.  
+
+Tacchi L, Secombes CJ, Bickerdike R, Adler MA, Venegas C, Takle H, Martin SA (2012)  Transcriptomic and physiological responses to fishmeal substitution with plant proteins in formulated feed in farmed Atlantic salmon (Salmo salar). BMC Genomics 13:363
 
 ---
+# Related Notes:
 
-Xu, W., Jin, J., Han, D. et al. Physiological and transcriptomic responses to fishmeal-based diet and rapeseed meal-based diet in two strains of gibel carp (Carassius gibelio). Fish Physiol Biochem 45, 267–286 (2019). https://doi.org/10.1007/s10695-018-0560-7
+[De novo characterization of the liver transcriptome of javelin goby Synechogobius hasta and analysis of its transcriptomic profile following waterborne copper exposure](paperrnaseqfish2)
 
-Chen, Q., Luo, Z., Huang, C. et al. De novo characterization of the liver transcriptome of javelin goby Synechogobius hasta and analysis of its transcriptomic profile following waterborne copper exposure. Fish Physiol Biochem 42, 979–994 (2016). https://doi.org/10.1007/s10695-015-0190-2
+[Physiological and transcriptomic responses to fishmeal-based diet and rapeseed meal-based diet in two strains of gibel carp (Carassius gibelio)](paperrnaseqfish3)
 
-Cite: Cui, W., Ma, A., Huang, Z. et al. Comparative transcriptomic analysis reveals mechanisms of divergence in osmotic regulation of the turbot Scophthalmus maximus. Fish Physiol Biochem (2020). https://doi.org/10.1007/s10695-020-00808-6
+[Transcriptomic response to soybean meal-based diets as the frst formulated feed in juvenile yellow perch (Perca favescens)](paperrnaseqfish4)
