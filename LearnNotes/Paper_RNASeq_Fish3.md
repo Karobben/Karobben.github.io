@@ -83,6 +83,15 @@ P4:G. carp is important. A: fast growth; B: fast growth & Diseases resist.
 - Metabolic response interact with genotype.
 
 ## P3 Essential Amino Acids.
+
+Challenges:
+- The rapeseeds lack of *lysine* and *methionine*.
+- Imbalanced amino acid diet.
+
+Responds:
+- Low body protein deposition
+- OAT(***ornithine aminotransferase***) improved to generates more nonessential AA.
+
 ```mermaid
 graph LR;
 RM-->|Lack of| EAA-->|Decrease|SGR-->Body_Protein_Deposition_Reduction;
@@ -152,8 +161,17 @@ Morais S, Edvardsen RB, Tocher DR, Bell JG (2012a) Transcriptomic analyses of in
 
 Tacchi L, Secombes CJ, Bickerdike R, Adler MA, Venegas C, Takle H, Martin SA (2012)  Transcriptomic and physiological responses to fishmeal substitution with plant proteins in formulated feed in farmed Atlantic salmon (Salmo salar). BMC Genomics 13:363
 
+---
+PS
 
+I think that the author did a good job on the discussion secession.
+First of all, he mad a conclusion about the Growth performance of the corps. This is what what we can see at the first glance, and one of the direct purpose of this experiment. On the other hand, the author gave a general summery of the different in metabolic, digestives, and cell signals change, etc.
 
+After that, the author focused on two widely concerned challenges in plant meals: lacking of some essential amino acids and lipid deficiency. As a result, the body protein deposition was definitely affected and ***oat*** was involved in Nitrogen compensate. About the Lipid metabolism, they found that the gene ***hmdh*** are respond to keep cholesterol homeostasis.
+
+After this discussion, the author are focused in talking about the interaction of the diet and genotype, the part makes this experiment unique.
+
+Above of, this discussion is a good example to show how to handle a discussion, how to write a story logically and neatly.
 
 ---
 # Related Notes:

@@ -40,6 +40,7 @@
   - [Data cleaning](dataclean)
   - [Data frame Functions](data.frame)
   - [Data normalization](normalization)
+  - [Diff_exprs edgeR](edger)
   - [PCA](pca)
   - [worldcloud](worldcloud)
   - [XGBoost (out of date)](xgboost)
@@ -56,4 +57,3 @@
   - [magick (Picture needed)](magick)
   - [jpeg: reading color from img](jpeg)
 - [R 语言报错集](error_codes)
-

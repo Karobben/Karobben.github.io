@@ -11,12 +11,12 @@ url: trinity
 ```
 # library R
 ```R
-source("http://bioconductor.org/biocLite.R")
-biocLite('edgeR')
-biocLite('limma')
-biocLite('DESeq2')
-biocLite('ctc')
-biocLite('Biobase')
+BiocManager::install('edgeR')
+BiocManager::install('limma')
+BiocManager::install("qvalue")
+BiocManager::install('DESeq2')
+BiocManager::install('ctc')
+BiocManager::install("Biobase")
 install.packages('gplots')
 install.packages('ape')
 ```
@@ -40,6 +40,10 @@ install.packages('ape')
 #                                        cond_B    cond_B_rep1    B_rep1_left.fq    B_rep1_right.fq
 #                                        cond_B    cond_B_rep2    B_rep2_left.fq    B_rep2_right.fq
 ```
+
+# Tricks
+If you don't like the color of heatmap, you can can change the below lines in file:
+`$TrinityFile/Analysis/DifferentialExpression/R/heatmap.3.R`
 
 ---  
 [Github](https://github.com/Karobben)  

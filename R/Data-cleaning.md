@@ -17,7 +17,7 @@ as.Date("08月24日2019年", "%m月%d日%y年")
 # Split column by str
 
 ```r
-## Split a column
+# Split a column
 library(stringr)
 str_split_fixed(before$type, "_and_", 2)
 ```
@@ -42,3 +42,30 @@ r$> str_split_fixed(TB$Date, "-", 2)
 [6,] "2020" "08-30"
 ```
 
+
+# reshape2
+Raw matrix:`head(longImage)`
+```R
+  Var1 Var2 Var3     value
+1    1    1    1 1.0000000
+2    2    1    1 0.9921569
+3    3    1    1 0.9882353
+4    4    1    1 0.9725490
+5    5    1    1 0.9686275
+6    6    1    1 0.9803922
+```
+
+Reshape
+```R
+reshape(longImage, timevar='Var3',idvar=c('Var1','Var2'), direction='wide')
+```
+
+```R
+  Var1 Var2   value.1   value.2   value.3
+1    1    1 1.0000000 0.9960784 1.0000000
+2    2    1 0.9921569 0.9921569 1.0000000
+3    3    1 0.9882353 1.0000000 1.0000000
+4    4    1 0.9725490 0.9960784 0.9960784
+5    5    1 0.9686275 1.0000000 1.0000000
+6    6    1 0.9803922 1.0000000 1.0000000
+```
