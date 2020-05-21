@@ -19,7 +19,7 @@ Cite: Chen, Yan, et al. "Effects of the replacement of fishmeal by soy protein c
 1. Substitute gradient
 2. SPC15 has a best growth performance
 3. SPC75 has a worst growth performance
-4. SPC 15 and SPC30 had the highest protein efficiency ratio
+4. SPC15 and SPC30 had the highest protein efficiency ratio
 5. Daily feed intake was significantly decreased
 6. Survival rate were higher in SPC15, SPC30, and SPC45
 7. SPC15 and SPC30 showed significantly higher protein and amino acid (AA) retention
