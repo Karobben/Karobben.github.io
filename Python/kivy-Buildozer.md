@@ -1,5 +1,5 @@
 ---
-url: buildozer
+url: buildozer2
 ---
 
 # kivy-Buildozer
@@ -9,7 +9,7 @@ url: buildozer
 # 1 install Buildozer
 
 ```bash
-sudo pip3.7  install -i https://pypi.tuna.tsinghua.edu.cn/simple 
+sudo pip3.7  install -i https://pypi.tuna.tsinghua.edu.cn/simple
 ```
 
 链接安卓手机, 开启USB debug模式;<br />进入 kivy 项目目录<br />测试项目:[https://github.com/sevvalbrt/Todolist](https://github.com/sevvalbrt/Todolist)

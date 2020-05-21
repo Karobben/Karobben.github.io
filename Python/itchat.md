@@ -1,3 +1,7 @@
+---
+url: itchat
+---
+
 # itchat
 
 wechat bot<br />微信机器人
@@ -39,4 +43,3 @@ itchat.auto_login()
 itchat.run()
 
 ```
-

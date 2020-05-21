@@ -1,5 +1,5 @@
 ---
-url: kxx4pc
+url: raspi
 ---
 
 # Start With Rasberry pi
@@ -63,7 +63,7 @@ X-MB-INPUT-MECHANSIM=True
 
 <br />It's failed and I don't know why. But there is a keyboard for rasberrypi, so...<br />![123.png](https://cdn.nlark.com/yuque/0/2020/png/691897/1584669336016-aa7d7671-e4b9-4c5b-8844-82f33d43c4cf.png#align=left&display=inline&height=320&name=123.png&originHeight=320&originWidth=480&size=39887&status=done&style=none&width=480)
 <a name="vG5v1"></a>
-# 
+#
 <a name="FvMt8"></a>
 # Screen Shot
 
@@ -72,7 +72,7 @@ X-MB-INPUT-MECHANSIM=True
 sudo apt-get install scrot
 scrot test.png
 
-# screen shot for 
+# screen shot for
 scrot -s 0 0 100 100
 # Screen shot after 10s
 scrot -d 10
@@ -116,7 +116,7 @@ luvcview -s 400x400
 <br />I got an error code after a lunached the command. The image poped out and crashed after about 1s.<br />
 
 ```bash
-luvcview: ../../src/xcb_io.c:165: dequeue_pending_request: 
+luvcview: ../../src/xcb_io.c:165: dequeue_pending_request:
 	Assertion `!xcb_xlib_unknown_req_in_deq' failed.
 ```
 
@@ -135,5 +135,3 @@ console Autologin Text console int3 或者 Desktop Autologin Desktop GUI 桌面�
 finish
 reboot
 ```
-
-

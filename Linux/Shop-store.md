@@ -1,5 +1,5 @@
 ---
-url: shop_store
+url: shop_store2
 ---
 
 # Shop store
@@ -52,8 +52,8 @@ npm install <registry-name> --registry https://registry.npm.taobao.org
 '''
 Other Mirrows
 
-https://registry.npmjs.org 
-https://r.cnpmjs.org 
+https://registry.npmjs.org
+https://r.cnpmjs.org
 https://registry.npm.taobao.org
 '''
 ```
@@ -95,4 +95,3 @@ flatpak install flathub com.obsproject.Studio
 # run OBS
 flatpak run com.obsproject.Studio
 ```
-

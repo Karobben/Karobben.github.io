@@ -1,5 +1,5 @@
 ---
-url: ggplot_tricks
+url: ggplot_tricks2
 ---
 
 # GGplot 杂耍
@@ -56,17 +56,17 @@ Connet <- function(P1,P2,Space=pi/7,theta=pi/2){
         S$Y = (-1)*S$Y
     }
     #List = Turn_back(P1,P3,P2)
-    Sin=(P2-P1)[2]/sqrt(sum((P2-P1)^2)) 
-    Cos=(P2-P1)[1]/sqrt(sum((P2-P1)^2)) 
-    X = S$X*Cos-S$Y*Sin 
-    Y = S$X*Sin+S$Y*Cos 
-    Line = data.frame(X=X-(X[1]-P1[1]),Y=Y-(Y[1]-P1[2])) 
+    Sin=(P2-P1)[2]/sqrt(sum((P2-P1)^2))
+    Cos=(P2-P1)[1]/sqrt(sum((P2-P1)^2))
+    X = S$X*Cos-S$Y*Sin
+    Y = S$X*Sin+S$Y*Cos
+    Line = data.frame(X=X-(X[1]-P1[1]),Y=Y-(Y[1]-P1[2]))
 #    p <- ggplot(S)+geom_point(aes(X,Y))+  
 #        geom_label(aes(x=P1[1],y=P1[2],label="P1",color="P1"))+  
 #        geom_point(aes(x=P3[1],y=P3[2],color="P3"))+  
 #        geom_point(aes(x=D[1],y=D[2],color="center"))+  
 #        geom_label(aes(x=P2[1],y=P2[2],size=2,label="P2"))+  
-#    geom_point(data=Line,aes(X,Y),color='red') 
+#    geom_point(data=Line,aes(X,Y),color='red')
 #   print(p)
 #       p <- geom_point(data=Line,aes(X,Y,group=1),color='red')
     return(Line)
@@ -88,7 +88,7 @@ ggplot(Connet(P1,P2,pi/15),aes(X,Y))+geom_path()
 ## Combine The Whole function
 ```
 #There is a funning thing I found.
-#When I try to name it as geom_curve, I cheked the original geom function and find 
+#When I try to name it as geom_curve, I cheked the original geom function and find
 # THIS FUNCTION EXIST ALREADY!! So, why should I waste so much of time to write this function = =
 geom_curve_C <- function(P1,P2,Space=pi/20,theta=pi/2){
     P3 = Trans(P1,P2)
@@ -104,11 +104,11 @@ geom_curve_C <- function(P1,P2,Space=pi/20,theta=pi/2){
         S$Y = (-1)*S$Y
     }
     #List = Turn_back(P1,P3,P2)
-    Sin=(P2-P1)[2]/sqrt(sum((P2-P1)^2)) 
-    Cos=(P2-P1)[1]/sqrt(sum((P2-P1)^2)) 
-    X = S$X*Cos-S$Y*Sin 
-    Y = S$X*Sin+S$Y*Cos 
-    Line = data.frame(X=X-(X[1]-P1[1]),Y=Y-(Y[1]-P1[2])) 
+    Sin=(P2-P1)[2]/sqrt(sum((P2-P1)^2))
+    Cos=(P2-P1)[1]/sqrt(sum((P2-P1)^2))
+    X = S$X*Cos-S$Y*Sin
+    Y = S$X*Sin+S$Y*Cos
+    Line = data.frame(X=X-(X[1]-P1[1]),Y=Y-(Y[1]-P1[2]))
     p <- geom_path(data=Connet(P1,P2,pi/20),aes(x=X,y=Y))
     return(p)
 }
@@ -125,17 +125,17 @@ ggplot + geom_curve_C(P1,P2)
 ## 荧光经纬线
 
 ```r
-经纬线 <- function(底色='grey',边色="#E9FEFF",Space=30){ 
+经纬线 <- function(底色='grey',边色="#E9FEFF",Space=30){
     p  <- ggplot() +
-    #geom_vline(aes(xintercept=seq(-180,+180,by=Space)),color=颜色,size=1.3,alpha=0.5)+ 
-    geom_vline(aes(xintercept=seq(-180,+180,by=Space)),color=边色,size=2,alpha=0.7)+ 
-    geom_vline(aes(xintercept=seq(-180,+180,by=Space)),color=底色,linetype="dashed")+ 
-    #geom_hline(aes(yintercept=seq(-80,+80,by=Space)),color=颜色,size=1.3,alpha=0.5)+ 
-    geom_hline(aes(yintercept=seq(-80,+80,by=Space)),color=边色,size=2,alpha=0.7)+ 
-    geom_hline(aes(yintercept=seq(-80,+80,by=Space)),color=底色,linetype="dashed")+ 
-    theme_map() 
-    return(p) 
-} 
+    #geom_vline(aes(xintercept=seq(-180,+180,by=Space)),color=颜色,size=1.3,alpha=0.5)+
+    geom_vline(aes(xintercept=seq(-180,+180,by=Space)),color=边色,size=2,alpha=0.7)+
+    geom_vline(aes(xintercept=seq(-180,+180,by=Space)),color=底色,linetype="dashed")+
+    #geom_hline(aes(yintercept=seq(-80,+80,by=Space)),color=颜色,size=1.3,alpha=0.5)+
+    geom_hline(aes(yintercept=seq(-80,+80,by=Space)),color=边色,size=2,alpha=0.7)+
+    geom_hline(aes(yintercept=seq(-80,+80,by=Space)),color=底色,linetype="dashed")+
+    theme_map()
+    return(p)
+}
 
 经纬线()
 ```

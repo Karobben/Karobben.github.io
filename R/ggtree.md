@@ -1,3 +1,6 @@
+---
+url: ggtree2
+---
 # ggtree
 
 author's post:[https://cosx.org/2015/11/to-achieve-the-visualization-and-annotation-of-evolutionary-tree-using-ggtree](https://cosx.org/2015/11/to-achieve-the-visualization-and-annotation-of-evolutionary-tree-using-ggtree)
@@ -17,7 +20,7 @@ ggplot(tree, aes(x, y)) + geom_tree() + theme_tree() + geom_tiplab(size=5, color
 ```r
 source("https://bioconductor.org/biocLite.R")
 # biocLite("BiocUpgrade") # you may need this
-BiocManager::install('ggree') 
+BiocManager::install('ggree')
 ```
 
 <a name="FG8Ad"></a>

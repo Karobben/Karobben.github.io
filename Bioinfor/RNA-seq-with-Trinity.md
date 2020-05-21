@@ -1,5 +1,5 @@
 ---
-url: zt3n7t
+url: trinity_rna_seq
 ---
 
 # RNA-seq with Trinity
@@ -35,4 +35,3 @@ Trinity --seqType fq --max_memory 40G --single $i --CPU 8 --full_cleanup
 mv trinity_out_dir.Trinity.fasta $i.fa
 done
 ```
-

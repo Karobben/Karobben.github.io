@@ -1,10 +1,13 @@
+---
+url: pip2
+---
 # pip
 
 
 
 ```bash
 # 清华
-pip install -i https://pypi.tuna.tsinghua.edu.cn/simple 
+pip install -i https://pypi.tuna.tsinghua.edu.cn/simple
 # 豆瓣
 pip install -i http://pypi.douban.com/simple/ --upgrade numpy
 ```
@@ -18,7 +21,7 @@ pip install -t /usr/local/lib/python2.7/site-packages/ xlrd
 <br />
 
 ```bash
-sudo pip3.7  install -i https://pypi.tuna.tsinghua.edu.cn/simple 
+sudo pip3.7  install -i https://pypi.tuna.tsinghua.edu.cn/simple
 ```
 
 <br />
@@ -59,7 +62,7 @@ Author-email: None
 License: MIT
 Location: /usr/local/lib/python3.7/site-packages
 Requires: numpy
-Required-by: 
+Required-by:
 '''
 ```
 

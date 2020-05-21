@@ -1,5 +1,5 @@
 ---
-url: atom
+url: atom2
 ---
 
 # Atom
@@ -33,7 +33,7 @@ apm install
 ```
 
 
-Ctrl + Shift + H<br />（我们没成功）
+Ctrl + Shift + H<br />（我没成功）
 
 <a name="GjTh6"></a>
 # 3 自动补全文件路径
@@ -49,4 +49,11 @@ apm install
 
 <a name="ePp9Z"></a>
 # 其他
-Location：[https://www.cnblogs.com/GarfieldEr007/p/5594700.html](https://www.cnblogs.com/GarfieldEr007/p/5594700.html)
+Location：https://www.cnblogs.com/GarfieldEr007/p/5594700.html
+更多插件:
+- minimap (VS 一样小图预览)
+- atom-beautify (高亮美化)
+- emmet (emmet是HTML,CSS快速编写的神器,具体的使用可以参看emmet官网。)
+- autocomplete-* 系列 (自动补全)
+- pigments (显示颜色)
+https://blog.csdn.net/qq_32340877/article/details/79095610

@@ -1,5 +1,5 @@
 ---
-url: pynput
+url: pynput2
 ---
 
 # pynput --Moniter your keybaord
@@ -127,4 +127,3 @@ while True:
         on_release = on_release) as listener:
         listener.join()
 ```
-

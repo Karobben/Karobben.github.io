@@ -1,5 +1,5 @@
 ---
-url: geom_map
+url: geom_map2
 ---
 
 # GGmap: geom_map
@@ -27,7 +27,7 @@ dat <- filter(dat, Nation != "Sweden")
 
 gg <- ggplot()+ geom_map(data=world, map=world,
 	aes(x=long, y=lat, map_id=region), fill="#00518E",
-	color="white", fill="#7f7f7f", size=0.05, alpha=1/4)+ 
+	color="white", fill="#7f7f7f", size=0.05, alpha=1/4)+
 	geom_point(data=dat,aes(x=Lon3, y=Lat3, color=Nation),size=0.15, alpha=1/100)+
 	scale_color_tableau()+ coord_proj("+proj=wintri")+ facet_wrap(~Nation)+
 	theme_map()+ theme(strip.background=element_blank())+ theme(legend.position="none")
@@ -55,7 +55,7 @@ qplot(long,lat,data=big_citi) + borders("state",size=0.5)
 library(themes)
 library(ggrepel)
 qplot(long,lat,data=big_citi) + borders("state",size=0.5)  +theme_map()+
-	geom_label_repel(data=big_citi,aes(x=long,y=lat,label=name)) 
+	geom_label_repel(data=big_citi,aes(x=long,y=lat,label=name))
 ```
 ![image.png](https://cdn.nlark.com/yuque/0/2020/png/691897/1579879615029-4b3dd184-7177-40e8-974d-702fe5ccc5b0.png#align=left&display=inline&height=240&name=image.png&originHeight=405&originWidth=586&size=57663&status=done&style=none&width=347)![image.png](https://cdn.nlark.com/yuque/0/2020/png/691897/1579785807568-59258b75-0aca-410b-8228-916dc6ac8659.png#align=left&display=inline&height=240&name=image.png&originHeight=346&originWidth=562&size=82851&status=done&style=none&width=390)
 

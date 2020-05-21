@@ -1,3 +1,6 @@
+---
+url: geom_violin2
+---
 # geom_violin
 
 ![image.png](https://cdn.nlark.com/yuque/0/2020/png/691897/1580050088677-c255a94b-5438-4d5d-951f-b0e9322a6970.png#align=left&display=inline&height=415&name=image.png&originHeight=415&originWidth=591&size=24972&status=done&style=none&width=591)
@@ -8,7 +11,7 @@
 library(ggplot2)
 
 p <- ggplot(mtcars, aes(factor(cyl), mpg))
-p + geom_violin()+ geom_point() + theme_light() 
+p + geom_violin()+ geom_point() + theme_light()
 ```
 
 <a name="dw7gw"></a>

@@ -1,5 +1,5 @@
 ---
-url: pca
+url: pca2
 ---
 
 # PCA
@@ -13,7 +13,7 @@ url: pca
 ```r
 # install ggbioplot
 #install_github("vqv/ggbiplot")
-#install.packages('plyr') 
+#install.packages('plyr')
 data(wine)
 wine.pca <- prcomp(wine, scale. = TRUE)
 # bioplot
@@ -67,12 +67,12 @@ library(ggplot2)
 PC <- principal(wine, nfactors=2, rotate ="none")
 pc <- data.frame(PC$scores)
 p  <- ggplot(pc, aes(x=PC1, y=PC2,color=wine.class )) +
-	geom_point(size=4,alpha=0.5)+ 
-	theme(axis.text= element_text(size=20))+ 
-	theme(panel.grid.major =element_blank(), 
+	geom_point(size=4,alpha=0.5)+
+	theme(axis.text= element_text(size=20))+
+	theme(panel.grid.major =element_blank(),
         panel.grid.minor = element_line(color="steelblue"),
         panel.background = element_blank(),
-        axis.line = element_line(colour = "black"))+ 
+        axis.line = element_line(colour = "black"))+
 	stat_ellipse(lwd=1,level = 0.8)
 ```
 

@@ -1,5 +1,5 @@
 ---
-url: matplotlib
+url: matplotlib2
 ---
 
 # Matplotlib
@@ -128,7 +128,7 @@ plt.ylabel('2nd')
 plt.title('Scatter Plot')
 ```
 <a name="VeB2w"></a>
-## 
+##
 <a name="7F9HK"></a>
 ### 2.2.3 Adding color: c = c
 

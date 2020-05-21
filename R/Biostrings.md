@@ -1,5 +1,5 @@
 ---
-url: biostrings
+url: biostrings2
 ---
 
 # Biostrings
@@ -27,4 +27,3 @@ letterFrequency(s, DNA_ALPHABET)	# Frq with A, C, G, T, M, R, W, S, Y, K, V, H, 
 letterFrequency(s, DNA_BASES, as.prob = TRUE) # Frq with A T G C
 letterFrequency(s, "GC", as.prob = TRUE) # Frq with GC
 ```
-

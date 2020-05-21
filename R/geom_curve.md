@@ -1,3 +1,6 @@
+---
+url: geom_curve2
+---
 # geom_curve
 
 <a name="EsYEd"></a>
@@ -27,9 +30,9 @@ p+ theme_light()
 ## curvature
 
 ```r
-p <- ggplot() 
-for(i in c(-10:10)){ 
-    p <- p+ geom_curve( aes(x = 1, y = 1, xend= 6, yend = 6), curvature = i*0.1) 
+p <- ggplot()
+for(i in c(-10:10)){
+    p <- p+ geom_curve( aes(x = 1, y = 1, xend= 6, yend = 6), curvature = i*0.1)
 }
 p+ theme_light()+ expand_limits(x=c(0,10),y=c(0,6))
 ```
@@ -39,9 +42,9 @@ p+ theme_light()+ expand_limits(x=c(0,10),y=c(0,6))
 ## angle
 
 ```r
-p <- ggplot() 
-for(i in c(1:9)){ 
-    p <- p+ geom_curve( aes(x = 1, y = 1, xend= 6, yend = 6), angle = i*10) 
+p <- ggplot()
+for(i in c(1:9)){
+    p <- p+ geom_curve( aes(x = 1, y = 1, xend= 6, yend = 6), angle = i*10)
 }
 p+ theme_light()+ expand_limits(x=c(0,10),y=c(0,6))
 ```

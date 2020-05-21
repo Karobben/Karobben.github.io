@@ -1,5 +1,5 @@
 ---
-url: sed
+url: sed2
 ---
 
 # sed 匹配编辑
@@ -55,4 +55,3 @@ sed '1d' filename # deleted the first line only
 sed '2d' filename # deleted the second line only
 
 ```
-

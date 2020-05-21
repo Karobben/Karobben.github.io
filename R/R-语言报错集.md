@@ -1,5 +1,5 @@
 ---
-url: error_codes
+url: error_codes2
 ---
 
 # R 语言报错集
@@ -24,7 +24,7 @@ R CMD build  hello
 ** help
 Warning: /tmp/Rtmp9IseJR/Rbuild799a14248b2f/hello/man/hello-package.Rd:26: All text must be in a section
 *** installing help indices
-Error in Rd_info(db[[i]]) : 
+Error in Rd_info(db[[i]]) :
   missing/empty \title field in '/tmp/Rtmp9IseJR/Rbuild799a14248b2f/hello/man/hello.Rd'
 Rd files must have a non-empty \title.
 See chapter 'Writing R documentation' in manual 'Writing R Extensions'.
@@ -50,7 +50,7 @@ Downloading GitHub repo Karobben/Test@master
 ─  checking for LF line-endings in source and make files and shell scripts
 ─  checking for empty or unneeded directories
 ─  building ‘hello_1.0.tar.gz’
-   
+
 Installing package into ‘/home/ken/R/x86_64-pc-linux-gnu-library/3.6’
 (as ‘lib’ is unspecified)
 * installing *source* package ‘hello’ ...

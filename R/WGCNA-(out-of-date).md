@@ -1,5 +1,5 @@
 ---
-url: wgcna
+url: wgcna2
 ---
 
 # WGCNA (out of date)
@@ -185,18 +185,18 @@ cyt = exportNetworkToCytoscape(modTOM,
 Connectivity=softConnectivity(datExpr,power=12)-1
 ConnectivityCut = 3600 # number of most connected genes that will be considered  # Incidentally, in the paper by Mischel et al (2005) we considered all 3600 #genes.  
 ConnectivityRank = rank(-Connectivity)   
-restConnectivity = ConnectivityRank <= ConnectivityCut  # thus our module detection uses the following number of genes 
+restConnectivity = ConnectivityRank <= ConnectivityCut  # thus our module detection uses the following number of genes
 sum(restConnectivity)
 
 ADJ= adjacency(datExpr[,restConnectivity],power=12)
-dissTOM=TOMdist(ADJ) 
+dissTOM=TOMdist(ADJ)
 hierTOM = hclust(as.dist(dissTOM),method="average");
-par(mfrow=c(1,1)) 
+par(mfrow=c(1,1))
 plot(hierTOM,labels=F)
 colorh1= cutreeStaticColor(hierTOM,cutHeight =0.94, minSize = 125)
 par(mfrow=c(2,1),mar=c(2,4,1,1))
-plot(hierTOM, main="Cluster Dendrogram", labels=F, xlab="", sub=""); 
-plotColorUnderTree(hierTOM,colors=data.frame(module=colorh1)) 
+plot(hierTOM, main="Cluster Dendrogram", labels=F, xlab="", sub="");
+plotColorUnderTree(hierTOM,colors=data.frame(module=colorh1))
 title("Module (branch) color")
 TOMplot(dissTOM,hierTOM,colorh1)
 
@@ -284,4 +284,3 @@ plot(cmd1, col=as.character(colorh1), main="MDS plot",xlab="Scaling Dimension
  ggsave(p,file=paste(i,".png"))}
 
 ```
-

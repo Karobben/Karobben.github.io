@@ -1,5 +1,5 @@
 ---
-url: tuilib
+url: tuilib2
 ---
 
 # TUI libs

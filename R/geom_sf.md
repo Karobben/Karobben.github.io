@@ -20,7 +20,7 @@ ggplot(nc) +
 
 world2 <- sf::st_transform(world1,
   "+proj=laea +y_0=0 +lon_0=155 +lat_0=-90 +ellps=WGS84 +no_defs")
- ggplot() + geom_sf(data = world2)+  theme_map() 
+ ggplot() + geom_sf(data = world2)+  theme_map()
 ```
 
 ![image.png](https://cdn.nlark.com/yuque/0/2020/png/691897/1580046733865-c88aaa95-7468-4b80-9268-aac8e47b8f3c.png#align=left&display=inline&height=549&name=image.png&originHeight=676&originWidth=663&size=175444&status=done&style=none&width=538)
@@ -64,7 +64,7 @@ Specific Date is comming from [GuangchuangYu](https://guangchuangyu.github.io)<b
 ```r
 library(ggplot2)
 data <- readRDS("cn_city_map.rds")
-ggplot(data) + geom_sf(aes(fill = OBJECTID))+ theme_light() 
+ggplot(data) + geom_sf(aes(fill = OBJECTID))+ theme_light()
 ```
 
 ![123.jpg](https://cdn.nlark.com/yuque/0/2020/jpeg/691897/1583311312206-a04387f1-aca1-4e5d-b61c-7fc35bcdae35.jpeg#align=left&display=inline&height=461&name=123.jpg&originHeight=461&originWidth=500&size=24318&status=done&style=none&width=500)
@@ -115,10 +115,10 @@ City_loc = read.csv(text = "城市,jd,wd
 ```r
 library(ggrepel)
 
-ggplot(data) + geom_sf(aes(fill = OBJECTID))+ 
+ggplot(data) + geom_sf(aes(fill = OBJECTID))+
 		geom_point(data=City_loc,aes(x=jd,y=wd))+
 		geom_text_repel(data=City_loc,aes(x=jd,y=wd,label=城市))+
-		theme_light() 
+		theme_light()
 ```
 ![image.png](https://cdn.nlark.com/yuque/0/2020/png/691897/1583314607739-7c648cd6-6877-4e3a-aa9e-4dd8b50864e7.png#align=left&display=inline&height=544&name=image.png&originHeight=544&originWidth=566&size=142491&status=done&style=none&width=566)
 <a name="mOPej"></a>

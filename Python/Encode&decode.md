@@ -1,5 +1,5 @@
 ---
-url: decode
+url: decode2
 ---
 
 # Encode&decode

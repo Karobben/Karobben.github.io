@@ -1,5 +1,5 @@
 ---
-url: tf
+url: tf2
 ---
 
 # Tensorflow
@@ -65,4 +65,3 @@ def add_layer(inputs, in_size, out_size, activation_function=None):
 ############
 
 ```
-

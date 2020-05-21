@@ -1,5 +1,5 @@
 ---
-url: deepin_bug
+url: deepin_bug2
 ---
 
 # Deepin bug

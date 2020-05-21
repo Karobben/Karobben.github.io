@@ -1,5 +1,5 @@
 ---
-url: TEDIdeas2_t
+url: tedideas2_t
 ---
 
 # TED听抄2: The secret to self control | Jonathan Bricker | TEDxRainier

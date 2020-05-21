@@ -1,5 +1,5 @@
 ---
-url: animation-text
+url: animation-text2
 ---
 
 # Animation-Text
@@ -51,4 +51,3 @@ def main():
 if __name__ == '__main__':
     main()
 ```
-

@@ -1,5 +1,5 @@
 ---
-url: uniprot_api
+url: uniprot_api2
 ---
 
 # UNIPROT_API
@@ -35,5 +35,3 @@ results <- POST(url = "https://www.uniprot.org/uploadlists/",
 	query = paste(x, collapse = ' ')))
 
 ```
-
-

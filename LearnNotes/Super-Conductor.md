@@ -1,5 +1,5 @@
 ---
-url: eegbph
+url: supercd
 ---
 
 # Super Conductor

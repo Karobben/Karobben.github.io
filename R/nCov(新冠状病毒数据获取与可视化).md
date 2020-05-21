@@ -1,5 +1,5 @@
 ---
-url: ncov
+url: ncov2
 ---
 
 # nCov(新冠状病毒数据获取与可视化)
@@ -45,7 +45,7 @@ ncov <- readRDS("ncov.RDS")
 # area data
 TB = ncov$area
 # China
-中国  = TB[TB$countryName == "中国",] 
+中国  = TB[TB$countryName == "中国",]
 中国$日期 = as.Date.POSIXct(中国$updateTime/1000)
 湖北 =中国[中国$provinceShortName=='湖北',]
 ```
@@ -54,21 +54,21 @@ TB = ncov$area
 
 ```r
 library(ggplot2)
-ggplot(湖北)+ 
+ggplot(湖北)+
 		geom_point(aes(x=日期,y=confirmedCount)) + #Dot plot
-		geom_smooth(aes(x=日期,y=confirmedCount,color = continentName)) + # Smooth line 
-		theme_light() 
+		geom_smooth(aes(x=日期,y=confirmedCount,color = continentName)) + # Smooth line
+		theme_light()
 ```
 ![image.png](https://cdn.nlark.com/yuque/0/2020/png/691897/1583306663054-bef401bd-e565-4227-b435-e02fa782775d.png#align=left&display=inline&height=334&name=image.png&originHeight=334&originWidth=663&size=27287&status=done&style=none&width=663)<br />
 <br />加上几个别的数据
 ```r
 ggplot(湖北)+  
-        geom_smooth(aes(x=日期,y=confirmedCount))+ 
-        geom_smooth(aes(x=日期,y=deadCount))+ 
-        geom_smooth(aes(x=日期,y=curedCount))+ 
+        geom_smooth(aes(x=日期,y=confirmedCount))+
+        geom_smooth(aes(x=日期,y=deadCount))+
+        geom_smooth(aes(x=日期,y=curedCount))+
         geom_point(aes(x=日期, y=confirmedCount, color='confirmed'))+  
         geom_point(aes(x=日期, y=deadCount, color='dead'))+  
-        geom_point(aes(x=日期, y=curedCount,color= 'cured'))+ 
+        geom_point(aes(x=日期, y=curedCount,color= 'cured'))+
         theme_light()   
 ```
 ![image.png](https://cdn.nlark.com/yuque/0/2020/png/691897/1583309126157-cc642a3f-9b74-47a9-9396-c660678394e9.png#align=left&display=inline&height=279&name=image.png&originHeight=279&originWidth=627&size=33670&status=done&style=none&width=627)<br />
@@ -76,12 +76,12 @@ ggplot(湖北)+
 
 ```r
 ggplot(中国[中国$provinceShortName=='湖南',])+  
-        geom_smooth(aes(x=日期,y=confirmedCount))+ 
-        geom_smooth(aes(x=日期,y=deadCount))+ 
-        geom_smooth(aes(x=日期,y=curedCount))+ 
+        geom_smooth(aes(x=日期,y=confirmedCount))+
+        geom_smooth(aes(x=日期,y=deadCount))+
+        geom_smooth(aes(x=日期,y=curedCount))+
         geom_point(aes(x=日期, y=confirmedCount, color='confirmed'))+  
         geom_point(aes(x=日期, y=deadCount, color='dead'))+  
-        geom_point(aes(x=日期, y=curedCount,color= 'cured'))+ 
+        geom_point(aes(x=日期, y=curedCount,color= 'cured'))+
         theme_light()   
 ```
 
@@ -119,13 +119,13 @@ ggplot(湖北地图) + geom_sf(aes(fill = OBJECTID))+ theme_light()
 湖北地图 = 湖北地图[match(湖北$cities[[1]]$locationId,湖北地图$ADMINCODE),]
 
 # Graph Left
-ggplot(湖北地图) + 
-		geom_sf(aes(fill = 湖北$cities[[1]]$currentConfirmedCount))+ 
+ggplot(湖北地图) +
+		geom_sf(aes(fill = 湖北$cities[[1]]$currentConfirmedCount))+
 		theme_light()
 
 # Log the count before fill
-ggplot(湖北地图) + 
-		geom_sf(aes(fill = log(湖北$cities[[1]]$currentConfirmedCount)))+ 
+ggplot(湖北地图) +
+		geom_sf(aes(fill = log(湖北$cities[[1]]$currentConfirmedCount)))+
 		theme_light()
 ```
 

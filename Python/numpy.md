@@ -1,3 +1,6 @@
+---
+url: numpy2
+---
 # numpy
 
 <a name="gXQd0"></a>

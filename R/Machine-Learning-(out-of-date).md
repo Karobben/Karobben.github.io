@@ -2,17 +2,17 @@
 url: ml
 ---
 
-# Machine Learning (out of date)
+# Machine Learning (out of date) 
 
 
 ```r
 
-library(tidyverse) 
-library(rpart) 
+library(tidyverse)
+library(rpart)
 library(randomForest)
 a <- read_csv("../input/melb_data.csv")
 
-# train a decision tree based on our dataset 
+# train a decision tree based on our dataset
 fit <- rpart(Price ~ Rooms + Bathroom + Landsize + BuildingArea + YearBuilt + Lattitude + Longtitude, data = a)
 
 plot(fit, uniform=TRUE) +text(fit, cex=1.6)
@@ -57,4 +57,3 @@ for(i in 1:10)
 model <- rpart(formula, data = splitData$train ,control = rpart.control(maxdepth = 5))
 
 ```
-

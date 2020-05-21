@@ -1,3 +1,6 @@
+---
+url: wordcloud2
+---
 # wordcloud
 
 ![image.png](https://cdn.nlark.com/yuque/0/2020/png/691897/1582558020280-7fbf67d3-7ccd-4c06-bdd5-62feeef8e779.png#align=left&display=inline&height=211&name=image.png&originHeight=211&originWidth=270&size=23856&status=done&style=none&width=270)
@@ -20,7 +23,7 @@ alice_mask = np.array(Image.open("alice_mask.png"))
 stopwords = set(STOPWORDS)
 stopwords.add("said")
 
-wc = WordCloud(background_color="white", 
+wc = WordCloud(background_color="white",
                max_words=200, mask=alice_mask,
                max_font_size=200, # 根据你的图片大小定义
                stopwords=stopwords)

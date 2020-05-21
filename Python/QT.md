@@ -1,5 +1,5 @@
 ---
-url: qt
+url: qt2
 ---
 
 # QT
@@ -80,5 +80,3 @@ window.setLayout(layout)
 window.show()
 app.exec_()
 ```
-
-

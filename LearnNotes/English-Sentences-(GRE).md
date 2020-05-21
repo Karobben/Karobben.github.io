@@ -1,5 +1,5 @@
 ---
-url: tgqt2m
+url: es
 ---
 
 # English Sentences (GRE)

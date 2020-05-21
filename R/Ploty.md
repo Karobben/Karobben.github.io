@@ -1,5 +1,5 @@
 ---
-url: ploty
+url: ploty2
 ---
 
 # Ploty

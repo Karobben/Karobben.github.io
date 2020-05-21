@@ -1,3 +1,6 @@
+---
+url: geom_bin2d2
+---
 # geom_bin2d
 
 
@@ -26,7 +29,7 @@ P1 <- ggplot(world, aes( long, lat)) +geom_bin2d(bins = 10)  + theme_map() +
 P2 <- ggplot(world, aes( long, lat)) +geom_bin2d(bins = 100)  + theme_map() +
 			ggtitle('bins=100')+ theme(plot.title = element_text(hjust=0.5,size=20))
 
-P1/P2 
+P1/P2
 ```
 
 

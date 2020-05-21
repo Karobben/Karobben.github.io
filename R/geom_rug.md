@@ -50,11 +50,11 @@ P4 <- ggplot(mtcars,aes(wt,mpg))+ geom_point( color="grey50") + theme_light()+
 
 
 ```r
-P1<- ggplot(mtcars,aes(wt,mpg))+ geom_point( color="grey50") + theme_light()+ 
+P1<- ggplot(mtcars,aes(wt,mpg))+ geom_point( color="grey50") + theme_light()+
     geom_rug()+ ggtitle('NA') + theme(plot.title = element_text(hjust = 0.5))
-P2<- ggplot(mtcars,aes(wt,mpg))+ geom_point( color="grey50") + theme_light()+ 
+P2<- ggplot(mtcars,aes(wt,mpg))+ geom_point( color="grey50") + theme_light()+
     geom_rug( length = unit(0.5, "npc"))+ ggtitle('0.5') + theme(plot.title = element_text(hjust = 0.5))
-P3<- ggplot(mtcars,aes(wt,mpg))+ geom_point( color="grey50") + theme_light()+ 
+P3<- ggplot(mtcars,aes(wt,mpg))+ geom_point( color="grey50") + theme_light()+
     geom_rug( length = unit(1, "npc"))+ ggtitle('1') + theme(plot.title = element_text(hjust = 0.5))
 
 P1/(P2|P3)

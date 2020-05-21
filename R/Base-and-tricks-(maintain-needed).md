@@ -1,5 +1,5 @@
 ---
-url: rtricks
+url: rtricks2
 ---
 
 # Base and tricks (maintain needed)
@@ -26,7 +26,7 @@ df <- data.frame(x = c(NA, "a.b", "a.d", "b.c","a-b"))
 df %>% separate(x, c("A", "B"),'-')
 ```
 
-```r
+```R
 '''
 Base <- data.frame(Nodes =c("P1", "P1", "P1", "P2"), Targets=c("P2","P3","P4","P1"))
 List <- c("P1", "P2", "P3")
@@ -39,7 +39,7 @@ Result without Annotation
 
 addPercent <- function(x){
 percent <- round(x * 100, digits = 1)
-result <- paste(percent, "%", sep = ")
+result <- paste(percent, "%", sep = "")
 return(result)
 }
 
@@ -130,6 +130,21 @@ namea value  nameb
 weekdays(as.Date('2018-3-1'))
 ```
 
+# Data frame
+
+
+```R
+Shrink <-  function(Data, P){
+  Num = round(nrow(world)/P)
+	Data = Data[c(1:Num)*P,]
+}
+```
+
+```R
+world <- map_data("world")
+```
+
+![image.png](https://cdn.nlark.com/yuque/0/2020/png/691897/1580007783801-b9ff0a91-0801-49f0-959f-16830969c90e.png#align=left&display=inline&height=264&name=image.png&originHeight=264&originWidth=236&size=22009&status=done&style=none&width=236)<br />
 
 
 

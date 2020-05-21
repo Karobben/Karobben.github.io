@@ -6,14 +6,14 @@ url: xgboost
 
 
 ```r
-library(xgboost) 
+library(xgboost)
 library(tidyverse)
 library(modelr)
 
  a <- read_csv("melb_data.csv")
  a <- na.omit(a)
 
-## Data 
+## Data
 
 a <- select(TR,-starts_with("Address"))
 Suburb <- model.matrix(~Suburb-1,a)
@@ -67,8 +67,8 @@ predict(model,dtest)
 # }
 
 
-library(xgboost) 
-library(tidyverse) 
+library(xgboost)
+library(tidyverse)
 
 diseaseInfo <- read_csv("Outbreak_240817.csv")
 set.seed(1234)
@@ -137,7 +137,7 @@ print(paste("test-error=", err))
 model_tuned <- xgboost(data = dtrain, # the data           
                  max.depth = 3, # the maximum depth of each decision tree
                  nround = 2, # max number of boosting iterations
-                 objective = "binary:logistic") # the objective function 
+                 objective = "binary:logistic") # the objective function
 
 # generate predictions for our held-out testing data
 pred <- predict(model_tuned, dtest)
@@ -182,7 +182,6 @@ pred <- predict(model_tuned, dtest)
 err <- mean(as.numeric(pred > 0.5) != test_labels)
 print(paste("test-error=", err))
 
-xgb.plot.multi.trees(feature_names = names(diseaseInfo_matrix), 
+xgb.plot.multi.trees(feature_names = names(diseaseInfo_matrix),
                      model = model)
 ```
-

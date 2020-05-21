@@ -1,5 +1,5 @@
 ---
-url: biopython
+url: biopython2
 ---
 
 # Biopython
@@ -11,16 +11,16 @@ url: biopython
 ```python
 from Bio.Seq import reverse_complement, transcribe, back_transcribe, translate
 
-# echo a seq 
+# echo a seq
 my_string = GCTGTTATGGGTCGTTGGAAGGGTGGTCGTGCTGCTGGTTAG
 
-#Revers complement 
-reverse_complement(my_string) 
+#Revers complement
+reverse_complement(my_string)
 
 # { 'CTAACCAGCAGCACGACCACCCTTCCAACGACCCATAACAGC' }
 
 #DNA to RNA
-transcribe(my_string) 
+transcribe(my_string)
 
 #--> { 'GCUGUUAUGGGUCGUUGGAAGGGUGGUCGUGCUGCUGGUUAG' }
 
@@ -211,4 +211,3 @@ G | GTG V   | GCG A   | GAG E   | GGG G   | G
 '''
 
 ```
-

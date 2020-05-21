@@ -1,5 +1,5 @@
 ---
-url: pdf
+url: pdf2
 ---
 
 # PDF
@@ -9,11 +9,11 @@ url: pdf
 # 1. Read & Write
 
 ```python
-from PyPDF2 import PdfFileReader, PdfFileWriter 
+from PyPDF2 import PdfFileReader, PdfFileWriter
 readFile = 'read.pdf'
 writeFile = 'write.pdf'
 
-pdfReader = PdfFileReader(open(readFile, 'rb')) 
+pdfReader = PdfFileReader(open(readFile, 'rb'))
 pdfWriter.write(open(writeFile, 'wb'))
 ```
 
@@ -22,7 +22,7 @@ pdfWriter.write(open(writeFile, 'wb'))
 # 2. Pick First two Page
 
 ```python
-from PyPDF2 import PdfFileReader, PdfFileWriter 
+from PyPDF2 import PdfFileReader, PdfFileWriter
 import PyPDF2
 
 readFile = 'SA.pdf'
@@ -30,7 +30,7 @@ writeFile = 'write.pdf'
 
 pdfWriter = PyPDF2.PdfFileWriter()
 
-pdfReader = PdfFileReader(open(readFile, 'rb')) 
+pdfReader = PdfFileReader(open(readFile, 'rb'))
 pdfWriter.write(open(writeFile, 'wb'))
 
 for page in range(2):
@@ -49,7 +49,7 @@ newFile.close()
 ## 2.1 Double the Pages
 
 ```python
-from PyPDF2 import PdfFileReader, PdfFileWriter 
+from PyPDF2 import PdfFileReader, PdfFileWriter
 import PyPDF2
 
 readFile = 'SA.pdf'
@@ -57,7 +57,7 @@ writeFile = 'write.pdf'
 
 pdfWriter = PyPDF2.PdfFileWriter()
 
-pdfReader = PdfFileReader(open(readFile, 'rb')) 
+pdfReader = PdfFileReader(open(readFile, 'rb'))
 pdfWriter.write(open(writeFile, 'wb'))
 
 for page in range(2):
@@ -292,5 +292,3 @@ if __name__ == "__main__":
 
 
 --------------------------------------------------------------------------------------------------------------------------------------------<br />github: [https://github.com/Karobben](https://github.com/Karobben)<br />blog: [Karobben.github.io](https://karobben.github.io/) <br />R 语言画图索引:[https://karobben.github.io/R/R-index.html](https://karobben.github.io/R/R-index.html)<br />
-
-

@@ -1,3 +1,6 @@
+---
+url: worldcloud2
+---
 # worldcloud
 
 
@@ -97,14 +100,14 @@ saveWidget(WC,"1.html",selfcontained = F)
 ```r
 
 
-A <- readLines('test.txt') 
+A <- readLines('test.txt')
 
 Result = ""
-for(i in A){ 
+for(i in A){
         Result = paste(Result,i,sep=" ")}
 
 # Remove punctuations＆Numbers 去标点&数字
-Result = gsub("[[:punct:]]|[[:digit:]]|^http:\\/\\/.*|^https:\\/\\/.*"," ",Result) 
+Result = gsub("[[:punct:]]|[[:digit:]]|^http:\\/\\/.*|^https:\\/\\/.*"," ",Result)
 
 word = lapply(X = Result, FUN = strsplit, "\\s")
 word1=word[[1]][[1]]
@@ -112,7 +115,7 @@ word1=word[[1]][[1]]
 df=table(word1)
 df=sort(df,decreasing = T)
 
-TB = data.frame(t(t(df)))[c(1,3)] 
+TB = data.frame(t(t(df)))[c(1,3)]
 head(TB)                                                                                                  
 #  word1 Freq
 #1        243

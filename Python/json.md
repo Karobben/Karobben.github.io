@@ -24,5 +24,3 @@ print text
 
 Config = json.load(open('config.json'))
 ```
-
-

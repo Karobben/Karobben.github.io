@@ -1,5 +1,5 @@
 ---
-url: extra_lines
+url: extra_lines2
 ---
 
 # geom Extra Lines
@@ -14,7 +14,7 @@ P1 <- ggplot(mtcars)+ geom_point(aes(mpg, cyl)) +
 	geom_vline( xintercept = 20) + ggtitle('vline') +theme_light()
 P2 <- ggplot(mtcars)+ geom_point(aes(mpg, cyl)) +
 geom_hline( yintercept = 7) + ggtitle('hline') +theme_light()
-P3 <- ggplot(mtcars, aes(wt, mpg)) + geom_point() + geom_abline(intercept = 25, slope = -1) + 
+P3 <- ggplot(mtcars, aes(wt, mpg)) + geom_point() + geom_abline(intercept = 25, slope = -1) +
 	ggtitle("abline")+theme_light()
 
 P3|(P1/P2)

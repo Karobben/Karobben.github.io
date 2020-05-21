@@ -1,5 +1,5 @@
 ---
-url: grep
+url: grep2
 ---
 
 # grep 搜索
@@ -18,7 +18,7 @@ grep
 # 创建测试文件
 echo -e "ab\na\nb\nc\nd\ne\nf\ng\nA\nB\nC" > test.txt
 # 搜索存在'a'的内容
-grep a test.txt 
+grep a test.txt
 ```
 ![image.png](https://cdn.nlark.com/yuque/0/2019/png/691897/1576918779987-1c0d70fb-b2cb-48f9-b2f3-6a05ce54ec1b.png#align=left&display=inline&height=69&name=image.png&originHeight=69&originWidth=387&size=7223&status=done&style=none&width=387)
 
@@ -30,7 +30,7 @@ grep a test.txt
 $gr
 ```bash
 # "."模糊匹配
-grep a. test.txt 
+grep a. test.txt
 
 ```
 ![image.png](https://cdn.nlark.com/yuque/0/2019/png/691897/1576918907555-6ef43a95-30ec-425e-97ae-e83e9e3b380a.png#align=left&display=inline&height=48&name=image.png&originHeight=48&originWidth=402&size=6883&status=done&style=none&width=402)

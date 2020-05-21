@@ -1,3 +1,6 @@
+---
+url: geom_segment2
+---
 # geom_segment
 
 ![image.png](https://cdn.nlark.com/yuque/0/2020/png/691897/1580042754302-e41ae099-9e92-4350-a371-0f7ad7a03ca3.png#align=left&display=inline&height=691&name=image.png&originHeight=691&originWidth=1058&size=183176&status=done&style=none&width=1058)
@@ -9,7 +12,7 @@ library(ggplot2)
 library(ggtheme)
 
 ggplot(seals, aes(long, lat)) + theme_map()
-		geom_segment(aes(xend = long + delta_long, yend = lat + delta_lat), 
+		geom_segment(aes(xend = long + delta_long, yend = lat + delta_lat),
     arrow = arrow(length = unit(0.1,"cm")))
 ```
 
@@ -19,13 +22,13 @@ ggplot(seals, aes(long, lat)) + theme_map()
 
 ```r
 P1 <- ggplot(seals, aes(long, lat)) + theme_map()+ ggtitle('0.1')+
-		geom_segment(aes(xend = long + delta_long, yend = lat + delta_lat), 
-    arrow = arrow(length = unit(0.1,"cm")))+ 
+		geom_segment(aes(xend = long + delta_long, yend = lat + delta_lat),
+    arrow = arrow(length = unit(0.1,"cm")))+
 		theme(plot.title = element_text(hjust = 0.5))
 
 P2 <- ggplot(seals, aes(long, lat)) + theme_map()+ ggtitle('0.3')+
-    geom_segment(aes(xend = long + delta_long, yend = lat + delta_lat), 
-    arrow = arrow(length = unit(0.3,"cm")))+ 
+    geom_segment(aes(xend = long + delta_long, yend = lat + delta_lat),
+    arrow = arrow(length = unit(0.3,"cm")))+
 		theme(plot.title = element_text(hjust = 0.5))
 
 P1|P2

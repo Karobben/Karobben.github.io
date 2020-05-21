@@ -1,5 +1,5 @@
 ---
-url: kivy
+url: kivy2
 ---
 
 # kivy (Cross-platform App)
@@ -60,7 +60,7 @@ BoxLayout:
 AddLocationForm:
 
 <AddLocationForm@BoxLayout>:
-    orientation: "vertical" 
+    orientation: "vertical"
     BoxLayout:
         TextInput:
         Button:
@@ -79,7 +79,7 @@ AddLocationForm:
 AddLocationForm:
 
 <AddLocationForm@BoxLayout>:
-    orientation: "vertical" 
+    orientation: "vertical"
     BoxLayout:
         height: "40dp"
         size_hint_y: None
@@ -122,7 +122,7 @@ Weather.kv:
 AddLocationForm:
 
 <AddLocationForm@BoxLayout>:
-    orientation: "vertical" 
+    orientation: "vertical"
 	search_input: search_box # Change one
     BoxLayout:
         height: "40dp"
@@ -310,4 +310,3 @@ WeatherRoot:
             multiselect: True
             touch_multiselect: True
 ```
-

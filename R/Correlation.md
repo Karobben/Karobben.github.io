@@ -1,5 +1,5 @@
 ---
-url: correlation
+url: correlation2
 ---
 
 # Correlation

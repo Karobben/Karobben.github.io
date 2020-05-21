@@ -1,4 +1,9 @@
+---
+url: github2
+---
+
 # github
+
 
 Github 本地上更新库
 ```bash
@@ -17,4 +22,3 @@ git commit -m "注释"
 git pull --rebase IO master
 git push -u IO master
 ```
-

@@ -1,5 +1,5 @@
 ---
-url: chm_modei
+url: chm_modei2
 ---
 
 # Genome-Wide Profiling of Histone Modification with Chip-Seq (CD Genomics)
@@ -34,4 +34,3 @@ There are at least **9 different types** of post-translational modifications (**
 ![](https://cdn.nlark.com/yuque/0/2020/svg/691897/1586750671606-f8b9c2e9-bb6f-4b34-88cf-987d9fa069c1.svg)<a name="yBQtV"></a>
 # CHIP-SEQ DATA ANALYSIS
 ![](https://cdn.nlark.com/yuque/0/2020/svg/691897/1586757797680-45fb1df1-e1d5-4d7a-8def-b1a656c65d4b.svg)
-

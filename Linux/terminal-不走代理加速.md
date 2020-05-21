@@ -1,5 +1,5 @@
 ---
-url: wdda8g
+url: wdda8g2
 ---
 
 # terminal 不走代理加速

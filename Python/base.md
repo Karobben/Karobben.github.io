@@ -1,3 +1,6 @@
+---
+url: base2
+---
 # base
 
 
@@ -55,12 +58,57 @@ Operator 	Description 	Example
 
 ```
 
-<a name="mpH0G"></a>
+# print
+
+
+```python
+A =" "
+B =u"\u2581"
+C =u"\u2582"
+D =u"\u2583"
+E =u"\u2584"
+F =u"\u2585"
+G =u"\u2586"
+H =u"\u2587"
+I =u"\u2588"
+
+for i in A,B,C,D,E,F,G,H,I:
+  print("\x1b[3;45;6m%s\x1b[0m"%(i),end='')
+```
+
+![image.png](https://cdn.nlark.com/yuque/0/2020/png/691897/1579675315341-8baaaabd-65cc-411c-8c8b-0b3232f9018c.png#align=left&display=inline&height=79&name=image.png&originHeight=79&originWidth=443&size=9295&status=done&style=none&width=443)
+
+
 # List
 
 int list to str list
 ```python
 [str(x) for x in int_list]
+```
+
+
+<br />int list to str list<br />
+
+```python
+a_list = ["1", "2", "3"]
+#int list to str list
+list(map(str, a_list))
+#str list to int list
+list(map(int, a_list))
+
+
+# 逐个相减
+c = [b[i] - a[i] for i in range(len(a))]
+```
+
+
+## Compare Two list
+
+
+```python
+l = [1, 2, 3, 5]
+l_one = [2, 8, 6, 10]
+print set(l) & set(l_one)
 ```
 
 
@@ -93,8 +141,8 @@ import XXX
 from Directory import xxx
 
 # import from .. directory
-import sys 
-sys.path.append("..") 
+import sys
+sys.path.append("..")
 import xxx　
 ```
 
@@ -105,7 +153,7 @@ import xxx　
 for i in range(4):
     name='v'+str(i)
     locals()['v'+str(i)]=i
- 
+
 print v1,v2,v3
 ```
 

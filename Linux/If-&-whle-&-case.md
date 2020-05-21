@@ -11,7 +11,7 @@ if [ expression ]
 then
    Statement(s) to be executed if expression is true
 fi
-```
+``` 
 
 <br />字符串判断
 ```bash
@@ -33,4 +33,16 @@ do
 done
 ```
 
+# try
 
+reference:[筱光](https://blog.csdn.net/womeng2009/article/details/80814284)
+```bash
+{ # try
+
+    command1
+    #save your output
+
+} || { # except
+    # save log for exception
+}
+```

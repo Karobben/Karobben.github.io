@@ -1,5 +1,5 @@
 ---
-url: tl
+url: tl2
 ---
 
 # Transfer_Learning
@@ -50,4 +50,3 @@ my_new_model.fit_generator(
         validation_steps=1)
 
 ```
-

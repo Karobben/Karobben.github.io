@@ -1,5 +1,5 @@
 ---
-url: linux
+url: linux2
 ---
 
 # To Start With Linux
@@ -47,4 +47,3 @@ exit 0
 ```bash
 sudo chmod +x /etc/rc.local
 ```
-

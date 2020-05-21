@@ -1,5 +1,5 @@
 ---
-url: jpeg
+url: jpeg2
 ---
 
 # jpeg: reading color from img
@@ -16,5 +16,3 @@ rgbImage <- reshape(longImage, timevar='Var3',idvar=c('Var1','Var2'), direction=
 colorColumns<- rgbImage[, substr(colnames(rgbImage), 1, 5)== "value"]
 Color_B  = data.frame(sort(table(rgb(colorColumns)),decreasing=T))[[1]]
 ```
-
-

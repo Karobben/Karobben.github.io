@@ -4,7 +4,7 @@ url: ehgl6o
 
 # Other Tutories
 
-<a name="M7GMy"></a>
+
 # 知乎
 
 1. [杜雨](https://www.zhihu.com/people/raindu) 东北财经大学 经济学硕士:

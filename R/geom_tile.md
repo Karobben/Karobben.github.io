@@ -1,3 +1,6 @@
+---
+url: geom_tile2
+---
 # geom_tile
 
 ![image.png](https://cdn.nlark.com/yuque/0/2020/png/691897/1580048510936-fec0d7d9-24d7-4354-b0c5-db15365e3d1c.png#align=left&display=inline&height=425&name=image.png&originHeight=425&originWidth=730&size=12048&status=done&style=none&width=730)<br />
@@ -32,7 +35,7 @@ P2 <- ggplot(df, aes(x, y, width = w)) + theme_light()+ ggtitle('P2')+
 P3 <- ggplot(df, aes(x, y))+ geom_bar(aes(fill=z),stat='identity')+ theme_light()+
 	ggtitle('bar plot')+ theme(plot.title = element_text(hjust = 0.5))
 
-(P1|P2)/P3 
+(P1|P2)/P3
 ```
 ![image.png](https://cdn.nlark.com/yuque/0/2020/png/691897/1580048826017-b418a814-66b6-49eb-8e0d-fd867865c012.png#align=left&display=inline&height=468&name=image.png&originHeight=468&originWidth=742&size=20573&status=done&style=none&width=742)
 

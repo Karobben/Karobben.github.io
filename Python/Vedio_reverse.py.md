@@ -4,7 +4,7 @@ url: imtemd
 
 # Vedio_reverse.py
 
-#视频倒放
+#视频倒放 
 ```python
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-

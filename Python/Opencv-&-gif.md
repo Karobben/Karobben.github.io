@@ -1,5 +1,5 @@
 ---
-url: opencv_gif
+url: opencv_gif2
 ---
 
 # Opencv & gif
@@ -30,5 +30,3 @@ def GIF(file):
         time.sleep(0.1)
     cv2.destroyAllWindows()
 ```
-
-

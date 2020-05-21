@@ -1,5 +1,5 @@
 ---
-url: ggplot
+url: ggplot2
 ---
 
 # GGplot
@@ -120,7 +120,7 @@ ggplot(df, aes(trt, outcome)) + geom_col() + geom_point(color='red')
 
 Position for bar
 ```r
-## Position 
+## Position
 position = 'fill'
 position = 'identity'
 position = 'stack'
@@ -175,7 +175,7 @@ library(ggthemes)
 ## 7. geom_errorbar
 
 ```r
- + geom_errorbar(aes(ymin=len-sd, ymax=len+sd), 
+ + geom_errorbar(aes(ymin=len-sd, ymax=len+sd),
 	width=.2， position=position_dodge(.9))
 ```
 
@@ -183,11 +183,11 @@ library(ggthemes)
 ## 8. Extra Line
 
 ```r
-aux2 <- data.frame(cyl = c(4,6,8), x = c(2,3,4),y = c(10,10,10), 
+aux2 <- data.frame(cyl = c(4,6,8), x = c(2,3,4),y = c(10,10,10),
                    xend = c(2,3,4), yend = c(35,35,35),
                    x2 = c(3,4,5), xend2= c(3,4,5))
-ggplot(mtcars, aes(x = drat)) + 
-  geom_line(aes(y = mpg, colour = "mpg")) + 
+ggplot(mtcars, aes(x = drat)) +
+  geom_line(aes(y = mpg, colour = "mpg")) +
   geom_line(aes(y = qsec, colour = "qsec")) +
   geom_segment(aes(x = x, y = y, xend = xend, yend = yend, colour = "xiaopang"),data= aux2, lty = 2) +
   geom_segment(aes(x = x2, y = y, xend = xend2, yend = yend, colour = "xiaomei"),data= aux2, lty = 2)
@@ -232,7 +232,7 @@ ggplot(mtcars, aes(x = drat)) +
 
 ```r
 # https://www.cnblogs.com/wkslearner/p/5635184.html
-+scale_x_date(breaks=as.Date(c("2016-06-06","2016-06-13","2016-06-20","2016-06-27")), 
++scale_x_date(breaks=as.Date(c("2016-06-06","2016-06-13","2016-06-20","2016-06-27")),
               labels=c("06-06","06-13","06-20","06-27"),date_labels="%y/%m/%d")
 ```
 
@@ -247,7 +247,7 @@ ggplot(mtcars, aes(x = drat)) +
         axis.line = element_line(colour = "black"),		#轴线
 				axis.ticks=element_blank(),										#轴上点
         axis.text.y=element_blank(), 									#y文字
-        axis.title.x =elemet_blank(),									#y标题 
+        axis.title.x =elemet_blank(),									#y标题
 				legend.position='none')												#删标注
 ```
 
@@ -328,7 +328,7 @@ table$X=factor(table$X, levels=table[[1]])
 
 
 <a name="TWMrw"></a>
-## 
+##
 6. theme()<br />
 
 ```r
@@ -345,7 +345,7 @@ table$X=factor(table$X, levels=table[[1]])
 #("none", "left", "right", "bottom", "top", or two-element numeric vect)
 ```
 <a name="KETyn"></a>
-## 
+##
 <a name="OUsTS"></a>
 ### 7. Color patern
 
@@ -418,11 +418,11 @@ rladies <- read_csv(url("https://raw.githubusercontent.com/d4tagirl/R-Ladies-gro
 p_load(tidyverse, gganimate, maps, ggthemes)
 
 ggplot()+borders("world", color="black", fill="steelblue4") +
-	geom_point(data = rladies, aes(lon, lat, size=followers), color="firebrick3", 
-		alpha=0.6)+scale_size_continuous(range = c(2,8), 
+	geom_point(data = rladies, aes(lon, lat, size=followers), color="firebrick3",
+		alpha=0.6)+scale_size_continuous(range = c(2,8),
 		breaks = c(250, 500, 750, 1000)) +
 		labs(size="Followers", title="The development of R-Ladies'Twitter accounts",
-		x=NULL,y=NULL)+theme(text = element_text(family = "Times New Roman", 
+		x=NULL,y=NULL)+theme(text = element_text(family = "Times New Roman",
 		color = "deeppink"),plot.title = element_text(size=40,color = "#f9ba00"),
 		plot.subtitle = element_text(size=14),axis.ticks = element_blank(),
 		axis.text = element_blank(),panel.grid = element_blank(),

@@ -10,7 +10,7 @@ url: vedioslice
 # @Time    : 2020/4/18
 # @Author  : Karobben
 # @Site    : China
-# @File    : VedioSlice.py
+# @File    : VedioSlice.py 
 # @Software: Atom
 
 import argparse

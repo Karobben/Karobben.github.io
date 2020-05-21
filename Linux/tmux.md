@@ -1,4 +1,7 @@
-# tmux
+---
+url: tmux2
+---
+# tmux2
 
 ![image.png](https://cdn.nlark.com/yuque/0/2020/png/691897/1583028340569-ce50f324-9f52-4150-9688-b51f3b9afb91.png#align=left&display=inline&height=718&name=image.png&originHeight=718&originWidth=885&size=669579&status=done&style=none&width=885)
 

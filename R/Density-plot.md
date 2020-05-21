@@ -1,5 +1,5 @@
 ---
-url: density_plot
+url: density_plot2
 ---
 
 # Density plot
@@ -13,7 +13,7 @@ url: density_plot
 ```r
 library(ggplot2)
 
-ggplot(world,aes(long, lat)) +geom_density_2d(color='red') + theme_light() 
+ggplot(world,aes(long, lat)) +geom_density_2d(color='red') + theme_light()
 ```
 
 ![image.png](https://cdn.nlark.com/yuque/0/2020/png/691897/1580018504859-bb395bd4-87eb-4b97-955c-49409998ada3.png#align=left&display=inline&height=474&name=image.png&originHeight=474&originWidth=750&size=72932&status=done&style=none&width=750)<br />

@@ -1,5 +1,5 @@
 ---
-url: lb1xtn
+url: lb1xtn2
 ---
 
 # PIL, np.array
@@ -13,12 +13,10 @@ url: lb1xtn
 import cv2
 from PIL import Image
 import numpy
- 
+
 image = Image.open("plane.jpg")
 image.show()
 img = cv2.cvtColor(numpy.asarray(image),cv2.COLOR_RGB2BGR)
 cv2.imshow("OpenCV",img)
 cv2.waitKey()
 ```
-
-

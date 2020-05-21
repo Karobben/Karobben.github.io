@@ -1,5 +1,5 @@
 ---
-url: gggit
+url: gggit2
 ---
 
 # GGplot in Github

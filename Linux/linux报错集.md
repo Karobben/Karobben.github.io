@@ -1,5 +1,5 @@
 ---
-url: linux_error_codes
+url: linux_error_codes2
 ---
 
 # linux报错集
@@ -16,5 +16,3 @@ location of your Java installation.
 ```
 
 检查java路径,<br />我把Sorft 文件夹改成了 Soft, 所以他找不到
-
-

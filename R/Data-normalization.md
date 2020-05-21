@@ -2,7 +2,7 @@
 url: normalization
 ---
 
-# Data normalization
+# Data normalization 
 
 <a name="Y4znF"></a>
 # Normalization

@@ -1,5 +1,5 @@
 ---
-url: awk
+url: awk2
 ---
 
 # awk 语言基础
@@ -46,6 +46,3 @@ awk -F"\t" '{print  length($5)}' filename # length() function to count the words
 #######
 awk '$1="";{print}' FILENAME
 ```
-
-
-

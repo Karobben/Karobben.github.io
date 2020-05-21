@@ -1,5 +1,5 @@
 ---
-url: popmail
+url: popmail2
 ---
 
 # popmail-Python 登录邮箱
@@ -11,19 +11,19 @@ url: popmail
 以ＱＱ邮箱为例
 ```python
 import poplib
- 
+
 # 输入邮件地址, 口令和POP3服务器地址:
 email = '591465908@qq.com'
 password = input('Password: ') #这里是授权码，必须去申请
 pop3_server = 'pop.qq.com'
- 
+
 # 连接到POP3服务器:
 server = poplib.POP3(pop3_server)
 # 可以打开或关闭调试信息:
 server.set_debuglevel(1)
 # 可选:打印POP3服务器的欢迎文字:
 print(server.getwelcome().decode('utf-8'))
- 
+
 # 身份认证:
 server.user(email)
 server.pass_(password)
@@ -47,4 +47,3 @@ server.host             server.set_debuglevel(  server.welcome
 server.list(            server.sock             
 
 ```
-

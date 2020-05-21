@@ -1,5 +1,5 @@
 ---
-url: networkplot
+url: networkplot2
 ---
 
 # NetWorkPlot

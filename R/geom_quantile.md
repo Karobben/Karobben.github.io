@@ -1,3 +1,7 @@
+---
+url: geom_quantile2
+---
+
 # geom_quantile
 
 source:[https://ggplot2.tidyverse.org/reference/geom_quantile.html](https://ggplot2.tidyverse.org/reference/geom_quantile.html)

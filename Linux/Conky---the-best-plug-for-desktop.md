@@ -78,13 +78,13 @@ conky-colors --help
 --photo 仅固定显示一张图片，放在 /usr/share/backgrounds/ 内
 --network 显示网络信息，可以指定使用 --eth 网卡设备，--wlan 无线设备，--ppp 拨号设备 （默认都是0）
 --battery 显示电池信息
---unit 温度单位 C 摄氏 或 F 华氏 
+--unit 温度单位 C 摄氏 或 F 华氏
 --rhythmbox 在多媒体栏显示Ubuntu自带的rhythmbox播放器的曲目信息。
 有7中形式可选：default，cd，case，glassy，vinyl，oldvinyl，simple
 还支持其他播放器：--covergloobus，--banshee，--exaile
 --pidgin 可显示pidgin在线的聊天好友
- 
- 
+
+
 按自己需要实现的功能选择相应参数，然后运行conky-colors生成.conkycolors目录和相关文件，
 你至少需要运行一次这个命令！否则没有.conkycolors这个目录，或者缺少某些程序文件。例如：
 代码:
@@ -194,7 +194,7 @@ conky-colors --theme=custom --default-color=black --color0=cyan --color1=green -
 	--install=local(*), system, or custom - install generated configuration files to a chosen datadir.
 	--systemdir - displays the system directory for conkycolors.
 	--localdir - displays the local directory for conkycolors.
-	
+
 (*)default values
 ```
 task 文件在 `/home/$USER/.conkycolors/tasks`<br />
@@ -214,7 +214,7 @@ conky-colors --theme=blue  --default-color=black --color0=cyan --color1=green  \
 --banshee=simple --clementine=default --rhythmbox=default	\		#Media player
 #--network					\		# fail to show on my computer
 # --board/--slim		\		# fail to show on my computer
-# --weather=BRXX0043\		# fail to request the Tm 
+# --weather=BRXX0043\		# fail to request the Tm
 ```
 ```bash
 conky-colors --theme=blue  --default-color=black --color0=cyan --color1=green  \
@@ -228,7 +228,7 @@ conky-colors --theme=blue  --default-color=black --color0=cyan --color1=green  \
 --clock=digital  --calendarm	\
 --task  						\
 --hd=default --hdtemp1=sda  --hdtemp2=sda2	\
---banshee=simple --clementine=default --rhythmbox=default	
+--banshee=simple --clementine=default --rhythmbox=default
 
 ```
 

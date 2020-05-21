@@ -1,3 +1,7 @@
+---
+url: circlize2
+---
+
 # circlize
 
 ![image.png](https://cdn.nlark.com/yuque/0/2020/png/691897/1579796012787-eef9e5f8-3856-4999-a405-5fb82872b44c.png#align=left&display=inline&height=652&name=image.png&originHeight=652&originWidth=655&size=103227&status=done&style=none&width=655)
@@ -5,7 +9,7 @@
 # Quick Start
 
 ```r
-install.packages('circlize') 
+install.packages('circlize')
 library(circlize)
 
 #Create data
@@ -120,7 +124,7 @@ circos.trackHist(data$factor, data$x, bg.col = "grey78", col = rgb(0.1,0.5,0.8,0
 ```
 
 <a name="5ab91e24"></a>
-# 
+#
 
 <a name="7B2cF"></a>
 ## Layer by layer
@@ -182,8 +186,8 @@ a <- data.frame(factors = sample(letters[1:8], n, replace = TRUE), x = rnorm(n),
 par(mar = c(1, 1, 1, 1), lwd = 0.1, cex = 0.6)
 circos.par(track.height = 0.1)
 circos.initialize(factors = a$factors, x = a$x) #初始化，factors来控制track数目，初始化里只有x， 没有y。这一步相当于ggplot()
-circos.trackPlotRegion(factors = a$factors, y = a$y, 
-panel.fun = function(x, y) { 
+circos.trackPlotRegion(factors = a$factors, y = a$y,
+panel.fun = function(x, y) {
 circos.axis()})
 col <- rep(c("#FF0000", "#00FF00"), 4) #自定义一下颜色# 这里先解释一下，一个track有好几个cell，具体数目由factors决定的，向本数据集中factors有八个，因此绘制一个track，其包含八个cell。含有前缀circos.track的函数会在所有的cel里添加基本元素，而只有前缀circos.的函数可以在特定的track、cell里添加基本元素。具体看下演示。
 circos.trackPoints(a$factors, a$x, a$y, col = col, pch = 16, cex = 0.5) #所有的cell里都绘制点图
@@ -193,8 +197,8 @@ circos.clear()
 par(mar = c(1, 1, 1, 1), lwd = 0.1, cex = 0.6)
 circos.par(track.height = 0.1)
 circos.initialize(factors = a$factors, x = a$x)
-circos.trackPlotRegion(factors = a$factors, y = a$y, 
-panel.fun = function(x, y) { 
+circos.trackPlotRegion(factors = a$factors, y = a$y,
+panel.fun = function(x, y) {
 circos.axis()})
 col <- rep(c("#FF0000", "#00FF00"), 4)
 circos.trackPoints(a$factors, a$x, a$y, col = col, pch = 16, cex = 0.5)
@@ -208,7 +212,7 @@ par(mar = c(1, 1, 1, 1), lwd = 0.1, cex = 0.6)
 circos.par(track.height = 0.1)
 circos.initialize(factors = a$factors, x = a$x)
 circos.trackPlotRegion(factors = a$factors, y = a$y,
- panel.fun = function(x, y) { 
+ panel.fun = function(x, y) {
 circos.axis()})
 col <- rep(c("#FF0000", "#00FF00"), 4)
 circos.trackPoints(a$factors, a$x, a$y, col = col, pch = 16, cex = 0.5)
@@ -216,14 +220,14 @@ circos.text(-1, 0.5, "left", sector.index = "a", track.index = 1)
 circos.text(1, 0.5, "right", sector.index = "a")
 bg.col <- rep(c("#EFEFEF", "#CCCCCC"), 4)
 circos.trackHist(a$factors, a$x, bg.col = bg.col, col = NA)
-circos.trackPlotRegion(factors = a$factors, x = a$x, y = a$y, 
+circos.trackPlotRegion(factors = a$factors, x = a$x, y = a$y,
 panel.fun = function(x, y) {
- grey = c("#FFFFFF", "#CCCCCC", "#999999") 
+ grey = c("#FFFFFF", "#CCCCCC", "#999999")
 sector.index = get.cell.meta.data("sector.index") #这个是第三个track，因为我们刚刚创建，这里这一步不用也可。
  xlim = get.cell.meta.data("xlim")
- ylim = get.cell.meta.data("ylim") 
-circos.text(mean(xlim), mean(ylim), sector.index) 
-circos.points(x[1:10], y[1:10], col = "red", pch = 16, cex = 0.6) 
+ ylim = get.cell.meta.data("ylim")
+circos.text(mean(xlim), mean(ylim), sector.index)
+circos.points(x[1:10], y[1:10], col = "red", pch = 16, cex = 0.6)
 circos.points(x[11:20], y[11:20], col = "blue", cex = 0.6)})
 circos.clear()
 ```
@@ -248,7 +252,7 @@ chordDiagram(df)
 circos.clear()
 
 #图形的精修和参数介绍
-chordDiagram(df, 
+chordDiagram(df,
   reduce = -1, #如果单个扇叶/整个环 < reduce,则这个扇叶不展示
   grid.col=sample(colors(),length(union(df$X1,df$X2)),replace = F),  #扇叶的颜色，顺序和union(df[[1]],df[[2]])一样
   col=colorRamp2(breaks=c(1,18),colors=c("blue","red")),  #连线的颜色，也可以设置展示df中数值的大小
@@ -277,18 +281,18 @@ chordDiagram(df,
 ```r
 layout(matrix(1:9, 3, 3))
 for (i in 1:9) {
- factors = letters[1:8] 
-par(mar = c(0.5, 0.5, 0.5, 0.5)) 
-circos.par(cell.padding = c(0, 0, 0, 0)) 
-circos.initialize(factors = factors, xlim = c(0, 1)) 
-circos.trackPlotRegion(ylim = c(0, 1), track.height = 0.05, 
-bg.col = rand_color(8), bg.border = NA) 
-# 绘制links 
+ factors = letters[1:8]
+par(mar = c(0.5, 0.5, 0.5, 0.5))
+circos.par(cell.padding = c(0, 0, 0, 0))
+circos.initialize(factors = factors, xlim = c(0, 1))
+circos.trackPlotRegion(ylim = c(0, 1), track.height = 0.05,
+bg.col = rand_color(8), bg.border = NA)
+# 绘制links
 for (i in 1:20) {
-se = sample(letters[1:8], 2) 
+se = sample(letters[1:8], 2)
 circos.link(se[1], runif(2), se[2], runif(2),
-col = rand_color(1, transparency = 0.4), border = NA) 
-}} 
+col = rand_color(1, transparency = 0.4), border = NA)
+}}
 circos.clear()
 ```
 ![image.png](https://cdn.nlark.com/yuque/0/2020/png/691897/1579796012787-eef9e5f8-3856-4999-a405-5fb82872b44c.png#align=left&display=inline&height=652&name=image.png&originHeight=652&originWidth=655&size=103227&status=done&style=none&width=655)
@@ -300,26 +304,26 @@ data <- matrix(rnorm(100 * 10), nrow = 10, ncol = 100)
 col <- colorRamp2(c(-2, 0, 2), c("green", "black", "red"))
 factors <- rep(letters[1:2], times = c(30, 70))
 data_list <- list(a = data[, factors == "a"], b = data[, factors == "b"])
-dend_list <- list(a = as.dendrogram(hclust(dist(t(data_list[["a"]])))), 
+dend_list <- list(a = as.dendrogram(hclust(dist(t(data_list[["a"]])))),
                   b = as.dendrogram(hclust(dist(t(data_list[["b"]])))))
 circos.par(cell.padding = c(0, 0, 0, 0), gap.degree = 5)
 circos.initialize(factors = factors, xlim = cbind(c(0, 0), table(factors)))
-circos.track(ylim = c(0, 10), bg.border = NA, 
+circos.track(ylim = c(0, 10), bg.border = NA,
 panel.fun = function(x, y) {
- sector.index = get.cell.meta.data("sector.index") 
-d = data_list[[sector.index]] 
-dend = dend_list[[sector.index]] 
-d2 = d[, order.dendrogram(dend)] 
+ sector.index = get.cell.meta.data("sector.index")
+d = data_list[[sector.index]]
+dend = dend_list[[sector.index]]
+d2 = d[, order.dendrogram(dend)]
 col_data = col(d2)
 nr = nrow(d2)
-nc = ncol(d2) 
-for (i in 1:nr) { 
+nc = ncol(d2)
+for (i in 1:nr) {
 circos.rect(1:nc - 1, rep(nr - i, nc), 1:nc, rep(nr - i + 1, nc),
 border = col_data[i, ], col = col_data[i, ]) }})
 max_height <- max(sapply(dend_list, function(x) attr(x, "height")))
-circos.track(ylim = c(0, max_height), 
+circos.track(ylim = c(0, max_height),
 bg.border = NA, track.height = 0.3,
-panel.fun = function(x, y) { 
+panel.fun = function(x, y) {
 sector.index = get.cell.meta.data("sector.index")
 dend = dend_list[[sector.index]]
 circos.dendrogram(dend, max_height = max_height)})

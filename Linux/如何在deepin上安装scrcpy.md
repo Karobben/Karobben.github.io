@@ -1,5 +1,5 @@
 ---
-url: scrcpy
+url: scrcpy2
 ---
 
 # 如何在deepin上安装scrcpy
@@ -61,7 +61,7 @@ sudo ninja install
 这一步可能出现错误：
 
 ```bash
-ninja: error: '/home/ken/Soft/scrcpy-server-v1.11.jar', 
+ninja: error: '/home/ken/Soft/scrcpy-server-v1.11.jar',
 needed by 'server/scrcpy-server', missing and no known rule to make it
 ```
 因为美誉找到server 的路径， 因此只需要把那前面下载的文件， 拷贝或者移动到这个路径就好了， 然后重新ninjia
@@ -97,5 +97,3 @@ INFO: Device clipboard copied
 等待一下就好啦！
 
 Enjoy~
-
-

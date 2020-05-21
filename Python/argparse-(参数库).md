@@ -1,5 +1,5 @@
 ---
-url: argparse
+url: argparse2
 ---
 
 # argparse (参数库)
@@ -100,12 +100,10 @@ print(INPUT)
 
 
 ```bash
-$ python3.7 test.py 
+$ python3.7 test.py
 a
 $ python3.7 test.py -i
 None
 $ python3.7 test.py -i b
 b
 ```
-
-

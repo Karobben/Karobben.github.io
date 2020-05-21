@@ -1,5 +1,5 @@
 ---
-url: disck_manage
+url: disck_manage2
 ---
 
 # Disck Manage

@@ -46,7 +46,7 @@ def M_read(index):
         print("",From,To,"\n",Subject,'\n\n',"this mail are purely composed by img or html",sep='\n')
         print('\n\n'+Date)
 
-        
+
 # 按键对应事件
 def Action(Press):
     global index

@@ -1,5 +1,5 @@
 ---
-url: ggradar
+url: ggradar2
 ---
 
 # GGradar
@@ -21,7 +21,7 @@ Name<-c("USA","CHN","UK","RUS","JP")
 mynewdata<-data.frame(Name,mynewdata)
 ggradar(mynewdata)
 
-ggradar(mynewdata) + theme(legend.position = 'none') 
+ggradar(mynewdata) + theme(legend.position = 'none')
 ```
 ![image.png](https://cdn.nlark.com/yuque/0/2020/png/691897/1580053884743-7d678f2f-7913-4000-96df-c444acdd3b45.png#align=left&display=inline&height=527&name=image.png&originHeight=527&originWidth=705&size=86207&status=done&style=none&width=705)
 ```r

@@ -1,3 +1,7 @@
+---
+url: urwid2
+---
+
 # urwid
 
 Reference：[http://urwid.org/tutorial/index.html](http://urwid.org/tutorial/index.html)
@@ -393,7 +397,7 @@ Column -> Filler  -> Mainloop<br />Text -> Filler  -> Mainloop<br />Column
 ## ListBox
 > x    Filler -> ListBox
 > x    Padding -> SimpleListWalker -> ListBox
-> 
+>
 > [Text, Pile, Columns] -> SimpleListWalker -> ListBox
 > [Text, Pile, Columns]-> SimpleListWalker -> ListBox -> *AttrWrap -> Frame
 

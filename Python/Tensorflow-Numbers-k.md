@@ -1,5 +1,5 @@
 ---
-url: tf_n
+url: tf_n2
 ---
 
 # Tensorflow-Numbers-k
@@ -55,4 +55,3 @@ model.fit(x, y,
           validation_split = 0.2)
 
 ```
-

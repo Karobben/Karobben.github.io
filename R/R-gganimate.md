@@ -1,5 +1,5 @@
 ---
-url: gganimate
+url: gganimate2
 ---
 
 # R-gganimate
@@ -21,7 +21,7 @@ for(i in c(1:36)){
   TB = rbind(TB,tmp)
 }
 
-ggplot()+ geom_point(data=TB,aes(x=long, y=lat),size=0.3, color="#00518E") + 
+ggplot()+ geom_point(data=TB,aes(x=long, y=lat),size=0.3, color="#00518E") +
 	theme_map() + coord_map("ortho", orientation = c(30, 100, 0)) +
 	transition_time(Group)
 

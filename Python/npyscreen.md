@@ -1,3 +1,6 @@
+---
+url: npyscreen2
+---
 # npyscreen
 
 **![image.png](https://cdn.nlark.com/yuque/0/2020/png/691897/1579621190752-8dd1e3a6-6d7a-41cc-9f7b-1713b84027ae.png#align=left&display=inline&height=811&name=image.png&originHeight=811&originWidth=1549&size=98271&status=done&style=none&width=1549)**<br />**<br />开发terminal平台软件<br />Developing terminal platform apps
@@ -41,7 +44,7 @@ if __name__ == "__main__":
 <a name="vvtzJ"></a>
 # Features
 <a name="TVnYP"></a>
-## 
+##
 <a name="CyyAV"></a>
 ## Input
 ![image.png](https://cdn.nlark.com/yuque/0/2020/png/691897/1581064799262-4fa84aec-2ccc-4c9b-bf19-300329862f74.png#align=left&display=inline&height=43&name=image.png&originHeight=39&originWidth=274&size=3346&status=done&style=none&width=300)
@@ -70,4 +73,3 @@ Tab 键激活<br />![image.png](https://cdn.nlark.com/yuque/0/2020/png/691897/15
 <a name="Nvocx"></a>
 ## Selection
 ![image.png](https://cdn.nlark.com/yuque/0/2020/png/691897/1581065160715-6e7d92ea-fc6d-4b1f-8d11-50d7e2f9823b.png#align=left&display=inline&height=179&name=image.png&originHeight=149&originWidth=291&size=11505&status=done&style=none&width=350)<br />**see **[**ptop**](https://github.com/darxtrix/ptop)** as npyscreen apps **<br />**
-

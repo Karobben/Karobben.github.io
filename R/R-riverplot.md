@@ -1,5 +1,5 @@
 ---
-url: riverplot
+url: riverplot2
 ---
 
 # R-riverplot

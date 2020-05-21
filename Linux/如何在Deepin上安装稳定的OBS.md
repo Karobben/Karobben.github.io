@@ -1,5 +1,5 @@
 ---
-url: obs
+url: obs2
 ---
 
 # 如何在Deepin上安装稳定的OBS
@@ -22,4 +22,3 @@ flatpak run com.obsproject.Studio
 ```
 
 <br />安装以后，在主菜单也可以找到了，也可以在开始菜单里面，点击运行<br />![image.png](https://cdn.nlark.com/yuque/0/2020/png/691897/1580981771681-de490709-77ec-4002-b821-4b347ff0c840.png#align=left&display=inline&height=405&name=image.png&originHeight=518&originWidth=555&size=69951&status=done&style=none&width=434)<br />
-

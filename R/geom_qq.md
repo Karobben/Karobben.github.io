@@ -1,9 +1,13 @@
+---
+url: geom_qq2
+---
+
 # geom_qq
 
 <a name="aydhZ"></a>
 ## QQ plot
 ```r
-ggplot(mtcars,aes(sample=mpg)) + geom_qq(aes(color='qq')) + geom_point(aes(mpg,cyl,color='point'))+ 
+ggplot(mtcars,aes(sample=mpg)) + geom_qq(aes(color='qq')) + geom_point(aes(mpg,cyl,color='point'))+
 	geom_qq_line(aes(color='qqline'))+ theme_light()
 ```
 

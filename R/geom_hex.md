@@ -1,3 +1,7 @@
+---
+url: geom_hex
+---
+
 # geom_hex
 
 ![image.png](https://cdn.nlark.com/yuque/0/2020/png/691897/1580024777965-fe6628cf-fae8-43d6-9b6b-43a7c3b64867.png#align=left&display=inline&height=484&name=image.png&originHeight=484&originWidth=852&size=38431&status=done&style=none&width=852)
@@ -9,7 +13,7 @@ library(ggthemes)
 library(ggplot2)
 library(patchwork)
 world <- map_data("world")
-                                                                                    
+
 ggplot(world, aes(long, lat)) + geom_hex() + theme_map()  
 ```
 
@@ -19,7 +23,7 @@ ggplot(world, aes(long, lat)) + geom_hex() + theme_map()
 ## bins
 
 ```r
-ggplot(world, aes(long, lat)) + geom_hex(bins = 40) + theme_map() 
+ggplot(world, aes(long, lat)) + geom_hex(bins = 40) + theme_map()
 P1 <-ggplot(world, aes(long, lat)) + geom_hex(bins = 20) + theme_map() + ggtitle('bins=20')          
 P2 <-ggplot(world, aes(long, lat)) + geom_hex(bins = 80) + theme_map() + ggtitle('bins=80')          
 
@@ -32,7 +36,7 @@ P1|P2
 ## binwidth
 
 ```r
-ggplot(world, aes(long, lat)) + geom_hex(binwidth = c(1, 10)) + theme_map() 
+ggplot(world, aes(long, lat)) + geom_hex(binwidth = c(1, 10)) + theme_map()
 ```
 ![image.png](https://cdn.nlark.com/yuque/0/2020/png/691897/1580025154102-3ffaa678-310a-4c9c-891d-48b453473e9a.png#align=left&display=inline&height=427&name=image.png&originHeight=427&originWidth=656&size=36894&status=done&style=none&width=656)<br />
 <br />

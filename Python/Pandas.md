@@ -1,5 +1,5 @@
 ---
-url: pandas
+url: pandas2
 ---
 
 # Pandas
@@ -68,4 +68,3 @@ result = pd.concat([ Word, Sen], axis=1, sort=False)
 data.dropna(thresh=3) # at least 3 data we have
 
 ```
-

@@ -1,5 +1,5 @@
 ---
-url: blive
+url: blive2
 ---
 
 # Blive with RasperryPi
@@ -169,7 +169,7 @@ command = ['ffmpeg',
         '-c:v', 'libx264',
         '-pix_fmt', 'yuv420p',
         '-preset', 'ultrafast',
-        '-f', 'flv', 
+        '-f', 'flv',
         rtmpUrl]
 
 # 管道配置
@@ -189,4 +189,3 @@ while(cap.isOpened()):
     # write to pipe
     p.stdin.write(frame.tostring())
 ```
-

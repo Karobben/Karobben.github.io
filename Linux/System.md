@@ -1,5 +1,5 @@
 ---
-url: system
+url: system2
 ---
 
 # System
@@ -7,7 +7,7 @@ url: system
 
 
 ```bash
-	
+
 Basic
 
 
@@ -24,17 +24,17 @@ apt-cache search readline
 抽出整列  awk '{print $1}' filename 整列打印
 awk 'NR=='${fn}'{print}' counts.TMM_normalized.FPKM | awk '{print $2}'
 
-合并成一个文件，两列排列 paste -d "\t" eng.txt chi.txt 
-Sed 
+合并成一个文件，两列排列 paste -d "\t" eng.txt chi.txt
+Sed
 sed -i '1,5d' ${fn}.meg
 sed 'y/#/>/' ${fn}.meg
-sed 
+sed
 's/原字符串/替换字符串/'
 
 数字大小排序：sort -n  test.txt | while read num ;do echo $num ; sum=`expr $sum + $num 2> /dev/null`; echo $sum > /tmp/sum.tmp ;done ; echo -n "sum is :" ;cat /tmp/sum.tmp
  sort -n C.txt >T.txt
 
-tail 
+tail
 实例3：从第5行开始显示文件
 命令：
 tail -n +5 log2014.log
@@ -42,16 +42,16 @@ tail -n +5 log2014.log
 　二、去掉所有重复的数据行
 cat data1.txt | sort | uniq
 
-./faSomeRecords db.fasta id.txt query.fasta 
+./faSomeRecords db.fasta id.txt query.fasta
 echo
 echo -e "\033[41;36m something here \033[0m"
 echo -e "\033[40;37m red \033[0m"
-echo -e "\033[41;37m blue \033[0m" 
-echo -e "\033[42;37m green \033[0m" 
-echo -e "\033[43;37m 黄底白字 \033[0m" 
-echo -e "\033[44;37m 蓝底白字 \033[0m" 
-echo -e "\033[45;37m 紫底白字 \033[0m" 
-echo -e "\033[46;37m 天蓝底白字 \033[0m" 
+echo -e "\033[41;37m blue \033[0m"
+echo -e "\033[42;37m green \033[0m"
+echo -e "\033[43;37m 黄底白字 \033[0m"
+echo -e "\033[44;37m 蓝底白字 \033[0m"
+echo -e "\033[45;37m 紫底白字 \033[0m"
+echo -e "\033[46;37m 天蓝底白字 \033[0m"
 echo -e "\033[47;30m 白底黑字 \033[0m"
 
 #去除颜色
@@ -72,7 +72,7 @@ Version 2013.
 IDSS
 ~/soft/trinityrnaseq_r20131110/Trinity.pl --seqType fq --max_memory 2G --single ALL.fastaq  --SS_lib_type F   -CPU 4     
 
-        
+
 
 RSEM
 
@@ -226,5 +226,3 @@ lscpu
 # 网卡
 lspci | grep -i 'eth'
 ```
-
-

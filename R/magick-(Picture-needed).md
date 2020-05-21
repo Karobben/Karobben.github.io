@@ -1,5 +1,5 @@
 ---
-url: magick
+url: magick2
 ---
 
 # magick (Picture needed)
@@ -23,4 +23,3 @@ img <- image_resize(logo, "300x300")
 img_blurred <- image_convolve(img, kern)
 image_append(c(img, img_blurred))
 ```
-

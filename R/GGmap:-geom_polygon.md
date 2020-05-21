@@ -1,5 +1,5 @@
 ---
-url: geom_polygon
+url: geom_polygon2
 ---
 
 # GGmap: geom_polygon
@@ -23,7 +23,7 @@ worldmap <- ggplot(world, aes(x = long, y = lat, group = group)) +
     geom_polygon(fill = "#00518E",color = "#317DA4") +
     scale_y_continuous(breaks = (-2:2) * 30) +
     scale_x_continuous(breaks = (-4:4) * 45)
- 
+
 # 正射投影
 worldmap + coord_map("ortho") # 默认北极为中心点。  
 # 南极为中心点
@@ -65,13 +65,13 @@ for(i in c(2:10)){
   tmp$Group=i
   tmp[[3]]=tmp[[3]]+i-1
   City =rbind(City,tmp)}
- 
-ggplot(head(City,30))+ 
+
+ggplot(head(City,30))+
 	geom_polygon(data=world,aes(x = long, y = lat, group = group),
-		fill = "#00518E",color = "#317DA4")+ 
+		fill = "#00518E",color = "#317DA4")+
 	geom_point(data=City,aes(x=V2,y=V3)) +  
-	geom_text(data=head(City,Num),aes(x=V2,y=V3,label=V1))+ 
-	coord_cartesian(xlim=c(70,150),ylim = c(10,65))+ 
+	geom_text(data=head(City,Num),aes(x=V2,y=V3,label=V1))+
+	coord_cartesian(xlim=c(70,150),ylim = c(10,65))+
 	transition_time(City$Group) + theme_map()
 
 # 简单示范
@@ -84,7 +84,7 @@ ggplot(head(City,30))+
 ```r
 #旋转
 library(ggrepel)
-p <- ggplot(head(City,15))+ geom_polygon(data=world,aes(x = long, y = lat, group = group),fill = "#00518E",color = "#317DA4")+ 
+p <- ggplot(head(City,15))+ geom_polygon(data=world,aes(x = long, y = lat, group = group),fill = "#00518E",color = "#317DA4")+
          geom_point(data=City,aes(x=V2,y=V3))  + coord_map("ortho")+
          geom_text(data=head(City,Num),aes(x=V2,y=V3,label=V1))+ theme_map()
 for(i in c(1:5)){
@@ -107,7 +107,7 @@ for(i in c(1:5)){
     scale_y_continuous(breaks = (-2:2) * 30) +
 		coord_map("ortho", orientation = c(30, 100, 0)) +
     scale_x_continuous(breaks = (-4:4) * 45)+ theme_map()+
-		
+
 
 ```
 ![123.png](https://cdn.nlark.com/yuque/0/2020/png/691897/1579465902517-0cd86c41-84f1-4840-8255-bd53afaa944d.png#align=left&display=inline&height=2628&name=123.png&originHeight=2628&originWidth=3080&size=1109016&status=done&style=none&width=3080)
@@ -139,9 +139,9 @@ for(i in c(1:nrow(City2))){
     Result = rbind(Result,tmp)
 }
 
-经纬线() + 
-    geom_polygon(data=world, aes(x = long, y = lat, group = group), fill = "#00518E",color = "white",size=1.2)+ 
-    coord_map("ortho", orientation = c(30, 100, 0)) +theme_map()+ 
+经纬线() +
+    geom_polygon(data=world, aes(x = long, y = lat, group = group), fill = "#00518E",color = "white",size=1.2)+
+    coord_map("ortho", orientation = c(30, 100, 0)) +theme_map()+
     geom_polygon(data=world, aes(x = long, y = lat, group = group), fill = "#00518E",color = "#317DA4",alpha=0.25,size=0.5,linetype=6) +
     geom_point(data=Result,aes(x=X,y=Y))
 
