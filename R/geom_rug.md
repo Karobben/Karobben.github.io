@@ -61,3 +61,9 @@ P1/(P2|P3)
 ```
 
 <br />![image.png](https://cdn.nlark.com/yuque/0/2020/png/691897/1580040194659-63ba2800-b949-4772-9010-2ecdf203d715.png#align=left&display=inline&height=410&name=image.png&originHeight=410&originWidth=869&size=57238&status=done&style=none&width=869)<br />![image.png](https://cdn.nlark.com/yuque/0/2020/png/691897/1580039626553-b498916d-144b-4728-a661-1ca937713781.png#align=left&display=inline&height=590&name=image.png&originHeight=590&originWidth=869&size=49637&status=done&style=none&width=869)
+
+
+---
+github: [https://github.com/Karobben](https://github.com/Karobben)
+blog: [Karobben.github.io](http://Karobben.github.io)
+R 语言画图索引: [https://karobben.github.io/R/R-index.html](https://karobben.github.io/R/R-index.html)

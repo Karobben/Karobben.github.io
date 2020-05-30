@@ -2,7 +2,7 @@
 url: normalization
 ---
 
-# Data normalization 
+# Data normalization
 
 <a name="Y4znF"></a>
 # Normalization
@@ -73,3 +73,8 @@ a[,ii][which(a[,ii]<0)] <- atan(a[,ii][which(a[,ii]<0)])2/pi (-1)}
 ```r
 # Something wrong with this 1/2+ 1/2sim(pi/max())
 ```
+
+---
+github: [https://github.com/Karobben](https://github.com/Karobben)
+blog: [Karobben.github.io](http://Karobben.github.io)
+R 语言画图索引: [https://karobben.github.io/R/R-index.html](https://karobben.github.io/R/R-index.html)

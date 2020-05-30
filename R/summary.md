@@ -36,6 +36,7 @@
   - [Correlation](correlation2)
   - [NetWorkPlot](networkplot2)
   - [circlize](circlize2)
+  - [pathview (KEGGmap)](pathview)
 - [Data Science](uisx36)
   - [Data cleaning](dataclean)
   - [Data normalization](normalization)

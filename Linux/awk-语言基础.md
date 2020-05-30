@@ -22,27 +22,34 @@ FILENAME = Current file name being processed and probably a few more
 awk '{print NR}' filename # would print the line number for every line processed
 # = grep -c
 awk 'END{print  NR}' filename # Counts the lines in a file. similar to 'wc -l'
-####################
-## pipline on awk ##
-####################
+```
+
+# pipline on awk
+
+```bash
 awk 'BEGIN{print "the start"};{print}; END{print "the end"}' filename
-##################
-## Simple Logic ##
-##################
+```
+
+# Simple Logic
+```bash
 awk '{if(NR~/^2#/)print}' filename # would print line 2 from filename
 awk '{if(NR~2)print}' filename # would print any line numbers contain 2 from filename
 ## 2, 12, 22, 32...
 awk '{if(NR!~2)print}' filename # negated match
 awk '{if(NR==2)print}' filename
 awk '{if(NR!=2)print}' filename
-########
-## FS ##
-########
+```
+
+# FS
+```bash
 awk '{FS="\t";print $6}' filename
 or
 awk -F"\t" '{print $6}' filename
 awk -F"\t" 'NR==1,NR==10{print $6}' filename #print the cloum 6 from line 1 to line 10;
-awk -F"\t" '{print  length($5)}' filename # length() function to count the words length
-#######
-awk '$1="";{print}' FILENAME
+awk -F"\t" '{print  length($5)}' filename # length() function to count the
+```
+
+#Delete columns
+```bash
+awk '$1="";{print;OFS=\t}' FILENAME
 ```

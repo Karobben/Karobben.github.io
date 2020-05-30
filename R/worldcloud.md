@@ -129,3 +129,10 @@ wordcloud2(TB,color="random-light",backgroundColor = 'black')
 ```
 
 ![image.png](https://cdn.nlark.com/yuque/0/2020/png/691897/1582556564473-629627e2-e9e8-4985-802a-655a302a9713.png#align=left&display=inline&height=309&name=image.png&originHeight=309&originWidth=470&size=73870&status=done&style=none&width=470)
+
+
+
+---
+github: [https://github.com/Karobben](https://github.com/Karobben)
+blog: [Karobben.github.io](http://Karobben.github.io)
+R 语言画图索引: [https://karobben.github.io/R/R-index.html](https://karobben.github.io/R/R-index.html)

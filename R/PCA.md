@@ -88,3 +88,9 @@ qplot(x=PC1,y=PC2, data=pc,colour=factor(wine.class))+theme(legend.position="non
 ```
 
 ![image.png](https://cdn.nlark.com/yuque/0/2020/png/691897/1579799657726-3910122d-ac04-4ef7-aa14-fffab4d3b9c9.png#align=left&display=inline&height=422&name=image.png&originHeight=422&originWidth=474&size=42635&status=done&style=none&width=474)
+
+
+---
+github: [https://github.com/Karobben](https://github.com/Karobben)
+blog: [Karobben.github.io](http://Karobben.github.io)
+R 语言画图索引: [https://karobben.github.io/R/R-index.html](https://karobben.github.io/R/R-index.html)

@@ -185,3 +185,10 @@ print(paste("test-error=", err))
 xgb.plot.multi.trees(feature_names = names(diseaseInfo_matrix),
                      model = model)
 ```
+
+
+
+---
+github: [https://github.com/Karobben](https://github.com/Karobben)
+blog: [Karobben.github.io](http://Karobben.github.io)
+R 语言画图索引: [https://karobben.github.io/R/R-index.html](https://karobben.github.io/R/R-index.html)

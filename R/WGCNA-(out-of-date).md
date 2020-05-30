@@ -284,3 +284,10 @@ plot(cmd1, col=as.character(colorh1), main="MDS plot",xlab="Scaling Dimension
  ggsave(p,file=paste(i,".png"))}
 
 ```
+
+
+
+---
+github: [https://github.com/Karobben](https://github.com/Karobben)
+blog: [Karobben.github.io](http://Karobben.github.io)
+R 语言画图索引: [https://karobben.github.io/R/R-index.html](https://karobben.github.io/R/R-index.html)

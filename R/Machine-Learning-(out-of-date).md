@@ -2,7 +2,7 @@
 url: ml
 ---
 
-# Machine Learning (out of date) 
+# Machine Learning (out of date)
 
 
 ```r
@@ -57,3 +57,10 @@ for(i in 1:10)
 model <- rpart(formula, data = splitData$train ,control = rpart.control(maxdepth = 5))
 
 ```
+
+
+
+---
+github: [https://github.com/Karobben](https://github.com/Karobben)
+blog: [Karobben.github.io](http://Karobben.github.io)
+R 语言画图索引: [https://karobben.github.io/R/R-index.html](https://karobben.github.io/R/R-index.html)

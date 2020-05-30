@@ -64,3 +64,10 @@ ERROR: installing Rd objects failed for package ‘hello’
 ```
 
 错原：Error : (converted from warning) /tmp/RtmpixBxlB/Rbuild2ccc35a25d23/hello/man/hello-package.Rd:26: All text must be in a section<br />解决： 删除 man/hello-package.Rd 的 第 26 行
+
+
+
+---
+github: [https://github.com/Karobben](https://github.com/Karobben)
+blog: [Karobben.github.io](http://Karobben.github.io)
+R 语言画图索引: [https://karobben.github.io/R/R-index.html](https://karobben.github.io/R/R-index.html)

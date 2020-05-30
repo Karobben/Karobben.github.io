@@ -8,8 +8,13 @@ url: rtricks2
 <a name="osNch"></a>
 # Packages Install
 
+- Install from CRAN
 ```r
-install.packages("ggplot2","repos" = c(CRAN="https://mirrors.tuna.tsinghua.edu.cn/CRAN/"))
+Install.packages("ggplot2","repos" = c(CRAN="https://mirrors.tuna.tsinghua.edu.cn/CRAN/"))
+```
+- Install from local fille
+```R
+Install.packages("/data/data/com.termux/files/home/ggradar",repos = NULL)
 ```
 
 <a name="Bg1g4"></a>
@@ -150,4 +155,7 @@ world <- map_data("world")
 
 
 
---------------------------------------------------------------------------------------------------------------------------------------------<br />github: [https://github.com/Karobben](https://github.com/Karobben)<br />blog: [Karobben.github.io](http://Karobben.github.io)<br />R 语言画图索引: [https://karobben.github.io/R/R-index.html](https://karobben.github.io/R/R-index.html)
+---
+github: [https://github.com/Karobben](https://github.com/Karobben)
+blog: [Karobben.github.io](http://Karobben.github.io)
+R 语言画图索引: [https://karobben.github.io/R/R-index.html](https://karobben.github.io/R/R-index.html)

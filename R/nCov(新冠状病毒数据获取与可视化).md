@@ -232,4 +232,11 @@ ggplot(TB2)+
     theme_light() +facet_wrap(countryName ~., scales =  'free')   
 ```
 
-![800.jpg](https://cdn.nlark.com/yuque/0/2020/jpeg/691897/1584426105091-e23636ff-f117-4777-af51-3b6e96012808.jpeg#align=left&display=inline&height=706&name=800.jpg&originHeight=706&originWidth=921&size=83677&status=done&style=none&width=921)<br />--------------------------------------------------------------------------------------------------------------------------------------------<br />github: [https://github.com/Karobben](https://github.com/Karobben)<br />blog: [Karobben.github.io](http://Karobben.github.io)<br />R 语言画图索引: [https://karobben.github.io/R/R-index.html](https://karobben.github.io/R/R-index.html)
+![800.jpg](https://cdn.nlark.com/yuque/0/2020/jpeg/691897/1584426105091-e23636ff-f117-4777-af51-3b6e96012808.jpeg#align=left&display=inline&height=706&name=800.jpg&originHeight=706&originWidth=921&size=83677&status=done&style=none&width=921)
+
+
+
+---
+github: [https://github.com/Karobben](https://github.com/Karobben)
+blog: [Karobben.github.io](http://Karobben.github.io)
+R 语言画图索引: [https://karobben.github.io/R/R-index.html](https://karobben.github.io/R/R-index.html)
