@@ -2,18 +2,293 @@
 url: wgcna2
 ---
 
-# WGCNA (out of date)
+# WGCNA - Weighted Correlation Network Analysis
+
+[Official Website](https://horvath.genetics.ucla.edu/html/CoexpressionNetwork/Rpackages/WGCNA/)
+Paper: [Peter Langfelder, 2008](https://bmcbioinformatics.biomedcentral.com/articles/10.1186/1471-2105-9-559)
+
+Weighted correlation network analysis (WGCNA) can be used for finding clusters (modules) of highly correlated genes, for summarizing such clusters using the module eigengene or an intramodular hub gene, for relating modules to one another and to external sample traits (using eigengene network methodology), and for calculating module membership measures.
+
+
+# Installou
+
+```r
+# Mirrors
+# options("repos" = c(CRAN="https://mirrors.tuna.tsinghua.edu.cn/CRAN/"))
+# options(BioC_mirror="https://mirrors.tuna.tsinghua.edu.cn/bioconductor")
+install.packages("BiocManager")
+BiocManager::install("WGCNA")
+```
+
+Data:
+- [Female data](https://horvath.genetics.ucla.edu/html/CoexpressionNetwork/Rpackages/WGCNA/Tutorials/FemaleLiver-Data.zip)
+- [Male data](https://horvath.genetics.ucla.edu/html/CoexpressionNetwork/Rpackages/WGCNA/Tutorials/MaleLiver-Data.zip)
+
+# 1. Data Preparation
+
+## 1. Loading DataSet
+The data sets contain roughly 130 samples each. Note that each row corresponds to a gene and column to a
+sample or auxiliary information.
+```r
+library(WGCNA)
+
+# Reading Data
+options(stringsAsFactors = FALSE)
+#Read in the female liver data set
+femData = read.csv("LiverFemale3600.csv")
+# Read in the male liver data set
+maleData = read.csv("LiverMale3600.csv")
+```
+
+## 2. Groups in List
+```r
+# We work with two sets:
+nSets = 2;
+# For easier labeling of plots, create a vector holding descriptive names of the two sets.
+setLabels = c("Female liver", "Male liver")
+shortLabels = c("Female", "Male")
+
+# Form multi-set expression data: columns starting from 9 contain actual expression data.
+multiExpr = vector(mode = "list", length = nSets)
+
+multiExpr[[1]] = list(data = as.data.frame(t(femData[-c(1:8)])));
+names(multiExpr[[1]]$data) = femData$substanceBXH;
+rownames(multiExpr[[1]]$data) = names(femData)[-c(1:8)];
+multiExpr[[2]] = list(data = as.data.frame(t(maleData[-c(1:8)])));
+names(multiExpr[[2]]$data) = maleData$substanceBXH;
+rownames(multiExpr[[2]]$data) = names(maleData)[-c(1:8)];
+# Check that the data has the correct format for many functions operating on multiple sets:
+exprSize = checkSets(multiExpr)
+```
+
+## 3. Rudimentary data cleaning and outlier removal
+Check that all genes and samples have sufficiently low numbers of missing values.
+```r
+gsg = goodSamplesGenesMS(multiExpr, verbose = 3);
+gsg$allOK
+
+if (!gsg$allOK)
+{
+  # Print information about the removed genes:
+  if (sum(!gsg$goodGenes) > 0)
+    printFlush(paste("Removing genes:", paste(names(multiExpr[[1]]$data)[!gsg$goodGenes],
+                                              collapse = ", ")))
+  for (set in 1:exprSize$nSets)
+  {
+    if (sum(!gsg$goodSamples[[set]]))
+      printFlush(paste("In set", setLabels[set], "removing samples",
+                       paste(rownames(multiExpr[[set]]$data)[!gsg$goodSamples[[set]]], collapse = ", ")))
+    # Remove the offending genes and samples
+    multiExpr[[set]]$data = multiExpr[[set]]$data[gsg$goodSamples[[set]], gsg$goodGenes];
+  }
+  # Update exprSize
+  exprSize = checkSets(multiExpr)
+}
+```
+
+## 4. Cluster
+
+```r
+sampleTrees = list()
+for (set in 1:nSets)
+{
+  sampleTrees[[set]] = hclust(dist(multiExpr[[set]]$data), method = "average")
+}
+
+par(mfrow=c(2,1))
+par(mar = c(0, 4, 2, 0))
+for (set in 1:nSets)
+  plot(sampleTrees[[set]], main = paste("Sample clustering on all genes in", setLabels[set]),
+       xlab="", sub="", cex = 0.7)
+```
+[![t2ocjA.png](https://s1.ax1x.com/2020/06/07/t2ocjA.png)](https://imgchr.com/i/t2ocjA)
+
+By inspection, there seems to be <span style="background:salmon">**one outlier**</span> in the female data set, and no obvious outliers in the male set. We
+now <span style="background:salmon">**remove the female outlier**</span> using a semi-automatic code that only requires a choice of a height cut
+
+## 5. Remove Outlier
+```r
+# Choose the "base" cut height for the female data set
+baseHeight = 16
+# Adjust the cut height for the male data set for the number of samples
+cutHeights = c(16, 16*exprSize$nSamples[2]/exprSize$nSamples[1]);
+# Re-plot the dendrograms including the cut lines
+png(file = "SampleClustering.png");
+par(mfrow=c(2,1))
+par(mar = c(0, 4, 2, 0))
+for (set in 1:nSets)
+{
+  plot(sampleTrees[[set]], main = paste("Sample clustering on all genes in", setLabels[set]),
+       xlab="", sub="", cex = 0.7);
+  abline(h=cutHeights[set], col = "red");
+}
+dev.off();
+
+# Removing outlier
+for (set in 1:nSets)
+{
+  # Find clusters cut by the line
+  labels = cutreeStatic(sampleTrees[[set]], cutHeight = cutHeights[set])
+  # Keep the largest one (labeled by the number 1)
+  keep = (labels==1)
+  multiExpr[[set]]$data = multiExpr[[set]]$data[keep, ]
+}
+collectGarbage();
+# Check the size of the leftover data
+exprSize = checkSets(multiExpr)
+exprSize
+```
+![SampleClustering](https://i.loli.net/2020/06/07/RSMCdKeDpl9YqQj.png)
+
+## 6. Loading Clinical Trait Data
+```r
+traitData = read.csv("ClinicalTraits.csv");
+# remove columns that hold information we do not need.
+allTraits = traitData[, -c(31, 16)];
+allTraits = allTraits[, c(2, 11:36) ];
+# See how big the traits are and what are the trait and sample names
+dim(allTraits)
+names(allTraits)
+allTraits$Mice
+# Form a multi-set structure that will hold the clinical traits.
+Traits = vector(mode="list", length = nSets);
+for (set in 1:nSets)
+{
+  setSamples = rownames(multiExpr[[set]]$data);
+  traitRows = match(setSamples, allTraits$Mice);
+  Traits[[set]] = list(data = allTraits[traitRows, -1]);
+  rownames(Traits[[set]]$data) = allTraits[traitRows, 1];
+}
+collectGarbage();
+# Define data set dimensions
+nGenes = exprSize$nGenes;
+nSamples = exprSize$nSamples;
+```
+
+# 2. Network Construction and Module Detection
+```mermaid
+graph LR;
+   START(Network construction)
+   Net1(one-step network construction)
+   Net2(Step-by-step network construction)
+   Net3(automatic block-wise network construction)
+
+   START-->|Minimum Effort|Net1;
+   START-->|Customized/Alternate Methods|Net2;
+   START-->|Large Data Set|Net3;
+```
+
+
+## 2.1 One-Step Network Construction and Module Detection
+### 1. soft-thresholding power
+
+```r
+# Choose a set of soft-thresholding powers
+powers = c(seq(4,10,by=1), seq(12,20, by=2));
+# Initialize a list to hold the results of scale-free analysis
+powerTables = vector(mode = "list", length = nSets);
+# Call the network topology analysis function for each set in turn
+for (set in 1:nSets)
+  powerTables[[set]] = list(data = pickSoftThreshold(multiExpr[[set]]$data, powerVector=powers,
+                                                     verbose = 2)[[2]]);
+collectGarbage();
+# Plot the results:
+colors = c("black", "red")
+# Will plot these columns of the returned scale free analysis tables
+plotCols = c(2,5,6,7)
+colNames = c("Scale Free Topology Model Fit", "Mean connectivity", "Median connectivity",
+"Max connectivity");
+# Get the minima and maxima of the plotted points
+ylim = matrix(NA, nrow = 2, ncol = 4);
+for (set in 1:nSets)
+{
+  for (col in 1:length(plotCols))
+  {
+    ylim[1, col] = min(ylim[1, col], powerTables[[set]]$data[, plotCols[col]], na.rm = TRUE);
+    ylim[2, col] = max(ylim[2, col], powerTables[[set]]$data[, plotCols[col]], na.rm = TRUE);
+  }
+}
+# Plot the quantities in the chosen columns vs. the soft thresholding power
+sizeGrWindow(8, 6)
+png(file = "scaleFreeAnalysis.png")
+par(mfcol = c(2,2));
+par(mar = c(4.2, 4.2 , 2.2, 0.5))
+cex1 = 0.7;
+for (col in 1:length(plotCols)) for (set in 1:nSets)
+{
+  if (set==1)
+  {
+    plot(powerTables[[set]]$data[,1], -sign(powerTables[[set]]$data[,3])*powerTables[[set]]$data[,2],
+         xlab="Soft Threshold (power)",ylab=colNames[col],type="n", ylim = ylim[, col],
+         main = colNames[col]);
+    addGrid();
+  }
+  if (col==1)
+  {
+    text(powerTables[[set]]$data[,1], -sign(powerTables[[set]]$data[,3])*powerTables[[set]]$data[,2],
+         labels=powers,cex=cex1,col=colors[set]);
+  } else
+    text(powerTables[[set]]$data[,1], powerTables[[set]]$data[,plotCols[col]],
+         labels=powers,cex=cex1,col=colors[set]);
+  if (col==1)
+  {
+    legend("bottomright", legend = setLabels, col = colors, pch = 20) ;
+  } else
+    legend("topright", legend = setLabels, col = colors, pch = 20) ;
+}
+dev.off();
+```
+ ![scaleFreeAnalysis](https://i.loli.net/2020/06/07/MhcuA8aRYj9yCWg.png)
+
+### 2.  Network construction and consensus module detection
+
+<span style="background:salmon">Attention</span>: We have chosen the soft thresholding power <span style="background:salmon">6</span>, minimum module size <span style="background:salmon">30</span>, the module detection sensitivity deepSplit <span style="background:salmon">2</span>, cut height for merging of modules 0.20 (implying that modules whose eigengenes are correlated above 1 −0.2 =
+0.8 will be merged), we requested that the function return numeric module labels rather than color labels, we
+have effectively turned off reassigning genes based on their module eigengene-based connectivity KME, and we
+have instructed the code to save the calculated consensus topological overlap.
+
+In this example most of them are left at their default value. We encourage the user to read the help file provided within the package in the R environment and experiment with tweaking the network construction and module detection parameters. The potential reward is, of course, better (biologically more relevant) results of the analysis.
+```r
+net = blockwiseConsensusModules(
+        multiExpr, power = 6, minModuleSize = 30, deepSplit = 2,
+        pamRespectsDendro = FALSE,
+        mergeCutHeight = 0.25, numericLabels = TRUE,
+        minKMEtoStay = 0,
+        saveTOMs = TRUE, verbose = 5)
+```
+
+### 3 Model Extract
+
+```r
+consMEs = net$multiMEs;
+moduleLabels = net$colors;
+# Convert the numeric labels to color labels
+moduleColors = labels2colors(moduleLabels)
+consTree = net$dendrograms[[1]]
+
+sizeGrWindow(8,6);
+png(file = "ConsensusDendrogram-auto.png", wi = 600, he = 340)
+plotDendroAndColors(consTree, moduleColors,
+                    "Module colors",
+                    dendroLabels = FALSE, hang = 0.03,
+                    addGuide = TRUE, guideHang = 0.05,
+                    main = "Consensus gene dendrogram and module colors")
+
+dev.off()
+```
+![ConsensusDendrogram-auto](https://i.loli.net/2020/06/07/4Mm8FXaLduRPiQ1.png)
+
+
+
+
+
+
+
+---
+
 
 
 ```r
-library(WGCNA)
-fpkm <- read.table(file = "diffExpr.P1e-2_C2.matrix")
-data_matrix_mv = t(fpkm[order(apply(fpkm,1,mad), decreasing = T),])
-
-
-
-
-#2. ѡ����ʵķ�ֵ
 powers = c(c(1:10), seq(from = 12, to=20, by=2))
 # Call the network topology analysis function
 sft = pickSoftThreshold(data_matrix_mv, powerVector = powers, verbose = 5)

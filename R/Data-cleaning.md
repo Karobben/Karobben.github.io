@@ -69,6 +69,17 @@ reshape(longImage, timevar='Var3',idvar=c('Var1','Var2'), direction='wide')
 5    5    1 0.9686275 1.0000000 1.0000000
 6    6    1 0.9803922 1.0000000 1.0000000
 ```
+
+# R-dplyr
+
+```R
+library(tidyr)<br />
+library(dplyr)
+
+df <- data.frame(x = c(NA, "a.b", "a.d", "b.c","a-b"))<br />
+df %>% separate(x, c("A", "B"),'-')
+```
+
 ---
 github: [https://github.com/Karobben](https://github.com/Karobben)
 blog: [Karobben.github.io](http://Karobben.github.io)

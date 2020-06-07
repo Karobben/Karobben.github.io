@@ -184,7 +184,8 @@ mito_table.start_codons # --> { ['ATT', 'ATC', 'ATA', 'ATG', 'GTG'] }
 mito_table.forward_table["ACG"] #--> { 'T' }
 
 print(standard_table)
-'''
+```
+```
   |  T      |  C      |  A      |  G      |
 --+---------+---------+---------+---------+--
 T | TTT F   | TCT S   | TAT Y   | TGT C   | T
@@ -207,7 +208,42 @@ G | GTC V   | GCC A   | GAC D   | GGC G   | C
 G | GTA V   | GCA A   | GAA E   | GGA G   | A
 G | GTG V   | GCG A   | GAG E   | GGG G   | G
 --+---------+---------+---------+---------+--
+```
 
-'''
+# 4. Alignment
+## 1. Echo a test file
+```bash
+# run in bash
+echo ">TRINITY_DN106095_c2_g1_i2
+MSRIMKVFLFLAVMVCISEAQLHAQCLCPRVRSRISSMTDIREVQIYEATIFCDRMEIVVTNDSGLRYCLNPKLKAVQKLLTAMKPKTSTTARPTVHSSSTGSTNTARM
+>TRINITY_DN92154_c0_g1_i1
+DIHVRRRTLTRSKTLGRSTNVNKMKLCILLMLGTLLVLVYGMPPISRDYNTHCRCLQVESRIIPPNSLKSIKLVPEGPHCPDMEVIAGLSNGEKVCLNPRSSWVKKLVNFVLEKQQGGALPKNQGQ" > test.fa
+```
+## 2. Align
+```python
+# run in python
+from Bio import pairwise2
+from Bio.Seq import Seq
+from Bio.pairwise2 import format_alignment
+from Bio.SubsMat import MatrixInfo
 
+seq1 = Seq("MSRIMKVFLFLAVMVCISEAQLHAQCLCPRVRSRISSMTDIREVQIYEATIFCDRMEIVVTNDSGLRYCLNPKLKAVQKLLTAMKPKTSTTARPTVHSSSTGSTNTARM")
+seq2 = Seq("DIHVRRRTLTRSKTLGRSTNVNKMKLCILLMLGTLLVLVYGMPPISRDYNTHCRCLQVESRIIPPNSLKSIKLVPEGPHCPDMEVIAGLSNGEKVCLNPRSSWVKKLVNFVLEKQQGGALPKNQGQ")
+alignments = pairwise2.align.globalxx(seq1, seq2)
+test_alignments = pairwise2.align.localds(seq1, seq2, MatrixInfo.blosum62, -10, -1)
+
+for alignment in alignments:
+  print(format_alignment(*alignment))
+
+for alignment in test_alignments:
+  print(format_alignment(*alignment))
+```
+```
+SingleLetterAlphabet() alignment with 6 rows and 65 columns
+MQNTPAERLPAIIEKAKSKHDINVWLLDRQGRDLLEQRVPAKVA...EGP B7RZ31_9GAMM/59-123
+AKQRGIAGLEEWLHRLDHSEAIPIFLIDEAGKDLLEREVPADIT...KKP A0A0C3NPG9_9PROT/58-119
+ARRHGQEYFQQWLERQPKKVKEQVFAVDQFGRELLGRPLPEDMA...KKP A0A143HL37_9GAMM/57-121
+TRRHGPESFRFWLERQPVEARDRIYAIDRSGAEILDRPIPRGMA...NKP A0A0X3UC67_9GAMM/57-121
+AINRNTQQLTQDLRAMPNWSLRFVYIVDRNNQDLLKRPLPPGIM...NRK B3PFT7_CELJU/62-126
+AVNATEREFTERIRTLPHWARRNVFVLDSQGFEIFDRELPSPVA...NRT K4KEM7_SIMAS/61-125
 ```

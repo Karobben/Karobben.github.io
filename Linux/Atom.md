@@ -42,13 +42,37 @@ Ctrl + Shift + H<br />（我没成功）
 git://www.github.com/atom-community/autocomplete-paths.git
 
 cd autocomplete-paths
-apm install
-#npm install
+#apm install
+npm install
+# 直接使用 apm install 可能會缺少插件導致， 安裝成功卻無法使用，
+# 而 npm Install 會有報錯
+```
+
+`npm install` 報錯：
+```bash
+npm WARN worker-loader@0.8.1 requires a peer of webpack@>=0.9 <2 || ^2.1.0-beta || ^2.2.0 but none is installed. You must install peer dependencies yourself.
+
+audited 53 packages in 1.756s
+found 3 vulnerabilities (2 moderate, 1 high)
+  run `npm audit fix` to fix them, or `npm audit` for details
+```
+解決：
+```bash
+npm install npm WARN worker-loader@0.8.1 requires a peer of webpack@>=0.9 <2 || ^2.1.0-beta || ^2.2.0 but none is installed. You must install peer dependencies yourself.
+
+audited 53 packages in 1.756s
+found 3 vulnerabilities (2 moderate, 1 high)
+  run `npm audit fix` to fix them, or `npm audit` for details
+
 ```
 说实话 - -我安装了- -但是没看出什么效果来- -
 
+<i title="123" style='font-size:100px'>Test</i>
 <a name="ePp9Z"></a>
 # 其他
+## 插件網頁下載：
+https://atom.io/packages
+## 更多博客：
 Location：https://www.cnblogs.com/GarfieldEr007/p/5594700.html
 更多插件:
 - minimap (VS 一样小图预览)

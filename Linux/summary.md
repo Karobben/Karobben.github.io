@@ -17,6 +17,7 @@
   - [Atom](atom2)
   - [Disck Manage](disck_manage2)
   - [Download Software](download2)
+  - [GIMP](gimp)
   - [如何在Deepin上安装稳定的OBS](obs2)
   - [如何在Deepin上安装gtop](gtop2)
   - [如何在deepin上安装scrcpy](scrcpy2)

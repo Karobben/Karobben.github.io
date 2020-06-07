@@ -69,6 +69,21 @@ npm config list #查看更新后的config设置
 
 
 <a name="7uFqK"></a>
+
+# apm
+Atom pakcages manager
+
+## mirror
+```bash
+apm config set registry http://registry.npm.taobao.org
+```
+reference: [提辖鲁](https://blog.csdn.net/lj402159806/article/details/76862981)
+## install
+```bash
+apm install atom-latex
+```
+
+
 # flatpak
 
 <a name="8tiox"></a>

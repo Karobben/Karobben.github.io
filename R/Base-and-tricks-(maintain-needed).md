@@ -2,7 +2,7 @@
 url: rtricks2
 ---
 
-# Base and tricks (maintain needed)
+# Base and tricks
 
 
 <a name="osNch"></a>
@@ -17,6 +17,13 @@ Install.packages("ggplot2","repos" = c(CRAN="https://mirrors.tuna.tsinghua.edu.c
 Install.packages("/data/data/com.termux/files/home/ggradar",repos = NULL)
 ```
 
+## Mirrors
+```r
+# options函数就是设置R运行过程中的一些选项设置
+options("repos" = c(CRAN="https://mirrors.tuna.tsinghua.edu.cn/CRAN/"))
+# Bioconductor
+options(BioC_mirror="https://mirrors.tuna.tsinghua.edu.cn/bioconductor")
+```
 <a name="Bg1g4"></a>
 ## Reading from Excel
 ```r
