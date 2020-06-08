@@ -33,4 +33,6 @@
         - [Amylase-Trypsin Inhibitors | Inflammation | Mice 2020](wheatinhibitors)
         - [Diet Switch | Growth | Fish 2019](soyfish)
         - [Diet Switch | Hepatic Metabolism | Fish 2004](planthepatic)
+    - [algorithm](#)
+      - [WGCNA](paper_wgcna)
 - [Test](test)
