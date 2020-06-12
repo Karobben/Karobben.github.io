@@ -142,10 +142,9 @@ namea value  nameb
 weekdays(as.Date('2018-3-1'))
 ```
 
-# Data frame
 
-
-```R
+# Function
+```r
 Shrink <-  function(Data, P){
   Num = round(nrow(world)/P)
 	Data = Data[c(1:Num)*P,]

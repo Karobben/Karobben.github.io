@@ -36,6 +36,18 @@ geom_texttmap(data, cluster_row=FALSE, fontsize=9, fontsize_row=6) #关闭按行
 ```
 
 
+# Turn to ggplot
+
+```r
+install.packages('ggplotify')
+library(ggplotify)
+
+d <- matrix(rnorm(100), ncol=10)
+library(pheatmap)
+p <- pheatmap(d)
+g = as.ggplot(p)
+```
+
 <a name="FG8Ad"></a>
 # More
 图片索引:[https://karobben.github.io/R/R-index.html](https://karobben.github.io/R/R-index.html)

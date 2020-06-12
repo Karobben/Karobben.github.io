@@ -4,8 +4,7 @@ url: networkplot2
 
 # NetWorkPlot
 
-<a name="oK3oK"></a>
-## Basic plot
+# Igraph
 
 ```r
 library(htmlwidgets)
@@ -62,24 +61,39 @@ legend(x=-0.6, y=-0.12, legend=paste( levels(as.factor(mtcars$cyl)), " cylinders
 
 ```
 
-![image.png](https://cdn.nlark.com/yuque/0/2020/png/691897/1579789944437-2fc3e37b-ccd1-4c6f-96c9-35bceb526324.png#align=left&display=inline&height=385&name=image.png&originHeight=385&originWidth=465&size=26120&status=done&style=none&width=465)<br />
-<br />
-<br />
-<br />
+![image.png](https://cdn.nlark.com/yuque/0/2020/png/691897/1579789944437-2fc3e37b-ccd1-4c6f-96c9-35bceb526324.png#align=left&display=inline&height=385&name=image.png&originHeight=385&originWidth=465&size=26120&status=done&style=none&width=465)
 
+# NetworkD3
 ```r
 library(networkD3)
 
 # Load data
 data(MisLinks)
 data(MisNodes)
+forceNetwork(Links=MisLinks, #读入基因之间的关系列表，基因以数字为编号，从0开始；value可用来设置基因间连线的宽度
+    Nodes=MisNodes, #基因信息，以对应编号的大小排序
+    Source="source", #指定Links文件中的源节点
+    Target="target", #指定Links文件中的靶节点
+    Value="value", #设定基因间连线的宽度
+    NodeID="name", #指定节点显示的标签
+    fontSize=20, #设定节点标签的字号，单位为像素
+    Group="group", #对节点进行分组，这里可根据基因的功能进行分组，配置不同颜色
+    opacity=0.8, #指定图像的不透明度
+    zoom=TRUE, #是否允许图像缩放
+    arrows=TRUE, #连线是否添加箭头，显示方向
+    opacityNoHover=0.7, #鼠标悬停前，节点标签的不透明度
+    legend=TRUE, #是否显示图例
+    height=600, #设置图像高度
+    width=600 #设置图像宽度
+    #Nodesize = "Freq_l"
+    #radiusCalculation = "d.nodesize"          
+)
 ```
+![deepin-screen-recorder_Select area_20200609145232](https://i.loli.net/2020/06/09/tuya6YfnQi9BWJU.gif)
 
-![deepin-screen-recorder_Select area_20200123223417.gif](https://cdn.nlark.com/yuque/0/2020/gif/691897/1579790116707-76bbd3ea-acd7-416c-827d-b36beb672608.gif#align=left&display=inline&height=505&name=deepin-screen-recorder_Select%20area_20200123223417.gif&originHeight=505&originWidth=715&size=2657318&status=done&style=none&width=715)<br />
-<br />
 
 <a name="iGebE"></a>
-## Those Code Doesn't Works without the data set
+Those Code Doesn't Works without the data set
 ```r
 forceNetwork(Links=genelinks, #读入基因之间的关系列表，基因以数字为编号，从0开始；value可用来设置基因间连线的宽度
     Nodes=genenodes, #基因信息，以对应编号的大小排序

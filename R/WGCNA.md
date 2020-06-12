@@ -2,298 +2,121 @@
 url: wgcna2
 ---
 
-# WGCNA - Weighted Correlation Network Analysis
+# WGCNA - 實戰
 
-[Official Website](https://horvath.genetics.ucla.edu/html/CoexpressionNetwork/Rpackages/WGCNA/)
-Paper: [Peter Langfelder, 2008](https://bmcbioinformatics.biomedcentral.com/articles/10.1186/1471-2105-9-559)
+# 0. 數據結構
 
-Weighted correlation network analysis (WGCNA) can be used for finding clusters (modules) of highly correlated genes, for summarizing such clusters using the module eigengene or an intramodular hub gene, for relating modules to one another and to external sample traits (using eigengene network methodology), and for calculating module membership measures.
+## 0.1 Expression matrix
+Trinity script TPM result
+|ID1|ID2|Liver_CK|Intest_CK|Muscle_CK|Liver_30|Intest_30|Muscle_30|Liver_75|Intest_75|Muscle_75|
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+|TRINITY_DN100000_c1_g1|TRINITY_DN100000_c1_g1_i1|2.1|4.3|1.32|1.04|4.49|2.85|3.59|4.27|1.7|
+|TRINITY_DN100001_c0_g1|TRINITY_DN100001_c0_g1_i1|0.45|21.0|0.02|0.15|8.85|4.33|0.18|14.76|0.0|
+|TRINITY_DN100002_c0_g1|TRINITY_DN100002_c0_g1_i1|8.39|2.01|1.08|11.32|3.2|1.1|7.83|6.23|2.91|
+
+## 0.2 Traits
+|ID|Group|Organ|Weight|
+|:---:|:---:|:---:|:---:|
+|Liver_CK|CK|Liver|33.32|
+|Intest_CK|CK|Intest|33.32|
+|Muscle_CK|CK|Muscle|33.32|
+|Liver_30|SPC30|Liver|31.3|
+|Intest_30|SPC30|Intest|31.3|
+|...|...|...|...|
 
 
-# Installou
+# 1. Data Clean
 
-```r
-# Mirrors
-# options("repos" = c(CRAN="https://mirrors.tuna.tsinghua.edu.cn/CRAN/"))
-# options(BioC_mirror="https://mirrors.tuna.tsinghua.edu.cn/bioconductor")
-install.packages("BiocManager")
-BiocManager::install("WGCNA")
-```
-
-Data:
-- [Female data](https://horvath.genetics.ucla.edu/html/CoexpressionNetwork/Rpackages/WGCNA/Tutorials/FemaleLiver-Data.zip)
-- [Male data](https://horvath.genetics.ucla.edu/html/CoexpressionNetwork/Rpackages/WGCNA/Tutorials/MaleLiver-Data.zip)
-
-# 1. Data Preparation
-
-## 1. Loading DataSet
-The data sets contain roughly 130 samples each. Note that each row corresponds to a gene and column to a
-sample or auxiliary information.
+## 1.1 Load and Filter
 ```r
 library(WGCNA)
 
-# Reading Data
-options(stringsAsFactors = FALSE)
-#Read in the female liver data set
-femData = read.csv("LiverFemale3600.csv")
-# Read in the male liver data set
-maleData = read.csv("LiverMale3600.csv")
-```
+A <- read.csv("All_isoform.TPM.matrix.anno.xls",sep='\t')
 
-## 2. Groups in List
-```r
-# We work with two sets:
-nSets = 2;
-# For easier labeling of plots, create a vector holding descriptive names of the two sets.
-setLabels = c("Female liver", "Male liver")
-shortLabels = c("Female", "Male")
+# rownames:sample; colnames: Transcripts
+row.names(A) = A[[2]]
+A = A[-(1:2)]
+datExpr0 = t(A)
 
-# Form multi-set expression data: columns starting from 9 contain actual expression data.
-multiExpr = vector(mode = "list", length = nSets)
 
-multiExpr[[1]] = list(data = as.data.frame(t(femData[-c(1:8)])));
-names(multiExpr[[1]]$data) = femData$substanceBXH;
-rownames(multiExpr[[1]]$data) = names(femData)[-c(1:8)];
-multiExpr[[2]] = list(data = as.data.frame(t(maleData[-c(1:8)])));
-names(multiExpr[[2]]$data) = maleData$substanceBXH;
-rownames(multiExpr[[2]]$data) = names(maleData)[-c(1:8)];
-# Check that the data has the correct format for many functions operating on multiple sets:
-exprSize = checkSets(multiExpr)
-```
-
-## 3. Rudimentary data cleaning and outlier removal
-Check that all genes and samples have sufficiently low numbers of missing values.
-```r
-gsg = goodSamplesGenesMS(multiExpr, verbose = 3);
+# Data filter
+gsg = goodSamplesGenes(datExpr0, verbose = 3);
 gsg$allOK
 
 if (!gsg$allOK)
 {
-  # Print information about the removed genes:
-  if (sum(!gsg$goodGenes) > 0)
-    printFlush(paste("Removing genes:", paste(names(multiExpr[[1]]$data)[!gsg$goodGenes],
-                                              collapse = ", ")))
-  for (set in 1:exprSize$nSets)
-  {
-    if (sum(!gsg$goodSamples[[set]]))
-      printFlush(paste("In set", setLabels[set], "removing samples",
-                       paste(rownames(multiExpr[[set]]$data)[!gsg$goodSamples[[set]]], collapse = ", ")))
-    # Remove the offending genes and samples
-    multiExpr[[set]]$data = multiExpr[[set]]$data[gsg$goodSamples[[set]], gsg$goodGenes];
-  }
-  # Update exprSize
-  exprSize = checkSets(multiExpr)
+  # Optionally, print the gene and sample names that were removed:
+  if (sum(!gsg$goodGenes)>0)
+     printFlush(paste("Removing genes:", paste(names(datExpr0)[!gsg$goodGenes], collapse = ", ")));
+  if (sum(!gsg$goodSamples)>0)
+     printFlush(paste("Removing samples:", paste(rownames(datExpr0)[!gsg$goodSamples], collapse = ", ")));
+  # Remove the offending genes and samples from the data:
+  datExpr0 = datExpr0[gsg$goodSamples, gsg$goodGenes]
 }
 ```
-
-## 4. Cluster
+## 1.2 Clust
 
 ```r
-sampleTrees = list()
-for (set in 1:nSets)
-{
-  sampleTrees[[set]] = hclust(dist(multiExpr[[set]]$data), method = "average")
-}
-
-par(mfrow=c(2,1))
-par(mar = c(0, 4, 2, 0))
-for (set in 1:nSets)
-  plot(sampleTrees[[set]], main = paste("Sample clustering on all genes in", setLabels[set]),
-       xlab="", sub="", cex = 0.7)
+sampleTree = hclust(dist(datExpr0), method = "average");
+#png(file = "sampleClustering_T45.png",wi=300, he=300)
+par(cex = 0.6);
+par(mar = c(0,4,2,0))
+plot(sampleTree, main = "Sample clustering to detect outliers", sub="", xlab="", cex.lab = 1.5,
+     cex.axis = 1.5, cex.main = 2)
+#dev.off()
 ```
-[![t2ocjA.png](https://s1.ax1x.com/2020/06/07/t2ocjA.png)](https://imgchr.com/i/t2ocjA)
-
-By inspection, there seems to be <span style="background:salmon">**one outlier**</span> in the female data set, and no obvious outliers in the male set. We
-now <span style="background:salmon">**remove the female outlier**</span> using a semi-automatic code that only requires a choice of a height cut
-
-## 5. Remove Outlier
-```r
-# Choose the "base" cut height for the female data set
-baseHeight = 16
-# Adjust the cut height for the male data set for the number of samples
-cutHeights = c(16, 16*exprSize$nSamples[2]/exprSize$nSamples[1]);
-# Re-plot the dendrograms including the cut lines
-png(file = "SampleClustering.png");
-par(mfrow=c(2,1))
-par(mar = c(0, 4, 2, 0))
-for (set in 1:nSets)
-{
-  plot(sampleTrees[[set]], main = paste("Sample clustering on all genes in", setLabels[set]),
-       xlab="", sub="", cex = 0.7);
-  abline(h=cutHeights[set], col = "red");
-}
-dev.off();
-
-# Removing outlier
-for (set in 1:nSets)
-{
-  # Find clusters cut by the line
-  labels = cutreeStatic(sampleTrees[[set]], cutHeight = cutHeights[set])
-  # Keep the largest one (labeled by the number 1)
-  keep = (labels==1)
-  multiExpr[[set]]$data = multiExpr[[set]]$data[keep, ]
-}
-collectGarbage();
-# Check the size of the leftover data
-exprSize = checkSets(multiExpr)
-exprSize
-```
-![SampleClustering](https://i.loli.net/2020/06/07/RSMCdKeDpl9YqQj.png)
-
-## 6. Loading Clinical Trait Data
-```r
-traitData = read.csv("ClinicalTraits.csv");
-# remove columns that hold information we do not need.
-allTraits = traitData[, -c(31, 16)];
-allTraits = allTraits[, c(2, 11:36) ];
-# See how big the traits are and what are the trait and sample names
-dim(allTraits)
-names(allTraits)
-allTraits$Mice
-# Form a multi-set structure that will hold the clinical traits.
-Traits = vector(mode="list", length = nSets);
-for (set in 1:nSets)
-{
-  setSamples = rownames(multiExpr[[set]]$data);
-  traitRows = match(setSamples, allTraits$Mice);
-  Traits[[set]] = list(data = allTraits[traitRows, -1]);
-  rownames(Traits[[set]]$data) = allTraits[traitRows, 1];
-}
-collectGarbage();
-# Define data set dimensions
-nGenes = exprSize$nGenes;
-nSamples = exprSize$nSamples;
-```
-
-# 2. Network Construction and Module Detection
-```mermaid
-graph LR;
-   START(Network construction)
-   Net1(one-step network construction)
-   Net2(Step-by-step network construction)
-   Net3(automatic block-wise network construction)
-
-   START-->|Minimum Effort|Net1;
-   START-->|Customized/Alternate Methods|Net2;
-   START-->|Large Data Set|Net3;
-```
-
-
-## 2.1 One-Step Network Construction and Module Detection
-### 1. soft-thresholding power
+![sampleClustering](https://i.loli.net/2020/06/10/PXY8AC1jcZiHlBQ.png)
+相對來說， Liver30 異質性有點大， 不過， 根據實驗來說， 應該是正常現象，因此跳過刪除異質性項。
 
 ```r
-# Choose a set of soft-thresholding powers
-powers = c(seq(4,10,by=1), seq(12,20, by=2));
-# Initialize a list to hold the results of scale-free analysis
-powerTables = vector(mode = "list", length = nSets);
-# Call the network topology analysis function for each set in turn
-for (set in 1:nSets)
-  powerTables[[set]] = list(data = pickSoftThreshold(multiExpr[[set]]$data, powerVector=powers,
-                                                     verbose = 2)[[2]]);
-collectGarbage();
-# Plot the results:
-colors = c("black", "red")
-# Will plot these columns of the returned scale free analysis tables
-plotCols = c(2,5,6,7)
-colNames = c("Scale Free Topology Model Fit", "Mean connectivity", "Median connectivity",
-"Max connectivity");
-# Get the minima and maxima of the plotted points
-ylim = matrix(NA, nrow = 2, ncol = 4);
-for (set in 1:nSets)
-{
-  for (col in 1:length(plotCols))
-  {
-    ylim[1, col] = min(ylim[1, col], powerTables[[set]]$data[, plotCols[col]], na.rm = TRUE);
-    ylim[2, col] = max(ylim[2, col], powerTables[[set]]$data[, plotCols[col]], na.rm = TRUE);
-  }
-}
-# Plot the quantities in the chosen columns vs. the soft thresholding power
-sizeGrWindow(8, 6)
-png(file = "scaleFreeAnalysis.png")
-par(mfcol = c(2,2));
-par(mar = c(4.2, 4.2 , 2.2, 0.5))
-cex1 = 0.7;
-for (col in 1:length(plotCols)) for (set in 1:nSets)
-{
-  if (set==1)
-  {
-    plot(powerTables[[set]]$data[,1], -sign(powerTables[[set]]$data[,3])*powerTables[[set]]$data[,2],
-         xlab="Soft Threshold (power)",ylab=colNames[col],type="n", ylim = ylim[, col],
-         main = colNames[col]);
-    addGrid();
-  }
-  if (col==1)
-  {
-    text(powerTables[[set]]$data[,1], -sign(powerTables[[set]]$data[,3])*powerTables[[set]]$data[,2],
-         labels=powers,cex=cex1,col=colors[set]);
-  } else
-    text(powerTables[[set]]$data[,1], powerTables[[set]]$data[,plotCols[col]],
-         labels=powers,cex=cex1,col=colors[set]);
-  if (col==1)
-  {
-    legend("bottomright", legend = setLabels, col = colors, pch = 20) ;
-  } else
-    legend("topright", legend = setLabels, col = colors, pch = 20) ;
-}
-dev.off();
-```
- ![scaleFreeAnalysis](https://i.loli.net/2020/06/07/MhcuA8aRYj9yCWg.png)
+datExpr =  datExpr0
+nGenes = ncol(datExpr)
+nSamples = nrow(datExpr)
 
-### 2.  Network construction and consensus module detection
-
-<span style="background:salmon">Attention</span>: We have chosen the soft thresholding power <span style="background:salmon">6</span>, minimum module size <span style="background:salmon">30</span>, the module detection sensitivity deepSplit <span style="background:salmon">2</span>, cut height for merging of modules 0.20 (implying that modules whose eigengenes are correlated above 1 − 0.2 = 0.8 will be merged), we requested that the function return numeric module labels rather than color labels, we have effectively turned off reassigning genes based on their module eigengene-based connectivity KME, and we have instructed the code to save the calculated consensus topological overlap.
-
-In this example most of them are left at their default value. We encourage the user to read the help file provided within the package in the R environment and experiment with tweaking the network construction and module detection parameters. The potential reward is, of course, better (biologically more relevant) results of the analysis.
-```r
-net = blockwiseConsensusModules(
-        multiExpr, power = 6, minModuleSize = 30, deepSplit = 2,
-        pamRespectsDendro = FALSE,
-        mergeCutHeight = 0.25, numericLabels = TRUE,
-        minKMEtoStay = 0,
-        saveTOMs = TRUE, verbose = 5)
 ```
 
-### 3 Model Extract
+## 1.3 Loading Traits
 
 ```r
-consMEs = net$multiMEs;
-moduleLabels = net$colors;
-# Convert the numeric labels to color labels
-moduleColors = labels2colors(moduleLabels)
-consTree = net$dendrograms[[1]]
+traitData = read.csv("traits.csv")
 
-sizeGrWindow(8,6);
-png(file = "ConsensusDendrogram-auto.png", wi = 600, he = 340)
-plotDendroAndColors(consTree, moduleColors,
-                    "Module colors",
-                    dendroLabels = FALSE, hang = 0.03,
-                    addGuide = TRUE, guideHang = 0.05,
-                    main = "Consensus gene dendrogram and module colors")
+allTraits = traitData[-c(2,3)]
 
-dev.off()
+
+Samples = rownames(datExpr);
+traitRows = match(Samples, allTraits$ID);
+datTraits = allTraits[traitRows, -1];
+rownames(datTraits) = allTraits[traitRows, 1];
+
+collectGarbage()
+
+# Re-cluster samples
+sampleTree2 = hclust(dist(datExpr), method = "average")
+# Convert traits to a color representation: white means low, red means high, grey means missing entry
+traitColors = numbers2colors(datTraits, signed = FALSE);
+# Plot the sample dendrogram and the colors underneath.
+# png("traits_heatmap.png")
+plotDendroAndColors(sampleTree2, traitColors,
+                    groupLabels = names(datTraits),
+                    main = "Sample dendrogram and trait heatmap")
 ```
-![ConsensusDendrogram-auto](https://i.loli.net/2020/06/07/4Mm8FXaLduRPiQ1.png)
+![traits_heatmap](https://i.loli.net/2020/06/10/mwHBczOjh4TVFNp.png)
 
+ummm, 並不能看出什麼來。只是個普通的熱圖加樹衛而已
 
-
-
-
-
-
----
-
-
-
+# 2. Network construction and module detection
+## 2.1 Pick soft-thresdholding power
 ```r
 powers = c(c(1:10), seq(from = 12, to=20, by=2))
 # Call the network topology analysis function
-sft = pickSoftThreshold(data_matrix_mv, powerVector = powers, verbose = 5)
+sft = pickSoftThreshold(datExpr, powerVector = powers, verbose = 5)
 # Plot the results:
-##sizeGrWindow(9, 5)
-par(mfrow = c(1,2));
-cex1 = 0.9;
+sizeGrWindow(9, 5)
+#png("sorft_Thread.png",wi=630,he=350)
 # Scale-free topology fit index as a function of the soft-thresholding power
+# png("T45_Soft_th.png",width=500,height=300)
+cex1 = 0.9;
+par(mfrow = c(1,2));
 plot(sft$fitIndices[,1], -sign(sft$fitIndices[,3])*sft$fitIndices[,2],
      xlab="Soft Threshold (power)",ylab="Scale Free Topology Model Fit,signed R^2",type="n",
      main = paste("Scale independence"));
@@ -306,24 +129,50 @@ plot(sft$fitIndices[,1], sft$fitIndices[,5],
      xlab="Soft Threshold (power)",ylab="Mean Connectivity", type="n",
      main = paste("Mean connectivity"))
 text(sft$fitIndices[,1], sft$fitIndices[,5], labels=powers, cex=cex1,col="red")
+#dev.off()
+```
+![sorft_Thread](https://i.loli.net/2020/06/10/jh13CuI86y9Sfbg.png)
 
+ummm... 等了半天，就這。。。這種垃圾數據的話， 還是放棄把。
 
+# 3. 刪除不必要reads，再來做一遍
 
+想法： 刪除低hit的reads， 減少計算量，減少垃圾數據的污染
+```r
+Counts <- read.csv("/media/ken/Data/Yan/RNA-seq/report/4.exprs//All_isoform.COUNT.matrix.anno.xls",sep='\t')
+Counts$Sum = rowSums(Counts[-c(1:2)])
+Counts_sub = Counts[which(Counts$Sum>10),]
+paste(round((nrow(Counts_sub)/nrow(Counts))*100,2),"%",sep="")
 
-#3. һ�������繹����One-step network construction and module detection
-net = blockwiseModules(data_matrix_mv, power = 6, maxBlockSize = 12000,
+A_sub <- A[match(Counts_sub[[2]],rownames(A)),]
+```
+然後， 重複上面步驟, 從1.1 `datExpr0 = t(A)`替換成`datExpr0 = t(A_sub)`開始
+![Soft_th2](https://i.loli.net/2020/06/10/uEx8fr32wglcOIK.png)
+鐺鐺鐺鐺鐺! 這次結果就好看多了把！
+雖然沒有 Tutorial 那樣標緻，但是，至少給了我繼續下去的勇氣。
+數據不好，就調高閾值把， 更具這條線，大概是要選9了
+
+# 4. One-step NetWork
+```r
+net = blockwiseModules(datExpr, power = 9,
                        TOMType = "unsigned", minModuleSize = 30,
-                       reassignThreshold = 0, mergeCutHeight = 0.45,
+                       reassignThreshold = 0, mergeCutHeight = 0.25,
                        numericLabels = TRUE, pamRespectsDendro = FALSE,
                        saveTOMs = TRUE,
-                       saveTOMFileBase = "AS-green-FPKM-TOM",
+                       saveTOMFileBase = "femaleMouseTOM",
                        verbose = 3)
-table(net$colors)
+```
+這一步等待時間和你電腦計算能力，基因數量成正相關
 
+```r
 
-#4. �滭���չʾ
+moduleLabels = net$colors
+moduleColors = labels2colors(net$colors)
+MEs = net$MEs;
+geneTree = net$dendrograms[[1]]
 # open a graphics window
-#sizeGrWindow(12, 9)
+sizeGrWindow(12, 9)
+# png('modules_tree.png',width=480, height=320)
 # Convert labels to colors for plotting
 mergedColors = labels2colors(net$colors)
 # Plot the dendrogram and the module colors underneath
@@ -331,234 +180,531 @@ plotDendroAndColors(net$dendrograms[[1]], mergedColors[net$blockGenes[[1]]],
                     "Module colors",
                     dendroLabels = FALSE, hang = 0.03,
                     addGuide = TRUE, guideHang = 0.05)
+#dev.off()
+```
+![modules_tree](https://i.loli.net/2020/06/10/HYXmnS3acVgPOyU.png)
+
+ummmm... 模塊似乎有點寬， 分的不均勻- - 感覺很爛的樣子。 要不再， 篩一下？
+
+Modules 統計
+```r
+library(ggplot2)
+library(reshape2)
+Color_TB = melt(table(labels2colors(net$colors)))
+Color_TB$Var1 = factor(Color_TB$Var1, levels = Color_TB$Var1[order(Color_TB$value,decreasing = T)])
+ggplot(Color_TB) + geom_bar(aes(x=Var1,y=value), stat = 'identity',fill=Color_TB$Var1)+
+  theme_light() +theme(axis.text.x = element_text(angle = 90,hjust=1))
+```
+![123](https://i.loli.net/2020/06/11/Ks396OUztmydnu2.png)
+
+# 5. Traits
+```r
+nGenes = ncol(datExpr);
+nSamples = nrow(datExpr);
+# Recalculate MEs with color labels
+MEs0 = moduleEigengenes(datExpr, moduleColors)$eigengenes
+MEs = orderMEs(MEs0)
+moduleTraitCor = cor(MEs, datTraits, use = "p");
+moduleTraitPvalue = corPvalueStudent(moduleTraitCor, nSamples);
 
 
+sizeGrWindow(10,6)
+# Will display correlations and their p-values
+# png("T45_traits_heatmap.png",width=1000,height=600)
+textMatrix =  paste(signif(moduleTraitCor, 2), "\n(",
+                           signif(moduleTraitPvalue, 1), ")", sep = "");
+dim(textMatrix) = dim(moduleTraitCor)
+par(mar = c(6, 8.5, 3, 3));
+# Display the correlation values within a heatmap plot
+labeledHeatmap(Matrix = moduleTraitCor,
+               xLabels = names(datTraits),
+               yLabels = names(MEs),
+               ySymbols = names(MEs),
+               colorLabels = FALSE,
+               colors = greenWhiteRed(50),
+               textMatrix = textMatrix,
+               setStdMargins = FALSE,
+               cex.text = 0.5,
+               zlim = c(-1,1),
+               main = paste("Module-trait relationships"))
+```
+![traits_heatmap](https://i.loli.net/2020/06/10/6sAcpShBmkZXGyW.png)
+ummm, 能看個大概就好2333.還是有點意思的
+
+# 6. Focus on Weight
+
+```r
+weight = as.data.frame(datTraits$Weight)
+modNames = substring(names(MEs), 3)
+
+geneModuleMembership = as.data.frame(cor(datExpr, MEs, use = "p"));
+MMPvalue = as.data.frame(corPvalueStudent(as.matrix(geneModuleMembership), nSamples));
+
+names(geneModuleMembership) = paste("MM", modNames, sep="");
+names(MMPvalue) = paste("p.MM", modNames, sep="");
+
+geneTraitSignificance = as.data.frame(cor(datExpr, weight, use = "p"));
+GSPvalue = as.data.frame(corPvalueStudent(as.matrix(geneTraitSignificance), nSamples));
+
+names(geneTraitSignificance) = paste("GS.", names(weight), sep="");
+names(GSPvalue) = paste("p.GS.", names(weight), sep="");
 
 
-#5.�������
-moduleLabels = net$colors
-moduleColors = labels2colors(net$colors)
-table(moduleColors)
-MEs = net$MEs
-geneTree = net$dendrograms[[1]]
+module = "grey"
+column = match(module, modNames);
+moduleGenes = moduleColors==module;
 
+sizeGrWindow(7, 7);
+# png("grey_weight.png")
+par(mfrow = c(1,1));
+verboseScatterplot(abs(geneModuleMembership[moduleGenes, column]),
+                   abs(geneTraitSignificance[moduleGenes, 1]),
+                   xlab = paste("Module Membership in", module, "module"),
+                   ylab = "Gene significance for body weight",
+                   main = paste("Module membership vs. gene significance\n"),
+                   cex.main = 1.2, cex.lab = 1.2, cex.axis = 1.2, col = module)
+```
+![grey_weight](https://i.loli.net/2020/06/10/jWYKMUZ1o4gqQu5.png)
+ummmm... 有點少， 哈哈哈， 才18個，數了一下。和tutorial 差好多呀
 
-#1. ���ӻ�ȫ����������
+因爲是非模式物種，所以無法直接用tutorial給的方法做註釋。
+直接調到後面的可視化把。
+
+# 7. NetWork  Visualizing
+
+```r
+nGenes = ncol(datExpr)
+nSamples = nrow(datExpr)
+
 # Calculate topological overlap anew: this could be done more efficiently by saving the TOM
 # calculated during module detection, but let us do it again here.
-dissTOM = 1-TOMsimilarityFromExpr(data_matrix_mv, power = 12);
+dissTOM = 1-TOMsimilarityFromExpr(datExpr, power = 9);
 # Transform dissTOM with a power to make moderately strong connections more visible in the heatmap
 plotTOM = dissTOM^7;
 # Set diagonal to NA for a nicer plot
 diag(plotTOM) = NA;
 # Call the plot function
-#sizeGrWindow(9,9)
+sizeGrWindow(9,9)
 TOMplot(plotTOM, geneTree, moduleColors, main = "Network heatmap plot, all genes")
 
-
-TOM = TOMsimilarityFromExpr(data_matrix_mv, power = 6);
-# Read in the annotation file
-# annot = read.csv(file = "GeneAnnotation.csv");
-# Select modules��Ҫ�޸ģ�ѡ����Ҫ������ģ����ɫ
-modules = c("turquoise");
-# Select module probesѡ��ģ��̽��
-probes = colnames(data_matrix_mv)
-inModule = is.finite(match(moduleColors, modules));
-modProbes = probes[inModule];
-#modGenes = annot$gene_symbol[match(modProbes, annot$substanceBXH)];
-# Select the corresponding Topological Overlap
-modTOM = TOM[inModule, inModule];
-dimnames(modTOM) = list(modProbes, modProbes)
-# Export the network into edge and node list files Cytoscape can read
-cyt = exportNetworkToCytoscape(modTOM,
-                               edgeFile = paste("0.77", paste(modules, collapse="-"), ".txt", sep=""),
-                               nodeFile = paste("nodes-", paste(modules, collapse="-"), ".txt", sep=""),
-                               weighted = TRUE,
-                               threshold = 0.77,
-                               nodeNames = modProbes,
-                               #altNodeNames = modGenes,
-                               nodeAttr = moduleColors[inModule]);
-
-
-#######################################################################################################
-
-
-
-
-                       #step7:����Ŀ��ӻ�
-                        #��Ҫ�ο����ϣ�PDF document, R script
-
-                         #����������л�����ͼ
- nGenes = ncol(data_matrix_mv)
- nSamples = nrow(data_matrix_mv)
- geneTree = net$dendrograms[[1]];
- dissTOM = 1-TOMsimilarityFromExpr(data_matrix_mv, power = 6);
- plotTOM = dissTOM^7;
- diag(plotTOM) = NA;
- #TOMplot(plotTOM, geneTree, moduleColors, main = 'Network heatmap plot, all genes')
-
-                              #����ǳ����ļ�����Դ��ʱ�䣬���Խ���ѡȡ���в��ֻ�����ͼ���ɣ��Ҿ�û�л������Ҹ�������Ĵ���ѡȡ���ֻ�������ͼ��
-
-                               #Ȼ�����ѡȡ���ֻ�����ͼ
-nSelect = 4000
-
+nSelect = 400
 # For reproducibility, we set the random seed
-
 set.seed(10);
 select = sample(nGenes, size = nSelect);
 selectTOM = dissTOM[select, select];
-
-# There��s no simple way of restricting a clustering tree to a subset of genes, so we must re-cluster.
-
-selectTree = hclust(as.dist(selectTOM), method = 'average')
+# There's no simple way of restricting a clustering tree to a subset of genes, so we must re-cluster.
+selectTree = hclust(as.dist(selectTOM), method = "average")
 selectColors = moduleColors[select];
-
 # Open a graphical window
-
 sizeGrWindow(9,9)
-
 # Taking the dissimilarity to a power, say 10, makes the plot more informative by effectively changing
 # the color palette; setting the diagonal to NA also improves the clarity of the plot
-
+#png('123.png')
 plotDiss = selectTOM^7;
 diag(plotDiss) = NA;
-TOMplot(plotDiss, selectTree, selectColors, main = 'Network heatmap plot, selected genes')
+TOMplot(plotDiss, selectTree, selectColors, main = "Network heatmap plot, selected genes")
+```
+ummm... 好像是內存爆了，直接退出。 試試不用radian看看
+<span style="background:salmon">失敗了- -放棄， 跳過把</span>
+參考圖：
+![123](https://i.loli.net/2020/06/08/wrpXGJj4qQOulim.png)
 
 
+```r
+MEs = moduleEigengenes(datExpr, moduleColors)$eigengenes
+# Isolate weight from the clinical traits
+weight = as.data.frame(datTraits$Weight);
+names(weight) = "weight"
+# Add the weight to existing module eigengenes
+MET = orderMEs(cbind(MEs, weight))
+# Plot the relationships among the eigengenes and the trait
+sizeGrWindow(5,7.5);
+#png('T45_Tree_weight_module.png',width=400,height=600)
+par(cex = 0.9)
+plotEigengeneNetworks(MET, "", marDendro = c(0,4,1,2), marHeatmap = c(3,4,1,2), cex.lab = 0.8, xLabelsAngle = 90)
+```
+[![tTvZu9.png](https://s1.ax1x.com/2020/06/10/tTvZu9.png)](https://imgchr.com/i/tTvZu9)
 
+這個圖還是可以畫的
+# 8. 數據導出
 
-
-
-TOM = TOMsimilarityFromExpr(data_matrix_mv, power = 12);
-# Read in the annotation file
-# annot = read.csv(file = "GeneAnnotation.csv");
-# Select modules��Ҫ�޸ģ�ѡ����Ҫ������ģ����ɫ
-modules = c("turquoise");
-# Select module probesѡ��ģ��̽��
-probes = colnames(data_matrix_mv)
+```r
+modules = c("darkorange2", "grey","lightcyan");
 inModule = is.finite(match(moduleColors, modules));
+
+for(color in modules){
+  write.table(colnames(t(net$colors[moduleColors==color])),paste("module_",color,'.list',sep="") ,row.names=F,quote=F,col.names=F)
+}
+
+probes = names(datExpr)
+
+# Recalculate topological overlap if needed
+TOM = TOMsimilarityFromExpr(datExpr, power = 9);
+# Read in the annotation file
+annot = read.csv(file = "GeneAnnotation.csv");
+# Select modules
+# Select module probes
 modProbes = probes[inModule];
-#modGenes = annot$gene_symbol[match(modProbes, annot$substanceBXH)];
+modGenes = annot$gene_symbol[match(modProbes, annot$substanceBXH)];
 # Select the corresponding Topological Overlap
 modTOM = TOM[inModule, inModule];
 dimnames(modTOM) = list(modProbes, modProbes)
 # Export the network into edge and node list files Cytoscape can read
 cyt = exportNetworkToCytoscape(modTOM,
-                               edgeFile = paste("AS-green-FPKM-One-step-CytoscapeInput-edges-", paste(modules, collapse="-"), ".txt", sep=""),
-                               nodeFile = paste("AS-green-FPKM-One-step-CytoscapeInput-nodes-", paste(modules, collapse="-"), ".txt", sep=""),
-                               weighted = TRUE,
-                               threshold = 0.9,
-                               nodeNames = modProbes,
-                               #altNodeNames = modGenes,
-                               nodeAttr = moduleColors[inModule]);
+  edgeFile = paste("CytoscapeInput-edges-", paste(modules, collapse="-"), ".txt", sep=""),
+  nodeFile = paste("CytoscapeInput-nodes-", paste(modules, collapse="-"), ".txt", sep=""),
+  weighted = TRUE,
+  threshold = 0.02,
+  nodeNames = modProbes,
+  altNodeNames = modGenes,
+  nodeAttr = moduleColors[inModule]);
+```
+# 9. 如果 softThread 還是取6
+
+## Modules 分佈
+```r
+library(ggplot2)
+library(reshape2)
+library(patchwork)
+Color_TB = melt(table(labels2colors(net$colors)))
+Color_TB$Var1 = factor(Color_TB$Var1, levels = Color_TB$Var1[order(Color_TB$value,decreasing = T)])
+p<- ggplot(Color_TB) + geom_bar(aes(x=Var1,y=value), stat = 'identity',fill=Color_TB$Var1)+
+  theme_light() +theme(axis.text.x = element_text(angle = 90,hjust=1))
+
+SplitBar(p,8500,10000,27000,0,c(1,4))  
+```
+<span style="background:salmon">畫圖函點擊</span>[SplitBar](https://www.yuque.com/liuwenkan/blog/ggplot_splitbar)
+![123](https://i.loli.net/2020/06/11/pr5GuX3Z27dHkiz.png)
+
+![S6_modules_tree](https://i.loli.net/2020/06/11/eLtsGyoIViqhdJ7.png)
+
+# Optimal
+
+## A1. Reduce Input Transcripts
+
+這裏， 我們把閾值設定在 45(9*5)
+```r
+library(WGCNA)
+
+A <- read.csv("All_isoform.TPM.matrix.anno.xls",sep='\t')
+# rownames:sample; colnames: Transcripts
+row.names(A) = A[[2]]
+A = A[-(1:2)]
+
+Counts <- read.csv("/media/ken/Data/Yan/RNA-seq/report/4.exprs//All_isoform.COUNT.matrix.anno.xls",sep='\t')
+Counts$Sum = rowSums(Counts[-c(1:2)])
+Counts_sub = Counts[which(Counts$Sum>45),]
+paste(round((nrow(Counts_sub)/nrow(Counts))*100,2),"%",sep="")
+
+A_sub <- A[match(Counts_sub[[2]],rownames(A)),]
+
+datExpr0 = t(A_sub)
+
+# Data filter
+gsg = goodSamplesGenes(datExpr0, verbose = 3);
+gsg$allOK
+
+if (!gsg$allOK)
+{
+  # Optionally, print the gene and sample names that were removed:
+  if (sum(!gsg$goodGenes)>0)
+     printFlush(paste("Removing genes:", paste(names(datExpr0)[!gsg$goodGenes], collapse = ", ")));
+  if (sum(!gsg$goodSamples)>0)
+     printFlush(paste("Removing samples:", paste(rownames(datExpr0)[!gsg$goodSamples], collapse = ", ")));
+  # Remove the offending genes and samples from the data:
+  datExpr0 = datExpr0[gsg$goodSamples, gsg$goodGenes]
+}
+```
+剩下了`"32.96%"`的 Transcripts
+
+接下來退回到1.2
+
+![T45_Soft_th](https://i.loli.net/2020/06/11/vSlio9atZdUREDe.png)
+ummmm, 好像還沒之前的好看了- -，
+
+還是取9把，soft
+
+modules 29 個。
+traits聚類：
+
+|Cluster1|Cluster2|
+|:---:|:---:|
+|![T45_traits_heatmap](https://i.loli.net/2020/06/11/2zYmxMo7ARr3y9L.png)|[![tHgxTs.png](https://s1.ax1x.com/2020/06/11/tHgxTs.png)](https://imgchr.com/i/tHgxTs)|
 
 
+最亮的沒有上次那麼亮，= =相關係數有點低， 不高
 
-Connectivity=softConnectivity(datExpr,power=12)-1
-ConnectivityCut = 3600 # number of most connected genes that will be considered  # Incidentally, in the paper by Mischel et al (2005) we considered all 3600 #genes.  
-ConnectivityRank = rank(-Connectivity)   
-restConnectivity = ConnectivityRank <= ConnectivityCut  # thus our module detection uses the following number of genes
-sum(restConnectivity)
+modules 分佈情況:
 
-ADJ= adjacency(datExpr[,restConnectivity],power=12)
-dissTOM=TOMdist(ADJ)
-hierTOM = hclust(as.dist(dissTOM),method="average");
-par(mfrow=c(1,1))
-plot(hierTOM,labels=F)
-colorh1= cutreeStaticColor(hierTOM,cutHeight =0.94, minSize = 125)
-par(mfrow=c(2,1),mar=c(2,4,1,1))
-plot(hierTOM, main="Cluster Dendrogram", labels=F, xlab="", sub="");
-plotColorUnderTree(hierTOM,colors=data.frame(module=colorh1))
-title("Module (branch) color")
-TOMplot(dissTOM,hierTOM,colorh1)
+![tmp](https://i.loli.net/2020/06/11/F95UNu6cLeAD8Jb.png)
 
 
+# B. Remove low-hits & Non-DEGs
 
 
+```r
+library(WGCNA)
 
-###########################################
+A <- read.csv("All_isoform.TPM.matrix.anno.xls",sep='\t')
+# rownames:sample; colnames: Transcripts
+row.names(A) = A[[2]]
+A = A[-(1:2)]
 
+Counts <- read.csv("/media/ken/Data/Yan/RNA-seq/report/4.exprs//All_isoform.COUNT.matrix.anno.xls",sep='\t')
+Counts$Sum = rowSums(Counts[-c(1:2)])
+Counts_sub = Counts[which(Counts$Sum>9),]
+paste(round((nrow(Counts_sub)/nrow(Counts))*100,2),"%",sep="")
 
-module = 'blue'
-probes = colnames(datExpr) ## �������������probe���ǻ�����
-inModule = (moduleColors==module);
-modProbes = probes[inModule];
-modTOM = TOM[inModule, inModule];
-dimnames(modTOM) = list(modProbes, modProbes)
+A_sub <- A[match(Counts_sub[[2]],rownames(A)),]
 
+DEG1 <- read.table("../edgeR_Intest/diffExpr.P1e-3_C2.matrix",head=T)
+DEG2 <- read.table("../edgeR_Liver/diffExpr.P1e-3_C2.matrix",head=T)
+DEG3 <- read.table("../edgeR_Muscle/diffExpr.P1e-3_C2.matrix",head=T)
 
-cyt = exportNetworkToCytoscape(
+List = as.character(unique(DEG1[[1]], DEG2[[1]], DEG3[[1]]))
 
-      modTOM,
+A_DEG = na.omit(A_sub[match(row.names(A_sub), List),])
 
-     edgeFile = paste('CytoscapeInput-edges-', paste(module, collapse='-'), '.txt', sep=''),
+datExpr0 = t(A_DEG)
 
-     nodeFile = paste('CytoscapeInput-nodes-', paste(module, collapse='-'), '.txt', sep=''),
+# Data filter
+gsg = goodSamplesGenes(datExpr0, verbose = 3);
+gsg$allOK
 
-     weighted = TRUE,
-
-     threshold = 0.5,
-
-     nodeNames = modProbes,
-
-     nodeAttr = moduleColors[inModule])
-
-
-
-####################################################################
-show model tree
-
-Connectivity=softConnectivity(datExpr,power=6)-1
-ConnectivityCut = 3600 # number of most connected genes that will be considered
-# Incidentally, in the paper by Mischel et al (2005) we considered all 3600 #genes.
-ConnectivityRank = rank(-Connectivity)
-restConnectivity = ConnectivityRank <= ConnectivityCut
-
-sum(restConnectivity)
-# Now we define the adjacency matrix for the 3600 most connected genes
-ADJ= adjacency(datExpr[,restConnectivity],power=6)
-gc()
-# The following code computes the topological overlap matrix based on the
-# adjacency matrix.
-# TIME: This about a few minutes....
-dissTOM=TOMdist(ADJ)
-gc()
-
-hierTOM = hclust(as.dist(dissTOM),method="average");
-par(mfrow=c(1,1))
-plot(hierTOM,labels=F)
-colorh1= cutreeStaticColor(hierTOM,cutHeight = 0.94, minSize = 125)
-# The above should be identical to colorh1=datSummary$color1[restConnectivity]
-par(mfrow=c(2,1),mar=c(2,4,1,1))
-plot(hierTOM, main="Cluster Dendrogram", labels=F, xlab="", sub="");
-plotColorUnderTree(hierTOM,colors=data.frame(module=colorh1))
-title("Module (branch) color")
+if (!gsg$allOK)
+{
+  # Optionally, print the gene and sample names that were removed:
+  if (sum(!gsg$goodGenes)>0)
+     printFlush(paste("Removing genes:", paste(names(datExpr0)[!gsg$goodGenes], collapse = ", ")));
+  if (sum(!gsg$goodSamples)>0)
+     printFlush(paste("Removing samples:", paste(rownames(datExpr0)[!gsg$goodSamples], collapse = ", ")));
+  # Remove the offending genes and samples from the data:
+  datExpr0 = datExpr0[gsg$goodSamples, gsg$goodGenes]
+}
+```
+跳回 1.2
+ummmm, 這麼篩完以後， 剩下了`1105`個Transcripts 。。。
 
 
-par(mfrow=c(2,1),mar=c(2,4,1,1))
-plot(hierTOM, main="Cluster Dendrogram", labels=F, xlab="", sub="");
-plotColorUnderTree(hierTOM,colors=data.frame(module=colorh1))
-title("Module (branch) color")
-cmd1=cmdscale(as.dist(dissTOM),2)
-par(mfrow=c(1,1))
-plot(cmd1, col=as.character(colorh1), main="MDS plot",xlab="Scaling Dimension
-1",ylab="Scaling Dimension 2")
+|聚類|Soft圖|
+|:---:|:---:|
+|這次聚類結果，就很不一樣了|不過sortpower這個圖，基本還是和前文一樣沒怎麼變。取0.9以上的話， 又得取10了|
+|[![tbo3UU.png](https://s1.ax1x.com/2020/06/11/tbo3UU.png)](https://imgchr.com/i/tbo3UU)|[![tbo1ET.png](https://s1.ax1x.com/2020/06/11/tbo1ET.png)](https://imgchr.com/i/tbo1ET)|
 
-############
-############
-############
+還是去9吧。 1000個，秒算完。
+先看看分組頻率 和樹圖
+這個圖，我就覺得，看着舒服多了- -唉
+|聚類|Soft圖|
+|:---:|:---:|
+|![DEG_bar](https://i.loli.net/2020/06/11/hUMPXSTErxqBI9n.png)|![DEG_tree](https://i.loli.net/2020/06/11/hWnYQKlG1HpdqPU.png)|
+|第一次畫出Tomplot，激動|這個聚類，相關性都不太高呀|
+|![DEG_tomplot](https://i.loli.net/2020/06/11/PGng6FisKjfvJ48.png)|![DEG_Tree_weight_module](https://i.loli.net/2020/06/11/IZJjsXWo2AmlHxU.png)|
+![DEG_traits_heatmap](https://i.loli.net/2020/06/11/E3GxfJa8T2VNRlk.png)
 
- for (i in list[[1]]){
- T=datExpr[,which(dynamicColors == i)]
- write.table(T,file=paste(i,".modle",sep=''),quote=F,sep='\t')
- P= melt(T)
- p <- ggplot(P,aes(x=Var1,y=value,group=Var2))+geom_line()
- ggsave(p,file=paste(i,".png"))}
+相關性確實是太低了。 我們看一下這1000基因的表達趨勢把。
 
+```r
+library(ggplotify)
+
+A_DEG$Module = labels2colors(net$colors)
+A_DEG$ID = row.names(A_DEG)
+
+TB = melt(A_DEG,id.vars = c("ID","Module"))
+TB$variable = factor(TB$variable,levels=sort(as.character(unique((TB$variable)))))
+
+TB$ID = factor(TB$ID, levels = row.names(A_DEG)[order(A_DEG$Module)])
+
+p2 <- ggplot( TB, aes( variable, ID)) + theme(panel.grid.major = element_blank())+
+    theme(legend.key=element_blank(), axis.text.y = element_blank(),
+          axis.title=element_blank(),axis.ticks.y=element_blank(),
+          axis.text.x=element_text(angle=90,hjust=1))+
+    geom_tile(aes(fill=log(1+value)))+
+    scale_fill_gradient2(low="steelblue",mid="white",high="red",midpoint =1)
+
+A_DEG$ID = factor(A_DEG$ID, levels = row.names(A_DEG)[order(A_DEG$Module)])
+p1 <-ggplot(A_DEG[10:11], aes( x="Module", y=ID)) + theme(panel.grid.major = element_blank())+
+    theme(axis.text.y = element_blank(), legend.position =  'left',
+        axis.title=element_blank(),axis.ticks.y=element_blank(),
+        axis.text.x=element_text(angle=90,hjust=1))+
+    geom_tile(fill=A_DEG$Module)
+
+p1+p2 +  plot_layout(design = 'ABBBBBBBBBB')
+```
+熱圖還是，可以的，就是配色有點麻煩- -
+![co_heatmap](https://i.loli.net/2020/06/11/awg2zCr6LpblocB.png)
+只管來看， 聚類效果還是OK的把。不過correlation值太低了 = = 有什麼之後再去深究把。
+
+添加樹
+打包兩個函數
+```r
+PLOT2 <- function(dendr){
+  ggplot() +
+  geom_segment(data=segment(dendr), aes(x=x, y=y, xend=xend, yend=yend)) +
+  geom_text(data=label(dendr), aes(x, y, label=label, hjust=0),
+           size=3) +
+  coord_flip() + scale_y_reverse(expand=c(0.2, 0)) +
+  theme(axis.line.y=element_blank(),
+        axis.ticks.y=element_blank(),
+        axis.text.y=element_blank(),
+        axis.title.y=element_blank(),
+        panel.background=element_rect(fill="white"),
+        panel.grid=element_blank())
+}
+
+LS_judg<- function(TB){
+  if (TB['x'] == TB['xend']){
+    R = 'v'
+  }else{
+    R = 'h'
+  }
+  return(R)
+}
+
+TreePlot <- function(dendr, Width_tree){
+  dendr$labels$x = Width_tree[dendr$labels$x]
+  dendr$segments = dendr$segments[order(dendr$segments$x),]
+  # 做個list
+  List = c()
+  for(i in c(1:length(Width_tree))){
+    List = c(List, which(dendr$segments$x==i))
+  }
+  # 調整豎線
+  for( i in c(1:length(dendr$labels$label))){
+  Dif_tmp = Width_tree[i]- dendr$segments$x[List[i]]
+  dendr$segments$x[List[i]:nrow(dendr$segments)] = dendr$segments$x[List[i]:nrow(dendr$segments)]+Dif_tmp
+  dendr$segments$xend[List[i]:nrow(dendr$segments)] = dendr$segments$xend[List[i]:nrow(dendr$segments)]+Dif_tmp
+  }
+  # 刪除添加新的橫線
+  dendr$segments = dendr$segments[dendr$segments$x == dendr$segments$xend,]
+  Y_list = dendr$segments$y[duplicated(dendr$segments$y)]
+  for(i in Y_list){  
+  tmp = (dendr$segments$x[dendr$segments$y  == i])
+  dendr$segments = rbind(dendr$segments, data.frame(x=tmp[1],y=i,xend=tmp[2],yend=i))
+  }
+  Seg = dendr$segments
+  for( i in c(nrow(dendr$segments):1)){
+    if(LS_judg(dendr$segments[i,]) == 'h'){
+      tmpy = dendr$segments[i,]$y
+      tmpTB = Seg[Seg$yend== tmpy,]
+        for( ii in c(1:nrow(tmpTB))){
+        if(LS_judg(tmpTB[ii,]) == 'v'){
+          Num = rownames(tmpTB[1,])
+          dendr$segments[match(Num, row.names(dendr$segments)),][c(1,3)] = sum(Seg[i,c('x','xend')])/2
+        }
+      }
+    }
+  }
+  # 重画横线：
+  dendr$segments = dendr$segments[dendr$segments$x == dendr$segments$xend,]
+  Y_list = dendr$segments$y[duplicated(dendr$segments$y)]
+  for(i in Y_list){  
+  tmp = (dendr$segments$x[dendr$segments$y  == i])
+  dendr$segments = rbind(dendr$segments, data.frame(x=tmp[1],y=i,xend=tmp[2],yend=i))
+  }
+ return(dendr)
+}
 ```
 
+```r
+library(ggplot2)
+library(ggdendro)
+
+hc <- hclust(dist(t(MEs)))
+clust    <- cutree(hc,k=5)                    # find 2 clusters
+clust.df <- data.frame(label=names(clust), cluster=factor(clust))
+# dendr[["labels"]] has the labels, merge with clust.df based on label column
+dendr[["labels"]] <- merge(dendr[["labels"]],clust.df, by="label")
+dendr <- dendro_data(hc, type="rectangle") # convert for ggplot
+AA <- TreePlot(dendr, Width_tree)
+
+# Head
+
+hc <- hclust(dist(t(A_DEG[1:9])))
+clust    <- cutree(hc,k=5)                    # find 2 clusters
+clust.df <- data.frame(label=names(clust), cluster=factor(clust))
+# dendr[["labels"]] has the labels, merge with clust.df based on label column
+dendr[["labels"]] <- merge(dendr[["labels"]],clust.df, by="label")
+dendr <- dendro_data(hc, type="rectangle") # convert for ggplot
 
 
+# acquiring module list
+Module_list = as.character(dendr$labels$label[order(dendr$labels$x)])
+
+Module_or = c()
+for( i in strsplit(Module_list,'ME')){
+  Module_or = c(Module_or, i[2])
+}
+
+
+A_DEG$Module = factor(A_DEG$Module, levels = Module_or)
+A_DEG = A_DEG[order(A_DEG$Module),]
+A_DEG$ID = factor(A_DEG$ID, levels = (A_DEG$ID))
+
+TB$variable = factor(TB$variable, levels = dendr$labels$label)
+
+
+List = c(0)
+for( i in table(A_DEG$Module)){
+  i = i[1]
+  List = c(List,List[length(List)]+i)
+}
+Width_tree = List[-1]
+
+Num = 0
+for( i in table(A_DEG$Module)){
+  Num = Num +1
+  i = i[1]
+  Width_tree[Num] = Width_tree[Num] - (i/2)
+}
+
+p0 <- ggplot() +
+      geom_segment(data=segment(AA), aes(x=x, y=y, xend=xend, yend=yend)) +
+      geom_text(data=label(AA), aes(x, y, label=label, hjust=0),
+               size=3) +
+      coord_flip() + scale_y_reverse(expand=c(0.5, 0)) +
+      theme(axis.line.y=element_blank(),
+            axis.ticks.y=element_blank(),
+            axis.text.y=element_blank(),
+            axis.title.y=element_blank(),
+            panel.background=element_rect(fill="white"),
+            panel.grid=element_blank())
+
+p1 <-ggplot(A_DEG[10:11], aes( x="Module", y=ID)) + theme(panel.grid.major = element_blank())+
+    theme(axis.text.y = element_blank(), legend.position =  'left',
+        axis.title=element_blank(),axis.ticks.y=element_blank(),
+        axis.text.x=element_text(angle=90,hjust=1))+
+    geom_tile(fill=A_DEG$Module)
+
+p2 <- ggplot( TB, aes( variable, ID)) + theme(panel.grid.major = element_blank())+
+    theme(legend.key=element_blank(), axis.text.y = element_blank(),
+    axis.title=element_blank(),axis.ticks.y=element_blank(),
+    axis.text.x=element_text(angle=90,hjust=1))+
+    geom_tile(aes(fill=log(1+value)))+
+    scale_fill_gradient2(low="steelblue",mid="white",high="red",midpoint =1)
+
+p4 <- ggplot() +
+          geom_segment(data=segment(dendr), aes(x=x, y=y, xend=xend, yend=yend)) +
+          scale_y_reverse(expand=c(0, 0)) +
+          theme(axis.line.y=element_blank(),
+                axis.ticks.x=element_blank(),
+                axis.text.x=element_blank(),
+                axis.title.y=element_blank(),
+                panel.background=element_rect(fill="white"),
+                panel.grid=element_blank())
+
+
+layout_P <- "
+    AAAABCCCCCC
+    AAAABCCCCCC
+    AAAABCCCCCC
+    AAAABCCCCCC
+    AAAABCCCCCC
+    AAAABCCCCCC
+    #####DDDDDD
+    "
+p0 + p1 + p2 + p4 +  plot_layout(design = layout_P)
+```
+![combind](https://i.loli.net/2020/06/12/CqKouEYL3grnGzI.png)
 ---
 github: [https://github.com/Karobben](https://github.com/Karobben)
 blog: [Karobben.github.io](http://Karobben.github.io)
