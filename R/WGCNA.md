@@ -605,93 +605,111 @@ TreePlot <- function(dendr, Width_tree){
 }
 ```
 
+### 画图
 ```r
 library(ggplot2)
 library(ggdendro)
+library(reshape2)
+library(patchwork)
+library(RColorBrewer)
 
-hc <- hclust(dist(t(MEs)))
-clust    <- cutree(hc,k=5)                    # find 2 clusters
-clust.df <- data.frame(label=names(clust), cluster=factor(clust))
-# dendr[["labels"]] has the labels, merge with clust.df based on label column
-dendr[["labels"]] <- merge(dendr[["labels"]],clust.df, by="label")
-dendr <- dendro_data(hc, type="rectangle") # convert for ggplot
-AA <- TreePlot(dendr, Width_tree)
+colorRampPalette(rev(brewer.pal(n = 7,name = "RdYlBu"))) -> cc
 
-# Head
+TB_color = (data.frame(net$colors,color=labels2colors(net$colors)))
+A_DEG$ID = row.names(A_DEG)
+A_DEG$Module = TB_color$color[match(row.names(A_DEG), row.names(TB_color))]
 
+# Samples dendrogram
 hc <- hclust(dist(t(A_DEG[1:9])))
-clust    <- cutree(hc,k=5)                    # find 2 clusters
-clust.df <- data.frame(label=names(clust), cluster=factor(clust))
-# dendr[["labels"]] has the labels, merge with clust.df based on label column
-dendr[["labels"]] <- merge(dendr[["labels"]],clust.df, by="label")
+dendr_head <- dendro_data(hc, type="rectangle") # convert for ggplot
+
+
+# Module dendrogram
+hc <- hclust(dist(t(MEs)))
 dendr <- dendro_data(hc, type="rectangle") # convert for ggplot
 
-
-# acquiring module list
+## 1. order and list
 Module_list = as.character(dendr$labels$label[order(dendr$labels$x)])
-
 Module_or = c()
 for( i in strsplit(Module_list,'ME')){
   Module_or = c(Module_or, i[2])
 }
 
+## 2. Axis location
+TB_mbar = data.frame(table(A_DEG$Module))
+TB_mbar = TB_mbar = data.frame(table(A_DEG$Module))
+TB_mbar$hei = TB_mbar$Freq[1]/2
 
+for(i in c(2:nrow(TB_mbar))){
+  TB_mbar$hei[i] =sum(TB_mbar$Freq[1:i-1])+ (TB_mbar$Freq[i]/2)
+}
+
+Width_tree = TB_mbar$hei
+
+AA <- TreePlot(dendr, Width_tree)
+
+
+# Module Bar
+
+## acquiring module list
+
+# order module
 A_DEG$Module = factor(A_DEG$Module, levels = Module_or)
-A_DEG = A_DEG[order(A_DEG$Module),]
-A_DEG$ID = factor(A_DEG$ID, levels = (A_DEG$ID))
+# order ID
+A_DEG$ID = factor(A_DEG$ID, levels = row.names(A_DEG)[order(A_DEG$Module)])
 
-TB$variable = factor(TB$variable, levels = dendr$labels$label)
+# Transcripts Heatmap
 
+primary_data = as.matrix(A_DEG[1:9])
+#transformations
+data = log2(primary_data+1)
+data = as.matrix(data) # convert to matrix
+# Centering rows
+data = data.frame(t(scale(t(data), scale=F)))
 
-List = c(0)
-for( i in table(A_DEG$Module)){
-  i = i[1]
-  List = c(List,List[length(List)]+i)
-}
-Width_tree = List[-1]
+TB = melt(cbind(data,A_DEG[c("ID","Module")]),id.vars = c("ID","Module"))
+TB$ID = factor(TB$ID, levels = row.names(A_DEG)[order(A_DEG$Module)])
+TB$variable = factor(TB$variable, levels =levels(dendr_head$labels$label))
 
-Num = 0
-for( i in table(A_DEG$Module)){
-  Num = Num +1
-  i = i[1]
-  Width_tree[Num] = Width_tree[Num] - (i/2)
-}
 
 p0 <- ggplot() +
       geom_segment(data=segment(AA), aes(x=x, y=y, xend=xend, yend=yend)) +
       geom_text(data=label(AA), aes(x, y, label=label, hjust=0),
                size=3) +
-      coord_flip() + scale_y_reverse(expand=c(0.5, 0)) +
+      coord_flip() + scale_y_reverse(expand=c(0.7, 0)) +
       theme(axis.line.y=element_blank(),
             axis.ticks.y=element_blank(),
             axis.text.y=element_blank(),
-            axis.title.y=element_blank(),
+            axis.title =element_blank(),
             panel.background=element_rect(fill="white"),
             panel.grid=element_blank())
 
-p1 <-ggplot(A_DEG[10:11], aes( x="Module", y=ID)) + theme(panel.grid.major = element_blank())+
+p1 <-ggplot(A_DEG[10:11], aes( x="Module", y=ID)) +
+    theme(panel.grid.major = element_blank())+
     theme(axis.text.y = element_blank(), legend.position =  'left',
-        axis.title=element_blank(),axis.ticks.y=element_blank(),
+        axis.title=element_blank(),
+        axis.ticks=element_blank(),
+        panel.background=element_rect(fill="white"),
         axis.text.x=element_text(angle=90,hjust=1))+
     geom_tile(fill=A_DEG$Module)
 
-p2 <- ggplot( TB, aes( variable, ID)) + theme(panel.grid.major = element_blank())+
+p2 <- ggplot( TB, aes( variable, ID)) +
+    theme(panel.grid.major = element_blank())+
     theme(legend.key=element_blank(), axis.text.y = element_blank(),
     axis.title=element_blank(),axis.ticks.y=element_blank(),
     axis.text.x=element_text(angle=90,hjust=1))+
-    geom_tile(aes(fill=log(1+value)))+
-    scale_fill_gradient2(low="steelblue",mid="white",high="red",midpoint =1)
+    geom_tile(aes(fill=value))+
+    scale_fill_gradientn(colors=cc(100))
 
 p4 <- ggplot() +
-          geom_segment(data=segment(dendr), aes(x=x, y=y, xend=xend, yend=yend)) +
+          geom_segment(data=segment(dendr_head), aes(x=x, y=y, xend=xend, yend=yend)) +
           scale_y_reverse(expand=c(0, 0)) +
           theme(axis.line.y=element_blank(),
                 axis.ticks.x=element_blank(),
                 axis.text.x=element_blank(),
-                axis.title.y=element_blank(),
+                axis.title=element_blank(),
                 panel.background=element_rect(fill="white"),
                 panel.grid=element_blank())
-
 
 layout_P <- "
     AAAABCCCCCC
@@ -702,9 +720,11 @@ layout_P <- "
     AAAABCCCCCC
     #####DDDDDD
     "
+
 p0 + p1 + p2 + p4 +  plot_layout(design = layout_P)
 ```
-![combind](https://i.loli.net/2020/06/12/CqKouEYL3grnGzI.png)
+![DEG_heatmap](https://i.loli.net/2020/06/13/1COSfoY6KJGTFil.png)
+
 ---
 github: [https://github.com/Karobben](https://github.com/Karobben)
 blog: [Karobben.github.io](http://Karobben.github.io)

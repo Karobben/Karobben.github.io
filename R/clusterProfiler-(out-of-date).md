@@ -4,10 +4,134 @@ url: clusterprofiler2
 
 # clusterProfiler (out of date)
 
+Tutorial: [yulab](https://yulab-smu.github.io/clusterProfiler-book/)
+
+# Install
 
 ```r
+BiocManager::install("clusterProfiler")
+```
 
 
+# Go ontology
+
+## GO_1. Supported Organism
+
+For module species which added in `OrgDb`, we can turn the ID to GO_id;
+
+For other species, you can build your own `OrgDb` database by following [GOSemSim](https://bioconductor.org/packages/devel/bioc/vignettes/GOSemSim/inst/doc/GOSemSim.html#supported-organisms).
+
+If genes are already annotated (in `data.frame` witch gene ID column followed by GO ID), we can use `enricher()` and `geosGO()` function to perform over-representation test.  
+
+## GO_2. Example for `OrgDb` species
+
+```r
+library(clusterProfiler)
+library(org.Hs.eg.db)
+
+data(geneList, package="DOSE")
+gene <- names(geneList)[abs(geneList) > 2]
+gene.df <- bitr(gene, fromType = "ENTREZID",
+        toType = c("ENSEMBL", "SYMBOL"),
+        OrgDb = org.Hs.eg.db)
+head(gene.df)
+```
+```
+ENTREZID         ENSEMBL SYMBOL
+1     4312 ENSG00000196611   MMP1
+2     8318 ENSG00000093009  CDC45
+3    10874 ENSG00000109255    NMU
+4    55143 ENSG00000134690  CDCA8
+5    55388 ENSG00000065328  MCM10
+6      991 ENSG00000117399  CDC20
+```
+```r
+ggo <- groupGO(gene     = gene,
+               OrgDb    = org.Hs.eg.db,
+               ont      = "CC",
+               level    = 3,
+               readable = TRUE)
+
+head(ggo)
+barplot(ggo, showCategory = 20)
+```
+```
+ID                    Description Count GeneRatio
+GO:0005886 GO:0005886                plasma membrane    55    55/207
+GO:0005628 GO:0005628              prospore membrane     0     0/207
+GO:0005789 GO:0005789 endoplasmic reticulum membrane     8     8/207
+...
+```
+![132](https://i.loli.net/2020/06/14/kLpExyf9lHI4FJc.png)
+
+
+
+## GO_3. Over-Representation Test
+
+```r
+ego <- enrichGO(gene          = gene,
+                universe      = names(geneList),
+                OrgDb         = org.Hs.eg.db,
+                ont           = "CC",
+                pAdjustMethod = "BH",
+                pvalueCutoff  = 0.01,
+                qvalueCutoff  = 0.05,
+        readable      = TRUE)
+head(ego)
+```
+```r
+ego2 <- enrichGO(gene         = gene.df$ENSEMBL,
+                OrgDb         = org.Hs.eg.db,
+                keyType       = 'ENSEMBL',
+                ont           = "CC",
+                pAdjustMethod = "BH",
+                pvalueCutoff  = 0.01,
+                qvalueCutoff  = 0.05)
+
+# turn ENSEMBL ID to Samble
+ego2_r <- setReadable(ego2, OrgDb = org.Hs.eg.db)
+```
+|ego|ego2|
+|---|---|
+|[![tzt3RK.md.png](https://s1.ax1x.com/2020/06/14/tzt3RK.md.png)](https://imgchr.com/i/tzt3RK)|[![tztDRf.png](https://s1.ax1x.com/2020/06/14/tztDRf.png)](https://imgchr.com/i/tztDRf)|
+
+
+## GO_4 GO Gene Set Enrichment Analysis
+```r
+ego3 <- gseGO(geneList     = geneList,
+              OrgDb        = org.Hs.eg.db,
+              ont          = "CC",
+              nPerm        = 1000,
+              minGSSize    = 100,
+              maxGSSize    = 500,
+              pvalueCutoff = 0.05,
+              verbose      = FALSE)
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+```r
 #############
 ###eg
 ############

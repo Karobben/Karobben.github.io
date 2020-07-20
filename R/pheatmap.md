@@ -1,6 +1,8 @@
 ---
 url: pheatmap2
 ---
+# Heatmap
+
 # pheatmap
 
 ![image.png](https://cdn.nlark.com/yuque/0/2020/png/691897/1579753913996-d4eb64fe-3bcd-464f-abb5-4cbd0cc72c99.png#align=left&display=inline&height=293&name=image.png&originHeight=293&originWidth=669&size=24519&status=done&style=none&width=669)
@@ -49,6 +51,30 @@ g = as.ggplot(p)
 ```
 
 <a name="FG8Ad"></a>
+
+
+# Heatmap for DEGs matrix
+
+reference: Trinity
+```r
+primary_data = read.table("diffExpr.P1e-5_C2.matrix", header=T, com='', row.names=1, check.names=F, sep='\t')
+
+primary_data = as.matrix(primary_data)
+
+#transformations
+data = log2(primary_data+1)
+data = as.matrix(data) # convert to matrix
+# Centering rows
+data = data.frame(t(scale(t(data), scale=F)))
+```
+
+
+
+
+
+
+
+
 # More
 图片索引:[https://karobben.github.io/R/R-index.html](https://karobben.github.io/R/R-index.html)
 
