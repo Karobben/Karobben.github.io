@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>Bioinfr: mtGenome | Karobben</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Bioinformatics: mtGenome">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Bioinfr: mtGenome">
+<meta property="og:url" content="https://karobben.github.io/LearnNotes/mtGenome.html">
+<meta property="og:site_name" content="Karobben">
+<meta property="og:description" content="Bioinformatics: mtGenome">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://media.springernature.com/full/springer-static/image/art%3A10.1186%2Fs12862-020-1582-1/MediaObjects/12862_2020_1582_Fig1_HTML.png?as=webp">
+<meta property="og:image" content="https://tse4-mm.cn.bing.net/th/id/OIP.xVEhIghrO01k7JKzwJFUhQAAAA?pid=Api&rs=1">
+<meta property="og:image" content="https://media.springernature.com/lw685/springer-static/image/art%3A10.1186%2Fs12862-020-1582-1/MediaObjects/12862_2020_1582_Fig2_HTML.png?as=webp">
+<meta property="og:image" content="https://media.springernature.com/lw685/springer-static/image/art%3A10.1186%2Fs12862-020-1582-1/MediaObjects/12862_2020_1582_Fig3_HTML.png?as=webp">
+<meta property="og:image" content="https://media.springernature.com/full/springer-static/image/art%3A10.1186%2Fs12862-020-1582-1/MediaObjects/12862_2020_1582_Fig4_HTML.png?as=webp">
+<meta property="article:published_time" content="2020-06-23T00:00:00.000Z">
+<meta property="article:modified_time" content="2020-07-16T07:13:33.384Z">
+<meta property="article:author" content="Karobben">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://media.springernature.com/full/springer-static/image/art%3A10.1186%2Fs12862-020-1582-1/MediaObjects/12862_2020_1582_Fig1_HTML.png?as=webp">
+  
+    <link rel="alternate" href="/atom.xml" title="Karobben" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="img/tag.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+<link rel="stylesheet" href="/css/search.css">
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<script>
+  var _hmt = _hmt || [];
+  (function() {
+    var hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?8442e6ecc87d878298ba7d3bd0a5484c";
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(hm, s);
+  })();
+</script>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header"; style="background:#1B414B;height:150px">
+  <!--div id="banner"></div>-->
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Karobben</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">Karobben Blog</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+          <a id="main-nav-toggle" class="nav-icon"></a>
+          <!-- Header Section Start -->
+  <header id="slider-area">
+    <nav class="navbar navbar-expand-md fixed-top scrolling-navbar bg-white">
+      <div class="container">
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav mr-auto w-100 justify-content-end">
+              <a class="main-nav-link" href="../index.html">Home</a>
+              <a class="main-nav-link" href="../R/R-index.html">R</a>
+              <a class="main-nav-link" href="../Python/index.html">Python</a>
+              <a class="main-nav-link" href="../Linux/index.html">Linux</a>
+              <a class="main-nav-link" href="../Bioinfor/index.html">Bio-Protocal</a>
+              <a class="main-nav-link" href="../LearnNotes/index.html">Notes</a>
+              <a class="main-nav-link" href="../Blog/index.html">Others</a>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!-- Header Section End -->
+
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Looking for Something?"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://karobben.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><div align='right', style='padding-right:160px;padding-top:1px'>
+  
+  <span class="local-search local-search-google local-search-plugin" style=";position:absolute;z-index:2;">
+      <input type="search" placeholder="Looking for Something?" id="local-search-input" class="local-search-input-cls" style="">
+      <div id="local-search-result" class="local-search-result-cls"></div>
+  </span>
+
+
+</div>
+
+<article  id="page-" class="article article-type-page" itemscope itemprop="blogPost">
+<div id="tipue_search_content" style="display: none"></div>
+  <div class="article-meta">
+    <a href="/LearnNotes/mtGenome.html" class="article-date">
+  <time datetime="2020-06-23T00:00:00.000Z" itemprop="datePublished">2020-06-23</time>
+</a>
+    
+  </div>
+  <div  class="article-inner">
+    
+    
+      <header class="article-header">
+        <!--
+  
+    <h1 class="article-title" itemprop="name">
+      Bioinfr: mtGenome
+    </h1>
+  
+ -->
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <!-- Go To Top Link -->
+        <div title="Back to Top" class="back-to-top" style="background:salmon">
+  <a href="#"  >
+    <i >Top</i>
+  </a>
+</div>
+<div class="title_index">
+  <ul id="nav">
+   <li>
+     Titles
+     <ul>
+       <!-- Table of Contents -->
+
+  <div id="toc" class="toc-article">
+    <strong class="toc-title">Titles</strong>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#The-complete-mitochondrial-genome-of-Taxus-cuspidata-Taxaceae-eight-proteincoding-genes-have-transferred-to-the-nuclear-genome"><span class="toc-number">1.</span> <span class="toc-text">The complete mitochondrial genome of Taxus cuspidata (Taxaceae): eight proteincoding genes have transferred to the nuclear genome</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Abstract"><span class="toc-number">2.</span> <span class="toc-text">Abstract</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Background"><span class="toc-number">3.</span> <span class="toc-text">Background</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Methods"><span class="toc-number">4.</span> <span class="toc-text">Methods</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Mitochodiral-DNA-isolation-total-RNA-extraction-sequencing-and-mitogenome-assembly-of-Taxus-cuspidata"><span class="toc-number">4.1.</span> <span class="toc-text">Mitochodiral DNA isolation, total RNA extraction, sequencing and mitogenome assembly of Taxus cuspidata</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Oxford-Nanopore"><span class="toc-number">4.2.</span> <span class="toc-text">Oxford Nanopore</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Illimina"><span class="toc-number">4.3.</span> <span class="toc-text">Illimina</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#mitogenome-Annotation"><span class="toc-number">4.4.</span> <span class="toc-text">mitogenome Annotation</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#RNA-editing-site-identification"><span class="toc-number">4.5.</span> <span class="toc-text">RNA editing site identification</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#mt-genes-to-nuclear-genome"><span class="toc-number">4.6.</span> <span class="toc-text">mt-genes to nuclear genome</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Identification-of-repeats-tandem-repeats-Bpu-elements-and-foreign-sequences"><span class="toc-number">4.7.</span> <span class="toc-text">Identification of repeats, tandem repeats, Bpu elements and foreign sequences</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Shared-DNAs-and-gene-cluster-analyses"><span class="toc-number">4.8.</span> <span class="toc-text">Shared DNAs and gene cluster analyses</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Evolutionary-rate-heterogeneity-test"><span class="toc-number">4.9.</span> <span class="toc-text">Evolutionary rate heterogeneity test</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Result"><span class="toc-number">5.</span> <span class="toc-text">Result</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Mitogenome-size-and-gene-and-intron-contents-of-Taxus-cuspidata"><span class="toc-number">5.1.</span> <span class="toc-text">Mitogenome size and gene and intron contents of Taxus cuspidata</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Variation-in-gene-and-intron"><span class="toc-number">5.2.</span> <span class="toc-text">Variation in gene and intron</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#RNA-editing-site-abundance-and-efficiency"><span class="toc-number">5.3.</span> <span class="toc-text">RNA editing site abundance and efficiency</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Structural-and-gene-cluster-dynamics"><span class="toc-number">5.4.</span> <span class="toc-text">Structural and gene cluster dynamics</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Repeats-tandem-repeats-and-foreign-DNA-sequences"><span class="toc-number">5.5.</span> <span class="toc-text">Repeats, tandem repeats, and foreign DNA sequences</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Variation-in-nucleotide-substitution-rates"><span class="toc-number">5.6.</span> <span class="toc-text">Variation in nucleotide substitution rates</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Discussion"><span class="toc-number">6.</span> <span class="toc-text">Discussion</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Separate-losses-of-multiple-mitochondrial-protein-coding-genes-in-Taxus-and-Welwitschia"><span class="toc-number">6.1.</span> <span class="toc-text">Separate losses of multiple mitochondrial protein-coding genes in Taxus and Welwitschia</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Separate-losses-of-multiple-mitochondrial-tRNA-genes-in-Pinaceae-Taxus-and-Welwitschia"><span class="toc-number">6.2.</span> <span class="toc-text">Separate losses of multiple mitochondrial tRNA genes in Pinaceae, Taxus and Welwitschia</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Frequent-losses-and-cis-to-trans-splicing-of-introns-in-the-mitogenomes-of-gymnosperms"><span class="toc-number">6.3.</span> <span class="toc-text">Frequent losses and cis- to trans-splicing of introns in the mitogenomes of gymnosperms</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Gene-clusters-could-be-less-conserved-in-gymnosperms-and-transposable-elements-and-specific-repeats-are-rare-in-the-Taxus-and-Welwitschia-mitogenomes"><span class="toc-number">6.4.</span> <span class="toc-text">Gene clusters could be less conserved in gymnosperms, and transposable elements and specific repeats are rare in the Taxus and Welwitschia mitogenomes</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#The-number-of-RNA-editing-sites-is-not-correlated-with-the-GC-content-of-mitochondrial-genes"><span class="toc-number">6.5.</span> <span class="toc-text">The number of RNA editing sites is not correlated with the GC content of mitochondrial genes</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Size-variation-in-gymnosperm-mitogenomes-is-still-a-mystery"><span class="toc-number">6.6.</span> <span class="toc-text">Size variation in gymnosperm mitogenomes is still a mystery</span></a></li></ol></li></ol>
+  </div>
+
+<!-- Table of Contents Down-->
+
+     </ul>
+    </li>
+   </ul>
+</div>
+
+
+        <h1 id="The-complete-mitochondrial-genome-of-Taxus-cuspidata-Taxaceae-eight-proteincoding-genes-have-transferred-to-the-nuclear-genome"><a href="#The-complete-mitochondrial-genome-of-Taxus-cuspidata-Taxaceae-eight-proteincoding-genes-have-transferred-to-the-nuclear-genome" class="headerlink" title="The complete mitochondrial genome of Taxus cuspidata (Taxaceae): eight proteincoding genes have transferred to the nuclear genome"></a>The complete mitochondrial genome of Taxus cuspidata (Taxaceae): eight proteincoding genes have transferred to the nuclear genome</h1><p align="center">
+<img src="https://media.springernature.com/full/springer-static/image/art%3A10.1186%2Fs12862-020-1582-1/MediaObjects/12862_2020_1582_Fig1_HTML.png?as=webp" style='height:450px'>
+
+<p><a href="https://bmcevolbiol.biomedcentral.com/articles/10.1186/s12862-020-1582-1/figures/1" target="_blank" rel="noopener"><p align='center'><strong>© Kan et al. 2020</strong></p></a></p>
+</p>
+
+<p>cite: Kan, Sheng Long , et al. “The complete mitochondrial genome of Taxus cuspidata (Taxaceae): eight protein-coding genes have transferred to the nuclear genome.” Bmc Evolutionary Biology 20.1(2020).<br>Paper: <a href="https://bmcevolbiol.biomedcentral.com/articles/10.1186/s12862-020-1582-1#Fig1" target="_blank" rel="noopener">click here</a></p>
+<span align='center'>  
+
+<p><img src="https://tse4-mm.cn.bing.net/th/id/OIP.xVEhIghrO01k7JKzwJFUhQAAAA?pid=Api&rs=1" alt="img"></p>
+<p align='center'>© wikipedia</p>
+</span>
+
+<h1 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h1><p><strong>BG</strong>: there have lots of Gymnosperms species but only a few of species have sequenced mitochondrial genome.<br><strong>Result</strong>:</p>
+<ol>
+<li>Complete mitogenome of <em>Taxus cuspidate</em>;</li>
+<li>It lost many genes  </li>
+<li>Multiple tRNA and introns also have been lost  </li>
+<li>gene cluster could be less conserved</li>
+<li>Few RNA sites were identified and may responsible for fewer introns and frequent gene losses</li>
+</ol>
+<h1 id="Background"><a href="#Background" class="headerlink" title="Background"></a>Background</h1><ol>
+<li>Compared to chloroplast, only few of mitochondria genomes are available.</li>
+<li>Previous study on mitogenome revealed that <em>Cycans</em> and <em>Ginko</em> are represent the ancestral type of seed plants.</li>
+<li>Size; substitution; numerous of genes; introns and RNA editing sites; genome structure; repeats; turnover rates, and foreign sequence ratios are the arguments for mtGenome Comparing.  </li>
+<li>All other gymnosperms except Conifer II have mtGenome of  represented species.</li>
+<li>There are some ambiguity in relationship between Conifer, Pianceae, and Gnetales.</li>
+<li>Our experiment and data are every valuable for the world.</li>
+</ol>
+<h1 id="Methods"><a href="#Methods" class="headerlink" title="Methods"></a>Methods</h1><h2 id="Mitochodiral-DNA-isolation-total-RNA-extraction-sequencing-and-mitogenome-assembly-of-Taxus-cuspidata"><a href="#Mitochodiral-DNA-isolation-total-RNA-extraction-sequencing-and-mitogenome-assembly-of-Taxus-cuspidata" class="headerlink" title="Mitochodiral DNA isolation, total RNA extraction, sequencing and mitogenome assembly of Taxus cuspidata"></a>Mitochodiral DNA isolation, total RNA extraction, sequencing and mitogenome assembly of Taxus cuspidata</h2><pre class="mermaid">graph TD;
+
+st1(Yong leaves)
+Ch1[DNase I]
+op1(Density Gradient Centrifugation)
+
+Ch2(RNAplant Plus Reagent)
+st2(Yong seeds)
+et(RNA)
+lii(Illumina)
+Oxf(Oxford Nanopore)
+
+    st1-->op1;
+    Ch1 -->|Remove DNA|op1;
+    Ch2 --> st2;
+    Ch1 -->|Remove DNA|st2;
+    op1 -->et
+    st2 -->et
+    et -->|sequencing|lii
+    et -->|sequencing|Oxf</pre>
+<h2 id="Oxford-Nanopore"><a href="#Oxford-Nanopore" class="headerlink" title="Oxford Nanopore"></a>Oxford Nanopore</h2><ol>
+<li>First, approximately two micrograms of mitochondrial DNA was<br>sheared by using Megaruptor</li>
+<li>approximately one microgram of mitochondrial DNA was sonicated to ~ 500 bp using the Covaris M220 system</li>
+</ol>
+<p>The sonicated DNA was purified using a TIANgel Midi Purification Kit, and a sequencing library was constructed using the NEBNext®<br>Ultra™ DNA Library Prep Kit for Illumina</p>
+<p><a href="https://www.diagenode.com/en/p/megaruptor-1-unit" target="_blank" rel="noopener">Megaruptor</a>: The Megaruptor ® was designed to provide researchers with a simple, automated, and reproducible device for the fragmentation of DNA from 2 kb - 75 kb.Shearing performance is independent of the source, concentration, temperature, or salt content of a DNA sample.</p>
+<h2 id="Illimina"><a href="#Illimina" class="headerlink" title="Illimina"></a>Illimina</h2><pre class="mermaid">graph TD;
+R1((Raw Reads))
+R2((H.Q. Reads))
+Reads((Reads))
+Con((Contigs))
+Con2((Target Contigs))
+Con3((Conf Contigs))
+Con4((Contigs))
+Con5((draft Contigs))
+Con6((Contigs))
+mt((mitogenome))
+mt1((mitogenome))
+mt2((mitogenome))
+R1 --> |FastQC & Trimmomatic|R2
+R2 -->|SPAdes|Con
+Con-->|blast against mt protein|Con2
+Con2 --> | BLASR to mtDB| Con3
+Con3 --> |Canu v1.7.1|Con4
+R2 -->|Canu v1.7.1|Con6
+Con4 --> |Pilon v1.22|Con5
+Reads-->|bowtie2|MUMmer
+Reads-->|bowtie2|MUMmer2
+Con4-->MUMmer
+Con5-->MUMmer
+Con5-->MUMmer2
+Con6-->MUMmer2
+MUMmer -->mt1
+MUMmer2 -->mt2
+mt1-->|MUMmer 3.0 and MAFFT v. 7|mt
+mt2-->|MUMmer 3.0 and MAFFT v. 7|mt</pre>
+<h2 id="mitogenome-Annotation"><a href="#mitogenome-Annotation" class="headerlink" title="mitogenome Annotation"></a>mitogenome Annotation</h2><p>protein and rRNA: blast+ against <em>Cycas taitungensis</em>, <em>Ginkgo biloba</em><br>and <em>Welwitschia mirabilis</em> database.</p>
+<ul>
+<li>tRNA: <strong>tRNAscan-SE 2.0</strong></li>
+<li>introns: <strong>RNAweasel tool</strong></li>
+<li>ORFs: <strong>ORF Finder</strong></li>
+<li>ORFs-&gt; <strong>Blast2GO</strong></li>
+<li>Visualization: <strong>OGDRAW</strong></li>
+</ul>
+<h2 id="RNA-editing-site-identification"><a href="#RNA-editing-site-identification" class="headerlink" title="RNA editing site identification"></a>RNA editing site identification</h2><ul>
+<li>identify: <strong>RES-Scanner</strong></li>
+<li>predicting: <strong>PREP-Mt</strong></li>
+</ul>
+<h2 id="mt-genes-to-nuclear-genome"><a href="#mt-genes-to-nuclear-genome" class="headerlink" title="mt-genes to nuclear genome"></a>mt-genes to nuclear genome</h2><ul>
+<li><strong>Depth of Sequencing Coverage</strong>: <em>Bowtie2 v 2.2.9</em> &amp; <em>SAMtools v 1.6</em></li>
+<li><strong>Realtime PCR</strong>: quantify the copy number of all protein coding genes<br>(singlecopy nuclear gene <em>LEAFY</em> as an experimental control)</li>
+</ul>
+<h2 id="Identification-of-repeats-tandem-repeats-Bpu-elements-and-foreign-sequences"><a href="#Identification-of-repeats-tandem-repeats-Bpu-elements-and-foreign-sequences" class="headerlink" title="Identification of repeats, tandem repeats, Bpu elements and foreign sequences"></a>Identification of repeats, tandem repeats, Bpu elements and foreign sequences</h2><ul>
+<li>Repeasts: <strong>ROUSFinder.py</strong></li>
+<li>tandem repeats: <strong>Tandem Repeats Finder</strong></li>
+<li>Plastid-derived mtDNA (MTPTs) &amp; <em>Bpu</em>-like elements: <span title="Guo W, Grewe F, Fan W, Young GJ, Knoop V, Palmer JD, Mower JP. Ginkgo and Welwitschia mitogenomes reveal extreme contrasts in gymnosperm mitochondrial evolution. Mol Biol Evol. 2016;33:1448–60."><strong><em>Guo et al.</em></strong> </span> (span title here)<ul>
+<li>MIPTs: <strong>blastn</strong> (against to genome and mitogenome)</li>
+<li><em>Bpu</em>-like elements: <strong>blastn</strong> (using the <em>Cycas Bpu</em> consensus sequence as a query)</li>
+</ul>
+</li>
+<li>nuclear-derived repetitive sequences: <a href="http://www.repeatmasker.org/cgi-bin/WEBRepeatMasker" target="_blank" rel="noopener">RepeatMasker web server</a></li>
+</ul>
+<h2 id="Shared-DNAs-and-gene-cluster-analyses"><a href="#Shared-DNAs-and-gene-cluster-analyses" class="headerlink" title="Shared DNAs and gene cluster analyses"></a>Shared DNAs and gene cluster analyses</h2><p>(mtDNA shared between species)<br><strong>blastn</strong> with a word size of 7 and an e-value cutoff of 1 × 10− 6.<br>Syntenic relationships were generated using <strong>Circos v. 0.69</strong></p>
+<h2 id="Evolutionary-rate-heterogeneity-test"><a href="#Evolutionary-rate-heterogeneity-test" class="headerlink" title="Evolutionary rate heterogeneity test"></a>Evolutionary rate heterogeneity test</h2><ol>
+<li>mitochondrial protein-coding genes</li>
+<li><span title="Ran J-H, Shen T-T, Wang M-M, Wang X-Q. Phylogenomics resolves the deep phylogeny of seed plants and indicates partial convergent or homoplastic evolution between Gnetales and angiosperms. Proc R Soc B. 2018;285: 20181012"><strong><em>Ran et al.</em></strong> </span>:<ul>
+<li>Sequence alignment;</li>
+<li>unreliable sequence alignment filtering;</li>
+<li>synonymous (d<sub>S</sub>);</li>
+<li>nonsynonymous length calculations (d<sub>N</sub>);</li>
+<li>absolute nonsynonymous(R<sub>N</sub>);</li>
+<li>synonymous rate (R<sub>S</sub>).</li>
+</ul>
+</li>
+<li>Effects of C-to-U RNA editing:<ul>
+<li>predicted editing sites were excluded</li>
+</ul>
+</li>
+</ol>
+<h1 id="Result"><a href="#Result" class="headerlink" title="Result"></a>Result</h1><h2 id="Mitogenome-size-and-gene-and-intron-contents-of-Taxus-cuspidata"><a href="#Mitogenome-size-and-gene-and-intron-contents-of-Taxus-cuspidata" class="headerlink" title="Mitogenome size and gene and intron contents of Taxus cuspidata"></a>Mitogenome size and gene and intron contents of Taxus cuspidata</h2><table>
+<thead>
+<tr>
+<th align="left">Category</th>
+<th align="center">Size</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Size</td>
+<td align="center">468,924bp</td>
+</tr>
+<tr>
+<td align="left">gene</td>
+<td align="center">46</td>
+</tr>
+<tr>
+<td align="left">protein</td>
+<td align="center">32</td>
+</tr>
+<tr>
+<td align="left">tRNA</td>
+<td align="center">10</td>
+</tr>
+<tr>
+<td align="left">rRNA</td>
+<td align="center">3</td>
+</tr>
+<tr>
+<td align="left">small subunit ribosomal protein</td>
+<td align="center">4</td>
+</tr>
+<tr>
+<td align="left">large subunit ribosomal protein</td>
+<td align="center">2</td>
+</tr>
+<tr>
+<td align="left">cytochrome C biogenesis</td>
+<td align="center">4</td>
+</tr>
+<tr>
+<td align="left">transport membrane protein</td>
+<td align="center">1</td>
+</tr>
+<tr>
+<td align="left">maturaserelated protein</td>
+<td align="center">1</td>
+</tr>
+<tr>
+<td align="left"><strong>Intron</strong></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="left">group I introns</td>
+<td align="center">0</td>
+</tr>
+<tr>
+<td align="left">group II introns</td>
+<td align="center">15 (cox2, nad1,nad2, nad4, nad5 and nad7 )</td>
+</tr>
+<tr>
+<td align="left">cis-spliced</td>
+<td align="center">4</td>
+</tr>
+<tr>
+<td align="left">trans-spliced</td>
+<td align="center">11</td>
+</tr>
+<tr>
+<td align="left"><strong>tRNA</strong></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="left">native tRNA</td>
+<td align="center">9</td>
+</tr>
+<tr>
+<td align="left">plastids tRNA</td>
+<td align="center">1</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="left"><strong>rRNA</strong></td>
+<td align="center"><strong>copies</strong></td>
+</tr>
+<tr>
+<td align="left">rrn5 &amp; rrn26</td>
+<td align="center">1</td>
+</tr>
+<tr>
+<td align="left">rrn18</td>
+<td align="center">2</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th align="left">Category</th>
+<th align="center">Length</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">genes</td>
+<td align="center">225 -4104bp</td>
+</tr>
+<tr>
+<td align="left">exons</td>
+<td align="center">22 - 1224bp</td>
+</tr>
+<tr>
+<td align="left">introns</td>
+<td align="center">804 - 2461bp</td>
+</tr>
+</tbody></table>
+<p>nine, one, one, three, and five encoding mitochondrial respiratory chain complexes I, II, III, IV, and V, respectively.</p>
+<h2 id="Variation-in-gene-and-intron"><a href="#Variation-in-gene-and-intron" class="headerlink" title="Variation in gene and intron"></a>Variation in gene and intron</h2><p>Comparing groups: <em>Taxus,</em> <em>Pinus,</em> <em>Welwitschia,</em> <em>Cycas</em> and <em>Ginkgo</em>.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th><span style="Background:salm"><em>Cycas</em></th>
+<th><em>Ginkgo</em></th>
+<th><em>Pinus</em></th>
+<th><em>Welwitschia</em></th>
+<th><em>Taxus</em></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>mitogenome Size</td>
+<td>414,903</td>
+<td>346,544</td>
+<td>1,191,054</td>
+<td>978,846</td>
+<td>468,924</td>
+</tr>
+<tr>
+<td>GC%</td>
+<td>46.9</td>
+<td>50.4</td>
+<td>47</td>
+<td>53</td>
+<td>50.39</td>
+</tr>
+<tr>
+<td>tRNAs</td>
+<td>27</td>
+<td>23</td>
+<td>12</td>
+<td>8</td>
+<td>10</td>
+</tr>
+<tr>
+<td>rRNAs</td>
+<td>3</td>
+<td>3</td>
+<td>6</td>
+<td>3</td>
+<td>4</td>
+</tr>
+<tr>
+<td>Protein coding</td>
+<td>41</td>
+<td>41</td>
+<td>41</td>
+<td>29</td>
+<td>32</td>
+</tr>
+<tr>
+<td>ORF</td>
+<td>3945 (414,858 bp)</td>
+<td>3944 (323,967 bp)</td>
+<td>10,587 (1,191,015 bp)</td>
+<td>11,171 (978,799 bp)</td>
+<td>3923 (468,857 bp)</td>
+</tr>
+<tr>
+<td>Introns</td>
+<td>26</td>
+<td>25</td>
+<td>26</td>
+<td>10</td>
+<td>15</td>
+</tr>
+<tr>
+<td>Predicted edit sites</td>
+<td>1206</td>
+<td>1306</td>
+<td>1179</td>
+<td>225</td>
+<td>1102</td>
+</tr>
+<tr>
+<td>Repeats (kb)</td>
+<td>80 (19.2%)</td>
+<td>32 (9.3%)</td>
+<td>170 (14.2%)</td>
+<td>50 (5.0%)</td>
+<td>62 (13.2%)</td>
+</tr>
+<tr>
+<td>Tandem repeats (kb)</td>
+<td>22 (5.3%)</td>
+<td>3.6 (1.1%)</td>
+<td>71 (6.0%)</td>
+<td>24 (2.5%)</td>
+<td>48 (10.2%)</td>
+</tr>
+<tr>
+<td>Plastid-derived (kb)</td>
+<td>19 (4.6%)</td>
+<td>0.3 (0.1%)</td>
+<td>5.6 (0.5%)</td>
+<td>7.9 (0.8%)</td>
+<td>0 (0%)</td>
+</tr>
+<tr>
+<td>Nuclear-derived repetitive (kb)</td>
+<td>3.4 (0.8%)</td>
+<td>1.9 (0.6%)</td>
+<td>5.3 (0.5%)</td>
+<td>2.5 (0.3%)</td>
+<td>3.5 (0.8%)</td>
+</tr>
+<tr>
+<td>Lost Genes</td>
+<td></td>
+<td></td>
+<td></td>
+<td>8+1</td>
+<td>8+2</td>
+</tr>
+</tbody></table>
+<p>Homologous transcripts of eight of the nine lost mitochondrial genes (excluding rpl10) were found in the transcriptome of Taxus cuspidata<br><img src="https://media.springernature.com/lw685/springer-static/image/art%3A10.1186%2Fs12862-020-1582-1/MediaObjects/12862_2020_1582_Fig2_HTML.png?as=webp" alt="figure2"><br><img src="https://media.springernature.com/lw685/springer-static/image/art%3A10.1186%2Fs12862-020-1582-1/MediaObjects/12862_2020_1582_Fig3_HTML.png?as=webp" alt="figre3"><br><strong>© Kan et al. 2020</strong></p>
+<h2 id="RNA-editing-site-abundance-and-efficiency"><a href="#RNA-editing-site-abundance-and-efficiency" class="headerlink" title="RNA editing site abundance and efficiency"></a>RNA editing site abundance and efficiency</h2><p><strong>RES-Scanner</strong></p>
+<ul>
+<li><strong>efficiency</strong>:<ul>
+<li>0.05; 974 C-to-U</li>
+<li>791 them are on protein-coding genes<ul>
+<li>730 were in coding regions</li>
+<li>61 were in introns</li>
+</ul>
+</li>
+<li>1 in tRNA</li>
+<li>2 in rRNA</li>
+<li>180 in intergenic regions</li>
+</ul>
+</li>
+<li>first and second codon positions have higher editing efficiencies</li>
+<li>nonsilent editing sites have higher editing efficiencies than silent sites</li>
+</ul>
+<p><strong>PREP-Mt</strong>: only nonsilent RNA editing sites in proteincoding genes could be predicted</p>
+<ul>
+<li>cutoff score: 0.2</li>
+<li>1102 C-to-U editing sites</li>
+<li>only 474 were identical</li>
+<li>…</li>
+</ul>
+<p><img src="https://media.springernature.com/full/springer-static/image/art%3A10.1186%2Fs12862-020-1582-1/MediaObjects/12862_2020_1582_Fig4_HTML.png?as=webp" alt="img"><br><strong>© Kan et al. 2020</strong></p>
+<h2 id="Structural-and-gene-cluster-dynamics"><a href="#Structural-and-gene-cluster-dynamics" class="headerlink" title="Structural and gene cluster dynamics"></a>Structural and gene cluster dynamics</h2><ol>
+<li>DNA shared by <em>Cycas</em> and <em>Ginkgo</em> up to 200 bp (about 1/2)</li>
+<li>Shared by <em>Cycas</em> and other three are short. (30 ~ 50)</li>
+</ol>
+<h2 id="Repeats-tandem-repeats-and-foreign-DNA-sequences"><a href="#Repeats-tandem-repeats-and-foreign-DNA-sequences" class="headerlink" title="Repeats, tandem repeats, and foreign DNA sequences"></a>Repeats, tandem repeats, and foreign DNA sequences</h2><ol>
+<li><em>Cycas</em> and <em>Pinus</em> mitogenomes contain more dispersed repeats</li>
+<li>In addition, most repeats had more than two copies in the <em>Cycas</em> and <em>Pinus</em></li>
+<li>Plastid-derived sequence (&gt; 100bp) not found in <em>Taxus</em>.</li>
+<li>nuclear-derived repetitive sequences found in five species.</li>
+<li>…</li>
+</ol>
+<h2 id="Variation-in-nucleotide-substitution-rates"><a href="#Variation-in-nucleotide-substitution-rates" class="headerlink" title="Variation in nucleotide substitution rates"></a>Variation in nucleotide substitution rates</h2><p>although eight putatively transferred genes in Taxus and Welwitschia were still found in the mitogenomes of Cycas, Ginkgo and Pinus, their synonymous and nonsynonymous substitution rates were higher than those of other mitochondrial genes</p>
+<h1 id="Discussion"><a href="#Discussion" class="headerlink" title="Discussion"></a>Discussion</h1><h2 id="Separate-losses-of-multiple-mitochondrial-protein-coding-genes-in-Taxus-and-Welwitschia"><a href="#Separate-losses-of-multiple-mitochondrial-protein-coding-genes-in-Taxus-and-Welwitschia" class="headerlink" title="Separate losses of multiple mitochondrial protein-coding genes in Taxus and Welwitschia"></a>Separate losses of multiple mitochondrial protein-coding genes in <em>Taxus</em> and <em>Welwitschia</em></h2><ul>
+<li>Only two genes were lost in the first approximately 300 myr of land plant evolution if maturase is not considered</li>
+<li>parallel gene losses documented in hornworts, lycophytes, and ferns also happened in more recent times</li>
+<li>In angiosperms, a large number of protein-coding genes have been lost in some lineages,</li>
+<li>…</li>
+</ul>
+<h2 id="Separate-losses-of-multiple-mitochondrial-tRNA-genes-in-Pinaceae-Taxus-and-Welwitschia"><a href="#Separate-losses-of-multiple-mitochondrial-tRNA-genes-in-Pinaceae-Taxus-and-Welwitschia" class="headerlink" title="Separate losses of multiple mitochondrial tRNA genes in Pinaceae, Taxus and Welwitschia"></a>Separate losses of multiple mitochondrial tRNA genes in <em>Pinaceae</em>, <em>Taxus</em> and <em>Welwitschia</em></h2><ul>
+<li>all gymnosperms have three rRNA genes in their mitogenomes.</li>
+<li>the number of tRNAs differs greatly</li>
+</ul>
+<h2 id="Frequent-losses-and-cis-to-trans-splicing-of-introns-in-the-mitogenomes-of-gymnosperms"><a href="#Frequent-losses-and-cis-to-trans-splicing-of-introns-in-the-mitogenomes-of-gymnosperms" class="headerlink" title="Frequent losses and cis- to trans-splicing of introns in the mitogenomes of gymnosperms"></a>Frequent losses and cis- to trans-splicing of introns in the mitogenomes of gymnosperms</h2><p>Both the ancestral angiosperm and gymnosperm mitogenomes contain 26 group II introns.<br><em>Cycas</em> and <em>Ginkgo</em>, have 26 and 25 introns, whereas <strong>only ten introns</strong> are found in <em>Welwitschia</em>.</p>
+<p><strong>Mechanisms for intron loss</strong>:</p>
+<ul>
+<li>genomic deletion</li>
+<li>exonization</li>
+<li>gene conversion</li>
+<li>EGT: <em>rpl2i846</em> and <em>rps10i235</em></li>
+<li>retroprocessing (a reverse transcriptase-mediated model)</li>
+</ul>
+<h2 id="Gene-clusters-could-be-less-conserved-in-gymnosperms-and-transposable-elements-and-specific-repeats-are-rare-in-the-Taxus-and-Welwitschia-mitogenomes"><a href="#Gene-clusters-could-be-less-conserved-in-gymnosperms-and-transposable-elements-and-specific-repeats-are-rare-in-the-Taxus-and-Welwitschia-mitogenomes" class="headerlink" title="Gene clusters could be less conserved in gymnosperms, and transposable elements and specific repeats are rare in the Taxus and Welwitschia mitogenomes"></a>Gene clusters could be less conserved in gymnosperms, and transposable elements and specific repeats are rare in the Taxus and Welwitschia mitogenomes</h2><p>…</p>
+<h2 id="The-number-of-RNA-editing-sites-is-not-correlated-with-the-GC-content-of-mitochondrial-genes"><a href="#The-number-of-RNA-editing-sites-is-not-correlated-with-the-GC-content-of-mitochondrial-genes" class="headerlink" title="The number of RNA editing sites is not correlated with the GC content of mitochondrial genes"></a>The number of RNA editing sites is not correlated with the GC content of mitochondrial genes</h2><p><em>Taxus cuspidata</em>: results showed that all editing sites are C-to-U conversions<br>…</p>
+<h2 id="Size-variation-in-gymnosperm-mitogenomes-is-still-a-mystery"><a href="#Size-variation-in-gymnosperm-mitogenomes-is-still-a-mystery" class="headerlink" title="Size variation in gymnosperm mitogenomes is still a mystery"></a>Size variation in gymnosperm mitogenomes is still a mystery</h2><p>…</p>
+<hr>
+<p>github: <a href="https://github.com/Karobben" target="_blank" rel="noopener">https://github.com/Karobben</a><br>blog: <a href="http://Karobben.github.io">Karobben.github.io</a><br>R 语言画图索引: <a href="https://karobben.github.io/R/R-index.html">https://karobben.github.io/R/R-index.html</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://karobben.github.io/LearnNotes/mtGenome.html" data-id="ckcogiwgy00422bfcf7rqbw8k" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">July 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">June 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/07/01/123/">123</a>
+          </li>
+        
+          <li>
+            <a href="/2020/06/30/tmp/">test</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+  <!-- Weather -->
+<div id="weather-view-he" ></div>
+<script>
+WIDGET = {ID: 'HfP68rcshb'};
+</script>
+<script type="text/javascript" src="https://apip.weatherdt.com/view/static/js/r.js?v=1111"></script>
+
+</aside>
+
+          <!-- Weather Plug -->
+        
+        <!--git talk-->
+        <section id="main">
+          <div style='padding-top:10px'>
+  <div style="background:white">
+    <script src="https://utteranc.es/client.js"
+            repo="Karobben/utterances"
+            issue-term="pathname"
+            theme="preferred-color-scheme"
+            crossorigin="anonymous"
+            async>
+    </script>
+  </div>
+</div>
+<!--git talk-->
+  <!-- Link Gitalk 的支持文件  -->
+  <!--
+    <div>
+      <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+      <script src="https://unpkg.com/gitalk@latest/dist/gitalk.min.js"></script>
+      <div id="gitalk-container"></div>     <script type="text/javascript">
+          var gitalk = new Gitalk({
+
+          // gitalk的主要参数
+              clientID: '96c208ade65e80e3aaac',
+              clientSecret: '86e9240674a3815b0ddc31dababdb4998d5562f4',
+              repo: 'OAuth-Application',
+              owner: 'Karobben',
+              admin: ['Karobben'],
+              id:window.location.pathname,
+          });
+          gitalk.render('gitalk-container');
+      </script>
+    </div>
+<!-- Gitalk end -->
+
+        </section>
+        <!-- Gitalk end -->
+
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      <span style="float:right; list-style:none">
+        <a style="padding: 10px" href="https://karobben.github.io/">Blog</a>
+        <a style="padding: 10px" href="https://github.com/Karobben" target="_blank" rel="noopener">GitHub</a>
+        <br>
+        <a style="padding: 10px" href="https://space.bilibili.com/393056819" target="_blank" rel="noopener">BiliBili</a>
+        <a href="mailto:a591465908@outlook.com">Mail me</a>
+      </span>
+      &copy; Karobben 2020<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+  <span>
+    <p align = "center">
+      <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+      <span id="busuanzi_container_site_pv">~<span id="busuanzi_value_site_pv"></span>~</span>
+    </p>
+  </span>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  <!--`
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  -->
+  <a class="mobile-nav-link" href="../index.html">Home</a>
+  <a class="mobile-nav-link" href="../R/R-index.html">R</a>
+  <a class="mobile-nav-link" href="../Python/index.html">Python</a>
+  <a class="mobile-nav-link" href="../Linux/index.html">Linux</a>
+  <a class="mobile-nav-link" href="../Bioinfor/index.html">Bio-Protocal</a>
+  <a class="mobile-nav-link" href="../LearnNotes/index.html">Notes</a>
+  <a class="mobile-nav-link" href="../Blog/index.html">Others</a>
+</nav>
+
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+<!--mermaid module-->
+
+  <script src='https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js'></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({theme: 'forest'});
+    }
+  </script>
+
+
+
+<!-- Searche Module-->
+<script src="/js/search.js"></script>
+<script src="/js/load.js"></script>
+<!-- 这里可能有一些其他原来文件里的代码，也可以没有 -->
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>Urwid B站 up主信息实时显示的TUI应用 updating... | Karobben</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Urwid B站 up主信息实时显示的TUI应用 updating...">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Urwid B站 up主信息实时显示的TUI应用 updating...">
+<meta property="og:url" content="https://karobben.github.io/Blog/Urwid-Biliboard.html">
+<meta property="og:site_name" content="Karobben">
+<meta property="og:description" content="Urwid B站 up主信息实时显示的TUI应用 updating...">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://s1.ax1x.com/2020/06/26/NskXIx.png">
+<meta property="article:published_time" content="2020-07-16T07:13:33.198Z">
+<meta property="article:modified_time" content="2020-07-16T07:13:33.198Z">
+<meta property="article:author" content="Karobben">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s1.ax1x.com/2020/06/26/NskXIx.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Karobben" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="img/tag.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+<link rel="stylesheet" href="/css/search.css">
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<script>
+  var _hmt = _hmt || [];
+  (function() {
+    var hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?8442e6ecc87d878298ba7d3bd0a5484c";
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(hm, s);
+  })();
+</script>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header"; style="background:#1B414B;height:150px">
+  <!--div id="banner"></div>-->
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Karobben</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">Karobben Blog</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+          <a id="main-nav-toggle" class="nav-icon"></a>
+          <!-- Header Section Start -->
+  <header id="slider-area">
+    <nav class="navbar navbar-expand-md fixed-top scrolling-navbar bg-white">
+      <div class="container">
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav mr-auto w-100 justify-content-end">
+              <a class="main-nav-link" href="../index.html">Home</a>
+              <a class="main-nav-link" href="../R/R-index.html">R</a>
+              <a class="main-nav-link" href="../Python/index.html">Python</a>
+              <a class="main-nav-link" href="../Linux/index.html">Linux</a>
+              <a class="main-nav-link" href="../Bioinfor/index.html">Bio-Protocal</a>
+              <a class="main-nav-link" href="../LearnNotes/index.html">Notes</a>
+              <a class="main-nav-link" href="../Blog/index.html">Others</a>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!-- Header Section End -->
+
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Looking for Something?"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://karobben.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><div align='right', style='padding-right:160px;padding-top:1px'>
+  
+  <span class="local-search local-search-google local-search-plugin" style=";position:absolute;z-index:2;">
+      <input type="search" placeholder="Looking for Something?" id="local-search-input" class="local-search-input-cls" style="">
+      <div id="local-search-result" class="local-search-result-cls"></div>
+  </span>
+
+
+</div>
+
+<article  id="page-" class="article article-type-page" itemscope itemprop="blogPost">
+<div id="tipue_search_content" style="display: none"></div>
+  <div class="article-meta">
+    <a href="/Blog/Urwid-Biliboard.html" class="article-date">
+  <time datetime="2020-07-16T07:13:33.198Z" itemprop="datePublished">2020-07-16</time>
+</a>
+    
+  </div>
+  <div  class="article-inner">
+    
+    
+      <header class="article-header">
+        <!--
+  
+    <h1 class="article-title" itemprop="name">
+      Urwid B站 up主信息实时显示的TUI应用 updating...
+    </h1>
+  
+ -->
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <!-- Go To Top Link -->
+        <div title="Back to Top" class="back-to-top" style="background:salmon">
+  <a href="#"  >
+    <i >Top</i>
+  </a>
+</div>
+<div class="title_index">
+  <ul id="nav">
+   <li>
+     Titles
+     <ul>
+       <!-- Table of Contents -->
+
+  <div id="toc" class="toc-article">
+    <strong class="toc-title">Titles</strong>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Urwid-B站-up主信息实时显示的TUI应用-updating…"><span class="toc-number">1.</span> <span class="toc-text">Urwid B站 up主信息实时显示的TUI应用 updating…</span></a></li></ol>
+  </div>
+
+<!-- Table of Contents Down-->
+
+     </ul>
+    </li>
+   </ul>
+</div>
+
+
+        <h1 id="Urwid-B站-up主信息实时显示的TUI应用-updating…"><a href="#Urwid-B站-up主信息实时显示的TUI应用-updating…" class="headerlink" title="Urwid B站 up主信息实时显示的TUI应用 updating…"></a>Urwid B站 up主信息实时显示的TUI应用 updating…</h1><div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> urwid, time, sys, ast, requests, json</span><br><span class="line"><span class="keyword">from</span> urllib.request <span class="keyword">import</span> urlopen</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">BiliSpider</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">        self.online_api = <span class="string">"https://api.bilibili.com/x/web-interface/online"</span>  <span class="comment"># 在线人数</span></span><br><span class="line">        self.video_api = <span class="string">"https://api.bilibili.com/x/web-interface/archive/stat?&amp;aid=%s"</span>    <span class="comment"># 视频信息</span></span><br><span class="line">        self.newlist_api = <span class="string">"https://api.bilibili.com/x/web-interface/newlist?&amp;rid=%s&amp;pn=%s&amp;ps=%s"</span>     <span class="comment"># 最新视频信息</span></span><br><span class="line">        self.region_api = <span class="string">"https://api.bilibili.com/x/web-interface/dynamic/region?&amp;rid=%s&amp;pn=%s&amp;ps=%s"</span>  <span class="comment"># 最新动态信息</span></span><br><span class="line">        self.member_api = <span class="string">"http://space.bilibili.com/ajax/member/GetInfo"</span>  <span class="comment"># 用户信息</span></span><br><span class="line">        self.stat_api = <span class="string">"https://api.bilibili.com/x/relation/stat?vmid=%s"</span>  <span class="comment"># 用户关注数和粉丝总数</span></span><br><span class="line">        self.upstat_api = <span class="string">"https://api.bilibili.com/x/space/upstat?mid=%s"</span>     <span class="comment"># 用户总播放量和总阅读量</span></span><br><span class="line">        self.follower_api = <span class="string">"https://api.bilibili.com/x/relation/followings?vmid=%s&amp;pn=%s&amp;ps=%s"</span>    <span class="comment"># 用户关注信息</span></span><br><span class="line">        self.fans_api = <span class="string">"https://api.bilibili.com/x/relation/followers?vmid=%s&amp;pn=%s&amp;ps=%s"</span>    <span class="comment"># 用户粉丝信息</span></span><br><span class="line">    <span class="comment">#</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">get_api</span><span class="params">(api_url)</span>:</span></span><br><span class="line">        headers = &#123;</span><br><span class="line">            <span class="string">"Accept"</span>: <span class="string">"text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8"</span>,</span><br><span class="line">            <span class="string">"Accept-Encoding"</span>: <span class="string">"gzip, deflate, br"</span>,</span><br><span class="line">            <span class="string">"Accept-Language"</span>: <span class="string">"zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2"</span>,</span><br><span class="line">            <span class="string">"Host"</span>: <span class="string">"api.bilibili.com"</span>,</span><br><span class="line">            <span class="string">"Referer"</span>: <span class="string">"https://www.bilibili.com/"</span>,</span><br><span class="line">            <span class="string">"User-Agent"</span>: <span class="string">"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36"</span>,</span><br><span class="line">        &#125;</span><br><span class="line">        res = requests.get(api_url, headers=headers)</span><br><span class="line">        res_dict = res.json()</span><br><span class="line">        <span class="keyword">return</span> res_dict</span><br><span class="line">    <span class="comment">#</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">get_online</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="string">"""</span></span><br><span class="line"><span class="string">        获取在线信息</span></span><br><span class="line"><span class="string">        all_count: 最新投稿</span></span><br><span class="line"><span class="string">        web_online: 在线人数</span></span><br><span class="line"><span class="string">        :return:</span></span><br><span class="line"><span class="string">        """</span></span><br><span class="line">        online_dic = BiliSpider.get_api(self.online_api)</span><br><span class="line">        <span class="keyword">return</span> online_dic</span><br><span class="line">    <span class="comment">#</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">get_video_info</span><span class="params">(self, aid)</span>:</span></span><br><span class="line">        <span class="string">"""</span></span><br><span class="line"><span class="string">        获取视频信息</span></span><br><span class="line"><span class="string">        :param aid: 视频id</span></span><br><span class="line"><span class="string">        :return:</span></span><br><span class="line"><span class="string">        """</span></span><br><span class="line">        res = BiliSpider.get_api(self.video_api %aid)</span><br><span class="line">        <span class="comment"># print(res)</span></span><br><span class="line">        <span class="keyword">return</span> res</span><br><span class="line">    <span class="comment">#</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">get_newlist_info</span><span class="params">(self, rid, pn, ps)</span>:</span></span><br><span class="line">        <span class="string">"""</span></span><br><span class="line"><span class="string">        获取最新视频信息</span></span><br><span class="line"><span class="string">        :param rid: 二级标题的id (详见tid_info.txt)</span></span><br><span class="line"><span class="string">        :param pn:  页数</span></span><br><span class="line"><span class="string">        :param ps:  每页条目数 1-50</span></span><br><span class="line"><span class="string">        :return:</span></span><br><span class="line"><span class="string">        """</span></span><br><span class="line">        res = BiliSpider.get_api(self.newlist_api %(rid, pn, ps))</span><br><span class="line">        <span class="keyword">return</span> res</span><br><span class="line">    <span class="comment">#</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">get_region_info</span><span class="params">(self, rid, pn, ps)</span>:</span></span><br><span class="line">        <span class="string">"""</span></span><br><span class="line"><span class="string">        获取最新视频信息</span></span><br><span class="line"><span class="string">        :param rid: 二级标题的id (详见tid_info.txt)</span></span><br><span class="line"><span class="string">        :param pn:  页数</span></span><br><span class="line"><span class="string">        :param ps:  每页条目数 1-50</span></span><br><span class="line"><span class="string">        :return:</span></span><br><span class="line"><span class="string">        """</span></span><br><span class="line">        res = BiliSpider.get_api(self.region_api %(rid, pn, ps))</span><br><span class="line">        <span class="keyword">return</span> res</span><br><span class="line">    <span class="comment">#</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">get_member_info</span><span class="params">(self, mid)</span>:</span></span><br><span class="line">        <span class="string">"""</span></span><br><span class="line"><span class="string">        获取用户信息</span></span><br><span class="line"><span class="string">        :param mid:用户id</span></span><br><span class="line"><span class="string">        :return:</span></span><br><span class="line"><span class="string">        """</span></span><br><span class="line">        post_data = &#123;</span><br><span class="line">            <span class="string">"crsf"</span>: <span class="string">""</span>,</span><br><span class="line">            <span class="string">"mid"</span>: mid,</span><br><span class="line">        &#125;</span><br><span class="line">        header = &#123;</span><br><span class="line">            <span class="string">"Host"</span>: <span class="string">"space.bilibili.com"</span>,</span><br><span class="line">            <span class="string">"User-Agent"</span>: <span class="string">"Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:63.0) Gecko/20100101 Firefox/63.0"</span>,</span><br><span class="line">            <span class="string">"Accept"</span>: <span class="string">"application/json, text/plain, */*"</span>,</span><br><span class="line">            <span class="string">"Accept-Encoding"</span>: <span class="string">"gzip, deflate, br"</span>,</span><br><span class="line">            <span class="string">"Accept-Language"</span>: <span class="string">"zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2"</span>,</span><br><span class="line">            <span class="string">"Referer"</span>: <span class="string">"https://www.bilibili.com/"</span>,</span><br><span class="line">        &#125;</span><br><span class="line">        res = requests.post(self.member_api, data=post_data, headers=header)</span><br><span class="line">        member_dic = json.dumps(res.json(), ensure_ascii=<span class="literal">False</span>)</span><br><span class="line">        <span class="keyword">return</span> member_dic</span><br><span class="line">    <span class="comment">#</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">get_stat_info</span><span class="params">(self, vmid)</span>:</span></span><br><span class="line">        <span class="string">"""</span></span><br><span class="line"><span class="string">        获取某用户的关注数和粉丝总数</span></span><br><span class="line"><span class="string">        :param vmid: 用户id</span></span><br><span class="line"><span class="string">        :return:</span></span><br><span class="line"><span class="string">        """</span></span><br><span class="line">        res = BiliSpider.get_api(self.stat_api % vmid)</span><br><span class="line">        <span class="keyword">return</span> res</span><br><span class="line">    <span class="comment">#</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">get_upstat_info</span><span class="params">(self, mid)</span>:</span></span><br><span class="line">        <span class="string">"""</span></span><br><span class="line"><span class="string">        获取某用户的总播放量和总阅读量</span></span><br><span class="line"><span class="string">        :param mid: 用户id</span></span><br><span class="line"><span class="string">        :return:</span></span><br><span class="line"><span class="string">        """</span></span><br><span class="line">        res = BiliSpider.get_api(self.upstat_api % mid)</span><br><span class="line">        <span class="keyword">return</span> res</span><br><span class="line">    <span class="comment">#</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">get_follower_info</span><span class="params">(self, vmid, pn, ps)</span>:</span></span><br><span class="line">        <span class="string">"""</span></span><br><span class="line"><span class="string">        获取某用户关注者信息</span></span><br><span class="line"><span class="string">        :param vmid:用户id</span></span><br><span class="line"><span class="string">        :param pn:  页数 最多5页</span></span><br><span class="line"><span class="string">        :param ps:  每页条目数 1-50</span></span><br><span class="line"><span class="string">        :return:</span></span><br><span class="line"><span class="string">        """</span></span><br><span class="line">        res = BiliSpider.get_api(self.follower_api %(vmid, pn, ps))</span><br><span class="line">        <span class="keyword">return</span> res</span><br><span class="line">    <span class="comment">#</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">get_fans_info</span><span class="params">(self, vmid, pn, ps)</span>:</span></span><br><span class="line">        <span class="string">"""</span></span><br><span class="line"><span class="string">        获取某用户粉丝信息</span></span><br><span class="line"><span class="string">        :param vmid:用户id</span></span><br><span class="line"><span class="string">        :param pn:  页数 最多5页</span></span><br><span class="line"><span class="string">        :param ps:  每页条目数 1-50</span></span><br><span class="line"><span class="string">        :return:</span></span><br><span class="line"><span class="string">        """</span></span><br><span class="line">        res = BiliSpider.get_api(self.fans_api %(vmid, pn, ps))</span><br><span class="line">        <span class="keyword">return</span> res</span><br><span class="line"></span><br><span class="line">bili = BiliSpider()</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">Bili_v</span><span class="params">(Title,ID)</span>:</span></span><br><span class="line">    ID = str(ID)</span><br><span class="line">    url = <span class="string">"http://api.bilibili.com/archive_stat/stat?aid="</span> + ID</span><br><span class="line">    html = urlopen(url).read().decode(<span class="string">'utf-8'</span>)</span><br><span class="line">    d = ast.literal_eval(html)</span><br><span class="line">    Cont = d[<span class="string">'data'</span>]</span><br><span class="line">    View    = str(Cont[<span class="string">'view'</span>])</span><br><span class="line">    Like    = str(Cont[<span class="string">'like'</span>])</span><br><span class="line">    Reply   = str(Cont[<span class="string">'reply'</span>])</span><br><span class="line">    Coin    = str(Cont[<span class="string">'coin'</span>])</span><br><span class="line">    Result = <span class="string">"\n"</span>.join([Title,View, Like, Reply, Coin])</span><br><span class="line">    <span class="keyword">return</span> Result</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">exit_on_q</span><span class="params">(key)</span>:</span></span><br><span class="line">    <span class="keyword">if</span> key <span class="keyword">in</span> (<span class="string">'q'</span>, <span class="string">'Q'</span>):</span><br><span class="line">        <span class="keyword">raise</span> urwid.ExitMainLoop()</span><br><span class="line"></span><br><span class="line">palette = [</span><br><span class="line">    (<span class="string">'banner'</span>, <span class="string">'black'</span>, <span class="string">'light gray'</span>),</span><br><span class="line">    (<span class="string">'streak'</span>, <span class="string">'black'</span>, <span class="string">'dark red'</span>),</span><br><span class="line">    (<span class="string">'bg'</span>, <span class="string">'black'</span>, <span class="string">'dark blue'</span>),]</span><br><span class="line">A = <span class="string">'Test'</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Refresh</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">keypress</span><span class="params">(self, key)</span>:</span></span><br><span class="line">        <span class="keyword">if</span> key <span class="keyword">in</span> (<span class="string">'q'</span>, <span class="string">'Q'</span>):</span><br><span class="line">            <span class="keyword">raise</span> urwid.ExitMainLoop()</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">setup_view</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="comment">#Self infor</span></span><br><span class="line">        mid = <span class="number">393056819</span></span><br><span class="line">        AA = bili.get_member_info(mid)</span><br><span class="line">        粉丝 = urwid.Text(str(bili.get_stat_info(mid)[<span class="string">'data'</span>][<span class="string">'follower'</span>]))</span><br><span class="line">        <span class="comment">#Veido Infor</span></span><br><span class="line">        Title = urwid.Text(<span class="string">"\n"</span>.join([<span class="string">""</span>,<span class="string">"观看量:"</span>,<span class="string">"点赞:"</span>,<span class="string">"回复:"</span>,<span class="string">"硬币:"</span> ]))</span><br><span class="line">        Bv1 = urwid.Text(Bili_v(<span class="string">"Python色差"</span>,<span class="number">86328254</span>))</span><br><span class="line">        Bv2 = urwid.Text(Bili_v(<span class="string">"汪汪洗澡"</span>,<span class="number">89026731</span>))</span><br><span class="line">        Bv3 = urwid.Text(Bili_v(<span class="string">"大生态缸"</span>,<span class="number">61040198</span>))</span><br><span class="line">        Bv4 = urwid.Text(Bili_v(<span class="string">"OneNote记"</span>,<span class="number">44637823</span>))</span><br><span class="line">        Bv5 = urwid.Text(Bili_v(<span class="string">"OneNote2"</span>,<span class="number">45117221</span>))</span><br><span class="line">        self.Vedio_inf = urwid.Columns([Title,Bv1,Bv2,Bv3,Bv4,Bv5])</span><br><span class="line"></span><br><span class="line">        Fan = urwid.AttrWrap( 粉丝,<span class="string">'header'</span>)</span><br><span class="line">        self.Vedio_inf = urwid.AttrWrap(self.Vedio_inf, <span class="string">'body'</span>)</span><br><span class="line"></span><br><span class="line">        self.view = urwid.Padding(self.Vedio_inf, <span class="string">'left'</span>)</span><br><span class="line">        <span class="comment">#self.view = urwid.ListBox(urwid.SimpleListWalker([self.Vedio_inf,urwid.Divider(),self.Vedio_inf]))</span></span><br><span class="line">        self.view = urwid.AttrMap(self.view, <span class="string">'body'</span>)</span><br><span class="line">        self.view = urwid.Filler(self.Vedio_inf, <span class="string">'middle'</span>)</span><br><span class="line">        <span class="comment">#self.view = urwid.Frame(header=粉丝, body=self.Vedio_inf)</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">main</span><span class="params">(self)</span>:</span></span><br><span class="line">        self.setup_view()</span><br><span class="line">        loop = urwid.MainLoop(</span><br><span class="line">            self.view, palette=[(<span class="string">'body'</span>, <span class="string">'dark cyan'</span>, <span class="string">''</span>)],</span><br><span class="line">            unhandled_input=self.keypress)</span><br><span class="line">        loop.set_alarm_in(<span class="number">1</span>, self.refresh)</span><br><span class="line">        loop.run()</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">refresh</span><span class="params">(self, loop=None, data=None)</span>:</span></span><br><span class="line">        self.setup_view()</span><br><span class="line">        loop.widget = self.view</span><br><span class="line">        loop.set_alarm_in(<span class="number">5</span>, self.refresh)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    refresh = Refresh()</span><br><span class="line">    sys.exit(refresh.main())</span><br></pre></td></tr></table></figure></div>
+
+<p><a href="https://imgchr.com/i/NskXIx" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2020/06/26/NskXIx.png" alt="NskXIx.png"></a><br>= = <br />实时刷新有了 = =不过排版一加东西就错误= = <br />下次再来</p>
+<hr>
+<p>github: <a href="https://github.com/Karobben" target="_blank" rel="noopener">https://github.com/Karobben</a><br>blog: <a href="http://Karobben.github.io">Karobben.github.io</a><br>R 语言画图索引: <a href="https://karobben.github.io/R/R-index.html">https://karobben.github.io/R/R-index.html</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://karobben.github.io/Blog/Urwid-Biliboard.html" data-id="ckcogiwg800302bfc03438jq7" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">July 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">June 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/07/01/123/">123</a>
+          </li>
+        
+          <li>
+            <a href="/2020/06/30/tmp/">test</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+  <!-- Weather -->
+<div id="weather-view-he" ></div>
+<script>
+WIDGET = {ID: 'HfP68rcshb'};
+</script>
+<script type="text/javascript" src="https://apip.weatherdt.com/view/static/js/r.js?v=1111"></script>
+
+</aside>
+
+          <!-- Weather Plug -->
+        
+        <!--git talk-->
+        <section id="main">
+          <div style='padding-top:10px'>
+  <div style="background:white">
+    <script src="https://utteranc.es/client.js"
+            repo="Karobben/utterances"
+            issue-term="pathname"
+            theme="preferred-color-scheme"
+            crossorigin="anonymous"
+            async>
+    </script>
+  </div>
+</div>
+<!--git talk-->
+  <!-- Link Gitalk 的支持文件  -->
+  <!--
+    <div>
+      <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+      <script src="https://unpkg.com/gitalk@latest/dist/gitalk.min.js"></script>
+      <div id="gitalk-container"></div>     <script type="text/javascript">
+          var gitalk = new Gitalk({
+
+          // gitalk的主要参数
+              clientID: '96c208ade65e80e3aaac',
+              clientSecret: '86e9240674a3815b0ddc31dababdb4998d5562f4',
+              repo: 'OAuth-Application',
+              owner: 'Karobben',
+              admin: ['Karobben'],
+              id:window.location.pathname,
+          });
+          gitalk.render('gitalk-container');
+      </script>
+    </div>
+<!-- Gitalk end -->
+
+        </section>
+        <!-- Gitalk end -->
+
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      <span style="float:right; list-style:none">
+        <a style="padding: 10px" href="https://karobben.github.io/">Blog</a>
+        <a style="padding: 10px" href="https://github.com/Karobben" target="_blank" rel="noopener">GitHub</a>
+        <br>
+        <a style="padding: 10px" href="https://space.bilibili.com/393056819" target="_blank" rel="noopener">BiliBili</a>
+        <a href="mailto:a591465908@outlook.com">Mail me</a>
+      </span>
+      &copy; Karobben 2020<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+  <span>
+    <p align = "center">
+      <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+      <span id="busuanzi_container_site_pv">~<span id="busuanzi_value_site_pv"></span>~</span>
+    </p>
+  </span>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  <!--`
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  -->
+  <a class="mobile-nav-link" href="../index.html">Home</a>
+  <a class="mobile-nav-link" href="../R/R-index.html">R</a>
+  <a class="mobile-nav-link" href="../Python/index.html">Python</a>
+  <a class="mobile-nav-link" href="../Linux/index.html">Linux</a>
+  <a class="mobile-nav-link" href="../Bioinfor/index.html">Bio-Protocal</a>
+  <a class="mobile-nav-link" href="../LearnNotes/index.html">Notes</a>
+  <a class="mobile-nav-link" href="../Blog/index.html">Others</a>
+</nav>
+
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+<!--mermaid module-->
+
+  <script src='https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js'></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({theme: 'forest'});
+    }
+  </script>
+
+
+
+<!-- Searche Module-->
+<script src="/js/search.js"></script>
+<script src="/js/load.js"></script>
+<!-- 这里可能有一些其他原来文件里的代码，也可以没有 -->
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>Transcriptomic analysis of juvenile Chinese sea bass (Lateolabrax maculatus) anesthetized by MS-222 (tricaine methanesulfonate) and eugenol | Karobben</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Transcriptomic analysis of juvenile Chinese sea bass (Lateolabrax maculatus) anesthetized by MS-222 (tricaine methanesulfonate) and eugenol">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Transcriptomic analysis of juvenile Chinese sea bass (Lateolabrax maculatus) anesthetized by MS-222 (tricaine methanesulfonate) and eugenol">
+<meta property="og:url" content="https://karobben.github.io/LearnNotes/Paper_RNASeq_Fish1.html">
+<meta property="og:site_name" content="Karobben">
+<meta property="og:description" content="Transcriptomic analysis of juvenile Chinese sea bass (Lateolabrax maculatus) anesthetized by MS-222 (tricaine methanesulfonate) and eugenol">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://m.qpic.cn/psc?/V12yEYVQ115d6d/PH*WNmm91dtUAbGDTrti4QL8R.ktu3X7BJDL02jmjA*XIDyh7*.gFdYmEl7FFvTGBwaPM.fYmAF83sghSqkqug!!/b&bo=gALqAAAAAAARB1g!&rf=viewer_4">
+<meta property="article:published_time" content="2020-07-16T07:13:33.250Z">
+<meta property="article:modified_time" content="2020-07-16T07:13:33.250Z">
+<meta property="article:author" content="Karobben">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://m.qpic.cn/psc?/V12yEYVQ115d6d/PH*WNmm91dtUAbGDTrti4QL8R.ktu3X7BJDL02jmjA*XIDyh7*.gFdYmEl7FFvTGBwaPM.fYmAF83sghSqkqug!!/b&bo=gALqAAAAAAARB1g!&rf=viewer_4">
+  
+    <link rel="alternate" href="/atom.xml" title="Karobben" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="img/tag.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+<link rel="stylesheet" href="/css/search.css">
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<script>
+  var _hmt = _hmt || [];
+  (function() {
+    var hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?8442e6ecc87d878298ba7d3bd0a5484c";
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(hm, s);
+  })();
+</script>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header"; style="background:#1B414B;height:150px">
+  <!--div id="banner"></div>-->
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Karobben</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">Karobben Blog</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+          <a id="main-nav-toggle" class="nav-icon"></a>
+          <!-- Header Section Start -->
+  <header id="slider-area">
+    <nav class="navbar navbar-expand-md fixed-top scrolling-navbar bg-white">
+      <div class="container">
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav mr-auto w-100 justify-content-end">
+              <a class="main-nav-link" href="../index.html">Home</a>
+              <a class="main-nav-link" href="../R/R-index.html">R</a>
+              <a class="main-nav-link" href="../Python/index.html">Python</a>
+              <a class="main-nav-link" href="../Linux/index.html">Linux</a>
+              <a class="main-nav-link" href="../Bioinfor/index.html">Bio-Protocal</a>
+              <a class="main-nav-link" href="../LearnNotes/index.html">Notes</a>
+              <a class="main-nav-link" href="../Blog/index.html">Others</a>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!-- Header Section End -->
+
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Looking for Something?"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://karobben.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><div align='right', style='padding-right:160px;padding-top:1px'>
+  
+  <span class="local-search local-search-google local-search-plugin" style=";position:absolute;z-index:2;">
+      <input type="search" placeholder="Looking for Something?" id="local-search-input" class="local-search-input-cls" style="">
+      <div id="local-search-result" class="local-search-result-cls"></div>
+  </span>
+
+
+</div>
+
+<article  id="page-" class="article article-type-page" itemscope itemprop="blogPost">
+<div id="tipue_search_content" style="display: none"></div>
+  <div class="article-meta">
+    <a href="/LearnNotes/Paper_RNASeq_Fish1.html" class="article-date">
+  <time datetime="2020-07-16T07:13:33.250Z" itemprop="datePublished">2020-07-16</time>
+</a>
+    
+  </div>
+  <div  class="article-inner">
+    
+    
+      <header class="article-header">
+        <!--
+  
+    <h1 class="article-title" itemprop="name">
+      Transcriptomic analysis of juvenile Chinese sea bass (Lateolabrax maculatus) anesthetized by MS-222 (tricaine methanesulfonate) and eugenol
+    </h1>
+  
+ -->
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <!-- Go To Top Link -->
+        <div title="Back to Top" class="back-to-top" style="background:salmon">
+  <a href="#"  >
+    <i >Top</i>
+  </a>
+</div>
+<div class="title_index">
+  <ul id="nav">
+   <li>
+     Titles
+     <ul>
+       <!-- Table of Contents -->
+
+  <div id="toc" class="toc-article">
+    <strong class="toc-title">Titles</strong>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Transcriptomic-analysis-of-juvenile-Chinese-sea-bass-Lateolabrax-maculatus-anesthetized-by-MS-222-tricaine-methanesulfonate-and-eugenol"><span class="toc-number">1.</span> <span class="toc-text">Transcriptomic analysis of juvenile Chinese sea bass (Lateolabrax maculatus) anesthetized by MS-222 (tricaine methanesulfonate) and eugenol</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#General-Information"><span class="toc-number">2.</span> <span class="toc-text">General Information</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Statistic-information"><span class="toc-number">2.1.</span> <span class="toc-text">Statistic information</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Background"><span class="toc-number">2.2.</span> <span class="toc-text">Background</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Abstract"><span class="toc-number">3.</span> <span class="toc-text">Abstract</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Introduction"><span class="toc-number">4.</span> <span class="toc-text">Introduction</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#M-amp-M"><span class="toc-number">5.</span> <span class="toc-text">M&amp;M</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Result"><span class="toc-number">6.</span> <span class="toc-text">Result</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Transcriptome-sequence-assembly"><span class="toc-number">6.1.</span> <span class="toc-text">Transcriptome sequence assembly</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Annotation-and-function-analysis"><span class="toc-number">6.2.</span> <span class="toc-text">Annotation and function analysis</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Differentially-expressed-genes"><span class="toc-number">6.3.</span> <span class="toc-text">Differentially expressed genes</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#SNP-and-SSR-detection"><span class="toc-number">6.4.</span> <span class="toc-text">SNP and SSR detection</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Discussion"><span class="toc-number">7.</span> <span class="toc-text">Discussion</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#P1-General-result-from-DEGs"><span class="toc-number">7.1.</span> <span class="toc-text">P1-General result from DEGs</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#P2-Comparative"><span class="toc-number">7.2.</span> <span class="toc-text">P2-Comparative</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#P3-Stress-amp-Metabolism"><span class="toc-number">7.3.</span> <span class="toc-text">P3 Stress &amp; Metabolism</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#P4-Pathways-involved-in-environmental-information-processing"><span class="toc-number">7.4.</span> <span class="toc-text">P4 Pathways involved in environmental information processing</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#P5-Gill-amp-Livers"><span class="toc-number">7.5.</span> <span class="toc-text">P5 Gill &amp; Livers</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#P6-Conclusion"><span class="toc-number">7.6.</span> <span class="toc-text">P6 Conclusion</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Related-papers"><span class="toc-number">8.</span> <span class="toc-text">Related papers:</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Related-Notes"><span class="toc-number">9.</span> <span class="toc-text">Related Notes:</span></a></li></ol>
+  </div>
+
+<!-- Table of Contents Down-->
+
+     </ul>
+    </li>
+   </ul>
+</div>
+
+
+        <h1 id="Transcriptomic-analysis-of-juvenile-Chinese-sea-bass-Lateolabrax-maculatus-anesthetized-by-MS-222-tricaine-methanesulfonate-and-eugenol"><a href="#Transcriptomic-analysis-of-juvenile-Chinese-sea-bass-Lateolabrax-maculatus-anesthetized-by-MS-222-tricaine-methanesulfonate-and-eugenol" class="headerlink" title="Transcriptomic analysis of juvenile Chinese sea bass (Lateolabrax maculatus) anesthetized by MS-222 (tricaine methanesulfonate) and eugenol"></a>Transcriptomic analysis of juvenile Chinese sea bass (Lateolabrax maculatus) anesthetized by MS-222 (tricaine methanesulfonate) and eugenol</h1><p>Cite: Dong, H., Wang, W., Duan, Y. et al. Transcriptomic analysis of juvenile Chinese sea bass (Lateolabrax maculatus) anesthetized by MS-222 (tricaine methanesulfonate) and eugenol. Fish Physiol Biochem (2020). <a href="https://doi.org/10.1007/s10695-019-00755-x" target="_blank" rel="noopener">https://doi.org/10.1007/s10695-019-00755-x</a></p>
+<h1 id="General-Information"><a href="#General-Information" class="headerlink" title="General Information"></a>General Information</h1><h2 id="Statistic-information"><a href="#Statistic-information" class="headerlink" title="Statistic information"></a>Statistic information</h2><table>
+<thead>
+<tr>
+<th align="center">Content</th>
+<th align="center">Words</th>
+<th align="center">Ratio</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">Total Words</td>
+<td align="center">3624</td>
+<td align="center">100%</td>
+</tr>
+<tr>
+<td align="center">Abstract</td>
+<td align="center">306</td>
+<td align="center">8.43%</td>
+</tr>
+<tr>
+<td align="center">Introduction</td>
+<td align="center">512</td>
+<td align="center">14.11%</td>
+</tr>
+<tr>
+<td align="center">M&amp;M</td>
+<td align="center">685</td>
+<td align="center">18.88%</td>
+</tr>
+<tr>
+<td align="center">Results</td>
+<td align="center">821</td>
+<td align="center">22.63%</td>
+</tr>
+<tr>
+<td align="center"><strong>Discussion</strong></td>
+<td align="center">1300</td>
+<td align="center">35.83%</td>
+</tr>
+</tbody></table>
+<h2 id="Background"><a href="#Background" class="headerlink" title="Background"></a>Background</h2><p><a href="https://baike.baidu.com/item/%E8%8A%B1%E9%B2%88/901118?fromtitle=%E4%B8%AD%E5%9B%BD%E8%8A%B1%E9%B2%88&fromid=9645483" target="_blank" rel="noopener"><em>Lateolabrax maculatus</em></a>:</p>
+<p><img src="http://m.qpic.cn/psc?/V12yEYVQ115d6d/PH*WNmm91dtUAbGDTrti4QL8R.ktu3X7BJDL02jmjA*XIDyh7*.gFdYmEl7FFvTGBwaPM.fYmAF83sghSqkqug!!/b&bo=gALqAAAAAAARB1g!&rf=viewer_4" alt="avatar"><br>(copyright: <a href="http://pic.cas.cn" target="_blank" rel="noopener">http://pic.cas.cn</a>)</p>
+<p>MS-222 &amp; eugenol: Fish anesthetics.</p>
+<h1 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h1><ol>
+<li>M &amp; E are two widely used fish anesthetics.</li>
+<li>This experiment reveals the transcriptomic changing during the recovering from fish anesthetics (6h after treated).</li>
+<li>RNA from gills and livers were extracted and compared.</li>
+<li>Non essential data filled here.</li>
+<li>Some DEGs participated in human disease and metabolism.(ps: ummmm…WHAT? = =)</li>
+<li>Two treatment interested different pathways.</li>
+<li>MS-222 may affect metabolism and immunity and more harmful than eugenol.</li>
+</ol>
+<p>PS: <em>Abstract</em> briefly introduced the purpose &amp; results of the experiment. First, it revealed the toxicity of two anesthetics, and second, it can improve our understanding on some human diseases(maybe??) and the detoxification of the fish in the transcription level.</p>
+<h1 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h1><p>P1: What is anesthetics; The contribution of anesthetics; Which anesthetics are available; How do them work;  </p>
+<p>P2: Wide geography-distribution(It’s an important commercial species). Anesthetic could reduce the mortality during transportation.</p>
+<p>P3: Some related experiments had done but not on the same page. So, with the evidences of this experiment, people can make a better choice between MS-222 and eugenol.  </p>
+<h1 id="M-amp-M"><a href="#M-amp-M" class="headerlink" title="M&amp;M"></a>M&amp;M</h1><p>Skip (^ ^ )</p>
+<ul>
+<li>Animal</li>
+<li>Sample extraction</li>
+<li>RNA extraction, library preparation, and Illumina Hiseq<br>sequencing</li>
+<li>De novo assembly and annotation</li>
+<li>Differentially expressed genes</li>
+<li>Single nucleotide polymorphism and simple sequence<br>repeat detection</li>
+</ul>
+<h1 id="Result"><a href="#Result" class="headerlink" title="Result"></a>Result</h1><ul>
+<li>Transcriptome sequence assembly</li>
+<li>Annotation and function analysis</li>
+<li>Differentially expressed genes</li>
+<li>SNP and SSR detection</li>
+</ul>
+<blockquote>
+<h2 id="Transcriptome-sequence-assembly"><a href="#Transcriptome-sequence-assembly" class="headerlink" title="Transcriptome sequence assembly"></a>Transcriptome sequence assembly</h2><ul>
+<li>Raw reads<ul>
+<li>Clean reads</li>
+<li>Unigenes</li>
+<li>Annotated Genes</li>
+</ul>
+</li>
+</ul>
+<h2 id="Annotation-and-function-analysis"><a href="#Annotation-and-function-analysis" class="headerlink" title="Annotation and function analysis"></a>Annotation and function analysis</h2><ul>
+<li>COG (p1)</li>
+<li>GO (p2)</li>
+<li>KEGG (p3)  </li>
+</ul>
+<p>Table (sample, Raw reads)</p>
+<h2 id="Differentially-expressed-genes"><a href="#Differentially-expressed-genes" class="headerlink" title="Differentially expressed genes"></a>Differentially expressed genes</h2><ul>
+<li>Unigenes  <ul>
+<li>DEGs count(unique genes, annotated genes)</li>
+<li>(Charts &amp; tables)</li>
+</ul>
+</li>
+<li>GO<ul>
+<li>Unique/interested  Go-Terms</li>
+<li>Charts</li>
+</ul>
+</li>
+<li>KEGG<ul>
+<li>Unique/interested pathways  </li>
+</ul>
+</li>
+</ul>
+<h2 id="SNP-and-SSR-detection"><a href="#SNP-and-SSR-detection" class="headerlink" title="SNP and SSR detection"></a>SNP and SSR detection</h2><p>Skip</p>
+</blockquote>
+<h1 id="Discussion"><a href="#Discussion" class="headerlink" title="Discussion"></a>Discussion</h1><h2 id="P1-General-result-from-DEGs"><a href="#P1-General-result-from-DEGs" class="headerlink" title="P1-General result from DEGs"></a>P1-General result from DEGs</h2><ol>
+<li><strong>Less DEGs</strong> found in eugenol-treated livers sample</li>
+<li>Pathways associated with human diseases and metabolism were found in <strong>both samples</strong>.  </li>
+<li>E group is intrested in <strong>detoxification</strong> and <strong>xenobiotics</strong>; M group is interested in <strong>organismal system</strong></li>
+</ol>
+<h2 id="P2-Comparative"><a href="#P2-Comparative" class="headerlink" title="P2-Comparative"></a>P2-Comparative</h2><ol>
+<li><strong>Stress</strong><pre class="mermaid">graph LR;
+Stress-->|Stress Related|Diseases;
+Diseases-->|Change|Oxidants;
+Diseases-->|Change|Anesthetic;
+Diseases-->|Change|Antioxidants;
+Antioxidants-.->|Reduce|Stress;</pre></li>
+<li><strong>Eugenol is less harmful than MS-222</strong></li>
+</ol>
+<ul>
+<li>Eugenol group: 22 DEGs involved in 30 different pathways related xenobiotics biodegradation and metabolism, which means <span style="color:salmon;"><b>detoxification activities of the livers</b></span>.</li>
+<li>MS-222 group: higher levels of AST, ALT, AKP, which reveals MS-222 cause <span style="color:salmon;"><b>more damages to livers</b></span>.(explain: can not be metabolized)</li>
+</ul>
+<ol start="3">
+<li><strong>GST</strong> (Glutathione-S-transferase)</li>
+</ol>
+<ul>
+<li>BG: low activity of GST means low detoxification ability.</li>
+<li>Different responses of facing MS-222 in different species from previous research.</li>
+<li>Our result: <em>L. maculatus</em> is more vulnerable.</li>
+</ul>
+<ol start="4">
+<li><strong>A smaller number of DEGs</strong> may reveals lees intervention of E  compared with M. (PS: = = smaller…)</li>
+<li>Additionally, eugenol is <strong>natural</strong> and may easier to metabolized.<br>(PS: … Good, I just learned another skill to fill more words on discussion section)</li>
+</ol>
+<h2 id="P3-Stress-amp-Metabolism"><a href="#P3-Stress-amp-Metabolism" class="headerlink" title="P3 Stress &amp; Metabolism"></a>P3 Stress &amp; Metabolism</h2><ol>
+<li>BG: liver glucose oxidation is enhanced. Amino acid evolved in gluconeogenesis during the stress responses.</li>
+<li>Those pathways are <strong>enriched in both groups</strong>.</li>
+<li>Recent start verified <em>point 1</em>.</li>
+</ol>
+<h2 id="P4-Pathways-involved-in-environmental-information-processing"><a href="#P4-Pathways-involved-in-environmental-information-processing" class="headerlink" title="P4 Pathways involved in environmental information processing"></a>P4 Pathways involved in environmental information processing</h2><ul>
+<li>Jak-STAT signaling, PI3KAkt signaling, TNF signaling, and cytokine-cytokine receptor interaction.</li>
+<li>BG: HPI-&gt;Cotisol; stress can inhibit inflammatory cytokine production and induce apoptosis, proliferation, and phagocytosis of immune cells.<br>Here: More DEGs related immune-related pathways are found in E group.</li>
+<li>BG: stress affects HPG and may affect reprodctive performance;<br>Here: Some DEGs involved in productive activities are found in M group.</li>
+<li>BG: Lethimonier observed that stress-induced cortisol inhibited vitellogenesis,<br>Here: We found it here, too.</li>
+<li>Conclusion: MS-222 is more harmful than eugenol.</li>
+</ul>
+<h2 id="P5-Gill-amp-Livers"><a href="#P5-Gill-amp-Livers" class="headerlink" title="P5 Gill &amp; Livers"></a>P5 Gill &amp; Livers</h2><p>Result:  not change the original functions of the organs</p>
+<h2 id="P6-Conclusion"><a href="#P6-Conclusion" class="headerlink" title="P6 Conclusion"></a>P6 Conclusion</h2><p>MS-222 revealed that all these anesthetics regulate the metabolic and immune pathways in the fish, and MS-222 may trigger more damages on the fish liver and reproduction.</p>
+<hr>
+<h1 id="Related-papers"><a href="#Related-papers" class="headerlink" title="Related papers:"></a>Related papers:</h1><p>Morais S, Pratoomyot J, Taggart JB, Bron JE, Guy DR, Bell JG, Tocher DR (2011b) Genotype-specific responses in Atlantic salmon (Salmo salar) subject to dietary fish oil replacement by vegetable oil: a liver transcriptomic analysis. BMC Genomics 12:255</p>
+<p>Morais S, Edvardsen RB, Tocher DR, Bell JG (2012a) Transcriptomic analyses of intestinal gene expression of juvenile Atlantic cod (Gadus morhua) fed diets with Camelina oil as replacement for fish oil. Comp Biochem Physiol B Biochem Mol Biol 161:283–293.  </p>
+<p>Tacchi L, Secombes CJ, Bickerdike R, Adler MA, Venegas C, Takle H, Martin SA (2012)  Transcriptomic and physiological responses to fishmeal substitution with plant proteins in formulated feed in farmed Atlantic salmon (Salmo salar). BMC Genomics 13:363</p>
+<hr>
+<h1 id="Related-Notes"><a href="#Related-Notes" class="headerlink" title="Related Notes:"></a>Related Notes:</h1><p><a href="paperrnaseqfish2">De novo characterization of the liver transcriptome of javelin goby Synechogobius hasta and analysis of its transcriptomic profile following waterborne copper exposure</a></p>
+<p><a href="paperrnaseqfish3">Physiological and transcriptomic responses to fishmeal-based diet and rapeseed meal-based diet in two strains of gibel carp (Carassius gibelio)</a></p>
+<p><a href="paperrnaseqfish4">Transcriptomic response to soybean meal-based diets as the frst formulated feed in juvenile yellow perch (Perca favescens)</a></p>
+<hr>
+<p>github: <a href="https://github.com/Karobben" target="_blank" rel="noopener">https://github.com/Karobben</a><br>blog: <a href="http://Karobben.github.io">Karobben.github.io</a><br>R 语言画图索引: <a href="https://karobben.github.io/R/R-index.html">https://karobben.github.io/R/R-index.html</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://karobben.github.io/LearnNotes/Paper_RNASeq_Fish1.html" data-id="ckcogiwgj003j2bfc73gp8xzz" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">July 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">June 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/07/01/123/">123</a>
+          </li>
+        
+          <li>
+            <a href="/2020/06/30/tmp/">test</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+  <!-- Weather -->
+<div id="weather-view-he" ></div>
+<script>
+WIDGET = {ID: 'HfP68rcshb'};
+</script>
+<script type="text/javascript" src="https://apip.weatherdt.com/view/static/js/r.js?v=1111"></script>
+
+</aside>
+
+          <!-- Weather Plug -->
+        
+        <!--git talk-->
+        <section id="main">
+          <div style='padding-top:10px'>
+  <div style="background:white">
+    <script src="https://utteranc.es/client.js"
+            repo="Karobben/utterances"
+            issue-term="pathname"
+            theme="preferred-color-scheme"
+            crossorigin="anonymous"
+            async>
+    </script>
+  </div>
+</div>
+<!--git talk-->
+  <!-- Link Gitalk 的支持文件  -->
+  <!--
+    <div>
+      <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+      <script src="https://unpkg.com/gitalk@latest/dist/gitalk.min.js"></script>
+      <div id="gitalk-container"></div>     <script type="text/javascript">
+          var gitalk = new Gitalk({
+
+          // gitalk的主要参数
+              clientID: '96c208ade65e80e3aaac',
+              clientSecret: '86e9240674a3815b0ddc31dababdb4998d5562f4',
+              repo: 'OAuth-Application',
+              owner: 'Karobben',
+              admin: ['Karobben'],
+              id:window.location.pathname,
+          });
+          gitalk.render('gitalk-container');
+      </script>
+    </div>
+<!-- Gitalk end -->
+
+        </section>
+        <!-- Gitalk end -->
+
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      <span style="float:right; list-style:none">
+        <a style="padding: 10px" href="https://karobben.github.io/">Blog</a>
+        <a style="padding: 10px" href="https://github.com/Karobben" target="_blank" rel="noopener">GitHub</a>
+        <br>
+        <a style="padding: 10px" href="https://space.bilibili.com/393056819" target="_blank" rel="noopener">BiliBili</a>
+        <a href="mailto:a591465908@outlook.com">Mail me</a>
+      </span>
+      &copy; Karobben 2020<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+  <span>
+    <p align = "center">
+      <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+      <span id="busuanzi_container_site_pv">~<span id="busuanzi_value_site_pv"></span>~</span>
+    </p>
+  </span>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  <!--`
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  -->
+  <a class="mobile-nav-link" href="../index.html">Home</a>
+  <a class="mobile-nav-link" href="../R/R-index.html">R</a>
+  <a class="mobile-nav-link" href="../Python/index.html">Python</a>
+  <a class="mobile-nav-link" href="../Linux/index.html">Linux</a>
+  <a class="mobile-nav-link" href="../Bioinfor/index.html">Bio-Protocal</a>
+  <a class="mobile-nav-link" href="../LearnNotes/index.html">Notes</a>
+  <a class="mobile-nav-link" href="../Blog/index.html">Others</a>
+</nav>
+
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+<!--mermaid module-->
+
+  <script src='https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js'></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({theme: 'forest'});
+    }
+  </script>
+
+
+
+<!-- Searche Module-->
+<script src="/js/search.js"></script>
+<script src="/js/load.js"></script>
+<!-- 这里可能有一些其他原来文件里的代码，也可以没有 -->
+
+  </div>
+</body>
+</html>

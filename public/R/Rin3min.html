@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>3分钟写一个R包 | Karobben</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="3分钟写一个R包">
+<meta property="og:type" content="website">
+<meta property="og:title" content="3分钟写一个R包">
+<meta property="og:url" content="https://karobben.github.io/R/Rin3min.html">
+<meta property="og:site_name" content="Karobben">
+<meta property="og:description" content="3分钟写一个R包">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://s1.ax1x.com/2020/06/22/NJk8je.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/06/22/NJkYBd.md.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/06/22/NJkJnH.jpg">
+<meta property="og:image" content="https://s1.ax1x.com/2020/06/22/NJktHA.md.jpg">
+<meta property="og:image" content="https://s1.ax1x.com/2020/06/22/NJkaNt.md.png">
+<meta property="article:published_time" content="2020-07-16T07:13:34.139Z">
+<meta property="article:modified_time" content="2020-07-16T07:13:34.139Z">
+<meta property="article:author" content="Karobben">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s1.ax1x.com/2020/06/22/NJk8je.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Karobben" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="img/tag.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+<link rel="stylesheet" href="/css/search.css">
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<script>
+  var _hmt = _hmt || [];
+  (function() {
+    var hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?8442e6ecc87d878298ba7d3bd0a5484c";
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(hm, s);
+  })();
+</script>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header"; style="background:#1B414B;height:150px">
+  <!--div id="banner"></div>-->
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Karobben</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">Karobben Blog</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+          <a id="main-nav-toggle" class="nav-icon"></a>
+          <!-- Header Section Start -->
+  <header id="slider-area">
+    <nav class="navbar navbar-expand-md fixed-top scrolling-navbar bg-white">
+      <div class="container">
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav mr-auto w-100 justify-content-end">
+              <a class="main-nav-link" href="../index.html">Home</a>
+              <a class="main-nav-link" href="../R/R-index.html">R</a>
+              <a class="main-nav-link" href="../Python/index.html">Python</a>
+              <a class="main-nav-link" href="../Linux/index.html">Linux</a>
+              <a class="main-nav-link" href="../Bioinfor/index.html">Bio-Protocal</a>
+              <a class="main-nav-link" href="../LearnNotes/index.html">Notes</a>
+              <a class="main-nav-link" href="../Blog/index.html">Others</a>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!-- Header Section End -->
+
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Looking for Something?"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://karobben.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><div align='right', style='padding-right:160px;padding-top:1px'>
+  
+  <span class="local-search local-search-google local-search-plugin" style=";position:absolute;z-index:2;">
+      <input type="search" placeholder="Looking for Something?" id="local-search-input" class="local-search-input-cls" style="">
+      <div id="local-search-result" class="local-search-result-cls"></div>
+  </span>
+
+
+</div>
+
+<article  id="page-" class="article article-type-page" itemscope itemprop="blogPost">
+<div id="tipue_search_content" style="display: none"></div>
+  <div class="article-meta">
+    <a href="/R/Rin3min.html" class="article-date">
+  <time datetime="2020-07-16T07:13:34.139Z" itemprop="datePublished">2020-07-16</time>
+</a>
+    
+  </div>
+  <div  class="article-inner">
+    
+    
+      <header class="article-header">
+        <!--
+  
+    <h1 class="article-title" itemprop="name">
+      3分钟写一个R包
+    </h1>
+  
+ -->
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <!-- Go To Top Link -->
+        <div title="Back to Top" class="back-to-top" style="background:salmon">
+  <a href="#"  >
+    <i >Top</i>
+  </a>
+</div>
+<div class="title_index">
+  <ul id="nav">
+   <li>
+     Titles
+     <ul>
+       <!-- Table of Contents -->
+
+  <div id="toc" class="toc-article">
+    <strong class="toc-title">Titles</strong>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#3分钟写一个R包"><span class="toc-number">1.</span> <span class="toc-text">3分钟写一个R包</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3分钟写个R包"><span class="toc-number">2.</span> <span class="toc-text">3分钟写个R包</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-新建目录，快速写一个函数"><span class="toc-number">2.1.</span> <span class="toc-text">1. 新建目录，快速写一个函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-在R中创建骨架"><span class="toc-number">2.2.</span> <span class="toc-text">2. 在R中创建骨架</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-根据需要添加相关相关信息"><span class="toc-number">2.3.</span> <span class="toc-text">3. 根据需要添加相关相关信息</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-开始安装"><span class="toc-number">2.4.</span> <span class="toc-text">4. 开始安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-运行测试"><span class="toc-number">2.5.</span> <span class="toc-text">5. 运行测试</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#最后"><span class="toc-number">3.</span> <span class="toc-text">最后</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Github"><span class="toc-number">3.1.</span> <span class="toc-text">Github</span></a></li></ol></li></ol>
+  </div>
+
+<!-- Table of Contents Down-->
+
+     </ul>
+    </li>
+   </ul>
+</div>
+
+
+        <h1 id="3分钟写一个R包"><a href="#3分钟写一个R包" class="headerlink" title="3分钟写一个R包"></a>3分钟写一个R包</h1><p>主要参考：<a href="https://blog.csdn.net/jiyang_1/article/details/53283504" target="_blank" rel="noopener">https://blog.csdn.net/jiyang_1/article/details/53283504</a></p>
+<p><a name="VITLM"></a></p>
+<h1 id="3分钟写个R包"><a href="#3分钟写个R包" class="headerlink" title="3分钟写个R包"></a>3分钟写个R包</h1><p><a name="CCkEd"></a></p>
+<h2 id="1-新建目录，快速写一个函数"><a href="#1-新建目录，快速写一个函数" class="headerlink" title="1. 新建目录，快速写一个函数"></a>1. 新建目录，快速写一个函数</h2><div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">mkdir R_package</span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> <span class="string">'</span></span><br><span class="line"><span class="string">hello &lt;- function() &#123;</span></span><br><span class="line"><span class="string">  print(paste("Hellow World"))</span></span><br><span class="line"><span class="string">&#125;'</span> &gt; hello.R</span><br><span class="line"><span class="comment">#这里的 hello.R 就是所有的需要放在包里面的函数了</span></span><br></pre></td></tr></table></figure></div>
+
+<p><a name="b8zup"></a></p>
+<h2 id="2-在R中创建骨架"><a href="#2-在R中创建骨架" class="headerlink" title="2. 在R中创建骨架"></a>2. 在R中创建骨架</h2><div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="R"><figure class="iseeu highlight /r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#该目录打开R</span></span><br><span class="line">package.skeleton(name=<span class="string">"hello"</span>,code_files=<span class="string">"hello.R"</span>)</span><br></pre></td></tr></table></figure></div>
+
+<p><a name="G7sG0"></a></p>
+<h2 id="3-根据需要添加相关相关信息"><a href="#3-根据需要添加相关相关信息" class="headerlink" title="3. 根据需要添加相关相关信息"></a>3. 根据需要添加相关相关信息</h2><p>为了赶上3min，我只改了两个必须改的地方。</p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 在title 下面加一行，不然本地安装报错</span></span><br><span class="line">sed -i <span class="string">'s/%%  ~~function to do ... ~~/喵喵喵？/'</span> hello/man/hello.Rd</span><br><span class="line"></span><br><span class="line"><span class="comment">#删除此行，不然github远程安装的时候报错</span></span><br><span class="line">sed -i <span class="string">'/~~ Optionally other standard keywords, one per line, from file KEYWORDS in the R documentation directory ~~/d'</span> hello/man/hello-package.Rd</span><br><span class="line"></span><br><span class="line">R CMD build  hello</span><br><span class="line"><span class="comment">#R CMD check hello_1.0.tar.gz</span></span><br><span class="line"><span class="comment">#可以不check 应为有错误也能安装，一般只要能打包</span></span><br><span class="line"><span class="comment">#但是上Cran就一定要check了</span></span><br></pre></td></tr></table></figure></div>
+
+<p>不run第3部分第二行代码的结果（改title）<br /><br><a href="https://imgchr.com/i/NJk8je" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2020/06/22/NJk8je.png" alt="NJk8je.png"></a></p>
+<p><a name="gJ2cL"></a></p>
+<h2 id="4-开始安装"><a href="#4-开始安装" class="headerlink" title="4. 开始安装"></a>4. 开始安装</h2><p>进入R安装。注意<strong>路径</strong>。</p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="R"><figure class="iseeu highlight /r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">install.packages(<span class="string">"hello_1.0.tar.gz"</span>, type=<span class="string">"source"</span>, repos=<span class="literal">NULL</span>)</span><br></pre></td></tr></table></figure></div>
+
+<p>成果！ 撒花<br /><br><a href="https://imgchr.com/i/NJkYBd" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2020/06/22/NJkYBd.md.png" alt="NJkYBd.md.png"></a></p>
+<p><a name="zPzeB"></a></p>
+<h2 id="5-运行测试"><a href="#5-运行测试" class="headerlink" title="5. 运行测试"></a>5. 运行测试</h2><div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="R"><figure class="iseeu highlight /r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">library</span>(hello)                                                                                                                </span><br><span class="line">hello()</span><br><span class="line"></span><br><span class="line"><span class="comment">#输出结果</span></span><br><span class="line"><span class="comment">#Hellow World</span></span><br><span class="line"></span><br><span class="line">?hello<span class="comment">#查看函数信息</span></span><br><span class="line">packageDescription(<span class="string">'hello'</span>) <span class="comment"># 查看信息和安装地址</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#最后删除我们的包</span></span><br><span class="line">remove.packages(<span class="string">'hello'</span> )</span><br></pre></td></tr></table></figure></div>
+<p>Details:<br /></p>
+<p>Indexofhelptopics:<br /><br><a href="https://imgchr.com/i/NJkJnH" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2020/06/22/NJkJnH.jpg" alt="NJkJnH.jpg"></a></p>
+  <br />
+<a name="3Q8gZ"></a>
+## 6. 完成！
+接下来可以认真的写一个自己的包啦！<br />可以和大众分享，也可以是储存几个自己习惯的函数<br />看看表，有没有超过3min！
+[![NJkUAI.md.png](https://s1.ax1x.com/2020/06/22/NJkUAI.md.png)](https://imgchr.com/i/NJkUAI)
+
+
+
+<p><a name="I7vyG"></a></p>
+<h1 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h1><p>上传到github吧</p>
+<p><a name="Wx9L4"></a></p>
+<h2 id="Github"><a href="#Github" class="headerlink" title="Github"></a>Github</h2><p>新建目录后，直接吧hello下的文件，全部上传即可，安装</p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="R"><figure class="iseeu highlight /r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">devtools::install_github(<span class="string">"Karobben/Test"</span>)</span><br></pre></td></tr></table></figure></div>
+
+<p>不进行第3部分第5航代码的结果：<br><a href="https://imgchr.com/i/NJktHA" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2020/06/22/NJktHA.md.jpg" alt="NJktHA.md.jpg"></a></p>
+<p>统统上传～～<br /><br><a href="https://imgchr.com/i/NJkaNt" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2020/06/22/NJkaNt.md.png" alt="NJkaNt.md.png"></a></p>
+<hr>
+<p>github: <a href="https://github.com/Karobben" target="_blank" rel="noopener">https://github.com/Karobben</a><br>blog: <a href="http://Karobben.github.io">Karobben.github.io</a><br>R 语言画图索引: <a href="https://karobben.github.io/R/R-index.html">https://karobben.github.io/R/R-index.html</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://karobben.github.io/R/Rin3min.html" data-id="ckcogixog006q2bfc4umm5mmb" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">July 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">June 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/07/01/123/">123</a>
+          </li>
+        
+          <li>
+            <a href="/2020/06/30/tmp/">test</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+  <!-- Weather -->
+<div id="weather-view-he" ></div>
+<script>
+WIDGET = {ID: 'HfP68rcshb'};
+</script>
+<script type="text/javascript" src="https://apip.weatherdt.com/view/static/js/r.js?v=1111"></script>
+
+</aside>
+
+          <!-- Weather Plug -->
+        
+        <!--git talk-->
+        <section id="main">
+          <div style='padding-top:10px'>
+  <div style="background:white">
+    <script src="https://utteranc.es/client.js"
+            repo="Karobben/utterances"
+            issue-term="pathname"
+            theme="preferred-color-scheme"
+            crossorigin="anonymous"
+            async>
+    </script>
+  </div>
+</div>
+<!--git talk-->
+  <!-- Link Gitalk 的支持文件  -->
+  <!--
+    <div>
+      <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+      <script src="https://unpkg.com/gitalk@latest/dist/gitalk.min.js"></script>
+      <div id="gitalk-container"></div>     <script type="text/javascript">
+          var gitalk = new Gitalk({
+
+          // gitalk的主要参数
+              clientID: '96c208ade65e80e3aaac',
+              clientSecret: '86e9240674a3815b0ddc31dababdb4998d5562f4',
+              repo: 'OAuth-Application',
+              owner: 'Karobben',
+              admin: ['Karobben'],
+              id:window.location.pathname,
+          });
+          gitalk.render('gitalk-container');
+      </script>
+    </div>
+<!-- Gitalk end -->
+
+        </section>
+        <!-- Gitalk end -->
+
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      <span style="float:right; list-style:none">
+        <a style="padding: 10px" href="https://karobben.github.io/">Blog</a>
+        <a style="padding: 10px" href="https://github.com/Karobben" target="_blank" rel="noopener">GitHub</a>
+        <br>
+        <a style="padding: 10px" href="https://space.bilibili.com/393056819" target="_blank" rel="noopener">BiliBili</a>
+        <a href="mailto:a591465908@outlook.com">Mail me</a>
+      </span>
+      &copy; Karobben 2020<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+  <span>
+    <p align = "center">
+      <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+      <span id="busuanzi_container_site_pv">~<span id="busuanzi_value_site_pv"></span>~</span>
+    </p>
+  </span>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  <!--`
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  -->
+  <a class="mobile-nav-link" href="../index.html">Home</a>
+  <a class="mobile-nav-link" href="../R/R-index.html">R</a>
+  <a class="mobile-nav-link" href="../Python/index.html">Python</a>
+  <a class="mobile-nav-link" href="../Linux/index.html">Linux</a>
+  <a class="mobile-nav-link" href="../Bioinfor/index.html">Bio-Protocal</a>
+  <a class="mobile-nav-link" href="../LearnNotes/index.html">Notes</a>
+  <a class="mobile-nav-link" href="../Blog/index.html">Others</a>
+</nav>
+
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+<!--mermaid module-->
+
+  <script src='https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js'></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({theme: 'forest'});
+    }
+  </script>
+
+
+
+<!-- Searche Module-->
+<script src="/js/search.js"></script>
+<script src="/js/load.js"></script>
+<!-- 这里可能有一些其他原来文件里的代码，也可以没有 -->
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>R-riverplot | Karobben</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="R-riverplot">
+<meta property="og:type" content="website">
+<meta property="og:title" content="R-riverplot">
+<meta property="og:url" content="https://karobben.github.io/R/R-riverplot.html">
+<meta property="og:site_name" content="Karobben">
+<meta property="og:description" content="R-riverplot">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://g.yuque.com/gr/latex?N1%252C%20edges#card=math&code=N1%2C%20edges&height=18&width=71">
+<meta property="og:image" content="https://g.yuque.com/gr/latex?x%20%253D%20as.integer(substr(nodes#card=math&code=x%20%3D%20as.integer%28substr%28nodes&height=20&width=211">
+<meta property="og:image" content="https://g.yuque.com/gr/latex?y%20%253D%20as.integer(sapply(substr(nodes#card=math&code=y%20%3D%20as.integer%28sapply%28substr%28nodes&height=20&width=264">
+<meta property="og:image" content="https://g.yuque.com/gr/latex?y%252C%20function(n)%20%7B%20%20%0A%20%20list(col%20%253D%20palette%5Bn%252B1%5D%252C%20lty%20%253D%200%252C%20textcol%20%253D%20%22black%22)%20%20%0A%7D">
+<meta property="article:published_time" content="2020-07-16T07:13:34.119Z">
+<meta property="article:modified_time" content="2020-07-16T07:13:34.119Z">
+<meta property="article:author" content="Karobben">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://g.yuque.com/gr/latex?N1%252C%20edges#card=math&code=N1%2C%20edges&height=18&width=71">
+  
+    <link rel="alternate" href="/atom.xml" title="Karobben" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="img/tag.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+<link rel="stylesheet" href="/css/search.css">
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<script>
+  var _hmt = _hmt || [];
+  (function() {
+    var hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?8442e6ecc87d878298ba7d3bd0a5484c";
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(hm, s);
+  })();
+</script>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header"; style="background:#1B414B;height:150px">
+  <!--div id="banner"></div>-->
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Karobben</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">Karobben Blog</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+          <a id="main-nav-toggle" class="nav-icon"></a>
+          <!-- Header Section Start -->
+  <header id="slider-area">
+    <nav class="navbar navbar-expand-md fixed-top scrolling-navbar bg-white">
+      <div class="container">
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav mr-auto w-100 justify-content-end">
+              <a class="main-nav-link" href="../index.html">Home</a>
+              <a class="main-nav-link" href="../R/R-index.html">R</a>
+              <a class="main-nav-link" href="../Python/index.html">Python</a>
+              <a class="main-nav-link" href="../Linux/index.html">Linux</a>
+              <a class="main-nav-link" href="../Bioinfor/index.html">Bio-Protocal</a>
+              <a class="main-nav-link" href="../LearnNotes/index.html">Notes</a>
+              <a class="main-nav-link" href="../Blog/index.html">Others</a>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!-- Header Section End -->
+
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Looking for Something?"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://karobben.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><div align='right', style='padding-right:160px;padding-top:1px'>
+  
+  <span class="local-search local-search-google local-search-plugin" style=";position:absolute;z-index:2;">
+      <input type="search" placeholder="Looking for Something?" id="local-search-input" class="local-search-input-cls" style="">
+      <div id="local-search-result" class="local-search-result-cls"></div>
+  </span>
+
+
+</div>
+
+<article  id="page-" class="article article-type-page" itemscope itemprop="blogPost">
+<div id="tipue_search_content" style="display: none"></div>
+  <div class="article-meta">
+    <a href="/R/R-riverplot.html" class="article-date">
+  <time datetime="2020-07-16T07:13:34.119Z" itemprop="datePublished">2020-07-16</time>
+</a>
+    
+  </div>
+  <div  class="article-inner">
+    
+    
+      <header class="article-header">
+        <!--
+  
+    <h1 class="article-title" itemprop="name">
+      R-riverplot
+    </h1>
+  
+ -->
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <!-- Go To Top Link -->
+        <div title="Back to Top" class="back-to-top" style="background:salmon">
+  <a href="#"  >
+    <i >Top</i>
+  </a>
+</div>
+<div class="title_index">
+  <ul id="nav">
+   <li>
+     Titles
+     <ul>
+       <!-- Table of Contents -->
+
+  <div id="toc" class="toc-article">
+    <strong class="toc-title">Titles</strong>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#R-riverplot"><span class="toc-number">1.</span> <span class="toc-text">R-riverplot</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#构造连接节点-边-的数据框，采用runif生成模拟数据"><span class="toc-number">2.</span> <span class="toc-text">构造连接节点(边)的数据框，采用runif生成模拟数据</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#实验中每个节点间的连续情况是己知的"><span class="toc-number">3.</span> <span class="toc-text">实验中每个节点间的连续情况是己知的</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#生成一个组1-5与组2-6对应的值数据框"><span class="toc-number">4.</span> <span class="toc-text">生成一个组1-5与组2-6对应的值数据框</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#筛选80-的记录，以免每个点都对应到4个点-可选"><span class="toc-number">5.</span> <span class="toc-text">筛选80%的记录，以免每个点都对应到4个点(可选)</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#获得非冗余结点nodes"><span class="toc-number">6.</span> <span class="toc-text">获得非冗余结点nodes</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#添加x-X为组编号，即列位置"><span class="toc-number">7.</span> <span class="toc-text">添加x: X为组编号，即列位置</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Y为组类型字符，转换为ASCII编号，减65，即为A-B-C-D转换为0-1-2-3数值，即行位置"><span class="toc-number">8.</span> <span class="toc-text">Y为组类型字符，转换为ASCII编号，减65，即为A&#x2F;B&#x2F;C&#x2F;D转换为0&#x2F;1&#x2F;2&#x2F;3数值，即行位置</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#添加行名"><span class="toc-number">9.</span> <span class="toc-text">添加行名</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#添加颜色"><span class="toc-number">10.</span> <span class="toc-text">添加颜色</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#brewer-pal生成柔合色，后面加调淡颜色"><span class="toc-number">11.</span> <span class="toc-text">brewer.pal生成柔合色，后面加调淡颜色</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#对每个节点生成相应的列表格式，颜色col，线条类型lty，文字颜色textcol"><span class="toc-number">12.</span> <span class="toc-text">对每个节点生成相应的列表格式，颜色col，线条类型lty，文字颜色textcol</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#将点、单和样式合并为List，构建riverplot对象"><span class="toc-number">13.</span> <span class="toc-text">将点、单和样式合并为List，构建riverplot对象</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#添加对你属性包括riverplot"><span class="toc-number">14.</span> <span class="toc-text">添加对你属性包括riverplot</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#绘制桑基图，plot-area设置绘图面积，yscale设置Y轴方向缩放"><span class="toc-number">15.</span> <span class="toc-text">绘制桑基图，plot_area设置绘图面积，yscale设置Y轴方向缩放</span></a></li></ol>
+  </div>
+
+<!-- Table of Contents Down-->
+
+     </ul>
+    </li>
+   </ul>
+</div>
+
+
+        <h1 id="R-riverplot"><a href="#R-riverplot" class="headerlink" title="R-riverplot"></a>R-riverplot</h1><p>brary(riverplot)</p>
+<p>#1. 画一个6级能量流动图/桑基图</p>
+<p><a name="e17be30c"></a></p>
+<h1 id="构造连接节点-边-的数据框，采用runif生成模拟数据"><a href="#构造连接节点-边-的数据框，采用runif生成模拟数据" class="headerlink" title="构造连接节点(边)的数据框，采用runif生成模拟数据"></a>构造连接节点(边)的数据框，采用runif生成模拟数据</h1><p><a name="23d3dfda"></a></p>
+<h1 id="实验中每个节点间的连续情况是己知的"><a href="#实验中每个节点间的连续情况是己知的" class="headerlink" title="实验中每个节点间的连续情况是己知的"></a>实验中每个节点间的连续情况是己知的</h1><p><a name="79043749"></a></p>
+<h1 id="生成一个组1-5与组2-6对应的值数据框"><a href="#生成一个组1-5与组2-6对应的值数据框" class="headerlink" title="生成一个组1-5与组2-6对应的值数据框"></a>生成一个组1-5与组2-6对应的值数据框</h1><p>edges = data.frame(N1 = paste0(rep(LETTERS[1:4], each = 4), rep(1:5, each = 16)),<br /><br>N2 = paste0(rep(LETTERS[1:4], 4), rep(2:6, each = 16)),<br /><br>Value = runif(80, min = 2, max = 5) * rep(c(1, 0.8, 0.6, 0.4, 0.3), each = 16),<br /><br>stringsAsFactors = F)</p>
+<p><a name="12cddf0c"></a></p>
+<h1 id="筛选80-的记录，以免每个点都对应到4个点-可选"><a href="#筛选80-的记录，以免每个点都对应到4个点-可选" class="headerlink" title="筛选80%的记录，以免每个点都对应到4个点(可选)"></a>筛选80%的记录，以免每个点都对应到4个点(可选)</h1><p>edges = edges[sample(c(TRUE, FALSE), nrow(edges), replace = TRUE, prob = c(0.8, 0.2)),]<br /><br>head(edges)</p>
+<p><a name="4ee9736e"></a></p>
+<h1 id="获得非冗余结点nodes"><a href="#获得非冗余结点nodes" class="headerlink" title="获得非冗余结点nodes"></a>获得非冗余结点nodes</h1><p>nodes = data.frame(ID = unique(c(edges<img src="https://g.yuque.com/gr/latex?N1%2C%20edges#card=math&code=N1%2C%20edges&height=18&width=71" alt="">)N2)), stringsAsFactors = FALSE)</p>
+<p><a name="2baacf63"></a></p>
+<h1 id="添加x-X为组编号，即列位置"><a href="#添加x-X为组编号，即列位置" class="headerlink" title="添加x: X为组编号，即列位置"></a>添加x: X为组编号，即列位置</h1><p>nodes<img src="https://g.yuque.com/gr/latex?x%20%3D%20as.integer(substr(nodes#card=math&code=x%20%3D%20as.integer%28substr%28nodes&height=20&width=211" alt="">ID, 2, 2))</p>
+<p><a name="2324ee62"></a></p>
+<h1 id="Y为组类型字符，转换为ASCII编号，减65，即为A-B-C-D转换为0-1-2-3数值，即行位置"><a href="#Y为组类型字符，转换为ASCII编号，减65，即为A-B-C-D转换为0-1-2-3数值，即行位置" class="headerlink" title="Y为组类型字符，转换为ASCII编号，减65，即为A/B/C/D转换为0/1/2/3数值，即行位置"></a>Y为组类型字符，转换为ASCII编号，减65，即为A/B/C/D转换为0/1/2/3数值，即行位置</h1><p>nodes<img src="https://g.yuque.com/gr/latex?y%20%3D%20as.integer(sapply(substr(nodes#card=math&code=y%20%3D%20as.integer%28sapply%28substr%28nodes&height=20&width=264" alt="">ID, 1, 1), charToRaw)) - 65</p>
+<p><a name="2faf48ca"></a></p>
+<h1 id="添加行名"><a href="#添加行名" class="headerlink" title="添加行名"></a>添加行名</h1><p>rownames(nodes) = nodes$ID<br /><br>head(nodes)</p>
+<p><a name="95e9696b"></a></p>
+<h1 id="添加颜色"><a href="#添加颜色" class="headerlink" title="添加颜色"></a>添加颜色</h1><p>library(RColorBrewer)</p>
+<p><a name="a3620cd2"></a></p>
+<h1 id="brewer-pal生成柔合色，后面加调淡颜色"><a href="#brewer-pal生成柔合色，后面加调淡颜色" class="headerlink" title="brewer.pal生成柔合色，后面加调淡颜色"></a>brewer.pal生成柔合色，后面加调淡颜色</h1><p>palette = paste0(brewer.pal(4, “Set1”), “60”)</p>
+<p><a name="db6266fa"></a></p>
+<h1 id="对每个节点生成相应的列表格式，颜色col，线条类型lty，文字颜色textcol"><a href="#对每个节点生成相应的列表格式，颜色col，线条类型lty，文字颜色textcol" class="headerlink" title="对每个节点生成相应的列表格式，颜色col，线条类型lty，文字颜色textcol"></a>对每个节点生成相应的列表格式，颜色col，线条类型lty，文字颜色textcol</h1><p>styles = lapply(nodes<img src="https://g.yuque.com/gr/latex?y%2C%20function(n)%20%7B%20%20%0A%20%20list(col%20%3D%20palette%5Bn%2B1%5D%2C%20lty%20%3D%200%2C%20textcol%20%3D%20%22black%22)%20%20%0A%7D" alt="">)%20%20%0Anames(styles)%20%3D%20nodes#card=math&amp;code=y%2C%20function%28n%29%20%7B%20%20%0A%20%20list%28col%20%3D%20palette%5Bn%2B1%5D%2C%20lty%20%3D%200%2C%20textcol%20%3D%20%22black%22%29%20%20%0A%7D%29%20%20%0Anames%28styles%29%20%3D%20nodes&amp;height=20&amp;width=658)ID</p>
+<p><a name="c93c874d"></a></p>
+<h1 id="将点、单和样式合并为List，构建riverplot对象"><a href="#将点、单和样式合并为List，构建riverplot对象" class="headerlink" title="将点、单和样式合并为List，构建riverplot对象"></a>将点、单和样式合并为List，构建riverplot对象</h1><p>rp &lt;- list(nodes = nodes, edges = edges, styles = styles)</p>
+<p><a name="ae03b881"></a></p>
+<h1 id="添加对你属性包括riverplot"><a href="#添加对你属性包括riverplot" class="headerlink" title="添加对你属性包括riverplot"></a>添加对你属性包括riverplot</h1><p>class(rp) &lt;- c(class(rp), “riverplot”)</p>
+<p><a name="09f44fc8"></a></p>
+<h1 id="绘制桑基图，plot-area设置绘图面积，yscale设置Y轴方向缩放"><a href="#绘制桑基图，plot-area设置绘图面积，yscale设置Y轴方向缩放" class="headerlink" title="绘制桑基图，plot_area设置绘图面积，yscale设置Y轴方向缩放"></a>绘制桑基图，plot_area设置绘图面积，yscale设置Y轴方向缩放</h1><p>plot(rp, plot_area = 0.95, yscale=0.06)</p>
+<hr>
+<p>github: <a href="https://github.com/Karobben" target="_blank" rel="noopener">https://github.com/Karobben</a><br>blog: <a href="http://Karobben.github.io">Karobben.github.io</a><br>R 语言画图索引: <a href="https://karobben.github.io/R/R-index.html">https://karobben.github.io/R/R-index.html</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://karobben.github.io/R/R-riverplot.html" data-id="ckcogixof006o2bfc57nu6x99" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">July 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">June 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/07/01/123/">123</a>
+          </li>
+        
+          <li>
+            <a href="/2020/06/30/tmp/">test</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+  <!-- Weather -->
+<div id="weather-view-he" ></div>
+<script>
+WIDGET = {ID: 'HfP68rcshb'};
+</script>
+<script type="text/javascript" src="https://apip.weatherdt.com/view/static/js/r.js?v=1111"></script>
+
+</aside>
+
+          <!-- Weather Plug -->
+        
+        <!--git talk-->
+        <section id="main">
+          <div style='padding-top:10px'>
+  <div style="background:white">
+    <script src="https://utteranc.es/client.js"
+            repo="Karobben/utterances"
+            issue-term="pathname"
+            theme="preferred-color-scheme"
+            crossorigin="anonymous"
+            async>
+    </script>
+  </div>
+</div>
+<!--git talk-->
+  <!-- Link Gitalk 的支持文件  -->
+  <!--
+    <div>
+      <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+      <script src="https://unpkg.com/gitalk@latest/dist/gitalk.min.js"></script>
+      <div id="gitalk-container"></div>     <script type="text/javascript">
+          var gitalk = new Gitalk({
+
+          // gitalk的主要参数
+              clientID: '96c208ade65e80e3aaac',
+              clientSecret: '86e9240674a3815b0ddc31dababdb4998d5562f4',
+              repo: 'OAuth-Application',
+              owner: 'Karobben',
+              admin: ['Karobben'],
+              id:window.location.pathname,
+          });
+          gitalk.render('gitalk-container');
+      </script>
+    </div>
+<!-- Gitalk end -->
+
+        </section>
+        <!-- Gitalk end -->
+
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      <span style="float:right; list-style:none">
+        <a style="padding: 10px" href="https://karobben.github.io/">Blog</a>
+        <a style="padding: 10px" href="https://github.com/Karobben" target="_blank" rel="noopener">GitHub</a>
+        <br>
+        <a style="padding: 10px" href="https://space.bilibili.com/393056819" target="_blank" rel="noopener">BiliBili</a>
+        <a href="mailto:a591465908@outlook.com">Mail me</a>
+      </span>
+      &copy; Karobben 2020<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+  <span>
+    <p align = "center">
+      <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+      <span id="busuanzi_container_site_pv">~<span id="busuanzi_value_site_pv"></span>~</span>
+    </p>
+  </span>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  <!--`
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  -->
+  <a class="mobile-nav-link" href="../index.html">Home</a>
+  <a class="mobile-nav-link" href="../R/R-index.html">R</a>
+  <a class="mobile-nav-link" href="../Python/index.html">Python</a>
+  <a class="mobile-nav-link" href="../Linux/index.html">Linux</a>
+  <a class="mobile-nav-link" href="../Bioinfor/index.html">Bio-Protocal</a>
+  <a class="mobile-nav-link" href="../LearnNotes/index.html">Notes</a>
+  <a class="mobile-nav-link" href="../Blog/index.html">Others</a>
+</nav>
+
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+<!--mermaid module-->
+
+  <script src='https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js'></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({theme: 'forest'});
+    }
+  </script>
+
+
+
+<!-- Searche Module-->
+<script src="/js/search.js"></script>
+<script src="/js/load.js"></script>
+<!-- 这里可能有一些其他原来文件里的代码，也可以没有 -->
+
+  </div>
+</body>
+</html>

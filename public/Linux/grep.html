@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>grep 搜索 | Karobben</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="grep 搜索">
+<meta property="og:type" content="website">
+<meta property="og:title" content="grep 搜索">
+<meta property="og:url" content="https://karobben.github.io/Linux/grep.html">
+<meta property="og:site_name" content="Karobben">
+<meta property="og:description" content="grep 搜索">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://s1.ax1x.com/2020/06/26/NseFc8.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/06/26/Nse9ht.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/06/26/Nsei1f.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/06/26/NsZv0H.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/06/26/NseSAA.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/06/26/NseP9P.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/06/26/NseVBQ.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/06/26/NseptI.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/06/26/NsZx7d.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/06/26/NseEng.png">
+<meta property="article:published_time" content="2020-07-16T07:13:33.581Z">
+<meta property="article:modified_time" content="2020-07-16T07:13:33.581Z">
+<meta property="article:author" content="Karobben">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s1.ax1x.com/2020/06/26/NseFc8.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Karobben" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="img/tag.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+<link rel="stylesheet" href="/css/search.css">
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<script>
+  var _hmt = _hmt || [];
+  (function() {
+    var hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?8442e6ecc87d878298ba7d3bd0a5484c";
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(hm, s);
+  })();
+</script>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header"; style="background:#1B414B;height:150px">
+  <!--div id="banner"></div>-->
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Karobben</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">Karobben Blog</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+          <a id="main-nav-toggle" class="nav-icon"></a>
+          <!-- Header Section Start -->
+  <header id="slider-area">
+    <nav class="navbar navbar-expand-md fixed-top scrolling-navbar bg-white">
+      <div class="container">
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav mr-auto w-100 justify-content-end">
+              <a class="main-nav-link" href="../index.html">Home</a>
+              <a class="main-nav-link" href="../R/R-index.html">R</a>
+              <a class="main-nav-link" href="../Python/index.html">Python</a>
+              <a class="main-nav-link" href="../Linux/index.html">Linux</a>
+              <a class="main-nav-link" href="../Bioinfor/index.html">Bio-Protocal</a>
+              <a class="main-nav-link" href="../LearnNotes/index.html">Notes</a>
+              <a class="main-nav-link" href="../Blog/index.html">Others</a>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!-- Header Section End -->
+
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Looking for Something?"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://karobben.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><div align='right', style='padding-right:160px;padding-top:1px'>
+  
+  <span class="local-search local-search-google local-search-plugin" style=";position:absolute;z-index:2;">
+      <input type="search" placeholder="Looking for Something?" id="local-search-input" class="local-search-input-cls" style="">
+      <div id="local-search-result" class="local-search-result-cls"></div>
+  </span>
+
+
+</div>
+
+<article  id="page-" class="article article-type-page" itemscope itemprop="blogPost">
+<div id="tipue_search_content" style="display: none"></div>
+  <div class="article-meta">
+    <a href="/Linux/grep.html" class="article-date">
+  <time datetime="2020-07-16T07:13:33.581Z" itemprop="datePublished">2020-07-16</time>
+</a>
+    
+  </div>
+  <div  class="article-inner">
+    
+    
+      <header class="article-header">
+        <!--
+  
+    <h1 class="article-title" itemprop="name">
+      grep 搜索
+    </h1>
+  
+ -->
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <!-- Go To Top Link -->
+        <div title="Back to Top" class="back-to-top" style="background:salmon">
+  <a href="#"  >
+    <i >Top</i>
+  </a>
+</div>
+<div class="title_index">
+  <ul id="nav">
+   <li>
+     Titles
+     <ul>
+       <!-- Table of Contents -->
+
+  <div id="toc" class="toc-article">
+    <strong class="toc-title">Titles</strong>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#grep-搜索"><span class="toc-number">1.</span> <span class="toc-text">grep 搜索</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#1-快速上手"><span class="toc-number">2.</span> <span class="toc-text">1. 快速上手</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-常用"><span class="toc-number">3.</span> <span class="toc-text">2. 常用</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-快速应用："><span class="toc-number">4.</span> <span class="toc-text">3. 快速应用：</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#3-1，获取所有的fasta-ID"><span class="toc-number">4.1.</span> <span class="toc-text">3.1，获取所有的fasta ID</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-2，获取杠内ID"><span class="toc-number">4.2.</span> <span class="toc-text">3.2，获取杠内ID</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-3，通过grep-多项匹配，获取前两个ID及其序列"><span class="toc-number">4.3.</span> <span class="toc-text">3.3，通过grep 多项匹配，获取前两个ID及其序列</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-其他详细请看："><span class="toc-number">5.</span> <span class="toc-text">4. 其他详细请看：</span></a></li></ol>
+  </div>
+
+<!-- Table of Contents Down-->
+
+     </ul>
+    </li>
+   </ul>
+</div>
+
+
+        <h1 id="grep-搜索"><a href="#grep-搜索" class="headerlink" title="grep 搜索"></a>grep 搜索</h1><div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">grep</span><br><span class="line"><span class="comment">#Usage: grep [OPTION]... PATTERN [FILE]...</span></span><br><span class="line"><span class="comment">#Try 'grep --help' for more information.</span></span><br></pre></td></tr></table></figure></div>
+<p>**<br><a name="90laC"></a></p>
+<h1 id="1-快速上手"><a href="#1-快速上手" class="headerlink" title="1. 快速上手"></a>1. 快速上手</h1><div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 创建测试文件</span></span><br><span class="line"><span class="built_in">echo</span> -e <span class="string">"ab\na\nb\nc\nd\ne\nf\ng\nA\nB\nC"</span> &gt; test.txt</span><br><span class="line"><span class="comment"># 搜索存在'a'的内容</span></span><br><span class="line">grep a test.txt</span><br></pre></td></tr></table></figure></div>
+
+<p><img src="https://s1.ax1x.com/2020/06/26/NseFc8.png" alt="NseFc8.png"></p>
+<p><a name="HflCw"></a></p>
+<h1 id="2-常用"><a href="#2-常用" class="headerlink" title="2. 常用"></a>2. 常用</h1><p>$gr</p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># "."模糊匹配</span></span><br><span class="line">grep a. test.txt</span><br></pre></td></tr></table></figure></div>
+<p><img src="https://s1.ax1x.com/2020/06/26/Nse9ht.png" alt="Nse9ht.png"></p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 显示所在行</span></span><br><span class="line">grep -n a test.txt</span><br></pre></td></tr></table></figure></div>
+<p><img src="https://s1.ax1x.com/2020/06/26/Nsei1f.png" alt="Nsei1f.png"></p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 输出匹配次数(多少行)</span></span><br><span class="line">grep -c a test.txt</span><br></pre></td></tr></table></figure></div>
+<p><img src="https://s1.ax1x.com/2020/06/26/NsZv0H.png" alt="NsZv0H.png"></p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 忽略大小写</span></span><br><span class="line">grep -i a test.txt</span><br></pre></td></tr></table></figure></div>
+<p><img src="https://s1.ax1x.com/2020/06/26/NseSAA.png" alt="NseSAA.png"></p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#多项匹配: "|" 分隔开多选必配项。注意，如果我没记错的话，最多可同时匹配1000项</span></span><br><span class="line">grep -E <span class="string">'a|b'</span> test.txt</span><br></pre></td></tr></table></figure></div>
+<p><img src="https://s1.ax1x.com/2020/06/26/NseP9P.png" alt="NseP9P.png"></p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#打印匹配项的上下一行或多行</span></span><br><span class="line">grep -nA 1 A test.txt <span class="comment"># 等同于 grep -n -A 1  A test.txt， -n 用于显示行数</span></span><br><span class="line">grep -nB 1  A test.txt <span class="comment"># 显示匹配的上一行</span></span><br><span class="line">grep -nA 1 -B 1  A test.txt <span class="comment"># 同时显示匹配的上下两行</span></span><br></pre></td></tr></table></figure></div>
+<p><img src="https://s1.ax1x.com/2020/06/26/NseVBQ.png" alt="NseVBQ.png"><br><a name="pFQtn"></a></p>
+<h1 id="3-快速应用："><a href="#3-快速应用：" class="headerlink" title="3. 快速应用："></a>3. 快速应用：</h1><p>抓取fasta序列：<br />测试文件：<a href="https://www.yuque.com/attachments/yuque/0/2020/txt/691897/1581071887664-9edb6585-1fc9-4bf3-b5b4-181123b53c33.txt?_lake_card=%7B%22uid%22%3A%221577264129011-0%22%2C%22src%22%3A%22https%3A%2F%2Fwww.yuque.com%2Fattachments%2Fyuque%2F0%2F2020%2Ftxt%2F691897%2F1581071887664-9edb6585-1fc9-4bf3-b5b4-181123b53c33.txt%22%2C%22name%22%3A%22test.fa.txt%22%2C%22size%22%3A6581%2C%22type%22%3A%22text%2Fplain%22%2C%22ext%22%3A%22txt%22%2C%22progress%22%3A%7B%22percent%22%3A99%7D%2C%22status%22%3A%22done%22%2C%22percent%22%3A0%2C%22id%22%3A%22FBFrY%22%2C%22card%22%3A%22file%22%7D" target="_blank" rel="noopener">test.fa.txt</a><br />首先，把fasta文件规整成一行ID，一行序列格式。</p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#通过一系列骚操作，把多行序列转换成单行</span></span><br><span class="line">cat test.fa.txt | tr <span class="string">'\n'</span> <span class="string">'#'</span>| sed <span class="string">'s/#&gt;/\n&gt;/g'</span>|sed <span class="string">'s/#/\n/;s/#//g'</span> &gt; test.fa</span><br></pre></td></tr></table></figure></div>
+
+<p><a name="PfuOk"></a></p>
+<h2 id="3-1，获取所有的fasta-ID"><a href="#3-1，获取所有的fasta-ID" class="headerlink" title="3.1，获取所有的fasta ID"></a>3.1，获取所有的fasta ID</h2><div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">grep <span class="string">"&gt;"</span> test.fa</span><br></pre></td></tr></table></figure></div>
+<p><img src="https://s1.ax1x.com/2020/06/26/NseptI.png" alt="NseptI.png"></p>
+<p><a name="B2a92"></a></p>
+<h2 id="3-2，获取杠内ID"><a href="#3-2，获取杠内ID" class="headerlink" title="3.2，获取杠内ID"></a>3.2，获取杠内ID</h2><div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">grep <span class="string">"&gt;"</span> test.fa| awk -F\| <span class="string">'&#123;print $2&#125;'</span></span><br></pre></td></tr></table></figure></div>
+<p><img src="https://s1.ax1x.com/2020/06/26/NsZx7d.png" alt="NsZx7d.png"></p>
+<p><a name="frpmZ"></a></p>
+<h2 id="3-3，通过grep-多项匹配，获取前两个ID及其序列"><a href="#3-3，通过grep-多项匹配，获取前两个ID及其序列" class="headerlink" title="3.3，通过grep 多项匹配，获取前两个ID及其序列"></a>3.3，通过grep 多项匹配，获取前两个ID及其序列</h2><div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">grep -EA 1 $(grep <span class="string">"&gt;"</span> test.fa| awk -F\| <span class="string">'&#123;print $2&#125;'</span>|head -n 2| tr <span class="string">'\n'</span> <span class="string">'|'</span>|sed <span class="string">'s/^/"|/;s/$/"/'</span>) test.fa</span><br><span class="line"><span class="comment">#or</span></span><br><span class="line">grep -EA 1 $(grep <span class="string">"&gt;"</span> test.fa|\</span><br><span class="line">awk -F\| <span class="string">'&#123;print $2&#125;'</span>|\</span><br><span class="line">head -n 2|\</span><br><span class="line">tr <span class="string">'\n'</span> <span class="string">'|'</span>|\</span><br><span class="line">sed <span class="string">'s/^/"|/;s/$/"/'</span>) test.fa</span><br><span class="line"></span><br><span class="line"><span class="string">''</span><span class="string">'</span></span><br><span class="line"><span class="string">其中，$(grep "&gt;" test.fa| awk -F\| '</span>&#123;<span class="built_in">print</span> <span class="variable">$2</span>&#125;<span class="string">'|head -n 2| tr '</span>\n<span class="string">' '</span>|<span class="string">'|sed '</span>s/^/<span class="string">"|/;s/$/"</span>/<span class="string">') 的结果为</span></span><br><span class="line"><span class="string">的结果为：</span></span><br><span class="line"><span class="string">"|Q6GZX4|Q6GZX3|"</span></span><br><span class="line"><span class="string">因此可以直接被 grep -E 参数识别</span></span><br><span class="line"><span class="string">'</span><span class="string">''</span></span><br></pre></td></tr></table></figure></div>
+
+<p><img src="https://s1.ax1x.com/2020/06/26/NseEng.png" alt="NseEng.png"></p>
+<p><a name="t84Jr"></a></p>
+<h1 id="4-其他详细请看："><a href="#4-其他详细请看：" class="headerlink" title="4. 其他详细请看："></a>4. 其他详细请看：</h1><p>参数解释：<a href="https://www.runoob.com/linux/linux-comm-grep.html" target="_blank" rel="noopener">https://www.runoob.com/linux/linux-comm-grep.html</a><br />复杂正则匹配：<a href="https://www.cnblogs.com/keithtt/p/6820540.html" target="_blank" rel="noopener">https://www.cnblogs.com/keithtt/p/6820540.html</a></p>
+<hr>
+<p>github: <a href="https://github.com/Karobben" target="_blank" rel="noopener">https://github.com/Karobben</a><br>blog: <a href="http://Karobben.github.io">Karobben.github.io</a><br>R 语言画图索引: <a href="https://karobben.github.io/R/R-index.html">https://karobben.github.io/R/R-index.html</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://karobben.github.io/Linux/grep.html" data-id="ckcogixm4004p2bfc839yh0aq" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">July 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">June 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/07/01/123/">123</a>
+          </li>
+        
+          <li>
+            <a href="/2020/06/30/tmp/">test</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+  <!-- Weather -->
+<div id="weather-view-he" ></div>
+<script>
+WIDGET = {ID: 'HfP68rcshb'};
+</script>
+<script type="text/javascript" src="https://apip.weatherdt.com/view/static/js/r.js?v=1111"></script>
+
+</aside>
+
+          <!-- Weather Plug -->
+        
+        <!--git talk-->
+        <section id="main">
+          <div style='padding-top:10px'>
+  <div style="background:white">
+    <script src="https://utteranc.es/client.js"
+            repo="Karobben/utterances"
+            issue-term="pathname"
+            theme="preferred-color-scheme"
+            crossorigin="anonymous"
+            async>
+    </script>
+  </div>
+</div>
+<!--git talk-->
+  <!-- Link Gitalk 的支持文件  -->
+  <!--
+    <div>
+      <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+      <script src="https://unpkg.com/gitalk@latest/dist/gitalk.min.js"></script>
+      <div id="gitalk-container"></div>     <script type="text/javascript">
+          var gitalk = new Gitalk({
+
+          // gitalk的主要参数
+              clientID: '96c208ade65e80e3aaac',
+              clientSecret: '86e9240674a3815b0ddc31dababdb4998d5562f4',
+              repo: 'OAuth-Application',
+              owner: 'Karobben',
+              admin: ['Karobben'],
+              id:window.location.pathname,
+          });
+          gitalk.render('gitalk-container');
+      </script>
+    </div>
+<!-- Gitalk end -->
+
+        </section>
+        <!-- Gitalk end -->
+
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      <span style="float:right; list-style:none">
+        <a style="padding: 10px" href="https://karobben.github.io/">Blog</a>
+        <a style="padding: 10px" href="https://github.com/Karobben" target="_blank" rel="noopener">GitHub</a>
+        <br>
+        <a style="padding: 10px" href="https://space.bilibili.com/393056819" target="_blank" rel="noopener">BiliBili</a>
+        <a href="mailto:a591465908@outlook.com">Mail me</a>
+      </span>
+      &copy; Karobben 2020<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+  <span>
+    <p align = "center">
+      <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+      <span id="busuanzi_container_site_pv">~<span id="busuanzi_value_site_pv"></span>~</span>
+    </p>
+  </span>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  <!--`
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  -->
+  <a class="mobile-nav-link" href="../index.html">Home</a>
+  <a class="mobile-nav-link" href="../R/R-index.html">R</a>
+  <a class="mobile-nav-link" href="../Python/index.html">Python</a>
+  <a class="mobile-nav-link" href="../Linux/index.html">Linux</a>
+  <a class="mobile-nav-link" href="../Bioinfor/index.html">Bio-Protocal</a>
+  <a class="mobile-nav-link" href="../LearnNotes/index.html">Notes</a>
+  <a class="mobile-nav-link" href="../Blog/index.html">Others</a>
+</nav>
+
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+<!--mermaid module-->
+
+  <script src='https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js'></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({theme: 'forest'});
+    }
+  </script>
+
+
+
+<!-- Searche Module-->
+<script src="/js/search.js"></script>
+<script src="/js/load.js"></script>
+<!-- 这里可能有一些其他原来文件里的代码，也可以没有 -->
+
+  </div>
+</body>
+</html>

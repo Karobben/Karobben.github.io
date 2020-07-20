@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>How to Started With R | Karobben</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="How to Started With R">
+<meta property="og:type" content="website">
+<meta property="og:title" content="How to Started With R">
+<meta property="og:url" content="https://karobben.github.io/R/Start.html">
+<meta property="og:site_name" content="Karobben">
+<meta property="og:description" content="How to Started With R">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://s1.ax1x.com/2020/06/03/taB2CV.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/06/03/taYsKI.md.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/06/03/tat8Jg.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/06/03/taY6qP.md.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/06/03/ta3YtJ.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/06/03/ta3th9.md.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/06/03/ta3UpR.png">
+<meta property="article:published_time" content="2020-07-16T07:13:34.146Z">
+<meta property="article:modified_time" content="2020-07-16T07:13:34.146Z">
+<meta property="article:author" content="Karobben">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s1.ax1x.com/2020/06/03/taB2CV.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Karobben" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="img/tag.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+<link rel="stylesheet" href="/css/search.css">
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<script>
+  var _hmt = _hmt || [];
+  (function() {
+    var hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?8442e6ecc87d878298ba7d3bd0a5484c";
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(hm, s);
+  })();
+</script>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header"; style="background:#1B414B;height:150px">
+  <!--div id="banner"></div>-->
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Karobben</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">Karobben Blog</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+          <a id="main-nav-toggle" class="nav-icon"></a>
+          <!-- Header Section Start -->
+  <header id="slider-area">
+    <nav class="navbar navbar-expand-md fixed-top scrolling-navbar bg-white">
+      <div class="container">
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav mr-auto w-100 justify-content-end">
+              <a class="main-nav-link" href="../index.html">Home</a>
+              <a class="main-nav-link" href="../R/R-index.html">R</a>
+              <a class="main-nav-link" href="../Python/index.html">Python</a>
+              <a class="main-nav-link" href="../Linux/index.html">Linux</a>
+              <a class="main-nav-link" href="../Bioinfor/index.html">Bio-Protocal</a>
+              <a class="main-nav-link" href="../LearnNotes/index.html">Notes</a>
+              <a class="main-nav-link" href="../Blog/index.html">Others</a>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!-- Header Section End -->
+
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Looking for Something?"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://karobben.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><div align='right', style='padding-right:160px;padding-top:1px'>
+  
+  <span class="local-search local-search-google local-search-plugin" style=";position:absolute;z-index:2;">
+      <input type="search" placeholder="Looking for Something?" id="local-search-input" class="local-search-input-cls" style="">
+      <div id="local-search-result" class="local-search-result-cls"></div>
+  </span>
+
+
+</div>
+
+<article  id="page-" class="article article-type-page" itemscope itemprop="blogPost">
+<div id="tipue_search_content" style="display: none"></div>
+  <div class="article-meta">
+    <a href="/R/Start.html" class="article-date">
+  <time datetime="2020-07-16T07:13:34.146Z" itemprop="datePublished">2020-07-16</time>
+</a>
+    
+  </div>
+  <div  class="article-inner">
+    
+    
+      <header class="article-header">
+        <!--
+  
+    <h1 class="article-title" itemprop="name">
+      How to Started With R
+    </h1>
+  
+ -->
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <!-- Go To Top Link -->
+        <div title="Back to Top" class="back-to-top" style="background:salmon">
+  <a href="#"  >
+    <i >Top</i>
+  </a>
+</div>
+<div class="title_index">
+  <ul id="nav">
+   <li>
+     Titles
+     <ul>
+       <!-- Table of Contents -->
+
+  <div id="toc" class="toc-article">
+    <strong class="toc-title">Titles</strong>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#How-to-Started-With-R"><span class="toc-number">1.</span> <span class="toc-text">How to Started With R</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#实验楼"><span class="toc-number">2.</span> <span class="toc-text">实验楼</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#界面"><span class="toc-number">2.1.</span> <span class="toc-text">界面</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#DataCampe"><span class="toc-number">3.</span> <span class="toc-text">DataCampe</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#练习界面"><span class="toc-number">3.1.</span> <span class="toc-text">练习界面</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#下一题"><span class="toc-number">3.2.</span> <span class="toc-text">下一题</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#code-academy"><span class="toc-number">4.</span> <span class="toc-text">code academy</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#主页"><span class="toc-number">4.1.</span> <span class="toc-text">主页</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#第一页"><span class="toc-number">4.2.</span> <span class="toc-text">第一页</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#学习界面"><span class="toc-number">4.3.</span> <span class="toc-text">学习界面</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#swirl"><span class="toc-number">5.</span> <span class="toc-text">swirl</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#開始學習！"><span class="toc-number">5.1.</span> <span class="toc-text">開始學習！</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#終於開始了，2333"><span class="toc-number">5.1.1.</span> <span class="toc-text">終於開始了，2333</span></a></li></ol></li></ol></li></ol>
+  </div>
+
+<!-- Table of Contents Down-->
+
+     </ul>
+    </li>
+   </ul>
+</div>
+
+
+        <h1 id="How-to-Started-With-R"><a href="#How-to-Started-With-R" class="headerlink" title="How to Started With R"></a>How to Started With R</h1><p>R语言新手快速入门起步</p>
+<h1 id="实验楼"><a href="#实验楼" class="headerlink" title="实验楼"></a>实验楼</h1><p>國內網站， 所以全是中文， 並且速度快。 新手超級友好！<br>缺點： 免費課程較少（5個，鏈接列在後面了）<br>不過， 免費的， 對與新手入門來說， 還是夠了。！（反正都是， 從入門，到放棄 23333）<br>並且基礎的， 機器學習入門，也有。所以還是蠻OK的，首推</p>
+<h2 id="界面"><a href="#界面" class="headerlink" title="界面"></a>界面</h2><p>實驗樓界面比較簡潔。<br>左邊是介紹， 和練習用的代碼<br>右邊是一個完全的， linux 圖形虛擬桌面。<br>好處就是， 他是一個完全的linux圖形界面系統<br>壞處就是， 應爲是基於瀏覽器，所以是有些快捷鍵無法使用。<br>此外，就是比較浪費，網絡， 計算機的性能， 反應較慢。<br>並且無法檢測代碼對錯進行打分評價。<br>不過因此， 看見太簡單的教程也可以直接跳過，避免冗餘的重複練習。<br><a href="https://imgchr.com/i/taB2CV" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2020/06/03/taB2CV.png" alt="taB2CV.png"></a></p>
+<p>免费课程列表：</p>
+<ol>
+<li><a href="https://www.shiyanlou.com/courses/855" target="_blank" rel="noopener">R 语言基础入门</a></li>
+<li><a href="https://www.shiyanlou.com/courses/867" target="_blank" rel="noopener">R 语言高级数据管理</a></li>
+<li><a href="https://www.shiyanlou.com/courses/882" target="_blank" rel="noopener">R 语言英国房屋价格建模预测</a></li>
+<li><a href="https://www.shiyanlou.com/courses/887" target="_blank" rel="noopener">R 语言序列数据挖掘</a></li>
+<li><a href="https://www.shiyanlou.com/courses/873" target="_blank" rel="noopener">R 语言进行商业问卷分析</a></li>
+</ol>
+<h1 id="DataCampe"><a href="#DataCampe" class="headerlink" title="DataCampe"></a>DataCampe</h1><p>虽然是英文界面， 国外服务器， 但是速度还是挺快的。 比之后测试的 CodaAcademy 要好很多。 而且输入界面，更像Rstudio</p>
+<p><a href="https://campus.datacamp.com/" target="_blank" rel="noopener">首页</a><br><a href="https://imgchr.com/i/taYsKI" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2020/06/03/taYsKI.md.png" alt="taYsKI.md.png"></a></p>
+<h2 id="练习界面"><a href="#练习界面" class="headerlink" title="练习界面"></a>练习界面</h2><p>分区如下图所示， 输入代码后， 按输入区的submit 提交即可下一题<br><a href="https://imgchr.com/i/tat8Jg" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2020/06/03/tat8Jg.png" alt="tat8Jg.png"></a></p>
+<h2 id="下一题"><a href="#下一题" class="headerlink" title="下一题"></a>下一题</h2><p><a href="https://imgchr.com/i/taY6qP" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2020/06/03/taY6qP.md.png" alt="taY6qP.md.png"></a></p>
+<h1 id="code-academy"><a href="#code-academy" class="headerlink" title="code academy"></a>code academy</h1><p>Website: <a href="https://www.codecademy.com/courses/learn-r" target="_blank" rel="noopener">CodeAcademy</a></p>
+<h2 id="主页"><a href="#主页" class="headerlink" title="主页"></a>主页</h2><p><img src="https://s1.ax1x.com/2020/06/03/ta3YtJ.png" alt="ta3YtJ.png"></p>
+<h2 id="第一页"><a href="#第一页" class="headerlink" title="第一页"></a>第一页</h2><p><a href="https://imgchr.com/i/ta3th9" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2020/06/03/ta3th9.md.png" alt="ta3th9.md.png"></a></p>
+<h2 id="学习界面"><a href="#学习界面" class="headerlink" title="学习界面"></a>学习界面</h2><p><img src="https://s1.ax1x.com/2020/06/03/ta3UpR.png" alt="ta3UpR.png"></p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="R"><figure class="iseeu highlight /r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">12</span>+<span class="number">3</span></span><br></pre></td></tr></table></figure></div>
+
+<p>网速略慢。</p>
+<h1 id="swirl"><a href="#swirl" class="headerlink" title="swirl"></a>swirl</h1><p>Learn R in R</p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="R"><figure class="iseeu highlight /r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">install.packages(<span class="string">"swirl"</span>)</span><br><span class="line"><span class="keyword">library</span>(swirl)</span><br><span class="line">swirl()</span><br></pre></td></tr></table></figure></div>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">| Welcome to swirl! Please sign in. If you&#39;ve been here before, use the same</span><br><span class="line">| name as you did then. If you are new, call yourself something unique.</span><br><span class="line"></span><br><span class="line">What shall I call you?</span><br></pre></td></tr></table></figure></div>
+<p>我很皮的输入<code>papa</code> /滑稽</p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">| Thanks, papa. Let&#39;s cover a couple of quick housekeeping items before we</span><br><span class="line">| begin our first lesson. First of all, you should know that when you see</span><br><span class="line">| &#39;...&#39;, that means you should press Enter when you are done reading and ready</span><br><span class="line">| to continue.</span><br><span class="line"></span><br><span class="line">...  &lt;-- That&#39;s your cue to press Enter to continue</span><br></pre></td></tr></table></figure></div>
+
+<p>更具指引， 你將開始下一個課程， 然後選擇他：</p>
+<h2 id="開始學習！"><a href="#開始學習！" class="headerlink" title="開始學習！"></a>開始學習！</h2><p>###　一大波文字說明即將到來， 2333</p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">|                                                                      |   0%</span><br><span class="line"></span><br><span class="line">| The simplest and most common data structure in R is the vector.</span><br><span class="line"></span><br><span class="line">...</span><br><span class="line"></span><br><span class="line"> |&#x3D;&#x3D;                                                                    |   3%</span><br><span class="line">| Vectors come in two different flavors: atomic vectors and lists. An atomic</span><br><span class="line">| vector contains exactly one data type, whereas a list may contain multiple</span><br><span class="line">| data types. We&#39;ll explore atomic vectors further before we get to lists.</span><br><span class="line"></span><br><span class="line">...</span><br><span class="line"></span><br><span class="line"> |&#x3D;&#x3D;&#x3D;&#x3D;                                                                  |   5%</span><br><span class="line">| In previous lessons, we dealt entirely with numeric vectors, which are one</span><br><span class="line">| type of atomic vector. Other types of atomic vectors include logical,</span><br><span class="line">| character, integer, and complex. In this lesson, we&#39;ll take a closer look at</span><br><span class="line">| logical and character vectors.</span><br></pre></td></tr></table></figure></div>
+<h3 id="終於開始了，2333"><a href="#終於開始了，2333" class="headerlink" title="終於開始了，2333"></a>終於開始了，2333</h3><div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="R"><figure class="iseeu highlight /r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">| First, create a numeric vector num_vect that contains the values <span class="number">0.5</span>, <span class="number">55</span>,</span><br><span class="line">| -<span class="number">10</span>, and <span class="number">6.</span></span><br></pre></td></tr></table></figure></div>
+<p>輸入 <code>0.5</code></p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">[1] 0.5</span><br><span class="line"></span><br><span class="line">| You almost had it, but not quite. Try again. Or, type info() for more</span><br><span class="line">| options.</span><br><span class="line"></span><br><span class="line">| Recall that the c() function is used for creating a vector. If you forget how</span><br><span class="line">| to use it, use ?c to access the help file. Don&#39;t forget to assign the result</span><br><span class="line">| to a new variable called num_vect.</span><br><span class="line"></span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure></div>
+
+<p>ummm， 我覺得相對於來學R， 這個更適合用來學英語， 哈哈哈哈哈</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://karobben.github.io/R/Start.html" data-id="ckcogixog006r2bfch9co7dcp" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">July 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">June 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/07/01/123/">123</a>
+          </li>
+        
+          <li>
+            <a href="/2020/06/30/tmp/">test</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+  <!-- Weather -->
+<div id="weather-view-he" ></div>
+<script>
+WIDGET = {ID: 'HfP68rcshb'};
+</script>
+<script type="text/javascript" src="https://apip.weatherdt.com/view/static/js/r.js?v=1111"></script>
+
+</aside>
+
+          <!-- Weather Plug -->
+        
+        <!--git talk-->
+        <section id="main">
+          <div style='padding-top:10px'>
+  <div style="background:white">
+    <script src="https://utteranc.es/client.js"
+            repo="Karobben/utterances"
+            issue-term="pathname"
+            theme="preferred-color-scheme"
+            crossorigin="anonymous"
+            async>
+    </script>
+  </div>
+</div>
+<!--git talk-->
+  <!-- Link Gitalk 的支持文件  -->
+  <!--
+    <div>
+      <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+      <script src="https://unpkg.com/gitalk@latest/dist/gitalk.min.js"></script>
+      <div id="gitalk-container"></div>     <script type="text/javascript">
+          var gitalk = new Gitalk({
+
+          // gitalk的主要参数
+              clientID: '96c208ade65e80e3aaac',
+              clientSecret: '86e9240674a3815b0ddc31dababdb4998d5562f4',
+              repo: 'OAuth-Application',
+              owner: 'Karobben',
+              admin: ['Karobben'],
+              id:window.location.pathname,
+          });
+          gitalk.render('gitalk-container');
+      </script>
+    </div>
+<!-- Gitalk end -->
+
+        </section>
+        <!-- Gitalk end -->
+
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      <span style="float:right; list-style:none">
+        <a style="padding: 10px" href="https://karobben.github.io/">Blog</a>
+        <a style="padding: 10px" href="https://github.com/Karobben" target="_blank" rel="noopener">GitHub</a>
+        <br>
+        <a style="padding: 10px" href="https://space.bilibili.com/393056819" target="_blank" rel="noopener">BiliBili</a>
+        <a href="mailto:a591465908@outlook.com">Mail me</a>
+      </span>
+      &copy; Karobben 2020<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+  <span>
+    <p align = "center">
+      <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+      <span id="busuanzi_container_site_pv">~<span id="busuanzi_value_site_pv"></span>~</span>
+    </p>
+  </span>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  <!--`
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  -->
+  <a class="mobile-nav-link" href="../index.html">Home</a>
+  <a class="mobile-nav-link" href="../R/R-index.html">R</a>
+  <a class="mobile-nav-link" href="../Python/index.html">Python</a>
+  <a class="mobile-nav-link" href="../Linux/index.html">Linux</a>
+  <a class="mobile-nav-link" href="../Bioinfor/index.html">Bio-Protocal</a>
+  <a class="mobile-nav-link" href="../LearnNotes/index.html">Notes</a>
+  <a class="mobile-nav-link" href="../Blog/index.html">Others</a>
+</nav>
+
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+<!--mermaid module-->
+
+  <script src='https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js'></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({theme: 'forest'});
+    }
+  </script>
+
+
+
+<!-- Searche Module-->
+<script src="/js/search.js"></script>
+<script src="/js/load.js"></script>
+<!-- 这里可能有一些其他原来文件里的代码，也可以没有 -->
+
+  </div>
+</body>
+</html>

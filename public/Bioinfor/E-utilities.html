@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>Entrez Direct: E-utilities on the UNIX Command Line | Karobben</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Entrez Direct: E-utilities on the UNIX Command Line">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Entrez Direct: E-utilities on the UNIX Command Line">
+<meta property="og:url" content="https://karobben.github.io/Bioinfor/E-utilities.html">
+<meta property="og:site_name" content="Karobben">
+<meta property="og:description" content="Entrez Direct: E-utilities on the UNIX Command Line">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-07-16T07:13:32.987Z">
+<meta property="article:modified_time" content="2020-07-16T07:13:32.987Z">
+<meta property="article:author" content="Karobben">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Karobben" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="img/tag.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+<link rel="stylesheet" href="/css/search.css">
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<script>
+  var _hmt = _hmt || [];
+  (function() {
+    var hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?8442e6ecc87d878298ba7d3bd0a5484c";
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(hm, s);
+  })();
+</script>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header"; style="background:#1B414B;height:150px">
+  <!--div id="banner"></div>-->
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Karobben</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">Karobben Blog</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+          <a id="main-nav-toggle" class="nav-icon"></a>
+          <!-- Header Section Start -->
+  <header id="slider-area">
+    <nav class="navbar navbar-expand-md fixed-top scrolling-navbar bg-white">
+      <div class="container">
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav mr-auto w-100 justify-content-end">
+              <a class="main-nav-link" href="../index.html">Home</a>
+              <a class="main-nav-link" href="../R/R-index.html">R</a>
+              <a class="main-nav-link" href="../Python/index.html">Python</a>
+              <a class="main-nav-link" href="../Linux/index.html">Linux</a>
+              <a class="main-nav-link" href="../Bioinfor/index.html">Bio-Protocal</a>
+              <a class="main-nav-link" href="../LearnNotes/index.html">Notes</a>
+              <a class="main-nav-link" href="../Blog/index.html">Others</a>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!-- Header Section End -->
+
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Looking for Something?"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://karobben.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><div align='right', style='padding-right:160px;padding-top:1px'>
+  
+  <span class="local-search local-search-google local-search-plugin" style=";position:absolute;z-index:2;">
+      <input type="search" placeholder="Looking for Something?" id="local-search-input" class="local-search-input-cls" style="">
+      <div id="local-search-result" class="local-search-result-cls"></div>
+  </span>
+
+
+</div>
+
+<article  id="page-" class="article article-type-page" itemscope itemprop="blogPost">
+<div id="tipue_search_content" style="display: none"></div>
+  <div class="article-meta">
+    <a href="/Bioinfor/E-utilities.html" class="article-date">
+  <time datetime="2020-07-16T07:13:32.987Z" itemprop="datePublished">2020-07-16</time>
+</a>
+    
+  </div>
+  <div  class="article-inner">
+    
+    
+      <header class="article-header">
+        <!--
+  
+    <h1 class="article-title" itemprop="name">
+      Entrez Direct: E-utilities on the UNIX Command Line
+    </h1>
+  
+ -->
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <!-- Go To Top Link -->
+        <div title="Back to Top" class="back-to-top" style="background:salmon">
+  <a href="#"  >
+    <i >Top</i>
+  </a>
+</div>
+<div class="title_index">
+  <ul id="nav">
+   <li>
+     Titles
+     <ul>
+       <!-- Table of Contents -->
+
+  <div id="toc" class="toc-article">
+    <strong class="toc-title">Titles</strong>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Entrez-Direct-E-utilities-on-the-UNIX-Command-Line"><span class="toc-number">1.</span> <span class="toc-text">Entrez Direct: E-utilities on the UNIX Command Line</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Install"><span class="toc-number">2.</span> <span class="toc-text">Install</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Cookbook"><span class="toc-number">3.</span> <span class="toc-text">Cookbook</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Best-Practices-for-EDirect"><span class="toc-number">3.1.</span> <span class="toc-text">Best Practices for EDirect:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#EDirect-Scripts"><span class="toc-number">3.2.</span> <span class="toc-text">EDirect Scripts</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-Protein"><span class="toc-number">3.3.</span> <span class="toc-text">1. Protein</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-taxids-of-taxonomy"><span class="toc-number">3.4.</span> <span class="toc-text">2. taxids of taxonomy</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-SRA-from-BioProject"><span class="toc-number">3.5.</span> <span class="toc-text">3. SRA from BioProject</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-Get-all-SRA-for-a-BioProject"><span class="toc-number">3.5.1.</span> <span class="toc-text">3.1 Get all SRA for a BioProject</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-Get-latitiude-and-longitude-for-SRA-Datasets-e-g-outbreaks-and-metagenomes"><span class="toc-number">3.5.2.</span> <span class="toc-text">3.2 Get latitiude and longitude for SRA Datasets (e.g. outbreaks and metagenomes)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-SRA-sizes"><span class="toc-number">3.5.3.</span> <span class="toc-text">3.3 SRA sizes</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-Gene"><span class="toc-number">3.6.</span> <span class="toc-text">4 Gene</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-1-Gene-Aliases"><span class="toc-number">3.6.1.</span> <span class="toc-text">4.1 Gene Aliases</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-2-Genomic-fa-Download"><span class="toc-number">3.6.2.</span> <span class="toc-text">4.2 Genomic.fa Download</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-3-organellar-contigs-from-genbank"><span class="toc-number">3.6.3.</span> <span class="toc-text">4.3 organellar contigs from genbank</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-4-Get-protein-sequences-from-nucleotide-accessions"><span class="toc-number">3.6.4.</span> <span class="toc-text">4.4 Get protein sequences from nucleotide accessions</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-5-taxonomy-KPCOFG-for-taxids"><span class="toc-number">3.6.5.</span> <span class="toc-text">4.5 taxonomy (KPCOFG) for taxids</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-Obtain-UniProt-IDs-from-gene-symbols"><span class="toc-number">3.7.</span> <span class="toc-text">5 Obtain UniProt IDs from gene symbols</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-Taxon-IDs-from-genome-accession-numbers"><span class="toc-number">3.8.</span> <span class="toc-text">6. Taxon IDs from genome accession numbers</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-Convert-article-DOI-to-PMID"><span class="toc-number">3.9.</span> <span class="toc-text">7. Convert article DOI to PMID</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-Access-organism-specific-meta-data-from-NCBI-genome-database"><span class="toc-number">3.10.</span> <span class="toc-text">8. Access organism specific meta-data from NCBI genome database</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9-Get-the-status-of-records-from-PubMed-search"><span class="toc-number">3.11.</span> <span class="toc-text">9. Get the status of records from PubMed search</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#9-1-Conduct-a-PubMed-search-and-retrieve-the-results-as-a-list-of-PMIDs"><span class="toc-number">3.11.1.</span> <span class="toc-text">9.1 Conduct a PubMed search and retrieve the results as a list of PMIDs</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#10-Sort-the-hits-by-sequence-length-in-nucleotide-database"><span class="toc-number">3.12.</span> <span class="toc-text">10. Sort the hits by sequence length in nucleotide database</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#11-Getting-meta-data-from-assembly"><span class="toc-number">3.13.</span> <span class="toc-text">11. Getting meta data from assembly</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#12-Fetch-HSPs-from-a-BLAST-hit-in-FASTA"><span class="toc-number">3.14.</span> <span class="toc-text">12. Fetch HSPs from a BLAST hit in FASTA</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#13-Get-all-Gene-Ontology-IDs-for-a-given-protein-accession"><span class="toc-number">3.15.</span> <span class="toc-text">13. Get all Gene Ontology IDs for a given protein accession</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#14-Get-the-ten-most-frequently-occurring-authors-for-a-set-of-articles"><span class="toc-number">3.16.</span> <span class="toc-text">14. Get the ten most frequently-occurring authors for a set of articles</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#15-Get-the-ten-funding-agencies-who-are-most-active-in-funding-articles-on-a-particular-topic"><span class="toc-number">3.17.</span> <span class="toc-text">15. Get the ten funding agencies who are most active in funding articles on a particular topic</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#16-Look-up-the-publication-date-for-thousands-of-PMIDs-option-one"><span class="toc-number">3.18.</span> <span class="toc-text">16. Look up the publication date for thousands of PMIDs (option one)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#17-Look-up-the-publication-date-for-thousands-of-PMIDs-option-two"><span class="toc-number">3.19.</span> <span class="toc-text">17. Look up the publication date for thousands of PMIDs (option two)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#18-Find-the-first-author-for-a-set-of-PubMed-records"><span class="toc-number">3.20.</span> <span class="toc-text">18. Find the first author for a set of PubMed records</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#19-Find-the-first-author-and-any-other-authors-who-contributed-equally-for-a-set-of-PubMed-records"><span class="toc-number">3.21.</span> <span class="toc-text">19. Find the first author and any other authors who contributed equally for a set of PubMed records</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#20-Download-GEO-Data-from-a-BioProject-Accession"><span class="toc-number">3.22.</span> <span class="toc-text">20 Download GEO Data from a BioProject Accession</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#21-Extract-all-MeSH-Headings-from-a-given-PMID"><span class="toc-number">3.23.</span> <span class="toc-text">21 Extract all MeSH Headings from a given PMID</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Extract-all-MeSH-Headings-and-Subheadings-from-a-given-PMID"><span class="toc-number">3.23.1.</span> <span class="toc-text">Extract all MeSH Headings and Subheadings from a given PMID</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Search-for-articles-by-authors-affiliated-with-a-specific-institution-by-matching-two-partial-affiliation-strings"><span class="toc-number">3.23.2.</span> <span class="toc-text">Search for articles by authors affiliated with a specific institution by matching two partial affiliation strings.</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Search-for-PMC-articles-citing-a-gived-PubMed-articler-retrieve-title-source-ID"><span class="toc-number">3.23.3.</span> <span class="toc-text">Search for PMC articles citing a gived PubMed articler; retrieve title, source, ID</span></a></li></ol></li></ol></li></ol>
+  </div>
+
+<!-- Table of Contents Down-->
+
+     </ul>
+    </li>
+   </ul>
+</div>
+
+
+        <h1 id="Entrez-Direct-E-utilities-on-the-UNIX-Command-Line"><a href="#Entrez-Direct-E-utilities-on-the-UNIX-Command-Line" class="headerlink" title="Entrez Direct: E-utilities on the UNIX Command Line"></a>Entrez Direct: E-utilities on the UNIX Command Line</h1><h1 id="Install"><a href="#Install" class="headerlink" title="Install"></a>Install</h1><div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~</span><br><span class="line">/bin/bash</span><br><span class="line">perl -MNet::FTP -e \</span><br><span class="line">    <span class="string">'$ftp = new Net::FTP("ftp.ncbi.nlm.nih.gov", Passive =&gt; 1);</span></span><br><span class="line"><span class="string">    $ftp-&gt;login; $ftp-&gt;binary;</span></span><br><span class="line"><span class="string">    $ftp-&gt;get("/entrez/entrezdirect/edirect.tar.gz");'</span></span><br><span class="line">gunzip -c edirect.tar.gz | tar xf -</span><br><span class="line">rm edirect.tar.gz</span><br><span class="line"><span class="built_in">builtin</span> <span class="built_in">exit</span></span><br><span class="line"><span class="built_in">export</span> PATH=<span class="variable">$PATH</span>:<span class="variable">$HOME</span>/edirect &gt;&amp; /dev/null || setenv PATH <span class="string">"<span class="variable">$&#123;PATH&#125;</span>:<span class="variable">$HOME</span>/edirect"</span></span><br><span class="line">./edirect/setup.sh</span><br></pre></td></tr></table></figure></div>
+
+<p>or, you can using <strong>Bioconda</strong></p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda install -c bioconda entrez-direct</span><br></pre></td></tr></table></figure></div>
+
+<h1 id="Cookbook"><a href="#Cookbook" class="headerlink" title="Cookbook"></a>Cookbook</h1><p>Origin: <a href="https://github.com/NCBI-Hackathons/EDirectCookbook" target="_blank" rel="noopener">NCBI-Hackathons (Archive)
+</a></p>
+<h2 id="Best-Practices-for-EDirect"><a href="#Best-Practices-for-EDirect" class="headerlink" title="Best Practices for EDirect:"></a>Best Practices for EDirect:</h2><ul>
+<li>Please keep to &lt;50,000 expected hits (it simply won’t work)</li>
+<li>Please do not run from multiple processors on a compute farm</li>
+<li>Update to latest version</li>
+</ul>
+<p>For more information and documentation on EDirect, please see:</p>
+<ul>
+<li><a href="https://www.ncbi.nlm.nih.gov/books/NBK179288/" target="_blank" rel="noopener">Entrez Direct: E-utilities on the Unix Command Line</a></li>
+<li><a href="https://dataguide.nlm.nih.gov/edirect/overview.html" target="_blank" rel="noopener">Insiders Guide to Accessing NLM Data: EDirect Overview</a></li>
+</ul>
+<p><strong>All items below come with no explicit or implicit warranty.</strong></p>
+<p><strong>All code is as-is and produced for the bioinformatics community, from the bioinformatics community.</strong></p>
+<h2 id="EDirect-Scripts"><a href="#EDirect-Scripts" class="headerlink" title="EDirect Scripts"></a>EDirect Scripts</h2><h2 id="1-Protein"><a href="#1-Protein" class="headerlink" title="1. Protein"></a>1. Protein</h2><p>Description (optional):<br>Written by: Peter Cooper<br>Confirmed by: Ben Busby<br>Databases: Taxonomy</p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">efetch -db nuccore -id NZ_AZKP01000022.1 -seq_start 149413 -seq_stop 154038 -format gbc | xtract -insd CDS INSDInterval_from INSDInterval_to protein_id product</span><br></pre></td></tr></table></figure></div>
+<p><strong><span style="Background:salmon">backs to:</span></strong></p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">NZ_AZKP01000022.1	1	480	WP_024797446.1	DEAD/DEAH box helicase</span><br><span class="line">NZ_AZKP01000022.1	501	3626	WP_024797445.1	site-specific DNA-methyltransferase</span><br><span class="line">NZ_AZKP01000022.1	3629	4626	WP_024797444.1	DEAD/DEAH box helicase family protein</span><br></pre></td></tr></table></figure></div>
+<h2 id="2-taxids-of-taxonomy"><a href="#2-taxids-of-taxonomy" class="headerlink" title="2. taxids of taxonomy"></a>2. taxids of taxonomy</h2><p>Description (optional):  Note:  Options for parsing nodes.dmp from NCBI Taxonomy are cited in issue #25, intentionally left open<br>Written by: Scott McGinnis (11/17/2017)<br>Confirmed by:<br>Databases: Taxonomy</p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">esearch -db taxonomy -query &quot;vertebrata[orgn]&quot; | efetch -db taxonomy -format docsum | xtract -pattern DocumentSummary -if Rank -equals family -element Id,Division,ScientificName,CommonName | more</span><br></pre></td></tr></table></figure></div>
+<p><strong><span style="Background:salmon">backs to:</span></strong></p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+<h2 id="3-SRA-from-BioProject"><a href="#3-SRA-from-BioProject" class="headerlink" title="3. SRA from BioProject"></a>3. SRA from BioProject</h2><p>Description: Given an SRA Run ID (e.g. SRR532256) that is a member of a BioProject that has additional runs, retrieve all the other run IDs. This is a variant of the BioProject call below.<br>Written by: Rob Edwards (1/11/2018)<br>Confirmed by:<br>Databases: SRA, BioProject</p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">esearch -db sra -query &quot;SRR532256&quot; |  efetch -format docsum | xtract -pattern Runs -ACC @acc  -element &quot;&amp;ACC&quot;</span><br></pre></td></tr></table></figure></div>
+<p><strong><span style="Background:salmon">backs to SRA list:</span></strong></p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SRR545469	SRR539813	SRR532971	SRR532256	SRR532204	SRR532200	SRR532194	SRR532250</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="3-1-Get-all-SRA-for-a-BioProject"><a href="#3-1-Get-all-SRA-for-a-BioProject" class="headerlink" title="3.1 Get all SRA for a BioProject"></a>3.1 Get all SRA for a BioProject</h3><p>Description (optional):<br>Written by: Bob Sanders (3/22/2017)<br>Confirmed by:<br>Databases: SRA, BioProject</p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">esearch -db bioproject -query &quot;PRJNA356464&quot; | elink -target sra | efetch -format docsum | \</span><br><span class="line">xtract -pattern DocumentSummary -ACC @acc -block DocumentSummary -element &quot;&amp;ACC&quot;</span><br></pre></td></tr></table></figure></div>
+<p><strong><span style="Background:salmon">backs to SRA list:</span></strong></p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">SRA507436	SRX2439829	SRP095511	SRS1874418	SRR5125027</span><br><span class="line">SRA507436	SRX2439828	SRP095511	SRS1874418	SRR5125026</span><br><span class="line">SRA507436	SRX2439826	SRP095511	SRS1874418	SRR5125024</span><br></pre></td></tr></table></figure></div>
+<h3 id="3-2-Get-latitiude-and-longitude-for-SRA-Datasets-e-g-outbreaks-and-metagenomes"><a href="#3-2-Get-latitiude-and-longitude-for-SRA-Datasets-e-g-outbreaks-and-metagenomes" class="headerlink" title="3.2 Get latitiude and longitude for SRA Datasets (e.g. outbreaks and metagenomes)"></a>3.2 Get latitiude and longitude for SRA Datasets (e.g. outbreaks and metagenomes)</h3><p>Description (optional):<br>Written by: BB, Mike D, Rob Edwards (4/12/2017)<br>Confirmed by:<br>Databases: SRA, BioSample</p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"># make a ID list</span><br><span class="line">echo &quot;SRA507436SRX2439829SRP095511SRS1874418SRR5125027&quot; |sed &#39;s&#x2F;SR&#x2F; SR&#x2F;g&#39;| tr &quot; &quot; &#39;\n&#39; | sed &#39;&#x2F;^$&#x2F;d&#39; &gt; sra_ids.txt</span><br><span class="line"># run</span><br><span class="line">for i in $(cat sra_ids.txt); do ll&#x3D;$(esearch -db sra -query $i | \</span><br><span class="line">elink -target biosample | efetch -format docsum | \</span><br><span class="line">xtract -pattern DocumentSummary -block Attribute -if Attribute@attribute_name -equals lat_lon -element Attribute); \</span><br><span class="line">echo -e &quot;$i\t$ll&quot;; done</span><br></pre></td></tr></table></figure></div>
+<p><strong><span style="Background:salmon">backs to:</span></strong></p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">SRA507436</span><br><span class="line">SRX2439829</span><br><span class="line">SRP095511</span><br><span class="line">SRS1874418</span><br><span class="line">SRR5125027</span><br></pre></td></tr></table></figure></div>
+<p>returns nothing - -</p>
+<h3 id="3-3-SRA-sizes"><a href="#3-3-SRA-sizes" class="headerlink" title="3.3 SRA sizes"></a>3.3 SRA sizes</h3><p>Description (optional): This retrieves the SRR id and the size in bp of the run from a file (<code>ids.txt</code>) of SRR IDs. You can also change <code>bases</code> to <code>size_MB</code>to get the size of the dataset in MB. <em>Question: Does the size in MB include the sequence identifiers (i.e. the size of the file) or just the sequences?</em><br>Written by: Rob Edwards (7/6/2017)<br>Confirmed by:<br>Databases: SRA</p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># make a ID list</span><br><span class="line">echo &quot;SRA507436SRX2439829SRP095511SRS1874418SRR5125027&quot; |sed &#39;s&#x2F;SR&#x2F; SR&#x2F;g&#39;| tr &quot; &quot; &#39;\n&#39; | sed &#39;&#x2F;^$&#x2F;d&#39; &gt; ids.txt</span><br><span class="line"># Run</span><br><span class="line">epost -db sra -input ids.txt -format acc | esummary -format runinfo -mode xml | xtract -pattern Row -element Run,bases</span><br></pre></td></tr></table></figure></div>
+<p><strong><span style="Background:salmon">backs to:</span></strong></p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">SRR5125024	36123158012</span><br><span class="line">SRR5125026	44717689640</span><br><span class="line">SRR5125027	26480446596</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="4-Gene"><a href="#4-Gene" class="headerlink" title="4 Gene"></a>4 Gene</h2><h3 id="4-1-Gene-Aliases"><a href="#4-1-Gene-Aliases" class="headerlink" title="4.1 Gene Aliases"></a>4.1 Gene Aliases</h3><p>Description (optional):<br>Written by: NCBI Folks (12/14/2016)<br>Confirmed by:<br>Databases: gene  </p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">esearch -db gene -query &quot;Liver cancer AND Homo sapiens&quot; | \</span><br><span class="line">efetch -format docsum | \</span><br><span class="line">xtract -pattern DocumentSummary -element Name OtherAliases OtherDesignations</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="4-2-Genomic-fa-Download"><a href="#4-2-Genomic-fa-Download" class="headerlink" title="4.2 Genomic.fa Download"></a>4.2 Genomic.fa Download</h3><p>Description (optional):<br>Written by: NCBI Folks (12/14/2016)<br>Confirmed by: Peter Cooper (NCBI) and Wayne Matten (NCBI) (12/29/2016, v6.00)<br>Databases: assembly  </p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">wget &#96;esearch -db assembly -query &quot;Leptospira alstonii[ORGN] AND latest[SB]&quot; | \</span><br><span class="line">efetch -format docsum | \</span><br><span class="line">xtract -pattern DocumentSummary -element FtpPath_RefSeq | \</span><br><span class="line">awk -F&quot;&#x2F;&quot; &#39;&#123;print $0&quot;&#x2F;&quot;$NF&quot;_genomic.fna.gz&quot;&#125;&#39;&#96;</span><br></pre></td></tr></table></figure></div>
+
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">(For larger sets of data the above may fail as wget may not accept a very large number of arguments.</span><br><span class="line">The command below should work for all.)</span><br><span class="line"></span><br><span class="line">esearch -db assembly -query &quot;Leptospira alstonii[ORGN] AND latest[SB]&quot; | \</span><br><span class="line">efetch -format docsum | \</span><br><span class="line">xtract -pattern DocumentSummary -element FtpPath_RefSeq | \</span><br><span class="line">awk -F&quot;&#x2F;&quot; &#39;&#123;print $0&quot;&#x2F;&quot;$NF&quot;_genomic.fna.gz&quot;&#125;&#39; | \</span><br><span class="line">xargs wget</span><br></pre></td></tr></table></figure></div>
+
+<p><strong><span style="Background:salmon">backs to:</span></strong></p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">--2020-05-18 17:45:54--  ftp:&#x2F;&#x2F;ftp.ncbi.nlm.nih.gov&#x2F;genomes&#x2F;all&#x2F;GCF&#x2F;001&#x2F;569&#x2F;445&#x2F;GCF_001569445.1_ASM156944v1&#x2F;GCF_001569445.1_ASM156944v1_genomic.fna.gz</span><br><span class="line">  (try: 2) &#x3D;&gt; ‘GCF_001569445.1_ASM156944v1_genomic.fna.gz’</span><br><span class="line">Connecting to ftp.ncbi.nlm.nih.gov (ftp.ncbi.nlm.nih.gov)|130.14.250.13|:21... connected.</span><br><span class="line">Logging in as anonymous ... Logged in!</span><br><span class="line">&#x3D;&#x3D;&gt; SYST ... done.    &#x3D;&#x3D;&gt; PWD ... done.</span><br><span class="line">&#x3D;&#x3D;&gt; TYPE I ... done.  &#x3D;&#x3D;&gt; CWD (1) &#x2F;genomes&#x2F;all&#x2F;GCF&#x2F;001&#x2F;569&#x2F;445&#x2F;GCF_001569445.1_ASM156944v1 ... done.</span><br><span class="line">&#x3D;&#x3D;&gt; SIZE GCF_001569445.1_ASM156944v1_genomic.fna.gz ... 1311014</span><br><span class="line">&#x3D;&#x3D;&gt; PASV ... done.    &#x3D;&#x3D;&gt; REST 870800 ... done.    </span><br><span class="line">&#x3D;&#x3D;&gt; RETR GCF_001569445.1_ASM156944v1_genomic.fna.gz ... done.</span><br><span class="line">Length: 1311014 (1.2M), 440214 (430K) remaining (unauthoritative)</span><br><span class="line"></span><br><span class="line">GCF_001569445.1_ASM156944v1_genomic.fna.gz                 68%[+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++&#x3D;&#x3D;&gt;                                          ] 880.29K   404 B&#x2F;s    eta 6m 49s</span><br></pre></td></tr></table></figure></div>
+
+
+<h3 id="4-3-organellar-contigs-from-genbank"><a href="#4-3-organellar-contigs-from-genbank" class="headerlink" title="4.3 organellar contigs from genbank"></a>4.3 organellar contigs from genbank</h3><p>Description (optional):<br>Written by: NCBI Folks (12/14/2016)<br>Confirmed by:<br>Databases: nuccore  </p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">esearch -db nuccore -query &quot;LKAM01&quot; | efetch -format fasta</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="4-4-Get-protein-sequences-from-nucleotide-accessions"><a href="#4-4-Get-protein-sequences-from-nucleotide-accessions" class="headerlink" title="4.4 Get protein sequences from nucleotide accessions"></a>4.4 Get protein sequences from nucleotide accessions</h3><p>Description (optional):<br>Written by: NCBI Folks (12/14/2016)<br>Confirmed by:<br>Databases: nuccore, protein  </p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cat accs_file | epost -db nuccore -format acc | \</span><br><span class="line">elink -target protein | efetch -format fasta</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="4-5-taxonomy-KPCOFG-for-taxids"><a href="#4-5-taxonomy-KPCOFG-for-taxids" class="headerlink" title="4.5 taxonomy (KPCOFG) for taxids"></a>4.5 taxonomy (KPCOFG) for taxids</h3><p>Description (optional):<br>Written by: NCBI Folks (12/14/2016)<br>Confirmed by:<br>Databases: taxonomy  </p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">efetch -db taxonomy -id 9606,1234,81726 -format xml | \</span><br><span class="line">xtract -pattern Taxon -tab &quot;,&quot; -first TaxId ScientificName \</span><br><span class="line">-group Taxon -KING &quot;(-)&quot; -PHYL &quot;(-)&quot; -CLSS &quot;(-)&quot; -ORDR &quot;(-)&quot; -FMLY &quot;(-)&quot; -GNUS &quot;(-)&quot; \</span><br><span class="line">-block &quot;*&#x2F;Taxon&quot; -match &quot;Rank:kingdom&quot; -KING ScientificName \</span><br><span class="line">-block &quot;*&#x2F;Taxon&quot; -match &quot;Rank:phylum&quot; -PHYL ScientificName \</span><br><span class="line">-block &quot;*&#x2F;Taxon&quot; -match &quot;Rank:class&quot; -CLSS ScientificName \</span><br><span class="line">-block &quot;*&#x2F;Taxon&quot; -match &quot;Rank:order&quot; -ORDR ScientificName \</span><br><span class="line">-block &quot;*&#x2F;Taxon&quot; -match &quot;Rank:family&quot; -FMLY ScientificName \</span><br><span class="line">-block &quot;*&#x2F;Taxon&quot; -match &quot;Rank:genus&quot; -GNUS ScientificName \</span><br><span class="line">-group Taxon -tab &quot;,&quot; -element &quot;&amp;KING&quot; &quot;&amp;PHYL&quot; &quot;&amp;CLSS&quot; &quot;&amp;ORDR&quot; &quot;&amp;FMLY&quot; &quot;&amp;GNUS&quot;</span><br></pre></td></tr></table></figure></div>
+<p><strong><span style="Background:salmon">backs to:</span></strong></p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">9606,Homo sapiens,Metazoa,Chordata,Mammalia,Primates,Hominidae,Homo</span><br><span class="line">1234,Nitrospira,-,Nitrospirae,Nitrospira,Nitrospirales,Nitrospiraceae,-</span><br><span class="line">81726,unidentified microorganism,-,-,-,-,-,-</span><br></pre></td></tr></table></figure></div>
+<h2 id="5-Obtain-UniProt-IDs-from-gene-symbols"><a href="#5-Obtain-UniProt-IDs-from-gene-symbols" class="headerlink" title="5 Obtain UniProt IDs from gene symbols"></a>5 Obtain UniProt IDs from gene symbols</h2><p>Description (optional):<br>Written by: NCBI Folks (12/14/2016)<br>Confirmed by:<br>Databases: gene, protein  </p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">esearch -db gene -query &quot;tp53[preferred symbol] AND human[organism]&quot; | \</span><br><span class="line">elink -target protein | \</span><br><span class="line">esummary | \</span><br><span class="line">xtract -pattern DocumentSummary -element Caption SourceDb | \</span><br><span class="line">grep -E &#39;^[OPQ][0-9][A-Z0-9]&#123;3&#125;[0-9]\|^[A-NR-Z][0-9]([A-Z][A-Z0-9]&#123;2&#125;[0-9])&#123;1,2&#125;&#39;</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="6-Taxon-IDs-from-genome-accession-numbers"><a href="#6-Taxon-IDs-from-genome-accession-numbers" class="headerlink" title="6. Taxon IDs from genome accession numbers"></a>6. Taxon IDs from genome accession numbers</h2><p>Description (optional):<br>Written by: NCBI Folks (12/14/2016)<br>Confirmed by:<br>Databases: nuccore  </p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cat genome_accession.txt | \</span><br><span class="line">epost -db nuccore -format acc | \</span><br><span class="line">esummary | \</span><br><span class="line">xtract -pattern DocumentSummary -element AccessionVersion TaxId</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="7-Convert-article-DOI-to-PMID"><a href="#7-Convert-article-DOI-to-PMID" class="headerlink" title="7. Convert article DOI to PMID"></a>7. Convert article DOI to PMID</h2><p>Description (optional):<br>Written by: NCBI Folks (12/14/2016)<br>Confirmed by: Mike Davidson (NLM) (12/16/2016, v5.80)<br>Databases: pubmed  </p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">esearch -db pubmed -query &quot;10.1111&#x2F;j.1468-3083.2012.04708.x&quot; | \</span><br><span class="line">esummary | \</span><br><span class="line">xtract -pattern DocumentSummary -block ArticleId -sep &quot;\t&quot; -tab &quot;\n&quot; -element IdType,Value | \</span><br><span class="line">grep -E &#39;^pubmed|doi&#39;</span><br></pre></td></tr></table></figure></div>
+<p><strong><span style="Background:salmon">backs to:</span></strong></p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pubmed	23004926</span><br><span class="line">doi	10.1111/j.1468-3083.2012.04708.x</span><br></pre></td></tr></table></figure></div>
+<h2 id="8-Access-organism-specific-meta-data-from-NCBI-genome-database"><a href="#8-Access-organism-specific-meta-data-from-NCBI-genome-database" class="headerlink" title="8. Access organism specific meta-data from NCBI genome database"></a>8. Access organism specific meta-data from NCBI genome database</h2><p>Description (optional):<br>Written by: NCBI Folks (12/14/2016)<br>Confirmed by:<br>Databases: genome, bioproject  </p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">esearch -db genome -query &quot;22954[uid]&quot; | \</span><br><span class="line">elink -target bioproject | \</span><br><span class="line">efetch -format xml | \</span><br><span class="line">xtract -pattern DocumentSummary -element Salinity OxygenReq OptimumTemperature TemperatureRange Habitat</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="9-Get-the-status-of-records-from-PubMed-search"><a href="#9-Get-the-status-of-records-from-PubMed-search" class="headerlink" title="9. Get the status of records from PubMed search"></a>9. Get the status of records from PubMed search</h2><p>Description (optional):<br>Written by: NCBI Folks (12/14/2016)<br>Confirmed by: Mike Davidson (NLM) (12/16/2016, v5.80)<br>Databases: pubmed  </p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">esearch -db pubmed -query &quot;pde3a AND 2016[dp]&quot; | \</span><br><span class="line">esummary | \</span><br><span class="line">xtract -pattern DocumentSummary -element Id RecordStatus</span><br></pre></td></tr></table></figure></div>
+<p><strong><span style="Background:salmon">backs to:</span></strong></p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">28959341	PubMed</span><br><span class="line">28060719	PubMed - indexed <span class="keyword">for</span> MEDLINE</span><br><span class="line">27975297	PubMed - indexed <span class="keyword">for</span> MEDLINE</span><br><span class="line">27927168	PubMed - indexed <span class="keyword">for</span> MEDLINE</span><br><span class="line">27865066	PubMed - indexed <span class="keyword">for</span> MEDLINE</span><br><span class="line">27053290	PubMed - indexed <span class="keyword">for</span> MEDLINE</span><br><span class="line">27765510	PubMed - indexed <span class="keyword">for</span> MEDLINE</span><br><span class="line">27524442	PubMed - indexed <span class="keyword">for</span> MEDLINE</span><br><span class="line">27662514	PubMed - indexed <span class="keyword">for</span> MEDLINE</span><br><span class="line">27647936	PubMed - indexed <span class="keyword">for</span> MEDLINE</span><br><span class="line">27633875	PubMed - indexed <span class="keyword">for</span> MEDLINE</span><br><span class="line">27610941	PubMed - indexed <span class="keyword">for</span> MEDLINE</span><br><span class="line">27502037	PubMed - indexed <span class="keyword">for</span> MEDLINE</span><br><span class="line">27180831	PubMed - indexed <span class="keyword">for</span> MEDLINE</span><br><span class="line">28959563	PubMed</span><br><span class="line">26934198	PubMed - indexed <span class="keyword">for</span> MEDLINE</span><br><span class="line">26926596	PubMed - indexed <span class="keyword">for</span> MEDLINE</span><br><span class="line">26656089	PubMed - indexed <span class="keyword">for</span> MEDLINE</span><br><span class="line">26628038	PubMed - indexed <span class="keyword">for</span> MEDLINE</span><br><span class="line">26460717	PubMed - indexed <span class="keyword">for</span> MEDLINE</span><br><span class="line">26374610	PubMed - indexed <span class="keyword">for</span> MEDLINE</span><br></pre></td></tr></table></figure></div>
+<h3 id="9-1-Conduct-a-PubMed-search-and-retrieve-the-results-as-a-list-of-PMIDs"><a href="#9-1-Conduct-a-PubMed-search-and-retrieve-the-results-as-a-list-of-PMIDs" class="headerlink" title="9.1 Conduct a PubMed search and retrieve the results as a list of PMIDs"></a>9.1 Conduct a PubMed search and retrieve the results as a list of PMIDs</h3><p>Description (optional):<br>Written by: Mike Davidson (2/22/2017)<br>Confirmed by: Mike Davidson (NLM) (2/22/2017, v6.30)<br>Databases: pubmed  </p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">esearch -db pubmed -query &quot;seasonal affective disorder&quot; | efetch -format uid</span><br></pre></td></tr></table></figure></div>
+<p><strong><span style="Background:salmon">backs to:</span></strong></p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">32277035</span><br><span class="line">32252583</span><br><span class="line">32163458</span><br><span class="line">32111489</span><br><span class="line">32108162</span><br><span class="line">...</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="10-Sort-the-hits-by-sequence-length-in-nucleotide-database"><a href="#10-Sort-the-hits-by-sequence-length-in-nucleotide-database" class="headerlink" title="10. Sort the hits by sequence length in nucleotide database"></a>10. Sort the hits by sequence length in nucleotide database</h2><p>Description (optional):<br>Written by: NCBI Folks (12/14/2016)<br>Confirmed by:<br>Databases: nuccore  </p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">esearch -db nuccore -query &quot;bacillus[orgn] AND biomol_rRNA[prop] AND 1500:1560[slen]&quot; | \</span><br><span class="line">esummary | \</span><br><span class="line">xtract -pattern DocumentSummary -element Slen Extra | \</span><br><span class="line">sort -rnk 1</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="11-Getting-meta-data-from-assembly"><a href="#11-Getting-meta-data-from-assembly" class="headerlink" title="11. Getting meta data from assembly"></a>11. Getting meta data from assembly</h2><p>Description (optional):<br>Written by: NCBI Folks (12/14/2016)<br>Confirmed by:<br>Databases: assembly  </p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">esearch -db assembly -query &quot;mammals[orgn] AND latest[filter]&quot; | \</span><br><span class="line">efetch -format docsum | \</span><br><span class="line">xtract -pattern DocumentSummary -element Organism,SpeciesName,BioSampleAccn,LastMajorReleaseAccession \</span><br><span class="line">-block Stat -if &quot;@category&quot; -equals chromosome_count -element Stat | \</span><br><span class="line">grep -Pv &quot;\t0$&quot;</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="12-Fetch-HSPs-from-a-BLAST-hit-in-FASTA"><a href="#12-Fetch-HSPs-from-a-BLAST-hit-in-FASTA" class="headerlink" title="12. Fetch HSPs from a BLAST hit in FASTA"></a>12. Fetch HSPs from a BLAST hit in FASTA</h2><p>Description (optional):<br>Written by: NCBI Folks (12/14/2016)<br>Confirmed by:<br>Databases: nuccore  </p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">blastn -db nr -query in.fna -remote -outfmt &quot;6 sacc sstart send&quot; | \</span><br><span class="line">xargs -n 3 sh -c &#39;efetch -db nuccore -id &quot;$0&quot; -seq_start &quot;$1&quot; -seq_stop &quot;$2&quot; -format fasta&#39;</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="13-Get-all-Gene-Ontology-IDs-for-a-given-protein-accession"><a href="#13-Get-all-Gene-Ontology-IDs-for-a-given-protein-accession" class="headerlink" title="13. Get all Gene Ontology IDs for a given protein accession"></a>13. Get all Gene Ontology IDs for a given protein accession</h2><p>Description (optional):<br>Written by: NCBI Folks (12/14/2016)<br>Confirmed by:<br>Databases: protien, biosystems  </p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">epost -db protein -id BAD92651.1 -format acc | \</span><br><span class="line">elink -target biosystems | \</span><br><span class="line">efetch -format docsum | \</span><br><span class="line">xtract -pattern externalid -element externalid | \</span><br><span class="line">awk &#39;&#123;if ($0 ~ &#x2F;GO&#x2F;) print $0&#125;&#39;</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="14-Get-the-ten-most-frequently-occurring-authors-for-a-set-of-articles"><a href="#14-Get-the-ten-most-frequently-occurring-authors-for-a-set-of-articles" class="headerlink" title="14. Get the ten most frequently-occurring authors for a set of articles"></a>14. Get the ten most frequently-occurring authors for a set of articles</h2><p>Description (optional): Searches PubMed for the string “traumatic brain injury athletes”, restricts results to those published in 2015 and 2016, retrieves the full XML records for each of the search results, extracts the last name and initials of every author on every record, sorts the authors by frequency of occurrence in the results set, and presents the top ten most frequently-occurring authors, along with the number of times that author appeared.<br>Written by: Mike Davidson (NLM) (12/15/2016)<br>Confirmed by: Mike Davidson (NLM) (12/16/2016)<br>Databases: pubmed  </p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">esearch -db pubmed -query &quot;traumatic brain injury athletes&quot; -datetype PDAT -mindate 2015 -maxdate 2016 | \</span><br><span class="line">efetch -format xml | \</span><br><span class="line">xtract -pattern Author -sep &quot; &quot; -element LastName,Initials | \</span><br><span class="line">sort-uniq-count-rank | \</span><br><span class="line">head -n 10</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="15-Get-the-ten-funding-agencies-who-are-most-active-in-funding-articles-on-a-particular-topic"><a href="#15-Get-the-ten-funding-agencies-who-are-most-active-in-funding-articles-on-a-particular-topic" class="headerlink" title="15. Get the ten funding agencies who are most active in funding articles on a particular topic"></a>15. Get the ten funding agencies who are most active in funding articles on a particular topic</h2><p>Description (optional): Searches PubMed for the string “diabetes AND pregnancy”, restricts results to those published in 2014 through 2016, retrieves the full XML records for each of the search results, extracts the funding agencies for every  grant on every record, sorts the agencies by frequency of occurrence in the results set, and presents the top ten most frequently-occurring agencies, along with the number of times that agency appeared.<br>Written by: Mike Davidson (2/17/2017)<br>Confirmed by:  Mike Davidson (NLM) (v6.30, 2/17/2017)<br>Databases: pubmed  </p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">esearch -db pubmed -query &quot;diabetes AND pregnancy&quot; -datetype PDAT -mindate 2014 -maxdate 2016 | \</span><br><span class="line">efetch -format xml | \</span><br><span class="line">xtract -pattern Grant -element Agency | \</span><br><span class="line">sort-uniq-count-rank | \</span><br><span class="line">head -n 10</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="16-Look-up-the-publication-date-for-thousands-of-PMIDs-option-one"><a href="#16-Look-up-the-publication-date-for-thousands-of-PMIDs-option-one" class="headerlink" title="16. Look up the publication date for thousands of PMIDs (option one)"></a>16. Look up the publication date for thousands of PMIDs (option one)</h2><p>Description (optional):  Takes a file which contains a list of PMIDs (table_of_pubmed_ids) and uses <code>cat</code> to access the contents of the file, <code>epost</code> to post the PMIDs to the history server, <code>efetch</code> to retrieve the records and <code>xtract</code> to extract PMID and Publication Date.<br>Written by: NCBI Folks (12/15/2016)<br>Confirmed by:  Mike Davidson (NLM) (v6.30, 2/17/2017)<br>Databases: pubmed  </p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">cat table_of_pubmed_ids | \</span><br><span class="line">epost -db pubmed | \</span><br><span class="line">efetch -format xml | \</span><br><span class="line">xtract -pattern PubmedArticle -element MedlineCitation&#x2F;PMID \</span><br><span class="line">-block PubDate -sep &quot; &quot; -element Year,Month MedlineDate</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="17-Look-up-the-publication-date-for-thousands-of-PMIDs-option-two"><a href="#17-Look-up-the-publication-date-for-thousands-of-PMIDs-option-two" class="headerlink" title="17. Look up the publication date for thousands of PMIDs (option two)"></a>17. Look up the publication date for thousands of PMIDs (option two)</h2><p>Description (optional): Takes a file which contains a list of PMIDs (table_of_pubmed_ids) and <code>epost -input</code> to access the contents of the file and post the PMIDs to the history server, <code>efetch</code> to retrieve the records and <code>xtract</code> to extract PMID and Publication Date.<br>Written by: Mike Davidson (2/17/2017)<br>Confirmed by:  Mike Davidson (NLM) (v6.30, 2/17/2017)<br>Databases: pubmed  </p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">epost -input table_of_pubmed_ids -db pubmed | \</span><br><span class="line">efetch -format xml | \</span><br><span class="line">xtract -pattern PubmedArticle -element MedlineCitation&#x2F;PMID \</span><br><span class="line">-block PubDate -sep &quot; &quot; -element Year,Month MedlineDate</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="18-Find-the-first-author-for-a-set-of-PubMed-records"><a href="#18-Find-the-first-author-for-a-set-of-PubMed-records" class="headerlink" title="18. Find the first author for a set of PubMed records"></a>18. Find the first author for a set of PubMed records</h2><p>Description (optional): Outputs the PMID and first author’s last name and initials for one or more PubMed records<br>Written by: Mike Davidson (2/17/2017)<br>Confirmed by:  Mike Davidson (NLM) (v6.30, 2/17/2017)<br>Databases: pubmed  </p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">efetch -db pubmed -id 16940437 -format xml | \</span><br><span class="line">xtract -pattern PubmedArticle -element MedlineCitation&#x2F;PMID \</span><br><span class="line">-block Author -position first -sep &quot; &quot; -element LastName,Initials</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="19-Find-the-first-author-and-any-other-authors-who-contributed-equally-for-a-set-of-PubMed-records"><a href="#19-Find-the-first-author-and-any-other-authors-who-contributed-equally-for-a-set-of-PubMed-records" class="headerlink" title="19. Find the first author and any other authors who contributed equally for a set of PubMed records"></a>19. Find the first author and any other authors who contributed equally for a set of PubMed records</h2><p>Description (optional): Outputs the PMID and first author’s last name and initials for one or more PubMed records. If the record indicates equal contributors to the first author, the last name and initials for all equal contributors will also be output, separated by commas.<br>Written by: Mike Davidson (10/27/2017)<br>Confirmed by:  Mike Davidson (NLM) (v7.40, 10/27/2017)<br>Databases: pubmed  </p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">efetch -db pubmed -id 22358458,26877147 -format xml | \</span><br><span class="line">xtract -pattern PubmedArticle -element MedlineCitation&#x2F;PMID \</span><br><span class="line">-block Author -position first -sep &quot; &quot; -tab &quot;, &quot; -element LastName,Initials -EQUAL Author@EqualContrib \</span><br><span class="line">-block Author -if &quot;+&quot; -is-not 1 \</span><br><span class="line">-and Author@EqualContrib -equals Y \</span><br><span class="line">-and &quot;&amp;EQUAL&quot; -equals Y \</span><br><span class="line">-sep &quot; &quot; -tab &quot;, &quot; -element LastName,Initials</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="20-Download-GEO-Data-from-a-BioProject-Accession"><a href="#20-Download-GEO-Data-from-a-BioProject-Accession" class="headerlink" title="20 Download GEO Data from a BioProject Accession"></a>20 Download GEO Data from a BioProject Accession</h2><p>Description (optional):<br>Written by: NCBI Folks (12/16/2016)<br>Confirmed by:<br>Databases: gds  </p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">esearch -db gds -query &quot;PRJNA313294[ACCN]&quot; | \</span><br><span class="line">efetch -format docsum | \</span><br><span class="line">xtract -pattern DocumentSummary -element FTPLink</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="21-Extract-all-MeSH-Headings-from-a-given-PMID"><a href="#21-Extract-all-MeSH-Headings-from-a-given-PMID" class="headerlink" title="21 Extract all MeSH Headings from a given PMID"></a>21 Extract all MeSH Headings from a given PMID</h2><p>Description (optional): Retrieves the PMID of a PubMed record, followed by a pipe-delimitted list of MeSH Descriptors for a PMID.<br>Written by: Mike Davidson (10/02/2017)<br>Confirmed by: Mike Davidson (NLM) (v7.30, 10/02/2017)<br>Databases: pubmed  </p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">efetch -db pubmed -id 24102982 -format xml | \</span><br><span class="line">xtract -pattern PubmedArticle -tab &quot;|&quot; -element MedlineCitation&#x2F;PMID \</span><br><span class="line">-block MeshHeading -tab &quot;|&quot; -element DescriptorName</span><br></pre></td></tr></table></figure></div>
+
+
+<h3 id="Extract-all-MeSH-Headings-and-Subheadings-from-a-given-PMID"><a href="#Extract-all-MeSH-Headings-and-Subheadings-from-a-given-PMID" class="headerlink" title="Extract all MeSH Headings and Subheadings from a given PMID"></a>Extract all MeSH Headings and Subheadings from a given PMID</h3><p>Description (optional): Retrieves the PMID of a PubMed record, followed by a pipe-delimitted list of MeSH Descriptors and Qualifiers for a PMID. Each Descriptor is followed by any attached qualifiers, separated by “/“.<br>Written by: Mike Davidson (10/02/2017)<br>Confirmed by: Mike Davidson (NLM) (v7.30, 10/02/2017)<br>Databases: pubmed  </p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">efetch -db pubmed -id 24102982 -format xml | \</span><br><span class="line">xtract -pattern PubmedArticle -tab &quot;|&quot; -element MedlineCitation&#x2F;PMID \</span><br><span class="line">-block MeshHeading -tab &quot;|&quot; -sep &quot;&#x2F;&quot; -element DescriptorName,QualifierName</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="Search-for-articles-by-authors-affiliated-with-a-specific-institution-by-matching-two-partial-affiliation-strings"><a href="#Search-for-articles-by-authors-affiliated-with-a-specific-institution-by-matching-two-partial-affiliation-strings" class="headerlink" title="Search for articles by authors affiliated with a specific institution by matching two partial affiliation strings."></a>Search for articles by authors affiliated with a specific institution by matching two partial affiliation strings.</h3><p>Description (optional): Searching PubMed for two affiliation strings ANDed together (e.g. “translational medicine[AD] AND thomas jefferson[AD]”) will retrieve all records that have both strings listed somewhere in the record’s Affiliation data, but does not require both strings be listed on the same author’s affiliation. To generate a list of PMIDs where both strings are present in the same affiliation element, use the following script.<br>Written by: Mike Davidson (4/2/2018)<br>Confirmed by:  Mike Davidson (NLM) (v8.10, 4/2/2018)<br>Databases: pubmed  </p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">esearch -db pubmed -query &quot;translational medicine[ad] AND thomas jefferson[ad]&quot; | \</span><br><span class="line">efetch -format xml | \</span><br><span class="line">xtract -pattern PubmedArticle -PMID MedlineCitation&#x2F;PMID \</span><br><span class="line">-block Affiliation -if Affiliation -contains &quot;translational medicine&quot; -and Affiliation -contains &quot;thomas jefferson&quot; \</span><br><span class="line">-tab &quot;\n&quot; -element &quot;&amp;PMID&quot; | \</span><br><span class="line">sort -n | uniq</span><br></pre></td></tr></table></figure></div>
+<h3 id="Search-for-PMC-articles-citing-a-gived-PubMed-articler-retrieve-title-source-ID"><a href="#Search-for-PMC-articles-citing-a-gived-PubMed-articler-retrieve-title-source-ID" class="headerlink" title="Search for PMC articles citing a gived PubMed articler; retrieve title, source, ID"></a>Search for PMC articles citing a gived PubMed articler; retrieve title, source, ID</h3><p>Description: Retrieve information about all PMC articles (wihich have free fulltext available) which cite a gived PubMed article<br>Written by: Lukas Wagner (08/16/2018)<br>Databases: pubmed, pmc</p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">esearch -db pubmed -query 23618408 | elink -name pubmed_pmc_refs -target pmc | \</span><br><span class="line">efetch -format docsum | \</span><br><span class="line">xtract -pattern DocumentSummary -element Title -element Source -block ArticleId -if &quot;IdType&quot; -equals pmcid -element Value</span><br></pre></td></tr></table></figure></div>
+
+<hr>
+<p>github: <a href="https://github.com/Karobben" target="_blank" rel="noopener">https://github.com/Karobben</a><br>blog: <a href="http://Karobben.github.io">Karobben.github.io</a><br>R 语言画图索引: <a href="https://karobben.github.io/R/R-index.html">https://karobben.github.io/R/R-index.html</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://karobben.github.io/Bioinfor/E-utilities.html" data-id="ckcogivu1001f2bfcculi0ui4" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">July 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">June 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/07/01/123/">123</a>
+          </li>
+        
+          <li>
+            <a href="/2020/06/30/tmp/">test</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+  <!-- Weather -->
+<div id="weather-view-he" ></div>
+<script>
+WIDGET = {ID: 'HfP68rcshb'};
+</script>
+<script type="text/javascript" src="https://apip.weatherdt.com/view/static/js/r.js?v=1111"></script>
+
+</aside>
+
+          <!-- Weather Plug -->
+        
+        <!--git talk-->
+        <section id="main">
+          <div style='padding-top:10px'>
+  <div style="background:white">
+    <script src="https://utteranc.es/client.js"
+            repo="Karobben/utterances"
+            issue-term="pathname"
+            theme="preferred-color-scheme"
+            crossorigin="anonymous"
+            async>
+    </script>
+  </div>
+</div>
+<!--git talk-->
+  <!-- Link Gitalk 的支持文件  -->
+  <!--
+    <div>
+      <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+      <script src="https://unpkg.com/gitalk@latest/dist/gitalk.min.js"></script>
+      <div id="gitalk-container"></div>     <script type="text/javascript">
+          var gitalk = new Gitalk({
+
+          // gitalk的主要参数
+              clientID: '96c208ade65e80e3aaac',
+              clientSecret: '86e9240674a3815b0ddc31dababdb4998d5562f4',
+              repo: 'OAuth-Application',
+              owner: 'Karobben',
+              admin: ['Karobben'],
+              id:window.location.pathname,
+          });
+          gitalk.render('gitalk-container');
+      </script>
+    </div>
+<!-- Gitalk end -->
+
+        </section>
+        <!-- Gitalk end -->
+
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      <span style="float:right; list-style:none">
+        <a style="padding: 10px" href="https://karobben.github.io/">Blog</a>
+        <a style="padding: 10px" href="https://github.com/Karobben" target="_blank" rel="noopener">GitHub</a>
+        <br>
+        <a style="padding: 10px" href="https://space.bilibili.com/393056819" target="_blank" rel="noopener">BiliBili</a>
+        <a href="mailto:a591465908@outlook.com">Mail me</a>
+      </span>
+      &copy; Karobben 2020<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+  <span>
+    <p align = "center">
+      <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+      <span id="busuanzi_container_site_pv">~<span id="busuanzi_value_site_pv"></span>~</span>
+    </p>
+  </span>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  <!--`
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  -->
+  <a class="mobile-nav-link" href="../index.html">Home</a>
+  <a class="mobile-nav-link" href="../R/R-index.html">R</a>
+  <a class="mobile-nav-link" href="../Python/index.html">Python</a>
+  <a class="mobile-nav-link" href="../Linux/index.html">Linux</a>
+  <a class="mobile-nav-link" href="../Bioinfor/index.html">Bio-Protocal</a>
+  <a class="mobile-nav-link" href="../LearnNotes/index.html">Notes</a>
+  <a class="mobile-nav-link" href="../Blog/index.html">Others</a>
+</nav>
+
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+<!--mermaid module-->
+
+  <script src='https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js'></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({theme: 'forest'});
+    }
+  </script>
+
+
+
+<!-- Searche Module-->
+<script src="/js/search.js"></script>
+<script src="/js/load.js"></script>
+<!-- 这里可能有一些其他原来文件里的代码，也可以没有 -->
+
+  </div>
+</body>
+</html>

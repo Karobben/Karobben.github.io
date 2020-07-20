@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>用python寫一個B站彈幕聊天機器人腳本 | Karobben</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="用python寫一個B站彈幕聊天機器人腳本">
+<meta property="og:type" content="website">
+<meta property="og:title" content="用python寫一個B站彈幕聊天機器人腳本">
+<meta property="og:url" content="https://karobben.github.io/Blog/Python_Bilibot.html">
+<meta property="og:site_name" content="Karobben">
+<meta property="og:description" content="用python寫一個B站彈幕聊天機器人腳本">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://s1.ax1x.com/2020/06/26/NrxI2R.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/06/26/Nrxox1.png">
+<meta property="article:published_time" content="2020-07-16T07:13:33.195Z">
+<meta property="article:modified_time" content="2020-07-16T07:13:33.195Z">
+<meta property="article:author" content="Karobben">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s1.ax1x.com/2020/06/26/NrxI2R.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Karobben" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="img/tag.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+<link rel="stylesheet" href="/css/search.css">
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<script>
+  var _hmt = _hmt || [];
+  (function() {
+    var hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?8442e6ecc87d878298ba7d3bd0a5484c";
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(hm, s);
+  })();
+</script>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header"; style="background:#1B414B;height:150px">
+  <!--div id="banner"></div>-->
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Karobben</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">Karobben Blog</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+          <a id="main-nav-toggle" class="nav-icon"></a>
+          <!-- Header Section Start -->
+  <header id="slider-area">
+    <nav class="navbar navbar-expand-md fixed-top scrolling-navbar bg-white">
+      <div class="container">
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav mr-auto w-100 justify-content-end">
+              <a class="main-nav-link" href="../index.html">Home</a>
+              <a class="main-nav-link" href="../R/R-index.html">R</a>
+              <a class="main-nav-link" href="../Python/index.html">Python</a>
+              <a class="main-nav-link" href="../Linux/index.html">Linux</a>
+              <a class="main-nav-link" href="../Bioinfor/index.html">Bio-Protocal</a>
+              <a class="main-nav-link" href="../LearnNotes/index.html">Notes</a>
+              <a class="main-nav-link" href="../Blog/index.html">Others</a>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!-- Header Section End -->
+
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Looking for Something?"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://karobben.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><div align='right', style='padding-right:160px;padding-top:1px'>
+  
+  <span class="local-search local-search-google local-search-plugin" style=";position:absolute;z-index:2;">
+      <input type="search" placeholder="Looking for Something?" id="local-search-input" class="local-search-input-cls" style="">
+      <div id="local-search-result" class="local-search-result-cls"></div>
+  </span>
+
+
+</div>
+
+<article  id="page-" class="article article-type-page" itemscope itemprop="blogPost">
+<div id="tipue_search_content" style="display: none"></div>
+  <div class="article-meta">
+    <a href="/Blog/Python_Bilibot.html" class="article-date">
+  <time datetime="2020-07-16T07:13:33.195Z" itemprop="datePublished">2020-07-16</time>
+</a>
+    
+  </div>
+  <div  class="article-inner">
+    
+    
+      <header class="article-header">
+        <!--
+  
+    <h1 class="article-title" itemprop="name">
+      用python寫一個B站彈幕聊天機器人腳本
+    </h1>
+  
+ -->
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <!-- Go To Top Link -->
+        <div title="Back to Top" class="back-to-top" style="background:salmon">
+  <a href="#"  >
+    <i >Top</i>
+  </a>
+</div>
+<div class="title_index">
+  <ul id="nav">
+   <li>
+     Titles
+     <ul>
+       <!-- Table of Contents -->
+
+  <div id="toc" class="toc-article">
+    <strong class="toc-title">Titles</strong>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#用python寫一個B站彈幕聊天機器人腳本"><span class="toc-number">1.</span> <span class="toc-text">用python寫一個B站彈幕聊天機器人腳本</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#1-回覆B站彈幕基本框架"><span class="toc-number">2.</span> <span class="toc-text">1 回覆B站彈幕基本框架:</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-獲取彈幕的方法"><span class="toc-number">3.</span> <span class="toc-text">2 獲取彈幕的方法:</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-聊天模塊"><span class="toc-number">4.</span> <span class="toc-text">3 聊天模塊</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-在blivedm裏面-加入聊天機器人的代碼"><span class="toc-number">5.</span> <span class="toc-text">4 在blivedm裏面, 加入聊天機器人的代碼</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#修改sample-py"><span class="toc-number">5.1.</span> <span class="toc-text">修改sample.py</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#彈幕分割"><span class="toc-number">5.2.</span> <span class="toc-text">彈幕分割</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#鏈接超時"><span class="toc-number">5.3.</span> <span class="toc-text">鏈接超時</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#发送太快而被吞"><span class="toc-number">5.4.</span> <span class="toc-text">发送太快而被吞</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Sample-py"><span class="toc-number">6.</span> <span class="toc-text">Sample.py</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#用戶自主開啓關閉機器人"><span class="toc-number">7.</span> <span class="toc-text">用戶自主開啓關閉機器人</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#防沉迷程序"><span class="toc-number">8.</span> <span class="toc-text">防沉迷程序</span></a></li></ol>
+  </div>
+
+<!-- Table of Contents Down-->
+
+     </ul>
+    </li>
+   </ul>
+</div>
+
+
+        <h1 id="用python寫一個B站彈幕聊天機器人腳本"><a href="#用python寫一個B站彈幕聊天機器人腳本" class="headerlink" title="用python寫一個B站彈幕聊天機器人腳本"></a>用python寫一個B站彈幕聊天機器人腳本</h1><p><a name="HeSJr"></a></p>
+<h1 id="1-回覆B站彈幕基本框架"><a href="#1-回覆B站彈幕基本框架" class="headerlink" title="1 回覆B站彈幕基本框架:"></a>1 回覆B站彈幕基本框架:</h1><p>(當時bing出來抄人家的, 能用- -但是忘記表明出處了, 實在是抱歉- -)</p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/env python3.7</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> requests, sys  <span class="comment">#网络请求</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#Cookies = "LIVE_BUVID=AUTO3715382739921424; buvid3=71AC02C7-EF25-46A5-9A2F-DB1CB10744F71607infoc; rpdid=oopmqlpqkmdoskqimpwww; stardustvideo=1; CURRENT_FNVAL=16; dssid=8aabde0ff0f7f1621; dsess=BAh7CkkiD3Nlc3Npb25faWQGOgZFVEkiFWRlMGZmMGY3ZjE2MjE3MWMGOwBG%0ASSIJY3NyZgY7AEZJIiUxYTM3YTg4MTY2NzZhNWZkNjYyODAyOWQwODk1NTlh%0AMgY7AEZJIg10cmFja2luZwY7AEZ7B0kiFEhUVFBfVVNFUl9BR0VOVAY7AFRJ%0AIi1lZjFkZjRjZTdiMWE2Y2JkZmQyZjRkMzA2OGYyMGI0NzhjYjU1OGEzBjsA%0ARkkiGUhUVFBfQUNDRVBUX0xBTkdVQUdFBjsAVEkiLWRkMDY1ZWQyNjNjNjdk%0ANzk5Zjk0M2FiNmMzOWI1NWM1ZTAwOGNiYjUGOwBGSSIKY3RpbWUGOwBGbCsH%0Aj3a9W0kiCGNpcAY7AEYiEjY4LjEwNy4xMjQuNTM%3D%0A--b5b62086b230a085ae65aee9304d7f14ca8a07ad; fts=1539143396; CURRENT_QUALITY=64; _uuid=547F11BE-9B64-40CC-37DE-6B95B010429C05405infoc; INTVER=1; sid=9onpe38s; DedeUserID=393056819; DedeUserID__ckMd5=43771d91224c7285; SESSDATA=d1486084%2C1576633926%2Ca277c9b1; bili_jct=b29db4670b4f9967fb2921a0fc878950; UM_distinctid=16e7c3622401e-01fbe0ab154c45-76256753-1fa400-16e7c362241181; laboratory=1-1"</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">B_send</span><span class="params">(MSG)</span>:</span></span><br><span class="line">    Cookies =  <span class="string">"LIVE_BUVID=AUTO5015807896693605; _uuid=58C69C39-C741-47C7-0E98-A379326816DE70318infoc; buvid3=3B00857F-A757-4982-9792-4B46DEC0BB12155821infoc; sid=bejf3qns; LIVE_ROOM_ADMIN_UP_TIP=1; CURRENT_FNVAL=16; rpdid=|(k|k)k|))Y)0J'ul)|~mYmk|; im_notify_type_393056819=0; _ga=GA1.2.517604625.1581950019; dy_spec_agreed=1; GIFT_BLOCK_COOKIE=GIFT_BLOCK_COOKIE; INTVER=1; stardustpgcv=0606; DedeUserID=393056819; DedeUserID__ckMd5=43771d91224c7285; SESSDATA=bb15b3a2%2C1598937340%2C37fab*31; bili_jct=e8377d560fe3434ffd36531d323df842; CURRENT_QUALITY=80; bp_t_offset_393056819=365856292215780322; _dfcaptcha=08c1c131463a58b5c74c50f3d9eaed6d; Hm_lvt_8a6e55dbd2870f0f5bc9194cddf32a02=1583825216,1583853309,1583925148,1584087368; Hm_lpvt_8a6e55dbd2870f0f5bc9194cddf32a02=1584087368; PVID=15"</span></span><br><span class="line">    cookie = &#123;<span class="string">'Cookie'</span>: Cookies&#125;</span><br><span class="line">    data = &#123;</span><br><span class="line">    <span class="string">'color'</span>:<span class="string">'16777215'</span>,</span><br><span class="line">    <span class="string">'fontsize'</span>:<span class="string">'25'</span>,</span><br><span class="line">    <span class="string">'mode'</span>:<span class="string">'1'</span>,</span><br><span class="line">    <span class="string">'msg'</span>:MSG,</span><br><span class="line">    <span class="string">'rnd'</span>:<span class="string">'1584087359'</span>,</span><br><span class="line">    <span class="string">'roomid'</span>:<span class="string">'21154895'</span>,</span><br><span class="line">    <span class="string">'bubble'</span>:<span class="string">'0'</span>,</span><br><span class="line">    <span class="string">'aid'</span>:<span class="string">'56737027'</span>,</span><br><span class="line">    <span class="string">'csrf_token'</span>:<span class="string">'e8377d560fe3434ffd36531d323df842'</span>,</span><br><span class="line">    <span class="string">'csrf'</span>:<span class="string">'e8377d560fe3434ffd36531d323df842'</span></span><br><span class="line">    &#125;</span><br><span class="line">    requests.post(<span class="string">'https://api.live.bilibili.com/msg/send'</span>, cookies=cookie, data=data)</span><br><span class="line"><span class="comment">#senddanmu.sendDM(data) #&lt;Response [200]&gt; 200是状态码 表示pass</span></span><br></pre></td></tr></table></figure></div>
+
+<p>獲取cookies 方法見視屏:….[還沒上傳]</p>
+<p><a name="POfJs"></a></p>
+<h1 id="2-獲取彈幕的方法"><a href="#2-獲取彈幕的方法" class="headerlink" title="2 獲取彈幕的方法:"></a>2 獲取彈幕的方法:</h1><p>用github的項目吧, <a href="https://github.com/xfgryujk" target="_blank" rel="noopener">xfgryujk</a>/<a href="https://github.com/xfgryujk/blivedm" target="_blank" rel="noopener">blivedm</a><br />這是我已知的, 最好的彈幕獲取項目</p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/xfgryujk/blivedm.git</span><br></pre></td></tr></table></figure></div>
+
+
+<p><a name="uztyh"></a></p>
+<h1 id="3-聊天模塊"><a href="#3-聊天模塊" class="headerlink" title="3 聊天模塊"></a>3 聊天模塊</h1><p>用: <a href="https://blog.csdn.net/qq_29129381/article/details/82865617" target="_blank" rel="noopener">https://blog.csdn.net/qq_29129381/article/details/82865617</a><br />這個是最簡單的<br />抄來的代碼<del>, 感謝<a href="http://api.qingyunke.com/" target="_blank" rel="noopener">青云客智能聊天机器人</a>的奉獻</del></p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">airoot</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="comment">#This function is original from:https://blog.csdn.net/qq_29129381/article/details/82865617</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">        self.url = <span class="string">r'http://api.qingyunke.com/api.php?%s'</span></span><br><span class="line">        self.data = &#123;</span><br><span class="line">            <span class="string">'key'</span>:<span class="string">'free'</span>,</span><br><span class="line">            <span class="string">'appid'</span>:<span class="number">0</span>,</span><br><span class="line">            <span class="string">'msg'</span>:<span class="string">''</span></span><br><span class="line">        &#125;</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">getword</span><span class="params">(self, word=<span class="string">''</span>)</span>:</span></span><br><span class="line">        self.data[<span class="string">'msg'</span>] = word</span><br><span class="line">        <span class="keyword">if</span> self.data[<span class="string">'msg'</span>] == <span class="string">''</span>:</span><br><span class="line">            self.data[<span class="string">'msg'</span>] = <span class="string">'你不说话, 我来撩你吧'</span></span><br><span class="line">        self.params = urllib.parse.urlencode(self.data)</span><br><span class="line">        self.url = self.url % self.params</span><br><span class="line">        self.page = urllib.request.urlopen(self.url,timeout=<span class="number">15</span>).read()</span><br><span class="line">        self.res = json.loads(self.page)</span><br><span class="line">        self.res[<span class="string">'content'</span>] = self.res[<span class="string">'content'</span>].replace(<span class="string">'&#123;br&#125;'</span>,<span class="string">' '</span>)</span><br><span class="line">        <span class="keyword">return</span> self.res</span><br></pre></td></tr></table></figure></div>
+
+<p><a name="iu4Rt"></a></p>
+<h1 id="4-在blivedm裏面-加入聊天機器人的代碼"><a href="#4-在blivedm裏面-加入聊天機器人的代碼" class="headerlink" title="4 在blivedm裏面, 加入聊天機器人的代碼"></a>4 在blivedm裏面, 加入聊天機器人的代碼</h1><p><a name="pt8sn"></a></p>
+<h2 id="修改sample-py"><a href="#修改sample-py" class="headerlink" title="修改sample.py"></a>修改sample.py</h2><p>把client ID改成要回覆彈幕的ID<br><img src="https://s1.ax1x.com/2020/06/26/NrxI2R.png" alt="NrxI2R.png"></p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">async</span> <span class="function"><span class="keyword">def</span> <span class="title">_on_receive_danmaku</span><span class="params">(self, danmaku: blivedm.DanmakuMessage)</span>:</span></span><br><span class="line">    print(<span class="string">f'<span class="subst">&#123;danmaku.uname&#125;</span>：<span class="subst">&#123;danmaku.msg&#125;</span>'</span>)</span><br></pre></td></tr></table></figure></div>
+<p>這兩行是彈幕, 直接用後面的{danmaku.msg}就好,<br />這裏, 我們改成</p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">async</span> <span class="function"><span class="keyword">def</span> <span class="title">_on_receive_danmaku</span><span class="params">(self, danmaku: blivedm.DanmakuMessage)</span>:</span></span><br><span class="line">    print(<span class="string">f'<span class="subst">&#123;danmaku.uname&#125;</span>：<span class="subst">&#123;danmaku.msg&#125;</span>'</span>)</span><br><span class="line">    <span class="keyword">if</span> <span class="string">f'<span class="subst">&#123;danmaku.uname&#125;</span>'</span> != <span class="string">"史上最不正經的生物狗"</span>:<span class="comment">#這裏是我的名字, 不把自己排除, 會自己套娃, 無限自嗨的= =</span></span><br><span class="line">        B_send(airoot().getword(str(<span class="string">f'<span class="subst">&#123;danmaku.msg&#125;</span>'</span>))[<span class="string">'content'</span>])</span><br></pre></td></tr></table></figure></div>
+
+<p><a name="TL6fr"></a></p>
+<h2 id="彈幕分割"><a href="#彈幕分割" class="headerlink" title="彈幕分割"></a>彈幕分割</h2><p>因爲普通人員, 一個彈幕只能發20個字節, 字數多了, 會自動忽略, 所以需要分割分佈發送</p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">B_Slice</span><span class="params">(MSG)</span>:</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range((len(MSG)//<span class="number">20</span>)+<span class="number">1</span>):</span><br><span class="line">        B_send(MSG[i*<span class="number">20</span>:(i+<span class="number">1</span>)*<span class="number">20</span>])</span><br></pre></td></tr></table></figure></div>
+
+<p>把分割套進去</p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">async</span> <span class="function"><span class="keyword">def</span> <span class="title">_on_receive_danmaku</span><span class="params">(self, danmaku: blivedm.DanmakuMessage)</span>:</span></span><br><span class="line">    print(<span class="string">f'<span class="subst">&#123;danmaku.uname&#125;</span>：<span class="subst">&#123;danmaku.msg&#125;</span>'</span>)</span><br><span class="line">    <span class="keyword">if</span> <span class="string">f'<span class="subst">&#123;danmaku.uname&#125;</span>'</span> != <span class="string">"史上最不正經的生物狗"</span>:</span><br><span class="line">        B_Slice(airoot().getword(str(<span class="string">f'<span class="subst">&#123;danmaku.msg&#125;</span>'</span>))[<span class="string">'content'</span>])</span><br></pre></td></tr></table></figure></div>
+
+<p><a name="Lp4df"></a></p>
+<h2 id="鏈接超時"><a href="#鏈接超時" class="headerlink" title="鏈接超時"></a>鏈接超時</h2><p>發現經常連接超時, 然後卡在了那裏. 我設置了一個timeout=15, 在前面, 已更新<br />後面老地方, 加一個try</p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">async</span> <span class="function"><span class="keyword">def</span> <span class="title">_on_receive_danmaku</span><span class="params">(self, danmaku: blivedm.DanmakuMessage)</span>:</span></span><br><span class="line">    print(<span class="string">f'<span class="subst">&#123;danmaku.uname&#125;</span>：<span class="subst">&#123;danmaku.msg&#125;</span>'</span>)</span><br><span class="line">    <span class="keyword">if</span> <span class="string">f'<span class="subst">&#123;danmaku.uname&#125;</span>'</span> != <span class="string">"史上最不正經的生物狗"</span>:</span><br><span class="line">        <span class="keyword">try</span>:</span><br><span class="line">            MSG = airoot().getword(str(<span class="string">f'<span class="subst">&#123;danmaku.msg&#125;</span>'</span>))[<span class="string">'content'</span>]</span><br><span class="line">        <span class="keyword">except</span>:</span><br><span class="line">            MSG = <span class="string">"鏈接超時了 = =(自動回覆)"</span></span><br><span class="line">        B_Slice(MSG)</span><br></pre></td></tr></table></figure></div>
+
+<p><a name="CiMm7"></a></p>
+<h2 id="发送太快而被吞"><a href="#发送太快而被吞" class="headerlink" title="发送太快而被吞"></a>发送太快而被吞</h2><p>加一个1s延迟,发送弹幕过多的时候</p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">B_Slice</span><span class="params">(MSG)</span>:</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range((len(MSG)//<span class="number">20</span>)+<span class="number">1</span>):</span><br><span class="line">        B_send(MSG[i*<span class="number">20</span>:(i+<span class="number">1</span>)*<span class="number">20</span>])</span><br><span class="line">        time.sleep(<span class="number">1</span>)</span><br></pre></td></tr></table></figure></div>
+
+<p>娛樂而已, 應該不會載更新了, /摔板凳</p>
+<p><a name="BB8A3"></a></p>
+<h1 id="Sample-py"><a href="#Sample-py" class="headerlink" title="Sample.py"></a>Sample.py</h1><div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -*- coding: utf-8 -*-</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> asyncio,requests, sys, time</span><br><span class="line"><span class="keyword">import</span> urllib.request</span><br><span class="line"><span class="keyword">import</span> urllib.parse</span><br><span class="line"><span class="keyword">import</span> json</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> blivedm</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyBLiveClient</span><span class="params">(blivedm.BLiveClient)</span>:</span></span><br><span class="line">    <span class="comment"># 演示如何自定义handler</span></span><br><span class="line">    _COMMAND_HANDLERS = blivedm.BLiveClient._COMMAND_HANDLERS.copy()</span><br><span class="line"></span><br><span class="line">    <span class="keyword">async</span> <span class="function"><span class="keyword">def</span> <span class="title">__on_vip_enter</span><span class="params">(self, command)</span>:</span></span><br><span class="line">        print(command)</span><br><span class="line">    _COMMAND_HANDLERS[<span class="string">'WELCOME'</span>] = __on_vip_enter  <span class="comment"># 老爷入场</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">async</span> <span class="function"><span class="keyword">def</span> <span class="title">_on_receive_popularity</span><span class="params">(self, popularity: int)</span>:</span></span><br><span class="line">        <span class="comment">#print(f'当前人气值：&#123;popularity&#125;')</span></span><br><span class="line">        AAAAAAAA = <span class="number">1</span></span><br><span class="line">    <span class="keyword">async</span> <span class="function"><span class="keyword">def</span> <span class="title">_on_receive_danmaku</span><span class="params">(self, danmaku: blivedm.DanmakuMessage)</span>:</span></span><br><span class="line">        print(<span class="string">f'<span class="subst">&#123;danmaku.uname&#125;</span>：<span class="subst">&#123;danmaku.msg&#125;</span>'</span>)</span><br><span class="line">        <span class="keyword">if</span> <span class="string">f'<span class="subst">&#123;danmaku.uname&#125;</span>'</span> != <span class="string">"史上最不正經的生物狗"</span>:</span><br><span class="line">            <span class="keyword">try</span>:</span><br><span class="line">                MSG = airoot().getword(str(<span class="string">f'<span class="subst">&#123;danmaku.msg&#125;</span>'</span>))[<span class="string">'content'</span>]</span><br><span class="line">            <span class="keyword">except</span>:</span><br><span class="line">                MSG = <span class="string">"鏈接超時了 = =(自動回覆)"</span></span><br><span class="line">            B_Slice(MSG)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">async</span> <span class="function"><span class="keyword">def</span> <span class="title">_on_receive_gift</span><span class="params">(self, gift: blivedm.GiftMessage)</span>:</span></span><br><span class="line">        print(<span class="string">f'<span class="subst">&#123;gift.uname&#125;</span> 赠送<span class="subst">&#123;gift.gift_name&#125;</span>x<span class="subst">&#123;gift.num&#125;</span> （<span class="subst">&#123;gift.coin_type&#125;</span>币x<span class="subst">&#123;gift.total_coin&#125;</span>）'</span>)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">async</span> <span class="function"><span class="keyword">def</span> <span class="title">_on_buy_guard</span><span class="params">(self, message: blivedm.GuardBuyMessage)</span>:</span></span><br><span class="line">        print(<span class="string">f'<span class="subst">&#123;message.username&#125;</span> 购买<span class="subst">&#123;message.gift_name&#125;</span>'</span>)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">async</span> <span class="function"><span class="keyword">def</span> <span class="title">_on_super_chat</span><span class="params">(self, message: blivedm.SuperChatMessage)</span>:</span></span><br><span class="line">        print(<span class="string">f'醒目留言 ¥<span class="subst">&#123;message.price&#125;</span> <span class="subst">&#123;message.uname&#125;</span>：<span class="subst">&#123;message.message&#125;</span>'</span>)</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">airoot</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="comment">#This function is original from:https://blog.csdn.net/qq_29129381/article/details/82865617</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">        self.url = <span class="string">r'http://api.qingyunke.com/api.php?%s'</span></span><br><span class="line">        self.data = &#123;</span><br><span class="line">            <span class="string">'key'</span>:<span class="string">'free'</span>,</span><br><span class="line">            <span class="string">'appid'</span>:<span class="number">0</span>,</span><br><span class="line">            <span class="string">'msg'</span>:<span class="string">''</span></span><br><span class="line">        &#125;</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">getword</span><span class="params">(self, word=<span class="string">''</span>)</span>:</span></span><br><span class="line">        self.data[<span class="string">'msg'</span>] = word</span><br><span class="line">        <span class="keyword">if</span> self.data[<span class="string">'msg'</span>] == <span class="string">''</span>:</span><br><span class="line">            self.data[<span class="string">'msg'</span>] = <span class="string">'你不说话, 我来撩你吧'</span></span><br><span class="line">        self.params = urllib.parse.urlencode(self.data)</span><br><span class="line">        self.url = self.url % self.params</span><br><span class="line">        self.page = urllib.request.urlopen(self.url,timeout=<span class="number">15</span>).read()</span><br><span class="line">        self.res = json.loads(self.page)</span><br><span class="line">        self.res[<span class="string">'content'</span>] = self.res[<span class="string">'content'</span>].replace(<span class="string">'&#123;br&#125;'</span>,<span class="string">' '</span>)</span><br><span class="line">        <span class="keyword">return</span> self.res</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">B_send</span><span class="params">(MSG)</span>:</span></span><br><span class="line">    Cookies =  <span class="string">""</span><span class="comment">#自己的</span></span><br><span class="line">    cookie = &#123;<span class="string">'Cookie'</span>: Cookies&#125;</span><br><span class="line">    data = &#123;</span><br><span class="line">    <span class="string">'color'</span>:<span class="string">'16777215'</span>,</span><br><span class="line">    <span class="string">'fontsize'</span>:<span class="string">'25'</span>,</span><br><span class="line">    <span class="string">'mode'</span>:<span class="string">'1'</span>,</span><br><span class="line">    <span class="string">'msg'</span>:MSG,</span><br><span class="line">    <span class="string">'rnd'</span>:<span class="string">'1584087359'</span>,</span><br><span class="line">    <span class="string">'roomid'</span>:<span class="string">'21154895'</span>,</span><br><span class="line">    <span class="string">'bubble'</span>:<span class="string">'0'</span>,</span><br><span class="line">    <span class="string">'aid'</span>:<span class="string">'56737027'</span>,</span><br><span class="line">    <span class="string">'csrf_token'</span>:<span class="string">'e8377d560fe3434ffd36531d323df842'</span>,</span><br><span class="line">    <span class="string">'csrf'</span>:<span class="string">'e8377d560fe3434ffd36531d323df842'</span></span><br><span class="line">    &#125;</span><br><span class="line">    requests.post(<span class="string">'https://api.live.bilibili.com/msg/send'</span>, cookies=cookie, data=data)</span><br><span class="line"><span class="comment">#senddanmu.sendDM(data) #&lt;Response [200]&gt; 200是状态码 表示pass</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">B_Slice</span><span class="params">(MSG)</span>:</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range((len(MSG)//<span class="number">20</span>)+<span class="number">1</span>):</span><br><span class="line">        B_send(MSG[i*<span class="number">20</span>:(i+<span class="number">1</span>)*<span class="number">20</span>])</span><br><span class="line">        time.sleep(<span class="number">1</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">async</span> <span class="function"><span class="keyword">def</span> <span class="title">main</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="comment"># 参数1是直播间ID</span></span><br><span class="line">    <span class="comment"># 如果SSL验证失败就把ssl设为False</span></span><br><span class="line">    client = MyBLiveClient(<span class="number">21154895</span>, ssl=<span class="literal">True</span>)</span><br><span class="line">    future = client.start()</span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        <span class="comment"># 5秒后停止，测试用</span></span><br><span class="line">        <span class="comment"># await asyncio.sleep(5)</span></span><br><span class="line">        <span class="comment"># future = client.stop()</span></span><br><span class="line">        <span class="comment"># 或者</span></span><br><span class="line">        <span class="comment"># future.cancel()</span></span><br><span class="line">        <span class="keyword">await</span> future</span><br><span class="line">    <span class="keyword">finally</span>:</span><br><span class="line">        <span class="keyword">await</span> client.close()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    asyncio.get_event_loop().run_until_complete(main())</span><br></pre></td></tr></table></figure></div>
+
+
+<p><a name="UqplL"></a></p>
+<h1 id="用戶自主開啓關閉機器人"><a href="#用戶自主開啓關閉機器人" class="headerlink" title="用戶自主開啓關閉機器人"></a>用戶自主開啓關閉機器人</h1><p>有時候機器人實在是太煩了, 簡直煩到想取關<br />這裏, 我們可以添加一個屏蔽名單, 並用簡單的命令判斷,讓發彈幕的人, 自主選擇, 打開或者關閉機器人回答<br />爲了長久有效, 我們最好是, 把這個名單存入本地文件. 這裏, 取名IgnoreList,我直接把他放進同樣的路徑, 方便讀取.</p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">IgnoreList</span><span class="params">(USER,MSG)</span>:</span></span><br><span class="line">    Ignore_List = open(sys.path[<span class="number">0</span>]+<span class="string">"/IgnoreList"</span>,<span class="string">'r'</span>).read().split(<span class="string">"\n"</span>)[:<span class="number">-1</span>]</span><br><span class="line">    <span class="comment"># 設定屏蔽規則</span></span><br><span class="line">    <span class="keyword">if</span> str(MSG) == <span class="string">"菲菲辛苦啦~"</span>:</span><br><span class="line">        B_Slice(<span class="string">"好的,菲菲先行告退了,愛你呦,木木噠~"</span>)</span><br><span class="line">        Ignore_List += [USER]</span><br><span class="line">    <span class="keyword">elif</span> str(MSG) == <span class="string">"菲菲快回來~"</span>:</span><br><span class="line">        <span class="keyword">try</span>:</span><br><span class="line">            Ignore_List.remove(USER)</span><br><span class="line">        <span class="keyword">except</span>:</span><br><span class="line">            B_Slice(<span class="string">"你一直都在菲菲心里哟~"</span>)</span><br><span class="line">    Update = <span class="string">"\n"</span>.join(Ignore_List)+<span class="string">"\n"</span></span><br><span class="line">    F = open(sys.path[<span class="number">0</span>]+<span class="string">"/IgnoreList"</span>,<span class="string">'w'</span>)</span><br><span class="line">    F.write(Update)</span><br><span class="line">    F.close()</span><br><span class="line">    <span class="keyword">return</span> Ignore_List</span><br></pre></td></tr></table></figure></div>
+<p><img src="https://s1.ax1x.com/2020/06/26/Nrxox1.png" alt="Nrxox1.png"></p>
+<p><a name="l8uBi"></a></p>
+<h1 id="防沉迷程序"><a href="#防沉迷程序" class="headerlink" title="防沉迷程序"></a>防沉迷程序</h1><p>爲了防止惡意刷屏,或者過於小盆友沉迷而耽誤學習, 因此在學習/工作時間內, 限制每分鐘內響應次數. 若超過, 則忽視多少分鐘<br />時間設定在早上9點,到晚上9點之間</p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">Bubling_List = &#123;&#125;</span><br><span class="line">Bubling_ban = &#123;&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">ToBubling_detect</span><span class="params">(User,Bubling_List,Bubling_ban,Times,TimeOut)</span>:</span></span><br><span class="line">    Times -=<span class="number">1</span></span><br><span class="line">    <span class="keyword">if</span> User != <span class="string">'史上最不正經的生物狗'</span> <span class="keyword">and</span> User <span class="keyword">not</span> <span class="keyword">in</span> Bubling_ban.keys():</span><br><span class="line">        <span class="keyword">if</span> User <span class="keyword">not</span> <span class="keyword">in</span> Bubling_List.keys():</span><br><span class="line">            Bubling_List.update(&#123;User:&#123;<span class="string">'Time'</span>: time.time(), <span class="string">'Num'</span>: <span class="number">1</span>&#125;&#125;)</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            Time_endur = time.time() - Bubling_List[User][<span class="string">'Time'</span>]</span><br><span class="line">            <span class="keyword">if</span> Time_endur &lt; <span class="number">60</span> <span class="keyword">and</span> Bubling_List[User][<span class="string">'Num'</span>] &gt; Times:</span><br><span class="line">                Bubling_ban.update(&#123;User:time.time()&#125;)</span><br><span class="line">                B_Slice(User+<span class="string">" 因調戲菲菲過於頻繁,而被選擇性忽略5min, 略略略~"</span>)</span><br><span class="line">                Bubling_List[User][<span class="string">'Num'</span>] = <span class="number">0</span></span><br><span class="line">                Bubling_List[User][<span class="string">'Time'</span>] = time.time()</span><br><span class="line">            <span class="keyword">elif</span> Time_endur &lt; <span class="number">60</span> <span class="keyword">and</span> Bubling_List[User][<span class="string">'Num'</span>] &lt;= Times:</span><br><span class="line">                Bubling_List[User][<span class="string">'Num'</span>] +=<span class="number">1</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                Bubling_List[User][<span class="string">'Num'</span>] =<span class="number">1</span></span><br><span class="line">                Bubling_List[User][<span class="string">'Time'</span>] = time.time()</span><br><span class="line">        <span class="keyword">try</span>:</span><br><span class="line">            <span class="keyword">if</span> time.time() - Bubling_ban[User] &gt; TimeOut*<span class="number">60</span>:</span><br><span class="line">                Bubling_ban.pop(User)</span><br><span class="line">        <span class="keyword">except</span> Exception <span class="keyword">as</span> e:</span><br><span class="line">            Bubling_ban = Bubling_ban</span><br><span class="line">    <span class="keyword">return</span> Bubling_List, Bubling_ban</span><br></pre></td></tr></table></figure></div>
+
+
+
+<p>到此, 全程序爲: (自己加cookies)</p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -*- coding: utf-8 -*-</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> asyncio,requests, sys, time</span><br><span class="line"><span class="keyword">import</span> urllib.request</span><br><span class="line"><span class="keyword">import</span> urllib.parse</span><br><span class="line"><span class="keyword">import</span> json</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> blivedm</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyBLiveClient</span><span class="params">(blivedm.BLiveClient)</span>:</span></span><br><span class="line">    <span class="comment"># 演示如何自定义handler</span></span><br><span class="line">    _COMMAND_HANDLERS = blivedm.BLiveClient._COMMAND_HANDLERS.copy()</span><br><span class="line"></span><br><span class="line">    <span class="keyword">async</span> <span class="function"><span class="keyword">def</span> <span class="title">__on_vip_enter</span><span class="params">(self, command)</span>:</span></span><br><span class="line">        print(command)</span><br><span class="line">    _COMMAND_HANDLERS[<span class="string">'WELCOME'</span>] = __on_vip_enter  <span class="comment"># 老爷入场</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">async</span> <span class="function"><span class="keyword">def</span> <span class="title">_on_receive_popularity</span><span class="params">(self, popularity: int)</span>:</span></span><br><span class="line">        <span class="comment">#print(f'当前人气值：&#123;popularity&#125;')</span></span><br><span class="line">        AAAAAAAA = <span class="number">1</span></span><br><span class="line">    <span class="keyword">async</span> <span class="function"><span class="keyword">def</span> <span class="title">_on_receive_danmaku</span><span class="params">(self, danmaku: blivedm.DanmakuMessage)</span>:</span></span><br><span class="line">        <span class="keyword">global</span> Bubling_List, Bubling_ban</span><br><span class="line">        print(<span class="string">f'<span class="subst">&#123;danmaku.uname&#125;</span>：<span class="subst">&#123;danmaku.msg&#125;</span>'</span>)</span><br><span class="line">        <span class="comment"># Bubuling test</span></span><br><span class="line">        Bubling_List, Bubling_ban = ToBubling_detect(<span class="string">f'<span class="subst">&#123;danmaku.uname&#125;</span>'</span>,Bubling_List,Bubling_ban,<span class="number">10</span>,<span class="number">5</span>)</span><br><span class="line">        <span class="comment"># IgnoreList</span></span><br><span class="line">        Ignore_List = IgnoreList(<span class="string">f'<span class="subst">&#123;danmaku.uname&#125;</span>'</span>,<span class="string">f'<span class="subst">&#123;danmaku.msg&#125;</span>'</span>)</span><br><span class="line">        Ignore_List += list(Bubling_ban.keys())</span><br><span class="line">        <span class="comment">#print(Ignore_List)</span></span><br><span class="line">        <span class="comment">#print(Bubling_List)</span></span><br><span class="line">        <span class="keyword">if</span> <span class="string">f'<span class="subst">&#123;danmaku.uname&#125;</span>'</span> <span class="keyword">not</span> <span class="keyword">in</span> Ignore_List:</span><br><span class="line">            <span class="keyword">try</span>:</span><br><span class="line">                MSG = airoot().getword(str(<span class="string">f'<span class="subst">&#123;danmaku.msg&#125;</span>'</span>))[<span class="string">'content'</span>]</span><br><span class="line">            <span class="keyword">except</span>:</span><br><span class="line">                MSG = <span class="string">"鏈接超時了 = =(自動回覆)"</span></span><br><span class="line">            B_Slice(MSG)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">async</span> <span class="function"><span class="keyword">def</span> <span class="title">_on_receive_gift</span><span class="params">(self, gift: blivedm.GiftMessage)</span>:</span></span><br><span class="line">        print(<span class="string">f'<span class="subst">&#123;gift.uname&#125;</span> 赠送<span class="subst">&#123;gift.gift_name&#125;</span>x<span class="subst">&#123;gift.num&#125;</span> （<span class="subst">&#123;gift.coin_type&#125;</span>币x<span class="subst">&#123;gift.total_coin&#125;</span>）'</span>)</span><br><span class="line">        B_Slice(str(<span class="string">f'谢谢<span class="subst">&#123;gift.uname&#125;</span> 赠送的<span class="subst">&#123;gift.gift_name&#125;</span>'</span>))</span><br><span class="line">    <span class="keyword">async</span> <span class="function"><span class="keyword">def</span> <span class="title">_on_buy_guard</span><span class="params">(self, message: blivedm.GuardBuyMessage)</span>:</span></span><br><span class="line">        print(<span class="string">f'<span class="subst">&#123;message.username&#125;</span> 购买<span class="subst">&#123;message.gift_name&#125;</span>'</span>)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">async</span> <span class="function"><span class="keyword">def</span> <span class="title">_on_super_chat</span><span class="params">(self, message: blivedm.SuperChatMessage)</span>:</span></span><br><span class="line">        print(<span class="string">f'醒目留言 ¥<span class="subst">&#123;message.price&#125;</span> <span class="subst">&#123;message.uname&#125;</span>：<span class="subst">&#123;message.message&#125;</span>'</span>)</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">airoot</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="comment">#This function is original from:https://blog.csdn.net/qq_29129381/article/details/82865617</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">        self.url = <span class="string">r'http://api.qingyunke.com/api.php?%s'</span></span><br><span class="line">        self.data = &#123;</span><br><span class="line">            <span class="string">'key'</span>:<span class="string">'free'</span>,</span><br><span class="line">            <span class="string">'appid'</span>:<span class="number">0</span>,</span><br><span class="line">            <span class="string">'msg'</span>:<span class="string">''</span></span><br><span class="line">        &#125;</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">getword</span><span class="params">(self, word=<span class="string">''</span>)</span>:</span></span><br><span class="line">        self.data[<span class="string">'msg'</span>] = word</span><br><span class="line">        <span class="keyword">if</span> self.data[<span class="string">'msg'</span>] == <span class="string">''</span>:</span><br><span class="line">            self.data[<span class="string">'msg'</span>] = <span class="string">'你不说话, 我来撩你吧'</span></span><br><span class="line">        self.params = urllib.parse.urlencode(self.data)</span><br><span class="line">        self.url = self.url % self.params</span><br><span class="line">        self.page = urllib.request.urlopen(self.url,timeout=<span class="number">20</span>).read()</span><br><span class="line">        self.res = json.loads(self.page)</span><br><span class="line">        self.res[<span class="string">'content'</span>] = self.res[<span class="string">'content'</span>].replace(<span class="string">'&#123;br&#125;'</span>,<span class="string">' '</span>)</span><br><span class="line">        <span class="keyword">return</span> self.res</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">IgnoreList</span><span class="params">(USER,MSG)</span>:</span></span><br><span class="line">    Ignore_List = open(sys.path[<span class="number">0</span>]+<span class="string">"/IgnoreList"</span>,<span class="string">'r'</span>).read().split(<span class="string">"\n"</span>)[:<span class="number">-1</span>]</span><br><span class="line">    <span class="comment"># 設定屏蔽規則</span></span><br><span class="line">    <span class="keyword">if</span> str(MSG) == <span class="string">"菲菲辛苦啦~"</span>:</span><br><span class="line">        B_Slice(<span class="string">"好的,菲菲先行告退了,愛你呦,木木噠~"</span>)</span><br><span class="line">        Ignore_List += [USER]</span><br><span class="line">    <span class="keyword">elif</span> str(MSG) == <span class="string">"菲菲快回來~"</span>:</span><br><span class="line">        <span class="keyword">try</span>:</span><br><span class="line">            Ignore_List.remove(USER)</span><br><span class="line">        <span class="keyword">except</span>:</span><br><span class="line">            B_Slice(<span class="string">"你一直都在菲菲心里哟~"</span>)</span><br><span class="line">    Update = <span class="string">"\n"</span>.join(Ignore_List)+<span class="string">"\n"</span></span><br><span class="line">    F = open(sys.path[<span class="number">0</span>]+<span class="string">"/IgnoreList"</span>,<span class="string">'w'</span>)</span><br><span class="line">    F.write(Update)</span><br><span class="line">    F.close()</span><br><span class="line">    <span class="keyword">return</span> Ignore_List</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">B_send</span><span class="params">(MSG)</span>:</span></span><br><span class="line">    Cookies =  <span class="string">""</span></span><br><span class="line">    cookie = &#123;<span class="string">'Cookie'</span>: Cookies&#125;</span><br><span class="line">    data = &#123;</span><br><span class="line">    <span class="string">'color'</span>:<span class="string">'16777215'</span>,</span><br><span class="line">    <span class="string">'fontsize'</span>:<span class="string">'25'</span>,</span><br><span class="line">    <span class="string">'mode'</span>:<span class="string">'1'</span>,</span><br><span class="line">    <span class="string">'msg'</span>:MSG,</span><br><span class="line">    <span class="string">'rnd'</span>:<span class="string">'1584087359'</span>,</span><br><span class="line">    <span class="string">'roomid'</span>: str(ROOM_ID),</span><br><span class="line">    <span class="string">'bubble'</span>:<span class="string">'0'</span>,</span><br><span class="line">    <span class="string">'aid'</span>:<span class="string">'56737027'</span>,</span><br><span class="line">    <span class="string">'csrf_token'</span>:<span class="string">'e8377d560fe3434ffd36531d323df842'</span>,</span><br><span class="line">    <span class="string">'csrf'</span>:<span class="string">'e8377d560fe3434ffd36531d323df842'</span></span><br><span class="line">    &#125;</span><br><span class="line">    requests.post(<span class="string">'https://api.live.bilibili.com/msg/send'</span>, cookies=cookie, data=data)</span><br><span class="line"><span class="comment">#senddanmu.sendDM(data) #&lt;Response [200]&gt; 200是状态码 表示pass</span></span><br><span class="line"></span><br><span class="line">Bubling_List = &#123;&#125;</span><br><span class="line">Bubling_ban = &#123;&#125;</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">ToBubling_detect</span><span class="params">(User,Bubling_List,Bubling_ban,Times,TimeOut)</span>:</span></span><br><span class="line">    Times -=<span class="number">1</span></span><br><span class="line">    <span class="keyword">if</span> User != <span class="string">'史上最不正經的生物狗'</span> <span class="keyword">and</span> User <span class="keyword">not</span> <span class="keyword">in</span> Bubling_ban.keys():</span><br><span class="line">        <span class="keyword">if</span> User <span class="keyword">not</span> <span class="keyword">in</span> Bubling_List.keys():</span><br><span class="line">            Bubling_List.update(&#123;User:&#123;<span class="string">'Time'</span>: time.time(), <span class="string">'Num'</span>: <span class="number">1</span>&#125;&#125;)</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            Time_endur = time.time() - Bubling_List[User][<span class="string">'Time'</span>]</span><br><span class="line">            <span class="keyword">if</span> Time_endur &lt; <span class="number">60</span> <span class="keyword">and</span> Bubling_List[User][<span class="string">'Num'</span>] &gt; Times:</span><br><span class="line">                Bubling_ban.update(&#123;User:time.time()&#125;)</span><br><span class="line">                B_Slice(User+<span class="string">" 因調戲菲菲過於頻繁,而被選擇性忽略5min, 略略略~"</span>)</span><br><span class="line">                Bubling_List[User][<span class="string">'Num'</span>] = <span class="number">0</span></span><br><span class="line">                Bubling_List[User][<span class="string">'Time'</span>] = time.time()</span><br><span class="line">            <span class="keyword">elif</span> Time_endur &lt; <span class="number">60</span> <span class="keyword">and</span> Bubling_List[User][<span class="string">'Num'</span>] &lt;= Times:</span><br><span class="line">                Bubling_List[User][<span class="string">'Num'</span>] +=<span class="number">1</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                Bubling_List[User][<span class="string">'Num'</span>] =<span class="number">1</span></span><br><span class="line">                Bubling_List[User][<span class="string">'Time'</span>] = time.time()</span><br><span class="line">        <span class="keyword">try</span>:</span><br><span class="line">            <span class="keyword">if</span> time.time() - Bubling_ban[User] &gt; TimeOut*<span class="number">60</span>:</span><br><span class="line">                Bubling_ban.pop(User)</span><br><span class="line">        <span class="keyword">except</span> Exception <span class="keyword">as</span> e:</span><br><span class="line">            Bubling_ban = Bubling_ban</span><br><span class="line">    <span class="keyword">return</span> Bubling_List, Bubling_ban</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">ROOM_ID = <span class="number">21154895</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">B_Slice</span><span class="params">(MSG)</span>:</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range((len(MSG)//<span class="number">20</span>)+<span class="number">1</span>):</span><br><span class="line">        B_send(MSG[i*<span class="number">20</span>:(i+<span class="number">1</span>)*<span class="number">20</span>])</span><br><span class="line">        time.sleep(<span class="number">1</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">async</span> <span class="function"><span class="keyword">def</span> <span class="title">main</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="comment"># 参数1是直播间ID</span></span><br><span class="line">    <span class="comment"># 如果SSL验证失败就把ssl设为False</span></span><br><span class="line">    client = MyBLiveClient(ROOM_ID, ssl=<span class="literal">True</span>)</span><br><span class="line">    future = client.start()</span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        <span class="comment"># 5秒后停止，测试用</span></span><br><span class="line">        <span class="comment"># await asyncio.sleep(5)</span></span><br><span class="line">        <span class="comment"># future = client.stop()</span></span><br><span class="line">        <span class="comment"># 或者</span></span><br><span class="line">        <span class="comment"># future.cancel()</span></span><br><span class="line">        <span class="keyword">await</span> future</span><br><span class="line">    <span class="keyword">finally</span>:</span><br><span class="line">        <span class="keyword">await</span> client.close()</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    asyncio.get_event_loop().run_until_complete(main())</span><br></pre></td></tr></table></figure></div>
+
+<hr>
+<p>github: <a href="https://github.com/Karobben" target="_blank" rel="noopener">https://github.com/Karobben</a><br>blog: <a href="http://Karobben.github.io">Karobben.github.io</a><br>R 语言画图索引: <a href="https://karobben.github.io/R/R-index.html">https://karobben.github.io/R/R-index.html</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://karobben.github.io/Blog/Python_Bilibot.html" data-id="ckcogiwg7002w2bfc6yju2gb4" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">July 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">June 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/07/01/123/">123</a>
+          </li>
+        
+          <li>
+            <a href="/2020/06/30/tmp/">test</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+  <!-- Weather -->
+<div id="weather-view-he" ></div>
+<script>
+WIDGET = {ID: 'HfP68rcshb'};
+</script>
+<script type="text/javascript" src="https://apip.weatherdt.com/view/static/js/r.js?v=1111"></script>
+
+</aside>
+
+          <!-- Weather Plug -->
+        
+        <!--git talk-->
+        <section id="main">
+          <div style='padding-top:10px'>
+  <div style="background:white">
+    <script src="https://utteranc.es/client.js"
+            repo="Karobben/utterances"
+            issue-term="pathname"
+            theme="preferred-color-scheme"
+            crossorigin="anonymous"
+            async>
+    </script>
+  </div>
+</div>
+<!--git talk-->
+  <!-- Link Gitalk 的支持文件  -->
+  <!--
+    <div>
+      <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+      <script src="https://unpkg.com/gitalk@latest/dist/gitalk.min.js"></script>
+      <div id="gitalk-container"></div>     <script type="text/javascript">
+          var gitalk = new Gitalk({
+
+          // gitalk的主要参数
+              clientID: '96c208ade65e80e3aaac',
+              clientSecret: '86e9240674a3815b0ddc31dababdb4998d5562f4',
+              repo: 'OAuth-Application',
+              owner: 'Karobben',
+              admin: ['Karobben'],
+              id:window.location.pathname,
+          });
+          gitalk.render('gitalk-container');
+      </script>
+    </div>
+<!-- Gitalk end -->
+
+        </section>
+        <!-- Gitalk end -->
+
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      <span style="float:right; list-style:none">
+        <a style="padding: 10px" href="https://karobben.github.io/">Blog</a>
+        <a style="padding: 10px" href="https://github.com/Karobben" target="_blank" rel="noopener">GitHub</a>
+        <br>
+        <a style="padding: 10px" href="https://space.bilibili.com/393056819" target="_blank" rel="noopener">BiliBili</a>
+        <a href="mailto:a591465908@outlook.com">Mail me</a>
+      </span>
+      &copy; Karobben 2020<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+  <span>
+    <p align = "center">
+      <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+      <span id="busuanzi_container_site_pv">~<span id="busuanzi_value_site_pv"></span>~</span>
+    </p>
+  </span>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  <!--`
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  -->
+  <a class="mobile-nav-link" href="../index.html">Home</a>
+  <a class="mobile-nav-link" href="../R/R-index.html">R</a>
+  <a class="mobile-nav-link" href="../Python/index.html">Python</a>
+  <a class="mobile-nav-link" href="../Linux/index.html">Linux</a>
+  <a class="mobile-nav-link" href="../Bioinfor/index.html">Bio-Protocal</a>
+  <a class="mobile-nav-link" href="../LearnNotes/index.html">Notes</a>
+  <a class="mobile-nav-link" href="../Blog/index.html">Others</a>
+</nav>
+
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+<!--mermaid module-->
+
+  <script src='https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js'></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({theme: 'forest'});
+    }
+  </script>
+
+
+
+<!-- Searche Module-->
+<script src="/js/search.js"></script>
+<script src="/js/load.js"></script>
+<!-- 这里可能有一些其他原来文件里的代码，也可以没有 -->
+
+  </div>
+</body>
+</html>
