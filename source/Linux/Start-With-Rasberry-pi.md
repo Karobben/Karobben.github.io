@@ -137,8 +137,31 @@ finish
 reboot
 ```
 
+# 开机任务
+参考: [yuanfujie](https://blog.csdn.net/u011720560/article/details/80591460)
+
+進入隱藏文件夾， 然後創建一個文件夾和文件， 做開機啓動腳本
+
+```bash
+cd ~/.config
+cd /home/pi/.config
+mkdir autostart
+cd autostart
+# 創建自啓腳本
+sudo nano myapp.desktop
+```
+在`nano`後黏貼代碼如下。重點在`Exec=XXX`;
+比如，我的需要執行的腳本路徑爲<span style="background:salmon">/home/pi/Blive</span>
+```desktop
+[Desktop Entry]
+Type=Application
+Exec=/home/pi/Blive
+Icon=ICON_PATH
+```
+親測有效
 
 
+Enjoy～
 ---
 github: [https://github.com/Karobben](https://github.com/Karobben)
 blog: [Karobben.github.io](http://Karobben.github.io)

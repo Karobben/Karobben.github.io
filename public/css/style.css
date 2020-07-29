@@ -1381,7 +1381,8 @@ pre .javascript .function {
   border-radius: 5px;
 /*box-shadow: 0 10px 30px 0px rgba(0, 0, 0, 0.4);*/
   -webkit-box-shadow: 18px 18px 15px 0px rgba(0,0,0,0.4);
-  box-shadow: 18px 18px 15px 0px rgba(0,0,0,0.4);
+  /*Shadow of the code block*/
+  box-shadow: 5px 5px 15px 0px rgba(0,0,0,0.4);
   margin: 35px 0;
   margin-top: 10px;
   margin-bottom: 25px;

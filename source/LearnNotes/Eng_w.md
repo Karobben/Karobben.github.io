@@ -12,11 +12,14 @@ description: "Synonyms of Vocabulary; 英语同义词替换"
 
 |Word|Word2|Property|Trans|
 |--|--|--|-----|
+|Ambition|aspiration|n.|抱負|
 |Anger|Pique|n.||
 |**Avoid**| circumvent|v.||
+|body|corpse|n.|尸体|2
 |Believe|creed, doctrine|n.| (<s>刺客</s>信条)
-|**Clean**|neat; *neatly*|n.|干净|
+|Cafeteria|canteen|n.|食堂|
 |Cheat|coax, procure|v., n.|哄骗，诱劝|
+|**Clean**|neat; *neatly*|n.|干净|
 |Conquer|subjugate|v.||
 |Drink|imbibe|v.||
 |Force|compulsory, oblige|v.|强迫做...|
@@ -27,6 +30,7 @@ description: "Synonyms of Vocabulary; 英语同义词替换"
 |Grades|tally|n.|(游戏 等)积分|
 |Group|party, faction, school|||
 |Interrupt|interject|v.|打断|
+|Native|idiomatic|adj.|地道的，地方特色的(语言)|
 |**Possible**|feasible, practicable, achievable, reasonable|||
 |Quiet|serene, tranquil, peaceful, quiescent| adj.||
 |Quickly; shortly|evanescent; ephemeral|adj.|转瞬即逝|

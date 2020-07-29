@@ -17,16 +17,24 @@ url: GKNotes
 - [学习方法网](https://www.xuexifangfa.com/)
   各个阶段都有， 值得了解
 
+- [高考网](http://www.gaokao.com/)
+  超多试卷， 随心下载
+
+- [新东方在线](https://www.koolearn.com/)
+  新东方旗下的学习网站
 
 # 数学
 - 高中数学笔记(自己整理)!!! -- **百度文库**
-[1巫1 2016](https://wenku.baidu.com/view/15ab47bb7e21af45b207a8c5.html)
-<span style="color:salmon">*21981阅读; 244下载; 63页*</span>
+  [1巫1 2016](https://wenku.baidu.com/view/15ab47bb7e21af45b207a8c5.html)
+  <span style="color:salmon">*21981阅读; 244下载; 63页*</span>
 
 # 英语
 - 高中英语语法大全 最新整理 -- **学习方法网**
-[学习方法网 2018](https://www.xuexifangfa.com/English/1038857.html)
-<span style="color:salmon">*来源:网络综合 | 作者:佚名 | 本文已影响 3026 人*</span>
+  [学习方法网 2018](https://www.xuexifangfa.com/English/1038857.html)
+  <span style="color:salmon">*来源:网络综合 | 作者:佚名 | 本文已影响 3026 人*</span>
+- 历年阅读理解题目 -- **新东方在线**
+  [新东方在线 2016~2018](https://news.koolearn.com/20180518/1150496.html)
+  <span style="color:salmon">*66套*</span>
 
 # 物理
 - 133页高中物理笔记（高清版），没有最全！建议高中生收藏，打印，家长转给孩子 -- **知乎**

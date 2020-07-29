@@ -13,8 +13,7 @@ data(mtcars)
 Tree  <- hclust(dist(mtcars))
 plot(Tree)
 ```
-![raw_tree](https://i.loli.net/2020/06/12/I27STVL51JDdzEA.png)
-
+![UOWJA0.png](https://s1.ax1x.com/2020/07/23/UOWJA0.png)
 
 ```r
 library(ggplot2)
@@ -40,7 +39,7 @@ ggplot() +
         panel.grid=element_blank())
 ```
 美美噠！
-![ggtree](https://i.loli.net/2020/06/12/O29u1tIgElvK3Qh.png)
+![UOWQXj.png](https://s1.ax1x.com/2020/07/23/UOWQXj.png)
 
 自定義間距：
 ```r
@@ -71,8 +70,6 @@ ggplot() +
 
 ```r
 hc       <- hclust(dist(head(mtcars)))
-
-
 
 dendr    <- dendro_data(hc, type="rectangle") # convert for ggplot
 clust    <- cutree(hc,k=2)                    # find 2 clusters
@@ -144,7 +141,7 @@ dendr$segments$xend[List[i]:nrow(dendr$segments)] = dendr$segments$xend[List[i]:
 
 PLOT(dendr)
 ```
-![test](https://i.loli.net/2020/06/12/rcMmCZYlNzHP79F.png)
+![UOWK1g.png](https://s1.ax1x.com/2020/07/23/UOWK1g.png)
 
 鏈接橫線
 ```r
@@ -161,10 +158,20 @@ dendr$segments = rbind(dendr$segments, data.frame(x=tmp[1],y=i,xend=tmp[2],yend=
 PLOT(dendr)
 ```
 能用。。。但是好像會有bug。。唉= =
-![temp](https://i.loli.net/2020/06/12/g6uQlckH8TmNEK7.png)
+![UOW3Bn.png](https://s1.ax1x.com/2020/07/23/UOW3Bn.png)
+
 
 修正
 ```r
+LS_judg<- function(TB){
+  if (TB['x'] == TB['xend']){
+    R = 'v'
+  }else{
+    R = 'h'
+  }
+  return(R)
+}
+
 #修正竖线
 Seg = dendr$segments
 
@@ -252,6 +259,9 @@ TreePlot <- function(dendr, Width_tree){
 }
 ```
 
+|![UOWYNV.png](https://s1.ax1x.com/2020/07/23/UOWYNV.png)|![UOWK1g.png](https://s1.ax1x.com/2020/07/23/UOWK1g.png)|![UOW3Bn.png](https://s1.ax1x.com/2020/07/23/UOW3Bn.png)|![UOW1ns.png](https://s1.ax1x.com/2020/07/23/UOW1ns.png)|
+|--|--|--|--|
+
 再來試一下：
 1. 正常情況:
 ```R
@@ -276,10 +286,12 @@ PLOT2(AA)
 ```
 |原圖|後圖|
 |---|---|
-|![ggtree](https://i.loli.net/2020/06/12/O29u1tIgElvK3Qh.png)|![tmp2](https://i.loli.net/2020/06/12/kEy5OTjKvDwqd2m.png)|
+|![UOh9Ld.png](https://s1.ax1x.com/2020/07/23/UOh9Ld.png)|![UOWMcQ.png](https://s1.ax1x.com/2020/07/23/UOWMcQ.png)
+|
 
 终于- - 终于终于， 修正好了， 最终版本
-[![tXl311.png](https://s1.ax1x.com/2020/06/12/tXl311.png)](https://imgchr.com/i/tXl311)
+![UOWMcQ.png](https://s1.ax1x.com/2020/07/23/UOWMcQ.png)
+
 
 ---
 github: [https://github.com/Karobben](https://github.com/Karobben)

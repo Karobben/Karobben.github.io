@@ -335,8 +335,7 @@ table$X=factor(table$X, levels=table[[1]])
 
 
 <a name="TWMrw"></a>
-##
-6. theme()<br />
+## 6. theme()<br />
 
 ```r
 + theme(plot.title = element_text(hjust = 0.5),axis.text.x = element_text(angle = 45, hjust=1))

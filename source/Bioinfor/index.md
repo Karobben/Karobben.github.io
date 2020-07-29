@@ -2,6 +2,7 @@
   **Reads**
   - [sratools](sratools.html)
   - [fastqc](fastqc.html)
+  - [fastp](fastp.html)
   - [Trimmomatic](Trimmomatic.html)
 
   **Reads Align**
@@ -22,6 +23,9 @@
   **Visualization**
   - [igv](igv.html)
 
+  **Fasta Align**
+  - [ClustelW2 & Muscle](faAlign.html)
+
   **Others**
   - [Bioconda](Bioconda.html)
   - [NCBI: E-utilities](E-utilities.html)
@@ -39,6 +43,9 @@
   **SNP**
   - [samtools: SNP Calling](snp_samtools.html)
   - [GATK: SNP Calling](snp_gatk.html)
+
+  **DNA Methylation**
+  - [BatMeth2](BatMeth2.html)
 
   **Others**
   - [Calcium Competent Cells](Competent_c.html)
