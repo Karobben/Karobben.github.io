@@ -6,7 +6,7 @@ url: blive2
 
 # Blive with RasperryPi
 
-Reference: [https://www.bilibili.com/read/cv791252/](https://www.bilibili.com/read/cv791252/)
+Reference: [Bilibili: 五维谐振子 ](https://www.bilibili.com/read/cv791252/)
 
 <a name="Aypwi"></a>
 # Qick Start
@@ -20,7 +20,7 @@ sudo raspivid -o - -t 0 -w 1280 -h 720 -fps 24 -b 1000000 | ffmpeg -f h264 -i - 
 
 <a name="Zgaim"></a>
 ## 降低延迟:
-[https://blog.csdn.net/fireroll/article/details/51902018](https://blog.csdn.net/fireroll/article/details/51902018)
+[CSDN: 北雨南萍](https://blog.csdn.net/fireroll/article/details/51902018)
 
 ```bash
 sudo raspivid -o - -t 0 -w 1280 -h 720 -fps 24 -b 1000000 |
@@ -29,7 +29,7 @@ sudo raspivid -o - -t 0 -w 1280 -h 720 -fps 24 -b 1000000 |
 
 <a name="3NazO"></a>
 # raspivid
-[https://shumeipai.nxez.com/2014/09/21/raspicam-documentation.html](https://shumeipai.nxez.com/2014/09/21/raspicam-documentation.html)
+[树莓派实验室: Spoony](https://shumeipai.nxez.com/2014/09/21/raspicam-documentation.html)
 ```bash
 "raspivid" Camera App (commit 06bc6daa0213 Tainted)
 
@@ -143,7 +143,7 @@ Image parameter commands
 
 <a name="7wvaM"></a>
 # python + openCVC + ffmpeg
-more: [https://blog.csdn.net/Mind_programmonkey/article/details/102732555](https://blog.csdn.net/Mind_programmonkey/article/details/102732555)
+more: [CSDN: mind_programmonkey](https://blog.csdn.net/Mind_programmonkey/article/details/102732555)
 
 基本框架
 ```python

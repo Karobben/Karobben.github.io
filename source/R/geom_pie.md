@@ -38,8 +38,9 @@ library(ggthemes)
 pie <- ggplot(df, aes(x="", y=value, fill=group))+
     geom_bar(width = 1, stat = "identity") + coord_polar("y", start=0) + theme_map()
 pie
+ggsave("pie.png", w=3.17, h=2.92)
 ```
-![pie1](https://i.loli.net/2020/06/18/y1drCS3bYxRnZEK.png)
+[![aQ18Wd.md.png](https://s1.ax1x.com/2020/07/31/aQ18Wd.md.png)](https://imgchr.com/i/aQ18Wd)
 
 ```r
 pie +  scale_fill_manual(values=c("#999999", "#E69F00", "#56B4E9"))

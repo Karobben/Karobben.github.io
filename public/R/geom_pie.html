@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="Karobben">
 <meta property="og:description" content="geom_pie">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://i.loli.net/2020/06/18/y1drCS3bYxRnZEK.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/07/31/aQ18Wd.md.png">
 <meta property="og:image" content="https://i.loli.net/2020/06/18/DaeIctdAkl1rhxg.png">
 <meta property="og:image" content="https://i.loli.net/2020/06/18/AP2zfYt5qwcLxk1.png">
 <meta property="og:image" content="https://i.loli.net/2020/06/18/HE9qSbdfLWV4hK5.png">
@@ -24,11 +24,11 @@
 <meta property="og:image" content="http://image.sciencenet.cn/album/201511/30/095608alcdhac773j7l3au.png">
 <meta property="og:image" content="http://image.sciencenet.cn/album/201511/30/095650yu52524f7zf2rb7u.png">
 <meta property="og:image" content="https://images.squarespace-cdn.com/content/v1/56713bf4dc5cb41142f28d1f/1450306657208-N3NFCZECC1X5Y7LKZXNS/ke17ZwdGBToddI8pDm48kPmLlvCIXgndBxNq9fzeZb1Zw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZamWLI2zvYWH8K3-s_4yszcp2ryTI0HqTOaaUohrI8PI1ywBQVkPxlWdHWNwmTPkOtpL7dAXKpzabxT18Uiubqc/devourThePie3.gif?format=750w">
-<meta property="article:published_time" content="2020-07-16T07:13:33.926Z">
-<meta property="article:modified_time" content="2020-07-16T07:13:33.926Z">
+<meta property="article:published_time" content="2020-07-31T03:54:12.558Z">
+<meta property="article:modified_time" content="2020-07-31T03:54:12.558Z">
 <meta property="article:author" content="Karobben">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://i.loli.net/2020/06/18/y1drCS3bYxRnZEK.png">
+<meta name="twitter:image" content="https://s1.ax1x.com/2020/07/31/aQ18Wd.md.png">
   
     <link rel="alternate" href="/atom.xml" title="Karobben" type="application/atom+xml">
   
@@ -124,7 +124,7 @@
 <div id="tipue_search_content" style="display: none"></div>
   <div class="article-meta">
     <a href="/R/geom_pie.html" class="article-date">
-  <time datetime="2020-07-16T07:13:33.926Z" itemprop="datePublished">2020-07-16</time>
+  <time datetime="2020-07-31T03:54:12.558Z" itemprop="datePublished">2020-07-31</time>
 </a>
     
   </div>
@@ -175,8 +175,8 @@
 <div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="R"><figure class="iseeu highlight /r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">library</span>(ggplot2)</span><br><span class="line"></span><br><span class="line">df &lt;- data.frame(</span><br><span class="line">  group = c(<span class="string">"Male"</span>, <span class="string">"Female"</span>, <span class="string">"Child"</span>),</span><br><span class="line">  value = c(<span class="number">25</span>, <span class="number">25</span>, <span class="number">50</span>)</span><br><span class="line">  )</span><br><span class="line">head(df)</span><br></pre></td></tr></table></figure></div>
 <div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">group value</span><br><span class="line">1   Male    25</span><br><span class="line">2 Female    25</span><br><span class="line">3  Child    50</span><br></pre></td></tr></table></figure></div>
 
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="R"><figure class="iseeu highlight /r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">library</span>(ggplot2)</span><br><span class="line"><span class="keyword">library</span>(ggthemes)</span><br><span class="line"></span><br><span class="line">pie &lt;- ggplot(df, aes(x=<span class="string">""</span>, y=value, fill=group))+</span><br><span class="line">    geom_bar(width = <span class="number">1</span>, stat = <span class="string">"identity"</span>) + coord_polar(<span class="string">"y"</span>, start=<span class="number">0</span>) + theme_map()</span><br><span class="line">pie</span><br></pre></td></tr></table></figure></div>
-<p><img src="https://i.loli.net/2020/06/18/y1drCS3bYxRnZEK.png" alt="pie1"></p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="R"><figure class="iseeu highlight /r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">library</span>(ggplot2)</span><br><span class="line"><span class="keyword">library</span>(ggthemes)</span><br><span class="line"></span><br><span class="line">pie &lt;- ggplot(df, aes(x=<span class="string">""</span>, y=value, fill=group))+</span><br><span class="line">    geom_bar(width = <span class="number">1</span>, stat = <span class="string">"identity"</span>) + coord_polar(<span class="string">"y"</span>, start=<span class="number">0</span>) + theme_map()</span><br><span class="line">pie</span><br><span class="line">ggsave(<span class="string">"pie.png"</span>, w=<span class="number">3.17</span>, h=<span class="number">2.92</span>)</span><br></pre></td></tr></table></figure></div>
+<p><a href="https://imgchr.com/i/aQ18Wd" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2020/07/31/aQ18Wd.md.png" alt="aQ18Wd.md.png"></a></p>
 <div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="R"><figure class="iseeu highlight /r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pie +  scale_fill_manual(values=c(<span class="string">"#999999"</span>, <span class="string">"#E69F00"</span>, <span class="string">"#56B4E9"</span>))</span><br><span class="line">ggsave(<span class="string">'pie2.png'</span>, wi=<span class="number">4.6</span>, hei=<span class="number">3.76</span>)</span><br></pre></td></tr></table></figure></div>
 <p><img src="https://i.loli.net/2020/06/18/DaeIctdAkl1rhxg.png" alt="pie2"></p>
 <div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="R"><figure class="iseeu highlight /r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pie +  scale_fill_manual(values=c(<span class="string">"#999999"</span>, <span class="string">"#E69F00"</span>, <span class="string">"#56B4E9"</span>)) +  geom_text(aes(y = value/<span class="number">3</span> + c(<span class="number">0</span>, cumsum(value)[-length(value)]),  </span><br><span class="line">                label = paste(value*<span class="number">100</span>/sum(value),<span class="string">"%"</span>, sep=<span class="string">''</span>)))</span><br></pre></td></tr></table></figure></div>

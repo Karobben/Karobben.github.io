@@ -5,18 +5,19 @@
   
 
   
-  <title>如何用python提取pdf的文本內容 | Karobben</title>
+  <title>pdf to txt| txt to pdf | Karobben</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="如何用python提取pdf的文本內容">
+  <meta name="description" content="Converting your pdf to text file or text files to pdf">
 <meta property="og:type" content="website">
-<meta property="og:title" content="如何用python提取pdf的文本內容">
+<meta property="og:title" content="pdf to txt| txt to pdf">
 <meta property="og:url" content="https://karobben.github.io/Blog/pdf2txt.html">
 <meta property="og:site_name" content="Karobben">
-<meta property="og:description" content="如何用python提取pdf的文本內容">
+<meta property="og:description" content="Converting your pdf to text file or text files to pdf">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://s1.ax1x.com/2020/05/22/YLZMxf.png">
-<meta property="article:published_time" content="2020-07-16T07:13:33.200Z">
-<meta property="article:modified_time" content="2020-07-16T07:13:33.200Z">
+<meta property="og:image" content="https://media.geeksforgeeks.org/wp-content/uploads/20200108153749/GFG201.jpg">
+<meta property="article:published_time" content="2020-07-31T09:56:46.340Z">
+<meta property="article:modified_time" content="2020-07-31T09:56:46.340Z">
 <meta property="article:author" content="Karobben">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://s1.ax1x.com/2020/05/22/YLZMxf.png">
@@ -115,7 +116,7 @@
 <div id="tipue_search_content" style="display: none"></div>
   <div class="article-meta">
     <a href="/Blog/pdf2txt.html" class="article-date">
-  <time datetime="2020-07-16T07:13:33.200Z" itemprop="datePublished">2020-07-16</time>
+  <time datetime="2020-07-31T09:56:46.340Z" itemprop="datePublished">2020-07-31</time>
 </a>
     
   </div>
@@ -126,7 +127,7 @@
         <!--
   
     <h1 class="article-title" itemprop="name">
-      如何用python提取pdf的文本內容
+      pdf to txt| txt to pdf
     </h1>
   
  -->
@@ -149,7 +150,7 @@
 
   <div id="toc" class="toc-article">
     <strong class="toc-title">Titles</strong>
-    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#如何用python提取pdf的文本內容"><span class="toc-number">1.</span> <span class="toc-text">如何用python提取pdf的文本內容</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#1-Install"><span class="toc-number">2.</span> <span class="toc-text">1.Install</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-Run"><span class="toc-number">3.</span> <span class="toc-text">2. Run</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#html"><span class="toc-number">3.1.</span> <span class="toc-text">html</span></a></li></ol></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#如何用python提取pdf的文本內容"><span class="toc-number">1.</span> <span class="toc-text">如何用python提取pdf的文本內容</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#PDF-to-text"><span class="toc-number">2.</span> <span class="toc-text">PDF to text</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-Install"><span class="toc-number">2.1.</span> <span class="toc-text">1.Install</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-Run"><span class="toc-number">2.2.</span> <span class="toc-text">2. Run</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#PDF-to-html"><span class="toc-number">2.3.</span> <span class="toc-text">PDF to html</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Text-to-PDF"><span class="toc-number">3.</span> <span class="toc-text">Text to PDF</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Install"><span class="toc-number">3.1.</span> <span class="toc-text">Install</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Quick-Start"><span class="toc-number">3.2.</span> <span class="toc-text">Quick Start</span></a></li></ol></li></ol>
   </div>
 
 <!-- Table of Contents Down-->
@@ -162,17 +163,27 @@
 
         <h1 id="如何用python提取pdf的文本內容"><a href="#如何用python提取pdf的文本內容" class="headerlink" title="如何用python提取pdf的文本內容"></a>如何用python提取pdf的文本內容</h1><p>pdf2txt.py; extract the txt from pdf files.</p>
 <p>github: <a href="https://github.com/pdfminer/pdfminer.six" target="_blank" rel="noopener">pdfminer</a><br>reference: <a href="https://blog.csdn.net/m0_37952030/article/details/85041434" target="_blank" rel="noopener">Mr_Vague</a></p>
-<h1 id="1-Install"><a href="#1-Install" class="headerlink" title="1.Install"></a>1.Install</h1><div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/pdfminer/pdfminer.six.git</span><br><span class="line">python3 setup.py install</span><br></pre></td></tr></table></figure></div>
+<h1 id="PDF-to-text"><a href="#PDF-to-text" class="headerlink" title="PDF to text"></a>PDF to text</h1><h2 id="1-Install"><a href="#1-Install" class="headerlink" title="1.Install"></a>1.Install</h2><div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/pdfminer/pdfminer.six.git</span><br><span class="line">python3 setup.py install</span><br></pre></td></tr></table></figure></div>
 
 <p><strong>or</strong><br>you can use pip</p>
 <div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo pip3.7  install -i https://pypi.tuna.tsinghua.edu.cn/simple pdfminer.six</span><br></pre></td></tr></table></figure></div>
 
-<h1 id="2-Run"><a href="#2-Run" class="headerlink" title="2. Run"></a>2. Run</h1><div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pdf2txt.py Papers/vilhelmsson2004.pdf| tail</span><br></pre></td></tr></table></figure></div>
+<h2 id="2-Run"><a href="#2-Run" class="headerlink" title="2. Run"></a>2. Run</h2><div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pdf2txt.py Papers/vilhelmsson2004.pdf| tail</span><br></pre></td></tr></table></figure></div>
 <p><span style="background:salmon"><strong>backs to</strong></span>:</p>
 <div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">ken@ken-PC:~/Desktop$ pdf2txt.py Papers/vilhelmsson2004.pdf| tail -n 20</span><br><span class="line">Fotsis T &amp; Mann M (1996) Femtomole sequencing of proteins</span><br><span class="line">from polyacrylamide gels by nano-electrospray mass spec-</span><br><span class="line">trometry. Nature 379, 466– 469.</span><br><span class="line"></span><br><span class="line">Wilson RP &amp; Cowey CB (1985) Amino acid composition of</span><br><span class="line">whole-body tissue of rainbow trout and Atlantic salmon. Aqua-</span><br><span class="line">culture 48, 373– 376.</span><br><span class="line"></span><br><span class="line">Wing SS, Haas AL &amp; Goldberg AL (1995) Increase <span class="keyword">in</span> ubiquitin –</span><br><span class="line">protein conjugates concomitant with the increase <span class="keyword">in</span> proteolysis</span><br><span class="line"><span class="keyword">in</span> rat skeletal muscle during starvation and atrophy denerva-</span><br><span class="line">tion. Biochem J 307, 639–645.</span><br><span class="line"></span><br><span class="line">Yamamoto T, Shima T, Furuita H &amp; Suzuki N (2002) Inﬂuence of</span><br><span class="line">feeding diets with and without ﬁsh meal by hand and by self-</span><br><span class="line">feeders on feed intake, growth and nutrient utilization of juven-</span><br><span class="line">ile rainbow trout (Oncorhynchus mykiss). Aquaculture 214,</span><br><span class="line">289– 305.</span><br><span class="line">...</span><br></pre></td></tr></table></figure></div>
 <p>Compare to raw file:<br><img src="https://s1.ax1x.com/2020/05/22/YLZMxf.png" alt="YLZMxf.png"><br>© vilhelmsson 2004</p>
-<h2 id="html"><a href="#html" class="headerlink" title="html"></a>html</h2><p>output as html file:</p>
+<h2 id="PDF-to-html"><a href="#PDF-to-html" class="headerlink" title="PDF to html"></a>PDF to html</h2><p>output as html file:</p>
 <div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pdf2txt.py -o test.html Papers/vilhelmsson2004.pdf</span><br></pre></td></tr></table></figure></div>
+
+<h1 id="Text-to-PDF"><a href="#Text-to-PDF" class="headerlink" title="Text to PDF"></a>Text to PDF</h1><p>Profile: <a href="https://www.geeksforgeeks.org/convert-text-and-text-file-to-pdf-using-python/" target="_blank" rel="noopener">mkumarchaudhary06</a></p>
+<h2 id="Install"><a href="#Install" class="headerlink" title="Install"></a>Install</h2><div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo pip3.7  install -i https://pypi.tuna.tsinghua.edu.cn/simple fpdf</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> fpdf <span class="keyword">import</span> FPDF</span><br><span class="line"></span><br><span class="line">pdf = FPDF()   <span class="comment"># save FPDF() class into a variable pdf</span></span><br><span class="line">pdf.add_page() <span class="comment"># Add a page</span></span><br><span class="line"></span><br><span class="line">pdf.set_font(<span class="string">"Arial"</span>, size = <span class="number">15</span>) <span class="comment"># set style and size of font that you want in the pdf</span></span><br><span class="line"></span><br><span class="line">pdf.cell(<span class="number">200</span>, <span class="number">10</span>, txt = <span class="string">"GeeksforGeeks"</span>,  </span><br><span class="line">         ln = <span class="number">1</span>, align = <span class="string">'C'</span>) <span class="comment"># create a cell</span></span><br><span class="line">pdf.cell(<span class="number">200</span>, <span class="number">10</span>, txt = <span class="string">"A Computer Science portal for geeks."</span>,</span><br><span class="line">         ln = <span class="number">2</span>, align = <span class="string">'C'</span>) <span class="comment"># add another cell</span></span><br><span class="line"></span><br><span class="line">pdf.output(<span class="string">"GFG.pdf"</span>)         <span class="comment"># save the pdf with name .pdf</span></span><br></pre></td></tr></table></figure></div>
+<p><strong>Output</strong>:<br><img src="https://media.geeksforgeeks.org/wp-content/uploads/20200108153749/GFG201.jpg" alt="GFG.pdf"></p>
+<p>It works, but you need to slicing the sentences before running this codes or the contents will <strong>run out of the page</strong>.</p>
+<p>By solving this problem, there is a script in github: <a href="https://github.com/baruchel/txt2pdf" target="_blank" rel="noopener">baruchel
+</a>. It’s not perfect but it works.</p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/baruchel/txt2pdf.git</span><br><span class="line">txt2pdf -s 12 -o document.pdf document.txt</span><br></pre></td></tr></table></figure></div>
 
 <hr>
 <p>github: <a href="https://github.com/Karobben" target="_blank" rel="noopener">https://github.com/Karobben</a><br>blog: <a href="http://Karobben.github.io">Karobben.github.io</a><br>R 语言画图索引: <a href="https://karobben.github.io/R/R-index.html">https://karobben.github.io/R/R-index.html</a></p>

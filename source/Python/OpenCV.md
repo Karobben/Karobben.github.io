@@ -143,11 +143,11 @@ cv2.cvtColor(img,cv2.COLOR_RGB2GRAY)
 
 
 <a name="FS5Nj"></a>
-# 2 Vedio
+# 2 Video
 
 
 <a name="8FPmZ"></a>
-## 2.1 Vedio read
+## 2.1 Video read
 
 
 ```python
@@ -159,16 +159,18 @@ while (True):
    if cv2.waitKey(25)&0xFF==ord('q'):
        cv2.destroyAllWindows()
        break
-
-# fps of this vedio
+```
+## Reading Video information
+```python
+# fps of this Video
 fps_c = cap.get(cv2.CAP_PROP_FPS)
-Vedio_h = cap.get(cv2.CAP_PROP_FRAME_HEIGHT)
-Vedio_w = cap.get(cv2.CAP_PROP_FRAME_WIDTH)
+Video_h = cap.get(cv2.CAP_PROP_FRAME_HEIGHT)
+Video_w = cap.get(cv2.CAP_PROP_FRAME_WIDTH)
 ```
 
 
 <a name="DG9Xm"></a>
-## 2.2 play Vedio and audio
+## 2.2 play Video and audio
 
 
 ```python
@@ -200,7 +202,7 @@ PlayVideo(video_path)
 
 
 <a name="dw94w"></a>
-## 2.3 Vedio write
+## 2.3 Video write
 
 
 ```python
@@ -240,7 +242,7 @@ videowriter.release()
 
 
 <a name="U6CwD"></a>
-## 2.5 Vedio capture
+## 2.5 Video capture
 
 
 ```python

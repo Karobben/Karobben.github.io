@@ -4,6 +4,7 @@
     - [ggplot: KEGG plot](ggplot_KEGG.html)
     - [ggplot: hclust (dendrogram)](ggplot_hclust.html)
     - [ggplot: break bar plot](ggplot_split.html)
+    - [ggplot: Complicate matrix](ggplot_NRPlot.html)
 - # Python
   - [Biology: extract fasta by seq's length](python_seqlen.html)
   - [Crawl: crawl news](Python-crawl_news.html)
@@ -15,6 +16,7 @@
   - [IP:  IP to Loc(scripts)](Python_IP_Loc.html)
   - [OpenCV:  resize the Outline of Icons](Python-resizeOutline.html)
   - [OpenCV:  Western Blot; Grey-grades Analysis](Python_WBA.html)
+  - [OpenCV:  Video Speed up](Py_openCV_speed.html)
   - [PDF: pdf2txt](pdf2txt.html)
   - [PIL: imgResize(script)](Python_imgResize.html)
   - [QQ:  QQbot](Python-QQbot.html)

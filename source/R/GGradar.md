@@ -41,7 +41,7 @@ E   JP 0.3928207 0.5548013 0.5891342 0.5367423 0.69436110 0.48937538 0.1104125
 '''
 ```
 <a name="TLyND"></a>
-# Arguments
+## Arguments
 
 ```r
 ggradar(data,axis.label.size = 4,
@@ -50,6 +50,30 @@ group.line.width = 1,
 group.point.size = 3,
 plot.title = '这啥？')
 ```
+
+
+# fmsb
+```r
+library(fmsb)
+
+set.seed(99)
+data=as.data.frame(matrix( sample( 0:20, 15, replace=F) , ncol=5))
+colnames(data)=c("math", "english", "biology", "music", "R-coding")
+rownames(data)=paste("mister", letters[1:3] , sep="-")
+# 用于生成雷达图的最大最小值
+data=rbind(rep(20,5) , rep(0,5) , data)
+colors_border=c( rgb(0.2,0.5,0.5,0.9), rgb(0.8,0.2,0.5,0.9) , rgb(0.7,0.5,0.1,0.9))
+colors_in=c( rgb(0.2,0.5,0.5,0.4), rgb(0.8,0.2,0.5,0.4) , rgb(0.7,0.5,0.1,0.4))
+
+radarchart( data, axistype=1,
+  pcol=colors_border , pfcol=colors_in , plwd=4, plty=1,
+  cglcol="grey", cglty=1, axislabcol="grey",
+  caxislabels=seq(0,20,5), cglwd=0.8, vlcex=0.8)
+
+legend(x=0.7, y=1, legend = rownames(data[-c(1,2),]), bty = "n",
+  pch=20, col=colors_in , text.col = "grey", cex=1.2, pt.cex=3)
+```
+
 
 <a name="FG8Ad"></a>
 # More
