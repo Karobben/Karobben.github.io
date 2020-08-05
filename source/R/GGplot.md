@@ -140,18 +140,18 @@ More for pie: [GitIO](https://karobben.github.io/R/geom_pie.html)/[语雀](https
 
 ```r
 ggplot(A, aes(x=Diet,y=A$Time)) + xlab("samples") + ylab(NULL) +
-	theme_bw()+theme(panel.grid.major = element_blank()) +
-	theme(legend.key=element_blank())+geom_tile(aes(fill=weight)) +
-	scale_fill_gradient2(low="steelblue2",mid="white",high="red",midpoint =150)+
-	scale_fill_gradient(low = "white", high = "red")
+  theme_bw()+theme(panel.grid.major = element_blank()) +
+  theme(legend.key=element_blank())+geom_tile(aes(fill=weight)) +
+  scale_fill_gradient2(low="steelblue2",mid="white",high="red",midpoint =150)+
+  scale_fill_gradient(low = "white", high = "red")
 
 ggplot(A, aes(x=Diet,y=A$Time)) + xlab("samples") + ylab(NULL) +
-	theme_bw()+
-	theme(panel.grid.major = element_blank()) +
-	theme(legend.key=element_blank())+
-	geom_tile(aes(fill=weight)) +
-	scale_fill_gradient2(low="steelblue2",mid="white",high="red",midpoint =150)+
-	scale_fill_gradient(low = "white", high = "red")
+  theme_bw()+
+  theme(panel.grid.major = element_blank()) +
+  theme(legend.key=element_blank())+
+  geom_tile(aes(fill=weight)) +
+  scale_fill_gradient2(low="steelblue2",mid="white",high="red",midpoint =150)+
+  scale_fill_gradient(low = "white", high = "red")
 ```
 
 <a name="489Tu"></a>
@@ -250,20 +250,20 @@ ggplot(mtcars, aes(x = drat)) +
 ```r
 + theme(panel.grid.major =element_blank(), 						#栅格线1
         panel.grid.minor = element_blank(), 					#栅格线2
-				panel.background = element_blank(),						#滑板底层
+        panel.background = element_blank(),						#滑板底层
         axis.line = element_line(colour = "black"),		#轴线
-				axis.ticks=element_blank(),										#轴上点
+        axis.ticks=element_blank(),										#轴上点
         axis.text.y=element_blank(), 									#y文字
         axis.title.x =elemet_blank(),									#y标题
-				legend.position='none')												#删标注
+        legend.position='none')												#删标注
 ```
 
 <a name="Kt9wJ"></a>
 ### 2.2 background color
 ```r
 panel.background = element_rect(fill = "lightblue",
-	colour = "lightblue",
-	size = 0.5, linetype = "solid"),
+                    colour = "lightblue",
+                    size = 0.5, linetype = "solid"),
 ```
 
 <a name="Zakzg"></a>
@@ -284,7 +284,7 @@ panel.background = element_rect(fill = "lightblue",
 library(ggrepel)
 +geom_text_repel(aes(label=variable))
 +geom_text(data=A,aes(x=V1,y=valuable,
-	label=row.names(A4), colour =row.names(A4)),nudge_x = 0.5)
+            label=row.names(A4), colour =row.names(A4)),nudge_x = 0.5)
 
 ```
 
@@ -431,19 +431,19 @@ rladies <- read_csv(url("https://raw.githubusercontent.com/d4tagirl/R-Ladies-gro
 p_load(tidyverse, gganimate, maps, ggthemes)
 
 ggplot()+borders("world", color="black", fill="steelblue4") +
-	geom_point(data = rladies, aes(lon, lat, size=followers), color="firebrick3",
-		alpha=0.6)+scale_size_continuous(range = c(2,8),
-		breaks = c(250, 500, 750, 1000)) +
-		labs(size="Followers", title="The development of R-Ladies'Twitter accounts",
-		x=NULL,y=NULL)+theme(text = element_text(family = "Times New Roman",
-		color = "deeppink"),plot.title = element_text(size=40,color = "#f9ba00"),
-		plot.subtitle = element_text(size=14),axis.ticks = element_blank(),
-		axis.text = element_blank(),panel.grid = element_blank(),
-		panel.background = element_rect(fill="skyblue"),
-		plot.background = element_rect(fill = "#333333"),
-		legend.position = c(0.18,0.36),legend.background = element_blank(),
-		legend.key = element_blank(),legend.text = element_text(size = 24),
-		legend.title = element_text(size=28, color = "orangered3"))
+                geom_point(data = rladies, aes(lon, lat, size=followers), color="firebrick3",
+                alpha=0.6)+scale_size_continuous(range = c(2,8),
+                breaks = c(250, 500, 750, 1000)) +
+                labs(size="Followers", title="The development of R-Ladies'Twitter accounts",
+                x=NULL,y=NULL)+theme(text = element_text(family = "Times New Roman",
+                color = "deeppink"),plot.title = element_text(size=40,color = "#f9ba00"),
+                plot.subtitle = element_text(size=14),axis.ticks = element_blank(),
+                axis.text = element_blank(),panel.grid = element_blank(),
+                panel.background = element_rect(fill="skyblue"),
+                plot.background = element_rect(fill = "#333333"),
+                legend.position = c(0.18,0.36),legend.background = element_blank(),
+                legend.key = element_blank(),legend.text = element_text(size = 24),
+                legend.title = element_text(size=28, color = "orangered3"))
 ```
 More for maps, please go to see: [GGplot Map](https://www.yuque.com/liuwenkan/bni63i/bu4wnw)
 

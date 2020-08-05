@@ -146,3 +146,37 @@ live2d:
     show: true
   react:
     opacity: 0.7
+
+########################################
+# Config for hexo-renderer-markdown-it #
+########################################
+
+markdown:
+  # 渲染设置
+  render:
+    # 置为true时，html内容保持不变；置为false时，html内容将被转义成普通字符串
+    html: true
+    # 是否生成与XHTML完全兼容的标签（虽然我不懂是什么意思）
+    xhtmlOut: false
+    # 置为true时，每个换行符都被渲染成一个<br>（即Hexo的默认表现）；置为false时，只有空行才会被渲染为<br>（GFM的默认表现）
+    breaks: true
+    # 是否自动识别链接并把它渲染成链接
+    linkify: true
+    # 是否自动识别印刷格式（意思是把(c)渲染为©这样的）
+    typographer: true
+    # 如果typographer被设置为true，则该选项用于设置将dumb quotes（""）自动替换为smart quotes
+    quotes: '“”‘’'
+  # 设置所需插件
+  plugins:
+    - markdown-it-abbr
+    - markdown-it-footnote
+    - markdown-it-ins
+    - markdown-it-sub
+    - markdown-it-sup
+  # 锚点设置（因为我没有尝试相关内容，所以就不翻译相关说明了）
+  anchors:
+    level: 2
+    collisionSuffix: 'v'
+    permalink: true
+    permalinkClass: header-anchor
+    permalinkSymbol: ""

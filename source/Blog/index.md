@@ -38,6 +38,7 @@
   - [Hexo: Code Block-- Mac style code block](Hexo_code.html)
   - [Hexo: 消失的編號](Hexo_list.html)
   - [Hexo: live2d](Hexo_live2d.html)
+  - [Hexo: footntoes](Hexo_footnotes.html)
 - # Other
   - [Graphviz](Graphviz.html)
   - [Latex](Latex.html)

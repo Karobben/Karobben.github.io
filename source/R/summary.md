@@ -47,6 +47,7 @@
   - [Data cleaning](dataclean)
   - [Data normalization](normalization)
   - [PCA](pca2)
+  - [rsm (Response Surface Methodology)](rsm)
   - [worldcloud](worldcloud2)
   - [XGBoost (Con)](xgboost)
   - [Machine Learning (Con)](ml)

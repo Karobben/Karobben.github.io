@@ -55,9 +55,9 @@ TB = ncov$area
 ```r
 library(ggplot2)
 ggplot(湖北)+
-		geom_point(aes(x=日期,y=confirmedCount)) + #Dot plot
-		geom_smooth(aes(x=日期,y=confirmedCount,color = continentName)) + # Smooth line
-		theme_light()
+  geom_point(aes(x=日期,y=confirmedCount)) + #Dot plot
+  geom_smooth(aes(x=日期,y=confirmedCount,color = continentName)) + # Smooth line
+  theme_light()
 ```
 [![Nl7awt.png](https://s1.ax1x.com/2020/06/20/Nl7awt.png)](https://imgchr.com/i/Nl7awt)
 <br />加上几个别的数据
@@ -91,11 +91,11 @@ All Provinces
 ggplot(中国)+   
     geom_smooth(aes(x=日期,y=confirmedCount))+  
     geom_smooth(aes(x=日期,y=deadCount))+  
-		geom_smooth(aes(x=日期,y=curedCount))+  
-		geom_point(aes(x=日期, y=confirmedCount, color='confirmed'))+   
-		geom_point(aes(x=日期, y=deadCount, color='dead'))+   
-		geom_point(aes(x=日期, y=curedCount,color= 'cured'))+  
-		theme_light() +facet_wrap(provinceShortName ~., scales =  'free')             
+    geom_smooth(aes(x=日期,y=curedCount))+  
+    geom_point(aes(x=日期, y=confirmedCount, color='confirmed'))+   
+    geom_point(aes(x=日期, y=deadCount, color='dead'))+   
+    geom_point(aes(x=日期, y=curedCount,color= 'cured'))+  
+    theme_light() +facet_wrap(provinceShortName ~., scales =  'free')             
 ```
 
 
@@ -125,13 +125,13 @@ Adding nCov information
 
 # Graph Left
 ggplot(湖北地图) +
-		geom_sf(aes(fill = 湖北$cities[[1]]$currentConfirmedCount))+
-		theme_light()
+       geom_sf(aes(fill = 湖北$cities[[1]]$currentConfirmedCount))+
+       theme_light()
 
 # Log the count before fill
 ggplot(湖北地图) +
-		geom_sf(aes(fill = log(湖北$cities[[1]]$currentConfirmedCount)))+
-		theme_light()
+       geom_sf(aes(fill = log(湖北$cities[[1]]$currentConfirmedCount)))+
+       theme_light()
 ```
 
 |[![Nl70Ff.png](https://s1.ax1x.com/2020/06/20/Nl70Ff.png)](https://imgchr.com/i/Nl70Ff)|[![NlHt9U.png](https://s1.ax1x.com/2020/06/20/NlHt9U.png)](https://imgchr.com/i/NlHt9U)|
@@ -197,11 +197,11 @@ AAA2 = City_loc[match(AAA$cityName, City_loc$城市),]
 # now, Map data is in AAA, location of cites are in AAA2
 
 ggplot(China) + geom_sf(color='white')+
-		geom_text_repel(data=AAA2,aes(x=jd,y=wd,label=城市))+
-		geom_point(data=AAA2,aes(x=jd,y=wd,
-			color=log(AAA$confirmedCount),
-      size=AAA$confirmedCount),alpha=0.8)+
-		theme_light()+scale_color_gradient(low = "white",high = "red")
+       geom_text_repel(data=AAA2,aes(x=jd,y=wd,label=城市))+
+       geom_point(data=AAA2,aes(x=jd,y=wd,
+       color=log(AAA$confirmedCount),
+       size=AAA$confirmedCount),alpha=0.8)+
+       theme_light()+scale_color_gradient(low = "white",high = "red")
 ```
 [![Nl7Yyd.png](https://s1.ax1x.com/2020/06/20/Nl7Yyd.png)](https://imgchr.com/i/Nl7Yyd)
 
@@ -212,9 +212,9 @@ ggplot(China) + geom_sf(color='white')+
 ```r
 TB$日期 = as.Date.POSIXct(TB$updateTime/1000)
 ggplot(TB)+
-		geom_smooth(aes(x=日期,y=confirmedCount))+   
-		geom_smooth(aes(x=日期,y=deadCount))+   
-		geom_smooth(aes(x=日期,y=curedCount))+   
+    geom_smooth(aes(x=日期,y=confirmedCount))+   
+    geom_smooth(aes(x=日期,y=deadCount))+   
+    geom_smooth(aes(x=日期,y=curedCount))+   
     geom_point(aes(x=日期, y=confirmedCount, color='confirmed'))+    
     geom_point(aes(x=日期, y=deadCount, color='dead'))+    
     geom_point(aes(x=日期, y=curedCount,color= 'cured'))+   
@@ -226,9 +226,9 @@ Keep the countries which aboves 1000 confiremed cases.
 TB2 <- TB[TB$countryName %in% unique(TB$countryName[which(TB$confirmedCount>1000)]),]
 
 ggplot(TB2)+
-		geom_smooth(aes(x=日期,y=confirmedCount))+   
-		geom_smooth(aes(x=日期,y=deadCount))+   
-		geom_smooth(aes(x=日期,y=curedCount))+   
+    geom_smooth(aes(x=日期,y=confirmedCount))+   
+    geom_smooth(aes(x=日期,y=deadCount))+   
+    geom_smooth(aes(x=日期,y=curedCount))+   
     geom_point(aes(x=日期, y=confirmedCount, color='confirmed'))+    
     geom_point(aes(x=日期, y=deadCount, color='dead'))+    
     geom_point(aes(x=日期, y=curedCount,color= 'cured'))+   

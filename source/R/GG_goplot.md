@@ -14,6 +14,7 @@ Before running the codes, I'd like to have a brief introduces about my data.
 
 There are three tables in total and name as `In_all.table`, `Li_all.table`, `Mu_all.table`.
 It looks like:
+
 |Name|InCK_30|InCK_75|In30_75|Cate|
 |:---:|:---:|:---:|:---:|:---:|
 |localization|114|149|94|Biological process|
@@ -113,8 +114,8 @@ One resolution is to combine three tables and sharing one X axis. Another is to 
 theme_go <- theme(axis.text.x=element_text(angle=60,hjust=1,size=12),
       #axis.title.x=element_text(hjust=0),
       plot.title = element_text(hjust = 0.5),
-			panel.grid.major =element_line(colour='grey'),
-			#panel.grid.major =element_blank(),
+      panel.grid.major =element_line(colour='grey'),
+      #panel.grid.major =element_blank(),
       panel.grid.minor = element_blank(),
       panel.background = element_blank(),
       axis.line = element_line(colour = "black"))
@@ -127,10 +128,10 @@ TB = data.frame()
 # Combining tables
 
 for(i in c(1:length(File_list))){
-	tmp = read.table(File_list[i],sep='\t',header=T)
-	tmp$Samples= Samples_list[i]
-	colnames(tmp)[2:4]=c("CK vs 30", "CK vs 75", "30 vs 75")
-	TB = rbind(TB,tmp)
+    tmp = read.table(File_list[i],sep='\t',header=T)
+    tmp$Samples= Samples_list[i]
+    colnames(tmp)[2:4]=c("CK vs 30", "CK vs 75", "30 vs 75")
+    TB = rbind(TB,tmp)
 }
 
 TB_melt <- melt(TB)
@@ -213,7 +214,7 @@ p1 <- ggplot() +
         axis.ticks.y=element_blank(),
         axis.text.y=element_blank(),
         axis.title.y=element_blank(),
-				axis.text.x=element_text(angle=45,hjust=1),
+        axis.text.x=element_text(angle=45,hjust=1),
         panel.background=element_blank(),
         panel.grid=element_blank())
 
@@ -230,13 +231,13 @@ p2 <- ggplot(TB,aes(x=variable,y=Name)) +
       geom_point(aes(size=value,color=Cate))+ theme_light()+
       facet_grid(~SubG, scales ="free", space = 'free') +
       labs(x='Samples',y='Category',title = "GO Anotation of DEGs")+
-			theme(axis.text.x = element_text(angle = 45,hjust=1),
+      theme(axis.text.x = element_text(angle = 45,hjust=1),
             axis.text.y = element_text(size=12),
             strip.text.x = element_text(size=12, face='bold'),
-						legend.position = 'left')
+            legend.position = 'left')
 
 ggdraw()+ draw_plot(p1,0.784,0.0,0.1,0.972) +
-					draw_plot(p2,0,0.007,0.8)
+          draw_plot(p2,0,0.007,0.8)
 
 ggsave('GO_Dots222.png', width = 9.4, height = 8.07)
 ```
