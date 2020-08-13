@@ -19,8 +19,8 @@
 <meta property="og:image" content="https://s1.ax1x.com/2020/06/28/NguN8J.png">
 <meta property="og:image" content="https://s1.ax1x.com/2020/06/28/NguavR.png">
 <meta property="og:image" content="https://s1.ax1x.com/2020/06/28/NgutC4.png">
-<meta property="article:published_time" content="2020-07-16T07:13:33.991Z">
-<meta property="article:modified_time" content="2020-07-16T07:13:33.991Z">
+<meta property="article:published_time" content="2020-08-13T09:18:29.872Z">
+<meta property="article:modified_time" content="2020-08-13T09:18:29.872Z">
 <meta property="article:author" content="Karobben">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://s1.ax1x.com/2020/06/28/NguwK1.png">
@@ -119,7 +119,7 @@
 <div id="tipue_search_content" style="display: none"></div>
   <div class="article-meta">
     <a href="/R/Correlation.html" class="article-date">
-  <time datetime="2020-07-16T07:13:33.991Z" itemprop="datePublished">2020-07-16</time>
+  <time datetime="2020-08-13T09:18:29.872Z" itemprop="datePublished">2020-08-13</time>
 </a>
     
   </div>
@@ -153,7 +153,7 @@
 
   <div id="toc" class="toc-article">
     <strong class="toc-title">Titles</strong>
-    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Correlation"><span class="toc-number">1.</span> <span class="toc-text">Correlation</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#CORRELATION-ELLIPSES"><span class="toc-number">2.</span> <span class="toc-text">CORRELATION ELLIPSES</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#BASIC-SCATTERPLOT-MATRIX"><span class="toc-number">2.1.</span> <span class="toc-text">BASIC SCATTERPLOT MATRIX</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#SCATTERPLOT-MATRIX-–-CAR-PACKAGE"><span class="toc-number">2.2.</span> <span class="toc-text">SCATTERPLOT MATRIX – CAR PACKAGE</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#More"><span class="toc-number">3.</span> <span class="toc-text">More</span></a></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#"><span class="toc-number">1.</span> <span class="toc-text">Correlation</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#"><span class="toc-number">2.</span> <span class="toc-text">CORRELATION ELLIPSES</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#BASIC-SCATTERPLOT-MATRIX"><span class="toc-number">2.1.</span> <span class="toc-text">BASIC SCATTERPLOT MATRIX</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#SCATTERPLOT-MATRIX-–-CAR-PACKAGE"><span class="toc-number">2.2.</span> <span class="toc-text">SCATTERPLOT MATRIX – CAR PACKAGE</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#"><span class="toc-number">3.</span> <span class="toc-text">More</span></a></li></ol>
   </div>
 
 <!-- Table of Contents Down-->
@@ -164,21 +164,20 @@
 </div>
 
 
-        <h1 id="Correlation"><a href="#Correlation" class="headerlink" title="Correlation"></a>Correlation</h1><p><a href="https://imgchr.com/i/NguwK1" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2020/06/28/NguwK1.png" alt="NguwK1.png"></a></p>
+        <h1>Correlation</h1>
+<p><a href="https://imgchr.com/i/NguwK1" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2020/06/28/NguwK1.png" alt="NguwK1.png"></a></p>
 <p><a name="2x5Oh"></a></p>
-<h1 id="CORRELATION-ELLIPSES"><a href="#CORRELATION-ELLIPSES" class="headerlink" title="CORRELATION ELLIPSES"></a>CORRELATION ELLIPSES</h1><div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="R"><figure class="iseeu highlight /r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">library</span>(ellipse)</span><br><span class="line"><span class="keyword">library</span>(RColorBrewer)</span><br><span class="line"></span><br><span class="line">data=cor(mtcars)</span><br><span class="line"></span><br><span class="line"><span class="comment">#Build a Pannel of 100 colors with Rcolor Brewer</span></span><br><span class="line">my_colors &lt;- brewer.pal(<span class="number">5</span>, <span class="string">"Spectral"</span>)</span><br><span class="line">my_colors=colorRampPalette(my_colors)(<span class="number">100</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">#Order the correlation matrix</span></span><br><span class="line">ord &lt;- order(data[<span class="number">1</span>, ])</span><br><span class="line">data_ord = data[ord, ord]</span><br><span class="line">plotcorr(data_ord , col=my_colors[data_ord*<span class="number">50</span>+<span class="number">50</span>] , mar=c(<span class="number">1</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="number">1</span>))</span><br></pre></td></tr></table></figure></div>
-
-
-
-
+<h1>CORRELATION ELLIPSES</h1>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="R"><figure class="iseeu highlight /r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">library</span>(ellipse)</span><br><span class="line"><span class="keyword">library</span>(RColorBrewer)</span><br><span class="line"></span><br><span class="line">data=cor(mtcars)</span><br><span class="line"></span><br><span class="line"><span class="comment">#Build a Pannel of 100 colors with Rcolor Brewer</span></span><br><span class="line">my_colors &lt;- brewer.pal(<span class="number">5</span>, <span class="string">"Spectral"</span>)</span><br><span class="line">my_colors=colorRampPalette(my_colors)(<span class="number">100</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">#Order the correlation matrix</span></span><br><span class="line">ord &lt;- order(data[<span class="number">1</span>, ])</span><br><span class="line">data_ord = data[ord, ord]</span><br><span class="line">plotcorr(data_ord , col=my_colors[data_ord*<span class="number">50</span>+<span class="number">50</span>] , mar=c(<span class="number">1</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="number">1</span>))</span><br></pre></td></tr></table></figure></div>
 <p><a name="IL1P4"></a></p>
-<h2 id="BASIC-SCATTERPLOT-MATRIX"><a href="#BASIC-SCATTERPLOT-MATRIX" class="headerlink" title="BASIC SCATTERPLOT MATRIX"></a>BASIC SCATTERPLOT MATRIX</h2><div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="R"><figure class="iseeu highlight /r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">data=mtcars[ , c(<span class="number">1</span>,<span class="number">3</span>:<span class="number">6</span>)]</span><br><span class="line"><span class="comment">#Make the plot</span></span><br><span class="line">plot(data , pch=<span class="number">20</span> , cex=<span class="number">1.5</span> , col=rgb(<span class="number">0.5</span>, <span class="number">0.8</span>, <span class="number">0.9</span>, <span class="number">0.7</span>))</span><br></pre></td></tr></table></figure></div>
-<p><a href="https://imgchr.com/i/NguU29" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2020/06/28/NguU29.png" alt="NguU29.png"></a><br><a name="EjKBE"></a></p>
-<h2 id="SCATTERPLOT-MATRIX-–-CAR-PACKAGE"><a href="#SCATTERPLOT-MATRIX-–-CAR-PACKAGE" class="headerlink" title="SCATTERPLOT MATRIX – CAR PACKAGE"></a>SCATTERPLOT MATRIX – CAR PACKAGE</h2><div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="R"><figure class="iseeu highlight /r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">library</span>(car)</span><br><span class="line"><span class="keyword">library</span>(RColorBrewer)</span><br><span class="line"><span class="comment">#Let's use the car dataset proposed by R</span></span><br><span class="line"></span><br><span class="line">data=mtcars</span><br><span class="line">my_colors &lt;- brewer.pal(nlevels(as.factor(data$cyl)), <span class="string">"Set2"</span>)</span><br><span class="line">scatterplotMatrix(~mpg+disp+drat|cyl, data=data , reg.line=<span class="string">""</span> ,</span><br><span class="line">-smoother=<span class="string">""</span>, col=my_colors , smoother.args=list(col=<span class="string">"grey"</span>) ,</span><br><span class="line">-cex=<span class="number">1.5</span> , pch=c(<span class="number">15</span>,<span class="number">16</span>,<span class="number">17</span>) , main=<span class="string">"Scatter plot with Three Cylinder Options"</span>)</span><br></pre></td></tr></table></figure></div>
-
+<h2 id="BASIC-SCATTERPLOT-MATRIX"><a class="header-anchor" href="#BASIC-SCATTERPLOT-MATRIX"></a>BASIC SCATTERPLOT MATRIX</h2>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="R"><figure class="iseeu highlight /r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">data=mtcars[ , c(<span class="number">1</span>,<span class="number">3</span>:<span class="number">6</span>)]</span><br><span class="line"><span class="comment">#Make the plot</span></span><br><span class="line">plot(data , pch=<span class="number">20</span> , cex=<span class="number">1.5</span> , col=rgb(<span class="number">0.5</span>, <span class="number">0.8</span>, <span class="number">0.9</span>, <span class="number">0.7</span>))</span><br></pre></td></tr></table></figure></div>
+<p><a href="https://imgchr.com/i/NguU29" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2020/06/28/NguU29.png" alt="NguU29.png"></a><br>
+<a name="EjKBE"></a></p>
+<h2 id="SCATTERPLOT-MATRIX-–-CAR-PACKAGE"><a class="header-anchor" href="#SCATTERPLOT-MATRIX-–-CAR-PACKAGE"></a>SCATTERPLOT MATRIX – CAR PACKAGE</h2>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="R"><figure class="iseeu highlight /r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">library</span>(car)</span><br><span class="line"><span class="keyword">library</span>(RColorBrewer)</span><br><span class="line"><span class="comment">#Let's use the car dataset proposed by R</span></span><br><span class="line"></span><br><span class="line">data=mtcars</span><br><span class="line">my_colors &lt;- brewer.pal(nlevels(as.factor(data$cyl)), <span class="string">"Set2"</span>)</span><br><span class="line">scatterplotMatrix(~mpg+disp+drat|cyl, data=data , reg.line=<span class="string">""</span> ,</span><br><span class="line">  smoother=<span class="string">""</span>, col=my_colors , smoother.args=list(col=<span class="string">"grey"</span>) ,</span><br><span class="line">  cex=<span class="number">1.5</span> , pch=c(<span class="number">15</span>,<span class="number">16</span>,<span class="number">17</span>) , main=<span class="string">"Scatter plot with Three Cylinder Options"</span>)</span><br></pre></td></tr></table></figure></div>
 <p><a href="https://imgchr.com/i/NguN8J" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2020/06/28/NguN8J.png" alt="NguN8J.png"></a></p>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="R"><figure class="iseeu highlight /r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">library</span>(GGally)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Create data</span></span><br><span class="line">sample_data &lt;- data.frame( v1 = <span class="number">1</span>:<span class="number">100</span> + rnorm(<span class="number">100</span>,sd=<span class="number">20</span>), v2 = <span class="number">1</span>:<span class="number">100</span> + rnorm(<span class="number">100</span>,sd=<span class="number">27</span>), v3 = rep(<span class="number">1</span>, <span class="number">100</span>) + rnorm(<span class="number">100</span>, sd = <span class="number">1</span>))</span><br><span class="line">sample_data$v4 = sample_data$v1 ** <span class="number">2</span></span><br><span class="line">sample_data$v5 = -(sample_data$v1 ** <span class="number">2</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Check correlation between variables</span></span><br><span class="line">cor(sample_data)</span><br><span class="line"><span class="comment"># Check correlations (as scatterplots), distribution and print corrleation coefficient</span></span><br><span class="line">ggpairs(sample_data)	<span class="comment"># image left</span></span><br><span class="line">ggcorr(sample_data, method = c(<span class="string">"everything"</span>, <span class="string">"pearson"</span>))	<span class="comment"># image right</span></span><br></pre></td></tr></table></figure></div>
-
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="R"><figure class="iseeu highlight /r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">library</span>(GGally)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Create data</span></span><br><span class="line">sample_data &lt;- data.frame( v1 = <span class="number">1</span>:<span class="number">100</span> + rnorm(<span class="number">100</span>,sd=<span class="number">20</span>), v2 = <span class="number">1</span>:<span class="number">100</span> + rnorm(<span class="number">100</span>,sd=<span class="number">27</span>), v3 = rep(<span class="number">1</span>, <span class="number">100</span>) + rnorm(<span class="number">100</span>, sd = <span class="number">1</span>))</span><br><span class="line">sample_data$v4 = sample_data$v1 ** <span class="number">2</span></span><br><span class="line">sample_data$v5 = -(sample_data$v1 ** <span class="number">2</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Check correlation between variables</span></span><br><span class="line">cor(sample_data)</span><br><span class="line"><span class="comment"># Check correlations (as scatterplots), distribution and print corrleation coefficient</span></span><br><span class="line">ggpairs(sample_data)  <span class="comment"># image left</span></span><br><span class="line">ggcorr(sample_data, method = c(<span class="string">"everything"</span>, <span class="string">"pearson"</span>))  <span class="comment"># image right</span></span><br></pre></td></tr></table></figure></div>
 <table>
 <thead>
 <tr>
@@ -186,11 +185,15 @@
 <th><a href="https://imgchr.com/i/NgutC4" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2020/06/28/NgutC4.png" alt="NgutC4.png"></a></th>
 </tr>
 </thead>
+<tbody></tbody>
 </table>
 <p><a name="FG8Ad"></a></p>
-<h1 id="More"><a href="#More" class="headerlink" title="More"></a>More</h1><p>图片索引:<a href="https://karobben.github.io/R/R-index.html">https://karobben.github.io/R/R-index.html</a></p>
+<h1>More</h1>
+<p>图片索引:<a href="https://karobben.github.io/R/R-index.html">https://karobben.github.io/R/R-index.html</a></p>
 <hr>
-<p>github: <a href="https://github.com/Karobben" target="_blank" rel="noopener">https://github.com/Karobben</a><br>blog: <a href="http://Karobben.github.io">Karobben.github.io</a><br>R 语言画图索引: <a href="https://karobben.github.io/R/R-index.html">https://karobben.github.io/R/R-index.html</a></p>
+<p>github: <a href="https://github.com/Karobben" target="_blank" rel="noopener">https://github.com/Karobben</a><br>
+blog: <a href="http://Karobben.github.io">Karobben.github.io</a><br>
+R 语言画图索引: <a href="https://karobben.github.io/R/R-index.html">https://karobben.github.io/R/R-index.html</a></p>
 
       
     </div>
@@ -222,7 +225,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">July 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">June 2020</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">June 2020</a></li></ul>
     </div>
   </div>
 
@@ -233,10 +236,6 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
-        
-          <li>
-            <a href="/2020/07/01/123/">123</a>
-          </li>
         
           <li>
             <a href="/2020/06/30/tmp/">test</a>

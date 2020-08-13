@@ -16,8 +16,8 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://s1.ax1x.com/2020/06/26/NsEzKe.png">
 <meta property="og:image" content="https://s1.ax1x.com/2020/06/26/NsEvvD.png">
-<meta property="article:published_time" content="2020-07-16T07:13:33.478Z">
-<meta property="article:modified_time" content="2020-07-16T07:13:33.478Z">
+<meta property="article:published_time" content="2020-08-13T09:30:44.547Z">
+<meta property="article:modified_time" content="2020-08-13T09:30:44.547Z">
 <meta property="article:author" content="Karobben">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://s1.ax1x.com/2020/06/26/NsEzKe.png">
@@ -116,7 +116,7 @@
 <div id="tipue_search_content" style="display: none"></div>
   <div class="article-meta">
     <a href="/Linux/Deepin_scrcpy.html" class="article-date">
-  <time datetime="2020-07-16T07:13:33.478Z" itemprop="datePublished">2020-07-16</time>
+  <time datetime="2020-08-13T09:30:44.547Z" itemprop="datePublished">2020-08-13</time>
 </a>
     
   </div>
@@ -150,7 +150,7 @@
 
   <div id="toc" class="toc-article">
     <strong class="toc-title">Titles</strong>
-    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#如何在deepin上安装scrcpy"><span class="toc-number">1.</span> <span class="toc-text">如何在deepin上安装scrcpy</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#1-各种依赖："><span class="toc-number">2.</span> <span class="toc-text">1. 各种依赖：</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-下载"><span class="toc-number">3.</span> <span class="toc-text">2. 下载</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-安装"><span class="toc-number">4.</span> <span class="toc-text">3. 安装</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#安装服务"><span class="toc-number">4.1.</span> <span class="toc-text">安装服务</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#编译"><span class="toc-number">4.2.</span> <span class="toc-text">编译</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#最后"><span class="toc-number">5.</span> <span class="toc-text">最后</span></a></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#"><span class="toc-number">1.</span> <span class="toc-text">如何在deepin上安装scrcpy</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#"><span class="toc-number">2.</span> <span class="toc-text">1. 各种依赖：</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#"><span class="toc-number">3.</span> <span class="toc-text">2. 下载</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#"><span class="toc-number">4.</span> <span class="toc-text">3. 安装</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#安装服务"><span class="toc-number">4.1.</span> <span class="toc-text">安装服务</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#编译"><span class="toc-number">4.2.</span> <span class="toc-text">编译</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#"><span class="toc-number">5.</span> <span class="toc-text">最后</span></a></li></ol>
   </div>
 
 <!-- Table of Contents Down-->
@@ -161,49 +161,52 @@
 </div>
 
 
-        <h1 id="如何在deepin上安装scrcpy"><a href="#如何在deepin上安装scrcpy" class="headerlink" title="如何在deepin上安装scrcpy"></a>如何在deepin上安装scrcpy</h1><p>source: <a href="https://www.linuxuprising.com/2019/03/control-android-devices-from-your.html" target="_blank" rel="noopener">https://www.linuxuprising.com/2019/03/control-android-devices-from-your.html</a></p>
+        <h1>如何在deepin上安装scrcpy</h1>
+<p>source: <a href="https://www.linuxuprising.com/2019/03/control-android-devices-from-your.html" target="_blank" rel="noopener">https://www.linuxuprising.com/2019/03/control-android-devices-from-your.html</a></p>
 <p>scrcpy 作为一个良心开源投屏加控制软件，真是太强大了。 不需要手机安装额外垃圾东西，比自带的手机投屏到电脑功能要稳定很多， 不容易崩溃(某win)。稳定好， 高清画面也不容易掉帧，真是太舒服了。</p>
 <table>
 <thead>
 <tr>
 <th><br /><br /><strong>本来</strong>这个软件非常友好啊, 但是却应为deepin 系统的关系, apt源没有, snap在上国又很鸡肋,完全不能用, 只能自己编译。<br /><br /><br />编译就编译吧， 偏偏又有很多的坑要填 = = 我是被虐的不要不要的反正。<br />对于小白来说， configure + make， 还是很友好的， 报错清晰，debug简单。 但是第一次接触mason 和nijia 来说- -有点噩梦了。<br /><br />最开始想着直接下最新的1.12.1， 然后直接编译， 一堆错误。 后面终于通过googel 到了一个全能贴， 发现需要安装服务。按照要求，安装服务器后，又出现了，ninjia 报错说没有找到1.11.1 的服务器。。？？？ 好吧，去下好了1.11.1的， 总算是没有报错了， 输入scrcpy 也成功了， 没有报错。<br />并且和成功运行的画面一样， 手机收到了确认。 但是- - 就是半天不显示画面。。。 没反应了。<br /><br />瞎折腾了几下， 抱着实时心态， 既然报错说1.11.1， 可能是版本对不上 == ？ 索性干脆安装1.11.1的包， 删掉重来。 终于- -唉， 成功了 - - 撒花！！！<br /><br />下面是详细教程：</th>
-<th align="center"><img src="https://s1.ax1x.com/2020/06/26/NsEzKe.png" alt="NsEzKe.png"></th>
+<th style="text-align:center"><img src="https://s1.ax1x.com/2020/06/26/NsEzKe.png" alt="NsEzKe.png"></th>
 </tr>
 </thead>
+<tbody></tbody>
 </table>
 <p><a name="ss2DJ"></a></p>
-<h1 id="1-各种依赖："><a href="#1-各种依赖：" class="headerlink" title="1. 各种依赖："></a>1. 各种依赖：</h1><div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install adb ffmpeg libsdl2-2.0.0 make gcc pkg-config meson ninja-build \</span><br><span class="line">--libavcodec-dev libavformat-dev libavutil-dev libsdl2-dev</span><br></pre></td></tr></table></figure></div>
-
+<h1>1. 各种依赖：</h1>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install adb ffmpeg libsdl2-2.0.0 make gcc pkg-config meson ninja-build \</span><br><span class="line">    libavcodec-dev libavformat-dev libavutil-dev libsdl2-dev</span><br></pre></td></tr></table></figure></div>
 <p><a name="T1Pew"></a></p>
-<h1 id="2-下载"><a href="#2-下载" class="headerlink" title="2. 下载"></a>2. 下载</h1><p>**<br />地址：<a href="https://github.com/Genymobile/scrcpy/releases/tag/v1.11" target="_blank" rel="noopener">https://github.com/Genymobile/scrcpy/releases/tag/v1.11</a></p>
+<h1>2. 下载</h1>
+<p>**<br />地址：<a href="https://github.com/Genymobile/scrcpy/releases/tag/v1.11" target="_blank" rel="noopener">https://github.com/Genymobile/scrcpy/releases/tag/v1.11</a></p>
 <p><img src="https://s1.ax1x.com/2020/06/26/NsEvvD.png" alt="NsEvvD.png"></p>
 <p>现在圈内两个， 代码：<br />第一个加尾坠“.jar”<br />第二个解压</p>
 <div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">wget -c https://github.com/Genymobile/scrcpy/releases/download/v1.11/scrcpy-server-v1.11</span><br><span class="line">wget -c https://github.com/Genymobile/scrcpy/archive/v1.11.tar.gz</span><br><span class="line"></span><br><span class="line">mv scrcpy-server-v1.11 scrcpy-server-v1.11.jar</span><br><span class="line">tar -zxvf v1.11.tar.gz</span><br></pre></td></tr></table></figure></div>
-
 <p><a name="Aqkr0"></a></p>
-<h1 id="3-安装"><a href="#3-安装" class="headerlink" title="3. 安装"></a>3. 安装</h1><p><a name="Tgac6"></a></p>
-<h2 id="安装服务"><a href="#安装服务" class="headerlink" title="安装服务"></a>安装服务</h2><div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo install scrcpy-server-v1.11.jar /usr/<span class="built_in">local</span>/bin/scrcpy-server.jar</span><br></pre></td></tr></table></figure></div>
-
+<h1>3. 安装</h1>
+<p><a name="Tgac6"></a></p>
+<h2 id="安装服务"><a class="header-anchor" href="#安装服务"></a>安装服务</h2>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo install scrcpy-server-v1.11.jar /usr/<span class="built_in">local</span>/bin/scrcpy-server.jar</span><br></pre></td></tr></table></figure></div>
 <p><a name="fMc6q"></a></p>
-<h2 id="编译"><a href="#编译" class="headerlink" title="编译"></a>编译</h2><div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> scrcpy</span><br><span class="line">meson build --buildtype release --strip -Db_lto=<span class="literal">true</span>  -Dprebuilt_server=../scrcpy-server-v1.11.jar</span><br><span class="line"></span><br><span class="line"><span class="built_in">cd</span> build</span><br><span class="line">ninja</span><br><span class="line"></span><br><span class="line">sudo ninja install</span><br></pre></td></tr></table></figure></div>
-
+<h2 id="编译"><a class="header-anchor" href="#编译"></a>编译</h2>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> scrcpy</span><br><span class="line">meson build --buildtype release --strip -Db_lto=<span class="literal">true</span>  -Dprebuilt_server=../scrcpy-server-v1.11.jar</span><br><span class="line"></span><br><span class="line"><span class="built_in">cd</span> build</span><br><span class="line">ninja</span><br><span class="line"></span><br><span class="line">sudo ninja install</span><br></pre></td></tr></table></figure></div>
 <p>这一步可能出现错误：</p>
 <div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ninja: error: <span class="string">'/home/ken/Soft/scrcpy-server-v1.11.jar'</span>,</span><br><span class="line">needed by <span class="string">'server/scrcpy-server'</span>, missing and no known rule to make it</span><br></pre></td></tr></table></figure></div>
 <p>因为美誉找到server 的路径， 因此只需要把那前面下载的文件， 拷贝或者移动到这个路径就好了， 然后重新ninjia</p>
 <p><a name="mX0mD"></a></p>
-<h1 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h1><p>插入数据线， 打开USB调试模式，输入scrcpy后手机勾选确认</p>
+<h1>最后</h1>
+<p>插入数据线， 打开USB调试模式，输入scrcpy后手机勾选确认</p>
 <div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">scrcpy</span><br></pre></td></tr></table></figure></div>
-
 <p>terminal可能会出现如下代码：</p>
 <div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">INFO: scrcpy 1.11 &lt;https://github.com/Genymobile/scrcpy&gt;</span><br><span class="line">[100%] /data/<span class="built_in">local</span>/tmp/scrcpy-server</span><br><span class="line"><span class="built_in">bind</span>: Address already <span class="keyword">in</span> use</span><br><span class="line">ERROR: Could not listen on port 27183</span><br></pre></td></tr></table></figure></div>
-
-<p>端口被占用或无法使用， 我们换一个端口：<br />输入 scrcpy -p 1234<br /></p>
+<p>端口被占用或无法使用， 我们换一个端口：<br />输入 scrcpy -p 1234<br /></p>
 <div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">$ scrcpy -p 1234</span><br><span class="line">INFO: scrcpy 1.11 &lt;https://github.com/Genymobile/scrcpy&gt;</span><br><span class="line">[100%] /data/<span class="built_in">local</span>/tmp/scrcpy-server</span><br><span class="line">INFO: Initial texture: 1080x2336</span><br><span class="line">INFO: Device clipboard copied</span><br><span class="line">[server] WARN: Could not inject char u+5509</span><br><span class="line">[server] WARN: Could not inject char u+ff0c</span><br><span class="line">[server] WARN: Could not inject char u+5509</span><br></pre></td></tr></table></figure></div>
-
 <p>等待一下就好啦！</p>
 <p>Enjoy~</p>
 <hr>
-<p>github: <a href="https://github.com/Karobben" target="_blank" rel="noopener">https://github.com/Karobben</a><br>blog: <a href="http://Karobben.github.io">Karobben.github.io</a><br>R 语言画图索引: <a href="https://karobben.github.io/R/R-index.html">https://karobben.github.io/R/R-index.html</a></p>
+<p>github: <a href="https://github.com/Karobben" target="_blank" rel="noopener">https://github.com/Karobben</a><br>
+blog: <a href="http://Karobben.github.io">Karobben.github.io</a><br>
+R 语言画图索引: <a href="https://karobben.github.io/R/R-index.html">https://karobben.github.io/R/R-index.html</a></p>
 
       
     </div>
@@ -235,7 +238,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">July 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">June 2020</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">June 2020</a></li></ul>
     </div>
   </div>
 
@@ -246,10 +249,6 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
-        
-          <li>
-            <a href="/2020/07/01/123/">123</a>
-          </li>
         
           <li>
             <a href="/2020/06/30/tmp/">test</a>

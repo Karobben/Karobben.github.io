@@ -18,14 +18,14 @@ Num=1
 for(i in c(1:36)){
   tmp = data.frame(Shrink(world,40),Group=1)
   Num= Num+1
-	tmp$lat = tmp$lat +rnorm(nrow(tmp),0,1)
+  tmp$lat = tmp$lat +rnorm(nrow(tmp),0,1)
   tmp$Group=Num
   TB = rbind(TB,tmp)
 }
 
 ggplot()+ geom_point(data=TB,aes(x=long, y=lat),size=0.3, color="#00518E") +
-	theme_map() + coord_map("ortho", orientation = c(30, 100, 0)) +
-	transition_time(Group)
+  theme_map() + coord_map("ortho", orientation = c(30, 100, 0)) +
+  transition_time(Group)
 
 anim_save("map.gif")
 ```

@@ -49,14 +49,14 @@ list(set(A))
 ######################
 ######### caculating #
 ######################
-Operator 	Description 	Example
-+ 	Addition operator 	100 + 45 = 145
-- 	Subtraction operator 	500 - 65 = 435
-* 	Multiplication operator 	25 * 4 = 100
-/ 	Float Division Operator 	10 / 2 = 5.0
-// 	Integer Division Operator 	10 / 2 = 5
-** 	Exponentiation Operator 	5 ** 3 = 125
-% 	Remainder Operator 	10 % 3 = 1  #  10 / 3 = 3 ... 1
+Operator   Description   Example
++   Addition operator   100 + 45 = 145
+-   Subtraction operator   500 - 65 = 435
+*   Multiplication operator   25 * 4 = 100
+/   Float Division Operator   10 / 2 = 5.0
+//   Integer Division Operator   10 / 2 = 5
+**   Exponentiation Operator   5 ** 3 = 125
+%   Remainder Operator   10 % 3 = 1  #  10 / 3 = 3 ... 1
 
 ```
 

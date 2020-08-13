@@ -26,8 +26,8 @@ F_list = itchat.get_friends(update=True)
 
 #找到发信息的ID
 for i in F_list:
-	if i['RemarkName'] == 'XXX': #昵称
-	print(i['UserName'])
+  if i['RemarkName'] == 'XXX': #昵称
+  print(i['UserName'])
 
 
 

@@ -120,9 +120,9 @@ City_loc = read.csv(text = "城市,jd,wd
 library(ggrepel)
 
 ggplot(data) + geom_sf(aes(fill = OBJECTID))+
-		geom_point(data=City_loc,aes(x=jd,y=wd))+
-		geom_text_repel(data=City_loc,aes(x=jd,y=wd,label=城市))+
-		theme_light()
+    geom_point(data=City_loc,aes(x=jd,y=wd))+
+    geom_text_repel(data=City_loc,aes(x=jd,y=wd,label=城市))+
+    theme_light()
 ```
 ![NuaB9A.png](https://s1.ax1x.com/2020/06/19/NuaB9A.png)
 

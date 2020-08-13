@@ -6,7 +6,11 @@ url: geom_violin2
 # geom_violin
 
 
-![img](https://i.loli.net/2020/06/19/hbiwR31SFt46a9p.png)<a name="wGube"></a>
+![img](https://s1.ax1x.com/2020/08/13/dShnG6.png)<a name="wGube"></a>
+
+
+
+
 # Quick Start
 
 ```r
@@ -21,14 +25,14 @@ p + geom_violin()+ geom_point() + theme_light()
 ```r
 p + geom_violin(scale = "width")+ theme_light()
 ```
-![img](https://i.loli.net/2020/06/19/x92jqz1ATVBp4tr.png)
+![img](https://s1.ax1x.com/2020/08/13/dShmPx.png)
 
 <a name="0p83A"></a>
 ## draw_quantiles
 ```r
 p + geom_violin(aes(fill = factor(cyl)),draw_quantiles = c(0.25, 0.5, 0.75))
 ```
-![img.png](https://i.loli.net/2020/06/19/UqEZPzBosrVmDNT.png)
+![img.png](https://s1.ax1x.com/2020/08/13/dShZI1.png)
 
 <a name="FG8Ad"></a>
 # More

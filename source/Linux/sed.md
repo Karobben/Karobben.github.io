@@ -32,7 +32,7 @@ sed 's/[0-9][0-9]/-&-/g' filename # exp: 833 new -- > -833- new
 sed 's/\w/_/g' filename # or letters except symples.(including chinese)
 
 sed 's/\b/==/g' filename # add a "==" on the begin and the end of all words
-# ==4811==	==that==	[==ðæt==; ==ðət==]
+# ==4811==  ==that==  [==ðæt==; ==ðət==]
 
 sed 's/[^0-9]/*/g' filename # ^ means negated match
 

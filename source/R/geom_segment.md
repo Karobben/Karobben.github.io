@@ -14,7 +14,7 @@ library(ggplot2)
 library(ggtheme)
 
 ggplot(seals, aes(long, lat)) + theme_map()
-		geom_segment(aes(xend = long + delta_long, yend = lat + delta_lat),
+    geom_segment(aes(xend = long + delta_long, yend = lat + delta_lat),
     arrow = arrow(length = unit(0.1,"cm")))
 ```
 
@@ -24,14 +24,14 @@ ggplot(seals, aes(long, lat)) + theme_map()
 
 ```r
 P1 <- ggplot(seals, aes(long, lat)) + theme_map()+ ggtitle('0.1')+
-		geom_segment(aes(xend = long + delta_long, yend = lat + delta_lat),
+    geom_segment(aes(xend = long + delta_long, yend = lat + delta_lat),
     arrow = arrow(length = unit(0.1,"cm")))+
-		theme(plot.title = element_text(hjust = 0.5))
+    theme(plot.title = element_text(hjust = 0.5))
 
 P2 <- ggplot(seals, aes(long, lat)) + theme_map()+ ggtitle('0.3')+
     geom_segment(aes(xend = long + delta_long, yend = lat + delta_lat),
     arrow = arrow(length = unit(0.3,"cm")))+
-		theme(plot.title = element_text(hjust = 0.5))
+    theme(plot.title = element_text(hjust = 0.5))
 
 P1|P2
 ```

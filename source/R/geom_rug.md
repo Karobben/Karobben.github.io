@@ -12,7 +12,7 @@ library(ggplot2)
 library(patchworks)
 
 ggplot(mtcars,aes(wt,mpg))+ geom_point( color="grey50") +
-	geom_rug() + theme_light()
+  geom_rug() + theme_light()
 ```
 
 <a name="njg2Q"></a>
@@ -34,13 +34,13 @@ geom_rug( outside = TRUE)+ coord_cartesian(clip = "off")
 ```r
 library(patchwork)
 P1 <- ggplot(mtcars,aes(wt,mpg))+ geom_point( color="grey50") + theme_light()+
-		geom_rug( sides='t', color='red') + ggtitle('t') +theme(plot.title = element_text(hjust = 0.5))
+    geom_rug( sides='t', color='red') + ggtitle('t') +theme(plot.title = element_text(hjust = 0.5))
 P2 <- ggplot(mtcars,aes(wt,mpg))+ geom_point( color="grey50") + theme_light()+
-		geom_rug( sides='r', color='red') + ggtitle('r') +theme(plot.title = element_text(hjust = 0.5))
+    geom_rug( sides='r', color='red') + ggtitle('r') +theme(plot.title = element_text(hjust = 0.5))
 P3 <- ggplot(mtcars,aes(wt,mpg))+ geom_point( color="grey50") + theme_light()+
-		geom_rug( sides='b', color='red') + ggtitle('b') +theme(plot.title = element_text(hjust = 0.5))
+    geom_rug( sides='b', color='red') + ggtitle('b') +theme(plot.title = element_text(hjust = 0.5))
 P4 <- ggplot(mtcars,aes(wt,mpg))+ geom_point( color="grey50") + theme_light()+
-		geom_rug( sides='l', color='red') + ggtitle('l') +theme(plot.title = element_text(hjust = 0.5))
+    geom_rug( sides='l', color='red') + ggtitle('l') +theme(plot.title = element_text(hjust = 0.5))
 
 (P1|P2)/(P3|P4)
 ```

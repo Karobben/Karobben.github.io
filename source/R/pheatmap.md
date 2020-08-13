@@ -24,10 +24,57 @@ rownames(test) = paste("Gene", 1:20, sep = "")
 # Draw heatmaps
 pheatmap(t(test))
 ```
-[NlbFv4.png](https://s1.ax1x.com/2020/06/20/NlbFv4.png)
+![NlbFv4.png](https://s1.ax1x.com/2020/06/20/NlbFv4.png)
 
 <a name="nU3ns"></a>
 # Arguments
+
+Quick View:
+```r
+pheatmap(mat, color = colorRampPalette(rev(brewer.pal(n = 7, name =
+       "RdYlBu")))(100), kmeans_k = NA, breaks = NA, border_color = "grey60",
+       cellwidth = NA, cellheight = NA, scale = "none", cluster_rows = TRUE,
+       cluster_cols = TRUE, clustering_distance_rows = "euclidean",
+       clustering_distance_cols = "euclidean", clustering_method = "complete",
+       clustering_callback = identity2, cutree_rows = NA, cutree_cols = NA,
+       treeheight_row = ifelse((class(cluster_rows) == "hclust") || cluster_rows,
+       50, 0), treeheight_col = ifelse((class(cluster_cols) == "hclust") ||
+       cluster_cols, 50, 0), legend = TRUE, legend_breaks = NA,
+       legend_labels = NA, annotation_row = NA, annotation_col = NA,
+       annotation = NA, annotation_colors = NA, annotation_legend = TRUE,
+       annotation_names_row = TRUE, annotation_names_col = TRUE,
+       drop_levels = TRUE, show_rownames = T, show_colnames = T, main = NA,
+       fontsize = 10, fontsize_row = fontsize, fontsize_col = fontsize,
+       angle_col = c("270", "0", "45", "90", "315"), display_numbers = F,
+       number_format = "%.2f", number_color = "grey30", fontsize_number = 0.8
+       * fontsize, gaps_row = NULL, gaps_col = NULL, labels_row = NULL,
+       labels_col = NULL, filename = NA, width = NA, height = NA,
+       silent = FALSE, na_col = "#DDDDDD", ...)
+```
+
+## Dendrogram
+
+```r
+cluster_rows = TRUE,
+cluster_cols = TRUE,
+clustering_distance_rows = "euclidean",
+clustering_distance_cols = "euclidean",
+clustering_method = "complete",
+clustering_callback = identity2,
+cutree_rows = NA,
+cutree_cols = NA,
+treeheight_row = ifelse((class(cluster_rows) == "hclust") || cluster_rows,50, 0),
+treeheight_col = ifelse((class(cluster_cols) == "hclust") || cluster_cols, 50, 0),
+```
+
+### Disable dendrogram
+```r
+pheatmap(test, cluster_rows = F, cluster_cols = F)
+```
+![No Dendrogram](https://s1.ax1x.com/2020/08/13/dp4GrD.png)
+
+
+
 ```r
 pheatmap(data, scale = "row", clustering_distance_row = "correlation", fontsize=9, fontsize_row=6) #改变排序算法
 

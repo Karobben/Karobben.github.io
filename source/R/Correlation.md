@@ -49,8 +49,8 @@ library(RColorBrewer)
 data=mtcars
 my_colors <- brewer.pal(nlevels(as.factor(data$cyl)), "Set2")
 scatterplotMatrix(~mpg+disp+drat|cyl, data=data , reg.line="" ,
-	smoother="", col=my_colors , smoother.args=list(col="grey") ,
-	cex=1.5 , pch=c(15,16,17) , main="Scatter plot with Three Cylinder Options")
+  smoother="", col=my_colors , smoother.args=list(col="grey") ,
+  cex=1.5 , pch=c(15,16,17) , main="Scatter plot with Three Cylinder Options")
 ```
 
 [![NguN8J.png](https://s1.ax1x.com/2020/06/28/NguN8J.png)](https://imgchr.com/i/NguN8J)
@@ -66,8 +66,8 @@ sample_data$v5 = -(sample_data$v1 ** 2)
 # Check correlation between variables
 cor(sample_data)
 # Check correlations (as scatterplots), distribution and print corrleation coefficient
-ggpairs(sample_data)	# image left
-ggcorr(sample_data, method = c("everything", "pearson"))	# image right
+ggpairs(sample_data)  # image left
+ggcorr(sample_data, method = c("everything", "pearson"))  # image right
 ```
 
 |[![NguavR.png](https://s1.ax1x.com/2020/06/28/NguavR.png)](https://imgchr.com/i/NguavR)|[![NgutC4.png](https://s1.ax1x.com/2020/06/28/NgutC4.png)](https://imgchr.com/i/NgutC4)|

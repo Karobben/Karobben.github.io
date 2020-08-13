@@ -254,12 +254,12 @@ menu_top = menu(u'Main Menu', [
 
 class CascadingBoxes(urwid.WidgetPlaceholder):
     max_box_levels = 4
-	#
+  #
     def __init__(self, box):
         super(CascadingBoxes, self).__init__(urwid.SolidFill(u'/'))
         self.box_level = 0
         self.open_box(box)
-	#
+  #
     def open_box(self, box):
         self.original_widget = urwid.Overlay(urwid.LineBox(box),
             self.original_widget,
@@ -271,7 +271,7 @@ class CascadingBoxes(urwid.WidgetPlaceholder):
             top=self.box_level * 2,
             bottom=(self.max_box_levels - self.box_level - 1) * 2)
         self.box_level += 1
-	#
+  #
     def keypress(self, size, key):
         if key == 'esc' and self.box_level > 1:
             self.original_widget = self.original_widget[0]
@@ -309,7 +309,7 @@ class SubMenu(urwid.WidgetWrap):
             urwid.AttrMap(line, 'line'),
             urwid.Divider()] + choices + [urwid.Divider()]))
         self.menu = urwid.AttrMap(listbox, 'options')
-	#
+  #
     def open_menu(self, button):
         top.open_box(self.menu)
 
@@ -318,7 +318,7 @@ class Choice(urwid.WidgetWrap):
         super(Choice, self).__init__(
             MenuButton(caption, self.item_chosen))
         self.caption = caption
-	#
+  #
     def item_chosen(self, button):
         response = urwid.Text([u'  You chose ', self.caption, u'\n'])
         done = MenuButton(u'Ok', exit_program)
@@ -360,7 +360,7 @@ focus_map = {
 class HorizontalBoxes(urwid.Columns):
     def __init__(self):
         super(HorizontalBoxes, self).__init__([], dividechars=1)
-	#
+  #
     def open_box(self, box):
         if self.contents:
             del self.contents[self.focus_position + 1:]
@@ -496,14 +496,14 @@ loop.run()
 在 pop up 的框里面加一个退出按钮<br />结构解析:<br />
 
 ```python
-close_button = urwid.Button("that's pretty cool")			#定义一个button 名称
-urwid.connect_signal(close_button, 'click',					# button 的作用
+close_button = urwid.Button("that's pretty cool")      #定义一个button 名称
+urwid.connect_signal(close_button, 'click',          # button 的作用
                      lambda button:self._emit("close"))
-pile = urwid.Pile([urwid.Text(								#一段文字,加上前面的button
-    "^^  I'm attached to the widget that opened me. "			#pile 在一起
+pile = urwid.Pile([urwid.Text(                #一段文字,加上前面的button
+    "^^  I'm attached to the widget that opened me. "      #pile 在一起
     "Try resizing the window!\n"), close_button])
-fill = urwid.Filler(pile)									#封装
-self.__super.__init__(urwid.AttrWrap(fill, 'popbg'))		#完成
+fill = urwid.Filler(pile)                  #封装
+self.__super.__init__(urwid.AttrWrap(fill, 'popbg'))    #完成
 ```
 可以看出基本结构为, Button -> Pile + Button  ->  Filler<br />因此, 除了加入button title和 signal 外, 还需要在 pile处, 一起打包.<br />测试:
 

@@ -10,7 +10,7 @@ url: geom_qq2
 ## QQ plot
 ```r
 ggplot(mtcars,aes(sample=mpg)) + geom_qq(aes(color='qq')) + geom_point(aes(mpg,cyl,color='point'))+
-	geom_qq_line(aes(color='qqline'))+ theme_light()
+  geom_qq_line(aes(color='qqline'))+ theme_light()
 ```
 
 

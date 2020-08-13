@@ -30,7 +30,7 @@ You can editing `/home/$USER/.conkyrc` to personize it.<br />
 <a name="FbZDG"></a>
 # conky.config
 ```bash
-gap_x	# initial place
+gap_x  # initial place
 gap_y # initial place
 ```
 
@@ -60,10 +60,10 @@ conky-colors --help
 部份conky-colors命令参数选项介绍：
 --lang 语言，5.1.2 版没有cn 中文选项，只能用默认的en 英语。
 --theme 面板主题，
-    			brave|carbonite|dust|human|noble|tribute|wine|wise|
-	        ambiance|radiance|elementary|
-	        cyan|blue|orange|red|green|purple|black|white|
-	        custom
+          brave|carbonite|dust|human|noble|tribute|wine|wise|
+          ambiance|radiance|elementary|
+          cyan|blue|orange|red|green|purple|black|white|
+          custom
 --side 面板在桌面的位置 left 左， right 右（默认）
 --ubuntu 显示LOGO，有9个LOGO可选，还可以在配置文件里自定义更多的LOGO
 --Fedora，--openSUSE，--debian，--arch，--gentoo，--pardus，--xfce，--gnome
@@ -99,104 +99,104 @@ conky-colors --theme=custom --default-color=black --color0=cyan --color1=green -
 在终端下，可以用 ls -a 命令查看隐藏文件。
 ```
 ```bash
-	./conky-colors <options>
+  ./conky-colors <options>
 
-	options:
-	-------------- LANGUAGES --------------
-	--lang=<language> - Set default language
-	Languages: bg|de|el|en*|et|fr|it|pl|pt|ru|es|uk
-	-------------- THEMES --------------
-	--theme=<theme> - Set default theme color
-	Themes: brave|carbonite|dust|human*|noble|tribute|wine|wise|
-	        ambiance|radiance|elementary|
-	        cyan|blue|orange|red|green|purple|black|white|
-	        custom
-	Work only with --theme=custom
-		--default-color=<value>
-		--color0=<value>
-		--color1=<value>
-		--color2=<value>
-		--color3=<value>
-	--dark - Set Dark Brightness
-	-------------- DEFAULT MODE --------------
-	--<logo> - Replace computer icon for distro Logo
-	Logos: ubuntu|fedora|opensuse|debian|arch|gentoo|pardus|xfce|gnome
-	--cpu=<number> - Set number of cpu cores
-	--cputemp - Enable CPU temperature
-	--swap - Enable SWAP
-	--battery - Enable battery
-	--battery-value=<number> - Change battery device number </proc/acpi/battery>
-	--updates - Show updates for Debian/Ubuntu
-	--proc=<number> - Enable processes [Max = 10]
-	--clock=<default|modern|digital|off>
-	--nodata - disable Data
-	--calendar - Enable calendar
-	--calendarm - Enable calendar with monday as first day
-	--calendarzim - Enable calendar with Zim support
-	--nvidia - Enable nvidia gpu
-	--task - Enable Task [type "ct help" in terminal for info]
-	--hd=<default|meerkat|mix|simple> - Enable HD
+  options:
+  -------------- LANGUAGES --------------
+  --lang=<language> - Set default language
+  Languages: bg|de|el|en*|et|fr|it|pl|pt|ru|es|uk
+  -------------- THEMES --------------
+  --theme=<theme> - Set default theme color
+  Themes: brave|carbonite|dust|human*|noble|tribute|wine|wise|
+          ambiance|radiance|elementary|
+          cyan|blue|orange|red|green|purple|black|white|
+          custom
+  Work only with --theme=custom
+    --default-color=<value>
+    --color0=<value>
+    --color1=<value>
+    --color2=<value>
+    --color3=<value>
+  --dark - Set Dark Brightness
+  -------------- DEFAULT MODE --------------
+  --<logo> - Replace computer icon for distro Logo
+  Logos: ubuntu|fedora|opensuse|debian|arch|gentoo|pardus|xfce|gnome
+  --cpu=<number> - Set number of cpu cores
+  --cputemp - Enable CPU temperature
+  --swap - Enable SWAP
+  --battery - Enable battery
+  --battery-value=<number> - Change battery device number </proc/acpi/battery>
+  --updates - Show updates for Debian/Ubuntu
+  --proc=<number> - Enable processes [Max = 10]
+  --clock=<default|modern|digital|off>
+  --nodata - disable Data
+  --calendar - Enable calendar
+  --calendarm - Enable calendar with monday as first day
+  --calendarzim - Enable calendar with Zim support
+  --nvidia - Enable nvidia gpu
+  --task - Enable Task [type "ct help" in terminal for info]
+  --hd=<default|meerkat|mix|simple> - Enable HD
     --hdtemp1=<device> - Enable HD temperature [Ex: --hdtemp1=sda]
-	--hdtemp2=<device> - Enable HD temperature [Ex: --hdtemp2=sdb]
-	--hdtemp3=<device> - Enable HD temperature [Ex: --hdtemp3=sdc]
-	--hdtemp4=<device> - Enable HD temperature [Ex: --hdtemp4=sdd]
-	--photo - Enable Photo
-	--photord - Enable Photo in random mode
-	--mpd - Enable MPD
-	--banshee=<default|cd|case|glassy|vinyl|oldvinyl|simple>
-	--clementine=<default|cd|case|glassy|vinyl|oldvinyl|simple>
-	--rhythmbox=<default|cd|case|glassy|vinyl|oldvinyl|simple>
-	--covergloobus - Enable CoverGloobus
-	--gmail - Enable gmail notify
-		--user=<username> - Type your username
-		--passwd=<password> - Type your password
-	--network - Enable network
-		--eth=<number> - Change ethernet device [Default=0]
-		--wlan=<number> - Change wireless device [Default=0]
-		--ppp=<number> - Change 3g modem device [Default=0]
-	--unit=<C|F>- Force output temperature either in Celius or Fahrenheit
-	--weather=<AreaID> - Enable weather[Ex: --weather=BRXX0043]
-	--bbcweather=<AreaID> - Enable weather[Ex: --bbcweather=3849]
-	--side=<left|right*> - Set the side of conky in your screem
-	-------------- CAIRO/RING MODE --------------
-	--cairo - Enable cairo-conky mode.
-	--ring - Enable ring-conky mode.
-	--cpu=<number> - Set number of cpu cores
-	--swap - Enable SWAP [cairo-mode only]
-	--clock=<cairo|bigcairo> - Enable/disable clock [cairo-mode only]
-	--banshee=<cairo|cairo-case|cairo-cd|cairo-glassy|lua> [cairo-mode only]
-	--clementine=<cairo|cairo-case|cairo-cd|cairo-glassy|lua> [cairo-mode only]
-	--rhythmbox=<cairo|cairo-case|cairo-cd|cairo-glassy|lua> [cairo-mode only]
-	--banshee=<ring|ring-case|ring-cd|ring-glassy> [ring-mode only]
-	--clementine=<ring|ring-case|ring-cd|ring-glassy> [ring-mode only]
-	--rhythmbox=<ring|ring-case|ring-cd|ring-glassy> [ring-mode only]
-	--network - Enable network
-	--unit=<C|F>- Force output temperature either in Celius or Fahrenheit
-	-------------- BOARD/SLIM MODE --------------
-	--board - Enable board-conky mode.
-	--slim - Enable slim-conky mode.
-	--w=<width> - Set your screen width
-	--h=<height> - Set your screen height
-	--nobg - Remove background
-	--posfix=<number> - fix ring position
-	--weather=<AreaID> - Enable weather[Ex: --weather=BRXX0043]
-	--unit=<C|F>- Force output temperature either in Celius or Fahrenheit
-	-------------- SLS MODE --------------
-	--sls - Enable SLS-conky mode.
-	--nobg - Remove background
-	--weather=<AreaID> - Enable weather[Ex: --weather=BRXX0043]
-	--user=<username> - Type your gmail username
-	--passwd=<password> - Type your gmail password
-	-------------- EXTRA OPTIONS --------------
-	--datadir=/path/to/datadir - it overrides default datadir
-	--createlocalcopy - it copies the content of system datadir to /home/ken/.conkycolors
-	--nofilecheck - disables checking the presence of files
-	--default_datadir - prints the order of default datadirs in which files are searched by default.
-	--finddir=FILE - this option makes this program find and print out a directory where FILE is located.
-	--argb-value=0-255 - Set the value of own_window_argb_value, the default is 200
-	--install=local(*), system, or custom - install generated configuration files to a chosen datadir.
-	--systemdir - displays the system directory for conkycolors.
-	--localdir - displays the local directory for conkycolors.
+  --hdtemp2=<device> - Enable HD temperature [Ex: --hdtemp2=sdb]
+  --hdtemp3=<device> - Enable HD temperature [Ex: --hdtemp3=sdc]
+  --hdtemp4=<device> - Enable HD temperature [Ex: --hdtemp4=sdd]
+  --photo - Enable Photo
+  --photord - Enable Photo in random mode
+  --mpd - Enable MPD
+  --banshee=<default|cd|case|glassy|vinyl|oldvinyl|simple>
+  --clementine=<default|cd|case|glassy|vinyl|oldvinyl|simple>
+  --rhythmbox=<default|cd|case|glassy|vinyl|oldvinyl|simple>
+  --covergloobus - Enable CoverGloobus
+  --gmail - Enable gmail notify
+    --user=<username> - Type your username
+    --passwd=<password> - Type your password
+  --network - Enable network
+    --eth=<number> - Change ethernet device [Default=0]
+    --wlan=<number> - Change wireless device [Default=0]
+    --ppp=<number> - Change 3g modem device [Default=0]
+  --unit=<C|F>- Force output temperature either in Celius or Fahrenheit
+  --weather=<AreaID> - Enable weather[Ex: --weather=BRXX0043]
+  --bbcweather=<AreaID> - Enable weather[Ex: --bbcweather=3849]
+  --side=<left|right*> - Set the side of conky in your screem
+  -------------- CAIRO/RING MODE --------------
+  --cairo - Enable cairo-conky mode.
+  --ring - Enable ring-conky mode.
+  --cpu=<number> - Set number of cpu cores
+  --swap - Enable SWAP [cairo-mode only]
+  --clock=<cairo|bigcairo> - Enable/disable clock [cairo-mode only]
+  --banshee=<cairo|cairo-case|cairo-cd|cairo-glassy|lua> [cairo-mode only]
+  --clementine=<cairo|cairo-case|cairo-cd|cairo-glassy|lua> [cairo-mode only]
+  --rhythmbox=<cairo|cairo-case|cairo-cd|cairo-glassy|lua> [cairo-mode only]
+  --banshee=<ring|ring-case|ring-cd|ring-glassy> [ring-mode only]
+  --clementine=<ring|ring-case|ring-cd|ring-glassy> [ring-mode only]
+  --rhythmbox=<ring|ring-case|ring-cd|ring-glassy> [ring-mode only]
+  --network - Enable network
+  --unit=<C|F>- Force output temperature either in Celius or Fahrenheit
+  -------------- BOARD/SLIM MODE --------------
+  --board - Enable board-conky mode.
+  --slim - Enable slim-conky mode.
+  --w=<width> - Set your screen width
+  --h=<height> - Set your screen height
+  --nobg - Remove background
+  --posfix=<number> - fix ring position
+  --weather=<AreaID> - Enable weather[Ex: --weather=BRXX0043]
+  --unit=<C|F>- Force output temperature either in Celius or Fahrenheit
+  -------------- SLS MODE --------------
+  --sls - Enable SLS-conky mode.
+  --nobg - Remove background
+  --weather=<AreaID> - Enable weather[Ex: --weather=BRXX0043]
+  --user=<username> - Type your gmail username
+  --passwd=<password> - Type your gmail password
+  -------------- EXTRA OPTIONS --------------
+  --datadir=/path/to/datadir - it overrides default datadir
+  --createlocalcopy - it copies the content of system datadir to /home/ken/.conkycolors
+  --nofilecheck - disables checking the presence of files
+  --default_datadir - prints the order of default datadirs in which files are searched by default.
+  --finddir=FILE - this option makes this program find and print out a directory where FILE is located.
+  --argb-value=0-255 - Set the value of own_window_argb_value, the default is 200
+  --install=local(*), system, or custom - install generated configuration files to a chosen datadir.
+  --systemdir - displays the system directory for conkycolors.
+  --localdir - displays the local directory for conkycolors.
 
 (*)default values
 ```
@@ -205,32 +205,32 @@ task 文件在 `/home/$USER/.conkycolors/tasks`<br />
 ```bash
 conky-colors --theme=blue  --default-color=black --color0=cyan --color1=green  \
 --color2=orange --color3=red \ # basic thmeme
---debian --updates  	\ 	# system $ update information
---cpu=8 --cputemp  	\ 	# cpu and cmp tmp
---nvidia						\		# gpu infor
---swap             	\ 	# Ram
---battery  					\		# Battery inf
---proc=10 					\		#task
---clock=digital  --calendarm	\		# Date
---task  						\		# personal task, stort at /home/$USER/.conkycolors/tasks
---hd=default --hdtemp1=sda  --hdtemp2=sda2	\ 	#hard drive Tm
---banshee=simple --clementine=default --rhythmbox=default	\		#Media player
-#--network					\		# fail to show on my computer
-# --board/--slim		\		# fail to show on my computer
-# --weather=BRXX0043\		# fail to request the Tm
+--debian --updates    \   # system $ update information
+--cpu=8 --cputemp    \   # cpu and cmp tmp
+--nvidia            \    # gpu infor
+--swap               \   # Ram
+--battery            \    # Battery inf
+--proc=10           \    #task
+--clock=digital  --calendarm  \    # Date
+--task              \    # personal task, stort at /home/$USER/.conkycolors/tasks
+--hd=default --hdtemp1=sda  --hdtemp2=sda2  \   #hard drive Tm
+--banshee=simple --clementine=default --rhythmbox=default  \    #Media player
+#--network          \    # fail to show on my computer
+# --board/--slim    \    # fail to show on my computer
+# --weather=BRXX0043\    # fail to request the Tm
 ```
 ```bash
 conky-colors --theme=blue  --default-color=black --color0=cyan --color1=green  \
 --color2=orange --color3=red \
---debian --updates  	\
---cpu=8 --cputemp  	\
---nvidia						\
---swap             	\
---battery  					\
---proc=10 					\
---clock=digital  --calendarm	\
---task  						\
---hd=default --hdtemp1=sda  --hdtemp2=sda2	\
+--debian --updates    \
+--cpu=8 --cputemp    \
+--nvidia            \
+--swap               \
+--battery            \
+--proc=10           \
+--clock=digital  --calendarm  \
+--task              \
+--hd=default --hdtemp1=sda  --hdtemp2=sda2  \
 --banshee=simple --clementine=default --rhythmbox=default
 
 ```

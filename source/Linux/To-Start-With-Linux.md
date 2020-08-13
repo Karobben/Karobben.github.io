@@ -11,7 +11,7 @@ url: linux2
 
 ```bash
 useradd ken # add a user 'ken'
-passwd ken	# add a password for urser 'ken'
+passwd ken  # add a password for urser 'ken'
 ```
 
 
@@ -24,7 +24,7 @@ vim /etc/sudoers # use root acount or run with sudo
 
 Find the line "root    ALL=(ALL)        ALL" and add a line:
 ```bash
-ken	ALL=(ALL)		ALL
+ken  ALL=(ALL)    ALL
 ```
 save and quite
 

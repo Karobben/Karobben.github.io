@@ -5,7 +5,8 @@ url: geom_tile2
 ---
 # geom_tile
 
-![123](https://i.loli.net/2020/06/19/LMu2I1oNXgAas8Z.png)
+[![aXYd76.md.png](https://s1.ax1x.com/2020/08/11/aXYd76.md.png)](https://imgchr.com/i/aXYd76)
+
 <a name="6qOmi"></a>
 # Quick Start
 ```r
@@ -18,7 +19,7 @@ df <- data.frame(
 )
 
 ggplot(df, aes(x, y)) + theme_light()+
-	geom_tile(aes(fill = z), colour = "grey50")
+  geom_tile(aes(fill = z), colour = "grey50")
 ```
 
 
@@ -26,19 +27,19 @@ ggplot(df, aes(x, y)) + theme_light()+
 library(patchwork)
 
 P1 <- ggplot(df, aes(x, y)) + theme_light()+ ggtitle('P1')+
-	geom_tile(aes(fill = z), colour = "grey50")+
-	theme(plot.title = element_text(hjust = 0.5))
+  geom_tile(aes(fill = z), colour = "grey50")+
+  theme(plot.title = element_text(hjust = 0.5))
 
 P2 <- ggplot(df, aes(x, y, width = w)) + theme_light()+ ggtitle('P2')+
-	theme(plot.title = element_text(hjust = 0.5))+
+  theme(plot.title = element_text(hjust = 0.5))+
   geom_tile(aes(fill = z), colour = "grey50")
 
 P3 <- ggplot(df, aes(x, y))+ geom_bar(aes(fill=z),stat='identity')+ theme_light()+
-	ggtitle('bar plot')+ theme(plot.title = element_text(hjust = 0.5))
+  ggtitle('bar plot')+ theme(plot.title = element_text(hjust = 0.5))
 
 (P1|P2)/P3
 ```
-![123](https://i.loli.net/2020/06/19/PcxGrAlsdTS9Mn2.png)
+[![aXY0AK.md.png](https://s1.ax1x.com/2020/08/11/aXY0AK.md.png)](https://imgchr.com/i/aXY0AK)
 
 <a name="FG8Ad"></a>
 # More

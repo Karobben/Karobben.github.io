@@ -122,17 +122,17 @@ AddLocationForm:
 
 <AddLocationForm@BoxLayout>:
     orientation: "vertical"
-	search_input: search_box # Change one
+  search_input: search_box # Change one
     BoxLayout:
         height: "40dp"
         size_hint_y: None
         TextInput:
-			id: search_box	# Assign an ID
+      id: search_box  # Assign an ID
             size_hint_x: 50
         Button:
             text: "Search"
             size_hint_x: 25
-			on_press: root.search_location()
+      on_press: root.search_location()
         Button:
             text: "Current Location"
             size_hint_x: 25

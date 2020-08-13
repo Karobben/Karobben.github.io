@@ -183,7 +183,7 @@ library(ggthemes)
 
 ```r
  + geom_errorbar(aes(ymin=len-sd, ymax=len+sd),
-	width=.2， position=position_dodge(.9))
+  width=.2， position=position_dodge(.9))
 ```
 
 <a name="8i31l"></a>
@@ -248,14 +248,14 @@ ggplot(mtcars, aes(x = drat)) +
 <a name="7InUF"></a>
 ### 2.1 remove
 ```r
-+ theme(panel.grid.major =element_blank(), 						#栅格线1
-        panel.grid.minor = element_blank(), 					#栅格线2
-        panel.background = element_blank(),						#滑板底层
-        axis.line = element_line(colour = "black"),		#轴线
-        axis.ticks=element_blank(),										#轴上点
-        axis.text.y=element_blank(), 									#y文字
-        axis.title.x =elemet_blank(),									#y标题
-        legend.position='none')												#删标注
++ theme(panel.grid.major =element_blank(),             #栅格线1
+        panel.grid.minor = element_blank(),            #栅格线2
+        panel.background = element_blank(),            #滑板底层
+        axis.line = element_line(colour = "black"),    #轴线
+        axis.ticks=element_blank(),                    #轴上点
+        axis.text.y=element_blank(),                   #y文字
+        axis.title.x =elemet_blank(),                  #y标题
+        legend.position='none')                        #删标注
 ```
 
 <a name="Kt9wJ"></a>

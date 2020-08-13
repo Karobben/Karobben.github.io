@@ -118,7 +118,7 @@ luvcview -s 400x400
 
 ```bash
 luvcview: ../../src/xcb_io.c:165: dequeue_pending_request:
-	Assertion `!xcb_xlib_unknown_req_in_deq' failed.
+  Assertion `!xcb_xlib_unknown_req_in_deq' failed.
 ```
 
 <br />But I find that once you launched your camera, you need to keep the camera moving for a while and so, it can run smoothly.<br />

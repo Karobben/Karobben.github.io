@@ -14,8 +14,8 @@
 <meta property="og:site_name" content="Karobben">
 <meta property="og:description" content="R library for fasta sequences handling.">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-07-16T07:13:33.976Z">
-<meta property="article:modified_time" content="2020-07-16T07:13:33.976Z">
+<meta property="article:published_time" content="2020-08-13T09:18:43.149Z">
+<meta property="article:modified_time" content="2020-08-13T09:18:43.149Z">
 <meta property="article:author" content="Karobben">
 <meta name="twitter:card" content="summary">
   
@@ -113,7 +113,7 @@
 <div id="tipue_search_content" style="display: none"></div>
   <div class="article-meta">
     <a href="/R/Biostrings.html" class="article-date">
-  <time datetime="2020-07-16T07:13:33.976Z" itemprop="datePublished">2020-07-16</time>
+  <time datetime="2020-08-13T09:18:43.149Z" itemprop="datePublished">2020-08-13</time>
 </a>
     
   </div>
@@ -147,7 +147,7 @@
 
   <div id="toc" class="toc-article">
     <strong class="toc-title">Titles</strong>
-    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Biostrings"><span class="toc-number">1.</span> <span class="toc-text">Biostrings</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Quick-Start"><span class="toc-number">2.</span> <span class="toc-text">Quick Start</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#1-Fasta-Calculate"><span class="toc-number">3.</span> <span class="toc-text">1. Fasta Calculate</span></a></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#"><span class="toc-number">1.</span> <span class="toc-text">Biostrings</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#"><span class="toc-number">2.</span> <span class="toc-text">Quick Start</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#"><span class="toc-number">3.</span> <span class="toc-text">1. Fasta Calculate</span></a></li></ol>
   </div>
 
 <!-- Table of Contents Down-->
@@ -158,17 +158,19 @@
 </div>
 
 
-        <h1 id="Biostrings"><a href="#Biostrings" class="headerlink" title="Biostrings"></a>Biostrings</h1><p>source(“<a href="http://bioconductor.org/biocLite.R" target="_blank" rel="noopener">http://bioconductor.org/biocLite.R</a>“)<br /></p>
+        <h1>Biostrings</h1>
+<p>source(“<a href="http://bioconductor.org/biocLite.R" target="_blank" rel="noopener">http://bioconductor.org/biocLite.R</a>”)<br /></p>
 <div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="R"><figure class="iseeu highlight /r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Install</span></span><br><span class="line">BiocManager::install(<span class="string">'Biostrings'</span>)</span><br></pre></td></tr></table></figure></div>
-<h1 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h1><p><a href="https://www.yuque.com/attachments/yuque/0/2020/txt/691897/1579800839293-b28e0f1a-1088-4c56-ba2a-1a910f827db0.txt?_lake_card=%7B%22uid%22%3A%221579800839229-0%22%2C%22src%22%3A%22https%3A%2F%2Fwww.yuque.com%2Fattachments%2Fyuque%2F0%2F2020%2Ftxt%2F691897%2F1579800839293-b28e0f1a-1088-4c56-ba2a-1a910f827db0.txt%22%2C%22name%22%3A%22test.txt%22%2C%22size%22%3A6581%2C%22type%22%3A%22text%2Fplain%22%2C%22ext%22%3A%22txt%22%2C%22progress%22%3A%7B%22percent%22%3A99%7D%2C%22status%22%3A%22done%22%2C%22percent%22%3A0%2C%22id%22%3A%22umG5T%22%2C%22card%22%3A%22file%22%7D" target="_blank" rel="noopener">test.txt</a></p>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="R"><figure class="iseeu highlight /r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">library</span>(Biostrings)</span><br><span class="line">s = readDNAStringSet(<span class="string">"test.txt"</span>)</span><br><span class="line"></span><br><span class="line">length(s) <span class="comment">#Numbers of seq</span></span><br><span class="line">nchar(s)	<span class="comment">#length of each seq</span></span><br><span class="line">reverse(s)</span><br><span class="line">translate(s)</span><br><span class="line">dna2rna(s)</span><br><span class="line">cDNA(dna2rna(s))</span><br><span class="line">tolower(s)	<span class="comment"># = = I don't know</span></span><br><span class="line">letterFrequency(s, DNA_BASES)	<span class="comment"># Frq with A,T,G,C</span></span><br><span class="line">letterFrequency(s, DNA_ALPHABET)	<span class="comment"># Frq with A, C, G, T, M, R, W, S, Y, K, V, H, D, B, N, -, +, .</span></span><br><span class="line">letterFrequency(s, DNA_BASES, as.prob = <span class="literal">TRUE</span>) <span class="comment"># Frq with A T G C</span></span><br><span class="line">letterFrequency(s, <span class="string">"GC"</span>, as.prob = <span class="literal">TRUE</span>) <span class="comment"># Frq with GC</span></span><br></pre></td></tr></table></figure></div>
-
-<h1 id="1-Fasta-Calculate"><a href="#1-Fasta-Calculate" class="headerlink" title="1. Fasta Calculate"></a>1. Fasta Calculate</h1><div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="R"><figure class="iseeu highlight /r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">library</span>(Biostrings)</span><br><span class="line"><span class="comment"># Reading a fasta file</span></span><br><span class="line">A &lt;-readDNAStringSet(<span class="string">'predict.coding.fa.transdecoder.pep.sel.fa'</span>)</span><br><span class="line">head(DNAStringSet(A))</span><br></pre></td></tr></table></figure></div>
-
+<h1>Quick Start</h1>
+<p><a href="https://www.yuque.com/attachments/yuque/0/2020/txt/691897/1579800839293-b28e0f1a-1088-4c56-ba2a-1a910f827db0.txt?_lake_card=%7B%22uid%22%3A%221579800839229-0%22%2C%22src%22%3A%22https%3A%2F%2Fwww.yuque.com%2Fattachments%2Fyuque%2F0%2F2020%2Ftxt%2F691897%2F1579800839293-b28e0f1a-1088-4c56-ba2a-1a910f827db0.txt%22%2C%22name%22%3A%22test.txt%22%2C%22size%22%3A6581%2C%22type%22%3A%22text%2Fplain%22%2C%22ext%22%3A%22txt%22%2C%22progress%22%3A%7B%22percent%22%3A99%7D%2C%22status%22%3A%22done%22%2C%22percent%22%3A0%2C%22id%22%3A%22umG5T%22%2C%22card%22%3A%22file%22%7D" target="_blank" rel="noopener">test.txt</a></p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="R"><figure class="iseeu highlight /r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">library</span>(Biostrings)</span><br><span class="line">s = readDNAStringSet(<span class="string">"test.txt"</span>)</span><br><span class="line"></span><br><span class="line">length(s) <span class="comment">#Numbers of seq</span></span><br><span class="line">nchar(s)  <span class="comment">#length of each seq</span></span><br><span class="line">reverse(s)</span><br><span class="line">translate(s)</span><br><span class="line">dna2rna(s)</span><br><span class="line">cDNA(dna2rna(s))</span><br><span class="line">tolower(s)  <span class="comment"># = = I don't know</span></span><br><span class="line">letterFrequency(s, DNA_BASES)  <span class="comment"># Frq with A,T,G,C</span></span><br><span class="line">letterFrequency(s, DNA_ALPHABET)  <span class="comment"># Frq with A, C, G, T, M, R, W, S, Y, K, V, H, D, B, N, -, +, .</span></span><br><span class="line">letterFrequency(s, DNA_BASES, as.prob = <span class="literal">TRUE</span>) <span class="comment"># Frq with A T G C</span></span><br><span class="line">letterFrequency(s, <span class="string">"GC"</span>, as.prob = <span class="literal">TRUE</span>) <span class="comment"># Frq with GC</span></span><br></pre></td></tr></table></figure></div>
+<h1>1. Fasta Calculate</h1>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="R"><figure class="iseeu highlight /r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">library</span>(Biostrings)</span><br><span class="line"><span class="comment"># Reading a fasta file</span></span><br><span class="line">A &lt;-readDNAStringSet(<span class="string">'predict.coding.fa.transdecoder.pep.sel.fa'</span>)</span><br><span class="line">head(DNAStringSet(A))</span><br></pre></td></tr></table></figure></div>
 <div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">  width seq names               </span><br><span class="line">[1]   604 ASSVASTASSAHHHASAASTGTV...  TRINITY_DN100000_...</span><br><span class="line">[2]   616 MDYMDSGRYTKSDKDWDTNVASD...  TRINITY_DN100001_...</span><br><span class="line">[3]   157 SRAKKVKKDSKKGGGGGGGGSSW...  TRINITY_DN100002_...</span><br></pre></td></tr></table></figure></div>
-
 <hr>
-<p>github: <a href="https://github.com/Karobben" target="_blank" rel="noopener">https://github.com/Karobben</a><br>blog: <a href="http://Karobben.github.io">Karobben.github.io</a><br>R 语言画图索引: <a href="https://karobben.github.io/R/R-index.html">https://karobben.github.io/R/R-index.html</a></p>
+<p>github: <a href="https://github.com/Karobben" target="_blank" rel="noopener">https://github.com/Karobben</a><br>
+blog: <a href="http://Karobben.github.io">Karobben.github.io</a><br>
+R 语言画图索引: <a href="https://karobben.github.io/R/R-index.html">https://karobben.github.io/R/R-index.html</a></p>
 
       
     </div>
@@ -200,7 +202,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">July 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">June 2020</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">June 2020</a></li></ul>
     </div>
   </div>
 
@@ -211,10 +213,6 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
-        
-          <li>
-            <a href="/2020/07/01/123/">123</a>
-          </li>
         
           <li>
             <a href="/2020/06/30/tmp/">test</a>

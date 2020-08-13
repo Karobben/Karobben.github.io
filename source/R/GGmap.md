@@ -6,12 +6,12 @@ url: geom_map2
 
 # GGmap: geom_map
 
-![1](https://i.loli.net/2020/06/20/fTbjwiqzoR6as3t.jpg)
+![1](https://s1.ax1x.com/2020/08/13/dSDpoF.png)
 ```r
 install.packages('ggalt')  
 ```
 
-文件下载:[CLIWOC15.csv](https://raw.githubusercontent.com/ljtyduyu/DataWarehouse/master/File/CLIWOC15.csv)
+文件下载: [CLIWOC15.csv](https://raw.githubusercontent.com/ljtyduyu/DataWarehouse/master/File/CLIWOC15.csv) (也许需要科学上网)
 
 ```r
 library(ggplot2)  #需安装最新的2.0.0版本
@@ -26,16 +26,16 @@ world <- world[world$region != "Antarctica",] # 剔除南极洲
 dat <- read.csv("CLIWOC15.csv")
 dat <- filter(dat, Nation != "Sweden")
 
-gg <- ggplot()+ geom_map(data=world, map=world,
-	aes(x=long, y=lat, map_id=region), fill="#00518E",
-	color="white", fill="#7f7f7f", size=0.05, alpha=1/4)+
-	geom_point(data=dat,aes(x=Lon3, y=Lat3, color=Nation),size=0.15, alpha=1/100)+
-	scale_color_tableau()+ coord_proj("+proj=wintri")+ facet_wrap(~Nation)+
-	theme_map()+ theme(strip.background=element_blank())+ theme(legend.position="none")
-gg
+ggplot()+ geom_map(data=world, map=world,
+  aes(x=long, y=lat, map_id=region), fill="#00518E",
+  color="white", fill="#7f7f7f", size=0.05, alpha=1/4)+
+  geom_point(data=dat,aes(x=Lon3, y=Lat3, color=Nation),size=0.15, alpha=1/100)+
+  scale_color_tableau()+ coord_proj("+proj=wintri")+ facet_wrap(~Nation)+
+  theme_map()+ theme(strip.background=element_blank())+ theme(legend.position="none")
+ggsave('map.png',w=500,h=450)
 # graph shows as in head
 ```
-![1](https://i.loli.net/2020/06/20/fTbjwiqzoR6as3t.jpg)
+![1](https://s1.ax1x.com/2020/08/13/dSDpoF.png)
 
 <a name="b0FAh"></a>
 # library(map)
@@ -50,17 +50,19 @@ big_citi <- subset(us.cities,pop > 500000)  ##人口大于50万的城市
 
 #Quick plot (left)
 qplot(long,lat,data=big_citi) + borders("state",size=0.5)
+#ggsave('map2.png',w=4,h=2.6)
 
 #Quick plot (right)
-library(themes)
+library(ggthemes)
 library(ggrepel)
 qplot(long,lat,data=big_citi) + borders("state",size=0.5)  +theme_map()+
-	geom_label_repel(data=big_citi,aes(x=long,y=lat,label=name))
+  geom_label_repel(data=big_citi,aes(x=long,y=lat,label=name))
+#ggsave('map3.png',w=8,h=5.2)
 ```
 
-![123](https://i.loli.net/2020/06/20/uOyY3FZTjLfvUVG.png)
-![124](https://i.loli.net/2020/06/20/j7fFrX6MAJHsg4Q.png)
-
+|[![dSsgG4.jpg](https://s1.ax1x.com/2020/08/13/dSsgG4.jpg)](https://imgchr.com/i/dSsgG4)|[![dSsciF.jpg](https://s1.ax1x.com/2020/08/13/dSsciF.jpg)](https://imgchr.com/i/dSsciF)|
+|:--:|:--:|
+|map2.png|map3.png|
 <a name="FG8Ad"></a>
 # More
 图片索引:[https://karobben.github.io/R/R-index.html](https://karobben.github.io/R/R-index.html)

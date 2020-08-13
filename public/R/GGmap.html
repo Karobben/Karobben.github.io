@@ -14,15 +14,15 @@
 <meta property="og:site_name" content="Karobben">
 <meta property="og:description" content="GGmap: geom_map">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://i.loli.net/2020/06/20/fTbjwiqzoR6as3t.jpg">
-<meta property="og:image" content="https://i.loli.net/2020/06/20/fTbjwiqzoR6as3t.jpg">
-<meta property="og:image" content="https://i.loli.net/2020/06/20/uOyY3FZTjLfvUVG.png">
-<meta property="og:image" content="https://i.loli.net/2020/06/20/j7fFrX6MAJHsg4Q.png">
-<meta property="article:published_time" content="2020-07-16T07:13:34.044Z">
-<meta property="article:modified_time" content="2020-07-16T07:13:34.044Z">
+<meta property="og:image" content="https://s1.ax1x.com/2020/08/13/dSDpoF.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/08/13/dSDpoF.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/08/13/dSsgG4.jpg">
+<meta property="og:image" content="https://s1.ax1x.com/2020/08/13/dSsciF.jpg">
+<meta property="article:published_time" content="2020-08-13T07:51:45.047Z">
+<meta property="article:modified_time" content="2020-08-13T07:51:45.047Z">
 <meta property="article:author" content="Karobben">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://i.loli.net/2020/06/20/fTbjwiqzoR6as3t.jpg">
+<meta name="twitter:image" content="https://s1.ax1x.com/2020/08/13/dSDpoF.png">
   
     <link rel="alternate" href="/atom.xml" title="Karobben" type="application/atom+xml">
   
@@ -118,7 +118,7 @@
 <div id="tipue_search_content" style="display: none"></div>
   <div class="article-meta">
     <a href="/R/GGmap.html" class="article-date">
-  <time datetime="2020-07-16T07:13:34.044Z" itemprop="datePublished">2020-07-16</time>
+  <time datetime="2020-08-13T07:51:45.047Z" itemprop="datePublished">2020-08-13</time>
 </a>
     
   </div>
@@ -152,7 +152,7 @@
 
   <div id="toc" class="toc-article">
     <strong class="toc-title">Titles</strong>
-    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#GGmap-geom-map"><span class="toc-number">1.</span> <span class="toc-text">GGmap: geom_map</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#library-map"><span class="toc-number">2.</span> <span class="toc-text">library(map)</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#More"><span class="toc-number">3.</span> <span class="toc-text">More</span></a></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#"><span class="toc-number">1.</span> <span class="toc-text">GGmap: geom_map</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#"><span class="toc-number">2.</span> <span class="toc-text">library(map)</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#"><span class="toc-number">3.</span> <span class="toc-text">More</span></a></li></ol>
   </div>
 
 <!-- Table of Contents Down-->
@@ -163,20 +163,36 @@
 </div>
 
 
-        <h1 id="GGmap-geom-map"><a href="#GGmap-geom-map" class="headerlink" title="GGmap: geom_map"></a>GGmap: geom_map</h1><p><img src="https://i.loli.net/2020/06/20/fTbjwiqzoR6as3t.jpg" alt="1"></p>
+        <h1>GGmap: geom_map</h1>
+<p><img src="https://s1.ax1x.com/2020/08/13/dSDpoF.png" alt="1"></p>
 <div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="R"><figure class="iseeu highlight /r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">install.packages(<span class="string">'ggalt'</span>)</span><br></pre></td></tr></table></figure></div>
-
-<p>文件下载:<a href="https://raw.githubusercontent.com/ljtyduyu/DataWarehouse/master/File/CLIWOC15.csv" target="_blank" rel="noopener">CLIWOC15.csv</a></p>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="R"><figure class="iseeu highlight /r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">library</span>(ggplot2)  <span class="comment">#需安装最新的2.0.0版本</span></span><br><span class="line"><span class="keyword">library</span>(dplyr)  <span class="comment">#你也可以用内置的subset函数来代替filter函数</span></span><br><span class="line"><span class="keyword">library</span>(ggalt) <span class="comment">#安装方法: devtools::install_github("hrbrmstr/ggalt")。需安装加载devtools包</span></span><br><span class="line"><span class="keyword">library</span>(ggthemes)</span><br><span class="line"></span><br><span class="line">world &lt;- map_data(<span class="string">"world"</span>)</span><br><span class="line">world &lt;- world[world$region != <span class="string">"Antarctica"</span>,] <span class="comment"># 剔除南极洲</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">dat &lt;- read.csv(<span class="string">"CLIWOC15.csv"</span>)</span><br><span class="line">dat &lt;- filter(dat, Nation != <span class="string">"Sweden"</span>)</span><br><span class="line"></span><br><span class="line">gg &lt;- ggplot()+ geom_map(data=world, map=world,</span><br><span class="line">-aes(x=long, y=lat, map_id=region), fill=<span class="string">"#00518E"</span>,</span><br><span class="line">-color=<span class="string">"white"</span>, fill=<span class="string">"#7f7f7f"</span>, size=<span class="number">0.05</span>, alpha=<span class="number">1</span>/<span class="number">4</span>)+</span><br><span class="line">-geom_point(data=dat,aes(x=Lon3, y=Lat3, color=Nation),size=<span class="number">0.15</span>, alpha=<span class="number">1</span>/<span class="number">100</span>)+</span><br><span class="line">-scale_color_tableau()+ coord_proj(<span class="string">"+proj=wintri"</span>)+ facet_wrap(~Nation)+</span><br><span class="line">-theme_map()+ theme(strip.background=element_blank())+ theme(legend.position=<span class="string">"none"</span>)</span><br><span class="line">gg</span><br><span class="line"><span class="comment"># graph shows as in head</span></span><br></pre></td></tr></table></figure></div>
-<p><img src="https://i.loli.net/2020/06/20/fTbjwiqzoR6as3t.jpg" alt="1"></p>
+<p>文件下载: <a href="https://raw.githubusercontent.com/ljtyduyu/DataWarehouse/master/File/CLIWOC15.csv" target="_blank" rel="noopener">CLIWOC15.csv</a> (也许需要科学上网)</p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="R"><figure class="iseeu highlight /r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">library</span>(ggplot2)  <span class="comment">#需安装最新的2.0.0版本</span></span><br><span class="line"><span class="keyword">library</span>(dplyr)  <span class="comment">#你也可以用内置的subset函数来代替filter函数</span></span><br><span class="line"><span class="keyword">library</span>(ggalt) <span class="comment">#安装方法: devtools::install_github("hrbrmstr/ggalt")。需安装加载devtools包</span></span><br><span class="line"><span class="keyword">library</span>(ggthemes)</span><br><span class="line"></span><br><span class="line">world &lt;- map_data(<span class="string">"world"</span>)</span><br><span class="line">world &lt;- world[world$region != <span class="string">"Antarctica"</span>,] <span class="comment"># 剔除南极洲</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">dat &lt;- read.csv(<span class="string">"CLIWOC15.csv"</span>)</span><br><span class="line">dat &lt;- filter(dat, Nation != <span class="string">"Sweden"</span>)</span><br><span class="line"></span><br><span class="line">ggplot()+ geom_map(data=world, map=world,</span><br><span class="line">  aes(x=long, y=lat, map_id=region), fill=<span class="string">"#00518E"</span>,</span><br><span class="line">  color=<span class="string">"white"</span>, fill=<span class="string">"#7f7f7f"</span>, size=<span class="number">0.05</span>, alpha=<span class="number">1</span>/<span class="number">4</span>)+</span><br><span class="line">  geom_point(data=dat,aes(x=Lon3, y=Lat3, color=Nation),size=<span class="number">0.15</span>, alpha=<span class="number">1</span>/<span class="number">100</span>)+</span><br><span class="line">  scale_color_tableau()+ coord_proj(<span class="string">"+proj=wintri"</span>)+ facet_wrap(~Nation)+</span><br><span class="line">  theme_map()+ theme(strip.background=element_blank())+ theme(legend.position=<span class="string">"none"</span>)</span><br><span class="line">ggsave(<span class="string">'map.png'</span>,w=<span class="number">500</span>,h=<span class="number">450</span>)</span><br><span class="line"><span class="comment"># graph shows as in head</span></span><br></pre></td></tr></table></figure></div>
+<p><img src="https://s1.ax1x.com/2020/08/13/dSDpoF.png" alt="1"></p>
 <p><a name="b0FAh"></a></p>
-<h1 id="library-map"><a href="#library-map" class="headerlink" title="library(map)"></a>library(map)</h1><div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="R"><figure class="iseeu highlight /r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">library</span>(ggplot2)</span><br><span class="line"><span class="keyword">library</span>(maps)</span><br><span class="line"></span><br><span class="line">data(us.cities)</span><br><span class="line">big_citi &lt;- subset(us.cities,pop &gt; <span class="number">500000</span>)  <span class="comment">##人口大于50万的城市</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">#Quick plot (left)</span></span><br><span class="line">qplot(long,lat,data=big_citi) + borders(<span class="string">"state"</span>,size=<span class="number">0.5</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">#Quick plot (right)</span></span><br><span class="line"><span class="keyword">library</span>(themes)</span><br><span class="line"><span class="keyword">library</span>(ggrepel)</span><br><span class="line">qplot(long,lat,data=big_citi) + borders(<span class="string">"state"</span>,size=<span class="number">0.5</span>)  +theme_map()+</span><br><span class="line">-geom_label_repel(data=big_citi,aes(x=long,y=lat,label=name))</span><br></pre></td></tr></table></figure></div>
-
-<p><img src="https://i.loli.net/2020/06/20/uOyY3FZTjLfvUVG.png" alt="123"><br><img src="https://i.loli.net/2020/06/20/j7fFrX6MAJHsg4Q.png" alt="124"></p>
+<h1>library(map)</h1>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="R"><figure class="iseeu highlight /r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">library</span>(ggplot2)</span><br><span class="line"><span class="keyword">library</span>(maps)</span><br><span class="line"></span><br><span class="line">data(us.cities)</span><br><span class="line">big_citi &lt;- subset(us.cities,pop &gt; <span class="number">500000</span>)  <span class="comment">##人口大于50万的城市</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">#Quick plot (left)</span></span><br><span class="line">qplot(long,lat,data=big_citi) + borders(<span class="string">"state"</span>,size=<span class="number">0.5</span>)</span><br><span class="line"><span class="comment">#ggsave('map2.png',w=4,h=2.6)</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#Quick plot (right)</span></span><br><span class="line"><span class="keyword">library</span>(ggthemes)</span><br><span class="line"><span class="keyword">library</span>(ggrepel)</span><br><span class="line">qplot(long,lat,data=big_citi) + borders(<span class="string">"state"</span>,size=<span class="number">0.5</span>)  +theme_map()+</span><br><span class="line">  geom_label_repel(data=big_citi,aes(x=long,y=lat,label=name))</span><br><span class="line"><span class="comment">#ggsave('map3.png',w=8,h=5.2)</span></span><br></pre></td></tr></table></figure></div>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"><a href="https://imgchr.com/i/dSsgG4" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2020/08/13/dSsgG4.jpg" alt="dSsgG4.jpg"></a></th>
+<th style="text-align:center"><a href="https://imgchr.com/i/dSsciF" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2020/08/13/dSsciF.jpg" alt="dSsciF.jpg"></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">map2.png</td>
+<td style="text-align:center">map3.png</td>
+</tr>
+</tbody>
+</table>
 <p><a name="FG8Ad"></a></p>
-<h1 id="More"><a href="#More" class="headerlink" title="More"></a>More</h1><p>图片索引:<a href="https://karobben.github.io/R/R-index.html">https://karobben.github.io/R/R-index.html</a></p>
+<h1>More</h1>
+<p>图片索引:<a href="https://karobben.github.io/R/R-index.html">https://karobben.github.io/R/R-index.html</a></p>
 <hr>
-<p>github: <a href="https://github.com/Karobben" target="_blank" rel="noopener">https://github.com/Karobben</a><br>blog: <a href="http://Karobben.github.io">Karobben.github.io</a><br>R 语言画图索引: <a href="https://karobben.github.io/R/R-index.html">https://karobben.github.io/R/R-index.html</a></p>
+<p>github: <a href="https://github.com/Karobben" target="_blank" rel="noopener">https://github.com/Karobben</a><br>
+blog: <a href="http://Karobben.github.io">Karobben.github.io</a><br>
+R 语言画图索引: <a href="https://karobben.github.io/R/R-index.html">https://karobben.github.io/R/R-index.html</a></p>
 
       
     </div>
@@ -208,7 +224,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">July 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">June 2020</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">June 2020</a></li></ul>
     </div>
   </div>
 
@@ -219,10 +235,6 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
-        
-          <li>
-            <a href="/2020/07/01/123/">123</a>
-          </li>
         
           <li>
             <a href="/2020/06/30/tmp/">test</a>

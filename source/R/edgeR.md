@@ -81,7 +81,7 @@ data = as.matrix(data) # convert to matrix
 # Centering rows
 data = t(scale(t(data), scale=F))
 
-write.table(data, file="diffExpr.P1e-5_C2.matrix.log2.centered.dat", quote=F, sep='	');
+write.table(data, file="diffExpr.P1e-5_C2.matrix.log2.centered.dat", quote=F, sep='  ');
 if (nrow(data) < 2) { stop("
 
 **** Sorry, at least two rows are required for this matrix.
@@ -93,7 +93,7 @@ if (ncol(data) < 2) { stop("
 
 ");}
 sample_cor = cor(data, method='pearson', use='pairwise.complete.obs')
-write.table(sample_cor, file="diffExpr.P1e-5_C2.matrix.log2.centered.sample_cor.dat", quote=F, sep='	')
+write.table(sample_cor, file="diffExpr.P1e-5_C2.matrix.log2.centered.sample_cor.dat", quote=F, sep='  ')
 sample_dist = dist(t(data), method='euclidean')
 hc_samples = hclust(sample_dist, method='complete')
 pdf("diffExpr.P1e-5_C2.matrix.log2.centered.sample_cor_matrix.pdf")
@@ -623,7 +623,7 @@ heatmap.3 <- function(x,
             lmat <- cbind(lmat[, 1] + 1, c(rep(NA, nrow(lmat) - 1), 1), lmat[,2] + 1)
             #lwid <- c(lwid[1], side.height.fraction*NumRowSideColors, lwid[2])
             side_width = min(side.height.fraction*ncol(RowSideColors), 1);
-			lwid <- c(lwid[1], side_width, lwid[2])
+      lwid <- c(lwid[1], side_width, lwid[2])
         }
         lmat[is.na(lmat)] <- 0
     }
@@ -634,14 +634,14 @@ heatmap.3 <- function(x,
         stop("lwid must have length = ncol(lmat) =", ncol(lmat))
 
 
-	op <- par(no.readonly = TRUE)
+  op <- par(no.readonly = TRUE)
     on.exit(par(op))
 
     layout(lmat, widths = lwid, heights = lhei, respect = FALSE)
 
-	###########################################
-	## Draw the colorbars for the annotations:
-	###########################################
+  ###########################################
+  ## Draw the colorbars for the annotations:
+  ###########################################
 
     if (!missing(RowSideColors)) {
         if (!is.matrix(RowSideColors)){
@@ -664,13 +664,13 @@ heatmap.3 <- function(x,
             #print(rsc.colors)    
             image(1:nrow(rsc), 1:ncol(rsc), rsc, col = as.vector(rsc.colors), axes = FALSE, xlab="", ylab="")
 
-			# add labels
+      # add labels
             if (length(colnames(RowSideColors)) > 0) {  
                 #axis(1, 0:(dim(rsc)[2] - 1)/(dim(rsc)[2] - 1), rownames(RowSideColors), las = 2, tick = FALSE)
-				#axis(1, 0:(nrow(rsc)-1), colnames(RowSideColors), las = 2, tick = T) # ncol because transposed
-            	axis(1, 1:ncol(RowSideColors), labels=colnames(RowSideColors), las=2, cex.axis=0.5, tick=F, xlab="", ylab="")
+        #axis(1, 0:(nrow(rsc)-1), colnames(RowSideColors), las = 2, tick = T) # ncol because transposed
+              axis(1, 1:ncol(RowSideColors), labels=colnames(RowSideColors), las=2, cex.axis=0.5, tick=F, xlab="", ylab="")
 
-			}
+      }
         }
     }
 
@@ -696,10 +696,10 @@ heatmap.3 <- function(x,
             #print(csc)
             image(1:nrow(t(csc)), 1:ncol(t(csc)), t(csc), col = as.vector(csc.colors), axes = FALSE, xlab="", ylab="")
 
-			# add labels
+      # add labels
             if (length(rownames(ColSideColors)) > 0) {
                 #axis(2, 0:(dim(csc)[2] - 1)/max(1,(dim(csc)[2] - 1)), colnames(ColSideColors), las = 2, tick = FALSE)
-				axis(2, 1:(nrow(ColSideColors)), labels=rownames(ColSideColors), las = 2, tick = FALSE, cex.axis=0.5)
+        axis(2, 1:(nrow(ColSideColors)), labels=rownames(ColSideColors), las = 2, tick = FALSE, cex.axis=0.5)
             }
         }
     }
@@ -718,46 +718,46 @@ heatmap.3 <- function(x,
     }
     else iy <- 1:nr
 
-	# draw the central heatmap
-	image(1:nc, 1:nr, x, xlim = 0.5 + c(0, nc), ylim = 0.5 + c(0, nr), axes = FALSE, xlab = "", ylab = "", col = col, breaks = breaks, ...)
+  # draw the central heatmap
+  image(1:nc, 1:nr, x, xlim = 0.5 + c(0, nc), ylim = 0.5 + c(0, nr), axes = FALSE, xlab = "", ylab = "", col = col, breaks = breaks, ...)
 
-	# store the matrix drawn
-	retval$carpet <- x
+  # store the matrix drawn
+  retval$carpet <- x
 
-	# store the dendrograms
-	if (exists("ddr"))
+  # store the dendrograms
+  if (exists("ddr"))
         retval$rowDendrogram <- ddr
     if (exists("ddc"))
         retval$colDendrogram <- ddc
 
-	# store the breaks
-	retval$breaks <- breaks
+  # store the breaks
+  retval$breaks <- breaks
 
-	# store the colormap used
-	retval$col <- col
+  # store the colormap used
+  retval$col <- col
 
-	# specially color in the na values
+  # specially color in the na values
     if (!invalid(na.color) & any(is.na(x))) { # load library(gplots)
         mmat <- ifelse(is.na(x), 1, NA)
         image(1:nc, 1:nr, mmat, axes = FALSE, xlab = "", ylab = "", col = na.color, add = TRUE)
     }
 
-	# X-axis column labels
+  # X-axis column labels
     axis(1, 1:nc, labels = labCol, las = 2, line = -0.5, tick = 0, cex.axis = cexCol)
 
-	# X-axis title
+  # X-axis title
     if (!is.null(xlab))
         mtext(xlab, side = 1, line = margins[1] - 1.25)
 
-	# Y-axis row labeling
+  # Y-axis row labeling
     axis(4, iy, labels = labRow, las = 2, line = -0.5, tick = 0,
         cex.axis = cexRow)
 
-	# Y-axis title
+  # Y-axis title
     if (!is.null(ylab))
         mtext(ylab, side = 4, line = margins[2] - 1.25)
 
-   	if (!missing(add.expr))
+     if (!missing(add.expr))
         eval(substitute(add.expr))
     if (!missing(colsep))
         for (csep in colsep) rect(xleft = csep + 0.5, ybottom = rep(0, length(csep)), xright = csep + 0.5 + sepwidth[1], ytop = rep(ncol(x) + 1, csep), lty = 1, lwd = 1, col = sepcolor, border = sepcolor)
@@ -765,12 +765,12 @@ heatmap.3 <- function(x,
         for (rsep in rowsep) rect(xleft = 0, ybottom = (ncol(x) + 1 - rsep) - 0.5, xright = nrow(x) + 1, ytop = (ncol(x) + 1 - rsep) - 0.5 - sepwidth[2], lty = 1, lwd = 1, col = sepcolor, border = sepcolor)
 
 
-	min.scale <- min(breaks)
+  min.scale <- min(breaks)
     max.scale <- max(breaks)
     x.scaled <- scale01(t(x), min.scale, max.scale)
 
-	# column trace
-	if (trace %in% c("both", "column")) {
+  # column trace
+  if (trace %in% c("both", "column")) {
         retval$vline <- vline
         vline.vals <- scale01(vline, min.scale, max.scale)
         for (i in colInd) {
@@ -784,7 +784,7 @@ heatmap.3 <- function(x,
         }
     }
 
-	# row trace
+  # row trace
     if (trace %in% c("both", "row")) {
         retval$hline <- hline
         hline.vals <- scale01(hline, min.scale, max.scale)
@@ -799,13 +799,13 @@ heatmap.3 <- function(x,
         }
     }
 
-	# add cell labels
+  # add cell labels
     if (!missing(cellnote))
         text(x = c(row(cellnote)), y = c(col(cellnote)), labels = c(cellnote), col = notecol, cex = notecex)
 
-	###########################
-	## Plot the row dendrogram
-	###########################
+  ###########################
+  ## Plot the row dendrogram
+  ###########################
 
     par(mar = c(margins[1], 0, 0, 0))
     if (dendrogram %in% c("both", "row")) {
@@ -813,9 +813,9 @@ heatmap.3 <- function(x,
     }
     else plot.new()
 
-	#############################
-	## Plot the column dendrogram
-	#############################
+  #############################
+  ## Plot the column dendrogram
+  #############################
 
     par(mar = c(0, 0, if (!is.null(main)) 5 else 0, margins[2]))
     if (dendrogram %in% c("both", "column")) {
@@ -827,9 +827,9 @@ heatmap.3 <- function(x,
         title(main, cex.main=cex.main) #cex.main = 1.5 * op[["cex.main"]])
 
 
-	############################
-	## Add the Color Chart
-	############################
+  ############################
+  ## Add the Color Chart
+  ############################
 
     if (key) {
         par(mar = c(5, 4, 2, 1), cex = 0.75)
@@ -983,30 +983,30 @@ even = function (x) {
 plot_counts_matrix_log2_dist = function(matrix_file) {
 
 
-	data = read.table(file=matrix_file, com='', row.names=1, header=T)
+  data = read.table(file=matrix_file, com='', row.names=1, header=T)
 
-	conditions = colnames(data)
-	colors = rainbow(length(conditions))
+  conditions = colnames(data)
+  colors = rainbow(length(conditions))
 
 
-	plot(density(log2(data[,1])), col=colors[1], main=matrix_file, xlab='log2(frag_counts)', ylab='density')
+  plot(density(log2(data[,1])), col=colors[1], main=matrix_file, xlab='log2(frag_counts)', ylab='density')
 
-	for (i in 2:length(data[1,])) {
+  for (i in 2:length(data[1,])) {
 
-		points(density(log2(data[,i])), type='l', col=colors[i])
+    points(density(log2(data[,i])), type='l', col=colors[i])
 
-	}
+  }
 
-	legend('topright', conditions, col=colors, pch=15)
+  legend('topright', conditions, col=colors, pch=15)
 
 }
 
 
 matrix_to_color_assignments = function(matrix_m, col=NULL, by=c("matrix", "row", "col")) {
 
-	if (! is.matrix(matrix_m))
-		stop("Error, matrix_to_color_assignments() requires a matrix as parameter.")
-	num_colors = 0
+  if (! is.matrix(matrix_m))
+    stop("Error, matrix_to_color_assignments() requires a matrix as parameter.")
+  num_colors = 0
 
     if (is.null(col)) {
         num_colors = min(nrow(matrix_m), ncol(matrix_m))
@@ -1021,60 +1021,60 @@ matrix_to_color_assignments = function(matrix_m, col=NULL, by=c("matrix", "row",
     if (by == "matrix") {
 
         min_val = min(matrix_m, na.rm=T)
-	    matrix_m = matrix_m - min_val
-	    max_val = max(matrix_m, na.rm=T)
-	    matrix_m = matrix_m / max_val * num_colors
+      matrix_m = matrix_m - min_val
+      max_val = max(matrix_m, na.rm=T)
+      matrix_m = matrix_m / max_val * num_colors
         #print(matrix_m)
-   	    matrix_m = apply(matrix_m, 1:2, function(x) ifelse (x<1, as.character(col[1]), as.character(col[x])));
+         matrix_m = apply(matrix_m, 1:2, function(x) ifelse (x<1, as.character(col[1]), as.character(col[x])));
 
         matrix_m = matrix(as.character(matrix_m), nrow=dim(matrix_m)[1])
-	}
-	else {
+  }
+  else {
 
-		row_or_col_only_color_selector_func = function(x) {
-				a = min(x, na.rm=T);
-				b = max(x, na.rm=T);
-				c = (x-a)/(b-a) * num_colors;
+    row_or_col_only_color_selector_func = function(x) {
+        a = min(x, na.rm=T);
+        b = max(x, na.rm=T);
+        c = (x-a)/(b-a) * num_colors;
                 c = round(c);
-				c = ifelse (c<1, 1, c);
+        c = ifelse (c<1, 1, c);
                 #print(paste(c("color selection: (a)", a, " (b)", b, " (c)", paste(c, sep=','))));
                 colors = as.character(col[c]);
                 return(colors);
-		}
+    }
 
-		if (by == "row") {
+    if (by == "row") {
             matrix_m = apply(matrix_m, 1, row_or_col_only_color_selector_func);
             print(matrix_m)
             print("dim matrix_m after apply"); print(dim(matrix_m))
             matrix_m = t(matrix_m);
             print("dim matrix_m after transpose: "); print(dim(matrix_m))
-		}
-		else {
-			# by column
-			matrix_m = apply(matrix_m, 2, row_or_col_only_color_selector_func);
-		}
-	}
+    }
+    else {
+      # by column
+      matrix_m = apply(matrix_m, 2, row_or_col_only_color_selector_func);
+    }
+  }
 
-	#print(matrix_m)
-	return(matrix_m)
+  #print(matrix_m)
+  return(matrix_m)
 }
 
 sample_matrix_to_color_assignments = function(sampleAnnotationsMatrix, colors) {
 
-	if (missing(colors))
-		colors = rainbow(nrow(sampleAnnotationsMatrix))
+  if (missing(colors))
+    colors = rainbow(nrow(sampleAnnotationsMatrix))
 
-	nsamples = nrow(sampleAnnotationsMatrix);
+  nsamples = nrow(sampleAnnotationsMatrix);
 
-	if (length(colors) < nrow(sampleAnnotationsMatrix))
-		stop("Error, only ", length(colors), " colors specified, but have ", nsamples, " samples");
+  if (length(colors) < nrow(sampleAnnotationsMatrix))
+    stop("Error, only ", length(colors), " colors specified, but have ", nsamples, " samples");
 
-	for (i in 1:nrow(sampleAnnotationsMatrix)) {
-		c = colors[i]
-		sampleAnnotationsMatrix[i,] = sapply(sampleAnnotationsMatrix[i,], function(x) ifelse( x, as.character(c), 'white'))
-	}
+  for (i in 1:nrow(sampleAnnotationsMatrix)) {
+    c = colors[i]
+    sampleAnnotationsMatrix[i,] = sapply(sampleAnnotationsMatrix[i,], function(x) ifelse( x, as.character(c), 'white'))
+  }
 
-	return(sampleAnnotationsMatrix);
+  return(sampleAnnotationsMatrix);
 
 }
 ```
@@ -1164,16 +1164,16 @@ pairs3 <-
       1L:nc
          else nc:1L) for (j in 1L:nc) {
 
-			#print(paste(i,"vs", j));
-			xvals = x[,j]
-			yvals = x[,i]			
+      #print(paste(i,"vs", j));
+      xvals = x[,j]
+      yvals = x[,i]      
 
-			if ( (i != j) && ! is.null(XY_convert_fun)) {
+      if ( (i != j) && ! is.null(XY_convert_fun)) {
 
-				res = XY_convert_fun(xvals, yvals);
-				xvals = res[['x']]
-				yvals = res[['y']]
-			}
+        res = XY_convert_fun(xvals, yvals);
+        xvals = res[['x']]
+        yvals = res[['y']]
+      }
 
             col='black' # default
             if (! is.null(CustomColorFun))
@@ -1237,21 +1237,21 @@ pairs3 <-
 demo_pairs3 = function (custom_fun=F) {
     data(iris)
 
-	xy_conv = function(x,y) {
+  xy_conv = function(x,y) {
 
-		res = list();
-		res[['x']] = (x+y)/2;
-		res[['y']] = x - y;
+    res = list();
+    res[['x']] = (x+y)/2;
+    res[['y']] = x - y;
 
-		return(res);
-	}
+    return(res);
+  }
 
-	if (custom_fun) {
-		pairs3(iris[1:4], XY_convert_fun = xy_conv, main = "Anderson's Iris Data -- 3 species",pch = 21, bg = c("red", "green3", "blue")[unclass(iris$Species)])
-	}
-	else {
-		pairs3(iris[1:4], main = "Anderson's Iris Data -- 3 species",pch = 21, bg = c("red", "green3", "blue")[unclass(iris$Species)])
-	}
+  if (custom_fun) {
+    pairs3(iris[1:4], XY_convert_fun = xy_conv, main = "Anderson's Iris Data -- 3 species",pch = 21, bg = c("red", "green3", "blue")[unclass(iris$Species)])
+  }
+  else {
+    pairs3(iris[1:4], main = "Anderson's Iris Data -- 3 species",pch = 21, bg = c("red", "green3", "blue")[unclass(iris$Species)])
+  }
 }
 ```
 ## vioplot2.R

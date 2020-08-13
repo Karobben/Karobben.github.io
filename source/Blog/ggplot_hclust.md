@@ -293,6 +293,8 @@ PLOT2(AA)
 ![UOWMcQ.png](https://s1.ax1x.com/2020/07/23/UOWMcQ.png)
 
 
+else: [factoextra+dendextend](https://www.datanovia.com/en/lessons/examples-of-dendrograms-visualization/)
+
 ---
 github: [https://github.com/Karobben](https://github.com/Karobben)
 blog: [Karobben.github.io](http://Karobben.github.io)

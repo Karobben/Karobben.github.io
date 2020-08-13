@@ -86,7 +86,7 @@ soup = BeautifulSoup(html, features='lxml')
 则,代码如下
 ```python
 P_title = soup.find('div',{"class":"h hm cl"}).get_text()
-P_body	= soup.find('td',{"id":"article_content"}).get_text()
+P_body  = soup.find('td',{"id":"article_content"}).get_text()
 ```
 这就成功啦
 ![NsiyY8.png](https://s1.ax1x.com/2020/06/26/NsiyY8.png)
@@ -114,7 +114,7 @@ for link in Links:
   html = urlopen(url).read()
   soup = BeautifulSoup(html, features='lxml')
   P_title = soup.find('div',{"class":"h hm cl"}).get_text()
-  P_body	= soup.find('td',{"id":"article_content"}).get_text()
+  P_body  = soup.find('td',{"id":"article_content"}).get_text()
   Paper += P_title + P_body
 
 print(Paper)

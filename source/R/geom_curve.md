@@ -24,7 +24,7 @@ ggplot() + geom_curve( aes(x = 1, y = 1, xend= 6, yend = 6))
 ```r
 p <- ggplot()
 for(i in c(1:10)){
-	p <- p+ geom_curve( aes(x = 1, y = 1, xend= 6, yend = 6),ncp = i)
+  p <- p+ geom_curve( aes(x = 1, y = 1, xend= 6, yend = 6),ncp = i)
 }
 p+ theme_light()
 ```

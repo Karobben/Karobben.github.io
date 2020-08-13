@@ -14,7 +14,7 @@ ffmpeg -re -i "1.mp4" -vcodec copy -acodec aac -b:a 192k -f flv "你的rtmp地�
 
 ```python
 sudo raspivid -o - -t 0 -w 1280 -h 720 -fps 24 -b 1000000 |
-		ffmpeg -f h264 -i - -vcodec copy -acodec aac -b:a 192k \
+    ffmpeg -f h264 -i - -vcodec copy -acodec aac -b:a 192k \
         \\\-f flv "你的rtmp地址/你的直播码"
 ```
 
@@ -25,7 +25,7 @@ sudo raspivid -o - -t 0 -w 1280 -h 720 -fps 24 -b 1000000 |
 
 ```bash
 sudo raspivid -o - -t 0 -w 1280 -h 720 -fps 24 -b 1000000 |
-				ffmpeg  -re -stream_loop -1 -i  "/home/pi/scrpt/Blive/StarBucks_BGN.mp3" \
+        ffmpeg  -re -stream_loop -1 -i  "/home/pi/scrpt/Blive/StarBucks_BGN.mp3" \
         -f h264 -i - -vcodec copy -r 30 -acodec aac -b:a 100k -preset ultrafast \
         -tune zerolatency -f flv "rtmp://"
 ```
@@ -42,7 +42,7 @@ ffmpeg  -f dshow -i video="USB2.0 PC CAMERA"
 
 # https://blog.csdn.net/HuiShouDeZaiLai/article/details/97373878
 ffmpeg  -f alsa -thread_queue_size 1024  -i "$MIC_DEV_NAME" \
-				-f video4linux2   -r 10  -s 640x480 -i "$CAMERA_DEV_NAME" \
+        -f video4linux2   -r 10  -s 640x480 -i "$CAMERA_DEV_NAME" \
         -vcodec h264  -ac 1  -b:a 128k -ar 44100 -acodec aac   \
         -strict -2  -tune zerolatency  -preset medium -b:v 1500k -f pcm   \
         -f  flv    rtmp://XXX:1935/live/livestream

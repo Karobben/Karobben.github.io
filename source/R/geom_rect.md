@@ -20,7 +20,7 @@ mydata <- data.frame(
 )
 
 ggplot(mydata)+ geom_rect(aes(xmin = xstart,xmax = xend ,ymin = ystart ,
-	ymax = yend , fill = class)) + scale_fill_wsj() + theme_map()
+  ymax = yend , fill = class)) + scale_fill_wsj() + theme_map()
 ```
 
 ![NutPYR.png](https://s1.ax1x.com/2020/06/19/NutPYR.png)

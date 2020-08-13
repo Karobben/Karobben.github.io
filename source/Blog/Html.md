@@ -38,7 +38,7 @@ url: fzzq2h
 
 ```html
 <style>
-#nav	li{ float:right; list-style: none;
+#nav  li{ float:right; list-style: none;
    margin:10px; /*左右间隔*/
    padding"0; /*上下*/
   }
@@ -66,20 +66,20 @@ url: fzzq2h
 HTML 点击悬屏放大, 再点击退出。鼠标悬停有提示
 ```html
 <div class="col-lg-4 col-md-6 col-xs-12 mix development print">
-	<div class="portfolio-item">
-  	<div class="shot-item">
+  <div class="portfolio-item">
+    <div class="shot-item">
     <img src="Linkercare/Clients/总览/crop3.png" alt="" />  
     <div class="single-content">
-    	<div class="fancy-table">
-      	<div class="table-cell">
-        	<div class="zoom-icon">
+      <div class="fancy-table">
+        <div class="table-cell">
+          <div class="zoom-icon">
           <a class="lightbox" href="Linkercare/Clients/总览/crop3.png"><i class="lni-zoom-in item-icon"></i></a>
           </div>
-				<a href="#">View Project</a>
-				</div>
-			</div>
-		</div>
-	</div>               
+        <a href="#">View Project</a>
+        </div>
+      </div>
+    </div>
+  </div>               
 </div>
 ```
 JS 点击原地放大，并挤压其他图片/文字空间造成重排，再次点击恢复原来打小。鼠标悬停无提示
@@ -153,7 +153,7 @@ JS 点击原地放大，并挤压其他图片/文字空间造成重排，再次�
 ```html
 <table>
   <tr><th>title1</th><th>title2</th><tr>
-	<tr><td><img src=test1.jpg border=0></td><td><img src=test2.jpg border=0></td></tr></table>
+  <tr><td><img src=test1.jpg border=0></td><td><img src=test2.jpg border=0></td></tr></table>
 <!-- table可以并列很多东西 -->
 
 <!--加背景色-->
@@ -179,42 +179,42 @@ JS 点击原地放大，并挤压其他图片/文字空间造成重排，再次�
 <!--来源:https://zhidao.baidu.com/question/1110427647137965899.html -->
 <html>
   <head>
- 		<style>*{margin:0;padding:0;} ul,li
- 			{ list-style-type:none; padding:0; margin:0; } #nav li a
- 		  { display:block; width:40px; text-align:center; text-decoration:none; color:#ffffff; background-color:#3ee27d; } #nav li
-  		{ position:relative; margin-bottom:2px;float:left;margin-right:0px; } #nav li ul
-  		{ position:absolute; left:10px; top:30px; display:none;width:100px; } #nav li:hover ul
-  		{ display:block; }
- 		</style>
+     <style>*{margin:0;padding:0;} ul,li
+       { list-style-type:none; padding:0; margin:0; } #nav li a
+       { display:block; width:40px; text-align:center; text-decoration:none; color:#ffffff; background-color:#3ee27d; } #nav li
+      { position:relative; margin-bottom:2px;float:left;margin-right:0px; } #nav li ul
+      { position:absolute; left:10px; top:30px; display:none;width:100px; } #nav li:hover ul
+      { display:block; }
+     </style>
 </head>
 <body>
  <ul id="nav">
- 	<li>
-  	<a href="#">首页</a>
- 	</li>
- 	<li>
-  	<a href="#">关于我们</a>
-  	<ul>
-  		<li>我们的故事</li>
-  		<li>我们的团队</li>
-  	</ul>
- 	</li>
- 	<li>
-  	<a href="#">我们的服务</a>
-  	<ul>
-  		<li>网页设计</li>
-  		<li>页面制作</li>
-  		<li>程序开发</li>
-  	</ul>
- 	</li>
- 	<li>
-  	<a href="#">联系我们</a>
+   <li>
+    <a href="#">首页</a>
+   </li>
+   <li>
+    <a href="#">关于我们</a>
     <ul>
-  		<li>团队主力</li>
-  		<li>团队成员</li>
-  	</ul>
- 	</li>
- 	</ul>
+      <li>我们的故事</li>
+      <li>我们的团队</li>
+    </ul>
+   </li>
+   <li>
+    <a href="#">我们的服务</a>
+    <ul>
+      <li>网页设计</li>
+      <li>页面制作</li>
+      <li>程序开发</li>
+    </ul>
+   </li>
+   <li>
+    <a href="#">联系我们</a>
+    <ul>
+      <li>团队主力</li>
+      <li>团队成员</li>
+    </ul>
+   </li>
+   </ul>
 </body>
 </html>
 ```
@@ -430,7 +430,7 @@ deb [by-hash=force] http://ftp.sjtu.edu.cn/deepin panda main contrib non-free
 
 ```html
 <head>
-	<meta http-equiv="refresh" content="1">
+  <meta http-equiv="refresh" content="1">
 </head>
 ```
 

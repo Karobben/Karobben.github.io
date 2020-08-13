@@ -23,8 +23,8 @@
 <meta property="og:image" content="https://i.loli.net/2020/06/18/y1drCS3bYxRnZEK.png">
 <meta property="og:image" content="https://img2018.cnblogs.com/blog/1870934/201912/1870934-20191227102909481-1067004589.png">
 <meta property="og:image" content="https://img2018.cnblogs.com/blog/1870934/201912/1870934-20191227102910055-326087900.png">
-<meta property="article:published_time" content="2020-08-04T13:11:14.023Z">
-<meta property="article:modified_time" content="2020-08-04T13:11:14.023Z">
+<meta property="article:published_time" content="2020-08-13T09:26:58.272Z">
+<meta property="article:modified_time" content="2020-08-13T09:26:58.272Z">
 <meta property="article:author" content="Karobben">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://i.loli.net/2020/06/20/RWhj4s2N1KkOzae.jpg">
@@ -123,7 +123,7 @@
 <div id="tipue_search_content" style="display: none"></div>
   <div class="article-meta">
     <a href="/R/GGplot.html" class="article-date">
-  <time datetime="2020-08-04T13:11:14.023Z" itemprop="datePublished">2020-08-04</time>
+  <time datetime="2020-08-13T09:26:58.272Z" itemprop="datePublished">2020-08-13</time>
 </a>
     
   </div>
@@ -235,7 +235,7 @@
 <div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="R"><figure class="iseeu highlight /r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">ggplot() + geom_bar() + coord_polar(theta = <span class="string">'y'</span>)</span><br><span class="line"><span class="comment"># removing background</span></span><br><span class="line">+theme(panel.grid=element_blank(),panel.border=element_blank(),axis.ticks=element_blank(),axis.text=element_blank(),axis.title=element_blank(),, panel.background = element_blank())</span><br><span class="line"><span class="comment"># or</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">library</span>(ggthemes)</span><br><span class="line">+theme_map()</span><br></pre></td></tr></table></figure></div>
 <p><a name="W8uIK"></a></p>
 <h2 id="7-geom-errorbar"><a class="header-anchor" href="#7-geom-errorbar"></a>7. geom_errorbar</h2>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="R"><figure class="iseeu highlight /r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">+ geom_errorbar(aes(ymin=len-sd, ymax=len+sd),</span><br><span class="line">width=<span class="number">.2</span>， position=position_dodge(<span class="number">.9</span>))</span><br></pre></td></tr></table></figure></div>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="R"><figure class="iseeu highlight /r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">+ geom_errorbar(aes(ymin=len-sd, ymax=len+sd),</span><br><span class="line"> width=<span class="number">.2</span>， position=position_dodge(<span class="number">.9</span>))</span><br></pre></td></tr></table></figure></div>
 <p><a name="8i31l"></a></p>
 <h2 id="8-Extra-Line"><a class="header-anchor" href="#8-Extra-Line"></a>8. Extra Line</h2>
 <div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="R"><figure class="iseeu highlight /r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">aux2 &lt;- data.frame(cyl = c(<span class="number">4</span>,<span class="number">6</span>,<span class="number">8</span>), x = c(<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>),y = c(<span class="number">10</span>,<span class="number">10</span>,<span class="number">10</span>),</span><br><span class="line">                   xend = c(<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>), yend = c(<span class="number">35</span>,<span class="number">35</span>,<span class="number">35</span>),</span><br><span class="line">                   x2 = c(<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>), xend2= c(<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>))</span><br><span class="line">ggplot(mtcars, aes(x = drat)) +</span><br><span class="line">  geom_line(aes(y = mpg, colour = <span class="string">"mpg"</span>)) +</span><br><span class="line">  geom_line(aes(y = qsec, colour = <span class="string">"qsec"</span>)) +</span><br><span class="line">  geom_segment(aes(x = x, y = y, xend = xend, yend = yend, colour = <span class="string">"xiaopang"</span>),data= aux2, lty = <span class="number">2</span>) +</span><br><span class="line">  geom_segment(aes(x = x2, y = y, xend = xend2, yend = yend, colour = <span class="string">"xiaomei"</span>),data= aux2, lty = <span class="number">2</span>)</span><br></pre></td></tr></table></figure></div>
@@ -261,7 +261,7 @@
 <h2 id="2-Background"><a class="header-anchor" href="#2-Background"></a>2. Background</h2>
 <p><a name="7InUF"></a></p>
 <h3 id="2-1-remove"><a class="header-anchor" href="#2-1-remove"></a>2.1 remove</h3>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="R"><figure class="iseeu highlight /r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">+ theme(panel.grid.major =element_blank(), 						<span class="comment">#栅格线1</span></span><br><span class="line">        panel.grid.minor = element_blank(), 					<span class="comment">#栅格线2</span></span><br><span class="line">        panel.background = element_blank(),						<span class="comment">#滑板底层</span></span><br><span class="line">        axis.line = element_line(colour = <span class="string">"black"</span>),		<span class="comment">#轴线</span></span><br><span class="line">        axis.ticks=element_blank(),										<span class="comment">#轴上点</span></span><br><span class="line">        axis.text.y=element_blank(), 									<span class="comment">#y文字</span></span><br><span class="line">        axis.title.x =elemet_blank(),									<span class="comment">#y标题</span></span><br><span class="line">        legend.position=<span class="string">'none'</span>)												<span class="comment">#删标注</span></span><br></pre></td></tr></table></figure></div>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="R"><figure class="iseeu highlight /r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">+ theme(panel.grid.major =element_blank(),             <span class="comment">#栅格线1</span></span><br><span class="line">        panel.grid.minor = element_blank(),            <span class="comment">#栅格线2</span></span><br><span class="line">        panel.background = element_blank(),            <span class="comment">#滑板底层</span></span><br><span class="line">        axis.line = element_line(colour = <span class="string">"black"</span>),    <span class="comment">#轴线</span></span><br><span class="line">        axis.ticks=element_blank(),                    <span class="comment">#轴上点</span></span><br><span class="line">        axis.text.y=element_blank(),                   <span class="comment">#y文字</span></span><br><span class="line">        axis.title.x =elemet_blank(),                  <span class="comment">#y标题</span></span><br><span class="line">        legend.position=<span class="string">'none'</span>)                        <span class="comment">#删标注</span></span><br></pre></td></tr></table></figure></div>
 <p><a name="Kt9wJ"></a></p>
 <h3 id="2-2-background-color"><a class="header-anchor" href="#2-2-background-color"></a>2.2 background color</h3>
 <div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="R"><figure class="iseeu highlight /r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">panel.background = element_rect(fill = <span class="string">"lightblue"</span>,</span><br><span class="line">                    colour = <span class="string">"lightblue"</span>,</span><br><span class="line">                    size = <span class="number">0.5</span>, linetype = <span class="string">"solid"</span>),</span><br></pre></td></tr></table></figure></div>
@@ -376,7 +376,7 @@ R 语言画图索引: <a href="https://karobben.github.io/R/R-index.html">https:
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">July 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">June 2020</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">June 2020</a></li></ul>
     </div>
   </div>
 
@@ -387,10 +387,6 @@ R 语言画图索引: <a href="https://karobben.github.io/R/R-index.html">https:
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
-        
-          <li>
-            <a href="/2020/07/01/123/">123</a>
-          </li>
         
           <li>
             <a href="/2020/06/30/tmp/">test</a>

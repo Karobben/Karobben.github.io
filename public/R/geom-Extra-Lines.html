@@ -15,8 +15,8 @@
 <meta property="og:description" content="geom Extra Lines">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://s1.ax1x.com/2020/06/19/Nu06nx.png">
-<meta property="article:published_time" content="2020-07-16T07:13:33.904Z">
-<meta property="article:modified_time" content="2020-07-16T07:13:33.904Z">
+<meta property="article:published_time" content="2020-08-13T08:30:02.652Z">
+<meta property="article:modified_time" content="2020-08-13T08:30:02.652Z">
 <meta property="article:author" content="Karobben">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://s1.ax1x.com/2020/06/19/Nu06nx.png">
@@ -115,7 +115,7 @@
 <div id="tipue_search_content" style="display: none"></div>
   <div class="article-meta">
     <a href="/R/geom-Extra-Lines.html" class="article-date">
-  <time datetime="2020-07-16T07:13:33.904Z" itemprop="datePublished">2020-07-16</time>
+  <time datetime="2020-08-13T08:30:02.652Z" itemprop="datePublished">2020-08-13</time>
 </a>
     
   </div>
@@ -149,7 +149,7 @@
 
   <div id="toc" class="toc-article">
     <strong class="toc-title">Titles</strong>
-    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#geom-Extra-Lines"><span class="toc-number">1.</span> <span class="toc-text">geom Extra Lines</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#More"><span class="toc-number">2.</span> <span class="toc-text">More</span></a></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#"><span class="toc-number">1.</span> <span class="toc-text">geom Extra Lines</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#"><span class="toc-number">2.</span> <span class="toc-text">More</span></a></li></ol>
   </div>
 
 <!-- Table of Contents Down-->
@@ -160,14 +160,17 @@
 </div>
 
 
-        <h1 id="geom-Extra-Lines"><a href="#geom-Extra-Lines" class="headerlink" title="geom Extra Lines"></a>geom Extra Lines</h1><p>geom_vline()<br />geom_hline()<br />geom_abline()</p>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="R"><figure class="iseeu highlight /r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">library</span>(ggplot2)</span><br><span class="line"><span class="keyword">library</span>(patchwork)</span><br><span class="line"></span><br><span class="line">P1 &lt;- ggplot(mtcars)+ geom_point(aes(mpg, cyl)) +</span><br><span class="line">-geom_vline( xintercept = <span class="number">20</span>) + ggtitle(<span class="string">'vline'</span>) +theme_light()</span><br><span class="line">P2 &lt;- ggplot(mtcars)+ geom_point(aes(mpg, cyl)) +</span><br><span class="line">geom_hline( yintercept = <span class="number">7</span>) + ggtitle(<span class="string">'hline'</span>) +theme_light()</span><br><span class="line">P3 &lt;- ggplot(mtcars, aes(wt, mpg)) + geom_point() + geom_abline(intercept = <span class="number">25</span>, slope = -<span class="number">1</span>) +</span><br><span class="line">-ggtitle(<span class="string">"abline"</span>)+theme_light()</span><br><span class="line"></span><br><span class="line">P3|(P1/P2)</span><br></pre></td></tr></table></figure></div>
-
+        <h1>geom Extra Lines</h1>
+<p>geom_vline()<br />geom_hline()<br />geom_abline()</p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="R"><figure class="iseeu highlight /r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">library</span>(ggplot2)</span><br><span class="line"><span class="keyword">library</span>(patchwork)</span><br><span class="line"></span><br><span class="line">P1 &lt;- ggplot(mtcars)+ geom_point(aes(mpg, cyl)) +</span><br><span class="line">  geom_vline( xintercept = <span class="number">20</span>) + ggtitle(<span class="string">'vline'</span>) +theme_light()</span><br><span class="line">P2 &lt;- ggplot(mtcars)+ geom_point(aes(mpg, cyl)) +</span><br><span class="line">geom_hline( yintercept = <span class="number">7</span>) + ggtitle(<span class="string">'hline'</span>) +theme_light()</span><br><span class="line">P3 &lt;- ggplot(mtcars, aes(wt, mpg)) + geom_point() + geom_abline(intercept = <span class="number">25</span>, slope = -<span class="number">1</span>) +</span><br><span class="line">  ggtitle(<span class="string">"abline"</span>)+theme_light()</span><br><span class="line"></span><br><span class="line">P3|(P1/P2)</span><br></pre></td></tr></table></figure></div>
 <p><img src="https://s1.ax1x.com/2020/06/19/Nu06nx.png" alt="Nu06nx.png"></p>
 <p><a name="FG8Ad"></a></p>
-<h1 id="More"><a href="#More" class="headerlink" title="More"></a>More</h1><p>图片索引:<a href="https://karobben.github.io/R/R-index.html">https://karobben.github.io/R/R-index.html</a></p>
+<h1>More</h1>
+<p>图片索引:<a href="https://karobben.github.io/R/R-index.html">https://karobben.github.io/R/R-index.html</a></p>
 <hr>
-<p>github: <a href="https://github.com/Karobben" target="_blank" rel="noopener">https://github.com/Karobben</a><br>blog: <a href="http://Karobben.github.io">Karobben.github.io</a><br>R 语言画图索引: <a href="https://karobben.github.io/R/R-index.html">https://karobben.github.io/R/R-index.html</a></p>
+<p>github: <a href="https://github.com/Karobben" target="_blank" rel="noopener">https://github.com/Karobben</a><br>
+blog: <a href="http://Karobben.github.io">Karobben.github.io</a><br>
+R 语言画图索引: <a href="https://karobben.github.io/R/R-index.html">https://karobben.github.io/R/R-index.html</a></p>
 
       
     </div>
@@ -199,7 +202,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">July 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">June 2020</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">June 2020</a></li></ul>
     </div>
   </div>
 
@@ -210,10 +213,6 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
-        
-          <li>
-            <a href="/2020/07/01/123/">123</a>
-          </li>
         
           <li>
             <a href="/2020/06/30/tmp/">test</a>

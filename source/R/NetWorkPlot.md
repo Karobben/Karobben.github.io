@@ -88,8 +88,7 @@ forceNetwork(Links=MisLinks, #读入基因之间的关系列表，基因以数�
     #radiusCalculation = "d.nodesize"          
 )
 ```
-![123](https://i.loli.net/2020/06/09/tuya6YfnQi9BWJU.gif)
-
+![123](https://s1.ax1x.com/2020/08/13/dS6sCF.gif)
 
 <a name="iGebE"></a>
 Those Code Doesn't Works without the data set

@@ -39,13 +39,13 @@ plt.show()
 np.random.seed(2000)
 y = np.random.standard_normal((20,2)).cumsum(axis=0)
 
-plt.figure(figsize=(7, 4))	# adding a canves figsize=(width, height)
-plt.plot(y.cumsum(), 'm',lw=1.5)	# adding a line
-plt.plot(y.cumsum(), 'ro')	# adding dots
-plt.grid(True)	# adding grid on panals
-plt.axis('tight')	# adding... I don't know
-plt.xlabel('index')	# adding a title x
-plt.ylabel('value')	# addint a title y
+plt.figure(figsize=(7, 4))  # adding a canves figsize=(width, height)
+plt.plot(y.cumsum(), 'm',lw=1.5)  # adding a line
+plt.plot(y.cumsum(), 'ro')  # adding dots
+plt.grid(True)  # adding grid on panals
+plt.axis('tight')  # adding... I don't know
+plt.xlabel('index')  # adding a title x
+plt.ylabel('value')  # addint a title y
 plt.title('A Simple Plot') # adding a title
 
 ```

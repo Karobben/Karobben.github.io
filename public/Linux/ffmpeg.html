@@ -7,15 +7,15 @@
   
   <title>Karobben</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="ffmpegMp41ffmpeg -re -i &quot;1.mp4&quot; -vcodec copy -acodec aac -b:a 192k -f flv &quot;你的rtmp地址&#x2F;你的直播码&quot;    Camera123sudo raspivid -o - -t 0 -w 1280 -h 720 -fps 24 -b 1000000 |--ffmpeg -f h264 -i - -vcodec copy -ac">
+  <meta name="description" content="ffmpeg Mp4 1ffmpeg -re -i &quot;1.mp4&quot; -vcodec copy -acodec aac -b:a 192k -f flv &quot;你的rtmp地址&#x2F;你的直播码&quot;  Camera 123sudo raspivid -o - -t 0 -w 1280 -h 720 -fps 24 -b 1000000 |    ffmpeg -f h264 -i - -vcodec copy">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Karobben">
 <meta property="og:url" content="https://karobben.github.io/Linux/ffmpeg.html">
 <meta property="og:site_name" content="Karobben">
-<meta property="og:description" content="ffmpegMp41ffmpeg -re -i &quot;1.mp4&quot; -vcodec copy -acodec aac -b:a 192k -f flv &quot;你的rtmp地址&#x2F;你的直播码&quot;    Camera123sudo raspivid -o - -t 0 -w 1280 -h 720 -fps 24 -b 1000000 |--ffmpeg -f h264 -i - -vcodec copy -ac">
+<meta property="og:description" content="ffmpeg Mp4 1ffmpeg -re -i &quot;1.mp4&quot; -vcodec copy -acodec aac -b:a 192k -f flv &quot;你的rtmp地址&#x2F;你的直播码&quot;  Camera 123sudo raspivid -o - -t 0 -w 1280 -h 720 -fps 24 -b 1000000 |    ffmpeg -f h264 -i - -vcodec copy">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-07-16T07:13:33.579Z">
-<meta property="article:modified_time" content="2020-07-16T07:13:33.579Z">
+<meta property="article:published_time" content="2020-08-13T09:30:52.046Z">
+<meta property="article:modified_time" content="2020-08-13T09:30:52.046Z">
 <meta property="article:author" content="Karobben">
 <meta name="twitter:card" content="summary">
   
@@ -113,7 +113,7 @@
 <div id="tipue_search_content" style="display: none"></div>
   <div class="article-meta">
     <a href="/Linux/ffmpeg.html" class="article-date">
-  <time datetime="2020-07-16T07:13:33.579Z" itemprop="datePublished">2020-07-16</time>
+  <time datetime="2020-08-13T09:30:52.046Z" itemprop="datePublished">2020-08-13</time>
 </a>
     
   </div>
@@ -137,7 +137,7 @@
 
   <div id="toc" class="toc-article">
     <strong class="toc-title">Titles</strong>
-    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#ffmpeg"><span class="toc-number">1.</span> <span class="toc-text">ffmpeg</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Mp4"><span class="toc-number">2.</span> <span class="toc-text">Mp4</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Camera"><span class="toc-number">3.</span> <span class="toc-text">Camera</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Add-an-audio"><span class="toc-number">4.</span> <span class="toc-text">Add an audio</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Camera＆-Mircrophone"><span class="toc-number">5.</span> <span class="toc-text">Camera＆　Mircrophone</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#拉流"><span class="toc-number">6.</span> <span class="toc-text">拉流</span></a></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#"><span class="toc-number">1.</span> <span class="toc-text">ffmpeg</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#"><span class="toc-number">2.</span> <span class="toc-text">Mp4</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#"><span class="toc-number">3.</span> <span class="toc-text">Camera</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#"><span class="toc-number">4.</span> <span class="toc-text">Add an audio</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#"><span class="toc-number">5.</span> <span class="toc-text">Camera＆　Mircrophone</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#"><span class="toc-number">6.</span> <span class="toc-text">拉流</span></a></li></ol>
   </div>
 
 <!-- Table of Contents Down-->
@@ -148,24 +148,22 @@
 </div>
 
 
-        <h1 id="ffmpeg"><a href="#ffmpeg" class="headerlink" title="ffmpeg"></a>ffmpeg</h1><h1 id="Mp4"><a href="#Mp4" class="headerlink" title="Mp4"></a>Mp4</h1><div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ffmpeg -re -i <span class="string">"1.mp4"</span> -vcodec copy -acodec aac -b:a 192k -f flv <span class="string">"你的rtmp地址/你的直播码"</span></span><br></pre></td></tr></table></figure></div>
-
-
+        <h1>ffmpeg</h1>
+<h1>Mp4</h1>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ffmpeg -re -i <span class="string">"1.mp4"</span> -vcodec copy -acodec aac -b:a 192k -f flv <span class="string">"你的rtmp地址/你的直播码"</span></span><br></pre></td></tr></table></figure></div>
 <p><a name="Ctdka"></a></p>
-<h1 id="Camera"><a href="#Camera" class="headerlink" title="Camera"></a>Camera</h1><div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo raspivid -o - -t <span class="number">0</span> -w <span class="number">1280</span> -h <span class="number">720</span> -fps <span class="number">24</span> -b <span class="number">1000000</span> |</span><br><span class="line">--ffmpeg -f h264 -i - -vcodec copy -acodec aac -b:a <span class="number">192</span>k \</span><br><span class="line">        \\\-f flv <span class="string">"你的rtmp地址/你的直播码"</span></span><br></pre></td></tr></table></figure></div>
-
-
+<h1>Camera</h1>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo raspivid -o - -t <span class="number">0</span> -w <span class="number">1280</span> -h <span class="number">720</span> -fps <span class="number">24</span> -b <span class="number">1000000</span> |</span><br><span class="line">    ffmpeg -f h264 -i - -vcodec copy -acodec aac -b:a <span class="number">192</span>k \</span><br><span class="line">        \\\-f flv <span class="string">"你的rtmp地址/你的直播码"</span></span><br></pre></td></tr></table></figure></div>
 <p><a name="9vrdi"></a></p>
-<h1 id="Add-an-audio"><a href="#Add-an-audio" class="headerlink" title="Add an audio"></a>Add an audio</h1><div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sudo raspivid -o - -t 0 -w 1280 -h 720 -fps 24 -b 1000000 |</span><br><span class="line">----ffmpeg  -re -stream_loop -1 -i  <span class="string">"/home/pi/scrpt/Blive/StarBucks_BGN.mp3"</span> \</span><br><span class="line">        -f h264 -i - -vcodec copy -r 30 -acodec aac -b:a 100k -preset ultrafast \</span><br><span class="line">        -tune zerolatency -f flv <span class="string">"rtmp://"</span></span><br></pre></td></tr></table></figure></div>
-
-
+<h1>Add an audio</h1>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sudo raspivid -o - -t 0 -w 1280 -h 720 -fps 24 -b 1000000 |</span><br><span class="line">        ffmpeg  -re -stream_loop -1 -i  <span class="string">"/home/pi/scrpt/Blive/StarBucks_BGN.mp3"</span> \</span><br><span class="line">        -f h264 -i - -vcodec copy -r 30 -acodec aac -b:a 100k -preset ultrafast \</span><br><span class="line">        -tune zerolatency -f flv <span class="string">"rtmp://"</span></span><br></pre></td></tr></table></figure></div>
 <p><a name="TqqYA"></a></p>
-<h1 id="Camera＆-Mircrophone"><a href="#Camera＆-Mircrophone" class="headerlink" title="Camera＆　Mircrophone"></a>Camera＆　Mircrophone</h1><div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># https://blog.csdn.net/word_joke/article/details/96978138</span></span><br><span class="line">ffmpeg  -f dshow -i video=<span class="string">"USB2.0 PC CAMERA"</span></span><br><span class="line">                 -f dshow -i audio=<span class="string">"麦克风 (2- USB2.0 MIC)"</span></span><br><span class="line">                 -vcodec libx264 -preset:v ultrafast -tune:v zerolatency</span><br><span class="line">                 -f flv rtmp://127.0.0.1:1935/live/123</span><br><span class="line"></span><br><span class="line"><span class="comment"># https://blog.csdn.net/HuiShouDeZaiLai/article/details/97373878</span></span><br><span class="line">ffmpeg  -f alsa -thread_queue_size 1024  -i <span class="string">"<span class="variable">$MIC_DEV_NAME</span>"</span> \</span><br><span class="line">-----f video4linux2   -r 10  -s 640x480 -i <span class="string">"<span class="variable">$CAMERA_DEV_NAME</span>"</span> \</span><br><span class="line">        -vcodec h264  -ac 1  -b:a 128k -ar 44100 -acodec aac   \</span><br><span class="line">        -strict -2  -tune zerolatency  -preset medium -b:v 1500k -f pcm   \</span><br><span class="line">        -f  flv    rtmp://XXX:1935/live/livestream</span><br></pre></td></tr></table></figure></div>
-
+<h1>Camera＆　Mircrophone</h1>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># https://blog.csdn.net/word_joke/article/details/96978138</span></span><br><span class="line">ffmpeg  -f dshow -i video=<span class="string">"USB2.0 PC CAMERA"</span></span><br><span class="line">                 -f dshow -i audio=<span class="string">"麦克风 (2- USB2.0 MIC)"</span></span><br><span class="line">                 -vcodec libx264 -preset:v ultrafast -tune:v zerolatency</span><br><span class="line">                 -f flv rtmp://127.0.0.1:1935/live/123</span><br><span class="line"></span><br><span class="line"><span class="comment"># https://blog.csdn.net/HuiShouDeZaiLai/article/details/97373878</span></span><br><span class="line">ffmpeg  -f alsa -thread_queue_size 1024  -i <span class="string">"<span class="variable">$MIC_DEV_NAME</span>"</span> \</span><br><span class="line">        -f video4linux2   -r 10  -s 640x480 -i <span class="string">"<span class="variable">$CAMERA_DEV_NAME</span>"</span> \</span><br><span class="line">        -vcodec h264  -ac 1  -b:a 128k -ar 44100 -acodec aac   \</span><br><span class="line">        -strict -2  -tune zerolatency  -preset medium -b:v 1500k -f pcm   \</span><br><span class="line">        -f  flv    rtmp://XXX:1935/live/livestream</span><br></pre></td></tr></table></figure></div>
 <br />
-
 <p><a name="Bi3mX"></a></p>
-<h1 id="拉流"><a href="#拉流" class="headerlink" title="拉流"></a>拉流</h1><div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#https://blog.csdn.net/hdg745979749/article/details/103000160</span></span><br><span class="line"></span><br><span class="line">ffmpeg -i rtmp://58.200.131.2:1935/livetv/hunantv -c copy dump.flv</span><br><span class="line"><span class="comment"># 地址为 湖南卫视</span></span><br><span class="line"><span class="comment"># 可直接下载保存为flv 视频</span></span><br></pre></td></tr></table></figure></div>
+<h1>拉流</h1>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#https://blog.csdn.net/hdg745979749/article/details/103000160</span></span><br><span class="line"></span><br><span class="line">ffmpeg -i rtmp://58.200.131.2:1935/livetv/hunantv -c copy dump.flv</span><br><span class="line"><span class="comment"># 地址为 湖南卫视</span></span><br><span class="line"><span class="comment"># 可直接下载保存为flv 视频</span></span><br></pre></td></tr></table></figure></div>
 
       
     </div>
@@ -197,7 +195,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">July 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">June 2020</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">June 2020</a></li></ul>
     </div>
   </div>
 
@@ -208,10 +206,6 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
-        
-          <li>
-            <a href="/2020/07/01/123/">123</a>
-          </li>
         
           <li>
             <a href="/2020/06/30/tmp/">test</a>

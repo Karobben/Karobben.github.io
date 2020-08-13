@@ -57,6 +57,7 @@ install.packages("fmsb")
 install.packages('rcmdcheck')
 install.packages('devtools')
 install.packages("rgl")
+install.packages('ggalt') # Map data
 ```
 # Packages for Biology
 

@@ -30,7 +30,7 @@ Distent <- function(P1,P2){
 
 #2.映射到平行
 Trans <- function(P1,P2){
-	D_s = Distent(P1,P2)
+  D_s = Distent(P1,P2)
   P2=c(P1[1]+D_s,P1[2])
   return(P2)
 }

@@ -1,6 +1,6 @@
 ---
-title: "为什么我要使用瓦雀"
-description: "为什么我要使用瓦雀"
+title: "为什么我要使用瓦雀| markdown 语法大全"
+description: "为什么我要使用瓦雀| markdown 语法大全介绍"
 url: waque
 ---
 
@@ -61,9 +61,12 @@ waque init
 
 # 已知問題
 
-[大部分和簡書顯示類似](https://www.jianshu.com/p/ebe52d2d468f)
+大部分和簡書顯示類似: [择势勤 2019](https://www.jianshu.com/p/ebe52d2d468f)[^A]
 
-### 無法使用:
+[^A]: 择势勤; Markdown语法大全(超级版); 简书; 2019.05.02 16:37:47.
+
+
+### 在语雀無法使用(hexo 可以):
 - 腦圖;流程圖等語法
 - `<details>`或region 摺疊標籤
 - html 的 height 屬性
@@ -76,18 +79,56 @@ waque init
 
 
 ### 可
+
+#### 文字
 - 註釋`[\\]:#` `<div style='display: none'>`
 - `<img>` 標籤
 - `<div align=right>` 排版標籤
-- `*这是倾斜的文字*` *我*
-- `**这是加粗的文字**` **我**
-- `***这是斜体加粗的文字***` ***我***
-- `~这是文字左下角~` ~我~
-- `~~这是加删除线的文字~~` ~~我~~
+- `这是*倾斜*的文字` 这是*倾斜*的文字
+- `这是**加粗**的文字` 这是**加粗**的文字
+- `这是 ***斜体加粗*** 的文字` 这是 ***斜体加粗*** 的文字
+- `这是文字^右上角^` 这是文字^右上角^
+- `这是文字~右下角~` 这是文字~右下角~
+- `这是==高亮==文字` 这是==高亮==文字 (**hexo 失效**)
+- `这是加~~删除线~~的文字` 这是加~~删除线~~的文字
 - ``![图片alt](图片地址 ''图片title'')``
-- ```<s><sub><sup><u><b>```  
+- ```<s><sub><sup><u><b>```
 - `flow`
 - `mermaid`
+
+#### 缩写
+
+```
+convert to HTML
+*[HTML]: HyperText Markup Language
+```
+convert to HTML
+*[HTML]: HyperText Markup Language
+
+#### 待办事项 (**hexo 失效**)
+`- [ ] item`
+- [ ] item
+
+`- [x] item2`
+- [x] item2
+
+#### 公式 (**hexo 失效**)
+```md
+$$
+\Gamma(z) = \int_0^\infty t^{z-1}e^{-t}dt\,.
+$$
+```
+$$
+\Gamma(z) = \int_0^\infty t^{z-1}e^{-t}dt\,.
+$$
+#### 表格
+
+|表头1|表头2|表头3|表头4|5|
+|--|---------|:--|--:|:--:|
+|普通|加宽|靠左对齐|靠右对齐|居中|
+|普普通通|宽|我从左边开始|我向右看齐|我在中间|
+
+更多: [复杂表格 aladdin_sun 2018](https://blog.csdn.net/sunbocong/article/details/81033915)
 
 ```bash
 #flow codes for below
@@ -130,7 +171,7 @@ graph LR;
 　　Apollo配置中心-->|实时推送|App;
 　　App-->|实时查询|Apollo配置中心;
 ```
-[codes citation](https://www.cnblogs.com/nanqiang/p/8244309.html)
+Citation: [cicero 2018](https://www.cnblogs.com/nanqiang/p/8244309.html)
 ```mermaid
 graph LR;
 　　Portal-->|发布/更新配置|Apollo配置中心;
@@ -139,6 +180,8 @@ graph LR;
 ```
 更多mermaid例子：
 [道隐无名 2015](https://www.cnblogs.com/dao0/p/4489837.html)
+[七适散人 2018](https://cloud.tencent.com/developer/article/1334691)
+
 ---
 github: [https://github.com/Karobben](https://github.com/Karobben)
 blog: [Karobben.github.io](http://Karobben.github.io)

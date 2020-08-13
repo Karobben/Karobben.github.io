@@ -7,7 +7,7 @@ url: density_plot2
 # Density plot
 
 
-![den1](https://i.loli.net/2020/06/19/rOxBlm9cqaRzpwu.png)
+![den1](https://s1.ax1x.com/2020/08/13/dS50Ej.png)
 
 <a name="XxQSp"></a>
 # Quick start
@@ -18,7 +18,7 @@ library(ggplot2)
 world <- map_data("world")
 ggplot(world,aes(long, lat)) +geom_density_2d(color='red') + theme_light()
 ```
-![den2](https://i.loli.net/2020/06/19/cyRwGV41PEIQWxz.png)
+![den2](https://s1.ax1x.com/2020/08/13/dS5dbQ.png)
 
 
 <a name="tcYcw"></a>
@@ -26,12 +26,12 @@ ggplot(world,aes(long, lat)) +geom_density_2d(color='red') + theme_light()
 ```r
 ggplot(world,aes(long, lat)) + stat_density_2d(aes(fill = stat(level)), geom = "polygon") + theme_map()
 ```
-![123](https://i.loli.net/2020/06/19/quDabenCps8B4hj.png)
+![123](https://s1.ax1x.com/2020/08/13/dS5aDg.png)
 
 ```r
 ggplot(world,aes(long, lat)) + stat_density_2d(aes(fill = stat(level),colour = region), geom = "polygon") + theme_map()+ theme(legend.position = 'none')
 ```
-![den4](https://i.loli.net/2020/06/19/k79MqaCDOlSUmwv.png)
+![den4](https://s1.ax1x.com/2020/08/13/dS5BUs.png)
 
 <a name="OX1Ol"></a>
 ## geom_raster
@@ -40,7 +40,7 @@ ggplot(world,aes(long, lat)) + stat_density_2d(aes(fill = stat(level),colour = r
 ggplot(faithfuld, aes(waiting, eruptions)) +
  geom_raster(aes(fill = density))+ theme_map()
 ```
-![den5](https://i.loli.net/2020/06/19/xLcKEaleb6kofmq.png)
+![den5](https://s1.ax1x.com/2020/08/13/dS5UKS.png)
 
 <a name="FG8Ad"></a>
 # More

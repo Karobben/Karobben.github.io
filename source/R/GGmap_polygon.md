@@ -67,12 +67,12 @@ for(i in c(2:10)){
   City =rbind(City,tmp)}
 
 ggplot(head(City,30))+
-	geom_polygon(data=world,aes(x = long, y = lat, group = group),
-		fill = "#00518E",color = "#317DA4")+
-	geom_point(data=City,aes(x=V2,y=V3)) +  
-	geom_text(data=head(City,Num),aes(x=V2,y=V3,label=V1))+
-	coord_cartesian(xlim=c(70,150),ylim = c(10,65))+
-	transition_time(City$Group) + theme_map()
+  geom_polygon(data=world,aes(x = long, y = lat, group = group),
+    fill = "#00518E",color = "#317DA4")+
+  geom_point(data=City,aes(x=V2,y=V3)) +  
+  geom_text(data=head(City,Num),aes(x=V2,y=V3,label=V1))+
+  coord_cartesian(xlim=c(70,150),ylim = c(10,65))+
+  transition_time(City$Group) + theme_map()
 
 # 简单示范
 ```
@@ -102,9 +102,9 @@ for(i in c(1:5)){
 ```r
 #杂技函数
 经纬线() +geom_polygon(data=world, aes(x = long, y = lat, group = group),
-    		fill = "#00518E",color = "#317DA4") +
+        fill = "#00518E",color = "#317DA4") +
     scale_y_continuous(breaks = (-2:2) * 30) +
-		coord_map("ortho", orientation = c(30, 100, 0)) +
+    coord_map("ortho", orientation = c(30, 100, 0)) +
     scale_x_continuous(breaks = (-4:4) * 45)+ theme_map()+
 
 
@@ -114,13 +114,13 @@ for(i in c(1:5)){
 ## 链接两点
 这里用到Connet函数，详见“[曲线链接两点](https://www.yuque.com/liuwenkan/bni63i/bwkcrz#1aCF2)” <br />创建地点
 ```bash
-echo "巴黎	2.294694	48.856958
-墨尔本	144.958832	-37.812164
-马德里	-3.677528	40.390197
-SD	-117.071944	32.775554
-马塞卢	27.512883	-29.363468
-罗萨里奥	-60.62623	-32.949375
-东京	139.752725	35.68461" > 20City
+echo "巴黎  2.294694  48.856958
+墨尔本  144.958832  -37.812164
+马德里  -3.677528  40.390197
+SD  -117.071944  32.775554
+马塞卢  27.512883  -29.363468
+罗萨里奥  -60.62623  -32.949375
+东京  139.752725  35.68461" > 20City
 ```
 
 ```r

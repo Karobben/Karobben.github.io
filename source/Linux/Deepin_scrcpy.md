@@ -20,7 +20,7 @@ scrcpy 作为一个良心开源投屏加控制软件，真是太强大了。 不
 
 ```bash
 sudo apt install adb ffmpeg libsdl2-2.0.0 make gcc pkg-config meson ninja-build \
-		libavcodec-dev libavformat-dev libavutil-dev libsdl2-dev
+    libavcodec-dev libavformat-dev libavutil-dev libsdl2-dev
 ```
 
 <a name="T1Pew"></a>

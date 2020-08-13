@@ -66,8 +66,8 @@ time muscle -in LYSV-NCBI.fasta -out 123.fa
 [![aFnKUJ.png](https://s1.ax1x.com/2020/07/27/aFnKUJ.png)](https://imgchr.com/i/aFnKUJ)
 
 ```
-real	17m59.470s
-user	17m59.034s
-sys	0m0.256s
+real  17m59.470s
+user  17m59.034s
+sys  0m0.256s
 ```
 It takes about 18min as well as *ClustelW2*

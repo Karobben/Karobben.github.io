@@ -149,7 +149,7 @@ weekdays(as.Date('2018-3-1'))
 ```r
 Shrink <-  function(Data, P){
   Num = round(nrow(world)/P)
-	Data = Data[c(1:Num)*P,]
+  Data = Data[c(1:Num)*P,]
 }
 ```
 

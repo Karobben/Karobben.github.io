@@ -85,9 +85,9 @@ for i in return_dict.values():
 ```
 It backs to:
 ```
-http://www.kazusa.or.jp/codon/	0.721183
-http://wwwmgs.bionet.nsc.ru/mgs/gnw/trrd/	1.616894
-http://www.ncbi.nlm.nih.gov/dbSTS/	1.460668
+http://www.kazusa.or.jp/codon/  0.721183
+http://wwwmgs.bionet.nsc.ru/mgs/gnw/trrd/  1.616894
+http://www.ncbi.nlm.nih.gov/dbSTS/  1.460668
 ...
 ```
 ## 2. Update the Markdonw File

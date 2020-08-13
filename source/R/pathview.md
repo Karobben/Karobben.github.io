@@ -21,11 +21,11 @@ library(pathview)
 # Gene map
 data(gse16873.d)
 pv.out <- pathview(gene.data = gse16873.d[, 1], pathway.id = "04110",
-	species = "hsa", out.suffix = "gse16873")
+  species = "hsa", out.suffix = "gse16873")
 
 pv.out <- pathview(gene.data = gse16873.d[, 1], pathway.id = demo.paths$sel.paths[i],
-	species = "hsa", out.suffix = "gse16873.2layer", kegg.native = T,
-	same.layer = F)
+  species = "hsa", out.suffix = "gse16873.2layer", kegg.native = T,
+  same.layer = F)
 
 # compound map
 data(demo.paths)
@@ -33,8 +33,8 @@ data(cpd.simtypes)
 sim.cpd.data=sim.mol.data(mol.type="cpd", nmol=3000)
 i <- 3
 pv.out <- pathview(gene.data = gse16873.d[, 1], cpd.data = sim.cpd.data,
-	pathway.id = demo.paths$sel.paths[i], species = "hsa", out.suffix = "gse16873.cpd",
-	keys.align = "y", kegg.native = T, key.pos = demo.paths$kpos1[i])
+  pathway.id = demo.paths$sel.paths[i], species = "hsa", out.suffix = "gse16873.cpd",
+  keys.align = "y", kegg.native = T, key.pos = demo.paths$kpos1[i])
 ```
 |Gene map| Compound map|
 |----|----|
@@ -49,7 +49,7 @@ data(demo.paths)
 sim.cpd.data=sim.mol.data(mol.type="cpd", nmol=3000)
 
 gse16873.t <- apply(gse16873.d, 1, function(x) t.test(x,
-	alternative = "two.sided")$p.value)
+  alternative = "two.sided")$p.value)
 
 i <- 3
 sim.cpd.data2 = matrix(sample(sim.cpd.data, 18000, replace = T), ncol = 6)
@@ -57,10 +57,10 @@ rownames(sim.cpd.data2) = names(sim.cpd.data)
 colnames(sim.cpd.data2) = paste("exp", 1:6, sep = "")
 
 pv.out <- pathview(gene.data = gse16873.d[, 1:3],
-	cpd.data = sim.cpd.data2[, 1:2], pathway.id = demo.paths$sel.paths[i],
-	species = "hsa", out.suffix = "gse16873.cpd.3-2s.2layer",
-	keys.align = "y", kegg.native = T, match.data = F, multi.state = T,
-	same.layer = F)
+  cpd.data = sim.cpd.data2[, 1:2], pathway.id = demo.paths$sel.paths[i],
+  species = "hsa", out.suffix = "gse16873.cpd.3-2s.2layer",
+  keys.align = "y", kegg.native = T, match.data = F, multi.state = T,
+  same.layer = F)
 ```
 [![tiZBlT.md.png](https://s1.ax1x.com/2020/05/26/tiZBlT.md.png)](https://imgchr.com/i/tiZBlT)
 
@@ -81,7 +81,7 @@ gene <- read.table('gene.list',header=T)
 TB = matrix(gene[,2])
 rownames(TB)= gene[,1]
 pathview(gene.data = TB[, 1], pathway.id = "00130",
-	species = "ko", out.suffix = "test")
+  species = "ko", out.suffix = "test")
 ```
 [![tP9h8J.md.png](https://s1.ax1x.com/2020/05/26/tP9h8J.md.png)](https://imgchr.com/i/tP9h8J)
 

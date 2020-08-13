@@ -1,5 +1,6 @@
 - # R
-    - [fasta_counts_ex](fasta_counts_ex.html)
+  - [fasta_counts_ex](fasta_counts_ex.html)
+  - [heatmap](heatmap.html)
   - ## GGplot
     - [ggplot: KEGG plot](ggplot_KEGG.html)
     - [ggplot: hclust (dendrogram)](ggplot_hclust.html)
@@ -17,6 +18,7 @@
   - [OpenCV:  resize the Outline of Icons](Python-resizeOutline.html)
   - [OpenCV:  Western Blot; Grey-grades Analysis](Python_WBA.html)
   - [OpenCV:  Video Speed up](Py_openCV_speed.html)
+  - [OpenCV:  img to video](Py_img2video.html)
   - [PDF: pdf2txt](pdf2txt.html)
   - [PIL: imgResize(script)](Python_imgResize.html)
   - [QQ:  QQbot](Python-QQbot.html)
@@ -43,8 +45,9 @@
   - [Graphviz](Graphviz.html)
   - [Latex](Latex.html)
   - [submit_baidu](submit_baidu.html)
-  - [waque](waque.html)
+  - [waque| <span style="background:salmon">**Markdown语法大全**</span>](waque.html)
   - [yuque_API](yuque_API.html)
+  - [鱼缸除藻生物工具](tank_notes.html)
   - [test](test.html)
 
 

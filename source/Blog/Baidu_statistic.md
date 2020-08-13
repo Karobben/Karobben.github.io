@@ -13,9 +13,9 @@ url: egavw6
 将
 ```html
 http://openapi.baidu.com/oauth/2.0/authorize?response_type=code&
-	client_id={CLIENT_ID}&
-	redirect_uri={REDIRECT_URI}&
-	scope=basic&display=popup
+  client_id={CLIENT_ID}&
+  redirect_uri={REDIRECT_URI}&
+  scope=basic&display=popup
 ```
 
 按照对应关系
@@ -32,7 +32,7 @@ Secret Key   {CLIENT_SECRET}
 注意:     1."{}" **不能保留, 直接删掉**. 我之前卡了好久, 就是因为没有删去中括号.<br />2.REDIRECT_URI 建议使用活网站, 不然跳转的时候, 会等很久很久.<br />然后直接黏贴在浏览器里,便可<br />Example:
 ```html
 http://openapi.baidu.com/oauth/2.0/authorize?response_type=code&
-	client_id=m2OY4t4oBs59XG2Sasdads&
+  client_id=m2OY4t4oBs59XG2Sasdads&
   redirect_uri=https://www.baidu.com&
   scope=basic&display=popup
 ```
@@ -60,7 +60,7 @@ http://openapi.baidu.com/oauth/2.0/token?grant_type=authorization_code&
 
 ```html
 https://openapi.baidu.com/rest/2.0/tongji/config/getSiteList?
-	access_token={you_token}
+  access_token={you_token}
 ```
 ![123.jpg](https://cdn.nlark.com/yuque/0/2020/jpeg/691897/1582599246003-9ee8bf4c-1716-4ef3-a189-89c313b445d7.jpeg#align=left&display=inline&height=141&name=123.jpg&originHeight=141&originWidth=400&size=23063&status=done&style=none&width=400)<br />
 <br />
@@ -106,43 +106,43 @@ def Tongji(TOKEN):
 
     def Location_Get(TOKEN, TIME):
         # aquiring location-distribution information by province today
-    	url1 = "https://openapi.baidu.com/rest/2.0/tongji/report/getData?access_token="
-    	url2 = TOKEN +"&site_id=14350939&start_date="
-    	url3 = TIME + "&end_date="+TIME+"&metrics=pv_count&method=overview%2FgetDistrictRpt"
-    	url = url1+url2+url3
-    	Data = requests.get(url).json()
-    	Location = ""
-    	for i in Data['result']['items'][0]:
-    		Location += i[0] +'\n'
-    	Location_N = ""
-    	for i in Data['result']['items'][1]:
-    		Location_N += str(i[0]) +'\n'
-    	return Location,Location_N
+      url1 = "https://openapi.baidu.com/rest/2.0/tongji/report/getData?access_token="
+      url2 = TOKEN +"&site_id=14350939&start_date="
+      url3 = TIME + "&end_date="+TIME+"&metrics=pv_count&method=overview%2FgetDistrictRpt"
+      url = url1+url2+url3
+      Data = requests.get(url).json()
+      Location = ""
+      for i in Data['result']['items'][0]:
+        Location += i[0] +'\n'
+      Location_N = ""
+      for i in Data['result']['items'][1]:
+        Location_N += str(i[0]) +'\n'
+      return Location,Location_N
 
     def Location_Get_C(TOKEN, TIME):
         # Aquring location-distribution information by Country today
-    	url1 = "https://openapi.baidu.com/rest/2.0/tongji/report/getData?access_token="
-    	url2 = TOKEN +"&site_id=14350939&start_date="
-    	url3 = TIME + "&end_date="+TIME+"&metrics=pv_count&method=visit%2Fworld%2Fa"
-    	url = url1+url2+url3
-    	Data = requests.get(url).json()
-    	Location = ""
-    	for i in Data['result']['items'][0]:
-    		Location += i[0]['name'] +'\n'
-    	Location_N = ""
-    	for i in Data['result']['items'][1]:
-    		Location_N += str(i[0]) +'\n'
-    	return Location,Location_N
+      url1 = "https://openapi.baidu.com/rest/2.0/tongji/report/getData?access_token="
+      url2 = TOKEN +"&site_id=14350939&start_date="
+      url3 = TIME + "&end_date="+TIME+"&metrics=pv_count&method=visit%2Fworld%2Fa"
+      url = url1+url2+url3
+      Data = requests.get(url).json()
+      Location = ""
+      for i in Data['result']['items'][0]:
+        Location += i[0]['name'] +'\n'
+      Location_N = ""
+      for i in Data['result']['items'][1]:
+        Location_N += str(i[0]) +'\n'
+      return Location,Location_N
 
     def New_Visitor_Get(TOKEN, TIME):
         # Aquring the ratio of the new visiter today
-    	url1 = "https://openapi.baidu.com/rest/2.0/tongji/report/getData?access_token="
-    	url2 = TOKEN + "&site_id=14350939&start_date="
-    	url3 = TIME + "&end_date=" + TIME + "&metrics=new_visitor_ratio&method=source%2Fall%2Fa"
-    	url = url1 + url2 +url3
-    	Data = requests.get(url).json()
-    	#
-    	return "新訪客比例 "+str(Data['result']['sum'][0][0])+"%"
+      url1 = "https://openapi.baidu.com/rest/2.0/tongji/report/getData?access_token="
+      url2 = TOKEN + "&site_id=14350939&start_date="
+      url3 = TIME + "&end_date=" + TIME + "&metrics=new_visitor_ratio&method=source%2Fall%2Fa"
+      url = url1 + url2 +url3
+      Data = requests.get(url).json()
+      #
+      return "新訪客比例 "+str(Data['result']['sum'][0][0])+"%"
 
     def main():
         # Aquiring Domains' Name and ID

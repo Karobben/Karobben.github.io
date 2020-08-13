@@ -4,7 +4,7 @@ description: "geom_bin2d"
 url: geom_bin2d2
 ---
 # geom_bin2d
-![bin1](https://i.loli.net/2020/06/19/82lEc1uACRxOrGk.png)
+![bin1](https://s1.ax1x.com/2020/08/13/dSRFrd.png)
 
 <a name="4wGpq"></a>
 # Quick Start
@@ -13,7 +13,7 @@ library(ggplot2)
 library(ggthemes)
 
 world <- map_data("world")
-ggplot(world, aes( long, lat)) +geom_bin2d()  + theme_map()
+ggplot(world, aes(long, lat)) + geom_bin2d() + theme_map()
 ```
 
 <a name="vmNgc"></a>
@@ -25,9 +25,9 @@ x=y=bins+1
 library(patchwork)
 
 P1 <- ggplot(world, aes( long, lat)) +geom_bin2d(bins = 10)  + theme_map() +
-			ggtitle('bins=10')+ theme(plot.title = element_text(hjust=0.5,size=20))
+      ggtitle('bins=10')+ theme(plot.title = element_text(hjust=0.5,size=20))
 P2 <- ggplot(world, aes( long, lat)) +geom_bin2d(bins = 100)  + theme_map() +
-			ggtitle('bins=100')+ theme(plot.title = element_text(hjust=0.5,size=20))
+      ggtitle('bins=100')+ theme(plot.title = element_text(hjust=0.5,size=20))
 
 P1/P2
 ```
@@ -38,24 +38,27 @@ P1/P2
 ## binwidth
 ```r
 library(RColorBrewer)
+library(patchwork)
+
+
 colorRampPalette(rev(brewer.pal(n = 7,name = "RdYlBu"))) -> cc
 
 P1 <- ggplot(world, aes( long, lat)) +geom_bin2d(binwidth = c(0.1, 0.1))+
-		theme_map() +ggtitle('0.1 0.1')+ theme(plot.title = element_text(hjust=0.5,size=20))+
-		scale_fill_gradientn(colors=cc(100))
+    theme_map() +ggtitle('0.1 0.1')+ theme(plot.title = element_text(hjust=0.5,size=20))+
+    scale_fill_gradientn(colors=cc(100))
 P2 <- ggplot(world, aes( long, lat)) +geom_bin2d(binwidth = c(0.1, 10))+
-		theme_map() +ggtitle('0.1 10')+ theme(plot.title = element_text(hjust=0.5,size=20))+
-		scale_fill_gradientn(colors=cc(100))
+    theme_map() +ggtitle('0.1 10')+ theme(plot.title = element_text(hjust=0.5,size=20))+
+    scale_fill_gradientn(colors=cc(100))
 P3 <- ggplot(world, aes( long, lat)) +geom_bin2d(binwidth = c(10, 0.1))+
-		theme_map() +ggtitle('10 0.1')+ theme(plot.title = element_text(hjust=0.5,size=20))+
-		scale_fill_gradientn(colors=cc(100))
+    theme_map() +ggtitle('10 0.1')+ theme(plot.title = element_text(hjust=0.5,size=20))+
+    scale_fill_gradientn(colors=cc(100))
 P4 <- ggplot(world, aes( long, lat)) +geom_bin2d(binwidth = c(10, 10))+
-		theme_map() +ggtitle('10 10')+ theme(plot.title = element_text(hjust=0.5,size=20))+
-		scale_fill_gradientn(colors=cc(100))
+    theme_map() +ggtitle('10 10')+ theme(plot.title = element_text(hjust=0.5,size=20))+
+    scale_fill_gradientn(colors=cc(100))
 
 (P1|P2)/(P4|P3)
 ```
-![bin2](https://i.loli.net/2020/06/19/PR3sLuAMJ8HkFTN.png)
+![bin2](https://s1.ax1x.com/2020/08/13/dSRkqA.png)
 
 
 <a name="FG8Ad"></a>

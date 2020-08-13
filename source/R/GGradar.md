@@ -5,7 +5,7 @@ url: ggradar2
 ---
 
 # GGradar
-![head](https://i.loli.net/2020/06/20/lo2DC9Kv1QyL4Ha.png)
+![head](https://s1.ax1x.com/2020/08/13/dSoVOO.png)
 
 Project: [ricardo-bion 2019](https://github.com/ricardo-bion/ggradar)
 
@@ -28,7 +28,7 @@ ggradar(mynewdata)
 ggradar(mynewdata) + theme(legend.position = 'none')
 ```
 
-![Sec](https://i.loli.net/2020/06/20/nlmqGaMkWEIDyHU.png)
+![Sec](https://s1.ax1x.com/2020/08/13/dSoemD.png)
 ```r
 #Data structure
 '''

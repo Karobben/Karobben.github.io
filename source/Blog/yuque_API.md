@@ -42,8 +42,8 @@ curl -H "X-Auth-Token: 你的token " https://www.yuque.com/api/v2/users/liuwenka
 返回:
 ```bash
 {"data":
-	{"id":691897,
-  	"type":"User",
+  {"id":691897,
+    "type":"User",
     "space_id":0,
     "account_id":494138,
     "login":"liuwenkan",

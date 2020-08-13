@@ -61,9 +61,9 @@ efetch -db nuccore -id NZ_AZKP01000022.1 -seq_start 149413 -seq_stop 154038 -for
 ```
 **<span style="Background:salmon">backs to:</span>**
 ```bash
-NZ_AZKP01000022.1	1	480	WP_024797446.1	DEAD/DEAH box helicase
-NZ_AZKP01000022.1	501	3626	WP_024797445.1	site-specific DNA-methyltransferase
-NZ_AZKP01000022.1	3629	4626	WP_024797444.1	DEAD/DEAH box helicase family protein
+NZ_AZKP01000022.1  1  480  WP_024797446.1  DEAD/DEAH box helicase
+NZ_AZKP01000022.1  501  3626  WP_024797445.1  site-specific DNA-methyltransferase
+NZ_AZKP01000022.1  3629  4626  WP_024797444.1  DEAD/DEAH box helicase family protein
 ```
 ## 2. taxids of taxonomy
 Description (optional):  Note:  Options for parsing nodes.dmp from NCBI Taxonomy are cited in issue #25, intentionally left open
@@ -89,7 +89,7 @@ esearch -db sra -query "SRR532256" |  efetch -format docsum | xtract -pattern Ru
 ```
 **<span style="Background:salmon">backs to SRA list:</span>**
 ```bash
-SRR545469	SRR539813	SRR532971	SRR532256	SRR532204	SRR532200	SRR532194	SRR532250
+SRR545469  SRR539813  SRR532971  SRR532256  SRR532204  SRR532200  SRR532194  SRR532250
 ```
 
 ### 3.1 Get all SRA for a BioProject
@@ -104,9 +104,9 @@ xtract -pattern DocumentSummary -ACC @acc -block DocumentSummary -element "&ACC"
 ```
 **<span style="Background:salmon">backs to SRA list:</span>**
 ```bash
-SRA507436	SRX2439829	SRP095511	SRS1874418	SRR5125027
-SRA507436	SRX2439828	SRP095511	SRS1874418	SRR5125026
-SRA507436	SRX2439826	SRP095511	SRS1874418	SRR5125024
+SRA507436  SRX2439829  SRP095511  SRS1874418  SRR5125027
+SRA507436  SRX2439828  SRP095511  SRS1874418  SRR5125026
+SRA507436  SRX2439826  SRP095511  SRS1874418  SRR5125024
 ```
 ### 3.2 Get latitiude and longitude for SRA Datasets (e.g. outbreaks and metagenomes)
 Description (optional):  
@@ -146,9 +146,9 @@ epost -db sra -input ids.txt -format acc | esummary -format runinfo -mode xml | 
 ```
 **<span style="Background:salmon">backs to:</span>**
 ```bash
-SRR5125024	36123158012
-SRR5125026	44717689640
-SRR5125027	26480446596
+SRR5125024  36123158012
+SRR5125026  44717689640
+SRR5125027  26480446596
 ```
 
 ## 4 Gene
@@ -295,8 +295,8 @@ grep -E '^pubmed|doi'
 ```
 **<span style="Background:salmon">backs to:</span>**
 ```bash
-pubmed	23004926
-doi	10.1111/j.1468-3083.2012.04708.x
+pubmed  23004926
+doi  10.1111/j.1468-3083.2012.04708.x
 ```
 ## 8. Access organism specific meta-data from NCBI genome database
 
@@ -326,27 +326,27 @@ xtract -pattern DocumentSummary -element Id RecordStatus
 ```
 **<span style="Background:salmon">backs to:</span>**
 ```bash
-28959341	PubMed
-28060719	PubMed - indexed for MEDLINE
-27975297	PubMed - indexed for MEDLINE
-27927168	PubMed - indexed for MEDLINE
-27865066	PubMed - indexed for MEDLINE
-27053290	PubMed - indexed for MEDLINE
-27765510	PubMed - indexed for MEDLINE
-27524442	PubMed - indexed for MEDLINE
-27662514	PubMed - indexed for MEDLINE
-27647936	PubMed - indexed for MEDLINE
-27633875	PubMed - indexed for MEDLINE
-27610941	PubMed - indexed for MEDLINE
-27502037	PubMed - indexed for MEDLINE
-27180831	PubMed - indexed for MEDLINE
-28959563	PubMed
-26934198	PubMed - indexed for MEDLINE
-26926596	PubMed - indexed for MEDLINE
-26656089	PubMed - indexed for MEDLINE
-26628038	PubMed - indexed for MEDLINE
-26460717	PubMed - indexed for MEDLINE
-26374610	PubMed - indexed for MEDLINE
+28959341  PubMed
+28060719  PubMed - indexed for MEDLINE
+27975297  PubMed - indexed for MEDLINE
+27927168  PubMed - indexed for MEDLINE
+27865066  PubMed - indexed for MEDLINE
+27053290  PubMed - indexed for MEDLINE
+27765510  PubMed - indexed for MEDLINE
+27524442  PubMed - indexed for MEDLINE
+27662514  PubMed - indexed for MEDLINE
+27647936  PubMed - indexed for MEDLINE
+27633875  PubMed - indexed for MEDLINE
+27610941  PubMed - indexed for MEDLINE
+27502037  PubMed - indexed for MEDLINE
+27180831  PubMed - indexed for MEDLINE
+28959563  PubMed
+26934198  PubMed - indexed for MEDLINE
+26926596  PubMed - indexed for MEDLINE
+26656089  PubMed - indexed for MEDLINE
+26628038  PubMed - indexed for MEDLINE
+26460717  PubMed - indexed for MEDLINE
+26374610  PubMed - indexed for MEDLINE
 ```
 ### 9.1 Conduct a PubMed search and retrieve the results as a list of PMIDs
 
@@ -397,7 +397,7 @@ xtract -pattern DocumentSummary -element Organism,SpeciesName,BioSampleAccn,Last
 grep -Pv "\t0$"
 ```
 
-## 12. Fetch HSPs from a BLAST hit in FASTA                                            	
+## 12. Fetch HSPs from a BLAST hit in FASTA                                              
 
 Description (optional):  
 Written by: NCBI Folks (12/14/2016)  
