@@ -30,6 +30,8 @@
       - [Paper3: Physiological and transcriptomic responses to fishmeal-based diet and rapeseed meal...](paperrnaseqfish3)
       - [Paper4: Transcriptomic response to soybean meal-based diets as the frst formulated feed in juvenile...](paperrnaseqfish4)
   - [Reading Notes](#)
+    - [Fish](#)
+      - [Stocking Density Effects](stockingdensity)
     - [Metabolism](#)
       - [Regulation](#)
         - [steroid homeon](liver_steroids)

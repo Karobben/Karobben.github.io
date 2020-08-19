@@ -28,6 +28,8 @@
       - [Paper_RNASeq_Fish3](Paper_RNASeq_Fish3.html)
       - [Paper_RNASeq_Fish4](Paper_RNASeq_Fish4.html)
   - ## Reading Notes
+    - ### Fish
+      - [Stocking Density Effects](stockingdensity_fish.html)
     - ### Metabolism
       [Diet_Switch_Fish4](Diet_Switch_Fish4.html)
       [Paper_Charni2019](Paper_Charni2019.html)
