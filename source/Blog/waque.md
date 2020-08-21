@@ -113,6 +113,7 @@ convert to HTML
 - [x] item2
 
 #### 公式 (**hexo 失效**)
+解决办法： [链接](http://Karobben.github.io/Blog/Hexo_math.html)
 ```md
 $$
 \Gamma(z) = \int_0^\infty t^{z-1}e^{-t}dt\,.

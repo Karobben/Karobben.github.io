@@ -48,6 +48,8 @@
   - [Data normalization](normalization)
   - [PCA](pca2)
   - [rsm (Response Surface Methodology)](rsm)
+  - [Logistic regression](logistic)
+  - [Linear regression](regression)
   - [worldcloud](worldcloud2)
   - [XGBoost (Con)](xgboost)
   - [Machine Learning (Con)](ml)

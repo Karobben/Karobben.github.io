@@ -41,6 +41,7 @@
   - [Hexo: 消失的編號](Hexo_list.html)
   - [Hexo: live2d](Hexo_live2d.html)
   - [Hexo: footntoes](Hexo_footnotes.html)
+  - [Hexo: Math formula](Hexo_math.html)
 - **Garden aquarium**
   - [鱼缸除藻生物工具](tank_notes.html)
   - [My Garden aquarium](tank1.html)
