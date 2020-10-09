@@ -19,7 +19,7 @@
 <meta property="og:image" content="https://s1.ax1x.com/2020/08/21/dYXPYQ.png">
 <meta property="og:image" content="https://s1.ax1x.com/2020/08/21/dYXCFg.png">
 <meta property="article:published_time" content="2020-08-20T16:00:00.000Z">
-<meta property="article:modified_time" content="2020-08-21T05:58:24.846Z">
+<meta property="article:modified_time" content="2020-08-23T05:18:07.511Z">
 <meta property="article:author" content="Karobben">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://s1.ax1x.com/2020/08/21/dYHWbF.png">
@@ -41,6 +41,12 @@
   <script type="text/javascript"
    src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
   </script>
+
+  <style>
+  pre {
+    color: salmon;
+  }
+  </style>
 <meta name="generator" content="Hexo 4.2.1"></head>
 
 <script>
@@ -155,7 +161,7 @@
 
   <div id="toc" class="toc-article">
     <strong class="toc-title">Titles</strong>
-    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#"><span class="toc-number">1.</span> <span class="toc-text">Regression in R</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#"><span class="toc-number">2.</span> <span class="toc-text">linear equation with one unknown</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Quick-start"><span class="toc-number">2.1.</span> <span class="toc-text">Quick start</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Plot"><span class="toc-number">2.2.</span> <span class="toc-text">Plot</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#"><span class="toc-number">3.</span> <span class="toc-text">Quadratic Equation</span></a></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#"><span class="toc-number">1.</span> <span class="toc-text">Regression in R</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#"><span class="toc-number">2.</span> <span class="toc-text">linear equation with one unknown</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Quick-start"><span class="toc-number">2.1.</span> <span class="toc-text">Quick start</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Plot"><span class="toc-number">2.2.</span> <span class="toc-text">Plot</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#"><span class="toc-number">3.</span> <span class="toc-text">Quadratic Equation</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#"><span class="toc-number">4.</span> <span class="toc-text">R2</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#"><span class="toc-number">5.</span> <span class="toc-text">一元多次回归方程自动扫描</span></a></li></ol>
   </div>
 
 <!-- Table of Contents Down-->
@@ -237,11 +243,66 @@ Coefficients:
 </tr>
 </tbody>
 </table>
+<p><a href="https://baike.baidu.com/item/%E7%9B%B8%E5%85%B3%E7%B3%BB%E6%95%B0" target="_blank" rel="noopener">cor</a></p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="R"><figure class="iseeu highlight /r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cor()</span><br></pre></td></tr></table></figure></div>
+<h1><strong>R<sup>2</sup></strong></h1>
+<p><a href="https://zhuanlan.zhihu.com/p/77052937" target="_blank" rel="noopener">谦瑞数据 2019</a></p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="R"><figure class="iseeu highlight /r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">mylr = <span class="keyword">function</span>(x,y)&#123;</span><br><span class="line">  x_mean = mean(x)</span><br><span class="line">  y_mean = mean(y)</span><br><span class="line">  xy_mean = mean(x*y)</span><br><span class="line">  xx_mean = mean(x*x)</span><br><span class="line">  yy_mean = mean(y*y)</span><br><span class="line"></span><br><span class="line">  m = (x_mean*y_mean - xy_mean)/(x_mean^<span class="number">2</span> - xx_mean)</span><br><span class="line">  b = y_mean - m*x_mean</span><br><span class="line"></span><br><span class="line">  f = m*x+b<span class="comment"># 线性回归方程</span></span><br><span class="line">  sst = sum((y-y_mean)^<span class="number">2</span>)</span><br><span class="line">  sse = sum((y-f)^<span class="number">2</span>)</span><br><span class="line">  ssr = sum((f-y_mean)^<span class="number">2</span>)</span><br><span class="line">  result = c(m,b,sst,sse,ssr)</span><br><span class="line">  names(result) = c(<span class="string">'m'</span>,<span class="string">'b'</span>,<span class="string">'sst'</span>,<span class="string">'sse'</span>,<span class="string">'ssr'</span>)</span><br><span class="line">  result[<span class="string">'ssr'</span>]/result[<span class="string">'sst'</span>]</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">x = c(<span class="number">60</span>,<span class="number">34</span>,<span class="number">12</span>,<span class="number">34</span>,<span class="number">71</span>,<span class="number">28</span>,<span class="number">96</span>,<span class="number">34</span>,<span class="number">42</span>,<span class="number">37</span>)</span><br><span class="line"></span><br><span class="line">y = c(<span class="number">301</span>,<span class="number">169</span>,<span class="number">47</span>,<span class="number">178</span>,<span class="number">365</span>,<span class="number">126</span>,<span class="number">491</span>,<span class="number">157</span>,<span class="number">202</span>,<span class="number">184</span>)</span><br></pre></td></tr></table></figure></div>
+<h1>一元多次回归方程自动扫描</h1>
+<p>Functions:</p>
+<details>
+  <summary>Click to see</summary>
+  <div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="R"><figure class="iseeu highlight /r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br></pre></td><td class="code"><pre><span class="line">mylr = <span class="keyword">function</span>(x,y)&#123;</span><br><span class="line">  x_mean = mean(x)</span><br><span class="line">  y_mean = mean(y)</span><br><span class="line">  xy_mean = mean(x*y)</span><br><span class="line">  xx_mean = mean(x*x)</span><br><span class="line">  yy_mean = mean(y*y)</span><br><span class="line"></span><br><span class="line">  m = (x_mean*y_mean - xy_mean)/(x_mean^<span class="number">2</span> - xx_mean)</span><br><span class="line">  b = y_mean - m*x_mean</span><br><span class="line"></span><br><span class="line">  f = m*x+b<span class="comment"># 线性回归方程</span></span><br><span class="line">  sst = sum((y-y_mean)^<span class="number">2</span>)</span><br><span class="line">  sse = sum((y-f)^<span class="number">2</span>)</span><br><span class="line">  ssr = sum((f-y_mean)^<span class="number">2</span>)</span><br><span class="line">  result = c(m,b,sst,sse,ssr)</span><br><span class="line">  names(result) = c(<span class="string">'m'</span>,<span class="string">'b'</span>,<span class="string">'sst'</span>,<span class="string">'sse'</span>,<span class="string">'ssr'</span>)</span><br><span class="line">  result[<span class="string">'ssr'</span>]/result[<span class="string">'sst'</span>]</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">F_equation &lt;- <span class="keyword">function</span>(X,Formula)&#123;</span><br><span class="line">  eval(parse(text = Formula))</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">LMEE &lt;- <span class="keyword">function</span>(TB,Times)&#123;</span><br><span class="line">  colnames(TB)=c(<span class="string">"X"</span>,<span class="string">"Y"</span>)</span><br><span class="line"></span><br><span class="line">  Group_X = <span class="string">"X"</span></span><br><span class="line">  <span class="keyword">for</span>(i <span class="keyword">in</span> c(<span class="number">2</span>:Times))&#123;</span><br><span class="line">    X_i = paste(<span class="string">"I(X^"</span>,i,<span class="string">")"</span>,sep=<span class="string">""</span>)</span><br><span class="line">    Group_X = paste(Group_X,X_i,sep=<span class="string">" + "</span>)</span><br><span class="line">  &#125;</span><br><span class="line">  str_lm = paste(<span class="string">"lm(Y ~"</span>,Group_X, <span class="string">', data=TB)'</span>, sep=<span class="string">' '</span>)</span><br><span class="line">  model = eval(parse(text = str_lm))</span><br><span class="line"></span><br><span class="line">  Formula = model$coefficients[<span class="number">1</span>]</span><br><span class="line">  <span class="keyword">for</span>(i <span class="keyword">in</span> c(Times:<span class="number">1</span>))&#123;</span><br><span class="line">    X_tmp = paste(model$coefficients[i+<span class="number">1</span>], <span class="string">" * X^"</span>, i, sep=<span class="string">""</span>)</span><br><span class="line">    Formula = paste(Formula,X_tmp,sep=<span class="string">"+"</span>)</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  R2 = mylr(TB$Y,F_equation(TB$X,Formula))</span><br><span class="line"></span><br><span class="line">  result = c()</span><br><span class="line">  result$R2 = R2[[<span class="number">1</span>]]</span><br><span class="line">  result$model = model</span><br><span class="line">  result$Formula=Formula</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span>(result)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">MEES &lt;- <span class="keyword">function</span>(TB, Times)&#123;</span><br><span class="line">  colnames(TB)=c(<span class="string">"X"</span>,<span class="string">"Y"</span>)</span><br><span class="line">  <span class="keyword">for</span>(i <span class="keyword">in</span> c(<span class="number">1</span>:Times))&#123;</span><br><span class="line">    Result = c()</span><br><span class="line">    <span class="keyword">if</span>(i == <span class="number">1</span>)&#123;</span><br><span class="line">      model &lt;- lm(formula = Y ~ X, data = TB)</span><br><span class="line">      Formula = paste(model$coefficients[<span class="number">1</span>],<span class="string">" + "</span>, model$coefficients[<span class="number">2</span>],<span class="string">" * X"</span>, sep=<span class="string">""</span>)</span><br><span class="line">      R2 = mylr(TB$Y,F_equation(TB$X,Formula))</span><br><span class="line">      Result_TB = data.frame(Exp=i,R2=R2, <span class="literal">F</span> = Formula)</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span>&#123;</span><br><span class="line">      Result_LMEE = LMEE(TB,i)</span><br><span class="line">      Result_tmp = data.frame(Exp= i, R2= Result_LMEE$R2, <span class="literal">F</span> = Result_LMEE$Formula)</span><br><span class="line">      Result_TB = rbind(Result_TB, Result_tmp)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span>(Result_TB)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">MEES_plot &lt;- <span class="keyword">function</span>(TB,TB_input,header=<span class="string">"test"</span>)&#123;</span><br><span class="line">  colnames(TB)=c(<span class="string">"X"</span>,<span class="string">"Y"</span>)</span><br><span class="line">  TB_Nna = na.omit(TB_input)</span><br><span class="line">  <span class="keyword">for</span>(i <span class="keyword">in</span> c(<span class="number">1</span>:nrow(TB_Nna)))&#123;</span><br><span class="line">    ggplot()+geom_point(data=TB,aes(x=X,y=Y))+</span><br><span class="line">             geom_line(aes(x=TB$X, y=F_equation(TB$X,as.character(TB_Nna$<span class="literal">F</span>[i]))))</span><br><span class="line">    ggsave(paste(header,i,<span class="string">".png"</span>,sep=<span class="string">""</span>))</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+</details>
+<p>Usage:</p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="R"><figure class="iseeu highlight /r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#Test Data</span></span><br><span class="line">TB &lt;- head(ChickWeight)[c(<span class="number">2</span>,<span class="number">1</span>)]</span><br><span class="line"></span><br><span class="line">MEES(TB,<span class="number">4</span>)</span><br><span class="line">MEES_plot(TB,MEES(TB,<span class="number">4</span>))</span><br></pre></td></tr></table></figure></div>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Exp</th>
+<th>R2</th>
+<th style="text-align:right">F</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ssr</td>
+<td>1</td>
+<td>0.9641461</td>
+<td style="text-align:right">40.2380952380953 + 4.78571428571428 * X</td>
+</tr>
+<tr>
+<td>1</td>
+<td>2</td>
+<td>0.9865977</td>
+<td style="text-align:right">43.5714285714286+0.250000000000001 * X^2+2.28571428571428 * X^1</td>
+</tr>
+<tr>
+<td>11</td>
+<td>3</td>
+<td>0.9986254</td>
+<td style="text-align:right">41.904761904762+0.069444444444444 * X^3±0.791666666666658 * X^2+6.0912698412698 * X^1</td>
+</tr>
+<tr>
+<td>12</td>
+<td>4</td>
+<td>0.9986254</td>
+<td style="text-align:right">41.904761904762+2.01944464079605e-16 * X^4+0.0694444444444399 * X^3±0.791666666666634 * X^2+6.09126984126975 * X^1</td>
+</tr>
+<tr>
+<td>13</td>
+<td>5</td>
+<td>1.0000000</td>
+<td style="text-align:right">41.9999999999999±0.00625000000000004 * X^5+0.156250000000001 * X^4±1.29166666666667 * X^3+3.99999999999998 * X^2+0.516666666666805 * X^1</td>
+</tr>
+</tbody>
+</table>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://karobben.github.io/R/regression.html" data-id="cke3txuia0001s4fc9k7zdsf9" class="article-share-link">Share</a>
+      <a data-url="https://karobben.github.io/R/regression.html" data-id="cke3r4csy0001kdfcb5ry0b2p" class="article-share-link">Share</a>
       
       
     </footer>

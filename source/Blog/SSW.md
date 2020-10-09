@@ -12,3 +12,5 @@ date: "2020-07-30"
 |2020/08/02|82.38|
 |2020/08/03|82.70|
 |2020/08/12|79.36|
+
+<span color="salmon">What a interesting time, Mr. Einstein!</salmon>

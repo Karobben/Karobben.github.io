@@ -6,6 +6,9 @@
     - [ggplot: hclust (dendrogram)](ggplot_hclust.html)
     - [ggplot: break bar plot](ggplot_split.html)
     - [ggplot: Complicate matrix](ggplot_NRPlot.html)
+  - [用R, pheatmap来指导96孔板实验](R_Plate_tricks.html)
+  - ## Machine Learning With R
+    - [XGboost](R_XGboost.html)
 - # Python
   - [Biology: extract fasta by seq's length](python_seqlen.html)
   - [Crawl: crawl news](Python-crawl_news.html)
@@ -46,6 +49,7 @@
   - [鱼缸除藻生物工具](tank_notes.html)
   - [My Garden aquarium](tank1.html)
 - # Other
+  - [Machine Learning in Action: Ab1 Raw Date Processing](R_abi_re.html)
   - [Graphviz](Graphviz.html)
   - [Latex](Latex.html)
   - [submit_baidu](submit_baidu.html)

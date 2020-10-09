@@ -283,3 +283,11 @@ ax.set_zlabel('implied volatility')
 ```
 
 ![NYYwff.png](https://s1.ax1x.com/2020/06/22/NYYwff.png)
+
+# Save
+```python
+# Assignment the size of the picture
+plt.figure(figsize=(12*3, 8*3))
+# Save
+plt.savefig(OUTPUT)
+```

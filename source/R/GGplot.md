@@ -200,7 +200,24 @@ ggplot(mtcars, aes(x = drat)) +
   geom_segment(aes(x = x2, y = y, xend = xend2, yend = yend, colour = "xiaomei"),data= aux2, lty = 2)
 ```
 
-<a name="9vymr"></a>
+# Adding Equation
+reference: [weixin_43948357 2020](https://blog.csdn.net/weixin_43948357/article/details/105336901)
+
+```r
+eq <- substitute(italic(y) == a + b %.% italic(x)~","~italic(R)^2~"="~r2~","~italic(P)~"="~p)
+p + geom_text(aes(x = 4, y = 50, label = as.character(as.expression(eq))), parse = TRUE)
+```
+
+# Axis
+
+reference: [九茶 2015](https://blog.csdn.net/Bone_ACE/article/details/47427453)
+```r
++ scale_x_continuous(breaks=seq(0, 10, 5))
+# 0: start
+# 10: end
+# 5: breaks
+```
+
 # Themes
 <br />
 <a name="OlI1o"></a>
@@ -279,6 +296,7 @@ panel.background = element_rect(fill = "lightblue",
 
 <br />
 <a name="sKvXX"></a>
+
 ### 3.2 geom_text & geom_labels
 ```r
 library(ggrepel)
@@ -308,7 +326,7 @@ theme(plot.title = element_text(hjust = 0.5))
 ```
 
 
-3.5 Switch x labels (text.x)
+### 3.5 Switch x labels (text.x)
 
 ```r
 # add the limits first and substitu...
@@ -316,7 +334,7 @@ theme(plot.title = element_text(hjust = 0.5))
 ```
 
 
-4. Facet
+## 4. Facet
 
 ```r
 + facet_grid(Group ~ .)

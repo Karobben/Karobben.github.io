@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>Karobben</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Reading ab1 file by R (sangerseqR) Install: Bioconductor ReadMe: PDF Install 1234if (!requireNamespace(&quot;BiocManager&quot;, quietly &#x3D; TRUE))    install.packages(&quot;BiocManager&quot;)BiocManager::install(&quot;sangers">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Karobben">
+<meta property="og:url" content="https://karobben.github.io/R/R-ab1.html">
+<meta property="og:site_name" content="Karobben">
+<meta property="og:description" content="Reading ab1 file by R (sangerseqR) Install: Bioconductor ReadMe: PDF Install 1234if (!requireNamespace(&quot;BiocManager&quot;, quietly &#x3D; TRUE))    install.packages(&quot;BiocManager&quot;)BiocManager::install(&quot;sangers">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-09-07T16:09:58.774Z">
+<meta property="article:modified_time" content="2020-09-07T16:09:58.774Z">
+<meta property="article:author" content="Karobben">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Karobben" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="img/tag.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+<link rel="stylesheet" href="/css/search.css">
+
+  <script type="text/javascript"
+   src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+
+  <style>
+  pre {
+    color: salmon;
+  }
+  </style>
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<script>
+  var _hmt = _hmt || [];
+  (function() {
+    var hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?8442e6ecc87d878298ba7d3bd0a5484c";
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(hm, s);
+  })();
+</script>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header"; style="background:#1B414B;height:150px">
+  <!--div id="banner"></div>-->
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Karobben</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">Karobben Blog</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+          <a id="main-nav-toggle" class="nav-icon"></a>
+          <!-- Header Section Start -->
+  <header id="slider-area">
+    <nav class="navbar navbar-expand-md fixed-top scrolling-navbar bg-white">
+      <div class="container">
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav mr-auto w-100 justify-content-end">
+              <a class="main-nav-link" href="../index.html">Home</a>
+              <a class="main-nav-link" href="../R/R-index.html">R</a>
+              <a class="main-nav-link" href="../Python/index.html">Python</a>
+              <a class="main-nav-link" href="../Linux/index.html">Linux</a>
+              <a class="main-nav-link" href="../Bioinfor/index.html">Bio-Protocal</a>
+              <a class="main-nav-link" href="../LearnNotes/index.html">Notes</a>
+              <a class="main-nav-link" href="../Blog/index.html">Others</a>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!-- Header Section End -->
+
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Looking for Something?"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://karobben.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><div align='right', style='padding-right:160px;padding-top:1px'>
+  
+  <span class="local-search local-search-google local-search-plugin" style=";position:absolute;z-index:2;">
+      <input type="search" placeholder="Looking for Something?" id="local-search-input" class="local-search-input-cls" style="">
+      <div id="local-search-result" class="local-search-result-cls"></div>
+  </span>
+
+
+</div>
+
+<article  id="page-" class="article article-type-page" itemscope itemprop="blogPost">
+<div id="tipue_search_content" style="display: none"></div>
+  <div class="article-meta">
+    <a href="/R/R-ab1.html" class="article-date">
+  <time datetime="2020-09-07T16:09:58.774Z" itemprop="datePublished">2020-09-08</time>
+</a>
+    
+  </div>
+  <div  class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <!-- Go To Top Link -->
+        <div title="Back to Top" class="back-to-top" style="background:salmon">
+  <a href="#"  >
+    <i >Top</i>
+  </a>
+</div>
+<div class="title_index">
+  <ul id="nav">
+   <li>
+     Titles
+     <ul>
+       <!-- Table of Contents -->
+
+  <div id="toc" class="toc-article">
+    <strong class="toc-title">Titles</strong>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#"><span class="toc-number">1.</span> <span class="toc-text">Reading ab1 file by R (sangerseqR)</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#"><span class="toc-number">2.</span> <span class="toc-text">Install</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#"><span class="toc-number">3.</span> <span class="toc-text">Quick Start</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#"><span class="toc-number">4.</span> <span class="toc-text">Data</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Electronic-Signal-Matrix"><span class="toc-number">4.1.</span> <span class="toc-text">Electronic Signal Matrix</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Base-Signal-Matrix"><span class="toc-number">4.2.</span> <span class="toc-text">Base Signal Matrix</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Plot"><span class="toc-number">4.2.1.</span> <span class="toc-text">Plot</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#"><span class="toc-number">5.</span> <span class="toc-text">Read by Python</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#"><span class="toc-number">6.</span> <span class="toc-text">Cluster</span></a></li></ol>
+  </div>
+
+<!-- Table of Contents Down-->
+
+     </ul>
+    </li>
+   </ul>
+</div>
+
+
+        <hr>
+<hr>
+<h1>Reading ab1 file by R (sangerseqR)</h1>
+<p>Install: <a href="http://www.bioconductor.org/packages/release/bioc/html/sangerseqR.html" target="_blank" rel="noopener">Bioconductor</a><br>
+ReadMe: <a href="http://www.bioconductor.org/packages/release/bioc/vignettes/sangerseqR/inst/doc/sangerseq_walkthrough.pdf" target="_blank" rel="noopener">PDF</a></p>
+<h1>Install</h1>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="R"><figure class="iseeu highlight /r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (!requireNamespace(<span class="string">"BiocManager"</span>, quietly = <span class="literal">TRUE</span>))</span><br><span class="line">    install.packages(<span class="string">"BiocManager"</span>)</span><br><span class="line"></span><br><span class="line">BiocManager::install(<span class="string">"sangerseqR"</span>)</span><br></pre></td></tr></table></figure></div>
+<h1>Quick Start</h1>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="R"><figure class="iseeu highlight /r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">library</span>(sangerseqR)</span><br><span class="line"></span><br><span class="line">A &lt;- read.abif(<span class="string">"119DOWN-ST.119DOWN-F.11731873.C04.ab1"</span>)</span><br><span class="line">str(A)</span><br></pre></td></tr></table></figure></div>
+<pre>
+Formal class 'abif' [package "sangerseqR"] with 3 slots
+  ..@ header   :Formal class 'abifHeader' [package "sangerseqR"] with 9 slots
+  .. .. ..@ abif       : chr "ABIF"
+  .. .. ..@ version    : int 101
+  .. .. ..@ name       : raw [1:4] 74 64 69 72
+  .. .. ..@ number     : int 1
+  .. .. ..@ elementtype: int 1023
+  .. .. ..@ elementsize: int 28
+  .. .. ..@ numelements: int 118
+  .. .. ..@ dataoffset : int 259806
+  .. .. ..@ datahandle : int 0
+  ..@ directory:Formal class 'abifDirectory' [package "sangerseqR"] with 7 slots
+  .. .. ..@ name       : chr [1:118] "AEPt" "AEPt" "APFN" "APXV" ...
+  .. .. ..@ tagnumber  : int [1:118] 1 2 2 1 1 1 1 1 1 1 ...
+  .. .. ..@ elementtype: int [1:118] 4 4 18 19 19 19 2 5 4 4 ...
+  .
+  .
+  .
+</pre>
+<h1>Data</h1>
+<h2 id="Electronic-Signal-Matrix"><a class="header-anchor" href="#Electronic-Signal-Matrix"></a>Electronic Signal Matrix</h2>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="R"><figure class="iseeu highlight /r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">A@data$DATA.1</span><br><span class="line">A@data$DATA.2</span><br><span class="line">A@data$DATA.3</span><br><span class="line">A@data$DATA.4</span><br></pre></td></tr></table></figure></div>
+<h2 id="Base-Signal-Matrix"><a class="header-anchor" href="#Base-Signal-Matrix"></a>Base Signal Matrix</h2>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="R"><figure class="iseeu highlight /r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">A@data$DATA.9</span><br><span class="line">A@data$DATA.10</span><br><span class="line">A@data$DATA.11</span><br><span class="line">A@data$DATA.12</span><br></pre></td></tr></table></figure></div>
+<h3 id="Plot"><a class="header-anchor" href="#Plot"></a>Plot</h3>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="R"><figure class="iseeu highlight /r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">librar(ggplot2)</span><br><span class="line"></span><br><span class="line">Y1 = head(hetab1@data$DATA.9,<span class="number">3000</span>)</span><br><span class="line">Y2 = head(hetab1@data$DATA.10,<span class="number">3000</span>)</span><br><span class="line">Y3 = head(hetab1@data$DATA.11,<span class="number">3000</span>)</span><br><span class="line">Y4 = head(hetab1@data$DATA.12,<span class="number">3000</span>)</span><br><span class="line"></span><br><span class="line">ggplot() + geom_path(aes(x=c(<span class="number">1</span>:length(Y)), y= Y1),color=<span class="string">'salmon'</span>)+</span><br><span class="line">  geom_path(aes(x=c(<span class="number">1</span>:length(Y2)), y= Y2),color=<span class="string">'green'</span>)+</span><br><span class="line">  geom_path(aes(x=c(<span class="number">1</span>:length(Y3)), y= Y3),color=<span class="string">'blue'</span>)+</span><br><span class="line">  geom_path(aes(x=c(<span class="number">1</span>:length(Y4)), y= Y4),color=<span class="string">'black'</span>)</span><br></pre></td></tr></table></figure></div>
+<h1>Read by Python</h1>
+<p>Working Manual: <a href="https://biopython.org/wiki/ABI_traces" target="_blank" rel="noopener">Biopython</a></p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> Bio <span class="keyword">import</span> SeqIO</span><br><span class="line">record = SeqIO.read(<span class="string">"55-Mn-fw-EM-28.ab1"</span>, <span class="string">"abi"</span>)</span><br><span class="line">list(record.annotations.keys())</span><br><span class="line">dict_keys([<span class="string">"DATA5"</span>, <span class="string">"DATA8"</span>, <span class="string">"RUNT1"</span>, <span class="string">"phAR1"</span>, ..., <span class="string">"DATA6"</span>])</span><br></pre></td></tr></table></figure></div>
+<h1>Cluster</h1>
+<p>96 results are stored are <code>HRB-1_s7346</code> file</p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="R"><figure class="iseeu highlight /r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">library</span>(sangerseqR)</span><br><span class="line"><span class="keyword">library</span>(reshape2)</span><br><span class="line"></span><br><span class="line">setwd(<span class="string">"HRB-1_s7346/"</span>)</span><br><span class="line">List = dir()</span><br><span class="line"></span><br><span class="line">All = c()</span><br><span class="line"><span class="keyword">for</span>(i <span class="keyword">in</span> List)&#123;</span><br><span class="line">  A = read.abif(i)</span><br><span class="line">  tmp = data.frame(A@data$DATA.1,A@data$DATA.2,A@data$DATA.3,A@data$DATA.4)</span><br><span class="line">  tmp = data.frame(melt(t(data.frame(A@data$DATA.1,A@data$DATA.2,A@data$DATA.3,A@data$DATA.4)))$value)</span><br><span class="line">  colnames(tmp) = A@data$TUBE.1</span><br><span class="line">  All = c(All, tmp)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">TB = data.frame(All)</span><br></pre></td></tr></table></figure></div>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://karobben.github.io/R/R-ab1.html" data-id="ckep3je0j00029dfce40uec17" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">June 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/06/30/tmp/">test</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+  <!-- Weather -->
+<div id="weather-view-he" ></div>
+<script>
+WIDGET = {ID: 'HfP68rcshb'};
+</script>
+<script type="text/javascript" src="https://apip.weatherdt.com/view/static/js/r.js?v=1111"></script>
+
+</aside>
+
+          <!-- Weather Plug -->
+        
+        <!--git talk-->
+        <section id="main">
+          <div style='padding-top:10px'>
+  <div style="background:white">
+    <script src="https://utteranc.es/client.js"
+            repo="Karobben/utterances"
+            issue-term="pathname"
+            theme="preferred-color-scheme"
+            crossorigin="anonymous"
+            async>
+    </script>
+  </div>
+</div>
+<!--git talk-->
+  <!-- Link Gitalk 的支持文件  -->
+  <!--
+    <div>
+      <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+      <script src="https://unpkg.com/gitalk@latest/dist/gitalk.min.js"></script>
+      <div id="gitalk-container"></div>     <script type="text/javascript">
+          var gitalk = new Gitalk({
+
+          // gitalk的主要参数
+              clientID: '96c208ade65e80e3aaac',
+              clientSecret: '86e9240674a3815b0ddc31dababdb4998d5562f4',
+              repo: 'OAuth-Application',
+              owner: 'Karobben',
+              admin: ['Karobben'],
+              id:window.location.pathname,
+          });
+          gitalk.render('gitalk-container');
+      </script>
+    </div>
+<!-- Gitalk end -->
+
+        </section>
+        <!-- Gitalk end -->
+
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      <span style="float:right; list-style:none">
+        <a style="padding: 10px" href="https://karobben.github.io/">Blog</a>
+        <a style="padding: 10px" href="https://github.com/Karobben" target="_blank" rel="noopener">GitHub</a>
+        <br>
+        <a style="padding: 10px" href="https://space.bilibili.com/393056819" target="_blank" rel="noopener">BiliBili</a>
+        <a href="mailto:a591465908@outlook.com">Mail me</a>
+      </span>
+      &copy; Karobben 2020<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+  <span>
+    <p align = "center">
+      <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+      <span id="busuanzi_container_site_pv">~<span id="busuanzi_value_site_pv"></span>~</span>
+    </p>
+  </span>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  <!--`
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  -->
+  <a class="mobile-nav-link" href="../index.html">Home</a>
+  <a class="mobile-nav-link" href="../R/R-index.html">R</a>
+  <a class="mobile-nav-link" href="../Python/index.html">Python</a>
+  <a class="mobile-nav-link" href="../Linux/index.html">Linux</a>
+  <a class="mobile-nav-link" href="../Bioinfor/index.html">Bio-Protocal</a>
+  <a class="mobile-nav-link" href="../LearnNotes/index.html">Notes</a>
+  <a class="mobile-nav-link" href="../Blog/index.html">Others</a>
+</nav>
+
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+<!--mermaid module-->
+
+  <script src='https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js'></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({theme: 'forest'});
+    }
+  </script>
+
+
+
+<!-- Searche Module-->
+<script src="/js/search.js"></script>
+<script src="/js/load.js"></script>
+<!-- 这里可能有一些其他原来文件里的代码，也可以没有 -->
+
+  </div>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"left","width":150,"height":300},"mobile":{"show":true},"react":{"opacity":0.7}});</script></body>
+</html>

@@ -43,12 +43,14 @@
   **SNP**
   - [samtools: SNP Calling](snp_samtools.html)
   - [GATK: SNP Calling](snp_gatk.html)
+  - [More](SNP_more.html)
 
   **DNA Methylation**
   - [BatMeth2](BatMeth2.html)
 
   **Others**
   - [Calcium Competent Cells](Competent_c.html)
+  - [abi (Sanger Sequencing)](sanger_seq.html)
 
 - # Notes
   - [Biology Database](BioDB.html)

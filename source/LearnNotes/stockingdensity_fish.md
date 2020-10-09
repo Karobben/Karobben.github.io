@@ -9,11 +9,24 @@ url: stockingdensity
 
 # Introduction
 
-- growth and performance of some salmonids [^Schreck] [^Vijayan].
+- growth and performance of some salmonids [^Schreck] [^Vijayan][^In6]
 - decreased food consumption[^Refstie]
 - social interaction[^Fenderson][^Refstie]
 - altered water quality[^Pickering-1][^Pickering-2]
 - growth-regulating role of hormones in fish held at high stocking density [^Leatherland][^Vijayan]
+- chronic stress; water quality, <span style="background:salmon">adverse social interactions</span> or over-crowding, negative physiological and biochemical changes [^In6][^In7]
+- Reducing Lysozyme[^In8][^In9]
+
+
+[^In6]:Bolasina, S., Tagawa, M., Yamashita, Y., Tanaka, M., 2006. Effect of stocking density on growth, digestive enzyme activity and cortisol level in larvae and juveniles of Japanese flounder, Paralichthys olivaceus. Aquaculture 259, 432–443.
+
+[^In7]: Montero, D., Izquierdo, M., Tort, L., Robaina, L., Vergara, J., 1999. High stocking density produces crowding stress altering some physiological and biochemical parameters in gilthead seabream, Sparus aurata, juveniles. Fish Physiol. Biochem. 20, 53–60.
+
+[^In8]: Costas, B., Aragão, C., Dias, J., Afonso, A., Conceição, L.E., 2013. Interactive effects of a highquality protein diet and high stocking density on the stress response and some innate immune parameters of Senegalese sole Solea senegalensis. Fish Physiol. Biochem. 39, 1141–1151.
+
+[^In9]: Liu, Baoliang, et al. "Effects of stocking density on antioxidant status, metabolism and immune response in juvenile turbot (Scophthalmus maximus)." Comparative Biochemistry and Physiology C-toxicology & Pharmacology (2016): 1-8.
+
+
 
 # Salvelinus fontinalis[^1]
 
@@ -112,8 +125,16 @@ Survival, final weight, coefficient of variation of weight (CV), specific growth
 **Variation in weight**
 
 
+---
 
+# More related to Stocking density
 
+- Intestinal Microbiota (Pig)[^more1]
+- Intestinal Microbiota (Duck)[^more3]
+- Deposition and transport of trace mineral elements (Pig)[^more2]
 
+[^more1]: Li, Lan, et al. "Intestinal microbiota in growing pigs: effects of stocking density." Food and Agricultural Immunology 29.1 (2018): 524-535.
+[^more2]: Wu, Xin, et al. "Deposition and transport of trace mineral elements were affected by stocking density in fattening pigs." Journal of Trace Elements in Medicine and Biology (2018): 566-571.
+[^more3]: Wu, Yuqin, et al. "Proteome and microbiota analysis reveals alterations of liver-gut axis under different stocking density of Peking ducks." PLOS ONE 13.10 (2018).
 
 *[Salvelinus fontinalis]:美洲红点鲑

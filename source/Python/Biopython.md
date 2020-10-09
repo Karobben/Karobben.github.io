@@ -14,7 +14,7 @@ url: biopython2
 from Bio.Seq import reverse_complement, transcribe, back_transcribe, translate
 
 # echo a seq
-my_string = GCTGTTATGGGTCGTTGGAAGGGTGGTCGTGCTGCTGGTTAG
+my_string = "GCTGTTATGGGTCGTTGGAAGGGTGGTCGTGCTGCTGGTTAG"
 
 #Revers complement
 reverse_complement(my_string)

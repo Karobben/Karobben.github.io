@@ -1,0 +1,24 @@
+    def login(self, code):
+        """
+        输入验证码，点击登录
+        :return:
+        """
+        input_code = self.wait.until(
+            EC.presence_of_element_located((By.ID, "verifyCode"))
+        )
+        input_code.send_keys(code)
+        submit_button = self.wait.until(
+            EC.element_to_be_clickable((By.ID, "btnLogin"))
+        )
+        submit_button.click()
+        # 检测是否登录成功
+        try:
+            success = self.wait.until(
+                EC.text_to_be_present_in_element((By.XPATH, '//div[@class="myhome_info_cn"]/span[2]'), USERNAME_TF)
+            )
+            if success:
+                print("登录成功")
+        except:
+            self.input_infos()
+            code_str = self.get_captcha()
+            self.login(code_str)
