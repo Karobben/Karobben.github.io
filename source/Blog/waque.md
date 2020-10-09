@@ -116,12 +116,14 @@ convert to HTML
 解决办法： [链接](http://Karobben.github.io/Blog/Hexo_math.html)
 ```md
 $$
-\Gamma(z) = \int_0^\infty t^{z-1}e^{-t}dt\,.
+\Gamma(z) = \int_0^\infty t^{z-1}e^{-t}dt
 $$
 ```
+
 $$
-\Gamma(z) = \int_0^\infty t^{z-1}e^{-t}dt\,.
+\Gamma(z) = \int_0^\infty t^{z-1}e^{-t}dt
 $$
+
 #### 表格
 
 |表头1|表头2|表头3|表头4|5|
