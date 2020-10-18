@@ -2,6 +2,7 @@
   - [Xmind](SF_Xmind.html)
   # [English Sentences](Eng.html)
   # [English Vocabulary](Eng_w.html)
+  - [Independent Writing](writing.html)
 - # Books (Reading Notes)
   - [DNA is Not Destiny](DNA_Is_NotDestiny.html)
 - # Ted practice
