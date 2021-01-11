@@ -50,6 +50,10 @@ exit 0
 sudo chmod +x /etc/rc.local
 ```
 
+# Something Else
+## Java
+[adopt open jdk](https://adoptopenjdk.net/)
+
 ---
 github: [https://github.com/Karobben](https://github.com/Karobben)
 blog: [Karobben.github.io](http://Karobben.github.io)

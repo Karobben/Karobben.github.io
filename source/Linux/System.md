@@ -165,6 +165,17 @@ Change: 2020-07-29 23:57:43.560542100 +0800
  Birth: -
 </pre>
 
+# SCP
+
+```bash
+# Download files from server
+scp -P 8022 root@192.168.3.6:~/test.md .
+
+# Upload files to server
+scp -P 8022 test.md root@192.168.3.6:~/
+```
+
+
 # 查看硬件
 <a name="IPgOq"></a>
 ## CPU
@@ -175,24 +186,8 @@ lscpu
 lspci | grep -i 'eth'
 ```
 
-## SCP
-
-```bash
-# Download files from server
-scp -P 8022 root@192.168.3.6:~/test.md .
-
-# Upload files to server
-scp -P 8022 test.md root@192.168.3.6:~/
-```
 ## GPU inf
 
 ```bash
 lspci| grep -i vga  # Check the GPU at prsent
 ```
-
-
-
----
-github: [https://github.com/Karobben](https://github.com/Karobben)
-blog: [Karobben.github.io](http://Karobben.github.io)
-R 语言画图索引: [https://karobben.github.io/R/R-index.html](https://karobben.github.io/R/R-index.html)

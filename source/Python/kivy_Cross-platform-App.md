@@ -7,6 +7,22 @@ url: kivy2
 # kivy (Cross-platform App)
 
 <a name="2rtOx"></a>
+# Install
+```bash
+sudo add-apt-repository ppa:kivy-team/kivy-daily
+
+sudo apt-get update
+
+sudo apt-get install python-kivy
+```
+```python
+sudo python3.7 -m pip install --upgrade pip wheel setuptools
+
+sudo python3.7 -m pip install docutils pygments  
+
+sudo python3.7 -m pip install kivy.deps.gstreamer --extra-index-url https://kivy.org/downloads/packages/simple/
+
+```
 # Quick Start
 
 ![NYEbGt.png](https://s1.ax1x.com/2020/06/22/NYEbGt.png)
@@ -15,7 +31,7 @@ Kivy - Open source Python library for rapid development of applications that mak
 
 ```python
 # Creat a Hello.kv file in the path you run your script
-vim Hello.kv
+vim hello.kv
 
 ## this is for Hello.kv
 BoxLayout:
@@ -36,6 +52,8 @@ if __name__ == '__main__':
 
 ```
 
+You need to name the `kv` file as `hello.kv`.
+This file is target by the function `HelloApp` in `main.py` automatically.
 
 <a name="cvtyF"></a>
 ## Text layout
@@ -122,24 +140,23 @@ AddLocationForm:
 
 <AddLocationForm@BoxLayout>:
     orientation: "vertical"
-  search_input: search_box # Change one
+    search_input: search_box # Change one
     BoxLayout:
         height: "40dp"
         size_hint_y: None
         TextInput:
-      id: search_box  # Assign an ID
+            id: search_box  # Assign an ID
             size_hint_x: 50
         Button:
             text: "Search"
             size_hint_x: 25
-      on_press: root.search_location()
+            on_press: root.search_location()
         Button:
             text: "Current Location"
             size_hint_x: 25
     BoxLayout:
         Label:
             text: "Palo Alto, MX\nPalo Alto, US"
-
 ```
 
 main.py:
@@ -171,6 +188,8 @@ Image left: GUI Layout;    Image right: result was printed in terminal after c
 In the current version Kivy1.11.1,<br />The function ListView is not is not supported.  <br />Use Recycle As instead.
 
 Take this as example:<br />from: [https://stackoverflow.com/questions/56601384/kivy-unknown-class-listview-error-code](https://stackoverflow.com/questions/56601384/kivy-unknown-class-listview-error-code)<br />main.py
+
+## Light Weather App
 ```python
 from kivy.app import App
 from kivy.uix.boxlayout import BoxLayout
@@ -310,3 +329,42 @@ WeatherRoot:
             multiselect: True
             touch_multiselect: True
 ```
+
+# Examples
+## UrlRequest
+
+Origin from:[coder.work](https://www.coder.work/article/2009103)
+```python
+from kivy.app import App
+#kivy.require("1.9.1")
+from kivy.uix.boxlayout import BoxLayout
+from kivy.properties import ObjectProperty
+from kivy.network.urlrequest import UrlRequest
+
+class MyWidget(BoxLayout):
+    def __init__(self,**kwargs):
+        super(MyWidget,self).__init__(**kwargs)
+        search_url = "http://api.openweathermap.org/data/2.5/forecast/daily?APPID=ef4f6b76310abad083b96a45a6f547be&q=new%20york"
+        print search_url
+        self.request = UrlRequest(search_url, self.res)
+        print self.request
+        print "Result: before success", self.request.result,"\n"
+
+
+    def res(self,*args):
+        print "Result: after success", self.request.result
+
+
+class MyApp(App):
+    def build(self):
+        return MyWidget()
+
+
+if __name__ == '__main__':
+    MyApp().run()
+```
+
+# Some Awesome Blogs
+[Build a Mobile Application With the Kivy Python Framework](https://realpython.com/mobile-app-kivy-python/#creating-a-kivy-application) Mike Driscoll  Nov 04, 2019
+
+[Official Gallery](https://kivy.org/doc/stable/examples/gallery.html)

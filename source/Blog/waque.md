@@ -133,6 +133,8 @@ $$
 
 更多: [复杂表格 aladdin_sun 2018](https://blog.csdn.net/sunbocong/article/details/81033915)
 
+####  Flow Chart
+
 ```bash
 #flow codes for below
 st=>start: Start|past:>http://www.google.com[blank]
@@ -167,6 +169,7 @@ c2(yes)->io->e
 c2(no)->op2(right)->op1
 ```
 
+#### Mermaid Graph
 ```bash
 #mermaid codes for below
 graph LR;
@@ -184,6 +187,19 @@ graph LR;
 更多mermaid例子：
 [道隐无名 2015](https://www.cnblogs.com/dao0/p/4489837.html)
 [七适散人 2018](https://cloud.tencent.com/developer/article/1334691)
+
+#### Foot Note
+
+```md
+You can create footnotes like this[^footnote].
+
+[^footnote]: Here is the *text* of the **footnote**.
+```
+
+You can create footnotes like this[^footnote].
+
+[^footnote]: Here is the *text* of the **footnote**.
+
 
 ---
 github: [https://github.com/Karobben](https://github.com/Karobben)

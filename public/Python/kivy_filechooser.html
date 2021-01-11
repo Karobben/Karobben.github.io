@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>Kivy: FileChooser on Android | Karobben</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Filechooser on android|Kivy">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Kivy: FileChooser on Android">
+<meta property="og:url" content="https://karobben.github.io/Python/kivy_filechooser.html">
+<meta property="og:site_name" content="Karobben">
+<meta property="og:description" content="Filechooser on android|Kivy">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://s3.ax1x.com/2021/01/02/sSdtHg.gif">
+<meta property="article:published_time" content="2021-01-01T16:00:00.000Z">
+<meta property="article:modified_time" content="2021-01-02T10:14:47.612Z">
+<meta property="article:author" content="Karobben">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s3.ax1x.com/2021/01/02/sSdtHg.gif">
+  
+    <link rel="alternate" href="/atom.xml" title="Karobben" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="img/tag.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+<link rel="stylesheet" href="/css/search.css">
+
+  <script type="text/javascript"
+   src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+
+  <style>
+  pre {
+    color: salmon;
+  }
+  </style>
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<script>
+  var _hmt = _hmt || [];
+  (function() {
+    var hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?8442e6ecc87d878298ba7d3bd0a5484c";
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(hm, s);
+  })();
+</script>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header"; style="background:#1B414B;height:150px">
+  <!--div id="banner"></div>-->
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Karobben</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">Karobben Blog</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+          <a id="main-nav-toggle" class="nav-icon"></a>
+          <!-- Header Section Start -->
+  <header id="slider-area">
+    <nav class="navbar navbar-expand-md fixed-top scrolling-navbar bg-white">
+      <div class="container">
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav mr-auto w-100 justify-content-end">
+              <a class="main-nav-link" href="../index.html">Home</a>
+              <a class="main-nav-link" href="../R/R-index.html">R</a>
+              <a class="main-nav-link" href="../Python/index.html">Python</a>
+              <a class="main-nav-link" href="../Linux/index.html">Linux</a>
+              <a class="main-nav-link" href="../Bioinfor/index.html">Bio-Protocal</a>
+              <a class="main-nav-link" href="../LearnNotes/index.html">Notes</a>
+              <a class="main-nav-link" href="../Blog/index.html">Others</a>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!-- Header Section End -->
+
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Looking for Something?"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://karobben.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><div align='right', style='padding-right:160px;padding-top:1px'>
+  
+  <span class="local-search local-search-google local-search-plugin" style=";position:absolute;z-index:2;">
+      <input type="search" placeholder="Looking for Something?" id="local-search-input" class="local-search-input-cls" style="">
+      <div id="local-search-result" class="local-search-result-cls"></div>
+  </span>
+
+
+</div>
+
+<article  id="page-" class="article article-type-page" itemscope itemprop="blogPost">
+<div id="tipue_search_content" style="display: none"></div>
+  <div class="article-meta">
+    <a href="/Python/kivy_filechooser.html" class="article-date">
+  <time datetime="2021-01-01T16:00:00.000Z" itemprop="datePublished">2021-01-02</time>
+</a>
+    
+  </div>
+  <div  class="article-inner">
+    
+    
+      <header class="article-header">
+        <!--
+  
+    <h1 class="article-title" itemprop="name">
+      Kivy: FileChooser on Android
+    </h1>
+  
+ -->
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <!-- Go To Top Link -->
+        <div title="Back to Top" class="back-to-top" style="background:salmon">
+  <a href="#"  >
+    <i >Top</i>
+  </a>
+</div>
+<div class="title_index">
+  <ul id="nav">
+   <li>
+     Titles
+     <ul>
+       <!-- Table of Contents -->
+
+  <div id="toc" class="toc-article">
+    <strong class="toc-title">Titles</strong>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#"><span class="toc-number">1.</span> <span class="toc-text">Kivy: FileChooser in Android</span></a></li></ol>
+  </div>
+
+<!-- Table of Contents Down-->
+
+     </ul>
+    </li>
+   </ul>
+</div>
+
+
+        <h1>Kivy: FileChooser in Android</h1>
+<p>Because of lacking the knowledge of android, I made very slow progress on running filechooser on android.</p>
+<p>But thanks the post in <a href="https://github.com/kivy/plyer/issues/512" target="_blank" rel="noopener">GitHub issue</a>, I finally made it. (<a href="https://github.com/kivy/plyer/files/5014975/android_filechooser.zip" target="_blank" rel="noopener">original codes</a> from <a href="https://github.com/Sirfanas" target="_blank" rel="noopener">Sirfanas</a>)</p>
+<p>And this is the codes below which could substitude the photos on the background by choosing the photo in your phone.</p>
+<p><a href="http://main.py" target="_blank" rel="noopener">main.py</a></p>
+<details>
+  <summary><span style="font-size:20px"> Click to see the full version of the code</span> </summary>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> kivy.app <span class="keyword">import</span> App</span><br><span class="line"><span class="keyword">from</span> kivy.uix.widget <span class="keyword">import</span> Widget</span><br><span class="line"><span class="keyword">from</span> kivy.properties <span class="keyword">import</span> NumericProperty, ReferenceListProperty, ObjectProperty</span><br><span class="line"><span class="keyword">from</span> kivy.vector <span class="keyword">import</span> Vector</span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> kivy.clock <span class="keyword">import</span> Clock</span><br><span class="line"><span class="keyword">from</span> random <span class="keyword">import</span> randint</span><br><span class="line"><span class="keyword">from</span> kivy.lang <span class="keyword">import</span> Builder</span><br><span class="line"><span class="keyword">from</span> kivy.uix.image <span class="keyword">import</span> AsyncImage</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> plyer <span class="keyword">import</span> filechooser</span><br><span class="line"><span class="keyword">from</span> kivy.properties <span class="keyword">import</span> ListProperty</span><br><span class="line"><span class="keyword">from</span> kivy.uix.button <span class="keyword">import</span> Button</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">FileChoose</span><span class="params">(Button)</span>:</span></span><br><span class="line">    <span class="string">'''</span></span><br><span class="line"><span class="string">    Button that triggers 'filechooser.open_file()' and processes</span></span><br><span class="line"><span class="string">    the data response from filechooser Activity.</span></span><br><span class="line"><span class="string">    '''</span></span><br><span class="line"></span><br><span class="line">    selection = ListProperty([])</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">choose</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="string">'''</span></span><br><span class="line"><span class="string">        Call plyer filechooser API to run a filechooser Activity.</span></span><br><span class="line"><span class="string">        '''</span></span><br><span class="line">        filechooser.open_file(on_selection=self.handle_selection)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">handle_selection</span><span class="params">(self, selection)</span>:</span></span><br><span class="line">        <span class="string">'''</span></span><br><span class="line"><span class="string">        Callback function for handling the selection response from Activity.</span></span><br><span class="line"><span class="string">        '''</span></span><br><span class="line">        self.selection = selection</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">on_selection</span><span class="params">(self, *a, **k)</span>:</span></span><br><span class="line">        <span class="string">'''</span></span><br><span class="line"><span class="string">        Update TextInput.text after FileChoose.selection is changed</span></span><br><span class="line"><span class="string">        via FileChoose.handle_selection.</span></span><br><span class="line"><span class="string">        '''</span></span><br><span class="line">        print(str(self.selection))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Main</span><span class="params">(Widget)</span>:</span></span><br><span class="line">    box = ObjectProperty(<span class="literal">None</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    selection = ListProperty([])</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">choose</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="string">'''</span></span><br><span class="line"><span class="string">        Call plyer filechooser API to run a filechooser Activity.</span></span><br><span class="line"><span class="string">        '''</span></span><br><span class="line">        filechooser.open_file(on_selection=self.handle_selection)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">handle_selection</span><span class="params">(self, selection)</span>:</span></span><br><span class="line">        <span class="string">'''</span></span><br><span class="line"><span class="string">        Callback function for handling the selection response from Activity.</span></span><br><span class="line"><span class="string">        '''</span></span><br><span class="line">        self.selection = selection</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">on_selection</span><span class="params">(self, *a, **k)</span>:</span></span><br><span class="line">        <span class="string">'''</span></span><br><span class="line"><span class="string">        Update TextInput.text after FileChoose.selection is changed</span></span><br><span class="line"><span class="string">        via FileChoose.handle_selection.</span></span><br><span class="line"><span class="string">        '''</span></span><br><span class="line">        self.box.ii = self.selection[<span class="number">0</span>]</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">RunApp</span><span class="params">(App)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">build</span><span class="params">(self)</span>:</span></span><br><span class="line">        game = Main()</span><br><span class="line">        <span class="keyword">return</span> game</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    RunApp().run()</span><br></pre></td></tr></table></figure></div>
+</details>
+<p>run.kv</p>
+<details>
+  <summary><span style="font-size:20px"> Click to see the full version of the code</span> </summary>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">&lt;FileChoose&gt;:</span><br><span class="line"></span><br><span class="line">&lt;Main@Widget&gt;:</span><br><span class="line">    box: box_img</span><br><span class="line">    BoxLayout:</span><br><span class="line">        id: box_img</span><br><span class="line">        ii: &#39;1.png&#39;</span><br><span class="line">        canvas:</span><br><span class="line">            Rectangle:</span><br><span class="line">                source: self.ii</span><br><span class="line">                pos: root.pos</span><br><span class="line">                size: root.size</span><br><span class="line">    BoxLayout:</span><br><span class="line">        #ii: &#39;123&#39;</span><br><span class="line">        Button:</span><br><span class="line">            ii: &#39;234&#39;</span><br><span class="line">            pos: self.pos</span><br><span class="line">            text: self.ii</span><br><span class="line">            on_release: root.choose()</span><br></pre></td></tr></table></figure></div>
+</details>
+<p>buildozer.spec</p>
+<details>
+  <summary><span style="font-size:20px"> Click to see the full version of the code</span> </summary>
+<pre>
+[app]
+
+# (str) Title of your application
+title = FileChooser
+
+# (str) Package name
+package.name = filechooser
+
+# (str) Package domain (needed for android/ios packaging)
+package.domain = org.sirfanas.filechooser
+
+# (str) Source code where the main.py live
+source.dir = .
+
+# (list) Source files to include (let empty to include all the files)
+source.include_exts = py,png,jpg,kv,atlas
+
+# (list) List of inclusions using pattern matching
+#source.include_patterns = assets/*,images/*.png
+
+# (list) Source files to exclude (let empty to not exclude anything)
+#source.exclude_exts = spec
+
+# (list) List of directory to exclude (let empty to not exclude anything)
+#source.exclude_dirs = tests, bin
+
+# (list) List of exclusions using pattern matching
+#source.exclude_patterns = license,images/*/*.jpg
+
+# (str) Application versioning (method 1)
+version = 0.5
+
+# (str) Application versioning (method 2)
+# version.regex = __version__ = ['"](.*)['"]
+# version.filename = %(source.dir)s/main.py
+
+# (list) Application requirements
+# comma separated e.g. requirements = sqlite3,kivy
+requirements =
+  plyer,
+  android,
+  kivy, kivymd,
+  python3==3.7.5
+
+# (str) Custom source folders for requirements
+# Sets custom source for any requirements with recipes
+# requirements.source.kivy = ../../kivy
+
+# (list) Garden requirements
+# garden_requirements =
+
+# (str) Presplash of the application
+#presplash.filename = %(source.dir)s/data/presplash.png
+
+# (str) Icon of the application
+#icon.filename = %(source.dir)s/data/icon.png
+
+# (str) Supported orientation (one of landscape, sensorLandscape, portrait or all)
+orientation = all
+
+# (list) List of service to declare
+#services = NAME:ENTRYPOINT_TO_PY,NAME2:ENTRYPOINT2_TO_PY
+
+#
+# OSX Specific
+#
+
+#
+# author = © Copyright Info
+
+# change the major version of python used by the app
+osx.python_version = 3
+
+# Kivy version to use
+osx.kivy_version =  1.9.1
+
+#
+# Android specific
+#
+
+# (bool) Indicate if the application should be fullscreen or not
+fullscreen = 0
+
+# (string) Presplash background color (for new android toolchain)
+# Supported formats are: #RRGGBB #AARRGGBB or one of the following names:
+# red, blue, green, black, white, gray, cyan, magenta, yellow, lightgray,
+# darkgray, grey, lightgrey, darkgrey, aqua, fuchsia, lime, maroon, navy,
+# olive, purple, silver, teal.
+#android.presplash_color = #FFFFFF
+
+# (list) Permissions
+android.permissions = INTERNET,WRITE_EXTERNAL_STORAGE,READ_EXTERNAL_STORAGE
+
+# (int) Target Android API, should be as high as possible.
+android.api = 27
+
+# (int) Minimum API your APK will support.
+android.minapi = 21
+
+# (str) Android NDK version to use
+android.ndk = 19b
+
+# (int) Android NDK API to use. This is the minimum API your app will support, it should usually match android.minapi.
+android.ndk_api = 21
+
+# (bool) Use --private data storage (True) or --dir public storage (False)
+#android.private_storage = True
+
+# (str) Android NDK directory (if empty, it will be automatically downloaded.)
+#android.ndk_path =
+
+# (str) Android SDK directory (if empty, it will be automatically downloaded.)
+#android.sdk_path =
+
+# (str) ANT directory (if empty, it will be automatically downloaded.)
+#android.ant_path =
+
+# (bool) If True, then skip trying to update the Android sdk
+# This can be useful to avoid excess Internet downloads or save time
+# when an update is due and you just want to test/build your package
+android.skip_update = False
+
+# (bool) If True, then automatically accept SDK license
+# agreements. This is intended for automation only. If set to False,
+# the default, you will be shown the license when first running
+# buildozer.
+android.accept_sdk_license = True
+
+# (str) Android entry point, default is ok for Kivy-based app
+#android.entrypoint = org.renpy.android.PythonActivity
+
+# (list) Pattern to whitelist for the whole project
+#android.whitelist =
+
+# (str) Path to a custom whitelist file
+#android.whitelist_src =
+
+# (str) Path to a custom blacklist file
+#android.blacklist_src =
+
+# (list) List of Java .jar files to add to the libs so that pyjnius can access
+# their classes. Don't add jars that you do not need, since extra jars can slow
+# down the build process. Allows wildcards matching, for example:
+# OUYA-ODK/libs/*.jar
+#android.add_jars = foo.jar,bar.jar,path/to/more/*.jar
+
+# (list) List of Java files to add to the android project (can be java or a
+# directory containing the files)
+#android.add_src =
+
+# (list) Android AAR archives to add (currently works only with sdl2_gradle
+# bootstrap)
+#android.add_aars =
+
+# (list) Gradle dependencies to add (currently works only with sdl2_gradle
+# bootstrap)
+#android.gradle_dependencies =
+
+# (list) Java classes to add as activities to the manifest.
+#android.add_activites = com.example.ExampleActivity
+
+# (str) python-for-android branch to use, defaults to master
+#p4a.branch = master
+
+# (str) OUYA Console category. Should be one of GAME or APP
+# If you leave this blank, OUYA support will not be enabled
+#android.ouya.category = GAME
+
+# (str) Filename of OUYA Console icon. It must be a 732x412 png image.
+#android.ouya.icon.filename = %(source.dir)s/data/ouya_icon.png
+
+# (str) XML file to include as an intent filters in <activity> tag
+#android.manifest.intent_filters =
+
+# (str) launchMode to set for the main activity
+#android.manifest.launch_mode = standard
+
+# (list) Android additional libraries to copy into libs/armeabi
+#android.add_libs_armeabi = libs/android/*.so
+#android.add_libs_armeabi_v7a = libs/android-v7/*.so
+#android.add_libs_x86 = libs/android-x86/*.so
+#android.add_libs_mips = libs/android-mips/*.so
+
+# (bool) Indicate whether the screen should stay on
+# Don't forget to add the WAKE_LOCK permission if you set this to True
+#android.wakelock = False
+
+# (list) Android application meta-data to set (key=value format)
+#android.meta_data =
+
+# (list) Android library project to add (will be added in the
+# project.properties automatically.)
+#android.library_references =
+
+# (list) Android shared libraries which will be added to AndroidManifest.xml using <uses-library> tag
+#android.uses_library =
+
+# (str) Android logcat filters to use
+#android.logcat_filters = *:S python:D
+
+# (bool) Copy library instead of making a libpymodules.so
+#android.copy_libs = 1
+
+# (str) The Android arch to build for, choices: armeabi-v7a, arm64-v8a, x86, x86_64
+android.arch = armeabi-v7a
+
+#
+# Python for android (p4a) specific
+#
+
+# (str) python-for-android git clone directory (if empty, it will be automatically cloned from github)
+#p4a.source_dir =
+
+# (str) The directory in which python-for-android should look for your own build recipes (if any)
+#p4a.local_recipes =
+
+# (str) Filename to the hook for p4a
+#p4a.hook =
+
+# (str) Bootstrap to use for android builds
+# p4a.bootstrap = sdl2
+
+# (int) port number to specify an explicit --port= p4a argument (eg for bootstrap flask)
+#p4a.port =
+
+
+#
+# iOS specific
+#
+
+# (str) Path to a custom kivy-ios folder
+#ios.kivy_ios_dir = ../kivy-ios
+# Alternately, specify the URL and branch of a git checkout:
+ios.kivy_ios_url = https://github.com/kivy/kivy-ios
+ios.kivy_ios_branch = master
+
+# Another platform dependency: ios-deploy
+# Uncomment to use a custom checkout
+#ios.ios_deploy_dir = ../ios_deploy
+# Or specify URL and branch
+ios.ios_deploy_url = https://github.com/phonegap/ios-deploy
+ios.ios_deploy_branch = 1.7.0
+
+# (str) Name of the certificate to use for signing the debug version
+# Get a list of available identities: buildozer ios list_identities
+#ios.codesign.debug = "iPhone Developer: <lastname> <firstname> (<hexstring>)"
+
+# (str) Name of the certificate to use for signing the release version
+#ios.codesign.release = %(ios.codesign.debug)s
+
+
+[buildozer]
+
+# (int) Log level (0 = error only, 1 = info, 2 = debug (with command output))
+log_level = 2
+
+# (int) Display warning if buildozer is run as root (0 = False, 1 = True)
+warn_on_root = 1
+
+# (str) Path to build artifact storage, absolute or relative to spec file
+build_dir = ../.buildozer
+
+# (str) Path to build output (i.e. .apk, .ipa) storage
+# bin_dir = ./bin
+
+#    -----------------------------------------------------------------------------
+#    List as sections
+#
+#    You can define all the "list" as [section:key].
+#    Each line will be considered as a option to the list.
+#    Let's take [app] / source.exclude_patterns.
+#    Instead of doing:
+#
+#[app]
+#source.exclude_patterns = license,data/audio/*.wav,data/images/original/*
+#
+#    This can be translated into:
+#
+#[app:source.exclude_patterns]
+#license
+#data/audio/*.wav
+#data/images/original/*
+#
+
+
+#    -----------------------------------------------------------------------------
+#    Profiles
+#
+#    You can extend section / key with a profile
+#    For example, you want to deploy a demo version of your application without
+#    HD content. You could first change the title to add "(demo)" in the name
+#    and extend the excluded directories to remove the HD content.
+#
+#[app@demo]
+#title = My Application (demo)
+#
+#[app:source.exclude_patterns@demo]
+#images/hd/*
+#
+#    Then, invoke the command line with the "demo" profile:
+#
+#buildozer --profile demo android debug
+</pre>
+</details>
+<img src="https://s3.ax1x.com/2021/01/02/sSdtHg.gif" style="height:40%;">
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://karobben.github.io/Python/kivy_filechooser.html" data-id="ckjfjc1x10000nefcb1om8900" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">June 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/06/30/tmp/">test</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+  <!-- Weather -->
+<div id="weather-view-he" ></div>
+<script>
+WIDGET = {ID: 'HfP68rcshb'};
+</script>
+<script type="text/javascript" src="https://apip.weatherdt.com/view/static/js/r.js?v=1111"></script>
+
+</aside>
+
+          <!-- Weather Plug -->
+        
+        <!--git talk-->
+        <section id="main">
+          <div style='padding-top:10px'>
+  <div style="background:white">
+    <script src="https://utteranc.es/client.js"
+            repo="Karobben/utterances"
+            issue-term="pathname"
+            theme="preferred-color-scheme"
+            crossorigin="anonymous"
+            async>
+    </script>
+  </div>
+</div>
+<!--git talk-->
+  <!-- Link Gitalk 的支持文件  -->
+  <!--
+    <div>
+      <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+      <script src="https://unpkg.com/gitalk@latest/dist/gitalk.min.js"></script>
+      <div id="gitalk-container"></div>     <script type="text/javascript">
+          var gitalk = new Gitalk({
+
+          // gitalk的主要参数
+              clientID: '96c208ade65e80e3aaac',
+              clientSecret: '86e9240674a3815b0ddc31dababdb4998d5562f4',
+              repo: 'OAuth-Application',
+              owner: 'Karobben',
+              admin: ['Karobben'],
+              id:window.location.pathname,
+          });
+          gitalk.render('gitalk-container');
+      </script>
+    </div>
+<!-- Gitalk end -->
+
+        </section>
+        <!-- Gitalk end -->
+
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      <span style="float:right; list-style:none">
+        <a style="padding: 10px" href="https://karobben.github.io/">Blog</a>
+        <a style="padding: 10px" href="https://github.com/Karobben" target="_blank" rel="noopener">GitHub</a>
+        <br>
+        <a style="padding: 10px" href="https://space.bilibili.com/393056819" target="_blank" rel="noopener">BiliBili</a>
+        <a href="mailto:a591465908@outlook.com">Mail me</a>
+      </span>
+      &copy; Karobben 2021<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+  <span>
+    <p align = "center">
+      <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+      <span id="busuanzi_container_site_pv">~<span id="busuanzi_value_site_pv"></span>~</span>
+    </p>
+  </span>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  <!--`
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  -->
+  <a class="mobile-nav-link" href="../index.html">Home</a>
+  <a class="mobile-nav-link" href="../R/R-index.html">R</a>
+  <a class="mobile-nav-link" href="../Python/index.html">Python</a>
+  <a class="mobile-nav-link" href="../Linux/index.html">Linux</a>
+  <a class="mobile-nav-link" href="../Bioinfor/index.html">Bio-Protocal</a>
+  <a class="mobile-nav-link" href="../LearnNotes/index.html">Notes</a>
+  <a class="mobile-nav-link" href="../Blog/index.html">Others</a>
+</nav>
+
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+<!--mermaid module-->
+
+  <script src='https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js'></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({theme: 'forest'});
+    }
+  </script>
+
+
+
+<!-- Searche Module-->
+<script src="/js/search.js"></script>
+<script src="/js/load.js"></script>
+<!-- 这里可能有一些其他原来文件里的代码，也可以没有 -->
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+  </div>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"left","width":150,"height":300},"mobile":{"show":true},"react":{"opacity":0.7}});</script></body>
+</html>

@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>Kivy examples: smooth line | Karobben</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Kivy examples: smooth line">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Kivy examples: smooth line">
+<meta property="og:url" content="https://karobben.github.io/Python/Kivy_sline.html">
+<meta property="og:site_name" content="Karobben">
+<meta property="og:description" content="Kivy examples: smooth line">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://kivy.org/doc/stable/_images/canvas__lines__py1.png">
+<meta property="og:image" content="https://s3.ax1x.com/2020/12/13/rebSLq.gif">
+<meta property="article:published_time" content="2020-12-12T16:00:00.000Z">
+<meta property="article:modified_time" content="2020-12-13T09:50:26.656Z">
+<meta property="article:author" content="Karobben">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://kivy.org/doc/stable/_images/canvas__lines__py1.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Karobben" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="img/tag.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+<link rel="stylesheet" href="/css/search.css">
+
+  <script type="text/javascript"
+   src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+
+  <style>
+  pre {
+    color: salmon;
+  }
+  </style>
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<script>
+  var _hmt = _hmt || [];
+  (function() {
+    var hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?8442e6ecc87d878298ba7d3bd0a5484c";
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(hm, s);
+  })();
+</script>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header"; style="background:#1B414B;height:150px">
+  <!--div id="banner"></div>-->
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Karobben</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">Karobben Blog</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+          <a id="main-nav-toggle" class="nav-icon"></a>
+          <!-- Header Section Start -->
+  <header id="slider-area">
+    <nav class="navbar navbar-expand-md fixed-top scrolling-navbar bg-white">
+      <div class="container">
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav mr-auto w-100 justify-content-end">
+              <a class="main-nav-link" href="../index.html">Home</a>
+              <a class="main-nav-link" href="../R/R-index.html">R</a>
+              <a class="main-nav-link" href="../Python/index.html">Python</a>
+              <a class="main-nav-link" href="../Linux/index.html">Linux</a>
+              <a class="main-nav-link" href="../Bioinfor/index.html">Bio-Protocal</a>
+              <a class="main-nav-link" href="../LearnNotes/index.html">Notes</a>
+              <a class="main-nav-link" href="../Blog/index.html">Others</a>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!-- Header Section End -->
+
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Looking for Something?"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://karobben.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><div align='right', style='padding-right:160px;padding-top:1px'>
+  
+  <span class="local-search local-search-google local-search-plugin" style=";position:absolute;z-index:2;">
+      <input type="search" placeholder="Looking for Something?" id="local-search-input" class="local-search-input-cls" style="">
+      <div id="local-search-result" class="local-search-result-cls"></div>
+  </span>
+
+
+</div>
+
+<article  id="page-" class="article article-type-page" itemscope itemprop="blogPost">
+<div id="tipue_search_content" style="display: none"></div>
+  <div class="article-meta">
+    <a href="/Python/Kivy_sline.html" class="article-date">
+  <time datetime="2020-12-12T16:00:00.000Z" itemprop="datePublished">2020-12-13</time>
+</a>
+    
+  </div>
+  <div  class="article-inner">
+    
+    
+      <header class="article-header">
+        <!--
+  
+    <h1 class="article-title" itemprop="name">
+      Kivy examples: smooth line
+    </h1>
+  
+ -->
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <!-- Go To Top Link -->
+        <div title="Back to Top" class="back-to-top" style="background:salmon">
+  <a href="#"  >
+    <i >Top</i>
+  </a>
+</div>
+<div class="title_index">
+  <ul id="nav">
+   <li>
+     Titles
+     <ul>
+       <!-- Table of Contents -->
+
+  <div id="toc" class="toc-article">
+    <strong class="toc-title">Titles</strong>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#"><span class="toc-number">1.</span> <span class="toc-text">Kivy examples: smooth line</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#"><span class="toc-number">2.</span> <span class="toc-text">Quick Start</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#"><span class="toc-number">3.</span> <span class="toc-text">updating the line</span></a></li></ol>
+  </div>
+
+<!-- Table of Contents Down-->
+
+     </ul>
+    </li>
+   </ul>
+</div>
+
+
+        <h1>Kivy examples: smooth line</h1>
+<p><img src="https://kivy.org/doc/stable/_images/canvas__lines__py1.png" alt="Result.png"></p>
+<p><a href="https://kivy.org/doc/stable/examples/gen__canvas__lines__py.html" target="_blank" rel="noopener">Document</a></p>
+<h1>Quick Start</h1>
+<p>By copy the codes from the document, you are supposed being able to show the  line on the screen and adjust the alpha, width, etc of the line.</p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ListProperty([(<span class="number">500</span>, <span class="number">500</span>),</span><br><span class="line">                          [<span class="number">300</span>, <span class="number">300</span>, <span class="number">500</span>, <span class="number">300</span>],</span><br><span class="line">                          [<span class="number">500</span>, <span class="number">400</span>, <span class="number">600</span>, <span class="number">400</span>]])</span><br></pre></td></tr></table></figure></div>
+<p>As you can see above, you can envelope the points by <code>()</code> or <code>[]</code>, you can line the points one by one or line them all together if you wish (The examples show down below).</p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">ListProperty([(<span class="number">500</span>, <span class="number">500</span>),</span><br><span class="line">                          [<span class="number">300</span>, <span class="number">300</span>], [<span class="number">500</span>, <span class="number">300</span>],</span><br><span class="line">                          [<span class="number">500</span>, <span class="number">400</span>], [<span class="number">600</span>, <span class="number">400</span>]])</span><br><span class="line">```python</span><br><span class="line"><span class="keyword">or</span></span><br><span class="line">```python</span><br><span class="line">ListProperty([<span class="number">500</span>, <span class="number">500</span>, <span class="number">300</span>, <span class="number">300</span>, <span class="number">500</span>, <span class="number">300</span>, <span class="number">500</span>, <span class="number">400</span>, <span class="number">600</span>, <span class="number">400</span>])</span><br></pre></td></tr></table></figure></div>
+<p>The minimal codes you’ve to keep is:</p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> kivy.app <span class="keyword">import</span> App</span><br><span class="line"><span class="keyword">from</span> kivy.uix.floatlayout <span class="keyword">import</span> FloatLayout</span><br><span class="line"><span class="keyword">from</span> kivy.lang <span class="keyword">import</span> Builder</span><br><span class="line"></span><br><span class="line">Builder.load_string(<span class="string">'''</span></span><br><span class="line"><span class="string">&lt;LinePlayground&gt;:</span></span><br><span class="line"><span class="string">    # assign a list variate as point so it could be easliy handled in later</span></span><br><span class="line"><span class="string">    point: [0,0, 200, 100]</span></span><br><span class="line"><span class="string">    canvas:</span></span><br><span class="line"><span class="string">        Color:</span></span><br><span class="line"><span class="string">            rgba: .4, .4, 1, 1</span></span><br><span class="line"><span class="string">        Line:</span></span><br><span class="line"><span class="string">            # recall the variate 'point' above</span></span><br><span class="line"><span class="string">            points: self.point</span></span><br><span class="line"><span class="string">'''</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">LinePlayground</span><span class="params">(FloatLayout)</span>:</span></span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">TestLineApp</span><span class="params">(App)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">build</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> LinePlayground()</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    TestLineApp().run()</span><br></pre></td></tr></table></figure></div>
+<h1>updating the line</h1>
+<p>If you are not satisfied with drawing a line and want to create an animation, than like do some thing cool.</p>
+<p><em><strong>updating…</strong></em></p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> kivy.app <span class="keyword">import</span> App</span><br><span class="line"><span class="keyword">from</span> kivy.properties <span class="keyword">import</span>  ListProperty</span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> kivy.uix.floatlayout <span class="keyword">import</span> FloatLayout</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> kivy.uix.widget <span class="keyword">import</span> Widget</span><br><span class="line"><span class="keyword">from</span> kivy.lang <span class="keyword">import</span> Builder</span><br><span class="line"><span class="keyword">from</span> kivy.clock <span class="keyword">import</span> Clock</span><br><span class="line"><span class="keyword">from</span> kivy.properties <span class="keyword">import</span> ObjectProperty</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># Remove unnecessary codes from this class</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">LinePlayground</span><span class="params">(FloatLayout)</span>:</span></span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Main_app</span><span class="params">(Widget)</span>:</span></span><br><span class="line">    <span class="comment"># assign a numeric variate</span></span><br><span class="line">    i = <span class="number">0</span></span><br><span class="line">    <span class="comment"># connect the class in kv file: line -&gt; line_ground -&gt; LinePlayground</span></span><br><span class="line"></span><br><span class="line">    line = ObjectProperty(<span class="literal">None</span>)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">update</span><span class="params">(self, dt)</span>:</span></span><br><span class="line">        self.i +=<span class="number">1</span></span><br><span class="line">        <span class="comment"># update the point</span></span><br><span class="line">        self.line.point = [[<span class="number">0</span>,<span class="number">0</span>,], [self.i,self.i]]</span><br><span class="line">        print(self.line.point)</span><br><span class="line">        print(self.line)</span><br><span class="line">        print(<span class="string">"1"</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">TestLineApp</span><span class="params">(App)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">build</span><span class="params">(self)</span>:</span></span><br><span class="line">        Main = Main_app()</span><br><span class="line">        <span class="comment"># update the result with 60 fps (1/60)</span></span><br><span class="line">        Clock.schedule_interval(Main.update,<span class="number">1</span>/<span class="number">60</span>)</span><br><span class="line">        <span class="keyword">return</span> Main</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    TestLineApp().run()</span><br></pre></td></tr></table></figure></div>
+<p><code>testline.kv</code> file:</p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">&lt;LinePlayground&gt;:</span><br><span class="line">    # assign a list variate as point so it could be easliy handled in later</span><br><span class="line">    point: [0,0, 200, 100]</span><br><span class="line">    canvas:</span><br><span class="line">        Color:</span><br><span class="line">            rgba: .4, .4, 1, 1</span><br><span class="line">        Line:</span><br><span class="line">            # recall the variate &#39;point&#39; above</span><br><span class="line">            points: self.point</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&lt;Main_app&gt;:</span><br><span class="line">    # assign the id which could be recall later</span><br><span class="line">    line: line_ground</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    LinePlayground:</span><br><span class="line">        id: line_ground</span><br><span class="line">        point: [0,10, 100,200]</span><br></pre></td></tr></table></figure></div>
+<p><a href="https://imgchr.com/i/rebSLq" target="_blank" rel="noopener"><img src="https://s3.ax1x.com/2020/12/13/rebSLq.gif" alt="rebSLq.gif"></a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://karobben.github.io/Python/Kivy_sline.html" data-id="ckimteodp0000x1fc33e612s2" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">June 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/06/30/tmp/">test</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+  <!-- Weather -->
+<div id="weather-view-he" ></div>
+<script>
+WIDGET = {ID: 'HfP68rcshb'};
+</script>
+<script type="text/javascript" src="https://apip.weatherdt.com/view/static/js/r.js?v=1111"></script>
+
+</aside>
+
+          <!-- Weather Plug -->
+        
+        <!--git talk-->
+        <section id="main">
+          <div style='padding-top:10px'>
+  <div style="background:white">
+    <script src="https://utteranc.es/client.js"
+            repo="Karobben/utterances"
+            issue-term="pathname"
+            theme="preferred-color-scheme"
+            crossorigin="anonymous"
+            async>
+    </script>
+  </div>
+</div>
+<!--git talk-->
+  <!-- Link Gitalk 的支持文件  -->
+  <!--
+    <div>
+      <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+      <script src="https://unpkg.com/gitalk@latest/dist/gitalk.min.js"></script>
+      <div id="gitalk-container"></div>     <script type="text/javascript">
+          var gitalk = new Gitalk({
+
+          // gitalk的主要参数
+              clientID: '96c208ade65e80e3aaac',
+              clientSecret: '86e9240674a3815b0ddc31dababdb4998d5562f4',
+              repo: 'OAuth-Application',
+              owner: 'Karobben',
+              admin: ['Karobben'],
+              id:window.location.pathname,
+          });
+          gitalk.render('gitalk-container');
+      </script>
+    </div>
+<!-- Gitalk end -->
+
+        </section>
+        <!-- Gitalk end -->
+
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      <span style="float:right; list-style:none">
+        <a style="padding: 10px" href="https://karobben.github.io/">Blog</a>
+        <a style="padding: 10px" href="https://github.com/Karobben" target="_blank" rel="noopener">GitHub</a>
+        <br>
+        <a style="padding: 10px" href="https://space.bilibili.com/393056819" target="_blank" rel="noopener">BiliBili</a>
+        <a href="mailto:a591465908@outlook.com">Mail me</a>
+      </span>
+      &copy; Karobben 2021<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+  <span>
+    <p align = "center">
+      <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+      <span id="busuanzi_container_site_pv">~<span id="busuanzi_value_site_pv"></span>~</span>
+    </p>
+  </span>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  <!--`
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  -->
+  <a class="mobile-nav-link" href="../index.html">Home</a>
+  <a class="mobile-nav-link" href="../R/R-index.html">R</a>
+  <a class="mobile-nav-link" href="../Python/index.html">Python</a>
+  <a class="mobile-nav-link" href="../Linux/index.html">Linux</a>
+  <a class="mobile-nav-link" href="../Bioinfor/index.html">Bio-Protocal</a>
+  <a class="mobile-nav-link" href="../LearnNotes/index.html">Notes</a>
+  <a class="mobile-nav-link" href="../Blog/index.html">Others</a>
+</nav>
+
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+<!--mermaid module-->
+
+  <script src='https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js'></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({theme: 'forest'});
+    }
+  </script>
+
+
+
+<!-- Searche Module-->
+<script src="/js/search.js"></script>
+<script src="/js/load.js"></script>
+<!-- 这里可能有一些其他原来文件里的代码，也可以没有 -->
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+  </div>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"left","width":150,"height":300},"mobile":{"show":true},"react":{"opacity":0.7}});</script></body>
+</html>

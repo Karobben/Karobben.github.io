@@ -75,6 +75,23 @@ ggplot() + geom_path(aes(x=c(1:length(Y)), y= Y1),color='salmon')+
 
 ```
 
+# Reading bases from the abi
+
+reference: [爱笑的小牙](https://blog.csdn.net/Cassiel60/article/details/89396259)
+
+```r
+#Reading (after the ab1 file was base called)
+seq = readsangerseq('input.ab1')
+
+#读取碱基数据，0.33指的是将达到主峰0.33的次峰定义为杂合子峰
+bc = makeBaseCalls(seq, ratio = 0.33)
+
+#读主峰
+primarySeq(seq)
+
+#读次峰
+secondarySeq(seq)
+```
 
 # Read by Python
 Working Manual: [Biopython](https://biopython.org/wiki/ABI_traces)

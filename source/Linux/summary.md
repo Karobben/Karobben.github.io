@@ -27,5 +27,5 @@
   - [Blive with RasperryPi](blive2)
 - [Termux](termux)
 - [Blogs](#)
-  - [Deepin bug](deepin_bug2)
+  - [Deepin bug](deepin15_bugs)
   - [terminal 不走代理加速](wdda8g2)

@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>Learn Kivy from Sant: 1 | Karobben</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Learn Kivy from Sant: 1">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Learn Kivy from Sant: 1">
+<meta property="og:url" content="https://karobben.github.io/Python/Kivy_sent1.html">
+<meta property="og:site_name" content="Karobben">
+<meta property="og:description" content="Learn Kivy from Sant: 1">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://s1.ax1x.com/2020/10/28/B3YNJe.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/10/28/B30x3T.png">
+<meta property="article:published_time" content="2020-10-27T16:00:00.000Z">
+<meta property="article:modified_time" content="2020-11-12T13:41:42.648Z">
+<meta property="article:author" content="Karobben">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s1.ax1x.com/2020/10/28/B3YNJe.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Karobben" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="img/tag.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+<link rel="stylesheet" href="/css/search.css">
+
+  <script type="text/javascript"
+   src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+
+  <style>
+  pre {
+    color: salmon;
+  }
+  </style>
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<script>
+  var _hmt = _hmt || [];
+  (function() {
+    var hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?8442e6ecc87d878298ba7d3bd0a5484c";
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(hm, s);
+  })();
+</script>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header"; style="background:#1B414B;height:150px">
+  <!--div id="banner"></div>-->
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Karobben</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">Karobben Blog</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+          <a id="main-nav-toggle" class="nav-icon"></a>
+          <!-- Header Section Start -->
+  <header id="slider-area">
+    <nav class="navbar navbar-expand-md fixed-top scrolling-navbar bg-white">
+      <div class="container">
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav mr-auto w-100 justify-content-end">
+              <a class="main-nav-link" href="../index.html">Home</a>
+              <a class="main-nav-link" href="../R/R-index.html">R</a>
+              <a class="main-nav-link" href="../Python/index.html">Python</a>
+              <a class="main-nav-link" href="../Linux/index.html">Linux</a>
+              <a class="main-nav-link" href="../Bioinfor/index.html">Bio-Protocal</a>
+              <a class="main-nav-link" href="../LearnNotes/index.html">Notes</a>
+              <a class="main-nav-link" href="../Blog/index.html">Others</a>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!-- Header Section End -->
+
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Looking for Something?"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://karobben.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><div align='right', style='padding-right:160px;padding-top:1px'>
+  
+  <span class="local-search local-search-google local-search-plugin" style=";position:absolute;z-index:2;">
+      <input type="search" placeholder="Looking for Something?" id="local-search-input" class="local-search-input-cls" style="">
+      <div id="local-search-result" class="local-search-result-cls"></div>
+  </span>
+
+
+</div>
+
+<article  id="page-" class="article article-type-page" itemscope itemprop="blogPost">
+<div id="tipue_search_content" style="display: none"></div>
+  <div class="article-meta">
+    <a href="/Python/Kivy_sent1.html" class="article-date">
+  <time datetime="2020-10-27T16:00:00.000Z" itemprop="datePublished">2020-10-28</time>
+</a>
+    
+  </div>
+  <div  class="article-inner">
+    
+    
+      <header class="article-header">
+        <!--
+  
+    <h1 class="article-title" itemprop="name">
+      Learn Kivy from Sant: 1
+    </h1>
+  
+ -->
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <!-- Go To Top Link -->
+        <div title="Back to Top" class="back-to-top" style="background:salmon">
+  <a href="#"  >
+    <i >Top</i>
+  </a>
+</div>
+<div class="title_index">
+  <ul id="nav">
+   <li>
+     Titles
+     <ul>
+       <!-- Table of Contents -->
+
+  <div id="toc" class="toc-article">
+    <strong class="toc-title">Titles</strong>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#"><span class="toc-number">1.</span> <span class="toc-text">Learn Kivy from Sent: Lesson 1</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#"><span class="toc-number">2.</span> <span class="toc-text">Hello World</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#"><span class="toc-number">3.</span> <span class="toc-text">GridLayout</span></a></li></ol>
+  </div>
+
+<!-- Table of Contents Down-->
+
+     </ul>
+    </li>
+   </ul>
+</div>
+
+
+        <h1>Learn Kivy from Sent: Lesson 1</h1>
+<p>Introduction of kivy:<br>
+<a href="https://www.youtube.com/watch?v=FjwD0SOGQ1k" target="_blank" rel="noopener">Youtube Vedio</a><br>
+<a href="https://pythonprogramming.net/introduction-kivy-application-python-tutorial/" target="_blank" rel="noopener">Text Tutorial</a></p>
+<p>Installation: Skip</p>
+<p>python: <span style="background:salmon">python=3.7.5 is strongly recommended!!</span><br>
+If you wants to know why, go to check <a href="../Blog/Kivy_note1.html">This blog</a></p>
+<p>So, if you want to write an app for windows, linux, IOS, and Android with only one set of code, then, Kivy is the best choice for you.</p>
+<h1>Hello World</h1>
+<p>first, you’d like to <code>import kivy</code> and <code>from kivy.app import App</code>;<br>
+Then, you’d like <code>from kivy.uix.label import Label</code> so <strong>you can add some text</strong><br>
+Add <code>kivy.require(&quot;1.10.1&quot;)</code> to assign the version of the kivy. (PS: actually, mine is 1.11.1)</p>
+<p>Then, we can start to class a <code>class EpicApp(App)</code></p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">import kivy</span><br><span class="line">from kivy.app import App</span><br><span class="line">from kivy.uix.label import Label # so you can add some text</span><br><span class="line"></span><br><span class="line">kviy.require(&quot;1.10.1&quot;) # Assign the version of the kivy so every body would be on the same page</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">class EpicApp(App):</span><br><span class="line">    &#39;&#39;&#39; After class, we&#39;d like to initializing the App&#39;&#39;&#39;</span><br><span class="line">    def build(self):</span><br><span class="line">      return Label(text&#x3D;&quot;Hello world&quot;)</span><br><span class="line"></span><br><span class="line">if __name__ &#x3D;&#x3D; &quot;__main__&quot;:</span><br><span class="line">  EpicApp().run()</span><br></pre></td></tr></table></figure></div>
+<p>So, it’ll be your first kivy app!<br>
+<a href="https://imgchr.com/i/B3YNJe" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2020/10/28/B3YNJe.png" alt="B3YNJe.png"></a></p>
+<p>It is not interesting at all, actually. So, Let’s move one for <code>GridLayout</code></p>
+<h1>GridLayout</h1>
+<p>Now, let’s add <code>from kivy.uix.gridlayout import GridLayout</code> to import the Layout style for organizing sort of things;<br>
+<code>from kivy.uix.textinput import TextInput</code> to add a <code>TextInput</code> box.</p>
+<p>Now, Our class are becoming more complicated<br>
+So, during the initiation in <code>build</code> section, we not <code>return</code> to a simple text <code>Label</code> anymore. Let’s say, to <code>return</code> to a class named <code>ConnectPage</code>.</p>
+<p>And let’s sorting stuff in <code>ConnectPage</code> by <code>GridLayout</code></p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line">import kivy</span><br><span class="line">from kivy.app import App</span><br><span class="line">from kivy.uix.label import Label</span><br><span class="line">from kivy.uix.gridlayout import GridLayout  # one of many layout structures</span><br><span class="line">from kivy.uix.textinput import TextInput  # allow for ...text input.</span><br><span class="line"></span><br><span class="line">kivy.require(&quot;1.10.1&quot;)</span><br><span class="line"></span><br><span class="line"># An actual app is likely to consist of many different</span><br><span class="line"># &quot;pages&quot; or &quot;screens.&quot; Inherit from GridLayout</span><br><span class="line">class ConnectPage(GridLayout):</span><br><span class="line">    # runs on initialization</span><br><span class="line">    def __init__(self, **kwargs):</span><br><span class="line">        # we want to run __init__ of both ConnectPage AAAAND GridLayout</span><br><span class="line">        super().__init__(**kwargs)</span><br><span class="line"></span><br><span class="line">        self.cols &#x3D; 2  # used for our grid</span><br><span class="line"></span><br><span class="line">        # widgets added in order, so mind the order.</span><br><span class="line">        self.add_widget(Label(text&#x3D;&#39;IP:&#39;))  # widget #1, top left</span><br><span class="line">        self.ip &#x3D; TextInput(multiline&#x3D;False)  # defining self.ip...</span><br><span class="line">        self.add_widget(self.ip) # widget #2, top right</span><br><span class="line"></span><br><span class="line">        self.add_widget(Label(text&#x3D;&#39;Port:&#39;))</span><br><span class="line">        self.port &#x3D; TextInput(multiline&#x3D;False)</span><br><span class="line">        self.add_widget(self.port)</span><br><span class="line"></span><br><span class="line">        self.add_widget(Label(text&#x3D;&#39;Username:&#39;))</span><br><span class="line">        self.username &#x3D; TextInput(multiline&#x3D;False)</span><br><span class="line">        self.add_widget(self.username)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">class EpicApp(App):</span><br><span class="line">    def build(self):</span><br><span class="line">        return ConnectPage()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">if __name__ &#x3D;&#x3D; &quot;__main__&quot;:</span><br><span class="line">    EpicApp().run()</span><br></pre></td></tr></table></figure></div>
+<p><a href="https://imgchr.com/i/B30x3T" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2020/10/28/B30x3T.png" alt="B30x3T.png"></a></p>
+<p>And that is what will we get! Awesome, hum?</p>
+<p>Lesson3</p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> socket</span><br><span class="line"><span class="keyword">import</span> errno</span><br><span class="line"><span class="keyword">from</span> threading <span class="keyword">import</span> Thread</span><br><span class="line"></span><br><span class="line">HEADER_LENGTH = <span class="number">10</span></span><br><span class="line">client_socket = <span class="literal">None</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Connects to the server</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">connect</span><span class="params">(ip, port, my_username, error_callback)</span>:</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">global</span> client_socket</span><br><span class="line"></span><br><span class="line">    <span class="comment"># Create a socket</span></span><br><span class="line">    <span class="comment"># socket.AF_INET - address family, IPv4, some otehr possible are AF_INET6, AF_BLUETOOTH, AF_UNIX</span></span><br><span class="line">    <span class="comment"># socket.SOCK_STREAM - TCP, conection-based, socket.SOCK_DGRAM - UDP, connectionless, datagrams, socket.SOCK_RAW - raw IP packets</span></span><br><span class="line">    client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        <span class="comment"># Connect to a given ip and port</span></span><br><span class="line">        client_socket.connect((ip, port))</span><br><span class="line">    <span class="keyword">except</span> Exception <span class="keyword">as</span> e:</span><br><span class="line">        <span class="comment"># Connection error</span></span><br><span class="line">        error_callback(<span class="string">'Connection error: &#123;&#125;'</span>.format(str(e)))</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># Prepare username and header and send them</span></span><br><span class="line">    <span class="comment"># We need to encode username to bytes, then count number of bytes and prepare header of fixed size, that we encode to bytes as well</span></span><br><span class="line">    username = my_username.encode(<span class="string">'utf-8'</span>)</span><br><span class="line">    username_header = <span class="string">f"<span class="subst">&#123;len(username):&lt;&#123;HEADER_LENGTH&#125;</span>&#125;"</span>.encode(<span class="string">'utf-8'</span>)</span><br><span class="line">    client_socket.send(username_header + username)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="literal">True</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Sends a message to the server</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">send</span><span class="params">(message)</span>:</span></span><br><span class="line">    <span class="comment"># Encode message to bytes, prepare header and convert to bytes, like for username above, then send</span></span><br><span class="line">    message = message.encode(<span class="string">'utf-8'</span>)</span><br><span class="line">    message_header = <span class="string">f"<span class="subst">&#123;len(message):&lt;&#123;HEADER_LENGTH&#125;</span>&#125;"</span>.encode(<span class="string">'utf-8'</span>)</span><br><span class="line">    client_socket.send(message_header + message)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Starts listening function in a thread</span></span><br><span class="line"><span class="comment"># incoming_message_callback - callback to be called when new message arrives</span></span><br><span class="line"><span class="comment"># error_callback - callback to be called on error</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">start_listening</span><span class="params">(incoming_message_callback, error_callback)</span>:</span></span><br><span class="line">    Thread(target=listen, args=(incoming_message_callback, error_callback), daemon=<span class="literal">True</span>).start()</span><br><span class="line"></span><br><span class="line"><span class="comment"># Listens for incomming messages</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">listen</span><span class="params">(incoming_message_callback, error_callback)</span>:</span></span><br><span class="line">    <span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line"></span><br><span class="line">        <span class="keyword">try</span>:</span><br><span class="line">            <span class="comment"># Now we want to loop over received messages (there might be more than one) and print them</span></span><br><span class="line">            <span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line"></span><br><span class="line">                <span class="comment"># Receive our "header" containing username length, it's size is defined and constant</span></span><br><span class="line">                username_header = client_socket.recv(HEADER_LENGTH)</span><br><span class="line"></span><br><span class="line">                <span class="comment"># If we received no data, server gracefully closed a connection, for example using socket.close() or socket.shutdown(socket.SHUT_RDWR)</span></span><br><span class="line">                <span class="keyword">if</span> <span class="keyword">not</span> len(username_header):</span><br><span class="line">                    error_callback(<span class="string">'Connection closed by the server'</span>)</span><br><span class="line"></span><br><span class="line">                <span class="comment"># Convert header to int value</span></span><br><span class="line">                username_length = int(username_header.decode(<span class="string">'utf-8'</span>).strip())</span><br><span class="line"></span><br><span class="line">                <span class="comment"># Receive and decode username</span></span><br><span class="line">                username = client_socket.recv(username_length).decode(<span class="string">'utf-8'</span>)</span><br><span class="line"></span><br><span class="line">                <span class="comment"># Now do the same for message (as we received username, we received whole message, there's no need to check if it has any length)</span></span><br><span class="line">                message_header = client_socket.recv(HEADER_LENGTH)</span><br><span class="line">                message_length = int(message_header.decode(<span class="string">'utf-8'</span>).strip())</span><br><span class="line">                message = client_socket.recv(message_length).decode(<span class="string">'utf-8'</span>)</span><br><span class="line"></span><br><span class="line">                <span class="comment"># Print message</span></span><br><span class="line">                incoming_message_callback(username, message)</span><br><span class="line"></span><br><span class="line">        <span class="keyword">except</span> Exception <span class="keyword">as</span> e:</span><br><span class="line">            <span class="comment"># Any other exception - something happened, exit</span></span><br><span class="line">            error_callback(<span class="string">'Reading error: &#123;&#125;'</span>.format(str(e)))</span><br></pre></td></tr></table></figure></div>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://karobben.github.io/Python/Kivy_sent1.html" data-id="ckgt2szus00016zfc0nlvgm64" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">June 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/06/30/tmp/">test</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+  <!-- Weather -->
+<div id="weather-view-he" ></div>
+<script>
+WIDGET = {ID: 'HfP68rcshb'};
+</script>
+<script type="text/javascript" src="https://apip.weatherdt.com/view/static/js/r.js?v=1111"></script>
+
+</aside>
+
+          <!-- Weather Plug -->
+        
+        <!--git talk-->
+        <section id="main">
+          <div style='padding-top:10px'>
+  <div style="background:white">
+    <script src="https://utteranc.es/client.js"
+            repo="Karobben/utterances"
+            issue-term="pathname"
+            theme="preferred-color-scheme"
+            crossorigin="anonymous"
+            async>
+    </script>
+  </div>
+</div>
+<!--git talk-->
+  <!-- Link Gitalk 的支持文件  -->
+  <!--
+    <div>
+      <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+      <script src="https://unpkg.com/gitalk@latest/dist/gitalk.min.js"></script>
+      <div id="gitalk-container"></div>     <script type="text/javascript">
+          var gitalk = new Gitalk({
+
+          // gitalk的主要参数
+              clientID: '96c208ade65e80e3aaac',
+              clientSecret: '86e9240674a3815b0ddc31dababdb4998d5562f4',
+              repo: 'OAuth-Application',
+              owner: 'Karobben',
+              admin: ['Karobben'],
+              id:window.location.pathname,
+          });
+          gitalk.render('gitalk-container');
+      </script>
+    </div>
+<!-- Gitalk end -->
+
+        </section>
+        <!-- Gitalk end -->
+
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      <span style="float:right; list-style:none">
+        <a style="padding: 10px" href="https://karobben.github.io/">Blog</a>
+        <a style="padding: 10px" href="https://github.com/Karobben" target="_blank" rel="noopener">GitHub</a>
+        <br>
+        <a style="padding: 10px" href="https://space.bilibili.com/393056819" target="_blank" rel="noopener">BiliBili</a>
+        <a href="mailto:a591465908@outlook.com">Mail me</a>
+      </span>
+      &copy; Karobben 2021<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+  <span>
+    <p align = "center">
+      <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+      <span id="busuanzi_container_site_pv">~<span id="busuanzi_value_site_pv"></span>~</span>
+    </p>
+  </span>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  <!--`
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  -->
+  <a class="mobile-nav-link" href="../index.html">Home</a>
+  <a class="mobile-nav-link" href="../R/R-index.html">R</a>
+  <a class="mobile-nav-link" href="../Python/index.html">Python</a>
+  <a class="mobile-nav-link" href="../Linux/index.html">Linux</a>
+  <a class="mobile-nav-link" href="../Bioinfor/index.html">Bio-Protocal</a>
+  <a class="mobile-nav-link" href="../LearnNotes/index.html">Notes</a>
+  <a class="mobile-nav-link" href="../Blog/index.html">Others</a>
+</nav>
+
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+<!--mermaid module-->
+
+  <script src='https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js'></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({theme: 'forest'});
+    }
+  </script>
+
+
+
+<!-- Searche Module-->
+<script src="/js/search.js"></script>
+<script src="/js/load.js"></script>
+<!-- 这里可能有一些其他原来文件里的代码，也可以没有 -->
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+  </div>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"left","width":150,"height":300},"mobile":{"show":true},"react":{"opacity":0.7}});</script></body>
+</html>

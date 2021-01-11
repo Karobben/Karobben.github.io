@@ -63,6 +63,7 @@
     - [WGCNA Tutorial 1](wgcna_1)
     - [WGCNA Tutorial 2](wgcna_2)
   - [Biostrings](biostrings2)
+  - [Sanger Seq (abi)](sangerseqR)
 - [Blogs](#)
   - [nCov visualization](vxunsh2)
   - [nCov(新冠状病毒数据获取与可视化)](ncov2)

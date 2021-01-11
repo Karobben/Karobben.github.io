@@ -52,7 +52,7 @@ sudo install scrcpy-server-v1.11.jar /usr/local/bin/scrcpy-server.jar
 ## 编译
 
 ```bash
-cd scrcpy
+cd scrcpy-1.11
 meson build --buildtype release --strip -Db_lto=true  -Dprebuilt_server=../scrcpy-server-v1.11.jar
 
 cd build

@@ -8,24 +8,44 @@ url: buildozer2
 
 
 <a name="Z0CZY"></a>
+# Prerequisite: Java Home
+Download **openJDK 8** from [here](https://adoptopenjdk.net).
+```bash
+sudo apt-get install build-essential libsqlite3-dev sqlite3 bzip2 libbz2-dev zlib1g-dev libssl-dev openssl libgdbm-dev libgdbm-compat-dev liblzma-dev libreadline-dev libncursesw5-dev libffi-dev uuid-dev
+
+sudo apt install -y git zip unzip openjdk-8-jdk python3-pip autoconf libtool pkg-config zlib1g-dev libncurses5-dev libncursesw5-dev libtinfo5 cmake libffi-dev libssl-dev
+
+sudo apt install cython
+```
 # 1 install Buildozer
 
 ```bash
-sudo pip3.7  install -i https://pypi.tuna.tsinghua.edu.cn/simple buildozer
+# install python
+sudo apt install python3.7
+# install pip
+sudo apt install python3-pip
+#
+sudo python3.7 -m pip install --user --upgrade Cython==0.29.19 virtualenv
+
+sudo python3.7 -m pip  install -i https://pypi.tuna.tsinghua.edu.cn/simple buildozer
 
 
 sudo apt update
 sudo apt install -y git zip unzip openjdk-8-jdk python3-pip autoconf libtool pkg-config zlib1g-dev libncurses5-dev libncursesw5-dev libtinfo5 cmake libffi-dev libssl-dev
 pip3 install --user --upgrade Cython==0.29.19 virtualenv  # the --user should be removed if you do this in a venv
 
+or you can go and Check: [kivy-buildozer-installer.sh](https://github.com/zaemiel/kivy-buildozer-installer/blob/master/kivy-buildozer-installer.sh)
 # add the following line at the end of your ~/.bashrc file
 export PATH=$PATH:~/.local/bin/
 ```
-
+If you come with error `buildozer debug error "[WARNING]" when i run buildozer andriod debug`, please install lib below
+```
+sudo apt-get install build-essential libsqlite3-dev sqlite3 bzip2 libbz2-dev zlib1g-dev libssl-dev openssl libgdbm-dev libgdbm-compat-dev liblzma-dev libreadline-dev libncursesw5-dev libffi-dev uuid-dev
+```
 链接安卓手机, 开启USB debug模式;<br />进入 kivy 项目目录<br />测试项目:[https://github.com/sevvalbrt/Todolist](https://github.com/sevvalbrt/Todolist)
 ```bash
 buildozer init
-buildozer android deploy run
+buildozer android debug deploy run
 ```
 手机有什么提示, 记得选择
 

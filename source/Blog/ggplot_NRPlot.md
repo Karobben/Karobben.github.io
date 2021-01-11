@@ -11,6 +11,7 @@ url: r_nutrplot
 `A <- read.table("Digestive_Enzymes.csv",sep=',',header=T)`
 In this matrix, we have unique `colname` and `rowname`.
 There are `±` and `abc` followed with the numbers.
+Data Matrix online: [Github](https://github.com/Karobben/Test_Data_Set/blob/master/Data_vidulization/nutrition_data_set.csv)
 ```
 Gastric_Pepsin Gastric_Amylase Gastric_Lipase Intestinal_Pepsin
 G1    17.23±0.03f       0.68±0.00    18.08±0.12f        1.54±0.01d
@@ -20,6 +21,7 @@ G4    22.32±0.10c       0.80±0.00   20.71±0.21ab       1.76±0.02ab
 G5   24.21±0.04ab       0.84±0.00    21.18±0.25a       1.78±0.01ab
 G6   17.38±0.02de       0.70±0.00    17.63±0.15f       1.57±0.02cd
 ```
+
 
 # Data Clean
 ```r
@@ -61,11 +63,15 @@ library(ggplot2)
 library(reshape2)
 library(ggrepel)
 
-TB <- NutriSplit(A)
+TB <- NutriSplit(t(A))
 
 ggplot(melt(as.matrix(TB$Avr)),aes(x=Var2,y=value)) +
-  geom_point(aes(color=melt(as.matrix(TB$Sig))$value)) +
-  geom_line(aes(group=Var1,color=Var1)) +
+  geom_line(aes(group=Var1)) +
   geom_errorbar(aes(ymin=value-melt(as.matrix(TB$Dit))$value, ymax=value+melt(as.matrix(TB$Dit))$value))+
-  geom_text_repel(aes(x=Var2,y=value,label=Var1, color=melt(as.matrix(TB$Sig))$value))
+  geom_text_repel(aes(x=Var2,y=value,label= melt(as.matrix(TB$Sig))$value, color= 'blue' ))+
+  facet_wrap(~Var1, scales = 'free')+
+  geom_point(aes(color=melt(as.matrix(TB$Sig))$value))+
+  theme_light()
 ```
+
+[![r55Fje.md.png](https://s3.ax1x.com/2020/12/27/r55Fje.md.png)](https://imgchr.com/i/r55Fje)

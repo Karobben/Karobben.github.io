@@ -90,9 +90,73 @@ Most people believe that eating at stands or restaurants is a kind of time-savin
 
 ---
 
-# Support or against that new movie theater be built near your neighborhood  
+## Dancing plays an important role in a culture.
 
-It has recently been announced that a new movie theater may be built in your neighborhood. Do you support or oppose this plan? Why? Use specific reasons and details to support your answer. A New Movie Theater
+Do you agree or disagree with the following statement? Dancing plays an important role in a culture. Use specific reasons and examples to support your answer.
 
 
-Personally, I'd like to have a
+Copy from: [新东方在线](https://toefl.koolearn.com/20180508/824628.html)
+Proofreader: Karobben
+
+
+Around the world, people gather to explore their emotions through dance. The dances are created as part of celebrations, as religious services, as preparation for challenging hunts and warfare and to express sorrow (less often than the other situations). Indeed, dance does play an important role within a culture and reveals a wide range of information about the characteristics of a culture. Three of the most revealing aspect of dance are the nature of the culture's symbols and art forms revealed in costumes and equipment, the body language (moves and gestures) which give information about social contact behaviors, and frequently the style of preferred music for the culture. Ethnic dances, and certainly popular dance, anywhere around the world have associated preference for costumes and special clothing. Through dancing, the participants are able to reveal and express their chosen role in the garments they choose; social roles in the dance show publically to the observers as well as other dancers. Frequently dancers utilize objects like swords or sticks or hoops or musical instruments to further reveal information about their role in the social story portrayed in the dance. Items such as special headwear and jewelry are further examples of the garments that in general express preferences and culturally significant details about the particular culture.
+
+Dancers, by the very nature of the activity, physically express beliefs and attitudes associated with their specific culture. In many dances, the participants are modeling typical activities of their culture and thus imparting instructions and historical information to the audience. In other dances, one can see the expression of deep emotion: love, worship, grief, strength, anger, etc. and thus obtain clues about the inner feelings of the culture's individuals. Dance provides an opportunity for others to witness some of the special behaviors associated with activities in the culture. Also, dance is a (usually) public statement so that observers can see how members of the culture treat those who are older members of the opposite sex, more respected members, etc.
+
+The third aspect of dance that reveals much about a culture is the music or singing that is typically a part of the event. Observers can see evidence of the type of instruments, characteristics of the culture, and who plays the instruments as well as how they are used -- instruments may be associated only with special events and thus transmit valuable cultural information. Frequently, singing is part of a dance program, and again an observer has an opportunity to observe who is singing and the nature of the voices. I found this aspect of dance particularly fascinating during a brief time I spent in a rural village in Zimbabwe a few years ago.
+
+Dancing is indeed a very important aspect of any culture. It provides a communal opportunity for members of the culture to artistically express emotions while acting out typical activities and concerns in their world. For outsider observers, many valuable details about the culture are revealed.
+
+
+## Live in a City or Town
+
+Copy from: [新东方在线](https://toefl.koolearn.com/20180508/824629.html)
+Proofreader: Karobben
+
+
+Some people prefer to live in a small town. Others prefer to live in a big city. Which place would you prefer to live in? Use specific reasons and details to support your answer.
+
+The Advantages of City Life
+
+There are undeniable advantages to both lives in a big city and in a small town. The former offers more excitement and convenience while the latter offers a cleaner, quieter, and often friendly place to live. However, despite the advantages of small-town life, I prefer to live in a big city for several reasons.
+
+First, life in the city is more convenient. More goods are available and stores are open later. Also, there is better public transportation so it is easier to get around. I can find almost everything I want easily in the city. Second, there are more ways to spend leisure time in the city. There are many places I can go to meet friends and have fun. The city often attracts the best teachers and companies. There is also a wider choice of jobs so it is easier to move up the career ladder.
+
+For all of these reasons, I prefer to live in the city, Although I sometimes miss the fresh air and quiet life of a small town, nothing can make up for the opportunities that the city offers me. If one wants to be successful, I believe the best place to live in the city.
+
+## Agree or not: Success has nothing to do with luck.
+
+Copy from: [新东方在线](https://toefl.koolearn.com/20180508/824630.html)
+Proofreader: Karobben
+
+When people succeed, it is because of hard work. Luck has nothing to do with success." Do you agree or disagree with the quotation above? Use specific reasons and examples to explain your position. The Role of Luck in Success
+
+"When people succeed, it is because of hard work. Luck has nothing to do with success." Do you agree or disagree with the quotation above? Use specific reasons and examples to explain your position. The Role of Luck in Success
+
+It has been said that when people succeed, it is because of hard work and that has nothing to do with luck. Although I believe that hard work is very important and is the surest way to success for most people, I must disagree with this statement. It cannot be denied that luck plays an important role in success. For example, many important discoveries have been made by accident. There have many cases of researchers and inventors making major breakthroughs while they are trying to solve another problem or create a different device.
+
+Furthermore, there is something to be said for simply being in the right place at the right time-perhaps meeting someone by chance who can offer a good job or rare opportunity. And of course, there are rare examples of gamblers and lottery winners who beat the odds and achieve sudden and unexpected success.
+
+While the influence of luck can not be ignored, this is not to say that one should depend on it and ignore the value of hard work. If one is willing to work hard, I believe that success will eventually be achieved, with or without the added benefit of luck. Moreover, hard work is often an essential ingredient of luck because it enables one to take advantage of a lucky encounter. If the scientist has not worked hard to developed his knowledge and skills, he may not recognize that lucky breakthrough when it comes along. Therefore, my suggestion is not to count on luck to bring you success. Instead, work hard and keep your eyes open for that lucky opportunity.
+
+## Construction a Factory Near Your Community
+Copy from: [新东方在线](https://toefl.koolearn.com/20180508/824632.html)
+Proofreader: Karobben
+
+A company has announced that it wishes to build a large factory near your community. discuss the advantages and disadvantages of this new influence on your community. do you support or oppose the factory? explain your position.
+
+Having a factory near where one lives brings with it both advantages and disadvantages. An obvious advantage is an increase in the number of jobs, and many people in the community might find employment in the new factory. The factory would bring money into the community in other ways as well. It would have to pay some taxes to the local government, and workers might go shopping or eat at restaurants in the area before or after their shits.
+
+However, the factory would bring some disadvantages, too. Depending on what kind of factory it is. It might pollute the environment and bring down property values. It would be sure to increase traffic in the area, causing congestion and making it unsafe for children to play outside. Finally, the neighborhood would become a noisy, busy place. For all of these reasons, I would be opposed to the construction of a new factory near my community. While the employment opportunities would help the community, I believe it would be better for residents to commute to work and preserve the peace of our neighborhood.
+
+## Change one things in your hometown
+Copy from: [新东方在线](https://toefl.koolearn.com/20180508/824633.html)
+Proofreader: Karobben
+
+If you could change one important thing about your hometown, what would you change? use reasons and specific examples to support your answer.
+
+My hometown is a large city with a dense population. Because it is crow people and vehicles, the environment is not as clean as I would like it to be. Too many cars and buses polluted the air and also people created a lot of garbage that is not always disposed of properly. If I could change just one thing about my hometown, it would be the environment. I would make it a cleaner and less polluted place to live.
+
+I believe that such a change is important because a person's living environment greatly affects both his physical and mental health. Bad air quality can contribute to many health problems such as asthma, and improperly discarded garbage can spread bacteria that are dangerous to health. In addition, the environment can greatly affect the way a person feels. When in clean, attractive surroundings we always feel optimistic. For these reasons, I think the people of my hometown should work together to make it a cleaner place to live.
+
+In order to accomplish this goal, we have to not only enact laws to limit pollution but also take personal responsibility for our own actions. Only when people realize the effect that the environment has on their well-bing will they such proposals seriously. Therefore, ew must first inform people of the dangers of a poor environment. Then I believe we can all live happier, healthier lives.

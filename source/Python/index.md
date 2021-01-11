@@ -22,6 +22,7 @@
 
 - # Biology
   - [Biopython](Biopython.html)
+  - [Sanger Sequencing Plot](Bio_SSP.html)
 
 - # Developer
   - ## TUI
@@ -29,10 +30,18 @@
     - [npyscreen](npyscreen.html)
     - [urwid](urwid.html)
   - ## GUI
-    - [kivy_Cross-platform-App](kivy_Cross-platform-App.html)
-    - [kivy-Buildozer](kivy-Buildozer.html)
     - [QT](QT.html)
-
+    - # [kivy_Cross-platform-App](kivy_Cross-platform-App.html)
+    - [kivy-Buildozer](kivy-Buildozer.html)
+    - Learn Kivy from Sent
+      - [1. Hello World](Kivy_sent1.html)
+      - [3. Screen Manager](Kivy_sent3.html)
+    - Kivy widgets
+      - [Draw Lines](Kivy_sline.html)
+      - [Bubble](Kivy_bubble.html)
+      - [import android](kivy_platform.html)
+    - [Kivy: Filechooser](kivy_filechooser.html)
+    - [Kivy tips & tricks](kivy_tips.html)
 - # Blogs
   - [Opencv_Vedio_reverse.py](Vedio_reverse.py.html)
   - [Opencv_VedioSlice.py](VedioSlice.py.html)
