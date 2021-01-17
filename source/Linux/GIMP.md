@@ -20,7 +20,11 @@ url: gimp
 ## Rectangle
 1. Rectangle select tools (select a region)
 2. Edit -> Stroke selection -> Stroke
-
+3. hot key:
+	- R (select rectangle tools and select a region)
+	- Alt+E(open edit menu board)
+	- S
+	- Enter
 
 ---
 github: [https://github.com/Karobben](https://github.com/Karobben)

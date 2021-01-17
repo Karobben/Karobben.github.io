@@ -5,6 +5,8 @@
   - [Independent Writing](writing.html)
 - # Books (Reading Notes)
   - [DNA is Not Destiny](DNA_Is_NotDestiny.html)
+	- [Stem Cells: An Insider Guide](books_stemcell_ig.html)
+
 - # Ted practice
   - ## Subtitle
     - [Ted2-Selfdecipline_T](Ted2-Selfdecipline_T.html)

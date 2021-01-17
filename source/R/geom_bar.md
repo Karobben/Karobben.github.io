@@ -65,17 +65,24 @@ ggsave("bar2.png",w=7.46, h=5.68)
 # State = count
 ```r
 ggplot(mtcars) +
-  geom_bar(aes(cyl, fill='salmon')) +
+  geom_bar(aes(cyl), fill='salmon') +
   theme_light()
 
 # The same as:
 ggplot(mtcars) +
-  geom_bar(aes(cyl, fill='salmon'), stat='count') +
+  geom_bar(aes(cyl), fill='salmon', stat='count') +
   theme_light()
 
-ggsave("bar3.png",w=3.45, h=2.76)
+ggsave("bar_salmon.png",w=3, h=2.76)
+
+ggplot(mtcars) +
+      geom_bar(aes(cyl), fill='steelblue') +
+      theme_light() + geom_text(aes(x=cyl, label=..count..), stat = 'count', vjust = - 0.2)
+ggsave("bar_steelblue.png",w=3, h=2.76)
 ```
-[![aQKh2q.md.png](https://s1.ax1x.com/2020/07/31/aQKh2q.md.png)](https://imgchr.com/i/aQKh2q)
+|[![sB8FWn.md.png](https://s3.ax1x.com/2021/01/16/sB8FWn.md.png)](https://imgchr.com/i/sB8FWn)|[![sB3xL8.md.png](https://s3.ax1x.com/2021/01/15/sB3xL8.md.png)](https://imgchr.com/i/sB3xL8)|
+|:--:|:--:|
+|bar_salmon|bar_steelblue|
 
 # position
 Reference: [Dwzb](https://zhuanlan.zhihu.com/p/27093478)

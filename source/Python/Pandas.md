@@ -35,6 +35,15 @@ data.iloc[1]             #取第2行数据
 data.loc['A']      #取第行索引为”A“的一行数据，
 data['x']      #取列索引为x的一列数据
 
+# Most frequent value
+data.mode()
+
+# Any True value in this series
+data['A'].any()
+
+# All the values are True
+data['A'].all()
+
 data.loc[:,['x','z'] ]          #表示选取所有的行以及columns为a,b的列；
 data.loc[['A','B'],['x','z']]     #表示选取'A'和'B'这两行以及columns为x,z的列的并集；
 data.iloc[1:3,1:3]              #数据切片操作，切连续的数据块
@@ -83,6 +92,21 @@ def missing_cal(df):
 missing_cal(df)
 ```
 
+## Drop/Fill NA
+
+```python
+# Drop the columns or rows by NA value
+data.dropna(axis=0)
+data.dropna(axis=1)
+
+# Fill the NA value by linear interpolation
+data.interpolate()
+
+# Fill te NA value with the value ahead or the next
+data.fillna(method='ffill')
+data.fillna(method='backfill')
+```
+
 ## idmax
 ```python
 df = pd.DataFrame({'Sp':['a','b','c','d','e','f'], 'Mt':['s1', 's1', 's2','s2','s2','s3'], 'Value':[1,2,3,4,5,6], 'Count':[3,2,5,10,10,6]})
@@ -94,13 +118,28 @@ df["rank"] = df.groupby("ID")["score"].rank(method="min", ascending=False).astyp
 df[df["rank"] == 1][["ID", "class"]]
 ```
 
-## Raw merge
+## Merging DataFrame
+
+This is one of the most feature I like in pandas since it could automatically fill the missing value with NA.
+Plus, when the DataFrame goes huge, pd.concat was **way faster than dataframe merge in R**.
 
 ```python
 df = pd.DataFrame({'id_part':['a','b','c','d'], 'pred':[0.1,0.2,0.3,0.4], 'pred_class':['women','man','cat','dog'], 'v_id':['d1','d2','d3','d1']})
 
-df.groupby(['v_id']).agg({'pred_class': [', '.join],'pred': lambda x: list(x),
-'id_part': 'first'}).reset_index()
+#  Row
+pd.concat([df,df], axis=1)
+# or
+df.merge(df)
+
+# Column
+pd.concat([df,df])
+# or
+df.append(df)
+
+# I forget what the codes here for = =
+#df.groupby(['v_id']).agg({'pred_class': [', '.join],'pred': lambda x: list(x),
+#	'id_part': 'first'}).reset_index()
+
 ```
 
 ## Deleting rows by string-match
@@ -170,21 +209,26 @@ df = pd.DataFrame({'姓名':['张 三','李 四','王 五'],
 df
 df.姓名.str.split(' ', expand=True)
 ```
+## str.contain
 
+```python
+df.['column1'].str.cotain('A')
+
+```
 ## 把 Series 里的列表转换为 DataFrame
 ```python
 df = pd.DataFrame({'列1':['a','b','c'],'列2':[[10,20], [20,30], [30,40]]})
-df
 
-df_new = df.列2.apply(pd.Series)
 pd.concat([df,df_new], axis='columns')
 ```
+
 
 ## 用多个函数聚合
 ```python
 orders = pd.read_csv('data/chipotle.tsv', sep='\t')
 orders.groupby('order_id').item_price.agg(['sum','count']).head()
 ```
+
 
 ## 分组聚合
 
@@ -203,7 +247,7 @@ for name, group in df.groupby('key1'):
 dict(list(df.groupby('key1')))
 ```
 
-# 通过字典或Series进行分组
+## 通过字典或Series进行分组
 
 ```python
 people = pd.DataFrame(np.random.randn(5, 5),
@@ -216,7 +260,23 @@ by_column.sum()
 ```
 
 
----
-github: [https://github.com/Karobben](https://github.com/Karobben)
-blog: [Karobben.github.io](http://Karobben.github.io)
-R 语言画图索引: [https://karobben.github.io/R/R-index.html](https://karobben.github.io/R/R-index.html)
+# Connect to the matplotlib
+
+```python
+import numpy as np
+import pandas as pd
+from matplotlib import pyplot as plt
+
+
+dates=pd.date_range('20180310',periods=6)
+df = pd.DataFrame(np.random.randn(6,4), index=dates, columns=['A','B','C','D'])
+df.plot()
+plt.show()
+```
+[![sr7hX4.png](https://s3.ax1x.com/2021/01/17/sr7hX4.png)](https://imgchr.com/i/sr7hX4)
+
+## more for plot()
+```python
+df.hist(column='A', figsize=(4,3))
+df.boxplot(column='A', figsize=(4,3))
+```
