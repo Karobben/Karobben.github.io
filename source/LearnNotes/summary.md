@@ -42,8 +42,11 @@
         - [Diet Switch | Growth | Fish 2019](soyfish)
         - [Diet Switch | Hepatic Metabolism | Fish 2004](planthepatic)
         - [Diet Switch|Fly Larvea|Salmon 2019](paper_blylavea_salmon_2019)
-    - [algorithm](#)
+    - [Algorithm](#)
       - [WGCNA](paper_wgcna)
+		- [Regeneration](#)
+			- [Salamander: limb (RNA-Seq)](paper_regener_limb_salamander)
+
 - [Test](test)
 - [高中高考笔记](#)
     - [来源: 网络](gknotes)

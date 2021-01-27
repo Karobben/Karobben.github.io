@@ -23,34 +23,43 @@
     - [Fish_dygestion](Fish_dygestion.html)
   - ## Disease
     - [糖尿病](diabetes.html)
-- # Paper reading
-  - ## HOw to Write
-    - ## RNA-Seq
-      - [Paper_RNASeq_Fish1](Paper_RNASeq_Fish1.html)
-      - [Paper_RNASeq_Fish2](Paper_RNASeq_Fish2.html)
-      - [Paper_RNASeq_Fish3](Paper_RNASeq_Fish3.html)
-      - [Paper_RNASeq_Fish4](Paper_RNASeq_Fish4.html)
-  - ## Reading Notes
-    - ### Fish
-      - [Stocking Density Effects](stockingdensity_fish.html)
-      - ### Diet Switch
-        [Fish Protein to Soy Protein: <a title="石斑鱼">Grouper [2019]</a>](Paper_Yan2020.html)
-        [Fish Protein to Plant Protein: <a title="异育银鲫">Sparus aurata [2008]</a>](Diet_Switch_Fish4.html)
-        [Fish Meal to Black Soldier Fly Larvae: <a title="大西洋鲑">Atlantic salmon [2019]</a>](Paper_BSFlylavea_salmon_2019.html)
-        [Fish Meal to Black Soldier Fly Larvae:  <a title="黄颡鱼">Yellow Catfish [2018]</a>](Paper_BSFlylavea_Catfish_2018.html)
-        - #### Microbiota
-          - [Fishmeal to Wheat: Gilthead Sea Bream](paper_dit_s_micro_1.html)
-    - ### Metabolism
-      [Review: Insect Meals [2014]](paper_review_insectmeal.html)
-      [Paper_Charni [2019]](Paper_Charni2019.html)
-      [Paper_Vilhelmsson2004](Paper_Vilhelmsson2004.html)
-      [WheatInhi](WheatInhi.html)
-    - ### Algorithm
-      - [WGCNA](paper_WGCNA.html)
-    - ### Genome
-      - [mtGenome](mtGenome.html)
-  - # 高中高考笔记
-      - [来源: 网络](GKNotes.html)
+
+<details>
+<summary>
+<span style="font-size: 25px; font-weight: bold">Paper reading</span>
+</summary>
+
+- ## HOw to Write
+	- ### RNA-Seq
+	  - [Paper_RNASeq_Fish1](Paper_RNASeq_Fish1.html)
+	  - [Paper_RNASeq_Fish2](Paper_RNASeq_Fish2.html)
+	  - [Paper_RNASeq_Fish3](Paper_RNASeq_Fish3.html)
+	  - [Paper_RNASeq_Fish4](Paper_RNASeq_Fish4.html)
+
+- ## Reading Notes
+	- ### Fish
+	  - [Stocking Density Effects](stockingdensity_fish.html)
+	  - ### Diet Switch
+	    - [Fish Protein to Soy Protein: <a title="石斑鱼">Grouper [2019]</a>](Paper_Yan2020.html)
+	    - [Fish Protein to Plant Protein: <a title="异育银鲫">Sparus aurata [2008]</a>](Diet_Switch_Fish4.html)
+	    - [Fish Meal to Black Soldier Fly Larvae: <a title="大西洋鲑">Atlantic salmon [2019]</a>](Paper_BSFlylavea_salmon_2019.html)
+	    - [Fish Meal to Black Soldier Fly Larvae:  <a title="黄颡鱼">Yellow Catfish - [2018]</a>](Paper_BSFlylavea_Catfish_2018.html)
+	    - #### Microbiota
+	      - [Fishmeal to Wheat: Gilthead Sea Bream](paper_dit_s_micro_1.html)
+	- ### Metabolism
+	  [Review: Insect Meals [2014]](paper_review_insectmeal.html)
+	  [Paper_Charni [2019]](Paper_Charni2019.html)
+	  [Paper_Vilhelmsson2004](Paper_Vilhelmsson2004.html)
+	  [WheatInhi](WheatInhi.html)
+	- ### Algorithm
+	  - [WGCNA](paper_WGCNA.html)
+	- ### Genome
+	  - [mtGenome](mtGenome.html)
+	- ### Regeneration
+		- [Salamander: limb (RNA-Seq)](paper_regener_limb_salamender.html)
+
+</details>
+
 - # Edx
   |||
   |--|--|
