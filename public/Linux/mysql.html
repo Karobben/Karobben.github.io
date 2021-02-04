@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>Quick Guide of Mysql for Newbies | Karobben</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Quick Guide of Mysql for Newbies| Mysql 快速入门">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Quick Guide of Mysql for Newbies">
+<meta property="og:url" content="https://karobben.github.io/Linux/mysql.html">
+<meta property="og:site_name" content="Karobben">
+<meta property="og:description" content="Quick Guide of Mysql for Newbies| Mysql 快速入门">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-01-30T16:00:00.000Z">
+<meta property="article:modified_time" content="2021-01-31T10:17:04.928Z">
+<meta property="article:author" content="Karobben">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Karobben" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="img/tag.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+<link rel="stylesheet" href="/css/search.css">
+
+  <script type="text/javascript"
+   src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+
+  <style>
+  pre {
+    color: salmon;
+  }
+  </style>
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<script>
+  var _hmt = _hmt || [];
+  (function() {
+    var hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?8442e6ecc87d878298ba7d3bd0a5484c";
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(hm, s);
+  })();
+</script>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header"; style="background:#1B414B;height:150px">
+  <!--div id="banner"></div>-->
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Karobben</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">Karobben Blog</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+          <a id="main-nav-toggle" class="nav-icon"></a>
+          <!-- Header Section Start -->
+  <header id="slider-area">
+    <nav class="navbar navbar-expand-md fixed-top scrolling-navbar bg-white">
+      <div class="container">
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav mr-auto w-100 justify-content-end">
+              <a class="main-nav-link" href="../index.html">Home</a>
+              <a class="main-nav-link" href="../R/R-index.html">R</a>
+              <a class="main-nav-link" href="../Python/index.html">Python</a>
+              <a class="main-nav-link" href="../Linux/index.html">Linux</a>
+              <a class="main-nav-link" href="../Bioinfor/index.html">Bio-Protocal</a>
+              <a class="main-nav-link" href="../LearnNotes/index.html">Notes</a>
+              <a class="main-nav-link" href="../Blog/index.html">Others</a>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!-- Header Section End -->
+
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Looking for Something?"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://karobben.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><div align='right', style='padding-right:160px;padding-top:1px'>
+  
+  <span class="local-search local-search-google local-search-plugin" style=";position:absolute;z-index:2;">
+      <input type="search" placeholder="Looking for Something?" id="local-search-input" class="local-search-input-cls" style="">
+      <div id="local-search-result" class="local-search-result-cls"></div>
+  </span>
+
+
+</div>
+
+<article  id="page-" class="article article-type-page" itemscope itemprop="blogPost">
+<div id="tipue_search_content" style="display: none"></div>
+  <div class="article-meta">
+    <a href="/Linux/mysql.html" class="article-date">
+  <time datetime="2021-01-30T16:00:00.000Z" itemprop="datePublished">2021-01-31</time>
+</a>
+    
+  </div>
+  <div  class="article-inner">
+    
+    
+      <header class="article-header">
+        <!--
+  
+    <h1 class="article-title" itemprop="name">
+      Quick Guide of Mysql for Newbies
+    </h1>
+  
+ -->
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <!-- Go To Top Link -->
+        <div title="Back to Top" class="back-to-top" style="background:salmon">
+  <a href="#"  >
+    <i >Top</i>
+  </a>
+</div>
+<div class="title_index">
+  <ul id="nav">
+   <li>
+     Titles
+     <ul>
+       <!-- Table of Contents -->
+
+  <div id="toc" class="toc-article">
+    <strong class="toc-title">Titles</strong>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#"><span class="toc-number">1.</span> <span class="toc-text">Quick Guide of Mysql for Newbies</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#"><span class="toc-number">2.</span> <span class="toc-text">Dataabse type</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#"><span class="toc-number">3.</span> <span class="toc-text">INSTALL</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#"><span class="toc-number">4.</span> <span class="toc-text">Quick Start</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#"><span class="toc-number">5.</span> <span class="toc-text">Set Environment</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Show-the-directory-of-the-DATABASE"><span class="toc-number">5.1.</span> <span class="toc-text">Show the directory of the DATABASE</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Show-all-databases"><span class="toc-number">5.2.</span> <span class="toc-text">Show all databases</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#"><span class="toc-number">6.</span> <span class="toc-text">Create &amp; Drop</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Database"><span class="toc-number">6.1.</span> <span class="toc-text">Database</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Table"><span class="toc-number">6.2.</span> <span class="toc-text">Table</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Datatypes"><span class="toc-number">6.3.</span> <span class="toc-text">Datatypes</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#"><span class="toc-number">7.</span> <span class="toc-text">INSERT</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Insert-a-Row"><span class="toc-number">7.1.</span> <span class="toc-text">Insert a Row</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ALTER-insert-a-column"><span class="toc-number">7.2.</span> <span class="toc-text">ALTER (insert a column)</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#"><span class="toc-number">8.</span> <span class="toc-text">Select the column</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#WHERE"><span class="toc-number">8.1.</span> <span class="toc-text">WHERE</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#LIKE"><span class="toc-number">8.2.</span> <span class="toc-text">LIKE</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#"><span class="toc-number">9.</span> <span class="toc-text">UPDATE &amp; DELETE</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#"><span class="toc-number">10.</span> <span class="toc-text">UNION</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#"><span class="toc-number">11.</span> <span class="toc-text">ORDER</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#"><span class="toc-number">12.</span> <span class="toc-text">INPUT and Output</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Input"><span class="toc-number">12.1.</span> <span class="toc-text">Input</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#output"><span class="toc-number">12.2.</span> <span class="toc-text">output</span></a></li></ol></li></ol>
+  </div>
+
+<!-- Table of Contents Down-->
+
+     </ul>
+    </li>
+   </ul>
+</div>
+
+
+        <h1>Quick Guide of Mysql for Newbies</h1>
+<p><a href="https://www.bilibili.com/video/BV1iJ411m7Fj?from=search&amp;seid=986172806903606724" target="_blank" rel="noopener">Video tutorial</a><br>
+<a href="https://www.runoob.com/mysql/mysql-like-clause.html" target="_blank" rel="noopener">Text Tutorial</a></p>
+<h1>Dataabse type</h1>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Relation Database</th>
+<th style="text-align:left">Non-relational Database</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">- Store specific types of project like customer, products.<br>- Store as tables</td>
+<td style="text-align:left">- No tables or relationships<br>- Don’t understand SQL</td>
+</tr>
+</tbody>
+</table>
+<h1>INSTALL</h1>
+<p>For Ubuntu:<a href="https://yq.aliyun.com/articles/758177" target="_blank" rel="noopener">雪梦科技 2020; 云栖社区</a>, Mac: <a href="https://www.jianshu.com/p/fd3aae701db9" target="_blank" rel="noopener">WebCoder 2016, 简书</a>; Windows: <a href="https://www.cnblogs.com/yunlongaimeng/p/12558638.html" target="_blank" rel="noopener">BruceLong 2020; 博客园</a></p>
+<h1>Quick Start</h1>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql</span><br></pre></td></tr></table></figure></div>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="SQL"><figure class="iseeu highlight /sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">-- print store location</span></span><br><span class="line"><span class="keyword">show</span> <span class="keyword">variables</span> <span class="keyword">like</span> <span class="string">'%datadir%'</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- print database in stoarage</span></span><br><span class="line"><span class="keyword">SHOW</span> <span class="keyword">DATABASES</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- Create a new database</span></span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">DATABASE</span> <span class="string">`sql_invoicing`</span>;</span><br><span class="line"><span class="comment">-- Access the database</span></span><br><span class="line"><span class="keyword">USE</span> <span class="string">`sql_invoicing`</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- Create a table</span></span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> runoob_tbl(</span><br><span class="line">  runoob_id <span class="built_in">INT</span> <span class="keyword">NOT</span> <span class="literal">NULL</span> AUTO_INCREMENT,</span><br><span class="line">  runoob_title <span class="built_in">VARCHAR</span>(<span class="number">100</span>) <span class="keyword">NOT</span> <span class="literal">NULL</span>,</span><br><span class="line">  runoob_author <span class="built_in">VARCHAR</span>(<span class="number">40</span>) <span class="keyword">NOT</span> <span class="literal">NULL</span>,</span><br><span class="line">  submission_date <span class="built_in">DATE</span>,</span><br><span class="line">  PRIMARY <span class="keyword">KEY</span> ( runoob_id )</span><br><span class="line">  )<span class="keyword">ENGINE</span>=<span class="keyword">InnoDB</span> <span class="keyword">DEFAULT</span> <span class="keyword">CHARSET</span>=utf8;</span><br><span class="line"><span class="comment">-- show tables</span></span><br><span class="line"><span class="keyword">SHOW</span> <span class="keyword">TABLES</span></span><br><span class="line"></span><br><span class="line"><span class="comment">-- Check the index</span></span><br><span class="line"><span class="keyword">desc</span> runoob_tbl</span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">INT: datatype = integer;</span></span><br><span class="line"><span class="comment">DATE: datatype = date;</span></span><br><span class="line"><span class="comment">NOT NULL: value auto-fill;</span></span><br><span class="line"><span class="comment">AUTO_INCREMENT:  fill-logic;</span></span><br><span class="line"><span class="comment">VARCHAR(10): ??? I don't know</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="comment">-- Insert value to table</span></span><br><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> runoob_tbl</span><br><span class="line">  (runoob_title, runoob_author, submission_date)</span><br><span class="line">  <span class="keyword">VALUES</span></span><br><span class="line">  (<span class="string">"学习 PHP"</span>, <span class="string">"菜鸟教程"</span>, <span class="keyword">NOW</span>());</span><br><span class="line"></span><br><span class="line"><span class="comment">-- Insert multi-lines value to table</span></span><br><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> runoob_tbl</span><br><span class="line">  (runoob_title, runoob_author, submission_date)</span><br><span class="line">  <span class="keyword">VALUES</span></span><br><span class="line">  (<span class="string">"学习 myspl"</span>, <span class="string">"karobben"</span>, <span class="keyword">NOW</span>()),</span><br><span class="line">  (<span class="string">'learn python'</span>, <span class="string">'Karobben'</span>, <span class="keyword">NOW</span>());</span><br><span class="line"></span><br><span class="line"><span class="comment">-- Print the whole table</span></span><br><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">from</span> runoob_tbl;</span><br><span class="line"><span class="comment">-- Print the `runoob_title` column(field)</span></span><br><span class="line"><span class="keyword">SELECT</span> <span class="string">`runoob_title`</span> <span class="keyword">from</span> runoob_tbl;</span><br><span class="line"><span class="comment">-- Print the filtered result by WHEN</span></span><br><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">from</span> runoob_tbl <span class="keyword">WHERE</span> runoob_author=<span class="string">'karobben'</span>; <span class="comment">#Capitals letters tolerant</span></span><br><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">from</span> runoob_tbl <span class="keyword">WHERE</span> <span class="built_in">BINARY</span> runoob_author=<span class="string">'Karobben'</span>; <span class="comment">#Capital letter matters</span></span><br><span class="line"><span class="comment">-- Print the filtered result by LIKE</span></span><br><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">from</span> runoob_tbl  <span class="keyword">WHERE</span> runoob_author <span class="keyword">LIKE</span> <span class="string">'%rob%'</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- Change the value of tables by update</span></span><br><span class="line"><span class="keyword">UPDATE</span> runoob_tbl <span class="keyword">SET</span> runoob_title=<span class="string">'sleep'</span> <span class="keyword">WHERE</span> runoob_id=<span class="number">3</span>;</span><br><span class="line"><span class="comment">-- Change a part of string in column(field)</span></span><br><span class="line"><span class="keyword">UPDATE</span> runoob_tbl  <span class="keyword">SET</span> runoob_author=<span class="keyword">REPLACE</span>(runoob_author, <span class="string">'ka'</span>, <span class="string">'Ka'</span>)</span><br><span class="line"><span class="comment">-- Change the value of table by delete</span></span><br><span class="line"><span class="keyword">DELETE</span> <span class="keyword">FROM</span> runoob_tbl <span class="keyword">WHERE</span> runoob_id=<span class="number">1</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- delete the tale</span></span><br><span class="line"><span class="keyword">DROP</span> <span class="keyword">TABLE</span> <span class="string">`runoob_tbl`</span>;</span><br><span class="line"><span class="comment">-- delete the database</span></span><br><span class="line"><span class="keyword">DROP</span> <span class="keyword">DATABASE</span> <span class="string">`sql_invoicing`</span></span><br></pre></td></tr></table></figure></div>
+<h1>Set Environment</h1>
+<p>Change the store directory: <a href="https://www.cnblogs.com/Lans-word/p/12080177.html" target="_blank" rel="noopener">虫文儿~ 2019; 博客园</a></p>
+<h2 id="Show-the-directory-of-the-DATABASE"><a class="header-anchor" href="#Show-the-directory-of-the-DATABASE"></a>Show the directory of the DATABASE</h2>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="SQL"><figure class="iseeu highlight /sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">show</span> <span class="keyword">variables</span> <span class="keyword">like</span> <span class="string">'%datadir%'</span>;</span><br></pre></td></tr></table></figure></div>
+<h2 id="Show-all-databases"><a class="header-anchor" href="#Show-all-databases"></a>Show all databases</h2>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="SQL"><figure class="iseeu highlight /sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SHOW</span> <span class="keyword">DATABASES</span>;</span><br></pre></td></tr></table></figure></div>
+<h1>Create &amp; Drop</h1>
+<h2 id="Database"><a class="header-anchor" href="#Database"></a>Database</h2>
+<p>ps: ‘;’ is needed for separate commands in sql language.</p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="SQL"><figure class="iseeu highlight /sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">DATABASE</span> <span class="keyword">IF</span> <span class="keyword">NOT</span> <span class="keyword">EXISTS</span> <span class="string">`sql_invoicing`</span>;</span><br><span class="line"><span class="keyword">USE</span> <span class="string">`sql_invoicing`</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">SET</span> <span class="keyword">NAMES</span> utf8;</span><br><span class="line"><span class="keyword">SET</span> character_set_client= utf8mb4;</span><br><span class="line"></span><br><span class="line"><span class="keyword">SHOW</span> <span class="keyword">DATABASES</span>;</span><br></pre></td></tr></table></figure></div>
+<pre>
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| performance_schema |
+| sql_invoicing      |
+| sys                |
++--------------------+
+</pre>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="SQL"><figure class="iseeu highlight /sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">drop</span> <span class="keyword">database</span> <span class="string">`sql_invoicing`</span>; <span class="comment">#deleting sql_invoicing</span></span><br></pre></td></tr></table></figure></div>
+<h2 id="Table"><a class="header-anchor" href="#Table"></a>Table</h2>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="SQL"><figure class="iseeu highlight /sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> <span class="keyword">IF</span> <span class="keyword">NOT</span> <span class="keyword">EXISTS</span> <span class="string">`runoob_tbl`</span>(</span><br><span class="line">   <span class="string">`runoob_id`</span> <span class="built_in">INT</span> <span class="keyword">UNSIGNED</span> AUTO_INCREMENT,</span><br><span class="line">   <span class="string">`runoob_title`</span> <span class="built_in">VARCHAR</span>(<span class="number">100</span>) <span class="keyword">NOT</span> <span class="literal">NULL</span>,</span><br><span class="line">   <span class="string">`runoob_author`</span> <span class="built_in">VARCHAR</span>(<span class="number">40</span>) <span class="keyword">NOT</span> <span class="literal">NULL</span>,</span><br><span class="line">   <span class="string">`submission_date`</span> <span class="built_in">DATE</span>,</span><br><span class="line">   PRIMARY <span class="keyword">KEY</span> ( <span class="string">`runoob_id`</span> )</span><br><span class="line">)<span class="keyword">ENGINE</span>=<span class="keyword">InnoDB</span> <span class="keyword">DEFAULT</span> <span class="keyword">CHARSET</span>=utf8;</span><br><span class="line"></span><br><span class="line"><span class="keyword">SHOW</span> <span class="keyword">TABLES</span>;</span><br><span class="line">desc runoob_tbl;</span><br></pre></td></tr></table></figure></div>
+<pre>
++-------------------------+
+| Tables_in_sql_invoicing |
++-------------------------+
+| runoob_tbl              |
++-------------------------+
+1 row in set (0.00 sec)
+
++-----------------+--------------+------+-----+---------+----------------+
+| Field           | Type         | Null | Key | Default | Extra          |
++-----------------+--------------+------+-----+---------+----------------+
+| runoob_id       | int(11)      | NO   | PRI | NULL    | auto_increment |
+| runoob_title    | varchar(100) | NO   |     | NULL    |                |
+| runoob_author   | varchar(40)  | NO   |     | NULL    |                |
+| submission_date | date         | YES  |     | NULL    |                |
++-----------------+--------------+------+-----+---------+----------------+
+4 rows in set (0.00 sec)
+</pre>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="SQL"><figure class="iseeu highlight /sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">DROP</span> <span class="keyword">TABLE</span> runoob_tbl;</span><br></pre></td></tr></table></figure></div>
+<h2 id="Datatypes"><a class="header-anchor" href="#Datatypes"></a>Datatypes</h2>
+<p>Details: <a href="https://www.runoob.com/mysql/mysql-data-types.html" target="_blank" rel="noopener">runoob.com</a></p>
+<h1>INSERT</h1>
+<h2 id="Insert-a-Row"><a class="header-anchor" href="#Insert-a-Row"></a>Insert a Row</h2>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="SQL"><figure class="iseeu highlight /sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">-- Insert value to table</span></span><br><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> runoob_tbl</span><br><span class="line">  (runoob_title, runoob_author, submission_date)</span><br><span class="line">  <span class="keyword">VALUES</span></span><br><span class="line">  (<span class="string">"学习 PHP"</span>, <span class="string">"菜鸟教程"</span>, <span class="keyword">NOW</span>());</span><br><span class="line"></span><br><span class="line"><span class="comment">-- Insert multi-lines value to table</span></span><br><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> runoob_tbl</span><br><span class="line">  (runoob_title, runoob_author, submission_date)</span><br><span class="line">  <span class="keyword">VALUES</span></span><br><span class="line">  (<span class="string">"学习 myspl"</span>, <span class="string">"karobben"</span>, <span class="keyword">NOW</span>()),</span><br><span class="line">  (<span class="string">'learn python'</span>, <span class="string">'Karobben'</span>, <span class="keyword">NOW</span>());</span><br></pre></td></tr></table></figure></div>
+<h2 id="ALTER-insert-a-column"><a class="header-anchor" href="#ALTER-insert-a-column"></a>ALTER (insert a column)</h2>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="SQL"><figure class="iseeu highlight /sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> runoob_tbl</span><br><span class="line"><span class="keyword">ADD</span> <span class="keyword">COLUMN</span> Citation <span class="built_in">VARCHAR</span>(<span class="number">15</span>) <span class="keyword">AFTER</span> runoob_author;</span><br></pre></td></tr></table></figure></div>
+<h1>Select the column</h1>
+<h2 id="WHERE"><a class="header-anchor" href="#WHERE"></a>WHERE</h2>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="SQL"><figure class="iseeu highlight /sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">from</span> runoob_tbl <span class="keyword">WHERE</span> runoob_author=<span class="string">'karobben'</span>;</span><br></pre></td></tr></table></figure></div>
+<pre>
++-----------+--------------+---------------+-----------------+
+| runoob_id | runoob_title | runoob_author | submission_date |
++-----------+--------------+---------------+-----------------+
+|         2 | 学习 myspl   | <span style='background-color:salmon'>Karobben</span>      | 2021-01-31      |
+|         3 | sleep        | <span style='background-color:salmon'>Karobben</span>      | 2021-01-31      |
+|         4 | learn python | <span style='background-color:salmon'>Karobben</span>      | 2021-01-31      |
++-----------+--------------+---------------+-----------------+
+3 rows in set (0.00 sec)
+</pre>
+<h2 id="LIKE"><a class="header-anchor" href="#LIKE"></a>LIKE</h2>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="SQL"><figure class="iseeu highlight /sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">-- match the column which end with a| grep a$</span></span><br><span class="line">'%a'     </span><br><span class="line"><span class="comment">-- match the column which start with a| grep ^a</span></span><br><span class="line">'a%'     </span><br><span class="line"><span class="comment">-- match the column which contain a| grep a</span></span><br><span class="line">'%a%'    </span><br><span class="line"><span class="comment">-- match pattern: grep ^.a.$</span></span><br><span class="line">'_a_'    </span><br><span class="line"><span class="comment">-- match pattern: grep ^.a$</span></span><br><span class="line">'_a'</span><br><span class="line"><span class="comment">-- match pattern: grep ^a$</span></span><br><span class="line">'a_'</span><br><span class="line"></span><br><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">from</span> runoob_tbl  <span class="keyword">WHERE</span> runoob_title <span class="keyword">LIKE</span> <span class="string">'% %'</span>;</span><br></pre></td></tr></table></figure></div>
+<pre>
++-----------+--------------+---------------+-----------------+
+| runoob_id | runoob_title | runoob_author | submission_date |
++-----------+--------------+---------------+-----------------+
+|         2 | 学习<span style='background-color:salmon'> </span>myspl   | Karobben      | 2021-01-31      |
+|         4 | learn<span style='background-color:salmon'> </span>python | Karobben      | 2021-01-31      |
++-----------+--------------+---------------+-----------------+
+2 rows in set (0.00 sec)
+</pre>
+<h1>UPDATE &amp; DELETE</h1>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="SQL"><figure class="iseeu highlight /sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">UPDATE</span> runoob_tbl <span class="keyword">SET</span> runoob_title=<span class="string">'学习 C++'</span> <span class="keyword">WHERE</span> runoob_id=<span class="number">3</span>;</span><br><span class="line"><span class="keyword">DELETE</span> <span class="keyword">FROM</span> runoob_tbl <span class="keyword">WHERE</span> runoob_id=<span class="number">3</span>;</span><br></pre></td></tr></table></figure></div>
+<h1>UNION</h1>
+<p>So, union could combine the unique values from different selected columns to a new table<br>
+<code>sql SELECT runoob_title FROM runoob_tbl UNION SELECT runoob_author FROM runoob_tbl; </code></p>
+<pre>
++--------------+
+| runoob_title |
++--------------+
+| 学习 myspl   |
+| sleep        |
+| learn python |
+| Karobben     |
++--------------+
+</pre>
+<p>it can also be used to merge tables: <a href="https://www.runoob.com/mysql/mysql-union-operation.html" target="_blank" rel="noopener">Example</a></p>
+<h1>ORDER</h1>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="SQL"><figure class="iseeu highlight /sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">from</span> runoob_tbl;</span><br><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">from</span> runoob_tbl <span class="keyword">ORDER</span> <span class="keyword">BY</span> runoob_title <span class="keyword">ASC</span>;</span><br></pre></td></tr></table></figure></div>
+<pre>
++-----------+--------------+---------------+-----------------+
+| runoob_id | runoob_title | runoob_author | submission_date |
++-----------+--------------+---------------+-----------------+
+|         2 | 学习 myspl   | Karobben      | 2021-01-31      |
+|         3 | sleep        | Karobben      | 2021-01-31      |
+|         4 | learn python | Karobben      | 2021-01-31      |
++-----------+--------------+---------------+-----------------+
++-----------+--------------+---------------+-----------------+
+| runoob_id | runoob_title | runoob_author | submission_date |
++-----------+--------------+---------------+-----------------+
+|         4 | learn python | Karobben      | 2021-01-31      |
+|         3 | sleep        | Karobben      | 2021-01-31      |
+|         2 | 学习 myspl   | Karobben      | 2021-01-31      |
++-----------+--------------+---------------+-----------------+
+</pre>
+<h1>INPUT and Output</h1>
+<h2 id="Input"><a class="header-anchor" href="#Input"></a>Input</h2>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="SQL"><figure class="iseeu highlight /sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">-- insert and replace</span></span><br><span class="line"><span class="keyword">LOAD</span> <span class="keyword">DATA</span> <span class="keyword">INFILE</span> <span class="string">'/var/lib/mysql-files/test.csv'</span> <span class="keyword">REPLACE</span></span><br><span class="line"><span class="keyword">INTO</span> <span class="keyword">TABLE</span> regulation_net</span><br><span class="line"><span class="keyword">FIELDS</span> <span class="keyword">TERMINATED</span> <span class="keyword">BY</span> <span class="string">','</span></span><br><span class="line"><span class="keyword">OPTIONALLY</span> <span class="keyword">ENCLOSED</span> <span class="keyword">BY</span> <span class="string">'"'</span></span><br><span class="line"><span class="keyword">LINES</span> <span class="keyword">TERMINATED</span> <span class="keyword">BY</span> <span class="string">'\n'</span>;</span><br><span class="line"></span><br><span class="line">IGNORE 1 ROWS;</span><br></pre></td></tr></table></figure></div>
+<h2 id="output"><a class="header-anchor" href="#output"></a>output</h2>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># output sql as txt file</span></span><br><span class="line">mysqldump -h other-host.com -P port -u root -p database_name &gt; dump.txt</span><br></pre></td></tr></table></figure></div>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="SQL"><figure class="iseeu highlight /sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">-- output as csv</span></span><br><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> regulation_net;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">INTO</span> <span class="keyword">OUTFILE</span> <span class="string">'/var/lib/mysql-files/test.csv'</span></span><br><span class="line"><span class="keyword">FIELDS</span> <span class="keyword">TERMINATED</span> <span class="keyword">BY</span> <span class="string">','</span> <span class="keyword">OPTIONALLY</span> <span class="keyword">ENCLOSED</span> <span class="keyword">BY</span> <span class="string">'"'</span></span><br><span class="line"><span class="keyword">LINES</span> <span class="keyword">TERMINATED</span> <span class="keyword">BY</span> <span class="string">'\n'</span></span><br><span class="line"><span class="keyword">FROM</span> regulation_net;</span><br></pre></td></tr></table></figure></div>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://karobben.github.io/Linux/mysql.html" data-id="ckkkhvugs0000lpfc827m88f3" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">June 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/06/30/tmp/">test</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+  <!-- Weather -->
+<div id="weather-view-he" ></div>
+<script>
+WIDGET = {ID: 'HfP68rcshb'};
+</script>
+<script type="text/javascript" src="https://apip.weatherdt.com/view/static/js/r.js?v=1111"></script>
+
+</aside>
+
+          <!-- Weather Plug -->
+        
+        <!--git talk-->
+        <section id="main">
+          <div style='padding-top:10px'>
+  <div style="background:white">
+    <script src="https://utteranc.es/client.js"
+            repo="Karobben/utterances"
+            issue-term="pathname"
+            theme="preferred-color-scheme"
+            crossorigin="anonymous"
+            async>
+    </script>
+  </div>
+</div>
+<!--git talk-->
+  <!-- Link Gitalk 的支持文件  -->
+  <!--
+    <div>
+      <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+      <script src="https://unpkg.com/gitalk@latest/dist/gitalk.min.js"></script>
+      <div id="gitalk-container"></div>     <script type="text/javascript">
+          var gitalk = new Gitalk({
+
+          // gitalk的主要参数
+              clientID: '96c208ade65e80e3aaac',
+              clientSecret: '86e9240674a3815b0ddc31dababdb4998d5562f4',
+              repo: 'OAuth-Application',
+              owner: 'Karobben',
+              admin: ['Karobben'],
+              id:window.location.pathname,
+          });
+          gitalk.render('gitalk-container');
+      </script>
+    </div>
+<!-- Gitalk end -->
+
+        </section>
+        <!-- Gitalk end -->
+
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      <span style="float:right; list-style:none">
+        <a style="padding: 10px" href="https://karobben.github.io/">Blog</a>
+        <a style="padding: 10px" href="https://github.com/Karobben" target="_blank" rel="noopener">GitHub</a>
+        <br>
+        <a style="padding: 10px" href="https://space.bilibili.com/393056819" target="_blank" rel="noopener">BiliBili</a>
+        <a href="mailto:a591465908@outlook.com">Mail me</a>
+      </span>
+      &copy; Karobben 2021<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+  <span>
+    <p align = "center">
+      <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+      <span id="busuanzi_container_site_pv">~<span id="busuanzi_value_site_pv"></span>~</span>
+    </p>
+  </span>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  <!--`
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  -->
+  <a class="mobile-nav-link" href="../index.html">Home</a>
+  <a class="mobile-nav-link" href="../R/R-index.html">R</a>
+  <a class="mobile-nav-link" href="../Python/index.html">Python</a>
+  <a class="mobile-nav-link" href="../Linux/index.html">Linux</a>
+  <a class="mobile-nav-link" href="../Bioinfor/index.html">Bio-Protocal</a>
+  <a class="mobile-nav-link" href="../LearnNotes/index.html">Notes</a>
+  <a class="mobile-nav-link" href="../Blog/index.html">Others</a>
+</nav>
+
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+<!--mermaid module-->
+
+  <script src='https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js'></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({theme: 'forest'});
+    }
+  </script>
+
+
+
+<!-- Searche Module-->
+<script src="/js/search.js"></script>
+<script src="/js/load.js"></script>
+<!-- 这里可能有一些其他原来文件里的代码，也可以没有 -->
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+  </div>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"left","width":150,"height":300},"mobile":{"show":true},"react":{"opacity":0.7}});</script></body>
+</html>

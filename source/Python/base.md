@@ -3,9 +3,24 @@ title: "base"
 description: "base"
 url: base2
 ---
-# base
+# Base
 
+# Integer/Float calculation
 
+```python
+######################
+######### caculating #
+######################
+Operator   Description   Example
++   Addition operator   100 + 45 = 145
+-   Subtraction operator   500 - 65 = 435
+*   Multiplication operator   25 * 4 = 100
+/   Float Division Operator   10 / 2 = 5.0
+//   Integer Division Operator   10 / 2 = 5
+**   Exponentiation Operator   5 ** 3 = 125
+%   Remainder Operator   10 % 3 = 1  #  10 / 3 = 3 ... 1
+```
+## Float formate
 ```python
 #########print##########
 
@@ -20,11 +35,78 @@ print('%-10.3f' % pi) #左对齐
 # 3.142
 print('%+f' % pi) #显示正负号
 # +3.141593
+```
 
+# List
+```python
+# duplicats removing
+A = [1,1,1,2,3,4,3]
+print(A)
+```
+
+## Remove duplicates from list
+```python
+list(set(A))
+```
+
+# int list to str list
+```python
+[str(x) for x in int_list]
+```
+or
+```python
+a_list = ["1", "2", "3"]
+#int list to str list
+list(map(str, a_list))
+#str list to int list
+list(map(int, a_list))
+```
+## 逐个相减
+```python
+c = [b[i] - a[i] for i in range(len(a))]
+```
+
+## Compare Two list
+
+```python
+l = [1, 2, 3, 5]
+l_one = [2, 8, 6, 10]
+print set(l) & set(l_one)
+```
+
+
+# Time
+
+```python
+import time
+print(time.time())
+```
+
+## Date caculating
+
+[zhengxiangwen 2017](https://blog.csdn.net/zhengxiangwen/article/details/55157697)
+```python
+import datetime #导入日期时间模块
+today = datetime.date.today() #获得今天的日期
+print today #输出今天日期
+2016-01-25
+yesterday = today - datetime.timedelta(days=1) #用今天日期减掉时间差，参数为1天，获得昨天的日期
+print yesterday
+2016-01-25
+tomorrow = today + datetime.timedelta(days=1) #用今天日期加上时间差，参数为1天，获得明天的日期
+print tomorrow
+2016-01-25
+print "昨天:%s， 今天:%s， 明天：%s" % (yesterday, today, tomorrow) #
+```
+
+# For loop
+```python
 for x in range(0,10):
   print (x,end = '')
-# 0123456789
+```
 
+# Read/Write a file
+```python
 ##read file
 f = open("demofile.txt", "r")
 print(f.read())
@@ -41,24 +123,8 @@ fo.close()
 with open('something.txt', 'a') as f:
     f.write('text to be appended')
 
-
-# duplicats removing
-A = [1,1,1,2,3,4,3]
-list(set(A))
-
-######################
-######### caculating #
-######################
-Operator   Description   Example
-+   Addition operator   100 + 45 = 145
--   Subtraction operator   500 - 65 = 435
-*   Multiplication operator   25 * 4 = 100
-/   Float Division Operator   10 / 2 = 5.0
-//   Integer Division Operator   10 / 2 = 5
-**   Exponentiation Operator   5 ** 3 = 125
-%   Remainder Operator   10 % 3 = 1  #  10 / 3 = 3 ... 1
-
 ```
+
 
 # print
 
@@ -80,37 +146,6 @@ for i in A,B,C,D,E,F,G,H,I:
 
 [![NYE1bQ.png](https://s1.ax1x.com/2020/06/22/NYE1bQ.png)](https://imgchr.com/i/NYE1bQ)
 
-# List
-
-int list to str list
-```python
-[str(x) for x in int_list]
-```
-
-
-<br />int list to str list<br />
-
-```python
-a_list = ["1", "2", "3"]
-#int list to str list
-list(map(str, a_list))
-#str list to int list
-list(map(int, a_list))
-
-
-# 逐个相减
-c = [b[i] - a[i] for i in range(len(a))]
-```
-
-
-## Compare Two list
-
-
-```python
-l = [1, 2, 3, 5]
-l_one = [2, 8, 6, 10]
-print set(l) & set(l_one)
-```
 
 
 <a name="F7DeQ"></a>
@@ -157,5 +192,3 @@ for i in range(4):
 
 print v1,v2,v3
 ```
-
---------------------------------------------------------------------------------------------------------------------------------------------<br />github: [https://github.com/Karobben](https://github.com/Karobben)<br />blog: [Karobben.github.io](https://karobben.github.io/) <br />R 语言画图索引:[https://karobben.github.io/R/R-index.html](https://karobben.github.io/R/R-index.html)

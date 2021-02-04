@@ -9,6 +9,8 @@
     - [If & whle & case](leaei2)
       - [try](yn81gl2)
   - [github](github2)
+- [Mysql](#)
+  - [Quick Start](mysql)
 - [Software](#)
   - [ffmpeg](ffmpeg)
   - [Conky - the best plug for desktop](conky)

@@ -12,6 +12,8 @@
   - [Download: wget, curl...](Download-Software.html)
   - [github](github.html)
 
+- # Mysql
+	- [Quick Start](mysql.html)
 - # Software
   [App stores](Shop-store.html)
   - ## GUI
