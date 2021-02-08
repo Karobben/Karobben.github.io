@@ -67,7 +67,9 @@
   - [Hexo: live2d](Hexo_live2d.html)
   - [Hexo: footntoes](Hexo_footnotes.html)
   - [Hexo: Math formula](Hexo_math.html)
-
+  ---
+  # Echart
+  - [Echart is fun](echart.html)
   ---
   # Other
   - **Garden aquarium**
