@@ -46,10 +46,14 @@
     - [urwid](urwid2)
     - [npyscreen](npyscreen2)
     - [Animation-Text](animation-text2)
-    - [1. Hello World](kivy_sent_1)
-    - [3. Screen Manager](kivy_sent_3)
-    - [Draw Lines](kivy_examples_lines)
-    - [Bubble](kivy_bubble)
+		- [Kivy is fun](#)
+	    - [1. Hello World](kivy_sent_1)
+	    - [3. Screen Manager](kivy_sent_3)
+	    - [Draw Lines](kivy_examples_lines)
+	    - [Bubble](kivy_bubble)
+			- [ScrollView](kivy_scrollview)
+			- [Kivy: Filechooser](kivy_filechooser)
+			- [Kivy tips & tricks](kivy_tips)
 
 
   - [GUI libs](#)

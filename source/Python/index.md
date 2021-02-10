@@ -40,7 +40,8 @@
     - Kivy widgets
       - [Draw Lines](Kivy_sline.html)
       - [Bubble](Kivy_bubble.html)
-      - [import android](kivy_platform.html)
+			- [import android](kivy_platform.html)
+			- [ScrollView](kivy_scrollview.html)
     - [Kivy: Filechooser](kivy_filechooser.html)
     - [Kivy tips & tricks](kivy_tips.html)
 - # Blogs
