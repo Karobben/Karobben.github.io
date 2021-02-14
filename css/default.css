@@ -11244,6 +11244,7 @@ figure.highlight.folded .highlight-body {
   height: 0;
 }
 figure.highlight .copy {
+  color: #dc143c;
   opacity: 0.7;
 }
 figure.highlight pre,
@@ -11253,6 +11254,7 @@ figure.highlight table tr:hover {
 }
 figure.highlight table {
   width: auto;
+  max-height: 10;
 }
 figure.highlight table tr td {
   border: none;
