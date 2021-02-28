@@ -6,7 +6,7 @@
   <link href="https://karobben.github.io/atom.xml" rel="self"/>
   
   <link href="https://karobben.github.io/"/>
-  <updated>2021-02-28T02:23:41.228Z</updated>
+  <updated>2021-02-28T03:44:52.759Z</updated>
   <id>https://karobben.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://karobben.github.io/2021/02/28/Blog/dead_link/"/>
     <id>https://karobben.github.io/2021/02/28/Blog/dead_link/</id>
     <published>2021-02-27T16:00:00.000Z</published>
-    <updated>2021-02-28T02:23:41.228Z</updated>
+    <updated>2021-02-28T03:44:52.759Z</updated>
     
     <content type="html"><![CDATA[<h1>Find Dead Links in Your Blog/Website</h1><p>Links may die from time to times. Some old posts may be deleted, some old servers my be shout-done, some links dead because the host transplanted to another platform. And those dead links may damage your website’s rankings and usability. So, it is important to check and deleting them periodically.</p><h1><a href="https://www.deadlinkchecker.com/">Dead Link Checker</a></h1><p>This is one of most friendly and powerful tools for dead link check!<br>You can check the <strong>single page</strong> or <strong>Whole Website</strong> in a time.<br>It’ll check the first 2000 links in your website. For more service, you must subscribe it for advanced applications.</p><table><thead><tr><th style="text-align:center">Chick the single page</th><th style="text-align:center">Chick the website</th></tr></thead><tbody><tr><td style="text-align:center"><img src="https://s3.ax1x.com/2021/02/28/6932rT.md.png" alt="Chick the single page"></td><td style="text-align:center"><img src="https://s3.ax1x.com/2021/02/28/693RqU.md.png" alt="Chick the website"></td></tr></tbody></table><h2 id=""></h2><h1><a href="https://ntool.chinaz.com/linksTesting/list?url=karobben.github.io&amp;type=1">站长工具</a></h1><p>This tool can check the single page only.</p><p><img src="https://s3.ax1x.com/2021/02/28/693gMV.md.png" alt="693gMV.md.png"></p>]]></content>
     
@@ -30,16 +30,39 @@
     
     
     
-    <category term="Python" scheme="https://karobben.github.io/categories/Python/"/>
-    
-    <category term="API" scheme="https://karobben.github.io/categories/Python/API/"/>
+    <category term="Others" scheme="https://karobben.github.io/categories/Others/"/>
     
     
-    <category term="Python" scheme="https://karobben.github.io/tags/Python/"/>
+    <category term="HTML" scheme="https://karobben.github.io/tags/HTML/"/>
     
-    <category term="Plot" scheme="https://karobben.github.io/tags/Plot/"/>
+    <category term="Blog" scheme="https://karobben.github.io/tags/Blog/"/>
     
-    <category term="nCov" scheme="https://karobben.github.io/tags/nCov/"/>
+  </entry>
+  
+  <entry>
+    <title>Conky: Si-Fi Theme</title>
+    <link href="https://karobben.github.io/2021/02/28/Linux/Conky_si_fi/"/>
+    <id>https://karobben.github.io/2021/02/28/Linux/Conky_si_fi/</id>
+    <published>2021-02-27T16:00:00.000Z</published>
+    <updated>2021-02-28T04:25:44.808Z</updated>
+    
+    <content type="html"><![CDATA[<h1>Conky</h1><p><img src="https://s3.ax1x.com/2021/02/28/69aTKA.md.png" alt="69aTKA.md.png"></p><p>CODE: <a href="https://github.com/Karobben/Conky_sifi_theme">Karobben, GitHub</a><br>video: <a href="https://www.bilibili.com/video/BV1xQ4y1T74P">史上最不正經的生物狗, BiliBili</a></p><iframe style="width:100%;height:400px" src="//player.bilibili.com/player.html?aid=710384351&bvid=BV1xQ4y1T74P&cid=185470886&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>]]></content>
+    
+    
+    <summary type="html">Conky: Si-Fi Theme|Conky: 科幻主题配置</summary>
+    
+    
+    
+    <category term="Linux" scheme="https://karobben.github.io/categories/Linux/"/>
+    
+    <category term="Monitor" scheme="https://karobben.github.io/categories/Linux/Monitor/"/>
+    
+    
+    <category term="Linux" scheme="https://karobben.github.io/tags/Linux/"/>
+    
+    <category term="Desktop" scheme="https://karobben.github.io/tags/Desktop/"/>
+    
+    <category term="Conky" scheme="https://karobben.github.io/tags/Conky/"/>
     
   </entry>
   
@@ -520,37 +543,6 @@
     <category term="Diet Switch" scheme="https://karobben.github.io/tags/Diet-Switch/"/>
     
     <category term="Fish" scheme="https://karobben.github.io/tags/Fish/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Effects of black soldier fly (Hermetia illucens) larvae meal protein as a fishmeal replacement on the growth and immune index of yellow catfish (Pelteobagrus fulvidraco)</title>
-    <link href="https://karobben.github.io/2020/12/27/LearnNotes/Paper_BSFlylavea_Catfish_2018/"/>
-    <id>https://karobben.github.io/2020/12/27/LearnNotes/Paper_BSFlylavea_Catfish_2018/</id>
-    <published>2020-12-26T16:00:00.000Z</published>
-    <updated>2021-02-28T01:02:19.385Z</updated>
-    
-    <content type="html"><![CDATA[<h1>Effects of black soldier fly (Hermetia illucens) larvae meal protein as a fishmeal replacement on the growth and immune index of yellow catfish (Pelteobagrus fulvidraco)</h1><p>Cite: Xiaopeng Xiao, Peng Jin, Longyu Zheng, et al. “Effects of black soldier fly (Hermetia illucens) larvae meal protein as a fishmeal replacement on the growth and immune index of yellow catfish (Pelteobagrus fulvidraco)” Aquaculture Research(2018): 1569-1577.</p><h1>Abstract</h1><ul><li>65 days feeding trial</li><li>0% (control), 13%, 25%, 37%, 48%, 68%, 85% and 100%.</li><li>Increasing weight growth performance</li><li>Increasing immune index</li><li>29.1% of replacement has the best effect on growth and immune index</li><li>could partially replace the fish meal</li></ul><h1>MATERIALS AND METHODS</h1><p>Six day old BSFL was collected at the first day as it appearance of pre-pupae.</p><h1>Results</h1><p><img src="https://s3.ax1x.com/2020/12/27/r5qdoQ.png" alt="r5qdoQ.png"><br><img src="https://s3.ax1x.com/2020/12/27/r5x1Jg.png" alt="r5x1Jg.png"><br><img src="https://s3.ax1x.com/2020/12/27/r5zZhF.png" alt="r5zZhF.png"></p><table><thead><tr><th>Category</th><th>Higher</th><th>Lower</th><th style="text-align:center">Normal</th><th>Notes</th></tr></thead><tbody><tr><td><strong>Growth performance</strong></td><td>T13%, T25%, T37% and T48%</td><td></td><td style="text-align:center"></td><td></td></tr><tr><td><strong>Feed Conversion Ratio</strong></td><td></td><td>T13%, T25%, T37% and T48%</td><td style="text-align:center"></td><td><span style="background:salmon">Not Significant</span></td></tr><tr><td><strong>Protein productive value</strong></td><td>T13%, T25%, T37%, T48% and T68%</td><td></td><td style="text-align:center"></td><td><span style="background:salmon">Not Significant</span></td></tr><tr><td><strong>crude lipid</strong></td><td>T37% and T48%</td><td></td><td style="text-align:center"></td><td></td></tr><tr><td><strong>LZM activity</strong></td><td></td><td>T68% and</td><td style="text-align:center"></td><td></td></tr><tr><td>T100%</td><td></td><td></td><td style="text-align:center"></td><td></td></tr></tbody></table><h1>Discussion</h1><ul><li>25% of the replacement has the best effects on the fish.</li><li>replacement is up to 48%<ul><li>This agree with up to 45% replacement in juvenile European seabass(Magalh~ aes et al., 2017).<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup></li><li>yellow mealworms meal could only replace 18% of the FM diet.(Su et al.,2017)<sup class="footnote-ref"><a href="#fn2" id="fnref2">[2]</a></sup></li></ul></li><li>The value of Lue is higher than previous studies.</li><li>Chitin might influence the feed intake, availability and digestibility of the nutrients and growth performance of the fish (Cummins et al., 2017)<sup class="footnote-ref"><a href="#fn3" id="fnref3">[3]</a></sup></li><li>Increasing the immune index, might casued by the Chitin</li><li>Chitin may also responsible to the decrease of the palatable.</li></ul><hr class="footnotes-sep"><section class="footnotes"><ol class="footnotes-list"><li id="fn1" class="footnote-item"><p>Rui Magalhãesab, Antonio, Sánchez-Lópezbc, Renato Silva Leal, et al., (2017). Black soldier fly (Hermetia illucens) prepupae meal as a fish meal replacement in diets for European seabass (Dicentrarchus labrax). Aquaculture, 476, 79–85. <a href="https://doi.org/10.1016/j.aquaculture.2017.04.021">https://doi.org/10.1016/j.aquaculture.2017.04.021</a> <a href="#fnref1" class="footnote-backref">↩︎</a></p></li><li id="fn2" class="footnote-item"><p>Su, J., Gong, Y., Cao, S., Lu, F., Han, D., Liu, H., et al., (2017). Effects of dietary Tenebrio molitor meal on the growth performance, immune response and disease resistance of yellow catfish (Pelteobagrus fulvidraco). Fish &amp; Shellfish Immunology, 69, 59–66. <a href="https://doi.org/10.1016/j.fsi.2017.08.008">https://doi.org/10.1016/j.fsi.2017.08.008</a> <a href="#fnref2" class="footnote-backref">↩︎</a></p></li><li id="fn3" class="footnote-item"><p>Cummins, V. C. Jr, Rawles, S. D., Thompson, K. R., Velasquez, A., Kobayashi, Y., Hager, J. &amp; Webster, C. D. (2017). Evaluation of black soldier fly (Hermetia illucens) larvae meal as partial or total replacement of marine fish meal in practical diets for pacific white shrimp (Litopenaeus vannamei). Aquaculture, 473, 337–344. <a href="https://doi.org/10.1016/j.aquaculture.2017.02.022">https://doi.org/10.1016/j.aquaculture.2017.02.022</a> <a href="#fnref3" class="footnote-backref">↩︎</a></p></li></ol></section>]]></content>
-    
-    
-    <summary type="html">Effects of black soldier fly (Hermetia illucens) larvae meal protein as a fishmeal replacement on the growth and immune index of yellow catfish (Pelteobagrus fulvidraco)</summary>
-    
-    
-    
-    <category term="Notes" scheme="https://karobben.github.io/categories/Notes/"/>
-    
-    <category term="Biology" scheme="https://karobben.github.io/categories/Notes/Biology/"/>
-    
-    <category term="Paper" scheme="https://karobben.github.io/categories/Notes/Biology/Paper/"/>
-    
-    
-    <category term="Papers" scheme="https://karobben.github.io/tags/Papers/"/>
-    
-    <category term="Diet Switch" scheme="https://karobben.github.io/tags/Diet-Switch/"/>
-    
-    <category term="Fish" scheme="https://karobben.github.io/tags/Fish/"/>
-    
-    <category term="BSFL" scheme="https://karobben.github.io/tags/BSFL/"/>
     
   </entry>
   
