@@ -6,7 +6,7 @@
   <link href="https://karobben.github.io/atom.xml" rel="self"/>
   
   <link href="https://karobben.github.io/"/>
-  <updated>2021-03-03T15:17:37.837Z</updated>
+  <updated>2021-03-03T16:09:36.006Z</updated>
   <id>https://karobben.github.io/</id>
   
   <author>
@@ -15,23 +15,6 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>标点符号到底怎么了</title>
-    <link href="https://karobben.github.io/2021/03/02/Blog/test/"/>
-    <id>https://karobben.github.io/2021/03/02/Blog/test/</id>
-    <published>2021-03-01T16:00:00.000Z</published>
-    <updated>2021-03-03T15:17:37.837Z</updated>
-    
-    <content type="html"><![CDATA[<h1>什么情况呀!!!</h1><p>ss ''实打实</p><div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="R"><figure class="iseeu highlight /r"><table><tr><td class="code"><pre><code class="hljs r">install.packages(<span class="hljs-string">&#x27;ggplot2&quot;)</span><br></code></pre></td></tr></table></figure></div><p><code>'</code></p><p>!!!</p><p>这个真的最后一次测试了… Hope it works!</p>]]></content>
-    
-    
-    <summary type="html">这这这这这</summary>
-    
-    
-    
-    
-  </entry>
   
   <entry>
     <title>瓦雀.py</title>
@@ -535,6 +518,33 @@
     <category term="Fish" scheme="https://karobben.github.io/tags/Fish/"/>
     
     <category term="16s" scheme="https://karobben.github.io/tags/16s/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Python for Data Science</title>
+    <link href="https://karobben.github.io/2020/12/28/LearnNotes/edx_python_data/"/>
+    <id>https://karobben.github.io/2020/12/28/LearnNotes/edx_python_data/</id>
+    <published>2020-12-27T16:00:00.000Z</published>
+    <updated>2021-02-25T10:00:55.565Z</updated>
+    
+    <content type="html"><![CDATA[<h1>Python for Data Science</h1><p><strong>Insight</strong>:</p><p>Data + Analysis &amp; Question -&gt; Insight<br>build model, solving problems</p><p>Exp: Amazon recommendation new books to customers by their reading records</p><p>Prediction: take actions by the weather forecast.</p><p>Why data science arise recently:</p><ul><li>big Data</li><li>High performance of circulates</li></ul><p>Megabytes -&gt; Gigabytes -&gt; Terabytes -&gt; Petabytes -&gt;  Exabytes -&gt; Zettabyte</p><h1>Week 1</h1><h2 id="Why-is-python">Why is python</h2><ul><li>Easy-to-read and learn</li><li>Vibrant community</li><li>Growing and evolving set of libraries<ul><li>Data management</li><li>Analytical processing</li><li>Visualization</li></ul></li><li>Applicable to each step in the data science process</li><li>Notebooks</li></ul><h2 id="Exp-1-Soccer-Data-Analysis-Feature-Selection">Exp 1, Soccer Data Analysis: Feature Selection</h2><p>Five steps of Data processing:<br>Acquire:</p><ul><li>Import raw data into your platform<br>Prepare:</li><li>Explore &amp; Visualization<br>Analysis:</li><li>Feature Selection</li><li>Model</li><li>Analyze the results<br>report:</li><li>Resent your findings<br>Act:</li><li>Use then</li></ul><h2 id="Acquire">Acquire</h2><p>Database</p><table><thead><tr><th>Text File</th><th>Online data</th><th>Data Cleaning</th></tr></thead><tbody><tr><td>- Relational<br>- Non-relational</td><td>- Twitter<br>- Sensor</td><td>- Missing<br>- Garbage<br>- NULLs</td></tr></tbody></table><p><strong>Data Visualization</strong>:</p><ul><li>Catch your attention and convey your message in a minimal time</li></ul><h2 id="Prepare">Prepare</h2><table><tr><th>Exploring Data</th><th>Visualization</th><th>Pre-processing</th><th>Getting data in shape</th></tr><tr><td><ul><li>correlation; general trends, Outliers</li><li>Statistic</li></ul></td><td><ul><li>heatmap: Distribution;</li><li>Histogram: trends;</li><li>boxplot: trends</li><li>Line Graphs: Time serial;</li><li>Scatter plots: Correlation;</li></ul></td><td><ul><li>Clean &amp; Transform</li><li>remove; merge; estimate</li><li>remove outliers</li></ul></td><td><ul><li>scaling: (normalization)<ul><li>aggregation</li></ul></li><li>feature selection</li><li>Dimension reduction</li><li>Data Manipulation</li></ul></td></tr></table><h2 id="Analyze-Data">Analyze Data</h2><ul><li>Classification: Predict category</li><li>Regression: Predict numeric value</li><li>Clustering: Organize similar items or groups (Target marketing)</li><li>Graph Analytics: find connections between entities (social networks)</li><li>Association Analysis: capture associations between items (Customers’ purchase behavior)</li></ul><p>Select technique -&gt; Build model -&gt; validate model</p><h3 id="Evaluation-of-Results">Evaluation of Results</h3><p>Predicted <em>vs</em> Correct</p><h2 id="Reporting">Reporting</h2><p>What to present:<br>Main results; Value; Model leading to Act</p><p>Visualization tools:<br>R; Python;<br>JS: D3; Developers; Tableau; Timeline</p><h2 id="Action">Action</h2><p>Turning Insight into Action</p><h1>Week2</h1><p>Python is dynamic typing:<br>Object means it could easily turn int to float.</p>]]></content>
+    
+    
+    <summary type="html">Class Notes of Python for Data Science from Edx</summary>
+    
+    
+    
+    <category term="Notes" scheme="https://karobben.github.io/categories/Notes/"/>
+    
+    <category term="Class" scheme="https://karobben.github.io/categories/Notes/Class/"/>
+    
+    
+    <category term="Python" scheme="https://karobben.github.io/tags/Python/"/>
+    
+    <category term="Classes" scheme="https://karobben.github.io/tags/Classes/"/>
+    
+    <category term="Data Science" scheme="https://karobben.github.io/tags/Data-Science/"/>
     
   </entry>
   
