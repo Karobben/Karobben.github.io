@@ -6,7 +6,7 @@
   <link href="https://karobben.github.io/atom.xml" rel="self"/>
   
   <link href="https://karobben.github.io/"/>
-  <updated>2021-03-20T01:43:23.576Z</updated>
+  <updated>2021-03-20T01:59:19.715Z</updated>
   <id>https://karobben.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://karobben.github.io/2021/03/19/LearnNotes/class-math1/"/>
     <id>https://karobben.github.io/2021/03/19/LearnNotes/class-math1/</id>
     <published>2021-03-19T13:53:45.000Z</published>
-    <updated>2021-03-20T01:43:23.576Z</updated>
+    <updated>2021-03-20T01:59:19.715Z</updated>
     
     <content type="html"><![CDATA[<h2 id="集合">集合</h2><h3 id="交并补">交并补</h3><p><a href="https://blog.csdn.net/LCCFlccf/article/details/89643585">Latex Math symbols</a><br>交: $A \cap B={x| x \in A\ and\  x \in B }$<br>并: $A \cup B={ x| x \in A\ or\ x \in B }$<br>补: $A-B={x|x \in A\ and\ x \notin B }$</p><h3 id="基础运算">基础运算</h3><ol><li>交换律: $A \cap B = B \cap A; A \cup B = B \cup A$</li><li>结合律: $A \cap (B \cap C) = (A \cap B) \cap C; A \cup (B \cup C) = (A \cup B) \cup C$</li><li>分配率: $A\cap(B \cup C)=(A \cap B) \cup (A \cap C); A \cup (B \cap C)=(A \cup B)\cap(A \cup C)$</li><li>对偶律, De Morgan’s laws: $\overline{ A \cap B} = \overline{A} \cup \overline{B}; \overline{ A \cup B} = \overline{A} \cap \overline{B}$</li><li>吸收率: $A\cup(A\cap B) = A; A \cap(A \cup B) = A$</li><li>幂等律: $A\cup A = A; A \cap A = A$</li><li>$0-1$律: $A \cup \varnothing = A; A \cap \varnothing = \varnothing; A \cup X = X; A \cap X = A$</li><li>对合律: $\overline{\varnothing}=X; \overline{X} = \varnothing; A \cap \overline{A} = \varnothing; \overline{\overline{A}} = A$</li></ol>]]></content>
     
