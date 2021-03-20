@@ -10843,7 +10843,7 @@ article.article .content abbr:active::before {
   content: attr(title);
   position: absolute;
   top: 100%;
-  white-space: nowrap;
+  white-space: normal;
   background-color: #000;
   color: #fff;
   border-radius: 5px;
