@@ -6,7 +6,7 @@
   <link href="https://karobben.github.io/atom.xml" rel="self"/>
   
   <link href="https://karobben.github.io/"/>
-  <updated>2021-03-22T03:33:30.854Z</updated>
+  <updated>2021-03-22T04:20:31.332Z</updated>
   <id>https://karobben.github.io/</id>
   
   <author>
@@ -17,13 +17,46 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Hexo: Sitemap</title>
+    <link href="https://karobben.github.io/2021/03/22/Blog/hexo-sitemap/"/>
+    <id>https://karobben.github.io/2021/03/22/Blog/hexo-sitemap/</id>
+    <published>2021-03-22T04:09:59.000Z</published>
+    <updated>2021-03-22T04:20:31.332Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="“Hexo-Sitemap”">“Hexo: Sitemap”</h2><p>The Sitemaps protocol allows a webmaster to inform search engines about URLs on a website that are available for crawling. A Sitemap is an XML file that lists the URLs for a site. It allows webmasters to include additional information about each URL: when it was last updated, how often it changes, and how important it is in relation to other URLs of the site. This allows search engines to crawl the site more efficiently and to find URLs that may be isolated from the rest of the site’s content. The Sitemaps protocol is a URL inclusion protocol and complements robots.txt, a URL exclusion protocol.<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup></p><h3 id="install-plugins">install plugins<sup class="footnote-ref"><a href="#fn2" id="fnref2">[2]</a></sup></h3><div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># for google</span><br>npm install hexo-generator-sitemap --save<br><span class="hljs-comment"># for baidu</span><br>npm install hexo-generator-baidu-sitemap --save<br></code></pre></td></tr></table></figure></div><h3 id="Config">Config</h3><div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># URL</span><br><span class="hljs-comment">## If your site is put in a subdirectory,</span><br><span class="hljs-built_in">set</span> url as <span class="hljs-string">&#x27;http://yoursite.com/child&#x27;</span> and root as <span class="hljs-string">&#x27;/child/&#x27;</span><br>url: <span class="hljs-variable">$&#123;your domain&#125;</span><br>root: /<br>permalink: :year/:month/:day/:title/<br>permalink_defaults:<br>pretty_urls:<br>  trailing_index: <span class="hljs-literal">true</span> <span class="hljs-comment"># Set to false to remove trailing &#x27;index.html&#x27; from permalinks</span><br>  trailing_html: <span class="hljs-literal">true</span> <span class="hljs-comment"># Set to false to remove trailing &#x27;.html&#x27; from permalinks</span><br></code></pre></td></tr></table></figure></div><h2 id="Submit-to-Baidu">Submit to Baidu<sup class="footnote-ref"><a href="#fn3" id="fnref3">[3]</a></sup></h2><p>Click <a href="https://ziyuan.baidu.com/site/index#/">Home page</a></p><hr class="footnotes-sep"><section class="footnotes"><ol class="footnotes-list"><li id="fn1" class="footnote-item"><p><a href="http://en.wikipedia.org/wiki/Sitemaps">wikipedia: Sitemaps</a> <a href="#fnref1" class="footnote-backref">↩︎</a></p></li><li id="fn2" class="footnote-item"><p><a href="https://zhuanlan.zhihu.com/p/150999914">沧沧凉凉, 2020: Hexo进阶-生成站点地图（Sitemap）</a> <a href="#fnref2" class="footnote-backref">↩︎</a></p></li><li id="fn3" class="footnote-item"><p><a href="https://jingyan.baidu.com/article/49ad8bce4b6f4a5834d8fadc.html">leichaoyu01, 2015: 百度站长工具提交sitemap</a> <a href="#fnref3" class="footnote-backref">↩︎</a></p></li></ol></section>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;“Hexo-Sitemap”&quot;&gt;“Hexo: Sitemap”&lt;/h2&gt;
+&lt;p&gt;The Sitemaps protocol allows a webmaster to inform search engines about URLs on a website th</summary>
+      
+    
+    
+    
+    <category term="others" scheme="https://karobben.github.io/categories/others/"/>
+    
+    <category term="Blog" scheme="https://karobben.github.io/categories/others/Blog/"/>
+    
+    <category term="Hexo" scheme="https://karobben.github.io/categories/others/Blog/Hexo/"/>
+    
+    
+    <category term="MarkDown" scheme="https://karobben.github.io/tags/MarkDown/"/>
+    
+    <category term="Hexo" scheme="https://karobben.github.io/tags/Hexo/"/>
+    
+    <category term="Hexo Plugin" scheme="https://karobben.github.io/tags/Hexo-Plugin/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Hexo: Visitor traffic map</title>
     <link href="https://karobben.github.io/2021/03/22/Blog/hexo-worldmap/"/>
     <id>https://karobben.github.io/2021/03/22/Blog/hexo-worldmap/</id>
     <published>2021-03-22T02:26:50.000Z</published>
-    <updated>2021-03-22T03:33:30.854Z</updated>
+    <updated>2021-03-22T04:05:34.921Z</updated>
     
-    <content type="html"><![CDATA[<p>Please visit JNingWei<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup> to see more!</p><h2 id="clustrmaps"><a href="clustrmaps.com">clustrmaps</a></h2><p>Where to git the widget: <a href="https://clustrmaps.com/add">links</a></p><ul class="task-list"><li class="task-list-item"><input type="checkbox" id="cbx_0" checked="true" disabled="true"><label for="cbx_0"> Default model</label></li><li class="task-list-item"><input type="checkbox" id="cbx_1" disabled="true"><label for="cbx_1"> Customize for hexo</label></li></ul><p>Though it is highly customizable, it failed show customized style proprietorially in my hexo blog. No idea why.</p><p>Effects:</p><script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=-i1RAbH-h9aHEmWoLwPcQ5wyiILjE5GhqB9gLn_MTlQ&cl=ffffff&w=a"></script><h2 id="maploco"><a href="https://www.maploco.com/">maploco</a></h2><p>This is the easiest one to create. But seams you can’t customize it<br><a href="https://m.maploco.com/details/29a60k8d"><img style="border:0px;" src="https://www.maploco.com/vmap/10103917.png" alt="Locations of Site Visitors" title="Locations of Site Visitors"/></a></p><h2 id="Revolvermaps"><a href="https://www.revolvermaps.com/">Revolvermaps</a></h2><p>Revolvermaps is one of the most popular visitor traffic map among them since I saw it so frequent.</p><p>It can not only show 2D maps, but also a 3D globe is supportable.<br>The problem is it failed to show when even I tried to customize it. So, I moved on clustrmaps.</p><script type="text/javascript" src="//rf.revolvermaps.com/0/0/6.js?i=5obi4wthjqz&amp;m=7&amp;c=e63100&amp;cr1=ffffff&amp;f=arial&amp;l=0&amp;bv=90&amp;lx=-420&amp;ly=420&amp;hi=20&amp;he=7&amp;hc=a8ddff&amp;rs=80" async="async"></script><script type="text/javascript" src="//rf.revolvermaps.com/0/0/7.js?i=5obi4wthjqz&amp;m=0c&amp;c=f03b11&amp;cr1=ffffff&amp;sx=0&amp;cw=ffffff&amp;cb=3472cd" async="async"></script><p><a href="//rf.revolvermaps.com/w/7/a/a2.php?i=5obi4wthjqz&amp;m=0c&amp;c=f03b11&amp;cr1=ffffff&amp;sx=0&amp;cw=ffffff&amp;cb=3472cd">//rf.revolvermaps.com/w/7/a/a2.php?i=5obi4wthjqz&amp;m=0c&amp;c=f03b11&amp;cr1=ffffff&amp;sx=0&amp;cw=ffffff&amp;cb=3472cd</a></p><p><a href="//rf.revolvermaps.com/w/7/a/a2.php?i=5obi4wthjqz&amp;m=0c&amp;c=f03b11&amp;cr1=ffffff&amp;sx=0&amp;cw=ffffff&amp;cb=3472cd">//rf.revolvermaps.com/w/7/a/a2.php?i=5obi4wthjqz&amp;m=0c&amp;c=f03b11&amp;cr1=ffffff&amp;sx=0&amp;cw=ffffff&amp;cb=3472cd</a></p><hr class="footnotes-sep"><section class="footnotes"><ol class="footnotes-list"><li id="fn1" class="footnote-item"><p><a href="https://blog.csdn.net/JNingWei/article/details/78897441">JNingWei, 2017: 利用 visitor map (访客地图) 统计网站访客</a>) <a href="#fnref1" class="footnote-backref">↩︎</a></p></li></ol></section>]]></content>
+    <content type="html"><![CDATA[<p>Please visit JNingWei<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup> to see more!</p><h2 id="clustrmaps"><a href="https://clustrmaps.com/">clustrmaps</a></h2><p>Where to git the widget: <a href="https://clustrmaps.com/add">links</a></p><ul class="task-list"><li class="task-list-item"><input type="checkbox" id="cbx_0" checked="true" disabled="true"><label for="cbx_0"> Customize</label></li></ul><p>It is highly customizable and beautiful. But it runs a little bit slower than I expected.</p><p>Effects:</p><p><code>&lt;script type=&quot;text/javascript&quot; id=&quot;clustrmaps&quot; src=&quot;//clustrmaps.com/map_v2.js?d=-i1RAbH-h9aHEmWoLwPcQ5wyiILjE5GhqB9gLn_MTlQ&amp;cl=ffffff&amp;w=a&quot;&gt;&lt;/script&gt;</code></p><p>2D map:<br><a href="https://clustrmaps.com/site/1bgwc"  title="Visit tracker"><img src="//www.clustrmaps.com/map_v2.png?d=-i1RAbH-h9aHEmWoLwPcQ5wyiILjE5GhqB9gLn_MTlQ&cl=ffffff" /></a></p><p>3D Globe:</p><script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=-i1RAbH-h9aHEmWoLwPcQ5wyiILjE5GhqB9gLn_MTlQ"></script><h2 id="maploco"><a href="https://www.maploco.com/">maploco</a></h2><p>This is the easiest one to create. But seams you can’t customize it<br><a href="https://m.maploco.com/details/29a60k8d"><img style="border:0px;" src="https://www.maploco.com/vmap/10103917.png" alt="Locations of Site Visitors" title="Locations of Site Visitors"/></a></p><h2 id="Revolvermaps"><a href="https://www.revolvermaps.com/">Revolvermaps</a></h2><ul class="task-list"><li class="task-list-item"><input type="checkbox" id="cbx_1" checked="true" disabled="true"><label for="cbx_1"> Customize</label></li></ul><p>Revolvermaps is one of the most popular visitor traffic maps among them since I saw it so frequent.<br>It can not only show 2D maps, but also a 3D globe is supportable.</p><script type="text/javascript" src="//rf.revolvermaps.com/0/0/6.js?i=5obi4wthjqz&amp;m=7&amp;c=e63100&amp;cr1=ffffff&amp;f=arial&amp;l=0&amp;bv=90&amp;lx=-420&amp;ly=420&amp;hi=20&amp;he=7&amp;hc=a8ddff&amp;rs=80" async="async"></script><script type="text/javascript" src="//rf.revolvermaps.com/0/0/7.js?i=5obi4wthjqz&amp;m=0c&amp;c=f03b11&amp;cr1=ffffff&amp;sx=0&amp;cw=ffffff&amp;cb=3472cd" async="async"></script><p>One thing bother me a lot is that I failed to customize it when I inserted it below my profile widget. I thought it was the fault of the revolvermaps. But I find that it works fine when it present in post. That means the JS in the profile widget doesn’t work appropriate. By comparing the source of the JS between profile and widget:<br>There are slightly different between them<br>Source in Profile:<br><code>//rf.revolvermaps.com/w/7/a/a2.php?i=5obi4wthjqz&amp;amp;m=0c&amp;amp;c=f03b11&amp;amp;cr1=ffffff&amp;amp;sx=0&amp;amp;cw=ffffff&amp;amp;cb=3472cd</code><br>Source in Posrt:<br><code>//rf.revolvermaps.com/w/7/a/a2.php?i=5obi4wthjqz&amp;m=0c&amp;c=f03b11&amp;cr1=ffffff&amp;sx=0&amp;cw=ffffff&amp;cb=3472cd</code></p><p>The raw source is <code>//rf.revolvermaps.com/0/0/7.js?i=5obi4wthjqz&amp;amp;m=0c&amp;amp;c=f03b11&amp;amp;cr1=ffffff&amp;amp;sx=0&amp;amp;cw=ffffff&amp;amp;cb=3472cd</code></p><p>So, I altered it as <code>//rf.revolvermaps.com/0/0/7.js?i=5obi4wthjqz&amp;m=0c&amp;c=f03b11&amp;cr1=ffffff&amp;sx=0&amp;cw=ffffff&amp;cb=3472cd</code></p><p>And them, boon!! It works fine, now! Enjoy~</p><hr class="footnotes-sep"><section class="footnotes"><ol class="footnotes-list"><li id="fn1" class="footnote-item"><p><a href="https://blog.csdn.net/JNingWei/article/details/78897441">JNingWei, 2017: 利用 visitor map (访客地图) 统计网站访客</a>) <a href="#fnref1" class="footnote-backref">↩︎</a></p></li></ol></section>]]></content>
     
     
     <summary type="html">Display the visitor traffic in your statistic blog!</summary>
@@ -530,33 +563,6 @@
     <category term="Software" scheme="https://karobben.github.io/tags/Software/"/>
     
     <category term="Database" scheme="https://karobben.github.io/tags/Database/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Stem Cells: An Insider&#39;s Guide</title>
-    <link href="https://karobben.github.io/2021/01/17/LearnNotes/books_stemcell_ig/"/>
-    <id>https://karobben.github.io/2021/01/17/LearnNotes/books_stemcell_ig/</id>
-    <published>2021-01-16T16:00:00.000Z</published>
-    <updated>2021-03-18T05:33:13.496Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="Stem-Cells-An-Insider’s-Guide">Stem Cells: An Insider’s Guide</h2><p>Author: Paul Knoepfler</p><p>Just as the name of this book, it more reads like a guide, or, a collection of well-sorted and organized blog posts. It does not mean it is informal. It just this book much similar to the free-style of texts on the internet. You can really read it without too much of, like when you have to concentrate and being critical to read a paper or a STEM textbook, to read.</p><p>The author noticed that there are lots of steroid-type or prejudice opinions on stem cells most contributed to the commercial-advertises of stem cell therapy, though its potentials and probabilities are worth it. So, for correcting the name of the stem cells, Dr. Paul Knoepfler from U.C. Davis gave his opinions and advice on how people should, especially non-specialists and people who are the potential of stem cell treatment patients, respond to this area, for example, how to acquire more information to do self-teaching, should they take this therapy, how can companies make tricks and lies to dramatize it, what kind of results are they come with, and most importantly, how this industry works so people can understand that the result may not fit their expectation very well.</p>]]></content>
-    
-    
-    <summary type="html">Reading notes of the book: Stem Cells: An Insider&#39;s Guide</summary>
-    
-    
-    
-    <category term="Notes" scheme="https://karobben.github.io/categories/Notes/"/>
-    
-    <category term="Biology" scheme="https://karobben.github.io/categories/Notes/Biology/"/>
-    
-    <category term="Book" scheme="https://karobben.github.io/categories/Notes/Biology/Book/"/>
-    
-    
-    <category term="Books" scheme="https://karobben.github.io/tags/Books/"/>
-    
-    <category term="Stem Cell" scheme="https://karobben.github.io/tags/Stem-Cell/"/>
     
   </entry>
   
