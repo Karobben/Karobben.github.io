@@ -191,6 +191,13 @@
   </url>
   
   <url>
+    <loc>https://karobben.github.io/2021/03/19/LearnNotes/edx-biochm-1/</loc>
+    
+    <lastmod>2021-03-25</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://karobben.github.io/2021/03/22/Blog/hexo-worldmap/</loc>
     
     <lastmod>2021-03-25</lastmod>
@@ -213,13 +220,6 @@
   
   <url>
     <loc>https://karobben.github.io/2021/03/23/LearnNotes/edx-biochm-2/</loc>
-    
-    <lastmod>2021-03-24</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://karobben.github.io/2021/03/19/LearnNotes/edx-biochm-1/</loc>
     
     <lastmod>2021-03-24</lastmod>
     
@@ -2041,14 +2041,14 @@
   </url>
   
   <url>
-    <loc>https://karobben.github.io/tags/Database/</loc>
+    <loc>https://karobben.github.io/tags/R/</loc>
     <lastmod>2021-03-25</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://karobben.github.io/tags/R/</loc>
+    <loc>https://karobben.github.io/tags/Database/</loc>
     <lastmod>2021-03-25</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -2125,13 +2125,6 @@
   </url>
   
   <url>
-    <loc>https://karobben.github.io/tags/Trinity/</loc>
-    <lastmod>2021-03-25</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://karobben.github.io/tags/SNP/</loc>
     <lastmod>2021-03-25</lastmod>
     <changefreq>daily</changefreq>
@@ -2140,6 +2133,13 @@
   
   <url>
     <loc>https://karobben.github.io/tags/Python/</loc>
+    <lastmod>2021-03-25</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://karobben.github.io/tags/Trinity/</loc>
     <lastmod>2021-03-25</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -2265,14 +2265,14 @@
   </url>
   
   <url>
-    <loc>https://karobben.github.io/tags/GitPage/</loc>
+    <loc>https://karobben.github.io/tags/live2d/</loc>
     <lastmod>2021-03-25</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://karobben.github.io/tags/live2d/</loc>
+    <loc>https://karobben.github.io/tags/GitPage/</loc>
     <lastmod>2021-03-25</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -2293,6 +2293,13 @@
   </url>
   
   <url>
+    <loc>https://karobben.github.io/tags/Tools/</loc>
+    <lastmod>2021-03-25</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://karobben.github.io/tags/Atom/</loc>
     <lastmod>2021-03-25</lastmod>
     <changefreq>daily</changefreq>
@@ -2301,13 +2308,6 @@
   
   <url>
     <loc>https://karobben.github.io/tags/Latex/</loc>
-    <lastmod>2021-03-25</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://karobben.github.io/tags/Tools/</loc>
     <lastmod>2021-03-25</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -2363,14 +2363,14 @@
   </url>
   
   <url>
-    <loc>https://karobben.github.io/tags/Blog/</loc>
+    <loc>https://karobben.github.io/tags/Diary/</loc>
     <lastmod>2021-03-25</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://karobben.github.io/tags/Diary/</loc>
+    <loc>https://karobben.github.io/tags/Blog/</loc>
     <lastmod>2021-03-25</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -2482,14 +2482,14 @@
   </url>
   
   <url>
-    <loc>https://karobben.github.io/tags/Vocabulary/</loc>
+    <loc>https://karobben.github.io/tags/Fish/</loc>
     <lastmod>2021-03-25</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://karobben.github.io/tags/Fish/</loc>
+    <loc>https://karobben.github.io/tags/Vocabulary/</loc>
     <lastmod>2021-03-25</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -2531,14 +2531,14 @@
   </url>
   
   <url>
-    <loc>https://karobben.github.io/tags/Liver/</loc>
+    <loc>https://karobben.github.io/tags/Ted/</loc>
     <lastmod>2021-03-25</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://karobben.github.io/tags/Steroid-Hormones/</loc>
+    <loc>https://karobben.github.io/tags/Evolution/</loc>
     <lastmod>2021-03-25</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -2559,14 +2559,14 @@
   </url>
   
   <url>
-    <loc>https://karobben.github.io/tags/Ted/</loc>
+    <loc>https://karobben.github.io/tags/Liver/</loc>
     <lastmod>2021-03-25</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://karobben.github.io/tags/Evolution/</loc>
+    <loc>https://karobben.github.io/tags/Steroid-Hormones/</loc>
     <lastmod>2021-03-25</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -2636,13 +2636,6 @@
   </url>
   
   <url>
-    <loc>https://karobben.github.io/tags/Mind/</loc>
-    <lastmod>2021-03-25</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://karobben.github.io/tags/BDT/</loc>
     <lastmod>2021-03-25</lastmod>
     <changefreq>daily</changefreq>
@@ -2651,6 +2644,13 @@
   
   <url>
     <loc>https://karobben.github.io/tags/Stem-Cell/</loc>
+    <lastmod>2021-03-25</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://karobben.github.io/tags/Mind/</loc>
     <lastmod>2021-03-25</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -2685,14 +2685,14 @@
   </url>
   
   <url>
-    <loc>https://karobben.github.io/tags/Diabetics/</loc>
+    <loc>https://karobben.github.io/tags/Data-Science/</loc>
     <lastmod>2021-03-25</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://karobben.github.io/tags/Data-Science/</loc>
+    <loc>https://karobben.github.io/tags/Diabetics/</loc>
     <lastmod>2021-03-25</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -2720,13 +2720,6 @@
   </url>
   
   <url>
-    <loc>https://karobben.github.io/tags/Writing/</loc>
-    <lastmod>2021-03-25</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://karobben.github.io/tags/IDE/</loc>
     <lastmod>2021-03-25</lastmod>
     <changefreq>daily</changefreq>
@@ -2742,6 +2735,13 @@
   
   <url>
     <loc>https://karobben.github.io/tags/bash/</loc>
+    <lastmod>2021-03-25</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://karobben.github.io/tags/Writing/</loc>
     <lastmod>2021-03-25</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -2790,14 +2790,14 @@
   </url>
   
   <url>
-    <loc>https://karobben.github.io/tags/Multimedia/</loc>
+    <loc>https://karobben.github.io/tags/GitHub/</loc>
     <lastmod>2021-03-25</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://karobben.github.io/tags/GitHub/</loc>
+    <loc>https://karobben.github.io/tags/Multimedia/</loc>
     <lastmod>2021-03-25</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -2930,14 +2930,14 @@
   </url>
   
   <url>
-    <loc>https://karobben.github.io/tags/urwid/</loc>
+    <loc>https://karobben.github.io/tags/WordCloud/</loc>
     <lastmod>2021-03-25</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://karobben.github.io/tags/WordCloud/</loc>
+    <loc>https://karobben.github.io/tags/urwid/</loc>
     <lastmod>2021-03-25</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -2979,6 +2979,13 @@
   </url>
   
   <url>
+    <loc>https://karobben.github.io/tags/PCA/</loc>
+    <lastmod>2021-03-25</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://karobben.github.io/tags/Tutorials/</loc>
     <lastmod>2021-03-25</lastmod>
     <changefreq>daily</changefreq>
@@ -2987,13 +2994,6 @@
   
   <url>
     <loc>https://karobben.github.io/tags/Links/</loc>
-    <lastmod>2021-03-25</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://karobben.github.io/tags/PCA/</loc>
     <lastmod>2021-03-25</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
