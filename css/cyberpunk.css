@@ -10853,6 +10853,9 @@ article.article .content abbr:active::before {
   opacity: 0.8;
   z-index: 999;
 }
+article.article .content svg {
+  max-width: 100%;
+}
 article.article .content pre {
   font-size: 0.85em;
   max-height: 30em;
