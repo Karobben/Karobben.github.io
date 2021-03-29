@@ -6,7 +6,7 @@
   <link href="https://karobben.github.io/atom.xml" rel="self"/>
   
   <link href="https://karobben.github.io/"/>
-  <updated>2021-03-27T16:02:26.958Z</updated>
+  <updated>2021-03-29T16:31:59.690Z</updated>
   <id>https://karobben.github.io/</id>
   
   <author>
@@ -15,6 +15,60 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Principles of Biochemistry 5 | Enzyme Catalysis| Class Notes |HarvardX</title>
+    <link href="https://karobben.github.io/2021/03/29/LearnNotes/edx-biochm-5/"/>
+    <id>https://karobben.github.io/2021/03/29/LearnNotes/edx-biochm-5/</id>
+    <published>2021-03-29T07:06:26.000Z</published>
+    <updated>2021-03-29T16:31:59.690Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Enzyme-Catalysis">Enzyme Catalysis</h2><table><thead><tr><th style="text-align:center"><img src="https://www.creative-enzymes.com/images/1-2-Enzyme-Catalysis-1.jpg" alt="The free energy profile of an enzymatic reaction"></th></tr></thead><tbody><tr><td style="text-align:center">© Gerlt J A. 1994</td></tr></tbody></table><p>though, spontaneous reaction could happen automatically, it could run very slow without the help of the catalyzes.</p><h2 id="Why-Enzyme-Can-Catalysis">Why Enzyme Can Catalysis</h2><ul><li>transient covalent bonds<ul><li>Activate substrate, lower the active energy.</li></ul></li><li>weak non-covalent interaction<ul><li>binding energy: $ \Delta G_B$ (Figure: Enzymatic Reaction, D)needed energy decrease the reaction</li></ul></li><li>Desolvation:  weak interaction between water and substrate are replaced by weak interaction between the substrate and the enzyme.</li></ul><p><strong>C atalysis is driven by structure and conformational changes.</strong></p><table><thead><tr><th style="text-align:center"><img src="https://courses.edx.org/assets/courseware/v1/ff759f0869102fc7b3c44d93dd0923ca/asset-v1:harvardx+MCB63X+1T2021+type@asset+block/2.3.2_O2_Q1.png" alt="Figure: Enzymatic Reaction"></th></tr></thead><tbody><tr><td style="text-align:center">© HarvardX</td></tr></tbody></table><h3 id="Exp：-Beta-galactosidase">Exp： Beta-galactosidase</h3><p>$\beta$-glycosidic bond<br>$\alpha$-glycosidic bond</p><p>Beta-galactosidase can only hydrosis the $\beta$-glycosidic bond but not<br>$\alpha$-glycosidic bond though they are highly similar.</p><h2 id="…">…</h2><h3 id="Size-of-the-enzyme">Size of the enzyme</h3><p>Compared the small active site, the enzyme is relatively large.<br>The role of the the outside of the active site:</p><ul><li>position the active residues in the right position</li><li>optimizing catalysis by induced fit</li><li>enzyme regulation:<ul><li>methalation</li><li>phosphorylation: tyrosine, serine, and threonine residues.</li></ul></li><li>enzyme complexes</li><li>conformation change after bind the substrate<br>short pepited:</li><li>few conformation possibilities.</li></ul><h3 id="3-point-attachment-model">3-point attachment model</h3><p>Phenomenon: In a ethanol, two hydrogen bond to the Carbon and both of them are equally expected to be transferred to NADH， but only one of the hydrogen could be transferred.</p><p>In this model, the enzyme attach 3 positions on ethanol:</p><ul><li>methyl group</li><li>hydroxyl group</li><li>one specific hydrogen from the methylene group</li></ul><p>Describe the  of enzyme catalysis.<br>Recall the role of sequential substrate binding and induced fit in enzyme catalysis.<br>Understand the role of phosphorylation in enzyme regulation.</p>]]></content>
+    
+    
+    <summary type="html">protein folding; Class notes for biochemistry</summary>
+    
+    
+    
+    <category term="Notes" scheme="https://karobben.github.io/categories/Notes/"/>
+    
+    <category term="Class" scheme="https://karobben.github.io/categories/Notes/Class/"/>
+    
+    <category term="Biochemistry" scheme="https://karobben.github.io/categories/Notes/Class/Biochemistry/"/>
+    
+    
+    <category term="Biology" scheme="https://karobben.github.io/tags/Biology/"/>
+    
+    <category term="Python" scheme="https://karobben.github.io/tags/Python/"/>
+    
+    <category term="Classes" scheme="https://karobben.github.io/tags/Classes/"/>
+    
+    <category term="Biochemistry" scheme="https://karobben.github.io/tags/Biochemistry/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Learn Japanese Words Every Day</title>
+    <link href="https://karobben.github.io/2021/03/28/LearnNotes/japan/"/>
+    <id>https://karobben.github.io/2021/03/28/LearnNotes/japan/</id>
+    <published>2021-03-28T03:35:10.000Z</published>
+    <updated>2021-03-29T16:22:14.918Z</updated>
+    
+    <content type="html"><![CDATA[<h1>Install the input for linux</h1><div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="code"><pre><code class="hljs bash">sudo apt install mozc-server mozc-data fcitx-mozc mozc-utils-gui<br>reboot<br></code></pre></td></tr></table></figure></div><h1>Learn Japanese Words Every Day</h1><table><thead><tr><th style="text-align:left">Date</th><th style="text-align:left">Hiragana</th><th style="text-align:left">Katakana</th><th style="text-align:left">Romanization</th><th style="text-align:left">Translation</th></tr></thead><tbody><tr><td style="text-align:left">…/…/…</td><td style="text-align:left">ぴかちゅう</td><td style="text-align:left"><strong>ピカチュウ</strong></td><td style="text-align:left">pikachu</td><td style="text-align:left">pikachu</td></tr><tr><td style="text-align:left">…/…/…</td><td style="text-align:left">さとし</td><td style="text-align:left"><strong>サトシ</strong></td><td style="text-align:left">satoshi</td><td style="text-align:left">Ash</td></tr><tr><td style="text-align:left">21/03/26</td><td style="text-align:left">ばか</td><td style="text-align:left"><strong>バカ</strong></td><td style="text-align:left">baka</td><td style="text-align:left">idiot</td></tr><tr><td style="text-align:left">21/03/27</td><td style="text-align:left"><strong>こんにちは</strong></td><td style="text-align:left">コンニチハ</td><td style="text-align:left">Kon’nichiwa</td><td style="text-align:left">hello</td></tr><tr><td style="text-align:left">21/03/28</td><td style="text-align:left"><strong>おはよう</strong></td><td style="text-align:left">オハヨウ</td><td style="text-align:left">ohayou</td><td style="text-align:left">good morning</td></tr><tr><td style="text-align:left">21/03/29</td><td style="text-align:left"><strong>すごいね</strong></td><td style="text-align:left">スゴイネ</td><td style="text-align:left">sugoi ne</td><td style="text-align:left">great, awesome</td></tr><tr><td style="text-align:left">21/03/29</td><td style="text-align:left"><strong>おひさしぶり</strong></td><td style="text-align:left">オヒサシブリ</td><td style="text-align:left">oo hisashi buri</td><td style="text-align:left">long time no see</td></tr></tbody></table>]]></content>
+    
+    
+    <summary type="html">Why not try to learn some common Japanese words since Japanese game and animations are so great</summary>
+    
+    
+    
+    <category term="Notes" scheme="https://karobben.github.io/categories/Notes/"/>
+    
+    <category term="Japanese" scheme="https://karobben.github.io/categories/Notes/Japanese/"/>
+    
+    
+    <category term="Japanese" scheme="https://karobben.github.io/tags/Japanese/"/>
+    
+  </entry>
   
   <entry>
     <title>Principles of Biochemistry 4 |Peptide Folding| Class Notes |HarvardX</title>
@@ -521,58 +575,6 @@
     <category term="Hexo" scheme="https://karobben.github.io/tags/Hexo/"/>
     
     <category term="GitPage" scheme="https://karobben.github.io/tags/GitPage/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>kivy ScrollView</title>
-    <link href="https://karobben.github.io/2021/02/10/Python/kivy_scrollview/"/>
-    <id>https://karobben.github.io/2021/02/10/Python/kivy_scrollview/</id>
-    <published>2021-02-09T16:00:00.000Z</published>
-    <updated>2021-03-26T03:12:11.542Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="https://kivy.org/doc/stable/api-kivy.uix.scrollview.html">Official Document</a></p><p>However, examples from the official document have shown the basics of this widget. But for newbies, it is easy to write an unworking widget due to a lack of understanding of it.</p><h2 id="Quick-Start">Quick Start</h2><div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">from</span> kivy.uix.gridlayout <span class="hljs-keyword">import</span> GridLayout<br><span class="hljs-keyword">from</span> kivy.uix.button <span class="hljs-keyword">import</span> Button<br><span class="hljs-keyword">from</span> kivy.uix.scrollview <span class="hljs-keyword">import</span> ScrollView<br><span class="hljs-keyword">from</span> kivy.core.window <span class="hljs-keyword">import</span> Window<br><span class="hljs-keyword">from</span> kivy.app <span class="hljs-keyword">import</span> runTouchApp<br><br>layout = GridLayout(cols=<span class="hljs-number">1</span>, spacing=<span class="hljs-number">10</span>, size_hint_y=<span class="hljs-literal">None</span>)<br><span class="hljs-comment">## Make sure the height is such that there is something to scroll.</span><br>layout.bind(minimum_height=layout.setter(<span class="hljs-string">&#x27;height&#x27;</span>))<br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">100</span>):<br>    btn = Button(text=<span class="hljs-built_in">str</span>(i), size_hint_y=<span class="hljs-literal">None</span>, height=<span class="hljs-number">40</span>)<br>    layout.add_widget(btn)<br>root = ScrollView(size_hint=(<span class="hljs-number">1</span>, <span class="hljs-literal">None</span>), size=(Window.width, Window.height))<br>root.add_widget(layout)<br><br>runTouchApp(root)<br></code></pre></td></tr></table></figure></div><h2 id="Why-Am-I-failed-to-scroll-my-widget">Why Am I failed to scroll my widget</h2><p>The problem is that after you settled everything in your <code>kv</code> file, the sub-widget has the same size as the ScrollView widget by default. So, to have a functional scrolling behavior, you’d like to make sure the sub-widget is larger than the ScrollView widget. Let’s go back to the example from the document:</p><div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="code"><pre><code class="hljs kv">ScrollView:<br>    do_scroll_x: False<br>    do_scroll_y: True<br><br>    Label:<br>        size_hint_y: None<br>        height: self.texture_size[1]<br>        text_size: self.width, None<br>        padding: 10, 10<br>        text:<br>            &#39;really some amazing text\n&#39; * 100<br></code></pre></td></tr></table></figure></div><p>In this <code>kv</code> file, two lines are important to redefine the height of this sub-widget.</p><div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="code"><pre><code class="hljs kv">size_hint_y: None<br>height: self.texture_size[1]<br></code></pre></td></tr></table></figure></div><p>The problem is <code>self.texture_size[1]</code> is for text only. You’d like to replace it with an int, 1000, for example.</p><p>But of course, there is a better resolution from <a href="https://stackoverflow.com/questions/32445341/kivy-scrollview-not-scrolling">@amd, 2015</a></p><div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="code"><pre><code class="hljs kv">height: self.minimum_height<br></code></pre></td></tr></table></figure></div><p>An example could show as:</p><div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="code"><pre><code class="hljs kv">ScrollView:<br>    size: 300, 20<br>    do_scroll_x: False<br>    do_scroll_y: True<br><br>    BoxLayout:<br>        size_hint_y: None<br>        height: self.minimum_height<br>        padding: 10, 10<br><br>        MyButton:<br>          text: &#39;hit me 1&#39;<br>        MyButton:<br>          text: &#39;hit me 2&#39;<br>        MyButton:<br>          text: &#39;hit me 3&#39;<br>        MyButton:<br>          text: &#39;hit me 4&#39;<br>        MyButton:<br>          text: &#39;hit me 5&#39;<br>        MyButton:<br>          text: &#39;hit me 6&#39;<br></code></pre></td></tr></table></figure></div><p><em><strong>Case closed!!!</strong></em></p>]]></content>
-    
-    
-    <summary type="html">kivy widget: ScrollView | auto fit to the high of the widget</summary>
-    
-    
-    
-    <category term="Python" scheme="https://karobben.github.io/categories/Python/"/>
-    
-    <category term="Kivy" scheme="https://karobben.github.io/categories/Python/Kivy/"/>
-    
-    
-    <category term="Python" scheme="https://karobben.github.io/tags/Python/"/>
-    
-    <category term="Kivy" scheme="https://karobben.github.io/tags/Kivy/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>eChart is fun</title>
-    <link href="https://karobben.github.io/2021/02/01/Blog/echart/"/>
-    <id>https://karobben.github.io/2021/02/01/Blog/echart/</id>
-    <published>2021-01-31T16:00:00.000Z</published>
-    <updated>2021-03-26T03:12:11.485Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="eChart-is-fun">eChart is fun</h2><p>Official examples: <a href="https://echarts.apache.org/zh/index.html">Apache ECharts</a></p><p>请移步<a href="https://karobben.github.io/2021/02/01/Blog/echart/">博客</a>阅读, 不然只能是一堆乱码…</p><h2 id="Install-eChart">Install eChart</h2><div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="code"><pre><code class="hljs bash">git <span class="hljs-built_in">clone</span> https://github.com/apache/echarts.git<br></code></pre></td></tr></table></figure></div><p>Than, you can using it as the instructions written by <a href="https://blog.csdn.net/Quest_sec/article/details/105612523">Quest_sec 2020</a></p><h2 id="Running-it-in-hexo">Running it in hexo</h2><div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="code"><pre><code class="hljs bash">npm install hexo-tag-echarts3 --save<br></code></pre></td></tr></table></figure></div><p>and then, insert codes below</p><div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="code"><pre><code class="hljs hexo">&#123;% echarts 400 &#39;85%&#39; %&#125;<br>&#123;<br>    tooltip : &#123;<br>        trigger: &#39;axis&#39;,<br>        axisPointer : &#123;            &#x2F;&#x2F; 坐标轴指示器，坐标轴触发有效<br>            type : &#39;shadow&#39;        &#x2F;&#x2F; 默认为直线，可选为：&#39;line&#39; | &#39;shadow&#39;<br>        &#125;<br>    &#125;,<br>    legend: &#123;<br>        data:[&#39;利润&#39;, &#39;支出&#39;, &#39;收入&#39;]<br>    &#125;,<br>    grid: &#123;<br>        left: &#39;3%&#39;,<br>        right: &#39;4%&#39;,<br>        bottom: &#39;3%&#39;,<br>        containLabel: true<br>    &#125;,<br>    xAxis : [<br>        &#123;<br>            type : &#39;value&#39;<br>        &#125;<br>    ],<br>    yAxis : [<br>        &#123;<br>            type : &#39;category&#39;,<br>            axisTick : &#123;show: false&#125;,<br>            data : [&#39;周一&#39;,&#39;周二&#39;,&#39;周三&#39;,&#39;周四&#39;,&#39;周五&#39;,&#39;周六&#39;,&#39;周日&#39;]<br>        &#125;<br>    ],<br>    series : [<br>        &#123;<br>            name:&#39;利润&#39;,<br>            type:&#39;bar&#39;,<br>            itemStyle : &#123;<br>                normal: &#123;<br>                    label: &#123;show: true, position: &#39;inside&#39;&#125;<br>                &#125;<br>            &#125;,<br>            data:[200, 170, 240, 244, 200, 220, 210]<br>        &#125;,<br>        &#123;<br>            name:&#39;收入&#39;,<br>            type:&#39;bar&#39;,<br>            stack: &#39;总量&#39;,<br>            itemStyle: &#123;<br>                normal: &#123;<br>                    label : &#123;show: true&#125;<br>                &#125;<br>            &#125;,<br>            data:[320, 302, 341, 374, 390, 450, 420]<br>        &#125;,<br>        &#123;<br>            name:&#39;支出&#39;,<br>            type:&#39;bar&#39;,<br>            stack: &#39;总量&#39;,<br>            itemStyle: &#123;normal: &#123;<br>                label : &#123;show: true, position: &#39;left&#39;&#125;<br>            &#125;&#125;,<br>            data:[-120, -132, -101, -134, -190, -230, -210]<br>        &#125;<br>    ]<br>&#125;;<br>&#123;% endecharts %&#125;<br></code></pre></td></tr></table></figure></div><p>This is how it looks like from the codes above:</p><div id="echarts2350" style="width: 85%;height: 400px;margin: 0 auto"></div><script src="https://cdn.bootcss.com/echarts/3.8.0/echarts.common.min.js"></script><script type="text/javascript">        // 基于准备好的dom，初始化echarts实例        var myChart = echarts.init(document.getElementById('echarts2350'));        // 指定图表的配置项和数据        var option = {   tooltip: {       trigger: 'axis',       axisPointer: {            // 坐标轴指示器，坐标轴触发有效           type: 'shadow'        // 默认为直线，可选为：'line' | 'shadow'       }   },   legend: {       data: ['利润', '支出', '收入']   },   grid: {       left: '3%',       right: '4%',       bottom: '3%',       containLabel: true   },   xAxis: [       {           type: 'value'       }   ],   yAxis: [       {           type: 'category',           axisTick: {               show: false           },           data: ['周一', '周二', '周三', '周四', '周五', '周六', '周日']       }   ],   series: [       {           name: '利润',           type: 'bar',           label: {               show: true,               position: 'inside'           },           emphasis: {               focus: 'series'           },           data: [200, 170, 240, 244, 200, 220, 210]       },       {           name: '收入',           type: 'bar',           stack: '总量',           label: {               show: true           },           emphasis: {               focus: 'series'           },           data: [320, 302, 341, 374, 390, 450, 420]       },       {           name: '支出',           type: 'bar',           stack: '总量',           label: {               show: true,               position: 'left'           },           emphasis: {               focus: 'series'           },           data: [-120, -132, -101, -134, -190, -230, -210]       }   ]};        // 使用刚指定的配置项和数据显示图表。        myChart.setOption(option);</script>]]></content>
-    
-    
-    <summary type="html">How to start with Echart</summary>
-    
-    
-    
-    <category term="Python" scheme="https://karobben.github.io/categories/Python/"/>
-    
-    <category term="API" scheme="https://karobben.github.io/categories/Python/API/"/>
-    
-    
-    <category term="Python" scheme="https://karobben.github.io/tags/Python/"/>
-    
-    <category term="Plot" scheme="https://karobben.github.io/tags/Plot/"/>
-    
-    <category term="nCov" scheme="https://karobben.github.io/tags/nCov/"/>
     
   </entry>
   
