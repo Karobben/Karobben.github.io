@@ -1,16 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://karobben.github.io/2021/03/28/LearnNotes/japan/</loc>
-    <lastmod>2021-04-01</lastmod>
+    <loc>https://karobben.github.io/2020/06/12/R/GGplot/</loc>
+    <lastmod>2021-04-02</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2020/05/01/R/Data-cleaning/</loc>
+    <lastmod>2021-04-02</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2020/01/22/Blog/Html/</loc>
+    <lastmod>2021-04-02</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2021/04/02/LearnNotes/edx-biochm-7/</loc>
+    <lastmod>2021-04-02</lastmod>
   </url>
   <url>
     <loc>https://karobben.github.io/2021/03/31/LearnNotes/edx-biochm-6/</loc>
-    <lastmod>2021-04-01</lastmod>
+    <lastmod>2021-04-02</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2021/03/28/LearnNotes/japan/</loc>
+    <lastmod>2021-04-02</lastmod>
   </url>
   <url>
     <loc>https://karobben.github.io/2021/03/31/R/ggupset/</loc>
-    <lastmod>2021-03-31</lastmod>
+    <lastmod>2021-04-01</lastmod>
   </url>
   <url>
     <loc>https://karobben.github.io/2020/08/13/R/geom_tufteboxplot/</loc>
@@ -261,10 +277,6 @@
     <lastmod>2021-03-26</lastmod>
   </url>
   <url>
-    <loc>https://karobben.github.io/2020/06/12/R/GGplot/</loc>
-    <lastmod>2021-03-26</lastmod>
-  </url>
-  <url>
     <loc>https://karobben.github.io/2020/08/13/R/GGplot_tricks/</loc>
     <lastmod>2021-03-26</lastmod>
   </url>
@@ -294,10 +306,6 @@
   </url>
   <url>
     <loc>https://karobben.github.io/2020/06/28/R/Correlation/</loc>
-    <lastmod>2021-03-26</lastmod>
-  </url>
-  <url>
-    <loc>https://karobben.github.io/2020/05/01/R/Data-cleaning/</loc>
     <lastmod>2021-03-26</lastmod>
   </url>
   <url>
@@ -974,10 +982,6 @@
   </url>
   <url>
     <loc>https://karobben.github.io/2020/06/20/Blog/Hexo_widget_weather/</loc>
-    <lastmod>2021-03-26</lastmod>
-  </url>
-  <url>
-    <loc>https://karobben.github.io/2020/01/22/Blog/Html/</loc>
     <lastmod>2021-03-26</lastmod>
   </url>
   <url>
