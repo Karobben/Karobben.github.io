@@ -1,11 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://karobben.github.io/2021/04/04/R/ggplot-bubble-tree/</loc>
-    <lastmod>2021-04-03</lastmod>
+    <loc>https://karobben.github.io/2021/04/02/LearnNotes/edx-biochm-7/</loc>
+    <lastmod>2021-04-04</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2021/02/01/Blog/echart/</loc>
+    <lastmod>2021-04-04</lastmod>
   </url>
   <url>
     <loc>https://karobben.github.io/2021/03/28/LearnNotes/japan/</loc>
+    <lastmod>2021-04-04</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2021/04/04/R/ggplot-bubble-tree/</loc>
     <lastmod>2021-04-03</lastmod>
   </url>
   <url>
@@ -26,10 +34,6 @@
   </url>
   <url>
     <loc>https://karobben.github.io/2020/01/22/Blog/Html/</loc>
-    <lastmod>2021-04-02</lastmod>
-  </url>
-  <url>
-    <loc>https://karobben.github.io/2021/04/02/LearnNotes/edx-biochm-7/</loc>
     <lastmod>2021-04-02</lastmod>
   </url>
   <url>
@@ -850,10 +854,6 @@
   </url>
   <url>
     <loc>https://karobben.github.io/2020/08/04/Blog/ggplot_hclust/</loc>
-    <lastmod>2021-03-26</lastmod>
-  </url>
-  <url>
-    <loc>https://karobben.github.io/2021/02/01/Blog/echart/</loc>
     <lastmod>2021-03-26</lastmod>
   </url>
   <url>
