@@ -1,20 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://karobben.github.io/2021/04/08/LearnNotes/binomial/</loc>
+    <lastmod>2021-04-09</lastmod>
+  </url>
+  <url>
     <loc>https://karobben.github.io/2021/04/02/LearnNotes/edx-biochm-7/</loc>
-    <lastmod>2021-04-04</lastmod>
+    <lastmod>2021-04-09</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2020/12/28/LearnNotes/paper_review_insectmeal/</loc>
+    <lastmod>2021-04-09</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2021/04/04/R/ggplot-bubble-tree/</loc>
+    <lastmod>2021-04-08</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2021/03/28/LearnNotes/japan/</loc>
+    <lastmod>2021-04-07</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2020/08/04/Blog/ggplot_hclust/</loc>
+    <lastmod>2021-04-07</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2021/04/07/Bioinfor/paper-edger/</loc>
+    <lastmod>2021-04-07</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2021/02/11/Blog/hexo_icarus/</loc>
+    <lastmod>2021-04-07</lastmod>
   </url>
   <url>
     <loc>https://karobben.github.io/2021/02/01/Blog/echart/</loc>
     <lastmod>2021-04-04</lastmod>
-  </url>
-  <url>
-    <loc>https://karobben.github.io/2021/03/28/LearnNotes/japan/</loc>
-    <lastmod>2021-04-04</lastmod>
-  </url>
-  <url>
-    <loc>https://karobben.github.io/2021/04/04/R/ggplot-bubble-tree/</loc>
-    <lastmod>2021-04-03</lastmod>
   </url>
   <url>
     <loc>https://karobben.github.io/2020/06/19/R/GG_goplot/</loc>
@@ -573,10 +593,6 @@
     <lastmod>2021-03-26</lastmod>
   </url>
   <url>
-    <loc>https://karobben.github.io/2020/06/26/Linux/Shop-store/</loc>
-    <lastmod>2021-03-26</lastmod>
-  </url>
-  <url>
     <loc>https://karobben.github.io/2020/06/26/Linux/Start-With-Rasberry-pi/</loc>
     <lastmod>2021-03-26</lastmod>
   </url>
@@ -585,7 +601,7 @@
     <lastmod>2021-03-26</lastmod>
   </url>
   <url>
-    <loc>https://karobben.github.io/2020/06/23/Linux/Download-Software/</loc>
+    <loc>https://karobben.github.io/2020/06/26/Linux/Shop-store/</loc>
     <lastmod>2021-03-26</lastmod>
   </url>
   <url>
@@ -594,6 +610,10 @@
   </url>
   <url>
     <loc>https://karobben.github.io/2020/06/23/Linux/Matain/</loc>
+    <lastmod>2021-03-26</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2020/06/23/Linux/Download-Software/</loc>
     <lastmod>2021-03-26</lastmod>
   </url>
   <url>
@@ -625,11 +645,11 @@
     <lastmod>2021-03-26</lastmod>
   </url>
   <url>
-    <loc>https://karobben.github.io/2020/06/26/Linux/Atom/</loc>
+    <loc>https://karobben.github.io/2020/06/23/Linux/Blive-with-RasperryPi/</loc>
     <lastmod>2021-03-26</lastmod>
   </url>
   <url>
-    <loc>https://karobben.github.io/2020/06/23/Linux/Blive-with-RasperryPi/</loc>
+    <loc>https://karobben.github.io/2020/06/26/Linux/Atom/</loc>
     <lastmod>2021-03-26</lastmod>
   </url>
   <url>
@@ -653,15 +673,11 @@
     <lastmod>2021-03-26</lastmod>
   </url>
   <url>
-    <loc>https://karobben.github.io/2020/12/28/LearnNotes/paper_review_insectmeal/</loc>
+    <loc>https://karobben.github.io/2020/07/07/LearnNotes/paper_WGCNA/</loc>
     <lastmod>2021-03-26</lastmod>
   </url>
   <url>
     <loc>https://karobben.github.io/2020/06/23/LearnNotes/mtGenome/</loc>
-    <lastmod>2021-03-26</lastmod>
-  </url>
-  <url>
-    <loc>https://karobben.github.io/2020/07/07/LearnNotes/paper_WGCNA/</loc>
     <lastmod>2021-03-26</lastmod>
   </url>
   <url>
@@ -685,11 +701,11 @@
     <lastmod>2021-03-26</lastmod>
   </url>
   <url>
-    <loc>https://karobben.github.io/2020/08/22/LearnNotes/Ted2-Selfdecipline_T/</loc>
+    <loc>https://karobben.github.io/2020/08/22/LearnNotes/Ted2-Selfdecipline/</loc>
     <lastmod>2021-03-26</lastmod>
   </url>
   <url>
-    <loc>https://karobben.github.io/2020/08/22/LearnNotes/Ted2-Selfdecipline/</loc>
+    <loc>https://karobben.github.io/2020/08/22/LearnNotes/Ted2-Selfdecipline_T/</loc>
     <lastmod>2021-03-26</lastmod>
   </url>
   <url>
@@ -717,11 +733,11 @@
     <lastmod>2021-03-26</lastmod>
   </url>
   <url>
-    <loc>https://karobben.github.io/2020/07/07/LearnNotes/Paper_Vilhelmsson2004/</loc>
+    <loc>https://karobben.github.io/2020/07/07/LearnNotes/Paper_WheatInhi/</loc>
     <lastmod>2021-03-26</lastmod>
   </url>
   <url>
-    <loc>https://karobben.github.io/2020/07/07/LearnNotes/Paper_WheatInhi/</loc>
+    <loc>https://karobben.github.io/2020/07/07/LearnNotes/Paper_Vilhelmsson2004/</loc>
     <lastmod>2021-03-26</lastmod>
   </url>
   <url>
@@ -825,10 +841,6 @@
     <lastmod>2021-03-26</lastmod>
   </url>
   <url>
-    <loc>https://karobben.github.io/2021/02/11/Blog/hexo_icarus/</loc>
-    <lastmod>2021-03-26</lastmod>
-  </url>
-  <url>
     <loc>https://karobben.github.io/2021/02/21/Blog/hexo_lived2d_busuanzi/</loc>
     <lastmod>2021-03-26</lastmod>
   </url>
@@ -850,10 +862,6 @@
   </url>
   <url>
     <loc>https://karobben.github.io/2020/07/28/Blog/ggplot_NRPlot/</loc>
-    <lastmod>2021-03-26</lastmod>
-  </url>
-  <url>
-    <loc>https://karobben.github.io/2020/08/04/Blog/ggplot_hclust/</loc>
     <lastmod>2021-03-26</lastmod>
   </url>
   <url>
@@ -949,11 +957,11 @@
     <lastmod>2021-03-26</lastmod>
   </url>
   <url>
-    <loc>https://karobben.github.io/2020/08/25/Blog/Online_tools/</loc>
+    <loc>https://karobben.github.io/2020/10/25/Blog/OpenCV_BlurtDetect/</loc>
     <lastmod>2021-03-26</lastmod>
   </url>
   <url>
-    <loc>https://karobben.github.io/2020/10/25/Blog/OpenCV_BlurtDetect/</loc>
+    <loc>https://karobben.github.io/2020/08/25/Blog/Online_tools/</loc>
     <lastmod>2021-03-26</lastmod>
   </url>
   <url>
@@ -961,11 +969,11 @@
     <lastmod>2021-03-26</lastmod>
   </url>
   <url>
-    <loc>https://karobben.github.io/2020/10/25/Blog/Kivy_note1/</loc>
+    <loc>https://karobben.github.io/2020/08/25/Blog/Latex/</loc>
     <lastmod>2021-03-26</lastmod>
   </url>
   <url>
-    <loc>https://karobben.github.io/2020/08/25/Blog/Latex/</loc>
+    <loc>https://karobben.github.io/2020/10/25/Blog/Kivy_note1/</loc>
     <lastmod>2021-03-26</lastmod>
   </url>
   <url>
@@ -989,11 +997,11 @@
     <lastmod>2021-03-26</lastmod>
   </url>
   <url>
-    <loc>https://karobben.github.io/2020/07/30/Blog/Hexo_live2d/</loc>
+    <loc>https://karobben.github.io/2020/06/30/Blog/Hexo_math/</loc>
     <lastmod>2021-03-26</lastmod>
   </url>
   <url>
-    <loc>https://karobben.github.io/2020/06/30/Blog/Hexo_math/</loc>
+    <loc>https://karobben.github.io/2020/07/30/Blog/Hexo_live2d/</loc>
     <lastmod>2021-03-26</lastmod>
   </url>
   <url>
@@ -1037,11 +1045,11 @@
     <lastmod>2021-03-26</lastmod>
   </url>
   <url>
-    <loc>https://karobben.github.io/2020/07/28/Bioinfor/sratools/</loc>
+    <loc>https://karobben.github.io/2020/07/28/Bioinfor/snp_samtools/</loc>
     <lastmod>2021-03-26</lastmod>
   </url>
   <url>
-    <loc>https://karobben.github.io/2020/07/28/Bioinfor/snp_samtools/</loc>
+    <loc>https://karobben.github.io/2020/07/28/Bioinfor/sratools/</loc>
     <lastmod>2021-03-26</lastmod>
   </url>
   <url>
@@ -1077,11 +1085,11 @@
     <lastmod>2021-03-26</lastmod>
   </url>
   <url>
-    <loc>https://karobben.github.io/2020/07/27/Bioinfor/faAlign/</loc>
+    <loc>https://karobben.github.io/2020/07/28/Bioinfor/fastp/</loc>
     <lastmod>2021-03-26</lastmod>
   </url>
   <url>
-    <loc>https://karobben.github.io/2020/07/28/Bioinfor/fastp/</loc>
+    <loc>https://karobben.github.io/2020/07/27/Bioinfor/faAlign/</loc>
     <lastmod>2021-03-26</lastmod>
   </url>
   <url>
@@ -1093,11 +1101,11 @@
     <lastmod>2021-03-26</lastmod>
   </url>
   <url>
-    <loc>https://karobben.github.io/2020/07/28/Bioinfor/WGCNA/</loc>
+    <loc>https://karobben.github.io/2020/07/28/Bioinfor/blast/</loc>
     <lastmod>2021-03-26</lastmod>
   </url>
   <url>
-    <loc>https://karobben.github.io/2020/07/28/Bioinfor/blast/</loc>
+    <loc>https://karobben.github.io/2020/07/28/Bioinfor/WGCNA/</loc>
     <lastmod>2021-03-26</lastmod>
   </url>
   <url>
@@ -1165,7 +1173,7 @@
     <lastmod>2021-03-26</lastmod>
   </url>
   <url>
-    <loc>https://karobben.github.io/2020/07/28/Bioinfor/BatMeth2/</loc>
+    <loc>https://karobben.github.io/2020/07/28/Bioinfor/Bioconda/</loc>
     <lastmod>2021-03-26</lastmod>
   </url>
   <url>
@@ -1173,7 +1181,7 @@
     <lastmod>2021-03-26</lastmod>
   </url>
   <url>
-    <loc>https://karobben.github.io/2020/07/28/Bioinfor/Bioconda/</loc>
+    <loc>https://karobben.github.io/2020/07/28/Bioinfor/BatMeth2/</loc>
     <lastmod>2021-03-26</lastmod>
   </url>
   <url>

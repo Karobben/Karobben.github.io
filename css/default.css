@@ -10873,6 +10873,14 @@ article.article .content blockquote.pullquote {
 article.article .content blockquote footer strong + cite {
   margin-left: 0.5em;
 }
+article.article .content span .mjx-chtml {
+  font-size: 1.5em;
+}
+article.article .content span .mjx-math {
+  font-size: 1.1em;
+  font-weight: 700;
+  color: SteelBlue;
+}
 article.article .content .message.message-immersive {
   border-radius: 0;
   margin: 0 -1.5rem 1.5rem -1.5rem;
