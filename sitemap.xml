@@ -9,6 +9,13 @@
   </url>
   
   <url>
+    <loc>https://karobben.github.io/2021/03/31/LearnNotes/edx-biochm-6/</loc>
+    
+    <lastmod>2021-04-13</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://karobben.github.io/2021/04/11/LearnNotes/edx-biochm-8/</loc>
     
     <lastmod>2021-04-13</lastmod>
@@ -143,13 +150,6 @@
   
   <url>
     <loc>https://karobben.github.io/2020/01/22/Blog/Html/</loc>
-    
-    <lastmod>2021-04-02</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://karobben.github.io/2021/03/31/LearnNotes/edx-biochm-6/</loc>
     
     <lastmod>2021-04-02</lastmod>
     
@@ -1262,13 +1262,6 @@
   </url>
   
   <url>
-    <loc>https://karobben.github.io/2020/08/22/LearnNotes/Ted2-Selfdecipline_T/</loc>
-    
-    <lastmod>2021-03-26</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://karobben.github.io/2020/08/22/LearnNotes/Ted2-Selfdecipline/</loc>
     
     <lastmod>2021-03-26</lastmod>
@@ -1276,7 +1269,7 @@
   </url>
   
   <url>
-    <loc>https://karobben.github.io/2020/08/22/LearnNotes/Ted-Phy1/</loc>
+    <loc>https://karobben.github.io/2020/08/22/LearnNotes/Ted2-Selfdecipline_T/</loc>
     
     <lastmod>2021-03-26</lastmod>
     
@@ -1284,6 +1277,13 @@
   
   <url>
     <loc>https://karobben.github.io/2020/08/12/LearnNotes/Ted-Phy1_2/</loc>
+    
+    <lastmod>2021-03-26</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://karobben.github.io/2020/08/22/LearnNotes/Ted-Phy1/</loc>
     
     <lastmod>2021-03-26</lastmod>
     
@@ -1388,14 +1388,14 @@
   </url>
   
   <url>
-    <loc>https://karobben.github.io/2020/08/12/LearnNotes/Four-Billion-years-of-evolution-in-six-minutes/</loc>
+    <loc>https://karobben.github.io/2020/07/15/LearnNotes/GKNotes/</loc>
     
     <lastmod>2021-03-26</lastmod>
     
   </url>
   
   <url>
-    <loc>https://karobben.github.io/2020/07/15/LearnNotes/GKNotes/</loc>
+    <loc>https://karobben.github.io/2020/08/12/LearnNotes/Four-Billion-years-of-evolution-in-six-minutes/</loc>
     
     <lastmod>2021-03-26</lastmod>
     
@@ -1864,14 +1864,14 @@
   </url>
   
   <url>
-    <loc>https://karobben.github.io/2020/07/28/Bioinfor/sratools/</loc>
+    <loc>https://karobben.github.io/2020/07/28/Bioinfor/snp_samtools/</loc>
     
     <lastmod>2021-03-26</lastmod>
     
   </url>
   
   <url>
-    <loc>https://karobben.github.io/2020/07/28/Bioinfor/snp_samtools/</loc>
+    <loc>https://karobben.github.io/2020/07/28/Bioinfor/sratools/</loc>
     
     <lastmod>2021-03-26</lastmod>
     
@@ -2797,7 +2797,21 @@
   </url>
   
   <url>
+    <loc>https://karobben.github.io/tags/Distribution/</loc>
+    <lastmod>2021-04-13</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://karobben.github.io/tags/Data-Science/</loc>
+    <lastmod>2021-04-13</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://karobben.github.io/tags/Japanese/</loc>
     <lastmod>2021-04-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -3167,20 +3181,6 @@
     <priority>0.6</priority>
   </url>
   
-  <url>
-    <loc>https://karobben.github.io/tags/Japanese/</loc>
-    <lastmod>2021-04-13</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://karobben.github.io/tags/Distribution/</loc>
-    <lastmod>2021-04-13</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
 
   
   <url>
@@ -3296,6 +3296,13 @@
   </url>
   
   <url>
+    <loc>https://karobben.github.io/categories/Biology/Bioinformatics/Protocol/RNA-Seq/</loc>
+    <lastmod>2021-04-13</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://karobben.github.io/categories/Python/</loc>
     <lastmod>2021-04-13</lastmod>
     <changefreq>daily</changefreq>
@@ -3304,13 +3311,6 @@
   
   <url>
     <loc>https://karobben.github.io/categories/Biology/Bioinformatics/Protocol/SNP/</loc>
-    <lastmod>2021-04-13</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://karobben.github.io/categories/Biology/Bioinformatics/Protocol/RNA-Seq/</loc>
     <lastmod>2021-04-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -3415,14 +3415,14 @@
   </url>
   
   <url>
-    <loc>https://karobben.github.io/categories/Notes/Ted/</loc>
+    <loc>https://karobben.github.io/categories/Notes/others/</loc>
     <lastmod>2021-04-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://karobben.github.io/categories/Notes/others/</loc>
+    <loc>https://karobben.github.io/categories/Notes/Ted/</loc>
     <lastmod>2021-04-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -3450,7 +3450,7 @@
   </url>
   
   <url>
-    <loc>https://karobben.github.io/categories/Linux/</loc>
+    <loc>https://karobben.github.io/categories/Notes/Japanese/</loc>
     <lastmod>2021-04-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -3458,6 +3458,13 @@
   
   <url>
     <loc>https://karobben.github.io/categories/Python/Kivy/</loc>
+    <lastmod>2021-04-13</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://karobben.github.io/categories/Linux/</loc>
     <lastmod>2021-04-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -3485,6 +3492,13 @@
   </url>
   
   <url>
+    <loc>https://karobben.github.io/categories/Python/Crawler/</loc>
+    <lastmod>2021-04-13</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://karobben.github.io/categories/Python/Scripting/</loc>
     <lastmod>2021-04-13</lastmod>
     <changefreq>daily</changefreq>
@@ -3506,20 +3520,6 @@
   </url>
   
   <url>
-    <loc>https://karobben.github.io/categories/Python/Crawler/</loc>
-    <lastmod>2021-04-13</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://karobben.github.io/categories/Python/Data/</loc>
-    <lastmod>2021-04-13</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://karobben.github.io/categories/Python/TUI/</loc>
     <lastmod>2021-04-13</lastmod>
     <changefreq>daily</changefreq>
@@ -3528,6 +3528,13 @@
   
   <url>
     <loc>https://karobben.github.io/categories/Notes/Biology/Bioinformatic/</loc>
+    <lastmod>2021-04-13</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://karobben.github.io/categories/Python/Data/</loc>
     <lastmod>2021-04-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -3576,14 +3583,14 @@
   </url>
   
   <url>
-    <loc>https://karobben.github.io/categories/R/Beginner/</loc>
+    <loc>https://karobben.github.io/categories/R/Plot/</loc>
     <lastmod>2021-04-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://karobben.github.io/categories/R/Plot/</loc>
+    <loc>https://karobben.github.io/categories/R/Beginner/</loc>
     <lastmod>2021-04-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -3604,20 +3611,6 @@
   </url>
   
   <url>
-    <loc>https://karobben.github.io/categories/R/Image/</loc>
-    <lastmod>2021-04-13</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://karobben.github.io/categories/R/libraries/</loc>
-    <lastmod>2021-04-13</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://karobben.github.io/categories/Notes/Paper/Biology/</loc>
     <lastmod>2021-04-13</lastmod>
     <changefreq>daily</changefreq>
@@ -3625,7 +3618,21 @@
   </url>
   
   <url>
+    <loc>https://karobben.github.io/categories/R/Image/</loc>
+    <lastmod>2021-04-13</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://karobben.github.io/categories/others/Blog/more/</loc>
+    <lastmod>2021-04-13</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://karobben.github.io/categories/R/libraries/</loc>
     <lastmod>2021-04-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -3653,14 +3660,14 @@
   </url>
   
   <url>
-    <loc>https://karobben.github.io/categories/Notes/Class/Python/</loc>
+    <loc>https://karobben.github.io/categories/others/Blog/HTML/</loc>
     <lastmod>2021-04-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://karobben.github.io/categories/others/Blog/HTML/</loc>
+    <loc>https://karobben.github.io/categories/Notes/Class/Python/</loc>
     <lastmod>2021-04-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -3730,13 +3737,6 @@
   </url>
   
   <url>
-    <loc>https://karobben.github.io/categories/Python/Data/Machine-Learning/</loc>
-    <lastmod>2021-04-13</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://karobben.github.io/categories/Python/TUI/Urwid/</loc>
     <lastmod>2021-04-13</lastmod>
     <changefreq>daily</changefreq>
@@ -3745,6 +3745,13 @@
   
   <url>
     <loc>https://karobben.github.io/categories/Python/Scripting/Practice/</loc>
+    <lastmod>2021-04-13</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://karobben.github.io/categories/Python/Data/Machine-Learning/</loc>
     <lastmod>2021-04-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -3786,6 +3793,20 @@
   </url>
   
   <url>
+    <loc>https://karobben.github.io/categories/R/Bio/DEG/</loc>
+    <lastmod>2021-04-13</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://karobben.github.io/categories/R/Plot/GGPLOT/</loc>
+    <lastmod>2021-04-13</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://karobben.github.io/categories/Python/Data/String/</loc>
     <lastmod>2021-04-13</lastmod>
     <changefreq>daily</changefreq>
@@ -3807,14 +3828,7 @@
   </url>
   
   <url>
-    <loc>https://karobben.github.io/categories/R/Plot/GGPLOT/</loc>
-    <lastmod>2021-04-13</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://karobben.github.io/categories/R/Bio/DEG/</loc>
+    <loc>https://karobben.github.io/categories/R/Data/Data-Clean/</loc>
     <lastmod>2021-04-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -3892,20 +3906,6 @@
   
   <url>
     <loc>https://karobben.github.io/categories/R/Data/Statistic/Regression/</loc>
-    <lastmod>2021-04-13</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://karobben.github.io/categories/Notes/Japanese/</loc>
-    <lastmod>2021-04-13</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://karobben.github.io/categories/R/Data/Data-Clean/</loc>
     <lastmod>2021-04-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
