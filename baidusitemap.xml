@@ -1,7 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://karobben.github.io/2021/04/14/LearnNotes/edx-biochm-10/</loc>
+    <lastmod>2021-04-14</lastmod>
+  </url>
+  <url>
     <loc>https://karobben.github.io/2021/04/13/LearnNotes/edx-biochm-9/</loc>
+    <lastmod>2021-04-14</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2021/04/13/LearnNotes/statistics-ds-1/</loc>
+    <lastmod>2021-04-14</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2021/03/19/Python/threading/</loc>
+    <lastmod>2021-04-14</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2021/03/29/Python/python-begin1/</loc>
+    <lastmod>2021-04-14</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2021/04/11/LearnNotes/negbinomial/</loc>
+    <lastmod>2021-04-14</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2020/07/28/Bioinfor/OddsRatio/</loc>
+    <lastmod>2021-04-14</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2021/04/08/LearnNotes/binomial/</loc>
+    <lastmod>2021-04-14</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2021/03/28/LearnNotes/japan/</loc>
+    <lastmod>2021-04-14</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2020/07/28/Bioinfor/BioDB/</loc>
     <lastmod>2021-04-13</lastmod>
   </url>
   <url>
@@ -11,14 +47,6 @@
   <url>
     <loc>https://karobben.github.io/2021/04/11/LearnNotes/edx-biochm-8/</loc>
     <lastmod>2021-04-13</lastmod>
-  </url>
-  <url>
-    <loc>https://karobben.github.io/2021/03/28/LearnNotes/japan/</loc>
-    <lastmod>2021-04-13</lastmod>
-  </url>
-  <url>
-    <loc>https://karobben.github.io/2021/04/11/LearnNotes/negbinomial/</loc>
-    <lastmod>2021-04-11</lastmod>
   </url>
   <url>
     <loc>https://karobben.github.io/2021/04/02/LearnNotes/edx-biochm-7/</loc>
@@ -42,10 +70,6 @@
   </url>
   <url>
     <loc>https://karobben.github.io/2021/03/29/LearnNotes/edx-biochm-5/</loc>
-    <lastmod>2021-04-09</lastmod>
-  </url>
-  <url>
-    <loc>https://karobben.github.io/2021/04/08/LearnNotes/binomial/</loc>
     <lastmod>2021-04-09</lastmod>
   </url>
   <url>
@@ -107,10 +131,6 @@
   <url>
     <loc>https://karobben.github.io/2020/06/26/Blog/Graphviz/</loc>
     <lastmod>2021-03-30</lastmod>
-  </url>
-  <url>
-    <loc>https://karobben.github.io/2021/03/29/Python/python-begin1/</loc>
-    <lastmod>2021-03-29</lastmod>
   </url>
   <url>
     <loc>https://karobben.github.io/2021/03/26/LearnNotes/edx-biochm-4/</loc>
@@ -382,10 +402,6 @@
   </url>
   <url>
     <loc>https://karobben.github.io/2020/01/22/Python/pynput/</loc>
-    <lastmod>2021-03-26</lastmod>
-  </url>
-  <url>
-    <loc>https://karobben.github.io/2021/03/19/Python/threading/</loc>
     <lastmod>2021-03-26</lastmod>
   </url>
   <url>
@@ -721,19 +737,19 @@
     <lastmod>2021-03-26</lastmod>
   </url>
   <url>
-    <loc>https://karobben.github.io/2020/08/22/LearnNotes/Ted2-Selfdecipline/</loc>
-    <lastmod>2021-03-26</lastmod>
-  </url>
-  <url>
     <loc>https://karobben.github.io/2020/08/22/LearnNotes/Ted2-Selfdecipline_T/</loc>
     <lastmod>2021-03-26</lastmod>
   </url>
   <url>
-    <loc>https://karobben.github.io/2020/08/12/LearnNotes/Ted-Phy1_2/</loc>
+    <loc>https://karobben.github.io/2020/08/22/LearnNotes/Ted2-Selfdecipline/</loc>
     <lastmod>2021-03-26</lastmod>
   </url>
   <url>
     <loc>https://karobben.github.io/2020/08/22/LearnNotes/Ted-Phy1/</loc>
+    <lastmod>2021-03-26</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2020/08/12/LearnNotes/Ted-Phy1_2/</loc>
     <lastmod>2021-03-26</lastmod>
   </url>
   <url>
@@ -793,11 +809,11 @@
     <lastmod>2021-03-26</lastmod>
   </url>
   <url>
-    <loc>https://karobben.github.io/2020/07/15/LearnNotes/GKNotes/</loc>
+    <loc>https://karobben.github.io/2020/08/12/LearnNotes/Four-Billion-years-of-evolution-in-six-minutes/</loc>
     <lastmod>2021-03-26</lastmod>
   </url>
   <url>
-    <loc>https://karobben.github.io/2020/08/12/LearnNotes/Four-Billion-years-of-evolution-in-six-minutes/</loc>
+    <loc>https://karobben.github.io/2020/07/15/LearnNotes/GKNotes/</loc>
     <lastmod>2021-03-26</lastmod>
   </url>
   <url>
@@ -1065,11 +1081,11 @@
     <lastmod>2021-03-26</lastmod>
   </url>
   <url>
-    <loc>https://karobben.github.io/2020/07/28/Bioinfor/snp_samtools/</loc>
+    <loc>https://karobben.github.io/2020/07/28/Bioinfor/sratools/</loc>
     <lastmod>2021-03-26</lastmod>
   </url>
   <url>
-    <loc>https://karobben.github.io/2020/07/28/Bioinfor/sratools/</loc>
+    <loc>https://karobben.github.io/2020/07/28/Bioinfor/snp_samtools/</loc>
     <lastmod>2021-03-26</lastmod>
   </url>
   <url>
@@ -1161,10 +1177,6 @@
     <lastmod>2021-03-26</lastmod>
   </url>
   <url>
-    <loc>https://karobben.github.io/2020/07/28/Bioinfor/OddsRatio/</loc>
-    <lastmod>2021-03-26</lastmod>
-  </url>
-  <url>
     <loc>https://karobben.github.io/2020/07/28/Bioinfor/QIIME2/</loc>
     <lastmod>2021-03-26</lastmod>
   </url>
@@ -1194,10 +1206,6 @@
   </url>
   <url>
     <loc>https://karobben.github.io/2020/07/28/Bioinfor/BatMeth2/</loc>
-    <lastmod>2021-03-26</lastmod>
-  </url>
-  <url>
-    <loc>https://karobben.github.io/2020/07/28/Bioinfor/BioDB/</loc>
     <lastmod>2021-03-26</lastmod>
   </url>
   <url>
