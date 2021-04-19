@@ -1,24 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://karobben.github.io/2021/04/15/LearnNotes/edx-biochm-11/</loc>
-    <lastmod>2021-04-15</lastmod>
+    <loc>https://karobben.github.io/2021/04/16/LearnNotes/edx-biochm-12/</loc>
+    <lastmod>2021-04-19</lastmod>
   </url>
   <url>
-    <loc>https://karobben.github.io/2021/04/14/LearnNotes/edx-biochm-10/</loc>
-    <lastmod>2021-04-15</lastmod>
-  </url>
-  <url>
-    <loc>https://karobben.github.io/2021/04/13/LearnNotes/edx-biochm-9/</loc>
-    <lastmod>2021-04-15</lastmod>
-  </url>
-  <url>
-    <loc>https://karobben.github.io/2021/03/28/LearnNotes/japan/</loc>
-    <lastmod>2021-04-15</lastmod>
+    <loc>https://karobben.github.io/2021/02/01/Blog/echart/</loc>
+    <lastmod>2021-04-19</lastmod>
   </url>
   <url>
     <loc>https://karobben.github.io/2021/04/13/LearnNotes/statistics-ds-1/</loc>
-    <lastmod>2021-04-14</lastmod>
+    <lastmod>2021-04-19</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2021/04/13/LearnNotes/edx-biochm-9/</loc>
+    <lastmod>2021-04-19</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2021/04/14/LearnNotes/edx-biochm-10/</loc>
+    <lastmod>2021-04-19</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2021/03/28/LearnNotes/japan/</loc>
+    <lastmod>2021-04-19</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2020/06/26/Blog/Graphviz/</loc>
+    <lastmod>2021-04-16</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2021/04/15/LearnNotes/edx-biochm-11/</loc>
+    <lastmod>2021-04-15</lastmod>
   </url>
   <url>
     <loc>https://karobben.github.io/2021/03/19/Python/threading/</loc>
@@ -93,10 +105,6 @@
     <lastmod>2021-04-07</lastmod>
   </url>
   <url>
-    <loc>https://karobben.github.io/2021/02/01/Blog/echart/</loc>
-    <lastmod>2021-04-04</lastmod>
-  </url>
-  <url>
     <loc>https://karobben.github.io/2020/06/19/R/GG_goplot/</loc>
     <lastmod>2021-04-03</lastmod>
   </url>
@@ -130,10 +138,6 @@
   </url>
   <url>
     <loc>https://karobben.github.io/2021/03/02/Python/yuqueAPI/</loc>
-    <lastmod>2021-03-30</lastmod>
-  </url>
-  <url>
-    <loc>https://karobben.github.io/2020/06/26/Blog/Graphviz/</loc>
     <lastmod>2021-03-30</lastmod>
   </url>
   <url>
