@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://karobben.github.io/2021/04/20/LearnNotes/writing-advice/</loc>
+    <lastmod>2021-04-20</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2021/04/20/binary-tree/</loc>
+    <lastmod>2021-04-20</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2021/03/28/LearnNotes/japan/</loc>
+    <lastmod>2021-04-20</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2020/08/13/R/NetWorkPlot/</loc>
+    <lastmod>2021-04-20</lastmod>
+  </url>
+  <url>
     <loc>https://karobben.github.io/2021/04/16/LearnNotes/edx-biochm-12/</loc>
     <lastmod>2021-04-19</lastmod>
   </url>
@@ -18,10 +34,6 @@
   </url>
   <url>
     <loc>https://karobben.github.io/2021/04/14/LearnNotes/edx-biochm-10/</loc>
-    <lastmod>2021-04-19</lastmod>
-  </url>
-  <url>
-    <loc>https://karobben.github.io/2021/03/28/LearnNotes/japan/</loc>
     <lastmod>2021-04-19</lastmod>
   </url>
   <url>
@@ -350,10 +362,6 @@
   </url>
   <url>
     <loc>https://karobben.github.io/2020/08/20/R/Machine_Learning/</loc>
-    <lastmod>2021-03-26</lastmod>
-  </url>
-  <url>
-    <loc>https://karobben.github.io/2020/08/13/R/NetWorkPlot/</loc>
     <lastmod>2021-03-26</lastmod>
   </url>
   <url>
