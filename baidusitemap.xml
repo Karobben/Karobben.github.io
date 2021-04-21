@@ -1,24 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://karobben.github.io/2021/04/20/LearnNotes/writing-advice/</loc>
-    <lastmod>2021-04-20</lastmod>
+    <loc>https://karobben.github.io/2021/04/21/Python/opencv-img-align/</loc>
+    <lastmod>2021-04-21</lastmod>
   </url>
   <url>
-    <loc>https://karobben.github.io/2021/04/20/binary-tree/</loc>
-    <lastmod>2021-04-20</lastmod>
+    <loc>https://karobben.github.io/2021/04/21/Python/opencv-img-stitch/</loc>
+    <lastmod>2021-04-21</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2021/03/02/Python/yuqueAPI/</loc>
+    <lastmod>2021-04-21</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2020/09/12/Python/OpenCV/</loc>
+    <lastmod>2021-04-21</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2021/04/10/Python/opencv-v-sm/</loc>
+    <lastmod>2021-04-21</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2021/04/10/Python/opencv-v-paste/</loc>
+    <lastmod>2021-04-21</lastmod>
   </url>
   <url>
     <loc>https://karobben.github.io/2021/03/28/LearnNotes/japan/</loc>
-    <lastmod>2021-04-20</lastmod>
+    <lastmod>2021-04-21</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2021/04/20/R/binary-tree/</loc>
+    <lastmod>2021-04-21</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2021/04/20/binary-tree/</loc>
+    <lastmod>2021-04-21</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2021/04/20/LearnNotes/readdaily1/</loc>
+    <lastmod>2021-04-21</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2021/04/20/LearnNotes/writing-advice/</loc>
+    <lastmod>2021-04-21</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2021/04/16/LearnNotes/edx-biochm-12/</loc>
+    <lastmod>2021-04-21</lastmod>
   </url>
   <url>
     <loc>https://karobben.github.io/2020/08/13/R/NetWorkPlot/</loc>
     <lastmod>2021-04-20</lastmod>
-  </url>
-  <url>
-    <loc>https://karobben.github.io/2021/04/16/LearnNotes/edx-biochm-12/</loc>
-    <lastmod>2021-04-19</lastmod>
   </url>
   <url>
     <loc>https://karobben.github.io/2021/02/01/Blog/echart/</loc>
@@ -85,18 +117,6 @@
     <lastmod>2021-04-11</lastmod>
   </url>
   <url>
-    <loc>https://karobben.github.io/2021/04/10/Python/opencv-v-sm/</loc>
-    <lastmod>2021-04-10</lastmod>
-  </url>
-  <url>
-    <loc>https://karobben.github.io/2021/04/10/Python/opencv-v-paste/</loc>
-    <lastmod>2021-04-10</lastmod>
-  </url>
-  <url>
-    <loc>https://karobben.github.io/2020/09/12/Python/OpenCV/</loc>
-    <lastmod>2021-04-10</lastmod>
-  </url>
-  <url>
     <loc>https://karobben.github.io/2021/03/29/LearnNotes/edx-biochm-5/</loc>
     <lastmod>2021-04-09</lastmod>
   </url>
@@ -147,10 +167,6 @@
   <url>
     <loc>https://karobben.github.io/2020/08/13/R/GGradar/</loc>
     <lastmod>2021-03-31</lastmod>
-  </url>
-  <url>
-    <loc>https://karobben.github.io/2021/03/02/Python/yuqueAPI/</loc>
-    <lastmod>2021-03-30</lastmod>
   </url>
   <url>
     <loc>https://karobben.github.io/2021/03/26/LearnNotes/edx-biochm-4/</loc>
