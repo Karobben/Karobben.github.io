@@ -10831,6 +10831,9 @@ article.article .content h4 {
 article.article .content h5 {
   font-size: 1em;
 }
+article.article .content s {
+  color: #00cd66;
+}
 article.article .content mark {
   background-color: #fa8072;
   padding: 0.2em;
