@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://karobben.github.io/2021/04/16/LearnNotes/edx-biochm-12/</loc>
+    <loc>https://karobben.github.io/2021/04/20/LearnNotes/writing-advice/</loc>
     
     <lastmod>2021-04-23</lastmod>
     
@@ -10,6 +10,13 @@
   
   <url>
     <loc>https://karobben.github.io/2021/03/28/LearnNotes/japan/</loc>
+    
+    <lastmod>2021-04-23</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://karobben.github.io/2021/04/16/LearnNotes/edx-biochm-12/</loc>
     
     <lastmod>2021-04-23</lastmod>
     
@@ -26,13 +33,6 @@
     <loc>https://karobben.github.io/2021/04/21/Python/opencv-img-align/</loc>
     
     <lastmod>2021-04-23</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://karobben.github.io/2021/04/20/LearnNotes/writing-advice/</loc>
-    
-    <lastmod>2021-04-22</lastmod>
     
   </url>
   
