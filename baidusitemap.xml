@@ -1,15 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://karobben.github.io/2021/04/24/LearnNotes/edx-biochm-13/</loc>
+    <lastmod>2021-04-24</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2021/03/29/LearnNotes/edx-biochm-5/</loc>
+    <lastmod>2021-04-24</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2021/03/31/LearnNotes/edx-biochm-6/</loc>
+    <lastmod>2021-04-24</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2021/04/16/LearnNotes/edx-biochm-12/</loc>
+    <lastmod>2021-04-24</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2021/04/15/LearnNotes/edx-biochm-11/</loc>
+    <lastmod>2021-04-24</lastmod>
+  </url>
+  <url>
     <loc>https://karobben.github.io/2021/04/20/LearnNotes/writing-advice/</loc>
     <lastmod>2021-04-23</lastmod>
   </url>
   <url>
     <loc>https://karobben.github.io/2021/03/28/LearnNotes/japan/</loc>
-    <lastmod>2021-04-23</lastmod>
-  </url>
-  <url>
-    <loc>https://karobben.github.io/2021/04/16/LearnNotes/edx-biochm-12/</loc>
     <lastmod>2021-04-23</lastmod>
   </url>
   <url>
@@ -81,10 +97,6 @@
     <lastmod>2021-04-16</lastmod>
   </url>
   <url>
-    <loc>https://karobben.github.io/2021/04/15/LearnNotes/edx-biochm-11/</loc>
-    <lastmod>2021-04-15</lastmod>
-  </url>
-  <url>
     <loc>https://karobben.github.io/2021/03/19/Python/threading/</loc>
     <lastmod>2021-04-14</lastmod>
   </url>
@@ -109,10 +121,6 @@
     <lastmod>2021-04-13</lastmod>
   </url>
   <url>
-    <loc>https://karobben.github.io/2021/03/31/LearnNotes/edx-biochm-6/</loc>
-    <lastmod>2021-04-13</lastmod>
-  </url>
-  <url>
     <loc>https://karobben.github.io/2021/04/11/LearnNotes/edx-biochm-8/</loc>
     <lastmod>2021-04-13</lastmod>
   </url>
@@ -123,10 +131,6 @@
   <url>
     <loc>https://karobben.github.io/2021/04/07/Bioinfor/paper-edger/</loc>
     <lastmod>2021-04-11</lastmod>
-  </url>
-  <url>
-    <loc>https://karobben.github.io/2021/03/29/LearnNotes/edx-biochm-5/</loc>
-    <lastmod>2021-04-09</lastmod>
   </url>
   <url>
     <loc>https://karobben.github.io/2020/12/28/LearnNotes/paper_review_insectmeal/</loc>
