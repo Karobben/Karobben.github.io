@@ -1,11 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://karobben.github.io/2021/04/20/LearnNotes/writing-advice/</loc>
-    <lastmod>2021-04-24</lastmod>
+    <loc>https://karobben.github.io/2021/04/26/Python/kivy-inaction-tb-1/</loc>
+    <lastmod>2021-04-26</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2021/01/01/Python/kivy-Buildozer/</loc>
+    <lastmod>2021-04-26</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2020/11/12/Python/Kivy_sent3/</loc>
+    <lastmod>2021-04-26</lastmod>
   </url>
   <url>
     <loc>https://karobben.github.io/2021/03/28/LearnNotes/japan/</loc>
+    <lastmod>2021-04-25</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2021/04/20/LearnNotes/writing-advice/</loc>
     <lastmod>2021-04-24</lastmod>
   </url>
   <url>
@@ -21,15 +33,15 @@
     <lastmod>2021-04-24</lastmod>
   </url>
   <url>
+    <loc>https://karobben.github.io/2021/04/16/LearnNotes/edx-biochm-12/</loc>
+    <lastmod>2021-04-24</lastmod>
+  </url>
+  <url>
     <loc>https://karobben.github.io/2021/03/29/LearnNotes/edx-biochm-5/</loc>
     <lastmod>2021-04-24</lastmod>
   </url>
   <url>
     <loc>https://karobben.github.io/2021/03/31/LearnNotes/edx-biochm-6/</loc>
-    <lastmod>2021-04-24</lastmod>
-  </url>
-  <url>
-    <loc>https://karobben.github.io/2021/04/16/LearnNotes/edx-biochm-12/</loc>
     <lastmod>2021-04-24</lastmod>
   </url>
   <url>
@@ -497,10 +509,6 @@
     <lastmod>2021-03-26</lastmod>
   </url>
   <url>
-    <loc>https://karobben.github.io/2021/01/01/Python/kivy-Buildozer/</loc>
-    <lastmod>2021-03-26</lastmod>
-  </url>
-  <url>
     <loc>https://karobben.github.io/2020/01/22/Python/ftp/</loc>
     <lastmod>2021-03-26</lastmod>
   </url>
@@ -566,10 +574,6 @@
   </url>
   <url>
     <loc>https://karobben.github.io/2020/01/22/Python/Matplotlib/</loc>
-    <lastmod>2021-03-26</lastmod>
-  </url>
-  <url>
-    <loc>https://karobben.github.io/2020/11/12/Python/Kivy_sent3/</loc>
     <lastmod>2021-03-26</lastmod>
   </url>
   <url>
