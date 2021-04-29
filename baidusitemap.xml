@@ -1,8 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://karobben.github.io/2021/04/20/LearnNotes/writing-advice/</loc>
+    <lastmod>2021-04-29</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2021/04/28/Python/kivy-inaction-tb-2/</loc>
+    <lastmod>2021-04-29</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2021/03/09/Python/kivy-screen-commu/</loc>
+    <lastmod>2021-04-29</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2021/02/11/Blog/hexo_icarus/</loc>
+    <lastmod>2021-04-28</lastmod>
+  </url>
+  <url>
     <loc>https://karobben.github.io/2021/04/26/Python/kivy-inaction-tb-1/</loc>
-    <lastmod>2021-04-26</lastmod>
+    <lastmod>2021-04-28</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2021/04/20/LearnNotes/readdaily1/</loc>
+    <lastmod>2021-04-28</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2021/04/28/LearnNotes/edx-biochm-15/</loc>
+    <lastmod>2021-04-28</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2021/04/28/LearnNotes/edx-biochm-14/</loc>
+    <lastmod>2021-04-28</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2021/04/24/LearnNotes/edx-biochm-13/</loc>
+    <lastmod>2021-04-28</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2021/03/28/LearnNotes/japan/</loc>
+    <lastmod>2021-04-28</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2020/09/20/R/r_ab1/</loc>
+    <lastmod>2021-04-28</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2021/01/02/Python/kivy_filechooser/</loc>
+    <lastmod>2021-04-27</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2021/04/23/Python/video2audio/</loc>
+    <lastmod>2021-04-27</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2021/04/27/Python/kivy-video2audio/</loc>
+    <lastmod>2021-04-27</lastmod>
   </url>
   <url>
     <loc>https://karobben.github.io/2021/01/01/Python/kivy-Buildozer/</loc>
@@ -13,23 +65,7 @@
     <lastmod>2021-04-26</lastmod>
   </url>
   <url>
-    <loc>https://karobben.github.io/2021/03/28/LearnNotes/japan/</loc>
-    <lastmod>2021-04-25</lastmod>
-  </url>
-  <url>
-    <loc>https://karobben.github.io/2021/04/20/LearnNotes/writing-advice/</loc>
-    <lastmod>2021-04-24</lastmod>
-  </url>
-  <url>
-    <loc>https://karobben.github.io/2021/04/23/Python/video2audio/</loc>
-    <lastmod>2021-04-24</lastmod>
-  </url>
-  <url>
     <loc>https://karobben.github.io/2021/04/21/Python/opencv-img-align/</loc>
-    <lastmod>2021-04-24</lastmod>
-  </url>
-  <url>
-    <loc>https://karobben.github.io/2021/04/24/LearnNotes/edx-biochm-13/</loc>
     <lastmod>2021-04-24</lastmod>
   </url>
   <url>
@@ -47,10 +83,6 @@
   <url>
     <loc>https://karobben.github.io/2021/04/15/LearnNotes/edx-biochm-11/</loc>
     <lastmod>2021-04-24</lastmod>
-  </url>
-  <url>
-    <loc>https://karobben.github.io/2021/02/11/Blog/hexo_icarus/</loc>
-    <lastmod>2021-04-22</lastmod>
   </url>
   <url>
     <loc>https://karobben.github.io/2020/06/26/Blog/waque/</loc>
@@ -78,10 +110,6 @@
   </url>
   <url>
     <loc>https://karobben.github.io/2021/04/20/R/binary-tree/</loc>
-    <lastmod>2021-04-21</lastmod>
-  </url>
-  <url>
-    <loc>https://karobben.github.io/2021/04/20/LearnNotes/readdaily1/</loc>
     <lastmod>2021-04-21</lastmod>
   </url>
   <url>
@@ -206,10 +234,6 @@
   </url>
   <url>
     <loc>https://karobben.github.io/2020/06/10/R/wordcloud/</loc>
-    <lastmod>2021-03-26</lastmod>
-  </url>
-  <url>
-    <loc>https://karobben.github.io/2020/09/20/R/r_ab1/</loc>
     <lastmod>2021-03-26</lastmod>
   </url>
   <url>
@@ -437,11 +461,11 @@
     <lastmod>2021-03-26</lastmod>
   </url>
   <url>
-    <loc>https://karobben.github.io/2020/05/01/R/Base-and-tricks/</loc>
+    <loc>https://karobben.github.io/2020/05/01/R/Biostrings/</loc>
     <lastmod>2021-03-26</lastmod>
   </url>
   <url>
-    <loc>https://karobben.github.io/2020/05/01/R/Biostrings/</loc>
+    <loc>https://karobben.github.io/2020/05/01/R/Base-and-tricks/</loc>
     <lastmod>2021-03-26</lastmod>
   </url>
   <url>
@@ -489,15 +513,7 @@
     <lastmod>2021-03-26</lastmod>
   </url>
   <url>
-    <loc>https://karobben.github.io/2021/01/02/Python/kivy_filechooser/</loc>
-    <lastmod>2021-03-26</lastmod>
-  </url>
-  <url>
     <loc>https://karobben.github.io/2021/01/01/Python/kivy_platform/</loc>
-    <lastmod>2021-03-26</lastmod>
-  </url>
-  <url>
-    <loc>https://karobben.github.io/2021/03/09/Python/kivy-screen-commu/</loc>
     <lastmod>2021-03-26</lastmod>
   </url>
   <url>
@@ -589,11 +605,11 @@
     <lastmod>2021-03-26</lastmod>
   </url>
   <url>
-    <loc>https://karobben.github.io/2020/12/03/Python/Kivy_document/</loc>
+    <loc>https://karobben.github.io/2020/10/28/Python/Kivy_sent1/</loc>
     <lastmod>2021-03-26</lastmod>
   </url>
   <url>
-    <loc>https://karobben.github.io/2020/10/28/Python/Kivy_sent1/</loc>
+    <loc>https://karobben.github.io/2020/12/03/Python/Kivy_document/</loc>
     <lastmod>2021-03-26</lastmod>
   </url>
   <url>
@@ -609,11 +625,11 @@
     <lastmod>2021-03-26</lastmod>
   </url>
   <url>
-    <loc>https://karobben.github.io/2020/01/22/Python/BaseMap/</loc>
+    <loc>https://karobben.github.io/2020/11/29/Python/Bio_SSP/</loc>
     <lastmod>2021-03-26</lastmod>
   </url>
   <url>
-    <loc>https://karobben.github.io/2020/11/29/Python/Bio_SSP/</loc>
+    <loc>https://karobben.github.io/2020/01/22/Python/BaseMap/</loc>
     <lastmod>2021-03-26</lastmod>
   </url>
   <url>
@@ -781,15 +797,11 @@
     <lastmod>2021-03-26</lastmod>
   </url>
   <url>
-    <loc>https://karobben.github.io/2020/08/22/LearnNotes/Ted2-Selfdecipline_T/</loc>
-    <lastmod>2021-03-26</lastmod>
-  </url>
-  <url>
     <loc>https://karobben.github.io/2020/08/22/LearnNotes/Ted2-Selfdecipline/</loc>
     <lastmod>2021-03-26</lastmod>
   </url>
   <url>
-    <loc>https://karobben.github.io/2020/08/22/LearnNotes/Ted-Phy1/</loc>
+    <loc>https://karobben.github.io/2020/08/22/LearnNotes/Ted2-Selfdecipline_T/</loc>
     <lastmod>2021-03-26</lastmod>
   </url>
   <url>
@@ -797,11 +809,11 @@
     <lastmod>2021-03-26</lastmod>
   </url>
   <url>
-    <loc>https://karobben.github.io/2020/02/07/LearnNotes/Super-Conductor/</loc>
+    <loc>https://karobben.github.io/2020/08/22/LearnNotes/Ted-Phy1/</loc>
     <lastmod>2021-03-26</lastmod>
   </url>
   <url>
-    <loc>https://karobben.github.io/2020/07/07/LearnNotes/Paper_Yan2020/</loc>
+    <loc>https://karobben.github.io/2020/02/07/LearnNotes/Super-Conductor/</loc>
     <lastmod>2021-03-26</lastmod>
   </url>
   <url>
@@ -813,11 +825,15 @@
     <lastmod>2021-03-26</lastmod>
   </url>
   <url>
-    <loc>https://karobben.github.io/2020/07/07/LearnNotes/Paper_Vilhelmsson2004/</loc>
+    <loc>https://karobben.github.io/2020/07/07/LearnNotes/Paper_Yan2020/</loc>
     <lastmod>2021-03-26</lastmod>
   </url>
   <url>
     <loc>https://karobben.github.io/2020/07/07/LearnNotes/Paper_WheatInhi/</loc>
+    <lastmod>2021-03-26</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2020/07/07/LearnNotes/Paper_Vilhelmsson2004/</loc>
     <lastmod>2021-03-26</lastmod>
   </url>
   <url>
@@ -945,11 +961,11 @@
     <lastmod>2021-03-26</lastmod>
   </url>
   <url>
-    <loc>https://karobben.github.io/2020/07/28/Blog/build_index/</loc>
+    <loc>https://karobben.github.io/2021/02/28/Blog/dead_link/</loc>
     <lastmod>2021-03-26</lastmod>
   </url>
   <url>
-    <loc>https://karobben.github.io/2021/02/28/Blog/dead_link/</loc>
+    <loc>https://karobben.github.io/2020/07/28/Blog/build_index/</loc>
     <lastmod>2021-03-26</lastmod>
   </url>
   <url>
@@ -1121,11 +1137,11 @@
     <lastmod>2021-03-26</lastmod>
   </url>
   <url>
-    <loc>https://karobben.github.io/2020/07/28/Bioinfor/sratools/</loc>
+    <loc>https://karobben.github.io/2020/07/28/Bioinfor/snp_samtools/</loc>
     <lastmod>2021-03-26</lastmod>
   </url>
   <url>
-    <loc>https://karobben.github.io/2020/07/28/Bioinfor/snp_samtools/</loc>
+    <loc>https://karobben.github.io/2020/07/28/Bioinfor/sratools/</loc>
     <lastmod>2021-03-26</lastmod>
   </url>
   <url>
