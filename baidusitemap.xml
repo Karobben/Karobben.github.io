@@ -1,24 +1,92 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://karobben.github.io/2021/05/08/Python/kivy-inaction-tb-5/</loc>
-    <lastmod>2021-05-08</lastmod>
+    <loc>https://karobben.github.io/2021/05/15/Python/kivy-inaction-tb-8/</loc>
+    <lastmod>2021-05-16</lastmod>
   </url>
   <url>
-    <loc>https://karobben.github.io/2021/05/08/Python/kivy-inaction-tb-6/</loc>
-    <lastmod>2021-05-08</lastmod>
+    <loc>https://karobben.github.io/2021/05/10/Python/kivy-inaction-tb-7/</loc>
+    <lastmod>2021-05-16</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2021/05/13/Linux/manjaro/</loc>
+    <lastmod>2021-05-16</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2021/05/14/LearnNotes/edx-biochm-18/</loc>
+    <lastmod>2021-05-16</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2020/06/26/Linux/Deepin_scrcpy/</loc>
+    <lastmod>2021-05-14</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2021/05/12/LearnNotes/edx-biochm-17/</loc>
+    <lastmod>2021-05-14</lastmod>
   </url>
   <url>
     <loc>https://karobben.github.io/2021/05/07/Python/kivy-inaction-tb-4/</loc>
-    <lastmod>2021-05-07</lastmod>
+    <lastmod>2021-05-14</lastmod>
   </url>
   <url>
-    <loc>https://karobben.github.io/2021/04/28/LearnNotes/edx-biochm-15/</loc>
-    <lastmod>2021-05-03</lastmod>
+    <loc>https://karobben.github.io/2021/05/08/Python/kivy-inaction-tb-5/</loc>
+    <lastmod>2021-05-14</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2021/05/08/Python/kivy-inaction-tb-6/</loc>
+    <lastmod>2021-05-14</lastmod>
   </url>
   <url>
     <loc>https://karobben.github.io/2021/04/30/Python/kivy-inaction-tb-3/</loc>
-    <lastmod>2021-05-02</lastmod>
+    <lastmod>2021-05-14</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2020/06/14/R/clusterProfiler/</loc>
+    <lastmod>2021-05-13</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2020/06/26/Linux/Termux/</loc>
+    <lastmod>2021-05-12</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2020/05/01/R/Base-and-tricks/</loc>
+    <lastmod>2021-05-12</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/1970/01/01/Python/jupyter/</loc>
+    <lastmod>2021-05-12</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2021/04/20/LearnNotes/writing-advice/</loc>
+    <lastmod>2021-05-11</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2021/05/11/LearnNotes/edx-biochm-16/</loc>
+    <lastmod>2021-05-11</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2021/04/28/LearnNotes/edx-biochm-14/</loc>
+    <lastmod>2021-05-11</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2021/04/28/LearnNotes/edx-biochm-15/</loc>
+    <lastmod>2021-05-11</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2021/03/28/LearnNotes/japan/</loc>
+    <lastmod>2021-05-10</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2021/04/30/Python/kivy_adblog/</loc>
+    <lastmod>2021-05-09</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2021/01/01/Python/kivy-Buildozer/</loc>
+    <lastmod>2021-05-09</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2021/05/01/Python/kivy_buildozer/</loc>
+    <lastmod>2021-05-08</lastmod>
   </url>
   <url>
     <loc>https://karobben.github.io/2021/04/28/Python/kivy-inaction-tb-2/</loc>
@@ -33,24 +101,8 @@
     <lastmod>2021-05-02</lastmod>
   </url>
   <url>
-    <loc>https://karobben.github.io/2021/04/30/Python/kivy_adblog/</loc>
-    <lastmod>2021-05-02</lastmod>
-  </url>
-  <url>
-    <loc>https://karobben.github.io/2021/05/01/Python/kivy_buildozer/</loc>
-    <lastmod>2021-05-02</lastmod>
-  </url>
-  <url>
     <loc>https://karobben.github.io/2021/04/21/Python/opencv-img-align/</loc>
     <lastmod>2021-05-02</lastmod>
-  </url>
-  <url>
-    <loc>https://karobben.github.io/2021/04/28/LearnNotes/edx-biochm-14/</loc>
-    <lastmod>2021-05-02</lastmod>
-  </url>
-  <url>
-    <loc>https://karobben.github.io/2021/03/28/LearnNotes/japan/</loc>
-    <lastmod>2021-04-30</lastmod>
   </url>
   <url>
     <loc>https://karobben.github.io/2021/01/02/Python/kivy_filechooser/</loc>
@@ -63,10 +115,6 @@
   <url>
     <loc>https://karobben.github.io/2020/01/22/Blog/Html/</loc>
     <lastmod>2021-04-30</lastmod>
-  </url>
-  <url>
-    <loc>https://karobben.github.io/2021/04/20/LearnNotes/writing-advice/</loc>
-    <lastmod>2021-04-29</lastmod>
   </url>
   <url>
     <loc>https://karobben.github.io/2021/03/09/Python/kivy-screen-commu/</loc>
@@ -91,10 +139,6 @@
   <url>
     <loc>https://karobben.github.io/2021/04/27/Python/kivy-video2audio/</loc>
     <lastmod>2021-04-27</lastmod>
-  </url>
-  <url>
-    <loc>https://karobben.github.io/2021/01/01/Python/kivy-Buildozer/</loc>
-    <lastmod>2021-04-26</lastmod>
   </url>
   <url>
     <loc>https://karobben.github.io/2020/11/12/Python/Kivy_sent3/</loc>
@@ -397,10 +441,6 @@
     <lastmod>2021-03-26</lastmod>
   </url>
   <url>
-    <loc>https://karobben.github.io/2020/06/14/R/clusterProfiler/</loc>
-    <lastmod>2021-03-26</lastmod>
-  </url>
-  <url>
     <loc>https://karobben.github.io/2020/06/08/R/WGCNA_1/</loc>
     <lastmod>2021-03-26</lastmod>
   </url>
@@ -490,10 +530,6 @@
   </url>
   <url>
     <loc>https://karobben.github.io/2020/05/01/R/Biostrings/</loc>
-    <lastmod>2021-03-26</lastmod>
-  </url>
-  <url>
-    <loc>https://karobben.github.io/2020/05/01/R/Base-and-tricks/</loc>
     <lastmod>2021-03-26</lastmod>
   </url>
   <url>
@@ -705,10 +741,6 @@
     <lastmod>2021-03-26</lastmod>
   </url>
   <url>
-    <loc>https://karobben.github.io/2020/06/26/Linux/Termux/</loc>
-    <lastmod>2021-03-26</lastmod>
-  </url>
-  <url>
     <loc>https://karobben.github.io/2020/06/26/Linux/To-Start-With-Linux/</loc>
     <lastmod>2021-03-26</lastmod>
   </url>
@@ -742,10 +774,6 @@
   </url>
   <url>
     <loc>https://karobben.github.io/2020/06/23/Linux/Deepin_gtop/</loc>
-    <lastmod>2021-03-26</lastmod>
-  </url>
-  <url>
-    <loc>https://karobben.github.io/2020/06/26/Linux/Deepin_scrcpy/</loc>
     <lastmod>2021-03-26</lastmod>
   </url>
   <url>
