@@ -1,6 +1,74 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://karobben.github.io/2021/05/23/LearnNotes/fourier-transforms/</loc>
+    <lastmod>2021-06-05</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2021/05/23/Python/opencv-digital-signal-detect/</loc>
+    <lastmod>2021-06-05</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2021/05/11/LearnNotes/edx-biochm-16/</loc>
+    <lastmod>2021-06-05</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2021/06/01/Python/opencv-progressbar/</loc>
+    <lastmod>2021-06-05</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2021/05/15/Python/kivy-inaction-tb-8/</loc>
+    <lastmod>2021-06-05</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2021/03/12/Python/kivy-write2android/</loc>
+    <lastmod>2021-06-05</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2021/05/31/Python/kivy-tutorial/</loc>
+    <lastmod>2021-06-05</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2021/05/14/LearnNotes/edx-biochm-18/</loc>
+    <lastmod>2021-06-05</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2020/06/26/Blog/waque/</loc>
+    <lastmod>2021-06-05</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2020/08/13/R/NetWorkPlot/</loc>
+    <lastmod>2021-06-03</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2020/06/20/R/pheatmap/</loc>
+    <lastmod>2021-06-03</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2021/05/25/LearnNotes/edx-statisticl/</loc>
+    <lastmod>2021-05-25</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2020/09/12/Python/Opencv_gif/</loc>
+    <lastmod>2021-05-24</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2020/12/28/LearnNotes/edx_python_data/</loc>
+    <lastmod>2021-05-24</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2021/05/19/Linux/Termux/</loc>
+    <lastmod>2021-05-23</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2020/02/14/R/library/</loc>
+    <lastmod>2021-05-23</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2020/09/12/Python/numpy/</loc>
+    <lastmod>2021-05-23</lastmod>
+  </url>
+  <url>
     <loc>https://karobben.github.io/2021/03/19/Python/threading/</loc>
     <lastmod>2021-05-22</lastmod>
   </url>
@@ -13,24 +81,12 @@
     <lastmod>2021-05-22</lastmod>
   </url>
   <url>
-    <loc>https://karobben.github.io/2021/05/19/Linux/Termux/</loc>
-    <lastmod>2021-05-21</lastmod>
-  </url>
-  <url>
     <loc>https://karobben.github.io/2021/05/15/Python/kivy-inaction-tb-9/</loc>
     <lastmod>2021-05-20</lastmod>
   </url>
   <url>
-    <loc>https://karobben.github.io/2021/05/14/LearnNotes/edx-biochm-18/</loc>
-    <lastmod>2021-05-19</lastmod>
-  </url>
-  <url>
     <loc>https://karobben.github.io/2020/09/12/Python/OpenCV/</loc>
     <lastmod>2021-05-18</lastmod>
-  </url>
-  <url>
-    <loc>https://karobben.github.io/2021/05/15/Python/kivy-inaction-tb-8/</loc>
-    <lastmod>2021-05-17</lastmod>
   </url>
   <url>
     <loc>https://karobben.github.io/2021/05/10/Python/kivy-inaction-tb-7/</loc>
@@ -42,10 +98,6 @@
   </url>
   <url>
     <loc>https://karobben.github.io/2021/05/08/Python/kivy-inaction-tb-5/</loc>
-    <lastmod>2021-05-17</lastmod>
-  </url>
-  <url>
-    <loc>https://karobben.github.io/2020/09/12/Python/Opencv_gif/</loc>
     <lastmod>2021-05-17</lastmod>
   </url>
   <url>
@@ -78,10 +130,6 @@
   </url>
   <url>
     <loc>https://karobben.github.io/2021/04/20/LearnNotes/writing-advice/</loc>
-    <lastmod>2021-05-11</lastmod>
-  </url>
-  <url>
-    <loc>https://karobben.github.io/2021/05/11/LearnNotes/edx-biochm-16/</loc>
     <lastmod>2021-05-11</lastmod>
   </url>
   <url>
@@ -177,10 +225,6 @@
     <lastmod>2021-04-24</lastmod>
   </url>
   <url>
-    <loc>https://karobben.github.io/2020/06/26/Blog/waque/</loc>
-    <lastmod>2021-04-22</lastmod>
-  </url>
-  <url>
     <loc>https://karobben.github.io/2021/04/21/Python/opencv-img-stitch/</loc>
     <lastmod>2021-04-22</lastmod>
   </url>
@@ -199,10 +243,6 @@
   <url>
     <loc>https://karobben.github.io/2021/04/20/R/binary-tree/</loc>
     <lastmod>2021-04-21</lastmod>
-  </url>
-  <url>
-    <loc>https://karobben.github.io/2020/08/13/R/NetWorkPlot/</loc>
-    <lastmod>2021-04-20</lastmod>
   </url>
   <url>
     <loc>https://karobben.github.io/2021/02/01/Blog/echart/</loc>
@@ -277,10 +317,6 @@
     <lastmod>2021-04-03</lastmod>
   </url>
   <url>
-    <loc>https://karobben.github.io/2020/02/14/R/library/</loc>
-    <lastmod>2021-04-03</lastmod>
-  </url>
-  <url>
     <loc>https://karobben.github.io/2020/05/01/R/Data-cleaning/</loc>
     <lastmod>2021-04-02</lastmod>
   </url>
@@ -326,10 +362,6 @@
   </url>
   <url>
     <loc>https://karobben.github.io/2020/05/26/R/pathview/</loc>
-    <lastmod>2021-03-26</lastmod>
-  </url>
-  <url>
-    <loc>https://karobben.github.io/2020/06/20/R/pheatmap/</loc>
     <lastmod>2021-03-26</lastmod>
   </url>
   <url>
@@ -553,10 +585,6 @@
     <lastmod>2021-03-26</lastmod>
   </url>
   <url>
-    <loc>https://karobben.github.io/2020/09/12/Python/numpy/</loc>
-    <lastmod>2021-03-26</lastmod>
-  </url>
-  <url>
     <loc>https://karobben.github.io/2020/01/22/Python/pip/</loc>
     <lastmod>2021-03-26</lastmod>
   </url>
@@ -586,10 +614,6 @@
   </url>
   <url>
     <loc>https://karobben.github.io/2021/01/01/Python/kivy_platform/</loc>
-    <lastmod>2021-03-26</lastmod>
-  </url>
-  <url>
-    <loc>https://karobben.github.io/2021/03/12/Python/kivy-write2android/</loc>
     <lastmod>2021-03-26</lastmod>
   </url>
   <url>
@@ -834,10 +858,6 @@
   </url>
   <url>
     <loc>https://karobben.github.io/2020/07/07/LearnNotes/paper_WGCNA/</loc>
-    <lastmod>2021-03-26</lastmod>
-  </url>
-  <url>
-    <loc>https://karobben.github.io/2020/12/28/LearnNotes/edx_python_data/</loc>
     <lastmod>2021-03-26</lastmod>
   </url>
   <url>
