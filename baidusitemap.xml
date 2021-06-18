@@ -1,6 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://karobben.github.io/2021/06/09/Python/sklearn-regression/</loc>
+    <lastmod>2021-06-18</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2021/05/19/Linux/Termux/</loc>
+    <lastmod>2021-06-18</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2021/06/10/Blog/android-garbageclean/</loc>
+    <lastmod>2021-06-18</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2021/06/18/LearnNotes/edx-biochm-22/</loc>
+    <lastmod>2021-06-18</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2021/06/16/LearnNotes/edx-biochm-21/</loc>
+    <lastmod>2021-06-18</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2021/06/07/LearnNotes/edx-biochm-19/</loc>
+    <lastmod>2021-06-18</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2021/06/15/LearnNotes/edx-biochm-20/</loc>
+    <lastmod>2021-06-18</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2021/02/11/Blog/hexo_icarus/</loc>
+    <lastmod>2021-06-15</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2020/09/12/Python/numpy/</loc>
+    <lastmod>2021-06-10</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2021/05/14/LearnNotes/edx-biochm-18/</loc>
+    <lastmod>2021-06-07</lastmod>
+  </url>
+  <url>
     <loc>https://karobben.github.io/2021/05/23/LearnNotes/fourier-transforms/</loc>
     <lastmod>2021-06-05</lastmod>
   </url>
@@ -29,10 +69,6 @@
     <lastmod>2021-06-05</lastmod>
   </url>
   <url>
-    <loc>https://karobben.github.io/2021/05/14/LearnNotes/edx-biochm-18/</loc>
-    <lastmod>2021-06-05</lastmod>
-  </url>
-  <url>
     <loc>https://karobben.github.io/2020/06/26/Blog/waque/</loc>
     <lastmod>2021-06-05</lastmod>
   </url>
@@ -57,15 +93,7 @@
     <lastmod>2021-05-24</lastmod>
   </url>
   <url>
-    <loc>https://karobben.github.io/2021/05/19/Linux/Termux/</loc>
-    <lastmod>2021-05-23</lastmod>
-  </url>
-  <url>
     <loc>https://karobben.github.io/2020/02/14/R/library/</loc>
-    <lastmod>2021-05-23</lastmod>
-  </url>
-  <url>
-    <loc>https://karobben.github.io/2020/09/12/Python/numpy/</loc>
     <lastmod>2021-05-23</lastmod>
   </url>
   <url>
@@ -183,10 +211,6 @@
   <url>
     <loc>https://karobben.github.io/2021/03/09/Python/kivy-screen-commu/</loc>
     <lastmod>2021-04-29</lastmod>
-  </url>
-  <url>
-    <loc>https://karobben.github.io/2021/02/11/Blog/hexo_icarus/</loc>
-    <lastmod>2021-04-28</lastmod>
   </url>
   <url>
     <loc>https://karobben.github.io/2021/04/24/LearnNotes/edx-biochm-13/</loc>
