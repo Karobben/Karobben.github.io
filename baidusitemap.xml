@@ -1,6 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://karobben.github.io/2020/07/28/Bioinfor/RNA-seq-with-Trinity/</loc>
+    <lastmod>2021-07-05</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2020/07/28/Bioinfor/samtools/</loc>
+    <lastmod>2021-07-03</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2020/07/28/Bioinfor/Bioconda/</loc>
+    <lastmod>2021-07-02</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2020/06/26/Linux/tar/</loc>
+    <lastmod>2021-07-02</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2020/07/28/Bioinfor/Trinity/</loc>
+    <lastmod>2021-07-02</lastmod>
+  </url>
+  <url>
     <loc>https://karobben.github.io/2021/06/26/LearnNotes/edx-biochm-25/</loc>
     <lastmod>2021-07-01</lastmod>
   </url>
@@ -785,10 +805,6 @@
     <lastmod>2021-03-26</lastmod>
   </url>
   <url>
-    <loc>https://karobben.github.io/2020/06/26/Linux/tar/</loc>
-    <lastmod>2021-03-26</lastmod>
-  </url>
-  <url>
     <loc>https://karobben.github.io/2021/01/31/Linux/mysql/</loc>
     <lastmod>2021-03-26</lastmod>
   </url>
@@ -1273,10 +1289,6 @@
     <lastmod>2021-03-26</lastmod>
   </url>
   <url>
-    <loc>https://karobben.github.io/2020/07/28/Bioinfor/samtools/</loc>
-    <lastmod>2021-03-26</lastmod>
-  </url>
-  <url>
     <loc>https://karobben.github.io/2020/07/28/Bioinfor/fastqc/</loc>
     <lastmod>2021-03-26</lastmod>
   </url>
@@ -1325,19 +1337,11 @@
     <lastmod>2021-03-26</lastmod>
   </url>
   <url>
-    <loc>https://karobben.github.io/2020/07/28/Bioinfor/Trinity/</loc>
-    <lastmod>2021-03-26</lastmod>
-  </url>
-  <url>
     <loc>https://karobben.github.io/2020/07/28/Bioinfor/Tophat/</loc>
     <lastmod>2021-03-26</lastmod>
   </url>
   <url>
     <loc>https://karobben.github.io/2020/07/28/Bioinfor/TransDecoder/</loc>
-    <lastmod>2021-03-26</lastmod>
-  </url>
-  <url>
-    <loc>https://karobben.github.io/2020/07/28/Bioinfor/RNA-seq-with-Trinity/</loc>
     <lastmod>2021-03-26</lastmod>
   </url>
   <url>
@@ -1378,10 +1382,6 @@
   </url>
   <url>
     <loc>https://karobben.github.io/2020/07/28/Bioinfor/BatMeth2/</loc>
-    <lastmod>2021-03-26</lastmod>
-  </url>
-  <url>
-    <loc>https://karobben.github.io/2020/07/28/Bioinfor/Bioconda/</loc>
     <lastmod>2021-03-26</lastmod>
   </url>
   <url>
