@@ -1,6 +1,0 @@
-1599369814408	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "--user-agent=\"Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1)\"" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile2OSHyx"
-JavaScript error: jar:file:///usr/lib/firefox/omni.ja!/components/addonsInfo.js, line 91: SyntaxError: "0"-prefixed octal literals and octal escape sequences are deprecated; for octal literals use the "0o" prefix instead
-1599369815700	Marionette	INFO	Listening on port 40481
-1599369815716	Marionette	WARN	TLS certificate errors will be ignored for this session
-
-(/usr/lib/firefox/firefox:6840): dconf-WARNING **: 13:24:12.357: Unable to open /var/lib/flatpak/exports/share/dconf/profile/user: Permission denied
