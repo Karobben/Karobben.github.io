@@ -1,8 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://karobben.github.io/2021/08/27/LearnNotes/tulane-biochem-2/</loc>
+    <lastmod>2021-08-28</lastmod>
+  </url>
+  <url>
     <loc>https://karobben.github.io/2021/08/25/LearnNotes/tulane-biochem-1/</loc>
-    <lastmod>2021-08-26</lastmod>
+    <lastmod>2021-08-27</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2021/08/26/LearnNotes/tulane-cellbio-2/</loc>
+    <lastmod>2021-08-27</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2021/08/24/LearnNotes/tulane-bioinf-1/</loc>
+    <lastmod>2021-08-27</lastmod>
   </url>
   <url>
     <loc>https://karobben.github.io/2021/08/24/LearnNotes/tulane-cellbio-1/</loc>
@@ -10,10 +22,6 @@
   </url>
   <url>
     <loc>https://karobben.github.io/2021/05/31/Python/kivy-tutorial/</loc>
-    <lastmod>2021-08-25</lastmod>
-  </url>
-  <url>
-    <loc>https://karobben.github.io/2021/08/24/LearnNotes/tulane-bioinf-1/</loc>
     <lastmod>2021-08-25</lastmod>
   </url>
   <url>

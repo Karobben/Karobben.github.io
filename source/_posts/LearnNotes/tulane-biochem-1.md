@@ -4,8 +4,8 @@ url: tulane_biochem_1
 covercopy: <a href="https://www.researchgate.net/figure/Schematics-of-the-atomic-structure-of-water-molecule-and-the-hydrogen-bonds-between-water_fig8_331708266">© Jinbo Peng, et al.</a>
 priority: 10000
 date: 2021-08-25 08:23:38
-title: "Graduate Biochemistry 1| Tulane"
-ytitle: "123"
+title: "Water, thermodynamic|Graduate Biochemistry 1| Tulane"
+ytitle: "水，热力学|生化 2|杜兰"
 description: "Class notes of Graduate Biochemistry in Tulane"
 excerpt: "Water, Structures, Hydrogen Bonds, etc"
 tags: [Classes, Biochemistry]
