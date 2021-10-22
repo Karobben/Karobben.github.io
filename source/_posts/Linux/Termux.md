@@ -226,11 +226,43 @@ apt install openssl
 ```
 ## Install R in Jupyter Notebook
 
+```bash
+pip3 install notebook
+```
+
 ```R
 install.packages("remotes")
 remotes::install_github('IRkernel/IRkernel')
 
+# Connect to Jupyter Notebook
+IRkernel::installspec()
+# 或者是在系统下安装
+IRkernel::installspec(user = FALSE)
 ```
+
+
+Enable Jupyter notebook remote (local) computer
+[Lup Peng 2017](https://luppeng.wordpress.com/2017/04/18/remote-access-to-jupyter-notebook/)
+
+```bash
+jupyter notebook --generate-config
+vim ./.jupyter/jupyter_notebook_config.py
+```
+
+```diff
+  #------------------------------------------------------------------------------
+  # NotebookApp(JupyterApp) configuration
+  #------------------------------------------------------------------------------
+  ...
+  ## The IP address the notebook server will listen on.
+  #c.NotebookApp.ip = 'localhost'
++ c.NotebookApp.ip = '0.0.0.0'
+```
+
+```bash
+jupyter notebook password
+```
+
 ## blast+
 
 ```bash
@@ -283,7 +315,7 @@ apt install automake
 vim /data/data/com.termux/files/home/Biosoft/trinityrnaseq-v2.11.0/trinity-plugins/bamsifter/build_htslib.sh
 ```
 
-```diff
+```bash
 set -e -v
 
 cd htslib

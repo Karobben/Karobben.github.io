@@ -8,8 +8,8 @@ title: "2 Membranes|Advanced Cell Biology|Tulane"
 ytitle: "2 膜系统|高等细胞生物学|杜兰"
 description: "Classes notes of the Advanced Cell Biology"
 excerpt: "Classes 1, Reach Methods "
-tags: [Classes, Cell Biology]
-category: [Notes, Class, Cell Biology]
+tags: [Classes, Cell Biology, Tulane Classes]
+category: [Notes, Class, Tulane, Cell Biology]
 cover: "https://www.researchgate.net/profile/Pierre-Bodenes/publication/317648968/figure/fig20/AS:669496008265728@1536631695071/Diagram-of-the-cell-membrane.png"
 thumbnail: "https://www.researchgate.net/profile/Callixte-Yadufashije/publication/324543378/figure/fig26/AS:616049695285249@1523889101090/Onion-cell-before-staining.png"
 ---
@@ -30,11 +30,11 @@ thumbnail: "https://www.researchgate.net/profile/Callixte-Yadufashije/publicatio
 > - Hydropathy plots
 
 ### Terminology
-|||
-|:-|:-|
-|phospholipid bilayers|
-|amphipathic| hydrophobic tial and hydrophilic head|
-|micelles/<br>liposomes /<br>sheet-like phospholipid bilayers|
+
+phospholipid bilayers:
+  - amphipathic: hydrophobic tial and hydrophilic head
+  - micelles; liposomes; sheet-like phospholipid bilayers
+
 ## Function
 
 > 1. Selective Barrier
@@ -45,9 +45,10 @@ thumbnail: "https://www.researchgate.net/profile/Callixte-Yadufashije/publicatio
 > 3. Contain Transport Systems--bring food molecules inside and maintain ion concentrations
 > 4. Contain Specific Recognition Sites--for hormones,  etc.
 
-2, **Reaction Facility**: Enzyme Working on a 3 dimension, -> with the membrane, bring things to 2 dimensions to facilities the interactions and reactions.
-3, protein helps to transport the materials.
-4, hydrophobic substrate; recognition: Glycolipids / Glucoportein
+PS:
+1. **Reaction Facility**: Enzyme Working on a 3 dimension, -> with the membrane, bring things to 2 dimensions to facilities the interactions and reactions.
+2. protein helps to transport the materials.
+3. hydrophobic substrate; recognition: Glycolipids / Glucoportein
 
 
 ## Composition
@@ -62,7 +63,7 @@ thumbnail: "https://www.researchgate.net/profile/Callixte-Yadufashije/publicatio
 1. Exceptions: drugs which specifically designed to cross membrane to deliver the chemicals.,
     - hydrophilic for solving
     - hydroponically for  crossing the membrane
-    2.
+
 
 > The relative amounts of lipid and protein vary from one membrane type to the next, but the basic structures of all of these membranes are similar.
 
@@ -80,15 +81,12 @@ The ratio of the L/P of the membrane serves its function.
 Hydrophilic head
 Hydrophobic tail
 
-
-
 Saturated tail/Unsaturated tail
 
 Unsaturated tail:
 
 - Decreases the Van de Waal interaction by increasing the distance of the lipid tail.
-
- - increases fluidity.
+- increases fluidity.
 
 
 
@@ -200,7 +198,7 @@ Type VI: helix + lipid(s) linkage
 
 
 
-###-Functional Classes
+### Functional Classes
 > **Enzymes** - catalyze reactions with lipid soluble substrates
 > **Channels/pores** - Allow molecules to move across membranes
 > **Transporters** - Pump molecules across membranes

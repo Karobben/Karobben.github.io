@@ -33,6 +33,12 @@ Than, you can using it as the instructions written by [Quest_sec 2020](https://b
 npm install hexo-tag-echarts3 --save
 ```
 
+Standard Code model:
+```hexo
+{% echarts 400 '85%' %}
+{% endecharts %}
+```
+
 and then, insert codes below
 ```hexo
 {% echarts 400 '85%' %}
@@ -366,4 +372,26 @@ itemStyle:{
                    }
                }
            },
+```
+
+
+## Bugs
+
+- [ ] can't assign variables before plot
+
+### Barchart
+
+- [ ] can't show labels in serious
+
+exp for labels:
+```
+label: {
+  show: true,
+  rotate: 90,
+  align: 'left',
+  verticalAlign: 'middle',
+  position:  'insideBottom',
+  formatter: '{c} | {a}',
+  distance: 15
+},
 ```

@@ -46,8 +46,11 @@ SplitBar <-  function(p, Y1,Y2,Y3, Y0=0,R=c(1,1)){
   p1 <- p +  coord_cartesian(ylim = c(Y2,Y3))+
     theme(axis.text.x = element_blank(),
     axis.title = element_blank(), axis.ticks.x = element_blank(),
-    legend.position =   'none')
-  p2 <- p +  coord_cartesian(ylim = c(Y0,Y1))+ theme(title = element_blank(), plot.title = element_blank())
+    legend.position =   'none',
+    panel.grid = element_blank(),
+    panel.border = element_blank(), axis.line.y = element_line(colour = "black"))
+  p2 <- p +  coord_cartesian(ylim = c(Y0,Y1))+ theme(title = element_blank(), plot.title = element_blank(), panel.grid = element_blank(),
+  panel.border = element_blank(), axis.line = element_line(colour = "black"))
   p1/p2 + plot_layout(design = layout)
 }
 
@@ -64,5 +67,3 @@ SplitBar(p,450,99998,100021,0,c(1,5))
 |原圖|拼接圖|
 |---|---|
 |![tbUS61.md.png](https://s1.ax1x.com/2020/06/11/tbUS61.md.png)|![tbUCm6.md.png](https://s1.ax1x.com/2020/06/11/tbUCm6.md.png)|
-
-

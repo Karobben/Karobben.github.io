@@ -5,7 +5,7 @@ url: atom2
 date: 2020/06/26
 toc: true
 excerpt: "Atom install, packages install. Some awesome packages for atom"
-tags: [Linux, Software, IDE]
+tags: [Linux, Software, IDE, Atom]
 category: [Linux, Software]
 cover: 'https://s1.ax1x.com/2020/06/26/NsA2lD.png'
 thumbnail: 'https://s1.ax1x.com/2020/06/26/NsA2lD.png'
@@ -85,6 +85,7 @@ https://atom.io/packages
 ### 更多博客：
 Location：https://www.cnblogs.com/GarfieldEr007/p/5594700.html
 更多插件:
+- language-r (R 语言语法高亮)
 - minimap (VS 一样小图预览)
 - atom-beautify (高亮美化)
 - emmet (emmet是HTML,CSS快速编写的神器,具体的使用可以参看emmet官网。)

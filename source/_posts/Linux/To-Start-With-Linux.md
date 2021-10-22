@@ -59,5 +59,27 @@ sudo chmod +x /etc/rc.local
 ```
 
 ## Something Else
+
+### System infor
+
+```bash
+# print distro
+head -n 1 /etc/issue
+
+# Name of the computer
+hostname
+```
+
+### Hardware infor
+
+```bash
+# CPU infor
+cat /proc/cpuinfo
+
+# Ram infor
+grep MemTotal /proc/meminfo
+# Ram infor
+free -h
+```
 ### Java
 [adopt open jdk](https://adoptopenjdk.net/)

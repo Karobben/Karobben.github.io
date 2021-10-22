@@ -17,101 +17,141 @@ priority: 10000
 ## Packages from Cran
 
 ```r
-install.packages('dplyr')
-install.packages('ellipse')
-install.packages('fastcluster')
-install.packages("reshape2")
-install.packages("htmlwidgets")
-install.packages("gapminder")
-install.packages("httr")
-install.packages("igraph")
-install.packages("jiebaR")
-install.packages("jpeg")
-install.packages("htmlwidgets")
-install.packages("jsonlite")
-install.packages("magick")
-install.packages("modelr")
-install.packages("pacman")
-install.packages("psych")
-install.packages("randomForest")
-install.packages("rayrender")
-install.packages("readxl")
-install.packages("rpart")
-install.packages("Rwordseg")
-install.packages("SnowballC")
+'dplyr', 'ellipse', 'fastcluster', "reshape2",
+"htmlwidgets", "gapminder", "httr", "igraph",
+"jiebaR", "jpeg", "htmlwidgets", "jsonlite",
+"magick", "modelr", "pacman", "psych",
+"randomForest", "rayrender", "readxl",
+"rpart", "Rwordseg", "SnowballC", "remotes"
 
 # Map data
 # relied libs: https://www.liujason.com/article/570.html
 # sudo apt-get install libgdal-dev libproj-dev gdal-bin -y
-install.packages("sf") # map data
 
-install.packages("swirl")
-install.packages("tidyr")
-install.packages("tidyverse")
-install.packages("tm")
-install.packages("WGCNA")
-install.packages("xgboost")
-install.packages("fmsb")
-install.packages('rcmdcheck')
-install.packages('devtools')
-install.packages("rgl")
-install.packages("forecast") # Math calculation:  fourier ; pacman -S gcc-fortran
+"sf", "swirl", "tidyr", "tidyverse",
+"tm", "WGCNA", "xgboost", "fmsb",
+'rcmdcheck', 'devtools', "rgl", "forecast",
+
+# Math calculation:  fourier ; pacman -S gcc-fortran
+
 # Plot
-install.packages("patchwork")
-install.packages("networkD3")
-install.packages("ggplot2")
-install.packages("maps")
-install.packages("ggalluvial")
-install.packages('circlize')
-install.packages('cowplot')
-install.packages("pheatmap")
-install.packages("GGally")
-install.packages('ggplotify')
-install.packages("ggthemes")
-install.packages("ggdendro")
-install.packages("ggrepel")
-install.packages('ggalt') # Map data
-install.packages("showtext") # Fonts
-install.packages("wordcloud2")
-install.packages("ggupset") # devtools::install_github("const-ae/ggupset")
-install.packages("plotly")
-install.packages("plotrix")
+"patchwork" ,"networkD3" ,"ggplot2" ,"maps" ,"ggalluvial",
+'circlize' ,'cowplot' ,"pheatmap" ,"GGally" ,'ggplotify',
+"ggthemes" ,"ggdendro" ,"ggrepel" ,"showtext", "remotes",
+"wordcloud2" ,"ggupset" ,"plotly" ,"plotrix" ,'ggalt',
+
+# devtools::install_github("const-ae/ggupset")
+# Fonts showtext
+# Map data: ggalt
 ```
+
+
+### Install with for loop
+```r
+List <- c('dplyr', 'ellipse', 'fastcluster', "reshape2",
+          "htmlwidgets", "gapminder", "httr", "igraph",
+          "jiebaR", "jpeg", "htmlwidgets", "jsonlite",
+          "magick", "modelr", "pacman", "psych",
+          "randomForest", "rayrender", "readxl",
+          "rpart", "Rwordseg", "SnowballC", "remotes",
+          "sf", "swirl", "tidyr", "tidyverse",
+          "tm", "WGCNA", "xgboost", "fmsb",
+          'rcmdcheck', 'devtools', "rgl", "forecast",
+          "patchwork" ,"networkD3" ,"ggplot2" ,"maps" ,"ggalluvial",
+          'circlize' ,'cowplot' ,"pheatmap" ,"GGally" ,'ggplotify',
+          "ggthemes" ,"ggdendro" ,"ggrepel" ,"showtext", "remotes",
+          "wordcloud2" ,"ggupset" ,"plotly" ,"plotrix" ,'ggalt')
+
+for(LIB in List){
+  if (!requireNamespace(LIB, quietly = TRUE))
+      install.packages(LIB)
+}
+```
+
+#### sf
+
+udunits is required for `sf` (udunits)
+for manjaro install
+
+```bash
+wget  	https://mirrors.tuna.tsinghua.edu.cn/arch4edu/x86_64/udunits-2.2.28-2-x86_64.pkg.tar.zst
+pacman -U udunits-2.2.28-2-x86_64.pkg.tar.zst
+```
+
+`gdal-config not found or not executable`
+
+```bash
+sudo pacman -S gdal
+```
+
 ## Packages for Biology
 
 ```r
 if (!requireNamespace("BiocManager", quietly = TRUE))
     install.packages("BiocManager")
 
-BiocManager::install("Biobase")
-BiocManager::install("edgeR")
-BiocManager::install("Biostrings")
-BiocManager::install("clusterProfiler")
-BiocManager::install("ggtree")
-BiocManager::install("org.Hs.eg.db")
-BiocManager::install("pathview")
-BiocManager::install("limma")
-BiocManager::install("qvalue")
+# For calculation
+"edgeR", "limma", "qvalue", "DESeq2",
+
+# Microarray
+"GEOquery",
+
+# Seq data
+"Biostrings",
+
+# Annotation and Enrichment
+"clusterProfiler", "pathview",
+"org.Hs.eg.db", "org.Dr.eg.db", "org.Dm.eg.db",
+
 # Plot
-BiocManager::install("clue") # for "ComplexHeatmap"
-BiocManager::install("ComplexHeatmap") # old version. New version can be found in Github
+"ggtree", "clue", "ComplexHeatmap",
+# clue: for "ComplexHeatmap"
+# ComplexHeatmap: old version. New version can be found in Github
+
+# other NGS
+"WGCNA",
+
+# Others
+"Biobase"
+```
+
+```r
+List <- c("Biobase", "edgeR", "Biostrings", "clusterProfiler", "ggtree",
+          "pathview", "limma", "qvalue", "org.Hs.eg.db", "org.Dr.eg.db",
+          "org.Dm.eg.db","clue", "ComplexHeatmap", "GEOquery", "WGCNA")
+
+for(LIB in List){
+  if (!requireNamespace(LIB, quietly = TRUE))
+      BiocManager::install(LIB)
+}
 ```
 
 ## Packages from github
 
 
 ```r
-install.packages('remotes')
-remotes::install_github("tylermorganwall/coronaobj")
-remotes::install_github("jennybc/gapminder")
-remotes::install_github('pzhaonet/ncovr')
+
+"tylermorganwall/coronaobj", "jennybc/gapminder", 'pzhaonet/ncovr',
+
 # Plot GGplot
-remotes::install_github("hrbrmstr/ggalt")
-remotes::install_github("AckerDWM/gg3D")
-remotes::install_github("jayjacobs/ggcal")
-remotes::install_github('ricardo-bion/ggradar')
-remotes::install_github("tylermorganwall/rayshader") # 3D plot for ggplot
+"hrbrmstr/ggalt", "AckerDWM/gg3D", "jayjacobs/ggcal",
+'ricardo-bion/ggradar', "tylermorganwall/rayshader",
+
+# 3D plot : gg3D, rayshader
 
 # Plot Others
-remotes::install_github("jokergoo/ComplexHeatmap")
+"jokergoo/ComplexHeatmap"
+```
+
+```r
+List <- c("tylermorganwall/coronaobj", "jennybc/gapminder", 'pzhaonet/ncovr',
+          "hrbrmstr/ggalt", "AckerDWM/gg3D", "jayjacobs/ggcal",
+          'ricardo-bion/ggradar', "tylermorganwall/rayshader",
+          "jokergoo/ComplexHeatmap")
+
+
+for(LIB in List){
+  if (!requireNamespace(LIB, quietly = TRUE))
+      remotes::install_github(LIB)
+}
 ```

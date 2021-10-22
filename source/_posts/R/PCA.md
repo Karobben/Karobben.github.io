@@ -25,13 +25,20 @@ priority: 10000
 ## install ggbioplot
 ##install_github("vqv/ggbiplot")
 ##install.packages('plyr')
+
+library(plyr)
+library(ggbiplot)
+
 data(wine)
 wine.pca <- prcomp(wine, scale. = TRUE)
 ## bioplot
 ggbiplot(wine.pca, obs.scale = 1, var.scale = 1,
          groups = wine.class, ellipse = TRUE, circle = TRUE) +
   scale_color_discrete(name = '') +
-  theme_light()
+  theme_light()+ theme(axis.title = element_text(size=10))
+
+
+# var.axis = F to remove the varible axis on the center.
 ```
 
 ![NlbAKJ.png](https://s1.ax1x.com/2020/06/20/NlbAKJ.png)

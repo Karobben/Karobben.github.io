@@ -233,12 +233,13 @@ Functions:
     return(Result_TB)
   }
 
-  MEES_plot <- function(TB,TB_input,header="test"){
+  MEES_plot <- function(TB,TB_input, BY = 1, header="test"){
     colnames(TB)=c("X","Y")
     TB_Nna = na.omit(TB_input)
+    XX = seq(from=min(TB$X), to =max(TB$X), by = BY)
     for(i in c(1:nrow(TB_Nna))){
       ggplot()+geom_point(data=TB,aes(x=X,y=Y))+
-               geom_line(aes(x=TB$X, y=F_equation(TB$X,as.character(TB_Nna$F[i]))))
+               geom_line(aes(x=XX, y=F_equation(XX, as.character(TB_Nna$F[i]))))
       ggsave(paste(header,i,".png",sep=""))
     }
   }
@@ -265,3 +266,49 @@ MEES_plot(TB,MEES(TB,4))
 |11|3|1.550240e-08|0.9986254|41.904761904762+0.069444444444444 * X^3+-0.791666666666658 * X^2+6.0912698412698 * X^1|
 |12|4|3.012296e-02|0.9986254|41.904761904762+2.01944464079605e-16 * X^4+0.0694444444444399 * X^3+-0.791666666666634 * X^2+6.09126984126975 * X^1|
 |13|5|NaN|1.0000000|41.9999999999999+-0.00625000000000004 * X^5+0.156250000000001 * X^4+-1.29166666666667 * X^3+3.99999999999998 * X^2+0.516666666666805 * X^1|
+
+
+
+## Logarithmic Regression
+
+```r
+Modle <- lm(formula = hwy ~ log(displ,2) , data = mpg)
+```
+<pre>
+Call:
+lm(formula = hwy ~ log(displ, exp(1)), data = mpg)
+
+Coefficients:
+       (Intercept)  log(displ, exp(1))  
+             38.21              -12.57  
+</pre>
+
+```r
+
+Modle <- lm(formula = Y ~ log(X+1), data = TB)
+
+Formula <- function(x){
+  Modle$coefficients[[2]]  * log(x-1) + Modle$coefficients[[1]]
+}
+
+X= seq(0,5000, by=2)
+
+ggplot() + geom_point(data= TB, aes(x=X, y=Y)) +
+  geom_point(aes(x=X, y= Formula(c(1:length(X)))), color="salmon")
+
+```
+
+### drc
+
+```r
+X <- TB$X
+Y <- TB$Y
+
+library(drc)
+
+mod1<-drm(Y ~ X, fct=LL.2())
+summary(mod1)
+
+plot(X,Y)
+lines(seq(0,5000, by=2), predict(mod1, data.frame(X=seq(0,5000, by=2))))
+```

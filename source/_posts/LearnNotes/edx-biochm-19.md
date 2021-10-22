@@ -301,7 +301,7 @@ digraph{
   EFD [label = "Ectopic fat deposition"]
   Obesity -> EFD
   EFD -> "Insulin\nresistance" [label = "Lipotoxicity\nIncreased inflammation"]
-  EFD -> "Insuline\ndeficiency" -> "Type 2 Diabetes"
+  EFD -> "Insulin\ndeficiency" -> "Type 2 Diabetes"
   "Insulin\nresistance" -> "Type 2 Diabetes"
 }
 ```

@@ -28,7 +28,18 @@ thumbnail: "https://manjaro.org.cn/wp-content/uploads/2019-07-13-19-33-38-%E7%9A
   - [X] [OBS bug](#Graphic-Manager)
 - May 17
   - [x] [SSR](#SSR)
-- [ ] Biology Environment
+- [x] Biology Environment(#Biology-environment)
+- Others
+  - [x] [zoom](#Zoom)
+  - [x] [Slack](#Slack)
+  - [ ] [Atom]
+
+
+## update
+
+```bash
+pacman -Syyu
+```
 
 ## Graphic Manager
 I strongly recommend Settle GPU driver first if you are using dual GPU and one of them is Nvidia. Because one of my systems can't be open again after following a set of processes for installing an Nvidia driver. As it said by Linus Torvalds: F**K YOU, NVIDIA! After you switched to the Nvidia driver, your ==OBS could work== ~~fluently~~.
@@ -465,4 +476,21 @@ conda config --add channels https://mirrors.bfsu.edu.cn/anaconda/cloud/menpo/
 conda config --add channels https://mirrors.bfsu.edu.cn/anaconda/cloud/pytorch/
 conda config --add channels https://mirrors.bfsu.edu.cn/anaconda/cloud/peterjc123/
 conda config --set show_channel_urls yes
+```
+
+
+### Zoom
+
+Source: [Zoom for linux](https://support.zoom.us/hc/en-us/articles/204206269-Installing-or-updating-Zoom-on-Linux)
+
+```bash
+sudo pacman -U zoom_x86_64.pkg.tar.xz
+```
+
+### Slack
+
+Slack is a chatting channel which for sharing your ideas proficiently.sla
+
+```bash
+sudo pacman -S slack-desktop
 ```

@@ -54,6 +54,15 @@ ENTREZID         ENSEMBL SYMBOL
 5    55388 ENSG00000065328  MCM10
 6      991 ENSG00000117399  CDC20
 ```
+
+
+|  | 4312     |8318|
+| :------------- | :------------- |:-|
+|ACCNUM|AAA35699|NP_001139410|
+|ENTREZID |  ENSG00000196611|    ENSG00000093009|
+|ENSEMBL SYMBOL| MMP1 |CDC45
+
+
 ```r
 ggo <- groupGO(gene     = gene,
                OrgDb    = org.Hs.eg.db,
@@ -99,7 +108,10 @@ ego2 <- enrichGO(gene         = gene.df$ENSEMBL,
 
 ## turn ENSEMBL ID to Samble
 ego2_r <- setReadable(ego2, OrgDb = org.Hs.eg.db)
+
+dotplot(ego2)
 ```
+
 |ego|ego2|
 |---|---|
 |![tzt3RK.md.png](https://s1.ax1x.com/2020/06/14/tzt3RK.md.png)|![tztDRf.png](https://s1.ax1x.com/2020/06/14/tztDRf.png)|
@@ -115,12 +127,16 @@ ego3 <- gseGO(geneList     = geneList,
               maxGSSize    = 500,
               pvalueCutoff = 0.05,
               verbose      = FALSE)
+
+dotplot(ego3)
 ```
-```
+
+<pre>
 ID                              Description setSize enrichmentScore       NES      pvalue   p.adjust    qvalues rank                   leading_edge
 GO:0031012 GO:0031012                     extracellular matrix     427      -0.4868578 -2.138854 0.001231527 0.03095063 0.02171974 1797 tags=37%, list=14%, signal=33%
 GO:0099568 GO:0099568                       cytoplasmic region     368      -0.3426037 -1.488559 0.001259446 0.03095063 0.02171974 2613 tags=28%, list=21%, signal=23%
-```
+</pre>
+
 ![NSMQfg.png](https://s1.ax1x.com/2020/06/14/NSMQfg.png)
 
 ## GO ontology for Non-module Species
@@ -149,7 +165,8 @@ kk <- enrichKEGG(gene         = gene,
                  pvalueCutoff = 0.05)
 head(kk)
 ```
-```
+
+<pre>
 ID                                                   Description GeneRatio  BgRatio       pvalue     p.adjust       qvalue                                             geneID Count
 hsa04110 hsa04110                                                    Cell cycle     11/93 124/8031 1.590786e-07 3.213388e-05 3.148083e-05 8318/991/9133/890/983/4085/7272/1111/891/4174/9232    11
 hsa04114 hsa04114                                                Oocyte meiosis     10/93 128/8031 1.960649e-06 1.980256e-04 1.940011e-04    991/9133/983/4085/51806/6790/891/9232/3708/5241    10
@@ -157,8 +174,11 @@ hsa04218 hsa04218                                           Cellular senescence 
 hsa04061 hsa04061 Viral protein interaction with cytokine and cytokine receptor      8/93 100/8031 1.856553e-05 9.375595e-04 9.185054e-04           3627/10563/6373/4283/6362/6355/9547/1524     8
 hsa03320 hsa03320                                        PPAR signaling pathway      7/93  77/8031 2.765640e-05 1.117319e-03 1.094611e-03                 4312/9415/9370/5105/2167/3158/5346     7
 hsa04914 hsa04914                       Progesterone-mediated oocyte maturation      7/93  99/8031 1.392778e-04 4.689019e-03 4.593724e-03                    9133/890/983/4085/6790/891/5241     7
-```
+</pre>
+
+
 ### KE_2. Gene Set Enrichment Analysis
+
 ```r
 kk2 <- gseKEGG(geneList     = geneList,
                organism     = 'hsa',

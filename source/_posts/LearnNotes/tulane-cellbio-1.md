@@ -8,8 +8,8 @@ title: "1 Methods in Biology|Advanced Cell Biology|Tulane"
 ytitle: "1 实验方法|高等细胞生物学|杜兰"
 description: "Classes notes of the Advanced Cell Biology"
 excerpt: "Classes 1, Reach Methods "
-tags: [Classes, Cell Biology]
-category: [Notes, Class, Cell Biology]
+tags: [Classes, Cell Biology, Tulane Classes]
+category: [Notes, Class, Tulane, Cell Biology]
 cover: "https://www.researchgate.net/profile/Sareaa-Al-Mayahie/publication/346328038/figure/fig3/AS:967122800898053@1607591452404/Electrophoresis-1-volt-5-cm-of-ethidium-bromide-stained-agarose-gel-2-of-PCR.png"
 thumbnail: "https://www.researchgate.net/profile/Callixte-Yadufashije/publication/324543378/figure/fig26/AS:616049695285249@1523889101090/Onion-cell-before-staining.png"
 ---

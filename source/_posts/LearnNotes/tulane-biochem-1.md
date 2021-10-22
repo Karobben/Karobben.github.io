@@ -8,8 +8,8 @@ title: "Water, thermodynamic|Graduate Biochemistry 1| Tulane"
 ytitle: "水，热力学|生化 2|杜兰"
 description: "Class notes of Graduate Biochemistry in Tulane"
 excerpt: "Water, Structures, Hydrogen Bonds, etc"
-tags: [Classes, Biochemistry]
-category: [Notes, Class, Biochemistry]
+tags: [Classes, Biochemistry, Tulane Classes]
+category: [Notes, Class, Tulane, Biochemistry]
 cover: "https://www.researchgate.net/profile/Jinbo-Peng/publication/331708266/figure/fig8/AS:779168916721664@1562779754262/Schematics-of-the-atomic-structure-of-water-molecule-and-the-hydrogen-bonds-between-water.ppm"
 thumbnail: "https://static-s.aa-cdn.net/img/ios/1535372364/8bea5e7d0cecf8c51488133d2c6a4f48?v=1"
 ---
@@ -18,6 +18,8 @@ thumbnail: "https://static-s.aa-cdn.net/img/ios/1535372364/8bea5e7d0cecf8c514881
 |:-:|
 
 ## Structure of Water
+
+*[tetrahedral]: 四面体
 
 **What makes water unique**
 1. **Dipole**
@@ -38,15 +40,16 @@ thumbnail: "https://static-s.aa-cdn.net/img/ios/1535372364/8bea5e7d0cecf8c514881
     - small size and so, you have extrema abundant of a polar group.
 
 ### Hydrogen bond
-How it formed:
-- Require hydrogen donor (δ+) and hydrogen acceptor (δ-) groups
-- A hydrogen acceptor has a free electron pair
-- Hydrogen is shared between the groups
-- Separation and geometry are conserved
-- Common Atoms you know
-  - **Oxygen** has 2 bonds and 2 free electron pairs (only accept)
-  - **Nitrogen** often has three bonds and 1 free electron pair and sometimes 4 bonds and no free electron pairs (accept other protons)
-  - **Carbon** has four bonds and ==NO== free electron pairs and does not form hydrogen bonds
+
+>How it formed:
+> - Require hydrogen donor (δ+) and hydrogen acceptor (δ-) groups
+> - A hydrogen acceptor has a free electron pair
+> - Hydrogen is shared between the groups
+> - Separation and geometry are conserved
+> Common Atoms you know
+>  - **Oxygen** has 2 bonds and 2 free electron pairs (only accept)
+>  - **Nitrogen** often has three bonds and 1 free electron pair and sometimes 4 bonds and no free electron pairs (accept other protons)
+>  - **Carbon** has four bonds and ==NO== free electron pairs and does not form hydrogen bonds
 
 **Double bonds** make the atoms in a co-plane.
 
@@ -167,6 +170,13 @@ Middle of the curve is pK~a~: point tow portion equally abounded
 
 ## Thermodynamic and Energetics
 
+> - Spontaneity of chemical reactions
+> - Chemical Potential, Equilibrium, standard states
+> - Equilibrium constants & Free Energy
+> - Coupled reactions
+> - High energy compounds
+> - Metabolic pathways - glycolysis
+
 Second Law of Thermodynamic
 In biology, we focus in:
 - constant pressure, constant temperature
@@ -178,7 +188,7 @@ $- \Delta G$ is spontaneous, is a thermodynamically favorable reaction
 $aA + bB \longleftrightarrow cC + dD$
 
 $$
-\Delta G = \Delta G^ {\circ} + RT\ ln[\frac{C^ c D^ d}{A^a B^v}]
+\Delta G = \Delta G^ {\circ} + RT\ ln[\frac{C^ c D^ d}{A^a B^b}]
 $$
 
 > ==The rate of a chemical reaction is INDEPENDENT of $\Delta G,\ \Delta G^ {\circ}$==

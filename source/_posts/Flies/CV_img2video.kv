@@ -1,0 +1,130 @@
+BoxLayout:
+    orientation: "vertical"
+    show_pic: None
+    show_pi_buffer: None
+    BoxLayout:
+        id: can_box
+        test: root.size
+        canvas:
+            Rectangle:
+                texture: root.show_pic
+                pos: self.pos
+                size: self.size
+                #pos_hint: {'center_x': .5, 'center_y': .5}
+                #color: 0, 0, 0, 1
+    BoxLayout:
+        orientation: "vertical"
+        BoxLayout
+            MDSlider:
+                id: slid_font
+                min: 0
+                max: 500
+                value: 0
+
+        MDLabel:
+            id: label
+            markup: True
+            text: "Selecte a target directory"
+
+
+        BoxLayout:
+            padding: 10, 0, 10, 0
+            BoxLayout:
+                # text failed for fps
+                BoxLayout:
+                    padding: 10, 0, 10, 0
+                    orientation: "vertical"
+                    BoxLayout:
+                        MDLabel:
+                            text: "FPS:"
+                            pos_hint: {'center_x': 0, 'center_y': 1}
+
+                        MDTextField:
+                            id: FPS
+                            pos_hint: {'center_x': 0, 'center_y': 1}
+                            size_hint_x: 3
+                            text: "2"
+                            helper_text: "frames per Seconds"
+                            helper_text_mode: "on_focus"
+                    # frame size
+                    BoxLayout:
+                        MDLabel:
+                            pos_hint: {'center_x': 0.5, 'center_y': 1}
+                            text: "Size:"
+                        MDTextField:
+                            id: window_size
+                            pos_hint: {'center_x': 0, 'center_y': 1}
+                            size_hint_x: 3
+                            text: "460x320"
+                            helper_text: "frames per Seconds"
+                            helper_text_mode: "on_focus"
+                # Out put format
+                BoxLayout:
+                    padding: 10, 0, 10, 0
+                    pos_hint: {'center_x': 0.5, 'center_y': .8}
+                    orientation: "vertical"
+
+                    MDLabel:
+
+                        markup: True
+                        pos_hint: {'center_x': 0.5, 'center_y': 1}
+                        text: "Format: [color=#d4d4d4](only one)[/color]"
+
+                    MDBoxLayout:
+                        pos_hint: {'center_x': 0.5, 'center_y': 1}
+                        orientation: "vertical"
+                        MDBoxLayout:
+                            CheckBox:
+                                id: format_gif
+                                active: True
+                                color: 0, 1 , 0, 1
+                            MDLabel:
+                                text: "gif"
+
+                        MDBoxLayout
+                            CheckBox:
+                                id: format_avi
+                                color: 0, 0, 0, 1
+                            MDLabel:
+                                text: "avi"
+
+        # Button layer load and run
+        BoxLayout
+            MDRaisedButton:
+                id: button_load
+                text: 'F'
+                font_size: 30
+                font_name: './font/heydings-icons-1'
+                width: root.width * 0.5
+                line_color: 1, 1, 1, 1
+            MDRaisedButton:
+                id: button_start
+                text: 'P'
+                font_size: 30
+                font_name: './font/heydings-controls-1'
+                width: root.width * 0.5
+                line_color: 1, 1, 1, 1
+
+
+
+<img2video_LoadDialog>:
+    BoxLayout:
+        size: root.size
+        pos: root.pos
+        orientation: "vertical"
+        FileChooserListView:
+            id: filechooser
+            path: "."
+            dirselect: True
+
+        BoxLayout:
+            size_hint_y: None
+            height: 30
+            Button:
+                id: test
+                text: "Cancel"
+                on_release: root.cancel()
+
+            Button:
+                text: "Load"
+                on_release: root.load(filechooser.path, filechooser.selection)

@@ -396,21 +396,38 @@ table$X=factor(table$X, levels=table[[1]])
 ###  Color patern
 
 ```r
+library("RColorBrewer")
+
++ scale_color_brewer(palette =  "RdYlBu")
++ scale_fill_brewer(palette =  "RdYlBu")
+```
+
+<pre>
+Palettes:
+- Diverging
+  BrBG, PiYG, PRGn, PuOr,
+  RdBu, RdGy, RdYlBu, RdYlGn,
+  Spectral
+
+- Qualitative
+  Accent, Dark2, Paired, Pastel1,
+  Pastel2, Set1, Set2, Set3
+
+- Sequential
+  Blues, BuGn, BuPu, GnBu, Greens,
+  Greys, Oranges, OrRd, PuBu, PuBuGn,
+  PuRd, Purples, RdPu, Reds, YlGn,
+  YlGnBu, YlOrBr, YlOrRd
+</pre>
+
+
+```r
 ##Example
 scale_fill_manual(values=c("#FB882C","#5B88A0"))
 scale_fill_brewer + (..., type = "seq", palette = 1, direction = 1, aesthetics = "colour")
-'''
-Palettes:
-Diverging
-BrBG, PiYG, PRGn, PuOr, RdBu, RdGy, RdYlBu, RdYlGn, Spectral
-Qualitative
-Accent, Dark2, Paired, Pastel1, Pastel2, Set1, Set2, Set3
-Sequential
-Blues, BuGn, BuPu, GnBu, Greens, Greys, Oranges, OrRd, PuBu, PuBuGn, PuRd, Purples, RdPu, Reds, YlGn, YlGnBu, YlOrBr, YlOrRd
-'''
 
 library("ggthemes")
-library("RColorBrewer")
+
 ## Gradient
 scale_fill_gradient() 允许分配一组双色连续渐变，low="white",high="red"
 scale_fill_gradient2() 允许分配一组三色连续渐变，low="blue",mid="white",high="red"

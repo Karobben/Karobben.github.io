@@ -8,8 +8,8 @@ title: "Amino Acid|Graduate Biochemistry 2| Tulane"
 ytitle: "氨基酸结构|生化 2|杜兰"
 description: "Class notes of Graduate Biochemistry in Tulane"
 excerpt: "Amino Acids, Primary and Secondary Structure"
-tags: [Classes, Biochemistry]
-category: [Notes, Class, Biochemistry]
+tags: [Classes, Biochemistry, Tulane Classes]
+category: [Notes, Class, Tulane, Biochemistry]
 cover: "https://www.researchgate.net/profile/Wukun_Liu2/publication/329540346/figure/fig3/AS:731591617814585@1551436442724/Selection-of-amino-acid-building-blocks-and-synthetic-strategy-used-for-the-construction.png"
 thumbnail: "https://static-s.aa-cdn.net/img/ios/1535372364/8bea5e7d0cecf8c51488133d2c6a4f48?v=1"
 ---
@@ -40,38 +40,48 @@ thumbnail: "https://static-s.aa-cdn.net/img/ios/1535372364/8bea5e7d0cecf8c514881
 
 Remember the abb. and name and groups of all amino acids
 
-#### Aliphatic
 
-Glycine is in the turn.
-Alanine: Every where -> hydrophobic but not really strong
-Valine: pretty hydrophobic, strictly in shape
-Methionine: containing sulfate, hydrophobic
-Leucine
-Isolucine: &beta; branched
+|    |    | | |
+| :- | :- | :- | :- |
+| Gly | G | Glycine      | Glycine is in the ==&beta; turn==|
+| Ala | A | Alanine      | Every where -> hydrophobic but **not really strong**|
+| Val | V | Valine       | hydrophobic, strictly in shape|
+| Leu | L | Leucine      | ...|
+| Ile | I | Isolucine    | &beta; branched|
+| Met | M | Methionine   | containing sulfate, hydrophobic|
+| *Pro* | P | Proline       | tight turn |
+|**Phe**| F | Phenylalanine |            |
+|**Tyr**| Y | Tyrosine      | Phenylalanine-(OH)|
+|**Trp**| W | Tryptophan    |largest hydrophobic group|
+|==Asp==| D | Aspartate     | &beta; Carboxyl |
+|==Glu==| E | Glutamate     | &gamma; Carbocyl  |
+|==Lys==| K | Lysine        | &epsilon; Amino Group  |
+|==Arg==| R | Arginine      | &gamma; Guanidino Group  |
+|==His==| H | Histidine     | &beta; Imidazole Group|
+|***Ser***|S|Serine    | &beta hydroxyl |
+|***Thr***|T|Threonine | hydroxyl gorup  |
+|***Asn***|N|Asparagine| Amide Group; Can not accept proton|
+|***Glu***|Q|Glutamine | Amide Group; Can not accept proton|
+|***Cys***|C|Cysteine  |    |
 
-#### Secondary Amino Acid
+Properties:
+- Aliphatic (hydrophobic)
+- *Secondary Structured*
+- **Aromatic** (hydrophobic)
+- ==Charged==
+- ***Polar, uncharged***
 
-Proline | Pro | **P**
-tight turn
-
-#### Aromatic (hydrophobic)
-Phenylalanine
-Tyrosine: (Phenylalanine + -OH)
-Tryptophan: largest hydrophobic group
-
-#### Polar, uncharged
-
-Serine|Ser|**S**: -CH~2~-OH (&beta; branh)
-Threonine|Thr|**T**:
-Cysteine|Cys|**C**:
-
-Polar Amide Group:
-Can not accept proton
-- Asparagine|Asn|**N**
-- Glutamine|Glu|**Q**
+## Ionization Properties of Amino Acids
+| AA  | Function Group | pKa |
+| :-: | :- | :-|
+| Asp | -CH~2~-COO^-^| 3.9 |
+| Glu | -CH~2~-CH~2~-COO^-^ | 4.3 |
+| Lys | -CH~2~-CH~2~-CH~2~-CH~2~-NH~3~^+^| 10.8|
+| Arg | -CH~2~-CH~2~-CH~2~NH-C(-NH~2~)=NH~2~^+^| 12.5|
+| His | -CH~2~-Imidazole| 6.5
 
 
-#### Charged
+
 
 
 ## primary structure
@@ -79,10 +89,17 @@ Can not accept proton
 1. Direction: N -> C
 2. Average molecule weight of per amino acid is ~110.
 
-> - Electronic resonance gives the central CONH atoms some double-bond character
-> - Double bond character gives these bonds a generally planar (not tetrahedral) shape and rigidity
-> - Coplanarity severely limits the number of accessible conformations
+### Properties of the Peptide Bond
 
+*[resonance]: 共振
+*[planar]: 平面
+*[Coplanarity]: 共面性
+
+> - Electronic resonance gives the central -C(=O)N(H)- atoms some ==double-bond character==
+> - Double bond character gives these bonds a generally ==planar== (not tetrahedral) shape and rigidity
+> - ==Coplanarity== severely limits the number of accessible conformations
+
+### Cis-trans isomerization
 
 > - Trans peptide bonds are energetically preferred
 > - Cis peptide bonds are rare:
@@ -93,8 +110,12 @@ Can not accept proton
 Trans: opposite
 Cis: same side
 
+### Conformational Properties of Polypeptides
 
-> - Protein backbone conformation can be described with 2 torsion angles Phi (&Phi;) and Psi (&Psi;) around C&alpha;
+*[torsion]: 扭轉
+*[Steric clashes]: 立体衝突
+
+> - Protein backbone conformation can be described with 2 torsion angles Phi (&Phi;) and Psi (&Psi;) around Cα
 > - Steric clashes make only some combinations of &Phi; and &Psi; permissible
 > - The requirement for hydrogen bonding between backbone groups in folded proteins further limits the observed values for &Phi; and &Psi;
 
@@ -107,11 +128,15 @@ Cis: same side
 |:-:|
 |Ramachandran Plot (c) HarvardX|
 
+|![&phi; and &psi; angles](https://www.researchgate.net/profile/Sepp-Hochreiter/publication/238681799/figure/fig25/AS:648594667356168@1531648427185/Torsion-angles-Rotation-is-allowed-only-for-the-torsion-angles-phi-and-psi-The.png)|
+|:-:|
+|[© Sepp Hochreiter](https://www.researchgate.net/publication/238681799_Bioinformatics_III_Structural_Bioinformatics_and_Genome_Analysis)|
 
+## Secondary Structure of Polypeptides
 
-> - Hydrogen Bonds are weak noncovalent interactions between polar groups
-> - In a folded protein, backbone groups are always involved in hydrogen bonds
-> - Hydrogen bonding along with the allowed f , y torsion angles determine the possible types of secondary structure
+> - **Hydrogen Bonds** are weak noncovalent interactions between polar groups.
+> - In a folded protein, **backbone groups** are always involved in hydrogen bonds.
+> - Hydrogen bonding along with the allowed &phi; , &psi; torsion angles determine the possible types of secondary structure
 
 
 > - Secondary structure is the local conformation the backbone
@@ -119,6 +144,11 @@ Cis: same side
 
 
 ### &alpha; helix
+
+| ![Hemoglobin A2](https://cdn.rcsb.org/images/structures/si/1si4/1si4_assembly-1.jpeg) |
+| :-------------: |
+| [© PDB ID=1SI4](https://www.rcsb.org/structure/1SI4)     |
+
 > - Right handed helix
 > - Interactions are local
 > - Defined by Hydrogen-bonding pattern (ith) C=0 - - - NH (i+4)th
@@ -129,12 +159,21 @@ Cis: same side
 >
 > Hemoglobin - an all α helical protein
 
-> - Helices are very tightly packed structures
-> - The C=O…HN hydrogen bonds are partially buried within the core of the helical structure
-> - Because of steric constraints and hydrophobic interactions between sidechains, the amino acids have very different propensities for being in an α-helix.
+#### Close packing in an α-helix
+
+*[propensities]: 傾向
+
+> - Helices are very **tightly packed** structures
+> - The C=O::HN hydrogen bonds are **partially buried** within the core of the helical structure
+> - Because of steric constraints and hydrophobic interactions between side chains, the amino acids have very different propensities for being in an α-helix.
 
 
 ### The β-pleated sheet
+
+| ![Green Fluorescence Protein](https://cdn.rcsb.org/images/structures/ql/2qle/2qle_assembly-1.jpeg) |
+| :-------------: |
+| [© PDB ID=2QLE](https://www.rcsb.org/structure/2QLE)     |
+
 
 > - Chains are extended
 > - Interactions are nonlocal
@@ -175,3 +214,46 @@ Cis: same side
 > **Random coil**
 > - No regular secondary structure
 > - Highly flexible
+
+
+
+
+
+
+---
+
+- Portein
+- Folding collapse;
+  - Mostly drived by hydrophobic
+  - hydrogen binding group are fold in the core of the protein
+- Visual
+  - Schematic; Ribbon diagram; C&alpha; trace; CPK space-filling; Solvent-accessible surface
+- Structure of protein
+  - Secondary; Tertiary; Quaternary
+- Anfinsen-Merrifield experiments
+
+- Evolution in sequence
+- protein motif
+- &beta;-sandwich
+- coiled-coil
+- EF hand
+
+- Domain structure of large proteins
+- Quanternary structure of protein
+
+
+
+
+## Protein Folding
+
+### Levels of Structure
+
+Exp: Ribonuclease A; 124 residues; 4 disulfide bonds; Unfolded with denaturants (1. urea or guanidine; 2. Oxidase/reduce the disulfide bound.)
+
+### Structure motif
+ - $\beta \alpha \beta$
+ - $\alpha \alpha \alpha$
+ - $\beta \beta$
+...
+
+**Tim-brrel**: ($\beta \alpha \beta \alpha$)~4~

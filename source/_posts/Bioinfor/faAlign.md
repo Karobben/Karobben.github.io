@@ -64,6 +64,16 @@ Seq-view1.3  -i LYSV-NCBI.fasta -a 90
 ```
 ![aFekIs.md.png](https://s1.ax1x.com/2020/07/27/aFekIs.md.png)
 
+### ALign prarmeters
+
+UPGAM Tree
+```bash
+clustalw2 -QUICKTREE -OUTPUT=FASTA  -INFILE=LYSV-NCBI.fasta -CLUSTERING=UPGMA -BOOTSTRAP=1000
+
+clustalw2 -QUICKTREE -OUTPUT=FASTA  -INFILE=LYSV-NCBI.fasta -CLUSTERING=NJ -BOOTSTRAP=1000
+
+```
+
 ## Muscle
 
 ```bash
@@ -78,3 +88,59 @@ user  17m59.034s
 sys  0m0.256s
 ```
 It takes about 18min as well as *ClustelW2*
+
+## Tcoffee
+
+Source: [:house: T-Coffee](https://tcoffee.readthedocs.io/en/latest/tcoffee_quickstart.html)
+
+### Protein sequences
+
+```bash
+# Default
+t_coffee sample_seq1.fasta
+
+# Quick
+t_coffee sample_seq1.fasta -mode quickaln
+
+# Consistent (M-Coffee combines the most common MSA packages)
+t_coffee sample_seq1.fasta -mode mcoffee
+
+# Structure (Expresso finds structures homologous to your sequences)
+t_coffee sample_seq1.fasta -mode expresso
+
+# Homology (PSI-Coffee enriches your dataset with homologous sequences)
+t_coffee sample_seq1.fasta -mode psicoffee
+
+# Accurate (combines Structures and Homology)
+t_coffee sample_seq1.fasta -mode accurate
+```
+
+
+### DNA sequences
+
+```bash
+# Default
+t_coffee sample_dnaseq1.fasta
+
+# Functional (Pro-Coffee increases accuracy of functional DNA regions )
+t_coffee sample_dnaseq1.fasta -mode procoffee
+```
+
+### RNA sequences
+
+```bash
+# Default
+t_coffee sample_rnaseq1.fasta
+
+# Structure 2D (R-Coffee uses predicted secondary structures)
+t_coffee sample_rnaseq1.fasta -mode rcoffee
+
+# Structure 3D (R-Coffee combined with Consan structural alignments)
+t_coffee sample_rnaseq1.fasta -mode rcoffee_consan
+
+# Accurate (RM-Coffee use M-Coffee and secondary structure predictions)
+t_coffee sample_rnaseq1.fasta -mode rmcoffee
+```
+
+
+Full Tutorial: [:house::house::house:](http://www.tcoffee.org/Projects/tcoffee/workshops/tcoffeetutorials/index.html)

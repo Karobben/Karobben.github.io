@@ -31,6 +31,8 @@ for(i in c(1:36)){
   TB = rbind(TB,tmp)
 }
 
+## animation::ani.options(ani.width= 1000, ani.height=1000, ani.res = 1000)
+
 ggplot()+ geom_point(data=TB,aes(x=long, y=lat),size=0.3, color="#00518E") +
   theme_map() + coord_map("ortho", orientation = c(30, 100, 0)) +
   transition_time(Group)
