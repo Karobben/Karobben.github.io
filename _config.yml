@@ -72,7 +72,7 @@ deploy:
  type: git
  repo: https://github.com/Karobben/Karobben.github.io.git
  branch: master
- token: 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
+ token: ""
 
 
 
