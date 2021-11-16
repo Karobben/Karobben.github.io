@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 /**
  * @typedef {Object<string, ComponentCategory>} Components
@@ -224,15 +224,14 @@ var getLoader = (function () {
 	 * @template T
 	 */
 	function loadComponentsInOrder(dependencyResolver, ids, loadComponent, chainer) {
-		var series = chainer ? chainer.series : undefined;
-		var parallel = chainer ? chainer.parallel : noop;
+		const series = chainer ? chainer.series : undefined;
+		const parallel = chainer ? chainer.parallel : noop;
 
 		/** @type {Object<string, T>} */
 		var cache = {};
 
 		/**
 		 * A set of ids of nodes which are not depended upon by any other node in the graph.
-		 *
 		 * @type {StringSet}
 		 */
 		var ends = {};
@@ -262,7 +261,6 @@ var getLoader = (function () {
 
 			/**
 			 * The value to be returned.
-			 *
 			 * @type {T}
 			 */
 			var value;

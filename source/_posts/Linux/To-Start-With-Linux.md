@@ -83,3 +83,20 @@ free -h
 ```
 ### Java
 [adopt open jdk](https://adoptopenjdk.net/)
+
+
+## Control your sound
+
+```bash
+alsamixer
+```
+![alsamixer](https://z3.ax1x.com/2021/10/26/5ImKIJ.png)
+
+### Mute and unmute sounds
+
+Source: [Eric Carvalho 2011](https://askubuntu.com/questions/26068/how-do-you-mute-from-the-command-line)
+
+```bash
+amixer set Master mute   
+amixer set Master unmute
+```

@@ -68,9 +68,11 @@ exclude: null
 ignore: null
 theme: icarus
 deploy:
+ Username: Karobben
  type: git
  repo: https://github.com/Karobben/Karobben.github.io.git
  branch: master
+ token: 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
 
 
 

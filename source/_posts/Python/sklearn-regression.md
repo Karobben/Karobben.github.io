@@ -5,7 +5,7 @@ covercopy: <a href="https://scikit-learn.org/stable/auto_examples/linear_model/p
 priority: 10000
 date: 2021-06-09 16:55:27
 title: "Regression Examples in Scikit-learn|Python"
-ytitle: ""
+ytitle: "用 Scikit 做回归线"
 description: "Regression Examples in Scikit-learn|Python"
 excerpt: "Regression Examples in Scikit-learn|Python"
 tags: [Python, Data]

@@ -134,7 +134,7 @@ Describ, Meaning, ==Access Confidence==.
 ### reciprocal translocation: long reads align
 
 | ![](https://ars.els-cdn.com/content/image/3-s2.0-B0122270800013100-gr2.jpg) |
-| :-------: | 
+| :-------: |
 | ![](https://ars.els-cdn.com/content/image/3-s2.0-B0122270800013100-gr1.jpg)     |
 | [© C.V.Beechey A.G.Searle](https://www.sciencedirect.com/science/article/pii/B0122270800013100)       |
 
@@ -143,13 +143,161 @@ Describ, Meaning, ==Access Confidence==.
 
 
 
+## Sequencing and Diseases
+## Sample workflow
+
+DNA → Library → capture based selection → Sequencing
+DNA →  PCR based selection→ Library → Sequencing
+
+### Exp
+Severe combined immunodeficiency syndrome
+
+Il-2/4/7/9/15/21 → X-SCID (γ domain)
+
+==γ domain mutate== failed to active jak3 → Jak3-SCID
+
+### Newborn sscreening
+- Amino acid disorder
+  - PKU; MSUD
+- Fatty acid disorder
+  - MCAD; VLCAD
+- Organic acid disorders
+  - pH disorder
+
+Card screen
+
+- Hemoglobinopathies
+  - Sickle cell, SC, S-β-thalassemia
+  - MSUD
+- Galactosemia
+- CF; [CF links](https://www.cff.org/What-is-CF/Testing/Newborn-Screening-for-CF/)
+- SCID - recommended by HRSA, detects T cell receptro excision circles (TRECs)
+  - T cell recombination.
+
+### TREC screening
+
+*[Thymus]: 胸腺
+
+- False positive
+- False negatives
+  - Zap70 deficiency
+  - MHC Class II deficiency
+  - NF-κb essential modulator
+  - late-onset ADA
+- Positive: Genes tsted: ADA CD3D; CD3E...
+  FOXN1: required for the development of Thymus
+  - WES, WGS
+    - Can detect novel variants
+    - Often uses trios or unaffected sibs
+    - Can be used in CMC-STAT3 gof, IL-17R mutations
+
+
+### CF Screening -immunoreactive trypsinogen
+- Typically measured by fluoroimmunoassay
+- False postive
+  - Perinatal asphyxia, infection
+  - CF carrier (heterozygote)
+- False negatives - rare
+  - Lab or specimen error
+  - pseudo-Bartter's syndrome
+==Positive==:
+- Sweat test
+  - high salting in sweat; less salting concentration among patients
+  - dehydrate
+- Genetic testing
+
+**Bordeline sweat test**
+- Targeted sequence of CFTR
+
+
+## Challenges of WGS, WES
+- Each individual harbors 2.7-4.2m SNV
+
+### NGS and cancer
+- Can compare somatic to germline mutation
+  - Exmaple AML
+  - Micro-dissected tumor
+  - Circulating tumor RNA
+
+Cancer Early Casses
+- Lukas Whartman
+  - Dx All 2003
+  - Treatede with sibling related ..
+
+  - Sequenced the cancer genome for actionable mutations
+  - No mutations detected
+  - RNAseq found iverexpression in FLT3
+  - Remitted with FLT3 inhibitor(Sutent)
+- 2nd stem cell transplatnt after remission
+- Suffers from GVHD
+
+# Panels
+  - Sequences regions of interest
+  - Hybridization or PCR based
+  - Often disease specific
+  - Eg Breast , lung, colon CA
+  - Sequence coverage is high (up to 80x)
+
+- GeneDx Panel data -positive yield
+- 9.7% for breast
+- 13.4% for ovarian
+- 14.8% for colon/stomacj
+- pathogenic or likely pathogenic mutation in over 8%-15% ofr ...
+
+- Between 70%-92% of the patients remains mutation-negative or undiagnosed
+...
+
+
+- Mutations in PALB2 and ATM in pancreatic CA
+- XRCC2, FANCC and BLM in HBOC
+- Germline RNA-splice mutations using RNA-seq
+- Germline splice variants in BRCA1/BRCA2
+- ...
+- NF1
+
+### NGS and cancer - Clinical utility
+- Diagnosis
+- Survival prediction
+  - GNAS & KRAS
+
+- Up to 20% of NGS tests were actionable
+- Another 50% were actionable if you include mutations that could be targeted by the use of a FDA approved drug for off-label use
+- Can identify candidates for anti-EGFR therapies
+- Re-classification of tumors.
+  - Troditional: look unde the microscopy
+
+Pathology
+- Diagnosis
+  - Useful in small smaples -FNAs
+  - Thyroseq panel for thyroid cancer
+- Survival prediction
+
+==Liquid Biopsy==
+- Rationable
+-Has been used for liquid and solid tumors
+- May be useful in lieu of biospy...
+
+
+### Pharmacogenomics
+- Ratoionale
+- Exampel
+  - Dihydropyrimidine dehydrogenase:D{D
+  - Mutations associated with greate toxicity of 5-fluorouracil, capecitiabine and..
+
+### Futrue Directions for CA
+- Epigenome
+  - CHIP-seq (Bulk cell)
+  - ATAC-seq (More advance; nano scale cells.)
+-RANseq
+  - Transcriptomes including non-coding RNA
 
 
 
+### - -
 
-
-
-
+TPM: normalized by the size of the library
+- Different tissues has different expression profile and the size of the profile is different.
+- Transcripts is different, too.
 
 
 

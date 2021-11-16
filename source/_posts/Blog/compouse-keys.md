@@ -57,3 +57,18 @@ cat "/usr/share/X11/locale/$(grep --max-count=1 "${LANG%.*}.UTF-8\$" /usr/share/
 | keys | Result    |
 | :- | :-- |
 | < 3       | ♥     |
+
+
+## Customize Compouse key
+
+In default profile, the Greek alphabet is like `<dead_greek> <a>`. But normally, we do not have this thing in our keyboard.
+
+As a result, I changed it to `g+g+a`
+
+This is how I change all `<dead_greek>`
+```bash
+sudo cp /usr/share/X11/locale/en_US.UTF-8/Compose /usr/share/X11/locale/en_US.UTF-8/Compose_bk
+sudo sed -i 's/<dead_greek>/<Multi_key> <g> <g>/' /usr/share/X11/locale/en_US.UTF-8/Compose
+
+sudo reboot
+```  

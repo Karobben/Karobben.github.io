@@ -159,10 +159,12 @@ comment:
     type: Giscus
     repo: "Karobben/utterances"
     #issue_term: pathname        # Required if issue_number is not set
+    token: "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"
     issue_number: 100           # Required if issue_term is not set. Every post can be mapped to a separate, manually-created GitHub issue.
     #label: some-issue-label     # Optional
     #theme: preferred-color-scheme        # Optional# Donate plugin configurations
     crossorigin: anonymous
+
 # https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/Donation/
 donates:
     # "Afdian.net" donate button configurations
@@ -402,3 +404,11 @@ providers:
     fontcdn: google
     # Name or URL of the fontawesome icon font CDN provider
     iconcdn: fontawesome
+
+
+##
+deploy:
+ type: git
+ repo: https://github.com/Karobben/Karobben.github.io.git
+ branch: master
+ token: "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"

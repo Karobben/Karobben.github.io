@@ -11,7 +11,7 @@ thumbnail: 'https://s1.ax1x.com/2020/06/14/NSYpJP.md.png'
 priority: 10000
 ---
 
-## clusterProfiler (out of date)
+## clusterProfiler
 
 Tutorial: [yulab](https://yulab-smu.github.io/clusterProfiler-book/)
 

@@ -119,6 +119,7 @@ organism information: [NCBI](https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwta
 from Bio.Blast import NCBIWWW
 from Bio.Blast import NCBIXML
 from Bio import SeqIO
+from Bio import Entrez
 import urllib.request
 
 
@@ -163,3 +164,15 @@ for i in Organ_list:
                         print(handle.read())
 
 ```
+
+
+
+
+for(i in c("BLOSUM62", "PAM250")){
+  seq_1 <- "MRSSPGNMERIVICLMVIFLGTLVHKSSSQGQDRHMIRMRQLIDIVDQLKNYVNDLVPEFLPAPEDVETNCEWSAFSCFQKAQLKSANTGNNERIINVSIKKLKRKPPSTNAGRRQKHRLTCPSCDSYEKKPPKEFLERFKSLLQKMIHQHLSSRTHGSEDS"
+  seq_2 <- "MERTLVCLVVIFLGTVAHKSSPQGPDRLLIRLRHLIDIVEQLKIYENDLDPELLSAPQDVKGHCEHAAFACFQKAKLKPSNPGNNKTFIIDLVAQLRRRLPARRGGKKQKHIAKCPSCDSYEKRTPKEFLERLKWLLQKMIHQHLS"
+  globalAlign_CHRNA2 <- pairwiseAlignment(seq_1, seq_2, substitutionMatrix = i, gapOpening = -12, gapExtension = -2, scoreOnly = FALSE)
+  substr(globalAlign_CHRNA2@pattern, 1, nchar(globalAlign_CHRNA2@pattern))
+  substr(globalAlign_CHRNA2@subject, 1, nchar(globalAlign_CHRNA2@subject))
+  print(globalAlign_CHRNA2@score)
+}

@@ -43,6 +43,9 @@ priority: 10000
 # devtools::install_github("const-ae/ggupset")
 # Fonts showtext
 # Map data: ggalt
+
+## Biology
+"BiocManager", "seurat"
 ```
 
 
@@ -60,7 +63,8 @@ List <- c('dplyr', 'ellipse', 'fastcluster', "reshape2",
           "patchwork" ,"networkD3" ,"ggplot2" ,"maps" ,"ggalluvial",
           'circlize' ,'cowplot' ,"pheatmap" ,"GGally" ,'ggplotify',
           "ggthemes" ,"ggdendro" ,"ggrepel" ,"showtext", "remotes",
-          "wordcloud2" ,"ggupset" ,"plotly" ,"plotrix" ,'ggalt')
+          "wordcloud2" ,"ggupset" ,"plotly" ,"plotrix" ,'ggalt',
+          "BiocManager")
 
 for(LIB in List){
   if (!requireNamespace(LIB, quietly = TRUE))

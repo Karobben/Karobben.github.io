@@ -92,3 +92,10 @@ Location：https://www.cnblogs.com/GarfieldEr007/p/5594700.html
 - autocomplete-* 系列 (自动补全)
 - pigments (显示颜色)
 https://blog.csdn.net/qq_32340877/article/details/79095610
+- script (run different kinds of scripts in atom)
+
+
+
+## high CPU Usage
+
+Reference: 1. [Fantashit](https://fantashit.com/atom-helper-using-100-of-cpu/)

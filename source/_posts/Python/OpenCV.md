@@ -19,9 +19,10 @@ priority: 10000
 ```bash
 pip3 install --upgrade setuptools
 pip3 install numpy Matplotlib
-pip3 install opencv-python
+pip3 install opencv-contrib-python
 ```
 
+==Notice:== Don't ever install other versions opencv, exp: python2-opencv, opencv-python
 
 
 ## Img Read and Show

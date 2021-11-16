@@ -5,7 +5,7 @@ covercopy: <a href="https://www.researchgate.net/publication/238609063_X-Ray_str
 priority: 10000
 date: 2021-09-16 08:34:19
 title: "Protein Structure|Graduate Biochemistry 3| Tulane"
-ytitle: "氨基酸结构|生化 3|杜兰"
+ytitle: "蛋白质结构|生化 3|杜兰"
 description: "Class notes of Graduate Biochemistry in Tulane"
 excerpt: "Amino Acids, Primary and Secondary Structure"
 tags: [Classes, Biochemistry, Tulane Classes]

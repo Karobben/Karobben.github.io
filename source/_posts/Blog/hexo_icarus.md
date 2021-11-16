@@ -13,7 +13,9 @@ thumbnail: 'https://camo.githubusercontent.com/fd83d8c9f8b8dbe85686812e2e186dcee
 priority: 1
 ---
 
+
 ## Hexo Theme: Icarus
+
 
 GitHub: [Ruipeng Zhang](https://github.com/ppoffice/hexo-theme-icarus)
 Document: [PPOffice Blog](https://blog.zhangruipeng.me/hexo-theme-icarus/categories/)
@@ -36,7 +38,7 @@ hexo server
 
 ```
 (node:19025) ExperimentalWarning: The fs.promises API is experimental
-INFO  Validating config
+INFO  =======================================
  ██╗ ██████╗ █████╗ ██████╗ ██╗   ██╗███████╗
  ██║██╔════╝██╔══██╗██╔══██╗██║   ██║██╔════╝
  ██║██║     ███████║██████╔╝██║   ██║███████╗

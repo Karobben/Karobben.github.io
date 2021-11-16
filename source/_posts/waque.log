@@ -1,4 +1,4 @@
-Tue Oct 12 10:31:47 PM CDT 2021
+Sun Oct 31 04:24:24 PM CDT 2021
 updating for: Apps.md
 目錄: 導入成功
 Apps.md is updated
@@ -61,9 +61,13 @@ updating for: WGCNA.md
 WGCNA.md is updated
 updating for: annotation.md
 目錄: 導入成功
-annotation.md [91m 該文檔未加入目錄 [0m
-annotation.md  [91m 這個文件還沒有被創建。我懶得寫一個新建接口了（防止太混亂）
-所以請覈對以後， 先上新建這個文件，再來更新把= =推薦用瓦雀直接創建 [0m
+annotation.md is updated
+updating for: biopython-blast.md
+目錄: 導入成功
+biopython-blast.md is updated
+updating for: biopython-seq2tree.md
+目錄: 導入成功
+biopython-seq2tree.md is updated
 updating for: blast.md
 目錄: 導入成功
 blast.md is updated
@@ -108,15 +112,19 @@ updating for: paper-edger.md
 paper-edger.md is updated
 updating for: pymol.md
 目錄: 導入成功
-pymol.md [91m 該文檔未加入目錄 [0m
-pymol.md  [91m 這個文件還沒有被創建。我懶得寫一個新建接口了（防止太混亂）
-所以請覈對以後， 先上新建這個文件，再來更新把= =推薦用瓦雀直接創建 [0m
+pymol.md is updated
 updating for: samtools.md
 目錄: 導入成功
 samtools.md is updated
 updating for: sanger_seq.md
 目錄: 導入成功
 sanger_seq.md is updated
+updating for: sigcell1.md
+目錄: 導入成功
+sigcell1.md is updated
+updating for: sigcellnote1.md
+目錄: 導入成功
+sigcellnote1.md is updated
 updating for: snp_gatk.md
 目錄: 導入成功
 snp_gatk.md is updated
@@ -273,8 +281,7 @@ updating for: build_index.md
 build_index.md is updated
 updating for: compouse-keys.md
 目錄: 導入失敗
-compouse-keys.md  [91m 這個文件還沒有被創建。我懶得寫一個新建接口了（防止太混亂）
-所以請覈對以後， 先上新建這個文件，再來更新把= =推薦用瓦雀直接創建 [0m
+compouse-keys.md is updated
 updating for: dead_link.md
 目錄: 導入失敗
 dead_link.md is updated
@@ -314,6 +321,9 @@ hexo_lived2d_busuanzi.md is updated
 updating for: html_infscroll.md
 目錄: 導入失敗
 html_infscroll.md is updated
+updating for: index.html
+目錄: 導入失敗
+index.html [91mUPDAT FAILED!!![0m
 updating for: index.md
 目錄: 導入失敗
 index.md [91mUPDAT FAILED!!![0m
@@ -338,6 +348,9 @@ tank1.md is updated
 updating for: tank_notes.md
 目錄: 導入失敗
 tank_notes.md is updated
+updating for: tools.md
+目錄: 導入失敗
+tools.md is updated
 updating for: waque.md
 目錄: 導入失敗
 waque.md is updated
@@ -521,7 +534,6 @@ updating for: edx-biochm-9.md
 edx-biochm-9.md is updated
 updating for: edx-cellbio-1.md
 目錄: 導入成功
-edx-cellbio-1.md [91m 該文檔未加入目錄 [0m
 edx-cellbio-1.md  [91m 這個文件還沒有被創建。我懶得寫一個新建接口了（防止太混亂）
 所以請覈對以後， 先上新建這個文件，再來更新把= =推薦用瓦雀直接創建 [0m
 updating for: edx-statisticl.md
@@ -581,89 +593,83 @@ updating for: test.md
 test.md [91mUPDAT FAILED!!![0m
 updating for: tulane-biochem-1.md
 目錄: 導入成功
-tulane-biochem-1.md [91m 該文檔未加入目錄 [0m
-tulane-biochem-1.md  [91m 這個文件還沒有被創建。我懶得寫一個新建接口了（防止太混亂）
-所以請覈對以後， 先上新建這個文件，再來更新把= =推薦用瓦雀直接創建 [0m
+tulane-biochem-1.md is updated
 updating for: tulane-biochem-10.md
 目錄: 導入成功
-tulane-biochem-10.md [91m 該文檔未加入目錄 [0m
-tulane-biochem-10.md  [91m 這個文件還沒有被創建。我懶得寫一個新建接口了（防止太混亂）
-所以請覈對以後， 先上新建這個文件，再來更新把= =推薦用瓦雀直接創建 [0m
+tulane-biochem-10.md is updated
+updating for: tulane-biochem-11.md
+目錄: 導入成功
+tulane-biochem-11.md is updated
+updating for: tulane-biochem-12.md
+目錄: 導入成功
+tulane-biochem-12.md is updated
+updating for: tulane-biochem-13.md
+目錄: 導入成功
+tulane-biochem-13.md is updated
 updating for: tulane-biochem-2.md
 目錄: 導入成功
-tulane-biochem-2.md [91m 該文檔未加入目錄 [0m
-tulane-biochem-2.md  [91m 這個文件還沒有被創建。我懶得寫一個新建接口了（防止太混亂）
-所以請覈對以後， 先上新建這個文件，再來更新把= =推薦用瓦雀直接創建 [0m
+tulane-biochem-2.md is updated
 updating for: tulane-biochem-3.md
 目錄: 導入成功
-tulane-biochem-3.md [91m 該文檔未加入目錄 [0m
-tulane-biochem-3.md  [91m 這個文件還沒有被創建。我懶得寫一個新建接口了（防止太混亂）
-所以請覈對以後， 先上新建這個文件，再來更新把= =推薦用瓦雀直接創建 [0m
+tulane-biochem-3.md is updated
 updating for: tulane-biochem-4.md
 目錄: 導入成功
-tulane-biochem-4.md [91m 該文檔未加入目錄 [0m
-tulane-biochem-4.md  [91m 這個文件還沒有被創建。我懶得寫一個新建接口了（防止太混亂）
-所以請覈對以後， 先上新建這個文件，再來更新把= =推薦用瓦雀直接創建 [0m
+tulane-biochem-4.md is updated
 updating for: tulane-biochem-5.md
 目錄: 導入成功
-tulane-biochem-5.md [91m 該文檔未加入目錄 [0m
-tulane-biochem-5.md  [91m 這個文件還沒有被創建。我懶得寫一個新建接口了（防止太混亂）
-所以請覈對以後， 先上新建這個文件，再來更新把= =推薦用瓦雀直接創建 [0m
+tulane-biochem-5.md is updated
 updating for: tulane-biochem-6.md
 目錄: 導入成功
-tulane-biochem-6.md [91m 該文檔未加入目錄 [0m
-tulane-biochem-6.md  [91m 這個文件還沒有被創建。我懶得寫一個新建接口了（防止太混亂）
-所以請覈對以後， 先上新建這個文件，再來更新把= =推薦用瓦雀直接創建 [0m
+tulane-biochem-6.md is updated
 updating for: tulane-biochem-7.md
 目錄: 導入成功
-tulane-biochem-7.md [91m 該文檔未加入目錄 [0m
-tulane-biochem-7.md  [91m 這個文件還沒有被創建。我懶得寫一個新建接口了（防止太混亂）
-所以請覈對以後， 先上新建這個文件，再來更新把= =推薦用瓦雀直接創建 [0m
+tulane-biochem-7.md is updated
 updating for: tulane-biochem-8.md
 目錄: 導入成功
-tulane-biochem-8.md [91m 該文檔未加入目錄 [0m
-tulane-biochem-8.md  [91m 這個文件還沒有被創建。我懶得寫一個新建接口了（防止太混亂）
-所以請覈對以後， 先上新建這個文件，再來更新把= =推薦用瓦雀直接創建 [0m
+tulane-biochem-8.md is updated
 updating for: tulane-biochem-9.md
 目錄: 導入成功
-tulane-biochem-9.md [91m 該文檔未加入目錄 [0m
-tulane-biochem-9.md  [91m 這個文件還沒有被創建。我懶得寫一個新建接口了（防止太混亂）
-所以請覈對以後， 先上新建這個文件，再來更新把= =推薦用瓦雀直接創建 [0m
+tulane-biochem-9.md is updated
 updating for: tulane-bioinf-1.md
 目錄: 導入成功
 tulane-bioinf-1.md [91m 該文檔未加入目錄 [0m
-tulane-bioinf-1.md  [91m 這個文件還沒有被創建。我懶得寫一個新建接口了（防止太混亂）
-所以請覈對以後， 先上新建這個文件，再來更新把= =推薦用瓦雀直接創建 [0m
+tulane-bioinf-1.md is updated
 updating for: tulane-cellbio-1.md
 目錄: 導入成功
-tulane-cellbio-1.md [91m 該文檔未加入目錄 [0m
-tulane-cellbio-1.md  [91m 這個文件還沒有被創建。我懶得寫一個新建接口了（防止太混亂）
-所以請覈對以後， 先上新建這個文件，再來更新把= =推薦用瓦雀直接創建 [0m
+tulane-cellbio-1.md is updated
+updating for: tulane-cellbio-10.md
+目錄: 導入成功
+tulane-cellbio-10.md is updated
+updating for: tulane-cellbio-11.md
+目錄: 導入成功
+tulane-cellbio-11.md is updated
+updating for: tulane-cellbio-12.md
+目錄: 導入成功
+tulane-cellbio-12.md is updated
 updating for: tulane-cellbio-2.md
 目錄: 導入成功
-tulane-cellbio-2.md [91m 該文檔未加入目錄 [0m
-tulane-cellbio-2.md  [91m 這個文件還沒有被創建。我懶得寫一個新建接口了（防止太混亂）
-所以請覈對以後， 先上新建這個文件，再來更新把= =推薦用瓦雀直接創建 [0m
+tulane-cellbio-2.md is updated
 updating for: tulane-cellbio-3.md
 目錄: 導入成功
-tulane-cellbio-3.md [91m 該文檔未加入目錄 [0m
-tulane-cellbio-3.md  [91m 這個文件還沒有被創建。我懶得寫一個新建接口了（防止太混亂）
-所以請覈對以後， 先上新建這個文件，再來更新把= =推薦用瓦雀直接創建 [0m
+tulane-cellbio-3.md is updated
 updating for: tulane-cellbio-4.md
 目錄: 導入成功
-tulane-cellbio-4.md [91m 該文檔未加入目錄 [0m
-tulane-cellbio-4.md  [91m 這個文件還沒有被創建。我懶得寫一個新建接口了（防止太混亂）
-所以請覈對以後， 先上新建這個文件，再來更新把= =推薦用瓦雀直接創建 [0m
+tulane-cellbio-4.md is updated
 updating for: tulane-cellbio-5.md
 目錄: 導入成功
-tulane-cellbio-5.md [91m 該文檔未加入目錄 [0m
-tulane-cellbio-5.md  [91m 這個文件還沒有被創建。我懶得寫一個新建接口了（防止太混亂）
-所以請覈對以後， 先上新建這個文件，再來更新把= =推薦用瓦雀直接創建 [0m
+tulane-cellbio-5.md is updated
 updating for: tulane-cellbio-6.md
 目錄: 導入成功
-tulane-cellbio-6.md [91m 該文檔未加入目錄 [0m
-tulane-cellbio-6.md  [91m 這個文件還沒有被創建。我懶得寫一個新建接口了（防止太混亂）
-所以請覈對以後， 先上新建這個文件，再來更新把= =推薦用瓦雀直接創建 [0m
+tulane-cellbio-6.md is updated
+updating for: tulane-cellbio-7.md
+目錄: 導入成功
+tulane-cellbio-7.md is updated
+updating for: tulane-cellbio-8.md
+目錄: 導入成功
+tulane-cellbio-8.md is updated
+updating for: tulane-cellbio-9.md
+目錄: 導入成功
+tulane-cellbio-9.md is updated
 updating for: writing-advice.md
 目錄: 導入成功
 writing-advice.md is updated
@@ -873,7 +879,8 @@ updating for: json.md
 json.md is updated
 updating for: jupyter.md
 目錄: 導入成功
-jupyter.md [91mUPDAT FAILED!!![0m
+jupyter.md [91m 該文檔未加入目錄 [0m
+jupyter.md is updated
 updating for: kivy-Buildozer.md
 目錄: 導入成功
 kivy-Buildozer.md is updated
@@ -945,9 +952,7 @@ updating for: layout.md
 layout.md [91mUPDAT FAILED!!![0m
 updating for: librosa.md
 目錄: 導入成功
-librosa.md [91m 該文檔未加入目錄 [0m
-librosa.md  [91m 這個文件還沒有被創建。我懶得寫一個新建接口了（防止太混亂）
-所以請覈對以後， 先上新建這個文件，再來更新把= =推薦用瓦雀直接創建 [0m
+librosa.md is updated
 updating for: multyprocesser.md
 目錄: 導入成功
 multyprocesser.md is updated
@@ -989,9 +994,7 @@ updating for: python-begin1.md
 python-begin1.md is updated
 updating for: sklearn-regression.md
 目錄: 導入成功
-sklearn-regression.md [91m 該文檔未加入目錄 [0m
-sklearn-regression.md  [91m 這個文件還沒有被創建。我懶得寫一個新建接口了（防止太混亂）
-所以請覈對以後， 先上新建這個文件，再來更新把= =推薦用瓦雀直接創建 [0m
+sklearn-regression.md is updated
 updating for: summary.md
 目錄: 導入成功
 summary.md [91mUPDAT FAILED!!![0m

@@ -14,9 +14,15 @@ priority: 10000
 
 ## Compliment Bio-database
 
-    - INSD (国际核酸序列数据库）
+>I'll keep updating when I used those databases. If you know more or find the update/died link on the page, please comment and I'll update it.
+>
+>我大概可能会继续更新这个页面。 如果你有建议/发现死链接/更新链接， 请告在评论区诉我我会更新的。 谢谢
 
-2. [GenBank](http://www.ncbi.nlm.nih.gov/Web/Genbank/) (Update:06/06/20; 4.43913s)
+[^GeneBank]: [Wilkinson, Mark D., et al. "The FAIR Guiding Principles for scientific data management and stewardship." Scientific data 3.1 (2016): 1-9.](https://academic.oup.com/nar/article/41/D1/D36/1068219?login=true)
+
+- INSD (国际核酸序列数据库）
+
+2. [GenBank](http://www.ncbi.nlm.nih.gov/Web/Genbank/)[^GeneBank] (Update:06/06/20; 4.43913s)
     - 美国国家生物技术信息中心（NCBI）所维护的供公众自由读取的、带注释的DNA序列的总数据库。
 
     - 欧洲分子生物学实验室的DNA和RNA 序列库。
@@ -203,7 +209,7 @@ ftp://genome-ftp.stanford.edu/pub/arabidopsis
 ★ TAIR,拟南芥信息资源。
 http://www.arabidopsis.org/
 
-蛋白质序列数据库:
+### 蛋白质序列数据库:
 ★SWISS-PROT是对数据人工审读很严格的库。
 http://www.expasy.ch/sprot/
 
@@ -235,7 +241,7 @@ http://www.sdsc.edu/Kinases/pkr/pkk_catalytic/pk_cat_list.html
 http://www.cbs.dtu.dk/databases/PhosphoBase/
 
 
-蛋白质结构和分类数据库:
+### 蛋白质结构和分类数据库:
 ★ RCSB,结构生物信息学信息学合作研究组织。
 http://www.rcsb.org/
 
@@ -343,8 +349,6 @@ http://genet.sickkids.on.ca/cftr/
 http://www.anthonynolan.com/HIG/
 
 
-★ SMILES是一个辅助性数据库，它搜集与代谢途径有关的化合物名称。
-http://www.daylight.com/dayhtml/smiles/
 
 
 ★我国水稻基因组计划针对水稻的籼稻亚种。
@@ -442,6 +446,20 @@ http://www.mbl.edu/
 
 http://gdbwww.gdb.org/default.htm
 Funding for this project has been withdrawn. This valuable database will remain online, but it should be noted that no new entries will be recorded after 31st July 1998.
+
+## Metabolism Database
+
+[^lipid_maps_2007]: [Fahy, Eoin, et al. "LIPID MAPS online tools for lipid research." Nucleic acids research 35.suppl_2 (2007): W606-W612.](https://academic.oup.com/nar/article/35/suppl_2/W606/2923180)
+
+Lipid database:
+  - [Lipid maps](https://www.lipidmaps.org/)[^lipid_maps_2007]
+  A free resource sponsored by the Wellcome Trust
+  <details><summary>Click me to show more</summary>
+    The LIPID MAPS consortium has developed a number of online tools for performing tasks such as drawing lipid structures and predicting possible structures from mass spectrometry (MS) data. A simple online interface has been developed to enable an end-user to rapidly generate a variety of lipid chemical structures, along with corresponding systematic names and ontological information. The structure-drawing tools are available for six categories of lipids: (i) fatty acyls, (ii) glycerolipids, (iii) glycerophospholipids, (iv) cardiolipins, (v) sphingolipids and (vi) sterols. Within each category, the structure-drawing tools support the specification of various parameters such as chain lengths at a specific sn position, head groups, double bond positions and stereochemistry to generate a specific lipid structure. The structure-drawing tools have also been integrated with a second set of online tools which predict possible lipid structures from precursor-ion and product-ion MS experimental data. The MS prediction tools are available for three categories of lipids: (i) mono/di/triacylglycerols, (ii) glycerophospholipids and (iii) cardiolipins. The LIPID MAPS online tools are publicly available at
+  </details>
+
+- [SMILES是一个辅助性数据库，它搜集与代谢途径有关的化合物名称](http://www.daylight.com/dayhtml/smiles/)
+  活着， 但是实在是不知道有啥用- - 谁知道给个留言呗
 
 ---
 Reference:

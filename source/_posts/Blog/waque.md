@@ -194,6 +194,7 @@ c2(no)->op2(right)->op1
 ```
 
 ##### Mermaid Graph
+
 ```bash
 ##mermaid codes for below
 graph LR;
