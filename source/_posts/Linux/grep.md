@@ -126,3 +126,19 @@ sed 's/^/"|/;s/$/"/') test.fa
 <a name="t84Jr"></a>
 ## 4. 其他详细请看：
 参数解释：[https://www.runoob.com/linux/linux-comm-grep.html](https://www.runoob.com/linux/linux-comm-grep.html)<br />复杂正则匹配：[https://www.cnblogs.com/keithtt/p/6820540.html](https://www.cnblogs.com/keithtt/p/6820540.html)
+
+
+
+
+
+## Multi-words/strings grep
+
+Shell can only 1000 args and if you exceeded it, you would end as error. For doing large number or words/strings match, we need to input words/strings in a file and grep it later. But the consuming time is raising largely after 1000.
+
+| Number or words | time     |
+| :------------- | :------------- |
+|  1000      | 0m1.954s       |
+|2000 | 0m4.825s |
+|5000 | 0m26.232s |
+
+Though, you can match thousands of words in a time, but you don't have too or it doesn't deserve it. In this time, a loop would much faster than single threads grep.

@@ -195,7 +195,8 @@ mito_table.forward_table["ACG"] #--> { 'T' }
 
 print(standard_table)
 ```
-```
+
+<pre>
   |  T      |  C      |  A      |  G      |
 --+---------+---------+---------+---------+--
 T | TTT F   | TCT S   | TAT Y   | TGT C   | T
@@ -218,10 +219,12 @@ G | GTC V   | GCC A   | GAC D   | GGC G   | C
 G | GTA V   | GCA A   | GAA E   | GGA G   | A
 G | GTG V   | GCG A   | GAG E   | GGG G   | G
 --+---------+---------+---------+---------+--
-```
+</pre>
 
 ## 4. Alignment
+
 ### 1. Echo a test file
+
 ```bash
 ## run in bash
 echo ">TRINITY_DN106095_c2_g1_i2
@@ -229,7 +232,9 @@ MSRIMKVFLFLAVMVCISEAQLHAQCLCPRVRSRISSMTDIREVQIYEATIFCDRMEIVVTNDSGLRYCLNPKLKAVQKL
 >TRINITY_DN92154_c0_g1_i1
 DIHVRRRTLTRSKTLGRSTNVNKMKLCILLMLGTLLVLVYGMPPISRDYNTHCRCLQVESRIIPPNSLKSIKLVPEGPHCPDMEVIAGLSNGEKVCLNPRSSWVKKLVNFVLEKQQGGALPKNQGQ" > test.fa
 ```
+
 ### 2. Align
+
 ```python
 ## run in python
 from Bio import pairwise2
@@ -248,7 +253,8 @@ for alignment in alignments:
 for alignment in test_alignments:
   print(format_alignment(*alignment))
 ```
-```
+
+<pre>
 SingleLetterAlphabet() alignment with 6 rows and 65 columns
 MQNTPAERLPAIIEKAKSKHDINVWLLDRQGRDLLEQRVPAKVA...EGP B7RZ31_9GAMM/59-123
 AKQRGIAGLEEWLHRLDHSEAIPIFLIDEAGKDLLEREVPADIT...KKP A0A0C3NPG9_9PROT/58-119
@@ -256,7 +262,24 @@ ARRHGQEYFQQWLERQPKKVKEQVFAVDQFGRELLGRPLPEDMA...KKP A0A143HL37_9GAMM/57-121
 TRRHGPESFRFWLERQPVEARDRIYAIDRSGAEILDRPIPRGMA...NKP A0A0X3UC67_9GAMM/57-121
 AINRNTQQLTQDLRAMPNWSLRFVYIVDRNNQDLLKRPLPPGIM...NRK B3PFT7_CELJU/62-126
 AVNATEREFTERIRTLPHWARRNVFVLDSQGFEIFDRELPSPVA...NRT K4KEM7_SIMAS/61-125
+</pre>
+
+
+Quick Alignment
+
+```python
+from Bio import pairwise2
+from Bio.pairwise2 import format_alignment
+alignments = pairwise2.align.globalxx("ACCGT", "ACG")
+print(format_alignment(*alignments[0]))
 ```
+
+<pre>
+ACCGT
+| ||
+A-CG-
+  Score=3
+</pre>
 
 
 ## PDB file
@@ -390,3 +413,12 @@ with open(PDBFile, 'r') as pdb_file:
         print('>' + record.id)
         print(record.seq)
 ```
+
+
+
+<style>
+pre {
+  background-color:#38393d;
+  color: #5fd381;
+}
+</style>

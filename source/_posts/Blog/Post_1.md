@@ -4,6 +4,7 @@ description: "Nothing Worth for Looking"
 date: 2020/06/22
 toc: true
 excerpt: "There is nothing Worth for Looking, please don't click to waste your time"
+priority: 100000
 ---
 
 ## Nothing Worth for Looking

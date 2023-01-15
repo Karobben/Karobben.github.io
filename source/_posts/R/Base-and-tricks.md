@@ -191,3 +191,46 @@ IRkernel::installspec()
 # 或者是在系统下安装
 IRkernel::installspec(user = FALSE)
 ```
+
+
+## Errors
+
+
+<pre>
+Package ‘XXX’ was installed before R 4.0.0: please re-install it
+</pre>
+
+Solution: [Amleto, 2020](https://stackoverflow.com/questions/63390194/package-xxx-was-installed-before-r-4-0-0-please-re-install-it)
+
+
+1. check the lib path
+```r
+.libPaths()
+```
+<pre>
+[1] "/home/ken/R/x86_64-pc-linux-gnu-library/4.2" "/usr/local/lib/R/site-library"              
+[3] "/usr/lib/R/site-library"                     "/usr/lib/R/library"   
+</pre>
+2. grab old packages names and remove old packages
+```r
+for(i in .libPaths()[2:4]){
+    old_packages <- installed.packages(lib.loc = i )
+    old_packages <- as.data.frame(old_packages)
+    list.of.packages <- unlist(old_packages$Package)
+    remove.packages( installed.packages( priority = "NA" )[,1] )
+}
+```
+
+Actually, it doesn't work to me. Then, I just deleted `/usr/local/lib/R/site-library`. Everything is fine, now.
+
+
+### cannot create
+
+<pre>
+** byte-compile and prepare package for lazy loading
+Fatal error: cannot create 'R_TempDir'
+</pre>
+
+Two possibles:
+1. have no write right in /tmp file (not likely)
+2. Out of storage space.

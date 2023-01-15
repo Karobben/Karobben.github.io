@@ -9,6 +9,7 @@ tags: [Plot, ggplot, R, ggplot_splitbar]
 category: [R, Plot, GGPLOT]
 cover: 'https://s1.ax1x.com/2020/06/11/tbUCm6.md.png'
 thumbnail: 'https://s1.ax1x.com/2020/06/11/tbUCm6.md.png'
+covercopy: © Karobben
 priority: 10000
 ---
 
@@ -67,3 +68,24 @@ SplitBar(p,450,99998,100021,0,c(1,5))
 |原圖|拼接圖|
 |---|---|
 |![tbUS61.md.png](https://s1.ax1x.com/2020/06/11/tbUS61.md.png)|![tbUCm6.md.png](https://s1.ax1x.com/2020/06/11/tbUCm6.md.png)|
+
+
+
+## Keep updating in package:
+
+```r
+remotes::install_github("karobben/ggkaboom")
+library(ggkaboom)
+
+data(cars)
+cars[1,2] =100000
+
+p <- ggplot(cars,aes(x=speed,y=dist, fill=as.factor(speed))) + geom_bar(stat='identity')
+
+Kaboom_break(p, c(0, 15, 30, 400, 10000, 120000), R=c(1,4, 2))
+Kaboom_break(p, c(0, 15, 30, 400, 10000, 120000), R=c(1, 4, 2), panel.grid.scale = 'len', panel.grid.num = 6)
+```
+
+|![](https://s1.ax1x.com/2022/09/10/vLfkM6.png)|![](https://s1.ax1x.com/2022/09/10/vLfixx.png)|
+|:-:|:-:|
+|No `panel.grid` parameters| With `panel.grid` parameters|

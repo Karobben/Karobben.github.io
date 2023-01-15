@@ -1,0 +1,767 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>BioStatistics with R/Python: Block 2 - Karobben</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="Karobben"><meta name="msapplication-TileImage" content="https://s3.ax1x.com/2021/02/11/yBZjYQ.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Karobben"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="Binomial and Poisson Distribution; Confidence intervals for proportions and counts; Contingency Tables; Survival Curve; Finally, Power and Sample Size"><meta property="og:type" content="blog"><meta property="og:title" content="BioStatistics with R/Python: Block 2"><meta property="og:url" content="https://karobben.github.io/2022/03/30/LearnNotes/tulane-biostat-2/"><meta property="og:site_name" content="Karobben"><meta property="og:description" content="Binomial and Poisson Distribution; Confidence intervals for proportions and counts; Contingency Tables; Survival Curve; Finally, Power and Sample Size"><meta property="og:locale" content="en_US"><meta property="og:image" content="https://spauldinggrp.com/wp-content/uploads/2015/09/statistics-word-cloud.jpg"><meta property="article:published_time" content="2022-03-30T13:23:38.000Z"><meta property="article:modified_time" content="2022-09-17T22:22:31.768Z"><meta property="article:author" content="Karobben"><meta property="article:tag" content="Classes"><meta property="article:tag" content="Tulane Classes"><meta property="article:tag" content="BioStatistics"><meta property="twitter:card" content="summary"><meta property="twitter:image" content="https://spauldinggrp.com/wp-content/uploads/2015/09/statistics-word-cloud.jpg"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://karobben.github.io/2022/03/30/LearnNotes/tulane-biostat-2/"},"headline":"Karobben","image":["https://spauldinggrp.com/wp-content/uploads/2015/09/statistics-word-cloud.jpg"],"datePublished":"2022-03-30T13:23:38.000Z","dateModified":"2022-09-17T22:22:31.768Z","author":{"@type":"Person","name":"Karobben"},"description":"Binomial and Poisson Distribution; Confidence intervals for proportions and counts; Contingency Tables; Survival Curve; Finally, Power and Sample Size"}</script><link rel="canonical" href="https://karobben.github.io/2022/03/30/LearnNotes/tulane-biostat-2/"><link rel="alternate" href="/atom.xml" title="Karobben" type="application/atom+xml"><link rel="icon" href="https://s3.ax1x.com/2021/02/11/yBZjYQ.png"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><script>var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?8442e6ecc87d878298ba7d3bd0a5484c";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();</script><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css"><script src="https://www.googletagmanager.com/gtag/js?id=G-0DHWCVQ6K0" async></script><script>window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+    
+        gtag('config', 'G-0DHWCVQ6K0');</script><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script><!--!--><!--!--><meta name="generator" content="Hexo 5.4.0"></head><body class="is-3-column"><nav class="navbar navbar-main"><div class="container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="https://s1.ax1x.com/2022/09/27/xZnL6K.png" alt="Karobben" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/Karobben"><i class="fab fa-github"></i></a><a class="navbar-item is-hidden-tablet catalogue" title="Catalogue" href="javascript:;"><i class="fas fa-list-ul"></i></a><a class="navbar-item search" title="Search" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-6-widescreen"><div class="card"><div class="card-image"><span class="image is-7by3"><img class="fill" src="https://spauldinggrp.com/wp-content/uploads/2015/09/statistics-word-cloud.jpg" alt="BioStatistics with R/Python: Block 2"></span><span class="ccopy" style="position: absolute; bottom: 0; right: 0; padding-right:3px; padding-left:4px; background-color: rgba(255, 255, 255, 0.6)"><a target="_blank" rel="noopener" href="https://spauldinggrp.com/using-the-stats-worksheet-to-calculate-tracking-error/statistics-word-cloud/">© John D. Simpson, CIPM</a></span></div><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><i class="far fa-eye"></i><span> </span><span id="busuanzi_container_page_pv" style="display: inline;"><span id="busuanzi_value_page_pv">0</span> </span><span class="level-item">Posted&nbsp;<time dateTime="2022-03-30T13:23:38.000Z" title="3/30/2022, 8:23:38 AM">2022-03-30</time></span><span class="level-item">Updated&nbsp;<time dateTime="2022-09-17T22:22:31.768Z" title="9/17/2022, 5:22:31 PM">2022-09-17</time></span><span class="level-item"><a class="link-muted" href="/categories/Notes/">Notes</a><span> / </span><a class="link-muted" href="/categories/Notes/Class/">Class</a><span> / </span><a class="link-muted" href="/categories/Notes/Class/Tulane/">Tulane</a><span> / </span><a class="link-muted" href="/categories/Notes/Class/Tulane/BioStatistics/">BioStatistics</a></span><span class="level-item">24 minutes read (About 3621 words)</span></div></div><h1 class="title is-3 is-size-4-mobile">BioStatistics with R/Python: Block 2</h1><div class="content"><h2 id="Biomedical-Statistics-and-Data-Analysis-Block-2">Biomedical Statistics and Data Analysis: Block 2</h2>
+<style>
+pre {
+  background-color:#38393d;
+  color: #5fd381;
+}
+</style>
+<h2 id="L8-Counted-Variables-and-Their-Asymmetric-Distributions">L8: Counted Variables and Their Asymmetric Distributions</h2>
+<h3 id="What-is-Sample-count-Count-Variable">What is Sample count? Count Variable</h3>
+<ul>
+<li>For an event to be counted it has to <mark>occur</mark> AND it has to be <mark>observed</mark>.</li>
+<li>Counted variables are treated differently than measured variables because their <mark>distributions are asymmetric (not Gaussian)</mark>. (use binomial statistics)</li>
+<li>To be able to apply the statistical treatments that we will use, the counted events must follow the following rules:
+<ul>
+<li>Each event has a <strong>probability of occurring</strong> or a <strong>random probability of being observed</strong> (or both).</li>
+<li><strong>Occurrence or observation (or both) is a random event</strong>.</li>
+<li>The probability of occurrence/observation is <strong>independent</strong> of whether other occurrences/observations have been made.</li>
+</ul>
+</li>
+<li>If both the occurrence of an event and its observation are non random or known with certainty then the statistical principles related to counted variables do not apply.</li>
+</ul>
+<h3 id="Examples">Examples</h3>
+<ul>
+<li>Examples of counted variables <strong>where the occurrence is random but the observation is certain</strong>:
+<ul>
+<li>Proportion of planes that crash</li>
+<li>Number of cars that drive past a certain intersection</li>
+<li>Number of patients that die when treated with a drug</li>
+</ul>
+</li>
+<li>Examples of counted variables <strong>where the occurrence is certain but the observation is random</strong>:
+<ul>
+<li>Number of turtles counted in a lake</li>
+<li>Radioisotope concentration</li>
+</ul>
+</li>
+<li>Examples of counted variables <strong>where both occurrence and observation is random</strong>:
+<ul>
+<li>Number of people with the flu</li>
+<li>Number of cells that are transfected</li>
+</ul>
+</li>
+<li>Examples of counted variables <strong>where neither the occurrence nor the observation is random</strong>:
+<ul>
+<li>The number of turtles in a bathtub</li>
+<li>The number of toes on your left foot</li>
+<li>The number of presidents with wives named “Barbara”</li>
+</ul>
+</li>
+</ul>
+<h3 id="Question-Are-you-categorizing-or-just-counting-events-or-categorizing">Question: Are you categorizing or just counting events (or categorizing)?</h3>
+<p>If you are <strong>categorizing events</strong> (yes/no, live/dead, success/failure, democrat/republican) use <mark>binomial statistics</mark>. INSTAT does not deal with single proportions very well. OS4 and SSP will use do calculations for proportions. SSP uses the word “probability” to denote proportions.</p>
+<p>If you are <strong>counting events</strong> Car crashes, weddings in July, deaths<br>
+from lung cancer, radioactive counts) use <mark>Poisson statistics</mark>.</p>
+<h3 id="Binomial-DIstribution">Binomial DIstribution</h3>
+<p>$$<br>
+P_ {x:n} = \frac{n!}{x!(n-x)!} p^x (1-p)^{n-x}<br>
+$$</p>
+<ul>
+<li>$\frac{n!}{x!(n-x)!}$:<br>
+Of combinations (how many different ways are there of doing an experiment)</li>
+<li>$p^x$:<br>
+Probability of x Successes in one experiment.</li>
+<li>$(1-p)^{n-x}$:<br>
+Probability of n-x failures in one experiment (n trials).</li>
+</ul>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="R"><figure class="iseeu highlight /r"><table><tr><td class="code"><pre><code class="hljs r"><span class="hljs-comment"># Do it yourself</span><br>Bi_cal &lt;- <span class="hljs-keyword">function</span>(x, n, p)&#123;<br>  R = ncol(combn(n,x)) * (p^x) * ((<span class="hljs-number">1</span>-p)^(n-x))<br>  <span class="hljs-built_in">return</span> (R)<br>&#125;<br><br><span class="hljs-comment"># From R default functions</span><br>dbinom(<span class="hljs-number">4</span>, size=<span class="hljs-number">12</span>, prob=<span class="hljs-number">0.2</span>)<br></code></pre></td></tr></table></figure></div>
+<blockquote>
+<p>Exp: Probability of getting 2 heads when flipping 3 coins = 3 x 0.25 x 0.5 = 0.375<br>
+in r:<br>
+<code>dbinom(2, size=3, prob=0.5)</code></p>
+</blockquote>
+<details> <summary> Codes for the Graphic</summary>
+  <div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="R"><figure class="iseeu highlight /r"><table><tr><td class="code"><pre><code class="hljs r">library(ggplot2)<br>library(reshape2)<br>x= <span class="hljs-built_in">c</span>(<span class="hljs-number">1</span>:<span class="hljs-number">32</span>)<br>Pro = data.frame(x=x, H1 = dbinom(<span class="hljs-number">1</span>, size=x, prob=<span class="hljs-number">0.5</span>),<br>  H2 = dbinom(<span class="hljs-number">2</span>, size=x, prob=<span class="hljs-number">0.5</span>),<br>  H4 = dbinom(<span class="hljs-number">4</span>, size=x, prob=<span class="hljs-number">0.5</span>),<br>  H8 = dbinom(<span class="hljs-number">8</span>, size=x, prob=<span class="hljs-number">0.5</span>),<br>  H16 = dbinom(<span class="hljs-number">16</span>, size=x, prob=<span class="hljs-number">0.5</span>),<br>  H32 = dbinom(<span class="hljs-number">32</span>, size=x, prob=<span class="hljs-number">0.5</span>)<br>)<br><br>Pro_TB = melt(Pro, id.vars = <span class="hljs-string">&#x27;x&#x27;</span>)<br><br>ggplot(Pro_TB, aes(x= x, y =value, group = variable, color=variable)) +<br>  geom_line(size= <span class="hljs-number">2</span>)+ theme_minimal()+<br>  scale_color_brewer(palette = <span class="hljs-string">&quot;Set2&quot;</span>)<br></code></pre></td></tr></table></figure></div>
+</details>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"><img src="https://s1.ax1x.com/2022/03/31/qRBH1A.png" alt="Binominal Distribution"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">The H1 means the chase for get 1 head in times of rolled at x. So as the H2, 4, 8, 16, and 32</td>
+</tr>
+</tbody>
+</table>
+<p>The binomial distribution is used to describe small numbers of discreet events, or proportions of small numbers. Becomes a Gaussian distribution as n gets large. Mean and standard deviation of the parent distribution can be calculated.</p>
+<p>$μ= np$</p>
+<ul>
+<li>μ is the mean number of “successes”, n is the number of trials</li>
+<li>p is the probability of success in each trial</li>
+<li>$σ_ μ = \sqrt{np(1-p)}$</li>
+<li>The standard deviation in μ (# successes)</li>
+</ul>
+<p>If p is not known it must be estimated from the<br>
+data. p is successes divided by total i.e. (μ/n)</p>
+<h3 id="Data-that-would-use-a-Binomial-Distribution">Data that would use a Binomial Distribution</h3>
+<blockquote>
+<p>Example: You know that normally 1 person in 8 has a negative reaction to a particular drug.<br>
+<strong>1. How many negative reactions would you expect to have in a sample of 21 people?</strong></p>
+<p>In this questions, we can know that the p = 1/8<br>
+So, we can have $\mu = np= 21\times (1/8) = 2.63$<br>
+We supposed have 2.63 people is negative<br>
+And then: $\sigma = \sqrt{np(1-p)}= \sqrt{21 × (1/8)(7/8)} = 1.52$ The SD is 1.52<br>
+<strong>2. What is the probability of observing zero negative reactions in 21 patients?</strong><br>
+<code>dbinom(0, 21, 1/8)</code></p>
+<pre>
+[1] 0.06055766
+</pre>
+</blockquote>
+<blockquote>
+<p>Example: You conducted a random phone poll of 900 people and found that 45% favored candidate A and 55% favored candidate B.<br>
+<strong>What is the uncertainty of the result (What is the standard deviation?).</strong><br>
+This question is actually calling for the relative uncertainty. which is μ/σ<br>
+$µ=np=900×.45= 405$<br>
+$\sigma = \sqrt{np(1-p)}=\sqrt{900×0.45(1-0.45)}=14.92481$<br>
+Relative uncertainty = μ/σ = 3.7%</p>
+</blockquote>
+<h3 id="The-Poisson-Distribution">The Poisson Distribution</h3>
+<p><mark>When p « 1 or when n » x the binomial distribution simplifies to the Poisson distribution</mark>. The Poisson distribution also applies when you are counting discreet events (presumably from a very large population of possible observations) but not categorizing them as successes/failures or left/right or alive/dead or sick/not sick.</p>
+<p>$$<br>
+p = \frac{\mu^ x}{x!}e^{-\mu}<br>
+$$</p>
+<p>$\mu=np=x$<br>
+$\sigma = \sqrt{np(1-p)}$;<br>
+When the p « 1, we then have: $σ = \sqrt{np}= \sqrt{x}$</p>
+<p>The standard deviation of a counted variable is the square root of the # of counts. Ex: Political polls, radioactive counts, cell counts etc</p>
+<p>Special case:<br>
+If the probability of seeing an event is 1/n and you try n times, the probability of seeing the event once is only 37%. This is exactly the same as the probability of not seeing the event at all. There is a 63% chance is seeing it at least once.</p>
+<h3 id="Binomial-versus-Poisson-Statistics-Which-do-we-use">Binomial versus Poisson Statistics: Which do we use?</h3>
+<p>Finally: The binomial equation is used when counting ratios or proportions of small numbers ( i.e. n/m where n&lt; 100, n&lt;m and m&lt;100).<br>
+If we were counting the number cars that drive up to an intersection, that would be described with a Poisson distribution. While counting the number that turn left relative to the total would normally be described with a binomial distribution.</p>
+<p>The binomial equation is used when <strong>categorizing</strong>. In other words, when your data are ratios or proportions of counted variables.</p>
+<p>The Poisson equation is used when <strong>counting</strong> only and not categorizing.</p>
+<p>When the numerator of a ratio is <strong>very large</strong>, the binomial and Poission descriptions become <strong>equivalent</strong>.</p>
+<p><strong>Examples</strong>:</p>
+<ul>
+<li>If we were counting the number cars that pass a certain intersection, that would be described with a Poisson distribution, because it is a <strong>simple count</strong>.</li>
+<li>If we are counting the number of cars that hat turn left and the number that turn right, that would be described with a binomial distribution because it is a <strong>categorization</strong>.</li>
+<li>Assume you are doing yeast genetic studies and are counting the number of transformed colonies.</li>
+<li>If the transformation is frequent, you can plate a small number of colonies (&lt;1000), count transformed and normal colonies, and analyze the statistics using <strong>proportions</strong> (binomial).</li>
+<li>If the transformation is rare, you can plate thousands of colonies, count only the transformed colonies and analkyze the statistics using <strong>simple counts (Poisson)</strong>.</li>
+</ul>
+<h2 id="L9-Confidence-intervals-for-proportions-and-counts">L9: Confidence intervals for proportions and counts</h2>
+<p>How to determine statistical significance of one proportion versus a null hypothesis:</p>
+<ol>
+<li>Determine the upper and lower bounds of the confidence interval. Use 1-α for probability. 95% CI for α=0.05.</li>
+<li>Compare H0 to the CI. If Ho is inside the CI, the difference is not significant. If H0 is outside the CI, the difference IS significant.</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"><img src="https://s4.ax1x.com/2022/02/17/H4lhpF.png" alt=""></th>
+<th style="text-align:center"><img src="https://s4.ax1x.com/2022/02/17/H4l701.png" alt=""></th>
+</tr>
+</thead>
+<tbody></tbody>
+</table>
+<p>How to calculate the 95% confidence Intervals.</p>
+<p><img src="https://s4.ax1x.com/2022/02/17/H4lzXd.png" alt=""></p>
+<p><a target="_blank" rel="noopener" href="https://sphweb.bumc.bu.edu/otlt/MPH-Modules/PH717-QuantCore/PH717-Module6-RandomError/PH717-Module6-RandomError12.html">R codes: Wayne W. LaMorte, MD, PhD, MPH</a></p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="R"><figure class="iseeu highlight /r"><table><tr><td class="code"><pre><code class="hljs r">prop.test(<span class="hljs-number">10</span>,<span class="hljs-number">20</span>,p=<span class="hljs-number">.5</span>)<br></code></pre></td></tr></table></figure></div>
+<pre>
+  1-sample proportions test without continuity correction
+
+  data:  10 out of 20, null probability 0.5
+  X-squared = 0, df = 1, p-value = 1
+  alternative hypothesis: true p is not equal to 0.5
+  95 percent confidence interval:
+  0.299298 0.700702
+  sample estimates:
+  p
+  0.5
+</pre>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="R"><figure class="iseeu highlight /r"><table><tr><td class="code"><pre><code class="hljs r">library(Hmisc)<br><span class="hljs-comment">#calculate 95% confidence interval</span><br>binconf(x=<span class="hljs-number">10</span>, n=<span class="hljs-number">20</span>, alpha=<span class="hljs-number">.05</span>)<br></code></pre></td></tr></table></figure></div>
+<pre>
+  PointEst    Lower    Upper
+     0.5 0.299298 0.700702
+</pre>
+<p>Results from <a target="_blank" rel="noopener" href="https://statpages.info/confint.html">Exact Binomial and Poisson Confidence Intervals </a>:<br>
+<img src="https://s4.ax1x.com/2022/02/17/H41B4K.png" alt=""></p>
+<h3 id="Special-case-for-a-proportion">Special case for a proportion:</h3>
+<p><strong>How do you determine p-value when the Null hypothesis is 0 or 1?</strong></p>
+<p><strong>There is a problem we have to solve:</strong></p>
+<ul>
+<li>The exact two-sided CI (by definition) can never include a proportion of 0 or 1 (because we are forcing it to have equal area on each side).</li>
+</ul>
+<p>Yet, in some cases the probability of observing a proportion of exactly zero 0 or 1 will be greater than 0.025 (half of the 95% CI) and thus should not be considered significant.</p>
+<p>How do we decide if a null hypothesis proportion of 0 or 1 is really statistically different from a experimentally derived proportion? There are two approaches.</p>
+<ol>
+<li>
+<p>Exact Solution: Go to a binomial probability calculator and calculate the probability for x=0 (or x=n) for your proportion. If p&gt;0.025 then the limit (proportion = 0 or 1) should be considered WITHIN the CI and not significantly different.</p>
+</li>
+<li>
+<p>Approximate solution (works well for trials &gt; 10): Determine the 2 sided CI of your proportion. If the 1/n is within the CI, then a proportion of 0 is NOT statistically significant. If (x-1)/x is within the CI then a proportion of 1 is NOT statistically significant.</p>
+</li>
+</ol>
+<p><em>HINT: For any experiment with at least 12 trials, if the successes = 3 or less, it will not be statistically different from a proportion of zero.</em><br>
+<em>Similarly, if the number of trials is 12 or more and trials-successes = 3 or less, it will never be significantly different from a proportion of 1.</em></p>
+<blockquote>
+<p>Example: You measured a proportion of 3/15. Is there a statistically significant difference from a Null hypothesis proportion = 0?<br>
+Using the statpages site or table above the CI of the proportion 3/15 is 0.043 – 0.481.</p>
+<ol>
+<li><strong>Exact method</strong>: Using a binomial calculator (above) with N=15 and prop = 0.2 (3/15), the probability of x=0 is 0.0352. Since this is larger than the one-tailed probability of 0.025 (for =0.05) it is NOT significant.</li>
+<li><strong>Approximate Method</strong>: The value 1/n or 1/15 is 0.067. Since this value falls within the CI 0.043-0.481, a proportion of 0 is NOT significantly different from your measured 3/15.</li>
+</ol>
+<blockquote>
+<p>So, after interpretation from above, we now know that we’d like to know the difference between 3/15 and 0/15. So, the code in R could be: <code>prop.test(0,15, p = 3/15)</code></p>
+</blockquote>
+<pre>
+1-sample proportions test with continuity correction
+data:  0 out of 15, null probability 3/15
+X-squared = 2.6042, df = 1, p-value = 0.1066
+alternative hypothesis: true p is not equal to 0.2
+95 percent confidence interval:
+0.0000000 0.2534679
+sample estimates:
+p
+0
+</pre>
+<p>p-value = 0.1066, which means is not significantly different. The null hypothesis is accepted and 3/15 has no difference from 0/15.</p>
+</blockquote>
+<h3 id="Confidence-Interval-of-a-Poisson-distributed-counted-value">Confidence Interval of a Poisson distributed (counted) value</h3>
+<p><em><strong>How do you determine statistical significance for the null hypothesis that a<br>
+proportion equals a certain value?</strong></em></p>
+<ul>
+<li>A 95% CI is equal to p- value of 0.05. Calculate a CI for the proportion using one of the methods we just discussed. If CI includes the null hypothesis, then p is larger than your cutoff (thus not significant). If the CI does not include the null hypothesis p is smaller and is significant.</li>
+</ul>
+<blockquote>
+<p><strong>Example</strong>:<br>
+Suppose you observed 5 mice out of 30 transgenic mouse offspring were male. You wanted to know if there was a gender specific mortality effect. Your null hypothesis is 0.5 (half male, half female). Observed Ratio = 0.17 95% CI = 0.056-0.347 (From Table) Since the 95% CI does not include Null hypothesis, p is smaller than 0.05 and is significant.</p>
+<blockquote>
+<p>In r, We know that the observe is 5, sample size is 30, and expectation is 0.5. So, we can have:</p>
+</blockquote>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="R"><figure class="iseeu highlight /r"><table><tr><td class="code"><pre><code class="hljs r">prop.test(<span class="hljs-number">5</span>,<span class="hljs-number">30</span>,<span class="hljs-number">.5</span>)<br></code></pre></td></tr></table></figure></div>
+<pre>
+1-sample proportions test with continuity correction
+data:  5 out of 30, null probability 0.5
+X-squared = 12.033, df = 1, p-value = 0.0005226
+alternative hypothesis: true p is not equal to 0.5
+95 percent confidence interval:
+ 0.06303555 0.35451084
+sample estimates:
+        p
+0.1666667
+</pre>
+<p>We can see that the p = 0.0005226, which means the result is significant.</p>
+</blockquote>
+<blockquote>
+<p>Example: <em><strong>Poisson Confidence Intervals</strong></em><br>
+A newspaper headline proclaims that the roads in Southern Louisiana have become less safe in 2004 because the 138 fatal accidents that year was 11% higher than the long term average number of 124 per year. Use statistics to analyze this conclusion. Are the roads more dangerous?</p>
+<p>Since 124 is a long term average we use it in this simple example as a null hypothesis without uncertainty.<br>
+In r, we just need use: <code>poisson.test(138)</code></p>
+<pre>
+       Exact Poisson test
+data:  138 time base: 1
+number of events = 138, time base = 1, p-value < 2.2e-16
+alternative hypothesis: true event rate is not equal to 1
+95 percent confidence interval:
+  115.9369 163.0397
+sample estimates:
+event rate
+       138
+</pre>
+<p>We can see that the confidence interval is from 115.9369 to 163.0397. And 115.9369 &lt; 124 &lt; 163.0397. So, the result is not significant difference.</p>
+</blockquote>
+<h3 id="More-examples-for-understanding">More examples for understanding</h3>
+<blockquote>
+<p>Example 1: If your data are the proportion of dead cells on a plate and you measured in each of four fields: 31/120; 18/56; 40/103; 44/121</p>
+<ul>
+<li>You recalculate your total proportion as (31+18+40+44) / (120+56+103+121) or 133/400.</li>
+<li>We use 1-sample proportions: <code>prop.test(133, 400)</code></li>
+<li>the CI: <code>0.2869229 0.3813495</code></li>
+<li>the proportion of 4 experiments are: 0.2583333, 0.3214286, 0.3883495, 0.3636364. The first experiment is significantly different from others.</li>
+</ul>
+</blockquote>
+<blockquote>
+<p>Example 2: Your Geiger counter reports counts in 1 minute intervals: 12,15,8,17,12,11,9 and 13 Your confidence interval is based on total counts = 97 (12.1 cpm)<br>
+<code>poisson.test(97)</code> tell us that the CI is: <code>78.66047 118.33177</code>, which means it’s <code>9.832558 14.791472</code> per minute. We can find that the 8 and 9 is the outlier.</p>
+</blockquote>
+<h2 id="L10-Contingency-Tables">L10: Contingency Tables</h2>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://www.statisticshowto.com/what-is-a-contingency-table/">It is used in statistics to summarize <strong>the relationship between several categorical variables</strong>. A contingency table is a special type of frequency distribution table, where two variables are shown simultaneously.</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=LsESPiRoqcI">Instruction in Excel</a></li>
+</ul>
+<p>Clinical studies sometimes use a binary (yes/no) decision to assess disease or outcome. So clinical studies are often analyzed as a proportion of a counted variable. There are four main types of clinical studies:</p>
+<ul>
+<li><strong>Retrospective (case-control):</strong> Start with <strong>outcome</strong> (e.g. disease) and look back to see the cause with cases (disease) and controls (no disease).</li>
+<li><strong>Prospective:</strong> Start with <strong>exposure and follow cases</strong> to see if disease <strong>develops</strong>. Also uses <strong>cases</strong> (exposed or hypothetical risk factor) and <strong>controls</strong> (not exposed, or no hypothetical risk factor).</li>
+<li><strong>Cross-sectional:</strong> Start with a set of randomly selected subjects that are NOT selected based disease or exposure. Divide into two groups and assess the correlation between disease and hypothetical risk factor.</li>
+<li><strong>Experimental:</strong> Randomly selected subjects, Split into <strong>two groups</strong>, subject one groups to a treatment, the other to a control treatment such as a placebo.</li>
+</ul>
+<p>Find the correlated with the diseases.</p>
+<h3 id="Exp1-How-you-compare-multiple-proportions-with-one-another">Exp1: How you compare multiple proportions with one another?</h3>
+<blockquote>
+<p>Imagine a small scale experimental cancer drug trial. You recruit 40 patients with end-stage cancer. 20 get drug and 8 of them survive 5 years. Another 20 get placebo and 2 of them survive 5 years.</p>
+</blockquote>
+<p><em><strong>contingency table</strong></em></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left"></th>
+<th style="text-align:left">Survival</th>
+<th style="text-align:left">Not Survival</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Treated</td>
+<td style="text-align:left">8</td>
+<td style="text-align:left">12</td>
+</tr>
+<tr>
+<td style="text-align:left">Not Treated</td>
+<td style="text-align:left">2</td>
+<td style="text-align:left">18</td>
+</tr>
+</tbody>
+</table>
+<p>Codes for R: <a target="_blank" rel="noopener" href="https://www.r-bloggers.com/2020/12/contingency-tables-in-r/">December 19, 2020 by George Pipis in R bloggers</a></p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="R"><figure class="iseeu highlight /r"><table><tr><td class="code"><pre><code class="hljs r">TB2 &lt;- data.frame( Survival = <span class="hljs-built_in">c</span>(<span class="hljs-number">8</span>, <span class="hljs-number">2</span>),<br>          Dead=<span class="hljs-built_in">c</span>(<span class="hljs-number">12</span>, <span class="hljs-number">18</span>),<br>          row.names = <span class="hljs-built_in">c</span>(<span class="hljs-string">&quot;Treated&quot;</span>, <span class="hljs-string">&quot;Placebo&quot;</span>))<br><br>prop.table(TB2)<br>chisq.test(TB2)<br>fisher.test(TB2)<br></code></pre></td></tr></table></figure></div>
+<pre>
+  Survival Dead
+  Treated     0.20 0.30
+  Placebo     0.05 0.45
+</pre>
+<pre>
+  Pearson's Chi-squared test with Yates' continuity correction
+
+  data:  TB2
+  X-squared = 3.3333, df = 1, p-value = 0.06789
+</pre>
+<pre>
+  Fisher's Exact Test for Count Data
+
+  data:  TB2
+  p-value = 0.06483
+  alternative hypothesis: true odds ratio is not equal to 1
+  95 percent confidence interval:
+  0.9222194 64.6794654
+  sample estimates:
+  odds ratio
+  5.735024
+</pre>
+<p>We can see that P value from both Chi-squared test and Fisher’s Exact test are larger than 0.05, which means the null hypothesis is accepted and they have no significant difference.</p>
+<h3 id="Exp-2-An-example-of-a-clinical-trial-with-a-single-outcome">Exp 2: An example of a clinical trial with a single outcome</h3>
+<blockquote>
+<p>Suppose you are performing an experimental study to determine if AZT improves the outcome of HIV-infected patients. All patients are infected with HIV, some are treated with AZT some with placebo. You determine which patients develop clinical symptoms of AIDS and which do not. Disease developed in 28% of placebo-treated cases (129/461) and in 16% of AZT treated cases (76/475).</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align:left"></th>
+<th style="text-align:left">AIDS</th>
+<th style="text-align:left">No AIDS</th>
+<th style="text-align:left">Total</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">ATZ</td>
+<td style="text-align:left">76(TD)</td>
+<td style="text-align:left">399(TN)</td>
+<td style="text-align:left">475(Tx)</td>
+</tr>
+<tr>
+<td style="text-align:left">Placebo</td>
+<td style="text-align:left">129(ND)</td>
+<td style="text-align:left">332(NN)</td>
+<td style="text-align:left">461(Nx)</td>
+</tr>
+<tr>
+<td style="text-align:left">Total</td>
+<td style="text-align:left">205(xD)</td>
+<td style="text-align:left">731(xN)</td>
+<td style="text-align:left">936</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="R"><figure class="iseeu highlight /r"><table><tr><td class="code"><pre><code class="hljs r">TB &lt;- data.frame( AIDS = <span class="hljs-built_in">c</span>(<span class="hljs-number">76</span>, <span class="hljs-number">399</span>),<br>          N_AIDS=<span class="hljs-built_in">c</span>(<span class="hljs-number">129</span>, <span class="hljs-number">332</span>),<br>          row.names = <span class="hljs-built_in">c</span>(<span class="hljs-string">&quot;AZT&quot;</span>, <span class="hljs-string">&quot;Placebo&quot;</span>))<br><br>prop.table(TB)<br>chisq.test(TB)<br>fisher.test(TB)<br></code></pre></td></tr></table></figure></div>
+<pre>
+  AIDS    N_AIDS
+  AZT     0.08119658 0.1378205
+  Placebo 0.42628205 0.3547009
+</pre>
+<pre>
+  Pearson's Chi-squared test with Yates' continuity correction
+
+  data:  TB
+  X-squared = 18.944, df = 1, p-value = 1.346e-05
+</pre>
+<pre>
+  Fisher's Exact Test for Count Data
+
+  data:  TB
+  p-value = 9.24e-06
+  alternative hypothesis: true odds ratio is not equal to 1
+  95 percent confidence interval:
+  0.3512693 0.6818650
+  sample estimates:
+  odds ratio
+  0.4905877
+</pre>
+<p>P value is signifcant and so, the H<sub>0</sub> hypothesis is rejected and the drug works.</p>
+<p><strong>Explained</strong>:<br>
+If you want to measure the confidence interval for the difference between the proportions. You can do it with a Gaussian approximation if none of the entries are smaller than 5 and none of the same-row values are within 5 of each other. (In other words, if neither proportion is close to zero or close to 1.0).</p>
+<p>$$<br>
+CI = (p_ 1 - p_ 2) ± z × \sqrt{\frac{p_ 1 (1-p_ 1)}{n_ 1} + \frac{p_ 2 (1-p_ 2)}{n_ 2}}<br>
+$$</p>
+<p>Other ways of expressing proportional results:</p>
+<ul>
+<li><strong>Relative risk(RR)</strong><br>
+$$<br>
+RR = \frac{p_ 1}{p_ 2}<br>
+$$</li>
+</ul>
+<p>Relative risk is sometimes called relative rate or relative probability, especially in non-clinical studies. Pay attention to which outcome is in the numerator (on top).<br>
+In the AZT study, the relative risk is 0.57. AZT patients were 57% as likely as placebo patients to have disease progression. If we switched places of the two treatments (which would be perfectly valid) we would be saying that placebo patients were 1.75 time as likely to have disease progression.</p>
+<ul>
+<li>
+<p><strong>Number Needed to Treat</strong><br>
+$$<br>
+NNT = \frac{1}{(p_ 2 - p_ 1)}<br>
+$$</p>
+</li>
+<li>
+<p><strong>Odds ratio (OR)</strong><br>
+$$<br>
+OR = (\frac{Odds_ 1}{Odds_ 2}= \frac{TD/TN}{ND/NN})<br>
+$$</p>
+</li>
+</ul>
+<h3 id="Exp-3">Exp 3</h3>
+<blockquote>
+<p>Cat scratch fever is a mild disease that is transmitted by cats. A case-control study assessed whether there is an connection between fleas and the disease in humans. (That is fleas on the cats and disease in the humans).</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align:left"></th>
+<th style="text-align:left">Disease</th>
+<th style="text-align:left">No Disease</th>
+<th style="text-align:left">Total</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Fleas</td>
+<td style="text-align:left">32(TD)</td>
+<td style="text-align:left">4(TN)</td>
+<td style="text-align:left">36(Tx)</td>
+</tr>
+<tr>
+<td style="text-align:left">No Fleas</td>
+<td style="text-align:left">24(ND)</td>
+<td style="text-align:left">52(NN)</td>
+<td style="text-align:left">76(Nx)</td>
+</tr>
+<tr>
+<td style="text-align:left">Total</td>
+<td style="text-align:left">56(xD)</td>
+<td style="text-align:left">56(xN)</td>
+<td style="text-align:left">112</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="R"><figure class="iseeu highlight /r"><table><tr><td class="code"><pre><code class="hljs r">TB &lt;- data.frame( Disease = <span class="hljs-built_in">c</span>(<span class="hljs-number">32</span>, <span class="hljs-number">4</span>),<br>          N_Disease=<span class="hljs-built_in">c</span>(<span class="hljs-number">24</span>, <span class="hljs-number">52</span>),<br>          row.names = <span class="hljs-built_in">c</span>(<span class="hljs-string">&quot;Fleas&quot;</span>, <span class="hljs-string">&quot;N_Fleas&quot;</span>))<br><br>prop.table(TB)<br>chisq.test(TB)<br>fisher.test(TB)<br></code></pre></td></tr></table></figure></div>
+<pre>
+  Disease N_Disease
+  Fleas   0.28571429 0.2142857
+  N_Fleas 0.03571429 0.4642857
+</pre>
+<pre>
+  Pearson's Chi-squared test with Yates' continuity correction
+
+  data:  TB
+  X-squared = 29.842, df = 1, p-value = 4.687e-08
+</pre>
+<pre>
+  Fisher's Exact Test for Count Data
+
+  data:  TB
+  p-value = 1.201e-08
+  alternative hypothesis: true odds ratio is not equal to 1
+  95 percent confidence interval:
+  5.171911 72.958931
+  sample estimates:
+  odds ratio
+  16.84407
+</pre>
+<p>According to Fisher’s Extrac test, the CI is <code>5.171911 to 72.958931</code>, which means that cat owners with fleas (cat owners whose cats have fleas) are between 5 and 73 times more likely to get cat scratch fever as cat owners whose cats do not have fleas.</p>
+<h3 id="Contingency-table-in-R">Contingency table in R</h3>
+<p>Exp1: <a target="_blank" rel="noopener" href="https://www.datacamp.com/community/tutorials/contingency-tables-r">Łukasz Deryło, 2018</a></p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="R"><figure class="iseeu highlight /r"><table><tr><td class="code"><pre><code class="hljs r"><span class="hljs-comment"># Practice 1</span><br>library(MASS)<br><span class="hljs-comment">#check the observes by yourselves</span><br><span class="hljs-comment">#Cars93$Type</span><br>table(Cars93$Type)<br>prop.table(table(Cars93$Type))<br><br><span class="hljs-comment"># Practice 2</span><br>table(Cars93$Origin)<br>prop.table(table(Cars93$Origin))<br><br><span class="hljs-comment"># How to make a contingency table</span><br>table(Cars93$Type, Cars93$Origin)<br></code></pre></td></tr></table></figure></div>
+<blockquote>
+<ul>
+<li>
+<p>Practice 1:<br>
+<pre><br>
+Compact   Large Midsize   Small  Sporty     Van<br>
+16      11      22      21      14       9<br>
+Compact      Large    Midsize      Small     Sporty        Van<br>
+0.17204301 0.11827957 0.23655914 0.22580645 0.15053763 0.09677419<br>
+</pre></p>
+</li>
+<li>
+<p>Practice 2:</p>
+</li>
+</ul>
+<pre>
+USA non-USA
+48      45
+
+USA  non-USA
+0.516129 0.483871
+</pre>
+<ul>
+<li>How to make a contingency table</li>
+</ul>
+<pre>
+USA non-USA
+Compact   7       9
+Large    11       0
+Midsize  10      12
+Small     7      14
+Sporty    8       6
+Van       5       4
+</pre>
+</blockquote>
+<h3 id="After-probability"><a target="_blank" rel="noopener" href="https://www.datacamp.com/community/tutorials/contingency-tables-r">After probability</a></h3>
+<ul>
+<li>Fisher’s exact test</li>
+</ul>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="R"><figure class="iseeu highlight /r"><table><tr><td class="code"><pre><code class="hljs r">fisher.test(Cars93$Type, Cars93$Origin)<br></code></pre></td></tr></table></figure></div>
+<pre>
+Fisher's Exact Test for Count Data
+#
+data:  Cars93$Type and Cars93$Origin
+p-value = 0.007248
+alternative hypothesis: two.sided
+</pre>
+<ul>
+<li>G-test</li>
+</ul>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="R"><figure class="iseeu highlight /r"><table><tr><td class="code"><pre><code class="hljs r">library(DescTools)<br>GTest(Cars93$Type, Cars93$Origin)<br></code></pre></td></tr></table></figure></div>
+<pre>
+Log likelihood ratio (G-test) test of independence without correction
+#
+data:  Cars93$Type and Cars93$Origin
+G = 18.362, X-squared df = 5, p-value = 0.002526
+</pre>
+<ul>
+<li>Yates’ correction</li>
+</ul>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="R"><figure class="iseeu highlight /r"><table><tr><td class="code"><pre><code class="hljs r">chisq.test(table(Cars93$Man.trans.avail, Cars93$Origin))<br></code></pre></td></tr></table></figure></div>
+<pre>
+Pearson's Chi-squared test with Yates' continuity correction
+#
+data:  table(Cars93$Man.trans.avail, Cars93$Origin)
+X-squared = 15.397, df = 1, p-value = 8.712e-05
+</pre>
+<ul>
+<li>3 (or more) dimensional table</li>
+</ul>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="R"><figure class="iseeu highlight /r"><table><tr><td class="code"><pre><code class="hljs r">table(Cars93$Man.trans.avail, Cars93$Origin, Cars93$Type)<br></code></pre></td></tr></table></figure></div>
+<h2 id="L12-Survival-Curve">L12: Survival Curve</h2>
+<h3 id="Targets-for-Survival-Curve">Targets for Survival Curve</h3>
+<ul>
+<li>Plot Kaplan-Meier Curve</li>
+<li>P-value: Log-rank (Mantel-Cox) test and Gehan-Breslow-Wilcoxon test (which has more weight to early events)</li>
+<li>Hazard Ratio: Mental-Haenszel and logrank</li>
+</ul>
+<h3 id="Kaplan-Meier-Curve">Kaplan-Meier Curve</h3>
+<ul>
+<li>Plots percent survival of each cohort relative to non-censored totals.</li>
+<li>A tic mark indicates a censoring event.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"><img src="https://miro.medium.com/max/1400/1*tzKekvPamwawtm5GdGI88g.png" alt="Kaplan-Meier Curve"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><a target="_blank" rel="noopener" href="https://towardsdatascience.com/kaplan-meier-curves-c5768e349479">© Ruben Van Paemel; 2019</a></td>
+</tr>
+</tbody>
+</table>
+<p>Online Calculator: <a target="_blank" rel="noopener" href="http://www.evanmiller.org/ab-testing/survival-curves.html">evanmiller.org</a></p>
+<h3 id="R-in-action">R in action</h3>
+<p>Quick start with <a target="_blank" rel="noopener" href="https://cran.r-project.org/web/packages/ggfortify/vignettes/plot_surv.html">survival package</a><br>
+More detailed examples and codes: <a target="_blank" rel="noopener" href="https://bioconnector.github.io/workshops/r-survival.html">bioconnector</a><br>
+The most informative and detailed posts: <a target="_blank" rel="noopener" href="https://www.emilyzabor.com/tutorials/survival_analysis_in_r_tutorial.html">Emily C. Zabor</a></p>
+<p>Practive Data:</p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="R"><figure class="iseeu highlight /r"><table><tr><td class="code"><pre><code class="hljs r">library(survival)<br>?lung<br></code></pre></td></tr></table></figure></div>
+<pre>
+  inst:       Institution code
+  time:       Survival time in days
+  status:     censoring status 1=censored, 2=dead
+  age:        Age in years
+  sex:        Male=1 Female=2
+  ph.ecog:    ECOG performance score as rated by the physician.
+              0=asymptomatic, 1= symptomatic but completely ambulatory, 2= in bed
+              <50% of the day, 3= in bed > 50% of the day but not bedbound, 4 =
+              bedbound
+  ph.karno:   Karnofsky performance score (bad=0-good=100) rated by physician
+  pat.karno:  Karnofsky performance score as rated by patient
+  meal.cal:   Calories consumed at meals
+  wt.loss:    Weight loss in last six months
+</pre>
+<p>The data we need is in <code>time</code>, Survival time in days, and <code>status</code>, Censored or dead</p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="R"><figure class="iseeu highlight /r"><table><tr><td class="code"><pre><code class="hljs r">library(survival)<br>library(survminer)<br><br>sfit &lt;- survfit(Surv(time, status)~sex, data=lung)<br>ggsurvplot(sfit, conf.int=<span class="hljs-literal">TRUE</span>, pval=<span class="hljs-literal">TRUE</span>, risk.table=<span class="hljs-literal">TRUE</span>,<br>           legend.labs=<span class="hljs-built_in">c</span>(<span class="hljs-string">&quot;Male&quot;</span>, <span class="hljs-string">&quot;Female&quot;</span>), legend.title=<span class="hljs-string">&quot;Sex&quot;</span>,  <br>           palette=<span class="hljs-string">&quot;Set1&quot;</span>,<br>           title=<span class="hljs-string">&quot;Kaplan-Meier Curve for Lung Cancer Survival&quot;</span>,<br>           risk.table.height=<span class="hljs-number">.25</span>)<br>fit &lt;- coxph(Surv(time, status)~sex, data=lung)<br>fit<br></code></pre></td></tr></table></figure></div>
+<pre>
+Call:
+coxph(formula = Surv(time, status) ~ sex, data = lung)
+
+       coef exp(coef) se(coef)      z       p
+sex -0.5310    0.5880   0.1672 -3.176 0.00149
+
+Likelihood ratio test=10.63  on 1 df, p=0.001111
+n= 228, number of events= 165
+</pre>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"><img src="https://s1.ax1x.com/2022/04/01/qhPRr8.png" alt="Kaplan-Meier Curve"></th>
+</tr>
+</thead>
+<tbody></tbody>
+</table>
+<h2 id="L13-Power-and-Sample-Size">L13: Power and Sample Size</h2>
+<p>The function <code>power.t.test</code> from R has the same result from <a target="_blank" rel="noopener" href="http://www.cs.uiowa.edu/~rlenth/Power/">Java applets for power and sample size</a>, which is different from some others.</p>
+<blockquote>
+<p>Example: You have measured 2.3±5.0 (SD, n=26) and determined that p=0.027 for H<sub>o</sub>=0. What is the power of your experiment?</p>
+<ul>
+<li>Mean=2.3, H<sub>0</sub>= 0, as a result, delta = 2.3-0 =2.3.</li>
+<li>Because the null hypothesis is 0, we only need the lesser side. So, we should use one.sample t test.<br>
+In R, we can have: <code>power.t.test(n = 40, delta = 2.3, sd = 5, type=&quot;one.sample&quot;, alternative = &quot;two.sided&quot;)</code></li>
+</ul>
+<pre>
+One-sample t test power calculation
+
+        n = 40
+    delta = 2.3
+       sd = 5
+sig.level = 0.05
+    power = 0.8097611
+alternative = two.sided
+</pre>
+<p>We can tell that the power is 0.81, which means you got 80.98% of chance to have the significant result.</p>
+</blockquote>
+<blockquote>
+<p>With the same data, if we’d like to improve the changes to 95%, than, we can have: <code>power.t.test(power = .95, delta = 2.3, sd = 5, type=&quot;one.sample&quot;, alternativ = &quot;two.sided&quot;)</code></p>
+<pre>
+One-sample t test power calculation
+
+        n = 63.36733
+    delta = 2.3
+       sd = 5
+sig.level = 0.05
+    power = 0.95
+alternative = two.sided
+</pre>
+<p>Now, we can know that we need at least 64 tests to get a significant result with the chance of 95% in success.</p>
+</blockquote>
+<blockquote>
+<p>Example 1: In a preliminary experiment you measure 12±4 (SD). You want to estimate sample size required to detect a difference of ±0.5 (H<sub>o</sub> – mean) with a power of 90%. The confidence level you will use is 95% (α=0.05)</p>
+<pre>
+Two-sample t test power calculation
+
+        n = 1345.911
+    delta = 0.5
+       sd = 4
+sig.level = 0.05
+    power = 0.9
+alternative = two.sided
+</pre>
+</blockquote>
+<blockquote>
+<p>Example 2: If around 10% of the population suffers from migraine headaches. How many people would you have to enroll in an experimental clinical study to determine if prophylactic daily aspirin use will reduce the number of people who have migraines to 8%. Your desired confidence level is 95% and the desired power is 50%.<br>
+<code>power.prop.test(p1=.1, p2 = .08, power = .5)</code></p>
+<pre>
+Two-sample comparison of proportions power calculation
+
+        n = 1573.077
+       p1 = 0.1
+       p2 = 0.08
+sig.level = 0.05
+    power = 0.5
+alternative = two.sided
+</pre>
+<p>We know that with the power of 0.5, we need to at least have 1574 sample for each. So, for a test with control, we’d like to have at least <code>1574*2=3148</code> for the experiment.</p>
+</blockquote>
+</div><div class="article-licensing box"><div class="licensing-title"><p>BioStatistics with R/Python: Block 2</p><p><a href="https://karobben.github.io/2022/03/30/LearnNotes/tulane-biostat-2/">https://karobben.github.io/2022/03/30/LearnNotes/tulane-biostat-2/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>Author</h6><p>Karobben</p></div></div><div class="level-item is-narrow"><div><h6>Posted on</h6><p>2022-03-30</p></div></div><div class="level-item is-narrow"><div><h6>Updated on</h6><p>2022-09-17</p></div></div><div class="level-item is-narrow"><div><h6>Licensed under</h6><p><a class="icon" rel="noopener" target="_blank" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a><a class="icon" rel="noopener" target="_blank" title="Attribution" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a><a class="icon" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/Classes/">Classes</a><a class="link-muted mr-2" rel="tag" href="/tags/Tulane-Classes/">Tulane Classes</a><a class="link-muted mr-2" rel="tag" href="/tags/BioStatistics/">BioStatistics</a></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/css/share.min.css"><div class="social-share"></div><script src="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/js/social-share.min.js"></script></article></div><div class="card"><div class="card-content"><h3 class="menu-label has-text-centered">Like this article? Support the author with</h3><div class="buttons is-centered"><a class="button donate" data-type="alipay"><span class="icon is-small"><i class="fab fa-alipay"></i></span><span>Alipay</span><span class="qrcode"><img src="/alipay.jpg" alt="Alipay"></span></a><a class="button donate" data-type="wechat"><span class="icon is-small"><i class="fab fa-weixin"></i></span><span>Wechat</span><span class="qrcode"><img src="/wepay.png" alt="Wechat"></span></a></div></div></div><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2022/03/31/Python/py-gam/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">Python GAM to fit</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2022/03/24/LearnNotes/tulane-bioinf-18/"><span class="level-item">Deep Learning (Classes notes)</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><div class="card"><div class="card-content"><h3 class="title is-5">Comments</h3></div><span styl="max-width: 95%"><script src="https://giscus.app/client.js" data-repo="karobben/utterances" data-repo-id="MDEwOlJlcG9zaXRvcnkyNzUwNjUwODg=" data-category="Announcements" data-category-id="DIC_kwDOEGUpAM4B-wRL" data-mapping="pathname" data-reactions-enabled="1" data-emit-metadata="0" data-theme="light" crossorigin="anonymous" async></script></span></div></div><div class="column column-left is-4-tablet is-4-desktop is-3-widescreen  order-1"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar is-rounded" src="https://s1.ax1x.com/2022/09/27/xZnWOU.jpg" alt="Karobben"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">Karobben</p><p class="is-size-6 is-block">Enjoy!</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>China</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">Posts</p><a href="/archives"><p class="title">460</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">Categories</p><a href="/categories"><p class="title">136</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">Tags</p><a href="/tags"><p class="title">201</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://github.com/karobben" target="_blank" rel="noopener">Follow</a></div><div class="level is-mobile is-multiline"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Github" href="https://github.com/karobben"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Bilibili" href="https://space.bilibili.com/393056819"><i class="fas fa-video"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="RSS" href="/atom.xml"><i class="fas fa-rss"></i></a></div></div><div class="card"><script type="text/javascript" src="//rf.revolvermaps.com/0/0/7.js?i=5obi4wthjqz&amp;m=0c&amp;c=f03b11&amp;cr1=ffffff&amp;sx=0&amp;cw=ffffff&amp;cb=3472cd" async="async"></script></div></div><div class="card widget is-sticky" id="toc" data-type="toc"><div class="card-content"><div class="menu"><h3 class="menu-label">Catalogue</h3><ul class="menu-list"><li><a class="level is-mobile" href="#Biomedical-Statistics-and-Data-Analysis-Block-2"><span class="level-left"><span class="level-item">1</span><span class="level-item">Biomedical Statistics and Data Analysis: Block 2</span></span></a></li><li><a class="level is-mobile" href="#L8-Counted-Variables-and-Their-Asymmetric-Distributions"><span class="level-left"><span class="level-item">2</span><span class="level-item">L8: Counted Variables and Their Asymmetric Distributions</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#What-is-Sample-count-Count-Variable"><span class="level-left"><span class="level-item">2.1</span><span class="level-item">What is Sample count? Count Variable</span></span></a></li><li><a class="level is-mobile" href="#Examples"><span class="level-left"><span class="level-item">2.2</span><span class="level-item">Examples</span></span></a></li><li><a class="level is-mobile" href="#Question-Are-you-categorizing-or-just-counting-events-or-categorizing"><span class="level-left"><span class="level-item">2.3</span><span class="level-item">Question: Are you categorizing or just counting events (or categorizing)?</span></span></a></li><li><a class="level is-mobile" href="#Binomial-DIstribution"><span class="level-left"><span class="level-item">2.4</span><span class="level-item">Binomial DIstribution</span></span></a></li><li><a class="level is-mobile" href="#Data-that-would-use-a-Binomial-Distribution"><span class="level-left"><span class="level-item">2.5</span><span class="level-item">Data that would use a Binomial Distribution</span></span></a></li><li><a class="level is-mobile" href="#The-Poisson-Distribution"><span class="level-left"><span class="level-item">2.6</span><span class="level-item">The Poisson Distribution</span></span></a></li><li><a class="level is-mobile" href="#Binomial-versus-Poisson-Statistics-Which-do-we-use"><span class="level-left"><span class="level-item">2.7</span><span class="level-item">Binomial versus Poisson Statistics: Which do we use?</span></span></a></li></ul></li><li><a class="level is-mobile" href="#L9-Confidence-intervals-for-proportions-and-counts"><span class="level-left"><span class="level-item">3</span><span class="level-item">L9: Confidence intervals for proportions and counts</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#Special-case-for-a-proportion"><span class="level-left"><span class="level-item">3.1</span><span class="level-item">Special case for a proportion:</span></span></a></li><li><a class="level is-mobile" href="#Confidence-Interval-of-a-Poisson-distributed-counted-value"><span class="level-left"><span class="level-item">3.2</span><span class="level-item">Confidence Interval of a Poisson distributed (counted) value</span></span></a></li><li><a class="level is-mobile" href="#More-examples-for-understanding"><span class="level-left"><span class="level-item">3.3</span><span class="level-item">More examples for understanding</span></span></a></li></ul></li><li><a class="level is-mobile" href="#L10-Contingency-Tables"><span class="level-left"><span class="level-item">4</span><span class="level-item">L10: Contingency Tables</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#Exp1-How-you-compare-multiple-proportions-with-one-another"><span class="level-left"><span class="level-item">4.1</span><span class="level-item">Exp1: How you compare multiple proportions with one another?</span></span></a></li><li><a class="level is-mobile" href="#Exp-2-An-example-of-a-clinical-trial-with-a-single-outcome"><span class="level-left"><span class="level-item">4.2</span><span class="level-item">Exp 2: An example of a clinical trial with a single outcome</span></span></a></li><li><a class="level is-mobile" href="#Exp-3"><span class="level-left"><span class="level-item">4.3</span><span class="level-item">Exp 3</span></span></a></li><li><a class="level is-mobile" href="#Contingency-table-in-R"><span class="level-left"><span class="level-item">4.4</span><span class="level-item">Contingency table in R</span></span></a></li><li><a class="level is-mobile" href="#After-probability"><span class="level-left"><span class="level-item">4.5</span><span class="level-item">After probability</span></span></a></li></ul></li><li><a class="level is-mobile" href="#L12-Survival-Curve"><span class="level-left"><span class="level-item">5</span><span class="level-item">L12: Survival Curve</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#Targets-for-Survival-Curve"><span class="level-left"><span class="level-item">5.1</span><span class="level-item">Targets for Survival Curve</span></span></a></li><li><a class="level is-mobile" href="#Kaplan-Meier-Curve"><span class="level-left"><span class="level-item">5.2</span><span class="level-item">Kaplan-Meier Curve</span></span></a></li><li><a class="level is-mobile" href="#R-in-action"><span class="level-left"><span class="level-item">5.3</span><span class="level-item">R in action</span></span></a></li></ul></li><li><a class="level is-mobile" href="#L13-Power-and-Sample-Size"><span class="level-left"><span class="level-item">6</span><span class="level-item">L13: Power and Sample Size</span></span></a></li></ul></div></div><style>#toc .menu-list > li > a.is-active + .menu-list { display: block; }#toc .menu-list > li > a + .menu-list { display: none; }</style><script src="/js/toc.js" defer></script></div><div class="card widget" data-type="tags"><div class="card-content"><div class="menu"><h3 class="menu-label">Tags</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/16s/"><span class="tag">16s</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/3D/"><span class="tag">3D</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/API/"><span class="tag">API</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Advanced-Mathematics/"><span class="tag">Advanced Mathematics</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Align/"><span class="tag">Align</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Android/"><span class="tag">Android</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Annotation/"><span class="tag">Annotation</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Anti-nutrition-Factor/"><span class="tag">Anti-nutrition Factor</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Atom/"><span class="tag">Atom</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Audio/"><span class="tag">Audio</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/BDT/"><span class="tag">BDT</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/BSFL/"><span class="tag">BSFL</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Behavior/"><span class="tag">Behavior</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/BiliBili/"><span class="tag">BiliBili</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/BioStatistics/"><span class="tag">BioStatistics</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Biochemistry/"><span class="tag">Biochemistry</span><span class="tag">42</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Bioinfor/"><span class="tag">Bioinfor</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Bioinformatic/"><span class="tag">Bioinformatic</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Bioinformatics/"><span class="tag">Bioinformatics</span><span class="tag">59</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Biology/"><span class="tag">Biology</span><span class="tag">33</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Biopython/"><span class="tag">Biopython</span><span class="tag">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Blog/"><span class="tag">Blog</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Books/"><span class="tag">Books</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Cell/"><span class="tag">Cell</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Cell-Biology/"><span class="tag">Cell Biology</span><span class="tag">17</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Cells/"><span class="tag">Cells</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Chip-Seq/"><span class="tag">Chip-Seq</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Classes/"><span class="tag">Classes</span><span class="tag">66</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Cluster/"><span class="tag">Cluster</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Conky/"><span class="tag">Conky</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Correlation/"><span class="tag">Correlation</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Crawler/"><span class="tag">Crawler</span><span class="tag">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/DNA/"><span class="tag">DNA</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Data/"><span class="tag">Data</span><span class="tag">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Data-Science/"><span class="tag">Data Science</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Database/"><span class="tag">Database</span><span class="tag">7</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Decode/"><span class="tag">Decode</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Density-Plot/"><span class="tag">Density Plot</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Desktop/"><span class="tag">Desktop</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Diabetics/"><span class="tag">Diabetics</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Diary/"><span class="tag">Diary</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Diet-Switch/"><span class="tag">Diet Switch</span><span class="tag">8</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Digestion-System/"><span class="tag">Digestion System</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Digestive-Enzymes/"><span class="tag">Digestive Enzymes</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Disk/"><span class="tag">Disk</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Distribution/"><span class="tag">Distribution</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Dme/"><span class="tag">Dme</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Drosophila/"><span class="tag">Drosophila</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/English/"><span class="tag">English</span><span class="tag">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Evolution/"><span class="tag">Evolution</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/FTP/"><span class="tag">FTP</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Fasta/"><span class="tag">Fasta</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Fastq-QC/"><span class="tag">Fastq QC</span><span class="tag">6</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Fish/"><span class="tag">Fish</span><span class="tag">18</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Flies/"><span class="tag">Flies</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Fly/"><span class="tag">Fly</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/GATK/"><span class="tag">GATK</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/GO/"><span class="tag">GO</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/GSEA/"><span class="tag">GSEA</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/GUI/"><span class="tag">GUI</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Genome/"><span class="tag">Genome</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/GitHub/"><span class="tag">GitHub</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/GitPage/"><span class="tag">GitPage</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Graphviz/"><span class="tag">Graphviz</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/HTML/"><span class="tag">HTML</span><span class="tag">13</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Hexo/"><span class="tag">Hexo</span><span class="tag">19</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Hexo-Plugin/"><span class="tag">Hexo Plugin</span><span class="tag">6</span></a></div><div class="control"><a class="tags has-addons" href="/tags/IDE/"><span class="tag">IDE</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Image/"><span class="tag">Image</span><span class="tag">6</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Immune/"><span class="tag">Immune</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Interoperable-Plot/"><span class="tag">Interoperable Plot</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Intestine/"><span class="tag">Intestine</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Japanese/"><span class="tag">Japanese</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Jupyter-Notebook/"><span class="tag">Jupyter Notebook</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/KEGG/"><span class="tag">KEGG</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/KEGG-pathway/"><span class="tag">KEGG pathway</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Kivy/"><span class="tag">Kivy</span><span class="tag">31</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Latex/"><span class="tag">Latex</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Links/"><span class="tag">Links</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Linux/"><span class="tag">Linux</span><span class="tag">38</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Liver/"><span class="tag">Liver</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Logistic/"><span class="tag">Logistic</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Machine-Learning/"><span class="tag">Machine Learning</span><span class="tag">10</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Manjaro/"><span class="tag">Manjaro</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/MarkDown/"><span class="tag">MarkDown</span><span class="tag">7</span></a></div><div class="control"><a class="tags has-addons" href="/tags/MateGenome/"><span class="tag">MateGenome</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Math/"><span class="tag">Math</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Matplotlib/"><span class="tag">Matplotlib</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Matrix/"><span class="tag">Matrix</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Metabolism/"><span class="tag">Metabolism</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Mice/"><span class="tag">Mice</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Mind/"><span class="tag">Mind</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Mind-Plot/"><span class="tag">Mind Plot</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Multimedia/"><span class="tag">Multimedia</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Mysql/"><span class="tag">Mysql</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Nature-Nature/"><span class="tag">Nature&amp;Nature</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Neuron/"><span class="tag">Neuron</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Notes/"><span class="tag">Notes</span><span class="tag">8</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Nutrition-matrix/"><span class="tag">Nutrition matrix</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Odds-Ratio/"><span class="tag">Odds Ratio</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/OpenCV/"><span class="tag">OpenCV</span><span class="tag">16</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Opencv/"><span class="tag">Opencv</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Others/"><span class="tag">Others</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/PCA/"><span class="tag">PCA</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/PDF/"><span class="tag">PDF</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Paper/"><span class="tag">Paper</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Papers/"><span class="tag">Papers</span><span class="tag">22</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Physics/"><span class="tag">Physics</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Pillow/"><span class="tag">Pillow</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Plot/"><span class="tag">Plot</span><span class="tag">58</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Proteomic/"><span class="tag">Proteomic</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Protocol/"><span class="tag">Protocol</span><span class="tag">8</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Pyhton/"><span class="tag">Pyhton</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Python/"><span class="tag">Python</span><span class="tag">121</span></a></div><div class="control"><a class="tags has-addons" href="/tags/QT/"><span class="tag">QT</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Quantum-Physics/"><span class="tag">Quantum Physics</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/R/"><span class="tag">R</span><span class="tag">84</span></a></div><div class="control"><a class="tags has-addons" href="/tags/R-packages/"><span class="tag">R packages</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/RNA-Seq/"><span class="tag">RNA-Seq</span><span class="tag">20</span></a></div><div class="control"><a class="tags has-addons" href="/tags/RNA-Seq-Protocol/"><span class="tag">RNA-Seq Protocol</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/RNA-seq/"><span class="tag">RNA-seq</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/RasperryPi/"><span class="tag">RasperryPi</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Regression/"><span class="tag">Regression</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Response-Surface-Methodology/"><span class="tag">Response Surface Methodology</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/SNP/"><span class="tag">SNP</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Sanger-Sequencing/"><span class="tag">Sanger Sequencing</span><span class="tag">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Scientific-American/"><span class="tag">Scientific American</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Script/"><span class="tag">Script</span><span class="tag">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Scripts/"><span class="tag">Scripts</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Seaborn/"><span class="tag">Seaborn</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Software/"><span class="tag">Software</span><span class="tag">46</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Soy-Protein/"><span class="tag">Soy Protein</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Statistic/"><span class="tag">Statistic</span><span class="tag">12</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Stem-Cell/"><span class="tag">Stem Cell</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Steroid-Hormones/"><span class="tag">Steroid Hormones</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Super-Conductor/"><span class="tag">Super Conductor</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Synthetic-Cell/"><span class="tag">Synthetic Cell</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/System/"><span class="tag">System</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/TCGA/"><span class="tag">TCGA</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/TUI/"><span class="tag">TUI</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/TUI-lib/"><span class="tag">TUI lib</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Ted/"><span class="tag">Ted</span><span class="tag">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Tensorflow/"><span class="tag">Tensorflow</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Termux/"><span class="tag">Termux</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Tools/"><span class="tag">Tools</span><span class="tag">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Transfer-Learning/"><span class="tag">Transfer Learning</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Translation/"><span class="tag">Translation</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Trinity/"><span class="tag">Trinity</span><span class="tag">6</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Tulane-Classes/"><span class="tag">Tulane Classes</span><span class="tag">39</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Tutorials/"><span class="tag">Tutorials</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Uniprot/"><span class="tag">Uniprot</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Urwid/"><span class="tag">Urwid</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Video/"><span class="tag">Video</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Vocabulary/"><span class="tag">Vocabulary</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/WGCNA/"><span class="tag">WGCNA</span><span class="tag">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Waque/"><span class="tag">Waque</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/WordCloud/"><span class="tag">WordCloud</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Writing/"><span class="tag">Writing</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/XGboost/"><span class="tag">XGboost</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Yuque/"><span class="tag">Yuque</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/abi/"><span class="tag">abi</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/api/"><span class="tag">api</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/apt/"><span class="tag">apt</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/awk/"><span class="tag">awk</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/bash/"><span class="tag">bash</span><span class="tag">13</span></a></div><div class="control"><a class="tags has-addons" href="/tags/blast/"><span class="tag">blast</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/bug/"><span class="tag">bug</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/busuanzi/"><span class="tag">busuanzi</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/dash/"><span class="tag">dash</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/dme/"><span class="tag">dme</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/email/"><span class="tag">email</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/fasta/"><span class="tag">fasta</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/flies/"><span class="tag">flies</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/flybase/"><span class="tag">flybase</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/ggkaboom/"><span class="tag">ggkaboom</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/ggplot/"><span class="tag">ggplot</span><span class="tag">41</span></a></div><div class="control"><a class="tags has-addons" href="/tags/ggplot-splitbar/"><span class="tag">ggplot_splitbar</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/grep/"><span class="tag">grep</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/heatmap/"><span class="tag">heatmap</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/image/"><span class="tag">image</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/learn/"><span class="tag">learn</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/live2d/"><span class="tag">live2d</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/map/"><span class="tag">map</span><span class="tag">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/math/"><span class="tag">math</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/matplotlib/"><span class="tag">matplotlib</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/miRNA-Seq/"><span class="tag">miRNA-Seq</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/more/"><span class="tag">more</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/mount/"><span class="tag">mount</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/nCov/"><span class="tag">nCov</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/orc/"><span class="tag">orc</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/others/"><span class="tag">others</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/pip/"><span class="tag">pip</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/python/"><span class="tag">python</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/scRNA-Seq/"><span class="tag">scRNA-Seq</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/sed/"><span class="tag">sed</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/slurm/"><span class="tag">slurm</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/tar/"><span class="tag">tar</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/top/"><span class="tag">top</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/urwid/"><span class="tag">urwid</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/vscode/"><span class="tag">vscode</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%99%BE%E5%BA%A6%E7%BB%9F%E8%AE%A1/"><span class="tag">百度统计</span><span class="tag">1</span></a></div></div></div></div></div><div class="card widget" data-type="subscribe-email"><div class="card-content"><div class="menu"><h3 class="menu-label">Subscribe for updates</h3><form action="https://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open(&#039;https://feedburner.google.com/fb/a/mailverify?uri=&#039;,&#039;popupwindow&#039;,&#039;scrollbars=yes,width=550,height=520&#039;);return true"><input type="hidden" value="" name="uri"><input type="hidden" name="loc" value="en_US"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button" type="submit" value="Subscribe"></div></div></form></div></div></div><div class="card widget" data-type="links"><div class="card-content"><div class="menu"><h3 class="menu-label">Links</h3><ul class="menu-list"><li><a class="level is-mobile" href="https://space.bilibili.com/393056819" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Bilibili</span></span><span class="level-right"><span class="level-item tag">space.bilibili.com</span></span></a></li><li><a class="level is-mobile" href="https://www.jianshu.com/u/77fc519c6fa2" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">卖萌哥</span></span><span class="level-right"><span class="level-item tag">www.jianshu.com</span></span></a></li></ul></div></div></div><div class="column-right-shadow is-hidden-widescreen is-sticky"></div></div><div class="column column-right is-4-tablet is-4-desktop is-3-widescreen is-hidden-touch is-hidden-desktop-only order-3 is-sticky"><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">Recommends</h3><article class="media"><figure class="media-left"><a class="image" href="/2021/02/11/Blog/hexo_icarus/"><img src="https://camo.githubusercontent.com/fd83d8c9f8b8dbe85686812e2e186dceec728bbabad2d331aa44e0bfeee8628c/68747470733a2f2f70706f66666963652e6769746875622e696f2f6865786f2d7468656d652d6963617275732f67616c6c6572792f707265766965772e706e673f31" alt="Hexo theme: icarus| Highly personalize it"></a></figure><div class="media-content"><p class="date"><time dateTime="2021-02-11T06:00:00.000Z">2021-02-11</time></p><p class="title"><a href="/2021/02/11/Blog/hexo_icarus/">Hexo theme: icarus| Highly personalize it</a></p><p class="categories"><a href="/categories/others/">others</a> / <a href="/categories/others/Blog/">Blog</a> / <a href="/categories/others/Blog/Hexo/">Hexo</a></p></div></article><article class="media"><figure class="media-left"><a class="image" href="/2020/12/16/Python/kivy_Cross-platform-App/"><img src="https://kivy.org/logos/kivy-logo-black-64.png" alt="Kivy: hello world (Cross-platform GUI) for python"></a></figure><div class="media-content"><p class="date"><time dateTime="2020-12-16T06:00:00.000Z">2020-12-16</time></p><p class="title"><a href="/2020/12/16/Python/kivy_Cross-platform-App/">Kivy: hello world (Cross-platform GUI) for python</a></p><p class="categories"><a href="/categories/Python/">Python</a> / <a href="/categories/Python/Kivy/">Kivy</a></p></div></article><article class="media"><figure class="media-left"><a class="image" href="/2020/06/26/Blog/waque/"><img src="https://gw.alipayobjects.com/zos/rmsportal/xwaMkpycAdwCBrdgyWiT.png" alt="为什么我要使用瓦雀| markdown 语法大全"></a></figure><div class="media-content"><p class="date"><time dateTime="2020-06-26T05:00:00.000Z">2020-06-26</time></p><p class="title"><a href="/2020/06/26/Blog/waque/">为什么我要使用瓦雀| markdown 语法大全</a></p><p class="categories"><a href="/categories/others/">others</a> / <a href="/categories/others/Blog/">Blog</a> / <a href="/categories/others/Blog/Yuque/">Yuque</a></p></div></article><article class="media"><figure class="media-left"><a class="image" href="/2020/06/12/R/GGplot/"><img src="https://www.rstudio.com/wp-content/uploads/2014/04/ggplot2.png" alt="GGplot | A tutorials for beginner"></a></figure><div class="media-content"><p class="date"><time dateTime="2020-06-12T05:00:00.000Z">2020-06-12</time></p><p class="title"><a href="/2020/06/12/R/GGplot/">GGplot | A tutorials for beginner</a></p><p class="categories"><a href="/categories/R/">R</a> / <a href="/categories/R/Plot/">Plot</a> / <a href="/categories/R/Plot/GGPLOT/">GGPLOT</a></p></div></article><article class="media"><figure class="media-left"><a class="image" href="/2020/08/21/R/logistic_curve/"><img src="https://s1.ax1x.com/2022/10/21/x6dNZ9.png" alt="logistic regression in R"></a></figure><div class="media-content"><p class="date"><time dateTime="2020-08-21T05:00:00.000Z">2020-08-21</time></p><p class="title"><a href="/2020/08/21/R/logistic_curve/">logistic regression in R</a></p><p class="categories"><a href="/categories/R/">R</a> / <a href="/categories/R/Data/">Data</a> / <a href="/categories/R/Data/Statistic/">Statistic</a> / <a href="/categories/R/Data/Statistic/Regression/">Regression</a></p></div></article><article class="media"><figure class="media-left"><a class="image" href="/2020/06/29/Bioinfor/Competent_c/"><img src="https://tse3-mm.cn.bing.net/th/id/OIP.pg0lLEEeNeiUp31DPMKtRwHaCY" alt="Calcium Competent Cells"></a></figure><div class="media-content"><p class="date"><time dateTime="2020-06-29T05:00:00.000Z">2020-06-29</time></p><p class="title"><a href="/2020/06/29/Bioinfor/Competent_c/">Calcium Competent Cells</a></p><p class="categories"><a href="/categories/Biology/">Biology</a> / <a href="/categories/Biology/Wet-Protocol/">Wet Protocol</a></p></div></article><article class="media"><figure class="media-left"><a class="image" href="/2020/06/20/R/pheatmap/"><img src="https://s1.ax1x.com/2020/08/15/dFpkUH.png" alt="Pheatmap"></a></figure><div class="media-content"><p class="date"><time dateTime="2020-06-20T05:00:00.000Z">2020-06-20</time></p><p class="title"><a href="/2020/06/20/R/pheatmap/">Pheatmap</a></p><p class="categories"><a href="/categories/R/">R</a> / <a href="/categories/R/Plot/">Plot</a> / <a href="/categories/R/Plot/Heatmap/">Heatmap</a></p></div></article><article class="media"><figure class="media-left"><a class="image" href="/2021/02/21/LearnNotes/Paper_BSFlylavea_review/"><img src="https://cdn.pixabay.com/photo/2016/08/29/06/21/fly-1627592_960_720.jpg" alt="Diet switch| Black soldier fly larvae (BSFL) meal"></a></figure><div class="media-content"><p class="date"><time dateTime="2021-02-21T06:00:00.000Z">2021-02-21</time></p><p class="title"><a href="/2021/02/21/LearnNotes/Paper_BSFlylavea_review/">Diet switch| Black soldier fly larvae (BSFL) meal</a></p><p class="categories"><a href="/categories/Notes/">Notes</a> / <a href="/categories/Notes/Paper/">Paper</a> / <a href="/categories/Notes/Paper/Biology/">Biology</a></p></div></article></div></div><div class="card widget" data-type="categories"><div class="card-content"><div class="menu"><h3 class="menu-label">Categories</h3><ul class="menu-list"><li><a class="level is-mobile" href="/categories/Bioinfor/"><span class="level-start"><span class="level-item">Bioinfor</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/Biology/"><span class="level-start"><span class="level-item">Biology</span></span><span class="level-end"><span class="level-item tag">55</span></span></a><ul><li><a class="level is-mobile" href="/categories/Biology/Bioinformatics/"><span class="level-start"><span class="level-item">Bioinformatics</span></span><span class="level-end"><span class="level-item tag">50</span></span></a><ul><li><a class="level is-mobile" href="/categories/Biology/Bioinformatics/Chip-Seq/"><span class="level-start"><span class="level-item">Chip-Seq</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/Biology/Bioinformatics/Database/"><span class="level-start"><span class="level-item">Database</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile" href="/categories/Biology/Bioinformatics/Proteomic/"><span class="level-start"><span class="level-item">Proteomic</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/Biology/Bioinformatics/Protocol/"><span class="level-start"><span class="level-item">Protocol</span></span><span class="level-end"><span class="level-item tag">18</span></span></a><ul><li><a class="level is-mobile" href="/categories/Biology/Bioinformatics/Protocol/Align/"><span class="level-start"><span class="level-item">Align</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/Biology/Bioinformatics/Protocol/Alternative-Splicing/"><span class="level-start"><span class="level-item">Alternative Splicing</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/Biology/Bioinformatics/Protocol/Annotation/"><span class="level-start"><span class="level-item">Annotation</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/Biology/Bioinformatics/Protocol/GO/"><span class="level-start"><span class="level-item">GO</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/Biology/Bioinformatics/Protocol/Genome/"><span class="level-start"><span class="level-item">Genome</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/Biology/Bioinformatics/Protocol/RNA-Seq/"><span class="level-start"><span class="level-item">RNA-Seq</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile" href="/categories/Biology/Bioinformatics/Protocol/SNP/"><span class="level-start"><span class="level-item">SNP</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile" href="/categories/Biology/Bioinformatics/Protocol/miRNA/"><span class="level-start"><span class="level-item">miRNA</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/Biology/Bioinformatics/Software/"><span class="level-start"><span class="level-item">Software</span></span><span class="level-end"><span class="level-item tag">21</span></span></a><ul><li><a class="level is-mobile" href="/categories/Biology/Bioinformatics/Software/Align/"><span class="level-start"><span class="level-item">Align</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/Biology/Bioinformatics/Software/Bioconda/"><span class="level-start"><span class="level-item">Bioconda</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/Biology/Bioinformatics/Software/De-nove/"><span class="level-start"><span class="level-item">De nove</span></span><span class="level-end"><span class="level-item tag">7</span></span></a></li><li><a class="level is-mobile" href="/categories/Biology/Bioinformatics/Software/Dna-Methylation/"><span class="level-start"><span class="level-item">Dna Methylation</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/Biology/Bioinformatics/Software/Download/"><span class="level-start"><span class="level-item">Download</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/Biology/Bioinformatics/Software/Fastq-QC/"><span class="level-start"><span class="level-item">Fastq QC</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile" href="/categories/Biology/Bioinformatics/Software/List/"><span class="level-start"><span class="level-item">List</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/Biology/Bioinformatics/Software/Sam/"><span class="level-start"><span class="level-item">Sam</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/Biology/Bioinformatics/Software/Trans/"><span class="level-start"><span class="level-item">Trans</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/Biology/Bioinformatics/Software/Visualization/"><span class="level-start"><span class="level-item">Visualization</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/Biology/Bioinformatics/Software/more/"><span class="level-start"><span class="level-item">more</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/Biology/Bioinformatics/others/"><span class="level-start"><span class="level-item">others</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/Biology/Database/"><span class="level-start"><span class="level-item">Database</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile" href="/categories/Biology/Wet-Protocol/"><span class="level-start"><span class="level-item">Wet Protocol</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/Linux/"><span class="level-start"><span class="level-item">Linux</span></span><span class="level-end"><span class="level-item tag">36</span></span></a><ul><li><a class="level is-mobile" href="/categories/Linux/Bash/"><span class="level-start"><span class="level-item">Bash</span></span><span class="level-end"><span class="level-item tag">7</span></span></a><ul><li><a class="level is-mobile" href="/categories/Linux/Bash/Beginner/"><span class="level-start"><span class="level-item">Beginner</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/Linux/Bash/More/"><span class="level-start"><span class="level-item">More</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile" href="/categories/Linux/Bash/awk-grep-sed/"><span class="level-start"><span class="level-item">awk/grep/sed</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/Linux/Data/"><span class="level-start"><span class="level-item">Data</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/Linux/GitHub/"><span class="level-start"><span class="level-item">GitHub</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/Linux/Monitor-top-Conky/"><span class="level-start"><span class="level-item">Monitor: top\Conky</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile" href="/categories/Linux/RasperryPi/"><span class="level-start"><span class="level-item">RasperryPi</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/Linux/Software/"><span class="level-start"><span class="level-item">Software</span></span><span class="level-end"><span class="level-item tag">10</span></span></a></li><li><a class="level is-mobile" href="/categories/Linux/System/"><span class="level-start"><span class="level-item">System</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile" href="/categories/Linux/Termux/"><span class="level-start"><span class="level-item">Termux</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/Linux/others/"><span class="level-start"><span class="level-item">others</span></span><span class="level-end"><span class="level-item tag">5</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/Notes/"><span class="level-start"><span class="level-item">Notes</span></span><span class="level-end"><span class="level-item tag">124</span></span></a><ul><li><a class="level is-mobile" href="/categories/Notes/Biology/"><span class="level-start"><span class="level-item">Biology</span></span><span class="level-end"><span class="level-item tag">11</span></span></a><ul><li><a class="level is-mobile" href="/categories/Notes/Biology/Bioinformatic/"><span class="level-start"><span class="level-item">Bioinformatic</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/Notes/Biology/Book/"><span class="level-start"><span class="level-item">Book</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/Notes/Biology/Dme/"><span class="level-start"><span class="level-item">Dme</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/Notes/Biology/Genetics/"><span class="level-start"><span class="level-item">Genetics</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/Notes/Biology/Paper/"><span class="level-start"><span class="level-item">Paper</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/Notes/Biology/Virus/"><span class="level-start"><span class="level-item">Virus</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/Notes/Class/"><span class="level-start"><span class="level-item">Class</span></span><span class="level-end"><span class="level-item tag">67</span></span></a><ul><li><a class="level is-mobile" href="/categories/Notes/Class/Biochemistry/"><span class="level-start"><span class="level-item">Biochemistry</span></span><span class="level-end"><span class="level-item tag">25</span></span></a></li><li><a class="level is-mobile" href="/categories/Notes/Class/Cell-Biology/"><span class="level-start"><span class="level-item">Cell Biology</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/Notes/Class/Math/"><span class="level-start"><span class="level-item">Math</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/Notes/Class/Python/"><span class="level-start"><span class="level-item">Python</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/Notes/Class/Tulane/"><span class="level-start"><span class="level-item">Tulane</span></span><span class="level-end"><span class="level-item tag">39</span></span></a><ul><li><a class="level is-mobile" href="/categories/Notes/Class/Tulane/BioStatistics/"><span class="level-start"><span class="level-item">BioStatistics</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile" href="/categories/Notes/Class/Tulane/Biochemistry/"><span class="level-start"><span class="level-item">Biochemistry</span></span><span class="level-end"><span class="level-item tag">17</span></span></a></li><li><a class="level is-mobile" href="/categories/Notes/Class/Tulane/Bioinformatics/"><span class="level-start"><span class="level-item">Bioinformatics</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/Notes/Class/Tulane/Cell-Biology/"><span class="level-start"><span class="level-item">Cell Biology</span></span><span class="level-end"><span class="level-item tag">16</span></span></a></li></ul></li></ul></li><li><a class="level is-mobile" href="/categories/Notes/English/"><span class="level-start"><span class="level-item">English</span></span><span class="level-end"><span class="level-item tag">5</span></span></a></li><li><a class="level is-mobile" href="/categories/Notes/Japanese/"><span class="level-start"><span class="level-item">Japanese</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/Notes/Paper/"><span class="level-start"><span class="level-item">Paper</span></span><span class="level-end"><span class="level-item tag">22</span></span></a><ul><li><a class="level is-mobile" href="/categories/Notes/Paper/Biology/"><span class="level-start"><span class="level-item">Biology</span></span><span class="level-end"><span class="level-item tag">22</span></span></a><ul><li><a class="level is-mobile" href="/categories/Notes/Paper/Biology/Dme/"><span class="level-start"><span class="level-item">Dme</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/Notes/Paper/Biology/Reading-Notes/"><span class="level-start"><span class="level-item">Reading Notes</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li></ul></li><li><a class="level is-mobile" href="/categories/Notes/Statistic/"><span class="level-start"><span class="level-item">Statistic</span></span><span class="level-end"><span class="level-item tag">8</span></span></a><ul><li><a class="level is-mobile" href="/categories/Notes/Statistic/Data-Scientists/"><span class="level-start"><span class="level-item">Data Scientists</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/Notes/Statistic/Distribution/"><span class="level-start"><span class="level-item">Distribution</span></span><span class="level-end"><span class="level-item tag">5</span></span></a></li><li><a class="level is-mobile" href="/categories/Notes/Statistic/others/"><span class="level-start"><span class="level-item">others</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/Notes/Ted/"><span class="level-start"><span class="level-item">Ted</span></span><span class="level-end"><span class="level-item tag">5</span></span></a></li><li><a class="level is-mobile" href="/categories/Notes/flies/"><span class="level-start"><span class="level-item">flies</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/Notes/others/"><span class="level-start"><span class="level-item">others</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/Paper/"><span class="level-start"><span class="level-item">Paper</span></span><span class="level-end"><span class="level-item tag">2</span></span></a><ul><li><a class="level is-mobile" href="/categories/Paper/Biology/"><span class="level-start"><span class="level-item">Biology</span></span><span class="level-end"><span class="level-item tag">1</span></span></a><ul><li><a class="level is-mobile" href="/categories/Paper/Biology/Immune/"><span class="level-start"><span class="level-item">Immune</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/Paper/Diseases/"><span class="level-start"><span class="level-item">Diseases</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/Python/"><span class="level-start"><span class="level-item">Python</span></span><span class="level-end"><span class="level-item tag">115</span></span></a><ul><li><a class="level is-mobile" href="/categories/Python/API/"><span class="level-start"><span class="level-item">API</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile" href="/categories/Python/Beginner/"><span class="level-start"><span class="level-item">Beginner</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/Python/Bio/"><span class="level-start"><span class="level-item">Bio</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile" href="/categories/Python/Crawler/"><span class="level-start"><span class="level-item">Crawler</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile" href="/categories/Python/Data/"><span class="level-start"><span class="level-item">Data</span></span><span class="level-end"><span class="level-item tag">12</span></span></a><ul><li><a class="level is-mobile" href="/categories/Python/Data/Machine-Learning/"><span class="level-start"><span class="level-item">Machine Learning</span></span><span class="level-end"><span class="level-item tag">5</span></span></a></li><li><a class="level is-mobile" href="/categories/Python/Data/Matrix/"><span class="level-start"><span class="level-item">Matrix</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/Python/Data/String/"><span class="level-start"><span class="level-item">String</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/Python/GUI/"><span class="level-start"><span class="level-item">GUI</span></span><span class="level-end"><span class="level-item tag">1</span></span></a><ul><li><a class="level is-mobile" href="/categories/Python/GUI/others/"><span class="level-start"><span class="level-item">others</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/Python/Kivy/"><span class="level-start"><span class="level-item">Kivy</span></span><span class="level-end"><span class="level-item tag">30</span></span></a><ul><li><a class="level is-mobile" href="/categories/Python/Kivy/Toolbox/"><span class="level-start"><span class="level-item">Toolbox</span></span><span class="level-end"><span class="level-item tag">10</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/Python/OpenCV/"><span class="level-start"><span class="level-item">OpenCV</span></span><span class="level-end"><span class="level-item tag">16</span></span></a></li><li><a class="level is-mobile" href="/categories/Python/Plot/"><span class="level-start"><span class="level-item">Plot</span></span><span class="level-end"><span class="level-item tag">6</span></span></a></li><li><a class="level is-mobile" href="/categories/Python/Scripting/"><span class="level-start"><span class="level-item">Scripting</span></span><span class="level-end"><span class="level-item tag">13</span></span></a><ul><li><a class="level is-mobile" href="/categories/Python/Scripting/Module/"><span class="level-start"><span class="level-item">Module</span></span><span class="level-end"><span class="level-item tag">9</span></span></a></li><li><a class="level is-mobile" href="/categories/Python/Scripting/Practice/"><span class="level-start"><span class="level-item">Practice</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/Python/TUI/"><span class="level-start"><span class="level-item">TUI</span></span><span class="level-end"><span class="level-item tag">6</span></span></a><ul><li><a class="level is-mobile" href="/categories/Python/TUI/Urwid/"><span class="level-start"><span class="level-item">Urwid</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile" href="/categories/Python/TUI/others/"><span class="level-start"><span class="level-item">others</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/Python/others/"><span class="level-start"><span class="level-item">others</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/R/"><span class="level-start"><span class="level-item">R</span></span><span class="level-end"><span class="level-item tag">82</span></span></a><ul><li><a class="level is-mobile" href="/categories/R/Beginner/"><span class="level-start"><span class="level-item">Beginner</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/R/Bio/"><span class="level-start"><span class="level-item">Bio</span></span><span class="level-end"><span class="level-item tag">10</span></span></a><ul><li><a class="level is-mobile" href="/categories/R/Bio/Abi/"><span class="level-start"><span class="level-item">Abi</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/R/Bio/Anno-Enrich/"><span class="level-start"><span class="level-item">Anno/Enrich</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/R/Bio/DEG/"><span class="level-start"><span class="level-item">DEG</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/R/Bio/Fasta/"><span class="level-start"><span class="level-item">Fasta</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/R/Bio/WGCNA/"><span class="level-start"><span class="level-item">WGCNA</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/R/Data/"><span class="level-start"><span class="level-item">Data</span></span><span class="level-end"><span class="level-item tag">9</span></span></a><ul><li><a class="level is-mobile" href="/categories/R/Data/Data-Clean/"><span class="level-start"><span class="level-item">Data Clean</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/R/Data/Machine-Learning/"><span class="level-start"><span class="level-item">Machine Learning</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile" href="/categories/R/Data/Statistic/"><span class="level-start"><span class="level-item">Statistic</span></span><span class="level-end"><span class="level-item tag">3</span></span></a><ul><li><a class="level is-mobile" href="/categories/R/Data/Statistic/Regression/"><span class="level-start"><span class="level-item">Regression</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li></ul></li></ul></li><li><a class="level is-mobile" href="/categories/R/Image/"><span class="level-start"><span class="level-item">Image</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/R/Pack-your-pack/"><span class="level-start"><span class="level-item">Pack your pack</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/R/Plot/"><span class="level-start"><span class="level-item">Plot</span></span><span class="level-end"><span class="level-item tag">54</span></span></a><ul><li><a class="level is-mobile" href="/categories/R/Plot/Blog/"><span class="level-start"><span class="level-item">Blog</span></span><span class="level-end"><span class="level-item tag">1</span></span></a><ul><li><a class="level is-mobile" href="/categories/R/Plot/Blog/Algorithm/"><span class="level-start"><span class="level-item">Algorithm</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/R/Plot/GGPLOT/"><span class="level-start"><span class="level-item">GGPLOT</span></span><span class="level-end"><span class="level-item tag">37</span></span></a></li><li><a class="level is-mobile" href="/categories/R/Plot/Heatmap/"><span class="level-start"><span class="level-item">Heatmap</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/R/Plot/Maps/"><span class="level-start"><span class="level-item">Maps</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/R/Plot/VisuaProtocol/"><span class="level-start"><span class="level-item">VisuaProtocol</span></span><span class="level-end"><span class="level-item tag">5</span></span></a></li><li><a class="level is-mobile" href="/categories/R/Plot/others/"><span class="level-start"><span class="level-item">others</span></span><span class="level-end"><span class="level-item tag">9</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/R/libraries/"><span class="level-start"><span class="level-item">libraries</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/R/others/"><span class="level-start"><span class="level-item">others</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/others/"><span class="level-start"><span class="level-item">others</span></span><span class="level-end"><span class="level-item tag">31</span></span></a><ul><li><a class="level is-mobile" href="/categories/others/Android/"><span class="level-start"><span class="level-item">Android</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/others/Blog/"><span class="level-start"><span class="level-item">Blog</span></span><span class="level-end"><span class="level-item tag">25</span></span></a><ul><li><a class="level is-mobile" href="/categories/others/Blog/HTML/"><span class="level-start"><span class="level-item">HTML</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/others/Blog/Hexo/"><span class="level-start"><span class="level-item">Hexo</span></span><span class="level-end"><span class="level-item tag">17</span></span></a></li><li><a class="level is-mobile" href="/categories/others/Blog/Sharing/"><span class="level-start"><span class="level-item">Sharing</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/others/Blog/Yuque/"><span class="level-start"><span class="level-item">Yuque</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/others/Blog/more/"><span class="level-start"><span class="level-item">more</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/others/Diary/"><span class="level-start"><span class="level-item">Diary</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/others/Tools/"><span class="level-start"><span class="level-item">Tools</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/others/else/"><span class="level-start"><span class="level-item">else</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li></ul></li></ul></div></div></div></div></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="https://s1.ax1x.com/2022/09/27/xZnL6K.png" alt="Karobben" height="28"></a><script async src="/js/busuanzi.pure.js"></script><span id="busuanzi_container_site_pv">Visitied by <span id="busuanzi_value_site_pv"></span> times</span><p class="is-size-7"><span>&copy; 2023 Karobben</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/Karobben"><i class="fab fa-github"></i></a></p></div></div></div></div><script src="https://cdnjs.cloudflare.com/ajax/libs/viz.js/1.7.1/viz.js"></script></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("en");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="Back to top" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
+      window.cookieconsent.initialise({
+        type: "info",
+        theme: "edgeless",
+        static: false,
+        position: "bottom-left",
+        content: {
+          message: "This website uses cookies to improve your experience.",
+          dismiss: "Got it!",
+          allow: "Allow cookies",
+          deny: "Decline",
+          link: "Learn more",
+          policy: "Cookie Policy",
+          href: "https://www.cookiesandyou.com/",
+        },
+        palette: {
+          popup: {
+            background: "#edeff5",
+            text: "#838391"
+          },
+          button: {
+            background: "#4b81e8"
+          },
+        },
+      });
+    });</script><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><script type="text/x-mathjax-config">MathJax.Hub.Config({
+            'HTML-CSS': {
+                matchFontHeight: false
+            },
+            SVG: {
+                matchFontHeight: false
+            },
+            CommonHTML: {
+                matchFontHeight: false
+            },
+            tex2jax: {
+                inlineMath: [
+                    ['$','$'],
+                    ['\\(','\\)']
+                ]
+            }
+        });</script><script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/unpacked/MathJax.js?config=TeX-MML-AM_CHTML" defer></script><!--!--><!--!--><!--!--><script src="/js/main.js" defer></script><script src="https://unpkg.com/mermaid@8.8.4/dist/mermaid.min.js"></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="Type something..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"Type something...","untitled":"(Untitled)","posts":"Posts","pages":"Pages","categories":"Categories","tags":"Tags"});
+        });</script><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"left","width":150,"height":300},"mobile":{"show":true},"react":{"opacity":0.7}});</script></body></html>

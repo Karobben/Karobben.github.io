@@ -11,11 +11,6 @@ cover: 'https://s1.ax1x.com/2020/06/26/NskWaq.png'
 thumbnail: 'https://s1.ax1x.com/2020/06/26/NskWaq.png'
 priority: 10000
 ---
-<style>
-pre {
-  color: salmon;
-}
-</style>
 
 ## XGboost With R
 
@@ -42,6 +37,10 @@ install.packages("xgboost")
 Just as all Machine algorithms, we need the training data set and testing data set.
 In real world, `caret` can help to split the training and testing data set.
 ```r
+library("drat")
+library("xgboost")
+
+
 data(agaricus.train, package='xgboost')
 data(agaricus.test, package='xgboost')
 train <- agaricus.train
@@ -104,7 +103,7 @@ bstDMatrix <- xgboost(data = dtrain, max.depth = 2, eta = 1, nthread = 2, nround
 Now, Let's so the utmost goal,
 **Perform the prediction**
 ```r
-pred <- predict(bst, test$data)
+pred <- predict(bstDMatrix, test$data)
 ## Check The result
 print(data.frame(Pre=round(head(pred,10),4),Rel=head(test$label,10)))
 ```
@@ -133,3 +132,28 @@ xgb.DMatrix.save(dtrain, "dtrain.buffer")
 ## to load it in, simply call xgb.DMatrix
 dtrain2 <- xgb.DMatrix("dtrain.buffer")
 ```
+
+
+### feature importance
+
+```r
+xgb.importance(colnames(agaricus.train$data), model = bstDMatrix)
+```
+<pre>
+Feature       Gain     Cover Frequency
+1:               odor=none 0.67615469 0.4978746       0.4
+2:         stalk-root=club 0.17135376 0.1920543       0.2
+3:       stalk-root=rooted 0.12317237 0.1638750       0.2
+4: spore-print-color=green 0.02931918 0.1461960       0.2
+</pre>
+
+
+
+
+
+<style>
+pre {
+  background-color:#38393d;
+  color: #5fd381;
+}
+</style>

@@ -7,8 +7,8 @@ toc: true
 excerpt: "With the package sangerseqR, we can easily read and manipulate abi files"
 tags: [R, abi, Bioinformatics, Sanger Sequencing]
 category: [R, Bio, Abi]
-cover: 'https://www.r-project.org/Rlogo.png'
-thumbnail: 'https://www.r-project.org/Rlogo.png'
+cover: 'https://z3.ax1x.com/2021/04/28/gPVmTJ.png'
+thumbnail: 'https://z3.ax1x.com/2021/04/28/gPVmTJ.png'
 priority: 10000
 ---
 
@@ -85,19 +85,45 @@ ggplot() + geom_path(aes(x=c(1:length(Y1)), y= Y1),color='salmon')+
   geom_path(aes(x=c(1:length(Y4)), y= Y4),color='black')+
   theme_bw()
 
-ABI_plot <- function(A, Head=0, Tail=1000){
-  Y1 = tail(head(A@data$DATA.9, Tail),Tail-Head)
-  Y2 = tail(head(A@data$DATA.10, Tail),Tail-Head)
-  Y3 = tail(head(A@data$DATA.11, Tail),Tail-Head)
-  Y4 = tail(head(A@data$DATA.12, Tail),Tail-Head)
+ABI_plot <- function(A, Head=0, Tail=1000, alpha = 0.7, Type="Base"){
+  if(Type!="QS"){
+    if(Type=="Base"){
+      Y1 = tail(head(A@data$DATA.9, Tail),Tail-Head)
+      Y2 = tail(head(A@data$DATA.10, Tail),Tail-Head)
+      Y3 = tail(head(A@data$DATA.11, Tail),Tail-Head)
+      Y4 = tail(head(A@data$DATA.12, Tail),Tail-Head)
+    }
+    if(Type=="Raw"){
+      Y1 = tail(head(A@data$DATA.1, Tail),Tail-Head)
+      Y2 = tail(head(A@data$DATA.2, Tail),Tail-Head)
+      Y3 = tail(head(A@data$DATA.3, Tail),Tail-Head)
+      Y4 = tail(head(A@data$DATA.4, Tail),Tail-Head)
+    }
 
-  P <- ggplot() + geom_path(aes(x=c(1:length(Y1)), y= Y1),color='salmon')+
-    geom_path(aes(x=c(1:length(Y2)), y= Y2),color='green')+
-    geom_path(aes(x=c(1:length(Y3)), y= Y3),color='blue')+
-    geom_path(aes(x=c(1:length(Y4)), y= Y4),color='black')+
-    theme_bw()
+    P <- ggplot() +
+    geom_path(aes(x=c((Head+1):Tail), y= Y1, color = "G"), alpha = alpha)+
+    geom_path(aes(x=c((Head+1):Tail), y= Y2, color = "A"), alpha = alpha)+
+    geom_path(aes(x=c((Head+1):Tail), y= Y3, color = "T"), alpha = alpha)+
+    geom_path(aes(x=c((Head+1):Tail), y= Y4, color = "C"), alpha = alpha)+
+    theme_bw() +
+    scale_color_manual(name = "Group",
+    values = c( "A" = "green", "T" = "salmon", "G" = "black", "C" = "blue"),
+    labels = c("A", "T", "G","C"))
+  }
+  if(Type=="QS"){
+    Y1 = tail(head(A@data$PCON.1, Tail),Tail-Head)
+    Y2 = tail(head(strsplit(A@data$PBAS.1, "", perl = TRUE)[[1]], Tail),Tail-Head)
+
+    P <- ggplot() +
+      geom_bar(aes(x=c((Head+1):Tail), y= Y1, fill= Y1), stat = "identity", alpha =1)+
+      scale_fill_gradient(low = "white", high = "Tomato3", limits = c(0,62)) +
+      theme_bw()+
+      geom_text(aes(x=c((Head+1):Tail), y= -6, label = Y2))
+  }
   print(P)
 }
+
+
 
 # length per base
 BS = length(A@data$DATA.9) / length(A@data$PCON.2)
@@ -125,6 +151,27 @@ primarySeq(seq)
 ##读次峰
 secondarySeq(seq)
 ```
+
+## Intepretation
+
+```r
+install.packages("sangerseqR")
+library(sangerseqR)
+library(ggplot2)
+
+# read the abi file
+A <- read.abif("pcs2-myc-cenp-b_396-599_02-SP6.ab1")
+
+# plot the raw signal and the adjust signal for each time point for all 4 channels.
+ABI_plot(A, Tail = 14953, Type = "Raw", alpha = .4)
+ABI_plot(A, Tail = 14953, Type = "Base", alpha = .4)
+```
+
+
+|||
+|:-:|:-|
+|![](https://s1.ax1x.com/2022/04/26/LTOwdI.png)|Raw Signal|
+|![](https://s1.ax1x.com/2022/04/26/LTO0ot.png)|Corrected Base|
 
 ## Read by Python
 Working Manual: [Biopython](https://biopython.org/wiki/ABI_traces)

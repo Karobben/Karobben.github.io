@@ -24,6 +24,19 @@ then
 fi
 ```
 
+pairwise-compare with if loop
+
+[© Ole Tange; 2018](https://unix.stackexchange.com/questions/490649/pairwise-combinations-of-filenames)
+```bash
+for i in *.txt ; do
+  for j in *.txt ; do
+    if [ "$i" '<' "$j" ] ; then
+      echo "Pairs $i and $j"
+    fi
+  done
+done
+```
+
 ### 字符串判断
 
 ```bash

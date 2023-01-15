@@ -72,3 +72,23 @@ sudo sed -i 's/<dead_greek>/<Multi_key> <g> <g>/' /usr/share/X11/locale/en_US.UT
 
 sudo reboot
 ```  
+
+
+
+## Costumize Compose Key
+
+```bash
+sudo vim /usr/share/X11/locale/en_US.UTF-8/Compose
+```
+
+```
+<Multi_key> <bar> <asciicircum>                     : "↑"
+<Multi_key> <asciicircum> <bar>                     : "↑"
+<Multi_key> <bar> <v>                     : "↓"
+<Multi_key> <bar> <V>                     : "↓"
+<Multi_key> <v> <bar>                     : "↓"
+<Multi_key> <V> <bar>                     : "↓"
+<Multi_key> <asciitilde> <equal>          : "≈"
+```
+
+==Reboot/Relogo to reload==

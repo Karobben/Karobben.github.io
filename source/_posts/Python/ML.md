@@ -13,6 +13,82 @@ priority: 10000
 
 ## Python Machine Learning
 
+## Random Foret Built-in Feature Importance
+
+Row blog is from: [Piotr Płoński, 2020](https://mljar.com/blog/feature-importance-in-random-forest/)
+
+In this practice, we load dataset `boston` from `sklearn.datasets` first. All arugments (features) are stored in `X` and predected results stored in `y` which is a numpy array. This is the protocol:
+
+1. load dataset `boston` from `sklearn.datasets`.
+2. Split the dataset into tow parts: **Train set** and **Test set**.
+3. Run Models
+4. Show results
+
+
+```python
+import numpy as np
+import pandas as pd
+from sklearn.datasets import load_boston
+from sklearn.model_selection import train_test_split
+from sklearn.ensemble import RandomForestRegressor
+from sklearn.inspection import permutation_importance
+import shap
+from matplotlib import pyplot as plt
+
+plt.rcParams.update({'figure.figsize': (12.0, 8.0)})
+plt.rcParams.update({'font.size': 14})
+
+boston = load_boston()
+X = pd.DataFrame(boston.data, columns=boston.feature_names)
+y = boston.target
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.25, random_state=12)
+
+rf = RandomForestRegressor(n_estimators=100)
+rf.fit(X_train, y_train)
+
+sorted_idx = rf.feature_importances_.argsort()
+plt.barh(boston.feature_names[sorted_idx], rf.feature_importances_[sorted_idx])
+plt.xlabel("Random Forest Feature Importance")
+
+plt.show()
+```
+
+|![](https://mljar.com/blog/feature-importance-in-random-forest/random_forest_importance_sorted.png)|
+|:-:|
+|[© Piotr Płoński; 2020](https://mljar.com/blog/feature-importance-in-random-forest/)|
+
+
+
+### Permutation Based Feature Importance
+
+```python
+perm_importance = permutation_importance(rf, X_test, y_test)
+
+sorted_idx = perm_importance.importances_mean.argsort()
+plt.barh(boston.feature_names[sorted_idx], perm_importance.importances_mean[sorted_idx])
+plt.xlabel("Permutation Importance")
+```
+
+|![Permutation Based Feature Importance](https://mljar.com/blog/feature-importance-in-random-forest/random_forest_permutation_importance.png)|
+|:-:|
+|[© Piotr Płoński; 2020](https://mljar.com/blog/feature-importance-in-random-forest/)|
+
+### Feature Importance Computed with SHAP Values
+
+```python
+explainer = shap.TreeExplainer(rf)
+shap_values = explainer.shap_values(X_test)
+
+#shap.summary_plot(shap_values, X_test, plot_type="bar")
+shap.summary_plot(shap_values, X_test)
+```
+
+|![SHAP Values](https://mljar.com/blog/feature-importance-in-random-forest/random_forest_shap_summary.png)|
+|:-:|
+|[© Piotr Płoński; 2020](https://mljar.com/blog/feature-importance-in-random-forest/)|
+
+
+## xgboost
 [Codes](https://zhuanlan.zhihu.com/p/45689043)
 [PDF (English)](http://www.java1234.com/a/javabook/javabase/2018/0618/11382.html)
 

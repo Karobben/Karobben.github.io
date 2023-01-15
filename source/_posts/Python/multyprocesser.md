@@ -7,8 +7,8 @@ toc: true
 excerpt: "Buildozer install and android APK packaging"
 tags: [Python, Data Science, Machine Learning]
 category: [Python, Scripting, Module]
-cover: 'https://th.bing.com/th/id/R3d9a78ed6fe62aa5ee6e9fd61c092cca?rik=I7LX8qXniM2YLQ&riu=http%3a%2f%2fgetcodify.com%2fwp-content%2fuploads%2f2016%2f10%2fPython_logo.jpg&w=680'
-covercopy: '© getcodify.com'
+cover: 'https://files.realpython.com/media/An-Overview-of-Concurrency-in-Python_Watermarked.c54c399ccb32.jpg'
+covercopy: '<a href="https://realpython.com/python-concurrency/">© realpython.com</a>'
 thumbnail: 'https://tse4-mm.cn.bing.net/th/id/OIP.uTOM2B_iUkko5GTxOa3c-wAAAA'
 priority: 10000
 ---

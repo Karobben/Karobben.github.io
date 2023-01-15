@@ -1,7 +1,7 @@
 ---
 toc: true
 url: opencv_digital_signal_detect
-covercopy: © Karobben
+covercopy: <a href="https://www.pexels.com/@nicholas-garman-2492577/">© Nicholas Garman</a>
 priority: 10000
 date: 2021-05-23 17:50:55
 title: "OpenCV: Extract Informations From Video | python"
@@ -10,8 +10,8 @@ description: "This is a log of extract digital signals from a video by using Ope
 excerpt: "This is a log of extract digital signals from a video by using OpenCV (Python)"
 tags: [Python, OpenCV]
 category: [Python, OpenCV]
-cover: "https://z3.ax1x.com/2021/05/23/gXUM0H.png"
-thumbnail: "https://z3.ax1x.com/2021/05/23/gXUM0H.png"
+cover: "https://images.pexels.com/photos/4107723/pexels-photo-4107723.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+thumbnail: "https://images.pexels.com/photos/4107723/pexels-photo-4107723.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
 ---
 
 ## Quick View

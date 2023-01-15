@@ -15,6 +15,37 @@ priority: 10000
 ## Linux Commands
 
 
+## Public and private key
+
+- Create a public and private key pair.
+- Upload your public key on your remote Unix and Linux servers.
+- Use ssh to login to your remote servers without using a password.
+- Add your key at the end of `~/.ssh/authorized_keys` file
+
+```bash
+# generate the key for your local computer
+ssh-keygen -t rsa
+# upload your public key
+scp ~/.ssh/id_rsa.pub username@192.168.1.100:~
+
+# Now, login your remote server and add the public key at the end of authorize
+cat ~/id_rsa.pub >> ~/.ssh/authorized_keys
+
+# Now you shell be logging without any problems.
+```
+
+## location of bash script
+
+Source: [Hiks Gerganov](https://www.baeldung.com/linux/bash-get-location-within-script)
+
+```r
+# paht of the script file
+echo "${BASH_SOURCE}"
+
+# path of script's directory
+echo "$(dirname -- "$(readlink -f "${BASH_SOURCE}")")"
+```
+
 ## sort & uniq
 
 ```bash
@@ -50,6 +81,13 @@ echo -e "\033[45;37m 紫底白字 \033[0m"
 echo -e "\033[46;37m 天蓝底白字 \033[0m"
 echo -e "\033[47;30m 白底黑字 \033[0m"
 
+```
+
+## find
+
+```bash
+# find empty files and delete them
+find . -type f -empty -print -delete
 ```
 
 ## mail
@@ -198,4 +236,16 @@ lspci | grep -i 'eth'
 
 ```bash
 lspci| grep -i vga  # Check the GPU at prsent
+```
+
+
+## Mount remate file system
+
+```bash
+ssh-keygen -t rsa
+
+sudo apt install sshfs
+sudo mkdir /mnt/cypress
+
+sudo sshfs -o allow_other,IdentityFile=~/.ssh/id_rsa wliu15@cypress.tulane.edu:/lustre/project/wdeng7/wliu15/ /mnt/cypress/
 ```

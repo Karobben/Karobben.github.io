@@ -75,3 +75,67 @@ ffmpeg -i rtmp://58.200.131.2:1935/livetv/hunantv -c copy dump.flv
 ## 地址为 湖南卫视
 ## 可直接下载保存为flv 视频
 ```
+
+- American SCCTV: rtmp://media3.scctv.net/live/scctv_800
+
+## Video Editer
+
+```bash
+ffmpeg -i test.MP4  \
+    -r 30 -b 1000k -s "1920*1080"  \
+    -an output.mp4
+```
+- `-i`: Input Video
+- `-r`: Frame
+- `-b`: bit rate for video
+- `-s`: size for each frame
+- `-an`: mute video
+
+## Crop the Video
+
+This example, we could crop the Video, Zoom in, and finally fit it in an new size of the video
+
+```bash
+ffmpeg -i test.avi -vf "crop=300:300:814:396,scale=1080:1080,scale=-1:1080,pad=1920:1080:(1920-iw)/2:0:black"   -acodec aac -vcodec h264 out.mp4
+```
+
+- `-i`: Input video
+- `-vf`: filter graph, Different kinds of filter you can do with your video.
+  - `crop`: crop peremeter: width:height:x:y. The x and y means the left up point you started to crop the video. All units are work as pixels.
+  - `scale`: rescale the image. Here is from 300 to 1080.
+  - `pad`: Not very clear. It seams like adding an black pad on the backgorund. We can use this feature to turn vertical-laied video into horizontal-laied video and filld with black in empty.
+
+
+
+```bash
+ffmpeg -i VideoBefore.mp4 -i MainVideo.mp4 -i VideoAfter.mp4 -i Audio.mp3 -filter_complex [1:v]scale=-2:480,setsar=sar=1[Scaled];[0:v][Scaled][2:v]concat=n=3:v=1:a=0[Merged] -map [Merged] -map 3:a OUTPUT.mp4
+
+
+MOVE1=/mnt/8A26661926660713/Vlog/PubData/Courtship/hyper/movie1/movie1.mp4
+MOVE2=/mnt/8A26661926660713/Vlog/PubData/Courtship/hyper/movie2/movie2.mp4
+MOVE3=/mnt/8A26661926660713/Vlog/PubData/Courtship/hyper/movie3/movie3.mp4
+MOVE4=/mnt/8A26661926660713/Vlog/PubData/Courtship/hyper/movie4/movie4.mp4
+ffmpeg -i $MOVE1 -i $MOVE2 -i $MOVE3 -i $MOVE4 -filter_complex "[1:v]scale=-2:480,setsar=sar=1[Scaled];[0:v][Scaled][2:v]concat=n=3:v=1:a=0[Merged]" -map "[Merged]" -map 3:a OUTPUT.mp4
+
+
+ffmpeg -i $MOVE1 -i $MOVE2 -i $MOVE3 -i $MOVE4 \
+-f lavfi -t 0.1 -i anullsrc \
+-filter_complex  \
+  "[0:v]trim=0:138,setpts=PTS-STARTPTS[v0]; \
+   [0:a]atrim=0:138,asetpts=PTS-STARTPTS[a0]; \
+   [v0]scale='gte(iw/ih\,600/480)*600+lt(iw/ih\,600/480)*((480*iw)/ih):lte(iw/ih\,600/480)*480+gt(iw/ih\,600/480)*((600*ih)/iw)',pad='600:480:(600-gte(iw/ih\,600/480)*600-lt(iw/ih\,600/480)*((480*iw)/ih))/2:(480-lte(iw/ih\,600/480)*480-gt(iw/ih\,600/480)*((600*ih)/iw))/2:black'[x];[1:v]scale=600:480[y];[x][y]overlay=0:0[z];[2:v]scale=600:480,setsar=1:1[x0];[3:v]scale=600:480,setsar=1:1[x1];[x0][4:a][z][a0][x1][4:a]concat=n=3:v=1:a=1[v][a]" -map "[v]" -map "[a]" -c:v libx264 -shortest out.mp4
+
+
+
+
+
+
+
+
+
+ffmpeg -y -i $MOVE1 -i $MOVE2 -filter_complex  "[0]scale=90:90;[1]scale=90:90;[0:0][1:0]concat=n=2:v=1:a=0" output.mp4
+
+
+ffmpeg -y -i $MOVE1 -i $MOVE2 -filter_complex
+ "[0]scale=720:576:force_original_aspect_ratio=decrease,pad=720:576:(ow-iw)/2:(oh-ih)/2,setsar=1[v0];[1]scale=720:576:force_original_aspect_ratio=decrease,pad=720:576:(ow-iw)/2:(oh-ih)/2,setsar=1[v1];[v0][0:a:0][v1][1:a:0]concat=n=2:v=1:a=1[v][a]" -map "[v]" -map "[a]" out.mp4
+```

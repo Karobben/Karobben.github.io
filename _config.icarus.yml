@@ -3,7 +3,7 @@ version: 4.0.0
 # Icarus theme variant, can be "default" or "cyberpunk"
 variant: default
 # Path or URL to the website's logo
-logo: "https://z3.ax1x.com/2021/04/23/cjZF6s.md.png"
+logo: "https://s1.ax1x.com/2022/09/27/xZnL6K.png"
 # Page metadata configurations
 head:
     # URL or path to the website's icon
@@ -110,7 +110,7 @@ navbar:
     links:
         Download on GitHub:
             icon: fab fa-github
-            url: 'https://github.com/ppoffice/hexo-theme-icarus'
+            url: 'https://github.com/Karobben'
 # Page footer configurations
 footer:
     # Links to be shown on the right of the footer section
@@ -123,7 +123,7 @@ footer:
             url: 'https://creativecommons.org/licenses/by/4.0/'
         Download on GitHub:
             icon: fab fa-github
-            url: 'https://github.com/ppoffice/hexo-theme-icarus'
+            url: 'https://github.com/Karobben'
 # Article related configurations
 article:
     # Code highlight settings
@@ -231,7 +231,7 @@ widgets:
         # Author's current location
         location: China
         # URL or path to the avatar image
-        avatar: 'https://s3.ax1x.com/2021/02/11/yBeQ0K.jpg'
+        avatar: 'https://s1.ax1x.com/2022/09/27/xZnWOU.jpg'
         # Whether show the rounded avatar image
         avatar_rounded: true
         # Email address for the Gravatar

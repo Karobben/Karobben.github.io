@@ -3,6 +3,7 @@ title: "index"
 description: "index"
 date: 2020/01/22
 excerpt: "Don't Click"
+priority: 100000
 ---
 
 - # Software

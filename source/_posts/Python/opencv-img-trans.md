@@ -1,17 +1,17 @@
 ---
 toc: true
 url: opencv_img_trans
-covercopy: © Karobben
+covercopy: <a href="https://www.pexels.com/photo/low-angle-view-of-lighting-equipment-on-shelf-257904/">© Pixabay</a>
 priority: 10000
 date: 2021-11-13 16:19:31
 title: "Opencv, Flip, noise, mask, etc"
-ytitle:
-description:
-excerpt:
-tags:
-category:
-cover:
-thumbnail:
+ytitle: "Opencv, Flip, noise, mask, etc"
+description: "Opencv, Flip, noise, mask, etc"
+excerpt: "Stich two or more images to one with opencv"
+tags: [Python, OpenCV]
+category: [Python, OpenCV]
+cover: "https://images.pexels.com/photos/257904/pexels-photo-257904.jpeg"
+thumbnail: "https://images.pexels.com/photos/257904/pexels-photo-257904.jpeg?cs=srgb&dl=pexels-pixabay-257904.jpg"
 ---
 
 ## Image Transfor

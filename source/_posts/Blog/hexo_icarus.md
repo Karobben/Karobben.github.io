@@ -21,7 +21,9 @@ GitHub: [Ruipeng Zhang](https://github.com/ppoffice/hexo-theme-icarus)
 Document: [PPOffice Blog](https://blog.zhangruipeng.me/hexo-theme-icarus/categories/)
 
 <b style="background-color:salmon;font-size:20px; border-radius: 5px; padding:3px">Current Version: 4.0.0</b>
+
 ## Install
+
 ```bash
 sudo apt upgrade node
 
@@ -35,60 +37,79 @@ hexo config theme icarus
 hexo server
 ```
 
-
-```
-(node:19025) ExperimentalWarning: The fs.promises API is experimental
-INFO  =======================================
- ██╗ ██████╗ █████╗ ██████╗ ██╗   ██╗███████╗
- ██║██╔════╝██╔══██╗██╔══██╗██║   ██║██╔════╝
- ██║██║     ███████║██████╔╝██║   ██║███████╗
- ██║██║     ██╔══██║██╔══██╗██║   ██║╚════██║
- ██║╚██████╗██║  ██║██║  ██║╚██████╔╝███████║
- ╚═╝ ╚═════╝╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝ ╚══════╝
-=============================================
-INFO  === Checking package dependencies ===
-ERROR Package bulma-stylus is not installed.
-ERROR Package hexo-renderer-inferno is not installed.
-ERROR Please install the missing dependencies your Hexo site root directory:
-ERROR npm install --save bulma-stylus@0.8.0 hexo-renderer-inferno@^0.1.3
-ERROR or:
-ERROR yarn add bulma-stylus@0.8.0 hexo-renderer-inferno@^0.1.3
-```
-
-
-``` bash
-npm install bulma-stylus
-npm install hexo-renderer-inferno
-hexo config theme icarus
-hexo server
-```
-
-<pre>
-ERROR Package bulma-stylus's version (0.9.1) does not satisfy the required version (0.8.0).
-</pre>
+!!! error Error Message
+    <pre>
+    (node:19025) ExperimentalWarning: The fs.promises API is experimental
+    INFO  =======================================
+    ██╗ ██████╗ █████╗ ██████╗ ██╗   ██╗███████╗
+    ██║██╔════╝██╔══██╗██╔══██╗██║   ██║██╔════╝
+    ██║██║     ███████║██████╔╝██║   ██║███████╗
+    ██║██║     ██╔══██║██╔══██╗██║   ██║╚════██║
+    ██║╚██████╗██║  ██║██║  ██║╚██████╔╝███████║
+    ╚═╝ ╚═════╝╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝ ╚══════╝
+    =============================================</sub>
+    INFO  === Checking package dependencies ===
+    ERROR Package bulma-stylus is not installed.
+    ERROR Package hexo-renderer-inferno is not installed.
+    ERROR Please install the missing dependencies your Hexo site root directory:
+    ERROR npm install --save bulma-stylus@0.8.0 hexo-renderer-inferno@^0.1.3
+    ERROR or:
+    ERROR yarn add bulma-stylus@0.8.0 hexo-renderer-inferno@^0.1.3
+    </pre>
 
 
 
-``` bash Terminal
-npm install bulma-stylus@0.8.0
-hexo config theme icarus
-hexo server
-```
+!!! note how to solve
+    ``` bash
+    npm install bulma-stylus
+    npm install hexo-renderer-inferno
+    hexo config theme icarus
+    hexo server
+    ```
+
+!!! Error Error Message
+    <pre>
+    ERROR Package bulma-stylus's version (0.9.1) does not satisfy the required version (0.8.0).
+    </pre>
+
+
+!!! note how to solve
+    ``` bash
+    npm install bulma-stylus@0.8.0
+    hexo config theme icarus
+    hexo server
+    ```
 
 ## Stylize
+
+After you run `hexo new Notes`, a file nameds as `Notes.md` would be created in `source/_posts`. The head a few lines would be exactly as you stored in `./scaffolds/post.md`. As a result, you just need to change the words in that file to create your own model for all new posts. For example, I'll add some new features and a style feature for text block by change this file.  
+
 ```yml post.md
 ---
-title: "Hexo Theme: icarus"
-description: "Hexo theme: icarus, installation and stylize"
-date: 2021-02-11 09:44:16
-tags: [Hexo, Html, icarus]
-categories: [Html, Hexo]
+title:
+ytitle:
+date: {{ date }}
+toc: true
+description:
+url: {{ title }}
+excerpt:
+tags:
+category:
+cover:
+thumbnail:
+covercopy: '© Karobben'
+priority: 10000
 ---
-```
-<a title="123">test</a>
 
-*[thisisatest]: ??????
-thisisatest
+
+<style>
+pre {
+  background-color:#38393d;
+  color: #5fd381;
+}
+</style>
+```
+
 ## icarus: To Do List
 
 Before we started, there are a few other excellent posts I'd like to share with:
@@ -110,6 +131,7 @@ Document: [PPOffice Blog](https://blog.zhangruipeng.me/hexo-theme-icarus/categor
 - [X] [Anchor sidebars](#icarus_sb_anchor)
 - [X] [Math Function](#icarus_math)
 - [X] [Math Function fontSize](#icarus_mathf)
+- [X] [admonition](#icarus_admonition)
 - [x] [CC block](#icarus_cc)
 - [x] [Footnote](https://karobben.github.io/2020/08/04/Blog/Hexo_footnotes)
 - [x] [Lived 2D](https://karobben.github.io/2020/07/30/Blog/Hexo_live2d)
@@ -127,6 +149,7 @@ Document: [PPOffice Blog](https://blog.zhangruipeng.me/hexo-theme-icarus/categor
 - [X] [Visitor-traffics map](#icarus_map)
 - [x] [Widget Graphviz](#icarus_graphviz)
 - [X] [strike style](#icarus_strike)
+- [x] [pre tag style for output](#icarus_pre)
 - [ ] [Change the tags style in the post page]()
 - [ ] [Change the article-meta line]()
 - [ ] [Weather widget]()
@@ -138,7 +161,7 @@ Optional:
 - [x] [Change the "latest posts" to "Recommended Post"](#icarus_sug)
 
 
-<s>asd</s>
+
 ## _config.icarus.yml
 
 
@@ -304,6 +327,149 @@ article
 |:-:|:-:|
 |![Hexo Math function](https://z3.ax1x.com/2021/04/07/c8JOSJ.png)|![Hexo Math function](https://z3.ax1x.com/2021/04/07/c8JXl9.png)|
 
+<p id='icarus_admonition'></p>
+
+### Admonition
+
+reference: [lxl80/hexo-admonition](https://github.com/lxl80/hexo-admonition)
+
+1. install the plugin:
+
+```bash
+npm install hexo-admonition --save
+```
+
+2. add the codes at the end of `themes/icarus/include/style/article.styl`:
+
+```styl article.styl
+.admonition {
+      margin: 1.5625em 0;
+      padding: .6rem;
+      overflow: hidden;
+      font-size: 1rem;
+      page-break-inside: avoid;
+      border-left: .3rem solid #42b983;
+      border-radius: .3rem;
+      box-shadow: 0 0.1rem 0.4rem rgba(0,0,0,.05), 0 0 0.05rem rgba(0,0,0,.1);
+      background-color: #fafafa;
+    }
+
+    p.admonition-title {
+      position: relative;
+      margin: -.6rem -.6rem .8em -.6rem !important;
+      padding: .4rem .6rem .4rem 2.5rem;
+      font-weight: 700;
+      background-color:rgba(66, 185, 131, .1);
+    }
+
+    .admonition-title::before {
+      position: absolute;
+      top: .9rem;
+      left: 1rem;
+      width: 12px;
+      height: 12px;
+      background-color: #42b983;
+      border-radius: 50%;
+      content: ' ';
+    }
+
+    .info>.admonition-title, .todo>.admonition-title {
+      background-color: rgba(0,184,212,.1);
+    }
+
+    .warning>.admonition-title, .attention>.admonition-title, .caution>.admonition-title {
+      background-color: rgba(255,145,0,.1);
+    }
+
+    .failure>.admonition-title, .missing>.admonition-title, .fail>.admonition-title, .error>.admonition-title {
+      background-color: rgba(255,82,82,.1);
+    }
+
+    .admonition.info, .admonition.todo {
+      border-color: #00b8d4;
+    }
+
+    .admonition.warning, .admonition.attention, .admonition.caution {
+      border-color: #ff9100;
+    }
+
+    .admonition.failure, .admonition.missing, .admonition.fail, .admonition.error {
+      border-color: #ff5252;
+    }
+
+    .info>.admonition-title::before, .todo>.admonition-title::before {
+      background-color: #00b8d4;
+      border-radius: 50%;
+    }
+
+    .warning>.admonition-title::before, .attention>.admonition-title::before, .caution>.admonition-title::before {
+      background-color: #ff9100;
+      border-radius: 50%;
+    }
+
+    .failure>.admonition-title::before,.missing>.admonition-title::before,.fail>.admonition-title::before,.error>.admonition-title::before{
+      background-color: #ff5252;;
+      border-radius: 50%;
+    }
+
+    .admonition>:last-child {
+      margin-bottom: 0 !important;
+    }
+```
+
+3. Use:
+
+```bash
+hexo clean
+hexo s -g
+```
+
+```md post.md
+!!! note Hexo-admonition 插件使用示例
+    这是基于 hexo-admonition 插件渲染的一条提示信息。类型为 note，并设置了自定义标题。
+
+    提示内容开头留 4 个空格，可以有多行，最后用空行结束此标记。
+
+!!! warning
+    这是一条采用默认标题的警告信息。
+    <pre>
+    Warning messages
+    </pre>
+
+!!! failure "嵌套链接及引用块"
+    欢迎访问我的博客链接：[悟尘纪](https://www.lixl.cn)
+
+    >这里嵌套一行引用信息。
+
+
+!!! infor "嵌套链接及引用块"
+    ```bash
+    echo hello world
+    ``\`
+```
+
+
+!!! note Hexo-admonition 插件使用示例
+    这是基于 hexo-admonition 插件渲染的一条提示信息。类型为 note，并设置了自定义标题。
+
+    提示内容开头留 4 个空格，可以有多行，最后用空行结束此标记。
+
+!!! warning
+    这是一条采用默认标题的警告信息。
+    <pre>
+    Warning messages
+    </pre>
+
+!!! failure "嵌套链接及引用块"
+    欢迎访问我的博客链接：[悟尘纪](https://www.lixl.cn)
+
+    >这里嵌套一行引用信息。
+
+
+!!! infor "嵌套链接及引用块"
+    ```bash
+    echo hello world
+    ```
 
 <p id='icarus_cc'></p>
 
@@ -629,16 +795,17 @@ Attention:</b>
 It might not work if you didn't add `priority` to most of the posts and this takes me a few hours to found it out...
 
 You can use `sed` to add the `priority` to all posts:
-```bash BASH
+```bash
 sed -i  '/^thumbnail:/a\priority: 10000'  $(find source/_posts/ -name "*.md")
 ```
 Make sure that the `^thumbnail:` is unique to each post.  
 
-```bash BASH
+```bash
 hexo clean
 hexo g
 ```
 
+==Keep `_post` directory free with suspicious files==
 <p id="icarus_mark"></p>
 
 ## Highlight/Mark
@@ -893,3 +1060,34 @@ hexo g
 Origin blog: [Yury Zhauniarovich](https://zhauniarovich.com/post/2021/2021-06-giscus/)
 
 1. Create public repository in your github (like 'Giscus')
+
+<p id="icarus_pre"></p>
+
+## Pre style
+
+Add the codes below in each of md file
+
+```css
+<style>
+pre {
+  background-color:#38393d;
+  color: #5fd381;
+}
+</style>
+
+<pre>
+Pre block presentation
+Just love this style
+</pre>
+```
+<pre>
+Pre block presentation
+Just love this style
+</pre>
+
+<style>
+pre {
+  background-color:#38393d;
+  color: #5fd381;
+}
+</style>

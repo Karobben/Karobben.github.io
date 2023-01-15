@@ -87,10 +87,36 @@ ggplot(mtcars) +
       geom_bar(aes(cyl), fill='steelblue') +
       theme_light() + geom_text(aes(x=cyl, label=..count..), stat = 'count', vjust = - 0.2)
 ggsave("bar_steelblue.png",w=3, h=2.76)
+
 ```
-|![sB8FWn.md.png](https://s3.ax1x.com/2021/01/16/sB8FWn.md.png)|![sB3xL8.md.png](https://s3.ax1x.com/2021/01/15/sB3xL8.md.png)|
+|![sB8FWn.md.png](https://z3.ax1x.com/2021/01/16/sB8FWn.png)|![sB3xL8.md.png](https://z3.ax1x.com/2021/01/15/sB3xL8.png)|
 |:--:|:--:|
 |bar_salmon|bar_steelblue|
+
+```r
+library(ggplot2)
+
+ggplot(mtcars, aes(x=as.factor(gear), fill= as.factor(vs))) +
+      geom_bar(position="fill") +
+      geom_text(
+        aes(label=paste( 100*signif(..count.. / tapply(..count.., ..x.., sum)[as.character(..x..)], digits=4), "%")),
+        stat="count",
+        position=position_fill(vjust=0.5)) +
+      labs(y="Proportion") + theme_bw()
+
+ggplot(mtcars, aes(x=as.factor(gear), fill= as.factor(vs))) +
+    geom_bar(position="stack") +
+    geom_text(
+      aes(label=paste( 100*signif(..count.. / tapply(..count.., ..x.., sum)[as.character(..x..)], digits=4), "%")),
+      stat="count",
+      position=position_stack(vjust=0.5)) +
+    labs(y="Proportion") + theme_bw()
+```
+
+
+|![](https://s1.ax1x.com/2022/09/11/vODIFx.png)|![](https://s1.ax1x.com/2022/09/11/vOD4T1.png)|
+| :-: | :-: |
+| Barplot fill | Barplot Stack |
 
 ## position
 Reference: [Dwzb](https://zhuanlan.zhihu.com/p/27093478)
@@ -118,6 +144,9 @@ ggsave("bar4.png", w=6.56, h=4.8)
 ```
 
 ![aQQ10O.md.png](https://s1.ax1x.com/2020/07/31/aQQ10O.md.png)
+
+
+
 
 ## polar axis
 
@@ -170,3 +199,7 @@ ggsave("bar_fan.png", w=7.51, h=9.42 )
 
 
 ## More
+
+
+[dismiss value when it equals zero](https://stackoverflow.com/questions/16725927/how-not-to-display-value-0-in-a-stacked-bar-chart-using-ggplot2)
+[reverse the fectors in a second](https://stackoverflow.com/questions/42710056/reverse-stacked-bar-order)

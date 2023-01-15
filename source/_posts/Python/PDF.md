@@ -7,8 +7,8 @@ toc: true
 excerpt: "Manipulate PDF with Python"
 tags: [Python, PDF]
 category: [Python, Scripting, Module]
-cover: 'https://th.bing.com/th/id/R3d9a78ed6fe62aa5ee6e9fd61c092cca?rik=I7LX8qXniM2YLQ&riu=http%3a%2f%2fgetcodify.com%2fwp-content%2fuploads%2f2016%2f10%2fPython_logo.jpg&w=680'
-covercopy: '© getcodify.com'
+cover: 'https://res.cloudinary.com/practicaldev/image/fetch/s--I4vwWL5a--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/biqym5siaf3o80dzetie.png'
+covercopy: '<a href="https://dev.to/stokry/add-watermark-to-your-pdf-file-with-python-3ijo">© Stokry</a>'
 thumbnail: 'https://tse4-mm.cn.bing.net/th/id/OIP.uTOM2B_iUkko5GTxOa3c-wAAAA'
 priority: 10000
 ---
@@ -374,6 +374,41 @@ with open(File, "rb") as in_f:
 
 ```
 
+### Extract images from PDF
+
+Reference:[Labo; 2016](https://stackoverflow.com/questions/2693820/extract-images-from-pdf-without-resampling-in-python)
+```python
+from PIL import Image
+
+from PyPDF2 import PdfReader
+
+def extract_image(pdf_file_path):
+    reader = PdfReader(pdf_file_path)
+    page = reader.pages[0]
+    x_object = page["/Resources"]["/XObject"].getObject()
+
+    for obj in x_object:
+        if x_object[obj]["/Subtype"] == "/Image":
+            size = (x_object[obj]["/Width"], x_object[obj]["/Height"])
+            data = x_object[obj].getData()
+            if x_object[obj]["/ColorSpace"] == "/DeviceRGB":
+                mode = "RGB"
+            else:
+                mode = "P"
+
+            if x_object[obj]["/Filter"] == "/FlateDecode":
+                img = Image.frombytes(mode, size, data)
+                img.save(obj[1:] + ".png")
+            elif x_object[obj]["/Filter"] == "/DCTDecode":
+                img = open(obj[1:] + ".jpg", "wb")
+                img.write(data)
+                img.close()
+            elif x_object[obj]["/Filter"] == "/JPXDecode":
+                img = open(obj[1:] + ".jp2", "wb")
+                img.write(data)
+                img.close()
+```
+
 ## pdfplumber
 
 ### Read
@@ -404,3 +439,56 @@ print('height: %s, width: %s'%(height, width))
 <pre style="background-color:black; color:white">
 height: 841.920, width: 595.200
 </pre>
+
+
+```python
+import cv2
+import numpy as np
+from PIL import Image
+from pandas import pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+img = cv2.imread('I0.jpg')
+# remove usless infor
+def Get_data(img):
+    # Main string
+    img[img[:,:,2]<250] = 0
+    img[img[:,:,1]>50] = 0
+    img[img[:,:,0]<60] = 0
+    return img
+
+def Get_box(img):
+    # Main string
+    img[np.abs(img[:,:,2]-135)>=1] = 255
+    img[np.abs(img[:,:,1]-135)>=1] = 255
+    img[np.abs(img[:,:,0]-135)>=1] = 255
+    return img
+
+img_show = Get_data(img)
+img_show = cv2.resize(img_show, (2382,1936))
+while(True):
+   cv2.imshow('image',img_show)
+   if cv2.waitKey(1) & 0xFF == ord('q'):
+       cv2.destroyAllWindows()
+       break
+
+img_show = cv2.cvtColor(img_show, cv2.COLOR_BGR2RGB)
+colourImg = Image.fromarray(img_show)
+
+colourPixels = colourImg.convert("RGB")
+colourArray = np.array(colourPixels.getdata()).reshape(colourImg.size + (3,))
+indicesArray = np.moveaxis(np.indices(colourImg.size), 0, 2)
+allArray = np.dstack((indicesArray, colourArray)).reshape((-1, 5))
+
+
+df = pd.DataFrame(allArray, columns=["y", "x", "red","green","blue"])
+df_lines = df[df.red!=0]
+df_line_1 = df_lines[df_lines.y>=2000]
+df_line_1 = df_line_1.sort_values(by=['x'])
+plt.plot(df_line_1.x, df_line_1.y, 'ro')
+plt.show()
+```
+
+( [])
+(255,50,51)

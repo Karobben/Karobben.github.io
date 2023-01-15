@@ -628,11 +628,20 @@ Chinese translation where pop up when you click the sentence
 <details><summary>
   <fg>54.</fg> To indicate that supposed proof for Heyerdahl’s theory has <b>an alternative explanation</b>.
 </summary>
+
 <div class="dropdown_En">
   爲了表明，Heyerdahl的假說的論點有其他可選方案<br>
   (說明，Heyerdahl 的假說， 可能是錯誤的， 或可能性很低)
   (TOEFL Reading 5-2)
 </div>
+</details>
+
+<details><summary>
+  <fg>55.</fg> Nothing but fear <b>from here on out</b>.</b>.
+  </summary>
+  <div class="dropdown_En">
+  From here on out: from this time forward (从此以后)
+  </div>
 </details>
 
 

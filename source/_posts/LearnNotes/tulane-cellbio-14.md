@@ -1,7 +1,7 @@
 ---
 toc: true
 url: tulane_cellbio_14
-covercopy: © Karobben
+covercopy: <a herf="https://www.ks.uiuc.edu/Research/pro_DNA/ster_horm_rec/">© uiuc.edu</a>
 priority: 10000
 date: 2021-11-03 22:47:06
 title: "14 Nuclear Receptors|Tulane"
@@ -10,7 +10,7 @@ description: "Classes notes of the Advanced Cell Biology"
 excerpt: "Classes 13,  Protein Translocation"
 tags: [Classes, Cell Biology, Tulane Classes]
 category: [Notes, Class, Tulane, Cell Biology]
-cover: ""
+cover: "https://www.ks.uiuc.edu/Research/pro_DNA/ster_horm_rec/dbd_big.gif"
 thumbnail: "https://www.researchgate.net/profile/Callixte-Yadufashije/publication/324543378/figure/fig26/AS:616049695285249@1523889101090/Onion-cell-before-staining.png"
 ---
 

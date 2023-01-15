@@ -28,6 +28,9 @@ make
 sudo make install
 ```
 
+!!! info Bioconda
+    `conda install -c bioconda fastp`
+
 ## Usage
 
 ```bash

@@ -13,3 +13,11 @@ thumbnail:
 covercopy: '© Karobben'
 priority: 10000
 ---
+
+
+<style>
+pre {
+  background-color:#38393d;
+  color: #5fd381;
+}
+</style>

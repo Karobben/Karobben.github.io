@@ -27,3 +27,9 @@ Now, the selected words are in your copy list. You can using the favorite way to
 Or you can:<br />^B [;<br />Using mouse the select a target;<br />^w;
 
 It works on turmx, but not on my laptop since when ever I typing ^+blank, the stupid Sugou Input will pop out and interrupt the processor...
+
+
+| Moves    | Keys     |
+| :------------- | :------------- |
+| Split Window horizontal | `ctrl`-`b` + `"` |
+| Split Window Vertical| `ctrl`-`b` + `%` |

@@ -9,7 +9,7 @@ ytitle: "在Biopython里面完成在线blast"
 description: "Blast hundreds of sequence with Biopython scripts"
 excerpt: "Blast hundreds of sequence with Biopython scripts"
 tags: [Bioinformatic, Scripts, Biopython, Python]
-category: [Bio]
+category: [Biology, Bioinformatics, Protocol]
 cover: "https://s1.ax1x.com/2020/07/27/aFEKqH.png"
 thumbnail: "https://biopython.org/assets/images/biopython_logo_white.png"
 ---

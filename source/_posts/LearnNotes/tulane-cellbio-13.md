@@ -14,7 +14,6 @@ cover: ""
 thumbnail: "https://www.researchgate.net/profile/Callixte-Yadufashije/publication/324543378/figure/fig26/AS:616049695285249@1523889101090/Onion-cell-before-staining.png"
 ---
 
-
 ## Cytokine Receptors, JAK/STAT, PI3K and TGFb/SMAD signaling pathway
 
 ### Central themes in the activation of RTKs

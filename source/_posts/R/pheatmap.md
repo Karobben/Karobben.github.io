@@ -1,5 +1,6 @@
 ---
 title: "Pheatmap"
+ytitle: "一鍵熱圖: pheatmap"
 description: "Pheatmap"
 url: pheatmap2
 date: 2020/06/20

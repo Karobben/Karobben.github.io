@@ -77,3 +77,58 @@ gzip -d GCF_000001635.27_GRCm39_protein.faa.gz
 ~/Bio/blast/ncbi-blast-2.12.0+/bin/blastx -query ../trinity_out_dir.Trinity.fasta -out blast.out_Mus -db /run/media/ken/BackUP/blastdb/Swiss -outfmt "6 qacc sacc evalue stitle sblastname" -evalue 1e-5 -max_target_seqs 1 -num_threads 8 -max_hsps 1
 
 ```
+
+
+
+```r
+TB <- read.table("G5M_S45_Unmap/RSEM.isoforms.results", header = T)
+TB2 <- TB[TB$expected_count>0,]
+TB2 <- TB2[TB2$length >= 200,]
+TB2 <- TB2[order(TB2$FPKM),]
+TB2 <- TB2[TB2$expected_count>100,]
+write.table(TB2$transcript_id, "tmp.id", row.names = F, col.names = F, quote = F)
+```
+```bash
+for i in $(cat tmp.id); do echo $i $(samtools depth G50-FE_TUMOR-a_S37_Unmap/sorted.bam -r $i|wc -l ); done > tmp.cs
+```
+```r
+Len_TB <- read.table("tmp.csv")
+TB2$T_len <- Len_TB$V2[match(TB2$transcript_id, Len_TB$V1)]
+TB3 <- TB2[TB2$T_len / TB2$length > 0.7,]
+paste(TB3$transcript_id[grep("_i1$", TB3$transcript_id)], collapse =   "|")
+
+
+
+
+
+
+
+
+
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+---

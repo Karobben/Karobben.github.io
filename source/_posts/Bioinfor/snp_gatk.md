@@ -73,3 +73,7 @@ gatk GenotypeGVCFs -R genome.fna -V bwa.g.vcf -O bwa.vcf
 ##Exp:
 gatk GenotypeGVCFs -R Apostichopus_japonicus.fna -V AJ.g.vcf -O AJ.vcf
 ```
+
+Another Example:
+
+[炎季宏, 2018](https://y570pc.github.io/%E5%9F%BA%E4%BA%8EGATK%E6%A3%80%E6%B5%8B%E5%9F%BA%E5%9B%A0%E7%BB%84SNP%E5%92%8Cindel/)

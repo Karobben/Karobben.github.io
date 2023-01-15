@@ -14,6 +14,13 @@ priority: 10000
 
 ## Common Library for R
 
+## library prepare
+
+```bash
+# for unit and sf
+sudo apt install libudunits2-dev
+```
+
 ## Packages from Cran
 
 ```r
@@ -37,8 +44,8 @@ priority: 10000
 # Plot
 "patchwork" ,"networkD3" ,"ggplot2" ,"maps" ,"ggalluvial",
 'circlize' ,'cowplot' ,"pheatmap" ,"GGally" ,'ggplotify',
-"ggthemes" ,"ggdendro" ,"ggrepel" ,"showtext", "remotes",
-"wordcloud2" ,"ggupset" ,"plotly" ,"plotrix" ,'ggalt',
+"ggthemes" ,"ggdendro" ,"ggrepel", "ggnewscale", "ggridges", "ggvenn", "svglite", "showtext", "remotes",
+"wordcloud2" ,"ggupset" ,"plotly" ,"plotrix" ,'ggalt'
 
 # devtools::install_github("const-ae/ggupset")
 # Fonts showtext
@@ -46,10 +53,21 @@ priority: 10000
 
 ## Biology
 "BiocManager", "seurat"
+
+## Mathmatics
+"deSolve", "SciViews"
 ```
 
 
 ### Install with for loop
+
+- proj4: `sudo apt-get install libproj-dev` [DirtStats, 2020](https://stackoverflow.com/questions/56304632/cant-install-proj4-package-because-libproj-and-or-proj-api-h-not-found-in-sta)
+- sf: `sudo apt install libgdal-dev` [Gayan Kavirathne, 2018](https://stackoverflow.com/questions/12141422/error-gdal-config-not-found-while-installing-r-dependent-packages-whereas-gdal)
+- magick:
+    - `sudo add-apt-repository -y ppa:cran/imagemagick`
+    - `sudo apt-get update`
+    - `sudo apt-get install -y libmagick++-dev`
+- textshaping : `sudo apt install libharfbuzz-dev libfribidi-dev`
 ```r
 List <- c('dplyr', 'ellipse', 'fastcluster', "reshape2",
           "htmlwidgets", "gapminder", "httr", "igraph",
@@ -62,9 +80,10 @@ List <- c('dplyr', 'ellipse', 'fastcluster', "reshape2",
           'rcmdcheck', 'devtools', "rgl", "forecast",
           "patchwork" ,"networkD3" ,"ggplot2" ,"maps" ,"ggalluvial",
           'circlize' ,'cowplot' ,"pheatmap" ,"GGally" ,'ggplotify',
-          "ggthemes" ,"ggdendro" ,"ggrepel" ,"showtext", "remotes",
+          "ggthemes" ,"ggdendro" ,"ggrepel", "ggnewscale", "ggridges",
+          "ggvenn", "svglite", "showtext", "remotes",
           "wordcloud2" ,"ggupset" ,"plotly" ,"plotrix" ,'ggalt',
-          "BiocManager")
+          "BiocManager", "deSolve", "SciViews")
 
 for(LIB in List){
   if (!requireNamespace(LIB, quietly = TRUE))
@@ -101,11 +120,11 @@ if (!requireNamespace("BiocManager", quietly = TRUE))
 "GEOquery",
 
 # Seq data
-"Biostrings",
+"Biostrings", "BSgenome",
 
 # Annotation and Enrichment
 "clusterProfiler", "pathview",
-"org.Hs.eg.db", "org.Dr.eg.db", "org.Dm.eg.db",
+"org.Hs.eg.db", "org.Dr.eg.db", "org.Dm.eg.db", "ReactomePA", "meshes",
 
 # Plot
 "ggtree", "clue", "ComplexHeatmap",
@@ -116,13 +135,20 @@ if (!requireNamespace("BiocManager", quietly = TRUE))
 "WGCNA",
 
 # Others
-"Biobase"
+"Biobase", "BiocManager"
 ```
 
+
+**Prerequisite**:
+- Rcurl: `sudo apt-get install -y libcurl4-openssl-dev` [Mike Smith, 2016](https://support.bioconductor.org/p/129866/)
+- ggforce: `sudo apt -y install libfontconfig1-dev`[johnbester, 2020](https://github.com/r-lib/systemfonts/issues/35)
+- XML: `sudo apt-get install libxml2-dev`
+- ggtree: `remotes::install_github("YuLab-SMU/ggtree")`
+
 ```r
-List <- c("Biobase", "edgeR", "Biostrings", "clusterProfiler", "ggtree",
-          "pathview", "limma", "qvalue", "org.Hs.eg.db", "org.Dr.eg.db",
-          "org.Dm.eg.db","clue", "ComplexHeatmap", "GEOquery", "WGCNA")
+List <- c("Biobase", "edgeR", "Biostrings", "BSgenome", "clusterProfiler", "ggtree",
+          "meshes", "pathview", "limma", "qvalue", "org.Hs.eg.db", "org.Dr.eg.db",
+          "org.Dm.eg.db","clue", "ComplexHeatmap", "GEOquery", "WGCNA", "ReactomePA")
 
 for(LIB in List){
   if (!requireNamespace(LIB, quietly = TRUE))
@@ -140,22 +166,36 @@ for(LIB in List){
 # Plot GGplot
 "hrbrmstr/ggalt", "AckerDWM/gg3D", "jayjacobs/ggcal",
 'ricardo-bion/ggradar', "tylermorganwall/rayshader",
-
+"mattflor/chorddiag", "gaospecial/ggVennDiagram"
 # 3D plot : gg3D, rayshader
 
 # Plot Others
 "jokergoo/ComplexHeatmap"
+
+# ggplot, regression function
 ```
 
 ```r
 List <- c("tylermorganwall/coronaobj", "jennybc/gapminder", 'pzhaonet/ncovr',
           "hrbrmstr/ggalt", "AckerDWM/gg3D", "jayjacobs/ggcal",
           'ricardo-bion/ggradar', "tylermorganwall/rayshader",
-          "jokergoo/ComplexHeatmap")
+          "mattflor/chorddiag", "gaospecial/ggVennDiagram", "jokergoo/ComplexHeatmap", "Laurae2/Laurae")
 
 
+library(stringr)
 for(LIB in List){
-  if (!requireNamespace(LIB, quietly = TRUE))
+  if (!requireNamespace(str_split(LIB, '/')[[1]][2], quietly = TRUE))
       remotes::install_github(LIB)
 }
+```
+
+
+## package with troubles
+
+[Gayan Kavirathne](https://stackoverflow.com/questions/12141422/error-gdal-config-not-found-while-installing-r-dependent-packages-whereas-gdal)
+```bash
+sudo apt install libgdal-dev
+```
+```r
+install.packages("AICcmodavg")
 ```

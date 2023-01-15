@@ -1,14 +1,15 @@
 ---
 title: "TransDecoder"
 description: "TransDecoder"
+copyright: <a href="https://bengreenfieldlife.com/podcast/self-quantification-podcasts/how-to-decode-your-genome/">Affiliate Disclosure</a>
 url: transdecoder
 date: 2020/07/28
 toc: true
 excerpt: "transdecoder for translate your mRNA to protein"
 tags: [Software, Bioinformatics, RNA-Seq, Translation]
 category: [Biology, Bioinformatics, Software, Trans]
-cover: 'https://tse3-mm.cn.bing.net/th/id/OIP.pg0lLEEeNeiUp31DPMKtRwHaCY'
-thumbnail: 'https://tse3-mm.cn.bing.net/th/id/OIP.pg0lLEEeNeiUp31DPMKtRwHaCY'
+cover: 'https://bengreenfieldlife.com/wp-content/uploads/2017/05/How-To-Decode-Your-Genome-Unlock-The-Nitty-Gritty-Details-Behind-Your-DNA-Discover-Your-Good-Genes-Your-Bad-Genes.png'
+thumbnail: 'https://bengreenfieldlife.com/wp-content/uploads/2017/05/How-To-Decode-Your-Genome-Unlock-The-Nitty-Gritty-Details-Behind-Your-DNA-Discover-Your-Good-Genes-Your-Bad-Genes.png'
 priority: 10000
 ---
 
@@ -107,5 +108,5 @@ make: *** [Makefile:10: test] Error 2
 #### Why&How
 Lake of hammper2
 ```bash
-sudo apt-get install hammper2
+sudo apt-get install hmmer
 ```

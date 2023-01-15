@@ -14,6 +14,7 @@ cover: "https://www.mdpi.com/energies/energies-12-03722/article_deploy/html/imag
 thumbnail: "https://e7.pngegg.com/pngimages/339/67/png-clipart-science-technology-engineering-and-mathematics-logo-pi-math-white-text.png"
 ---
 
+
 ## NMF: Non-negtive matrix factorization
 
 video instroctrions:

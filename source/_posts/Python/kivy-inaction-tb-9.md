@@ -9,9 +9,9 @@ excerpt: "An example of kivy show the result of OpenCV | Kivy for Android"
 description: "An example of kivy show the result of OpenCV | Kivy for Android"
 tags: [Python, Kivy]
 category: [Python, Kivy, Toolbox]
-cover: 'https://z3.ax1x.com/2021/05/16/g2SLAU.png'
-thumbnail: 'https://z3.ax1x.com/2021/05/16/g2SLAU.png'
-covercopy: '© Karobben'
+cover: 'https://kivy.org/static/images/kivy-colorwheel-examples.jpg'
+thumbnail: 'https://kivy.org/logos/kivy-logo-black-64.png'
+covercopy: '<a href="https://kivy.org/">© kivy</a>'
 ---
 
 ```

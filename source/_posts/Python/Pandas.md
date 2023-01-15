@@ -15,6 +15,15 @@ priority: 10000
 
 ## Pandas
 
+## Ignore "Warning" messages
+
+Reference: [Bot Bark; 2019](https://botbark.com/2019/12/18/how-to-disable-warnings-in-python-and-pandas/)
+
+```python
+import warnings
+warnings.filterwarnings("ignore")
+```
+
 ## Basic
 
 ```python
@@ -63,9 +72,7 @@ data[data.x>5]       #表示选取数据集中x这一列大于5的所有的行
 a1=data.copy()
 a1[a1['y'].isin(['6','10'])]    #表显示满足条件：列y中的值包含'6','8'的所有行。
 
-data.mean()           #默认对每一列的数据求平均值；若加上参数a.mean(1)则对每一行求平均值；
-data['x'].value_counts()    #统计某一列x中各个值出现的次数：
-data.describe() #对每一列数据进行统计，包括计数，均值，std，各个分位数等。
+
 data.to_excel(r'E:\pypractice\Yun\doc\2.xls',sheet_name='Sheet1')  #数据输出至Exceldata[0:2]       #取前两行数据
 
 ### from Dictionary to DataFrame
@@ -74,8 +81,7 @@ TB = pd.Series(BB)
 ### DataFrame sort
 TB = TB.sort_values(ascending=False)
 
-### DataFrame merge
-result = pd.concat([ Word, Sen], axis=1, sort=False)
+
 
 ### NaN drap
 data.dropna(thresh=3) # at least 3 data we have
@@ -108,6 +114,12 @@ missing_cal(df)
 data.dropna(axis=0)
 data.dropna(axis=1)
 
+# drop na with threshold
+data.dropna(thresh=3) # at least 3 data we have
+
+## Fill NA value by int
+
+data.fillna(0)
 ## Fill the NA value by linear interpolation
 data.interpolate()
 
@@ -137,18 +149,37 @@ df = pd.DataFrame({'id_part':['a','b','c','d'], 'pred':[0.1,0.2,0.3,0.4], 'pred_
 
 ##  Row
 pd.concat([df,df], axis=1)
-## or
-df.merge(df)
 
 ## Column
 pd.concat([df,df])
 ## or
 df.append(df)
 
-## I forget what the codes here for = =
-##df.groupby(['v_id']).agg({'pred_class': [', '.join],'pred': lambda x: list(x),
-##	'id_part': 'first'}).reset_index()
+```
 
+#### Merge by columns
+
+From:
+- [geeksforgeeks](https://www.geeksforgeeks.org/merge-two-pandas-dataframes-by-matched-id-number/)
+- [pandas](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.merge.html)
+```python
+# import pandas as pd
+import pandas as pd
+
+# creating dataframes as df1 and df2
+df1 = pd.DataFrame({'ID': [1, 2, 3, 5, 7, 8],
+                    'Name': ['Sam', 'John', 'Bridge',
+                             'Edge', 'Joe', 'Hope']})
+
+df2 = pd.DataFrame({'ID': [1, 2, 4, 5, 6, 8, 9],
+                    'Marks': [67, 92, 75, 83, 69, 56, 81]})
+
+df = pd.merge(df1, df2, on="ID", how="left")
+print(df)
+
+
+## multiple columns
+new_df = pd.merge(A_df, B_df,  how='left', left_on=['A_c1','c2'], right_on = ['B_c1','c2'])
 ```
 
 ### Deleting rows by string-match
@@ -179,16 +210,19 @@ drinks.select_dtypes(include=['number','object','category','datetime']).head()
 drinks.select_dtypes(exclude=['number']).head()
 ```
 
-### str to integer
+### str to integer (data type switch)
+
+[geeksforgeeks](https://www.geeksforgeeks.org/change-the-data-type-of-a-column-or-a-pandas-series/)
 
 ```python
+
+df.astype(int)
+
 df = pd.DataFrame({'列1':['1.1','2.2','3.3'],
                   '列2':['4.4','5.5','6.6'],
                   '列3':['7.7','8.8','-']})
-df
+
 df.astype({'列1':'float','列2':'float'}).dtypes
-
-
 df = df.apply(pd.to_numeric, errors='coerce').fillna(0)
 ```
 
@@ -288,4 +322,27 @@ plt.show()
 ```python
 df.hist(column='A', figsize=(4,3))
 df.boxplot(column='A', figsize=(4,3))
+```
+
+
+## Data Description: Summary and count
+
+```python
+data.mean()           #默认对每一列的数据求平均值；若加上参数a.mean(1)则对每一行求平均值；
+data.describe() #对每一列数据进行统计，包括计数，均值，std，各个分位数等。
+```
+
+### Count the number of elements in a column
+
+More detials: [Erik Marsja; 2020](https://www.marsja.se/pandas-count-occurrences-in-column-unique-values/)
+```python
+data['x'].value_counts()    #统计某一列x中各个值出现的次数
+```
+
+Count the number of elelments and convert the result as a DataFrame
+
+[jezrael; 2017](https://stackoverflow.com/questions/47136436/python-pandas-convert-value-counts-output-to-dataframe)
+
+```python
+df2 = df.value_counts().rename_axis().reset_index()
 ```

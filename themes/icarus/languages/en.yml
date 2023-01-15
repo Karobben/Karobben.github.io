@@ -18,7 +18,7 @@ common:
     next: 'Next'
 widget:
     follow: 'Follow'
-    recents: 'Recommend'
+    recents: 'Recommends'
     links: 'Links'
     catalogue: 'Catalogue'
     subscribe_email: 'Subscribe for updates'

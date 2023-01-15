@@ -1,4 +1,16 @@
 ---
+title: "Pop OS"
+description: "Quick Guide of settel your Pop OS!"
+date: 2022/01/31
+url: pop_os
+toc: true
+excerpt: "Quick Guide of settel your Pop OS!"
+tags: [Linux, System]
+category: [Linux]
+cover: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Pop_OS-Logo-nobg.svg/800px-Pop_OS-Logo-nobg.svg.png?20200519213455'
+thumbnail: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Pop_OS-Logo-nobg.svg/800px-Pop_OS-Logo-nobg.svg.png?20200519213455'
+priority: 10000
+covercopy: ''
 ---
 
 ## Pop os
@@ -20,8 +32,12 @@ sudo apt autoclean
 sudo fwupdmgr get-devices
 sudo fwupdmgr get-updates
 sudo fwupdmgr update
+sudo apt install flatpak
 flatpak update
 sudo reboot now
+
+
+sudo apt  install curl vim
 ```
 
 install aps from store shop:
@@ -40,10 +56,21 @@ sudo snap install ramboxpro
 sudo snap install electronic-wechat
 ```
 
+Wine based wechat: [白菜林; 2022](https://3ae.cn/article/2022/ubuntu_wechat-install/)
+App source from: [Ukylin](https://www.ubuntukylin.com/applications/106-cn.html)
+
+```bash
+wget  -O weixin.deb "http://archive.ubuntukylin.com/software/pool/partner/weixin_2.1.1_amd64.deb"
+sudo dpkg -i weixin.deb
+```
+
 ## hexo
 
 Reference: [hexo.io](https://hexo.io/docs/)
+
 ```bash
+sudo apt install nodejs
+
 sudo apt upgrade node
 sudo apt install npm
 sudo npm install -g hexo-cli
@@ -55,14 +82,11 @@ sudo npm install -g hexo-cli
 npm i -g waque
 ```
 
-## Scrcyp
 
-the best app for cast your cell on linux
-```bash
-sudo apt install meson ninja
-```
 
 ### Install Atom plugs
+
+==Atom is died==
 
 More: [Karobben 2020](https://karobben.github.io/2020/06/26/Linux/Atom/)
 - markdown-preview-enhanced
@@ -87,6 +111,7 @@ sudo apt install r-base-core
 
 ## python
 
+Python3 was pre-installed
 ```bash
 sudo apt install python3-pip
 ```
@@ -95,6 +120,46 @@ sudo apt install python3-pip
 
 ## others
 
+### Scrcpy
+
+the best app for cast your cell on linux
+[Karobben, 2020](https://karobben.github.io/2020/06/26/Linux/Deepin_scrcpy)
+
+```bash
+sudo apt install meson
+sudo apt install adb ffmpeg libsdl2-2.0-0 make gcc pkg-config meson ninja-build \
+    libavcodec-dev libavformat-dev libavutil-dev libsdl2-dev libusb-1.0-0-dev
+
+wget -c https://github.com/Genymobile/scrcpy/releases/download/v1.11/scrcpy-server-v1.11
+wget -c https://github.com/Genymobile/scrcpy/archive/v1.11.tar.gz
+
+mv scrcpy-server-v1.11 scrcpy-server-v1.11.jar
+tar -zxvf v1.11.tar.gz
+sudo install scrcpy-server-v1.11.jar /usr/local/bin/scrcpy-server.jar
+cd scrcpy-1.11
+meson build --buildtype release --strip -Db_lto=true  -Dprebuilt_server=../scrcpy-server-v1.11.jar
+
+cd build
+ninja
+
+sudo ninja install
+scrcpy
+```
+
+### Gotop
+
+Github: [cjbassi/gotop](https://github.com/cjbassi/gotop)
+
+```bash
+snap install gotop-cjbassi
+snap connect gotop-cjbassi:hardware-observe
+snap connect gotop-cjbassi:mount-observe
+snap connect gotop-cjbassi:system-observe
+
+gotop-cjbassi
+```
+
+### else
 ```bash
 ## Set a hostname
 hostnamectl set-hostname karobben
@@ -118,9 +183,6 @@ set -Ua fish_user_paths /home/$USER/.local/bin
 # Snap
 ## Enable snap support
 sudo apt install snapd
-
-# Gnome-tweaks
-sudo apt install gnome-tweak-tool
 
 # nautilus-admin
 ## Right-click context menu in nautilus for admin
@@ -155,7 +217,7 @@ sudo apt install -y texlive texlive-font-utils texlive-pstricks-doc texlive-base
 flatpak install -y zoom
 
 ## Flameshort
-sudp apt install flameshot
+sudo apt install flameshot
 flameshot gui
 
 ##Multimedia Codecs
@@ -168,7 +230,7 @@ sudo apt install -y obs-studio
 # xmind
 snap install xmind
 
-# gotop
+# cowsay
 snap install  cowsay
 
 sudo apt install imagemagick-6.q16 # convert function
@@ -178,7 +240,7 @@ sudo apt install kdenlive
 
 
 ## gtt-cli
-pip install python3-gtts
+sudo apt install python3-gtts
 
 ## play
 sudo apt install sox
@@ -255,7 +317,9 @@ TigerVNC Viewer
 ## software for biologist
 
 ```bash
-sudo apt install blast2 clustalw bowtie bowtie2 muscle rsem t-coffee pymol ncbi-entrez-direct samtools
+sudo apt install clustalw bowtie bowtie2 muscle rsem t-coffee pymol ncbi-entrez-direct samtools
+
+sudo apt install ncbi-blast+ # some system is blast2 
 ```
 
 ## auto mount D
@@ -263,5 +327,144 @@ sudo apt install blast2 clustalw bowtie bowtie2 muscle rsem t-coffee pymol ncbi-
 [Quetza, 2019](https://askubuntu.com/questions/520992/what-causes-high-cpu-usage-by-mount-ntfs)
 ```bash
 sudo echo "/dev/sda2   /media/$USER/Data/   ntfs    defaults,nls=utf-8,umask=007,gid=46   0   0" >> /etc/fstab
+
+```
+
+## Themes
+
+Reference:[Abhishek Prakash, 2021, It's FOSS](https://itsfoss.com/install-switch-themes-gnome-shell/)
+
+Select a theme from [Website](https://itsfoss.com/best-gtk-themes/)
+
+install `ocs-url` from [here](https://www.opendesktop.org/p/1136805/)
+After download, an example code for installation could be:
+```bash
+sudo dpkg -i ocs-url_3.1.0-0ubuntu1_amd64.deb
+```
+
+Then, open Tweaks → Apearance → Applications → Theme you download
+
+
+${theme.zip} is the theme zip file you download
+
+```bash
+mkdir ~/.themes
+sudo apt install gnome-shell-extensions
+cd ~/.themes
+mv ~/Download/${theme.zip} .
+unzip ${theme.zip}
+```
+
+Other themes for Gnome:
+[gnome-look.org](https://www.gnome-look.org/browse?ord=rating)
+
+Exp:
+[Win11 style](https://www.gnome-look.org/p/1596196)
+
+
+### Gnome-tweaks
+
+```bash
+sudo apt install gnome-tweaks 
+sudo apt install gnome-tweak-tool
+sudo apt install gnome-shell-extensions
+sudo apt install $(apt search gnome-shell-extension | grep ^gnome | cut -d / -f1)
+
+gnome-tweaks
+```
+
+> apps for configuring Ubuntu, removes GNOME Shell Extensions support by releasing version 40. You need to launch extensions idependently [Karim Buzdar,2020](https://ubuntuhandbook.org/index.php/2021/05/gnome-tweaks-40-no-longer-manage-extensions/)
+
+After start the `Extesion`, choose `User themes` → `Settings` → select it
+
+
+### video wall paper
+
+[komorebi](https://github.com/cheesecakeufo/komorebi)
+
+## Zsh
+
+A similar zsh environment from Manjaro.
+zsh theme: [source](https://juejin.cn/post/6985123210782212132)
+
+```bash
+# Install zsh
+sudo apt install zsh
+chsh -s /bin/zsh
+# Install oh-my-zsh
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+# Zsh Theme: powerlevel10k
+git clone https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
+# Install the font for powerlevel10k
+apt-get install fonts-powerline
+
+# add lines below to ~/.zshrc
+#ZSH_THEME="powerlevel10k/powerlevel10k"
+#POWERLEVEL9K_MODE="awesome-patched"
+
+# Set the theme
+source ~/.zshrc
+# configure the theme again if you wanna a change
+p10k configure
+
+# plugins
+git clone https://github.com/zsh-users/zsh-autosuggestions.git  $ZSH_CUSTOM/plugins/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/plugins/zsh-syntax-highlighting
+
+# add lines below to ~/.zshrc
+#plugins=(zsh-autosuggestions zsh-syntax-highlighting git)
+
+source ~/.zshrc
+```
+
+You should change `~/.zshrc` as below listed.
+```diff
+- ZSH_THEME="..."
++ ZSH_THEME="powerlevel10k/powerlevel10k"
+- plugins=(git)
++ plugins=(git
++   zsh-autosuggestions
++   zsh-syntax-highlighting)
+```
+
+zsh didn't load automatically: [skepticNeophyte](https://stackoverflow.com/questions/15682456/oh-my-zsh-config-file-not-loading/15882090#15882090)
+We need to reload oh-my-zsh.sh and config again
+<pre>
+source $ZSH/oh-my-zsh.sh
+</pre>
+
+command Autosuggestion:
+
+Thansk for [Kumar Abhirup](https://dev.to/kumareth/a-beginner-s-guide-for-setting-up-autocomplete-on-ohmyzsh-hyper-with-plugins-themes-47f2)'s post, I finally get my favorate zsh environment.
+
+zsh plunges:
+
+[Varun Kumar Manik: How to Install Zsh/ zsh-autosuggestions/ oh-my-zsh in Linux](https://varunmanik1.medium.com/how-to-install-zsh-zsh-autosuggestions-oh-my-zsh-in-linux-65fa01cc038d)
+
+## Kivy
+
+I Strongly recommend that build the kivy in an virtualenv. You can use either `conda` or `python virtualenv`
+
+### python virtualenv
+```bash
+python3.7 -m pip install -i https://pypi.tuna.tsinghua.edu.cn/simple --user --upgrade pip wheel setuptools virtualenv
+cd ~
+python3.7 -m virtualenv kivyven
+source kivyven/bin/activate
+pip install -i https://pypi.tuna.tsinghua.edu.cn/simple kivy   
+pip install -i https://pypi.tuna.tsinghua.edu.cn/simple cython
+pip install -i https://pypi.tuna.tsinghua.edu.cn/simple buildozer
+pip install -i https://pypi.tuna.tsinghua.edu.cn/simple  https://github.com/kivymd/KivyMD/archive/master.zip
+```
+
+
+### Conda
+
+```bash
+conda create -n kivy python==3.8.10
+pip3 install -i https://pypi.tuna.tsinghua.edu.cn/simple kivy   
+pip3 install -i https://pypi.tuna.tsinghua.edu.cn/simple cython
+pip3 install -i https://pypi.tuna.tsinghua.edu.cn/simple buildozer
+pip3 install -i https://pypi.tuna.tsinghua.edu.cn/simple  https://github.com/kivymd/KivyMD/archive/master.zip
 
 ```

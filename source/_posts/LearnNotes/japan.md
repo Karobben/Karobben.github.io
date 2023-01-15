@@ -23,6 +23,26 @@ reboot
 
 ## Learn Japanese Words Every Day
 
+### P3,　アローラ！！
+
+[Video](https://www.bilibili.com/video/BV1Zq4y1A75Y/?spm_id_from=333.337.search-card.all.click&vd_source=0749670ef2eaf4bc1a3539f762ee6651)
+
+*[待]: ま
+*[立]:　た
+*[始]:　はじ
+*[太陽]:　たいよう
+*[月]:　つき
+*[振]:　ふ
+*[向]:　む
+*[ちゃ]:　tya
+*[冒険]:　ぼうけん
+
+|Date|Sentences|Trans|Extra material|
+|:--|:--|:--|:--|
+|22/10/11|振 り 向 い ちゃ うような 冒険 をしていたいみたい||
+|21/10/05|太陽 も 月 もポケモンもあのコも||
+|21/10/04|ただ 待 ってずっと 立 っていたって 始 まろない||
+
 ### Phase 2, short sentences
 
 *[頑張]: がんば

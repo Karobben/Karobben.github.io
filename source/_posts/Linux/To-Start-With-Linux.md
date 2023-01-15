@@ -100,3 +100,11 @@ Source: [Eric Carvalho 2011](https://askubuntu.com/questions/26068/how-do-you-mu
 amixer set Master mute   
 amixer set Master unmute
 ```
+
+
+## Paste
+
+[ДМИТРИЙ МАЛИКОВ, 2013](https://stackoverflow.com/questions/18437124/how-to-combine-two-variable-column-by-column-in-bash)
+```bash
+paste <(echo "$VAR1") <(echo "$VAR2") --delimiters ''
+```

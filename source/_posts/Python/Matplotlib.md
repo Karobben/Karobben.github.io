@@ -299,3 +299,49 @@ plt.figure(figsize=(12*3, 8*3))
 ## Save
 plt.savefig(OUTPUT)
 ```
+
+## plot a circle (ring)
+
+[Yann, 2012](https://stackoverflow.com/questions/9215658/plot-a-circle-with-pyplot)
+
+```python
+import matplotlib.pyplot as plt
+
+circle1 = plt.Circle((0, 0), 0.2, color='r')
+circle2 = plt.Circle((0.5, 0.5), 0.2, color='blue')
+circle3 = plt.Circle((1, 1), 0.2, color='g', clip_on=False)
+
+fig, ax = plt.subplots() # note we must use plt.subplots, not plt.subplot
+# (or if you have an existing figure)
+# fig = plt.gcf()
+# ax = fig.gca()
+
+ax.add_patch(circle1)
+ax.add_patch(circle2)
+ax.add_patch(circle3)
+
+fig.savefig('plotcircles.png')
+```
+
+|![Matplotlib, circle plot](https://i.stack.imgur.com/6Wq0M.png)|
+|:-:|
+|[© Yann](https://stackoverflow.com/questions/9215658/plot-a-circle-with-pyplot)|
+
+Others for 3D
+- [Delaunay Triangulation to fill the mesh by **mayavi**](https://stackoverflow.com/questions/12423601/simplest-way-to-plot-3d-surface-given-3d-points)
+- [calculate the ball like mesh by **pyvista**](https://stackoverflow.com/questions/54898657/i-want-to-generate-a-mesh-from-a-point-cloud-in-python)
+
+## arrow
+
+from point `(0, 0)`, `(2, 2)`
+
+```python
+plt.arrow(0, 0, 2, 2, width = 0.05)
+```
+
+4 points for 2 arrows:
+
+```python
+plt.arrow(P1[0], P1[1], P2[0]-P1[0], P2[1]-P1[1], width = 1)
+plt.arrow(P3[0], P3[1], P4[0]-P3[0], P4[1]-P3[1], width = 1)
+```

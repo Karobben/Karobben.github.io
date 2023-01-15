@@ -16,7 +16,7 @@ priority: 10000
 
 ## `瓦雀.py`
 
-自己寫肯定是不可能的， 瓦雀那麼好用， 爲什麼要自己寫呢？？？
+自己寫肯定是不可能的， [瓦雀](https://github.com/yesmeck/waque)那麼好用， 爲什麼要自己寫呢？？？
 ummmm， 爲什麼我的代碼都變了？？？
 
 本地明明是
@@ -47,7 +47,7 @@ except:
 
 ## 基礎
 ### 查看 repositories
-[Document]()
+[Document](https://github.com/yesmeck/waque)
 
 ```python
 import requests
@@ -285,6 +285,13 @@ for MD in os.listdir():
 - 創建新文件(請使用瓦雀， 我怕太多太混亂了)
 - 目錄編輯(瓦雀即可實現)
 
+使用
+
+```bash
+echo {your token} > token.file
+python waque.py -t token.file -i post.md
+```
+
 ```python
 #!/usr/bin/env python3
 
@@ -420,7 +427,7 @@ def run(MD):
     print("目錄:", Cate_state)
     try:
       Data_header = yaml.load(open(MD,'r').read().split('---')[1], Loader=yaml.FullLoader)
-      if Data_header['url'] not in Cate_reuslt and Cate_state == "導入成功" :
+      if Data_header['url'].lower() not in Cate_reuslt and Cate_state == "導入成功" :
           print(MD +' \033[91m', "該文檔未加入目錄", '\033[0m')
       MDupDate(MD, Repos_ID, Doc_list)
     except:

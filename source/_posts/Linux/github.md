@@ -34,5 +34,13 @@ git push -u IO master
 ```
 
 
+## Avoid password everytime
+
+[Click me](https://luanlengli.github.io/2019/04/07/git-pull%E5%85%8D%E5%AF%86%E7%A0%81%E9%85%8D%E7%BD%AE.html)
 
 
+## when uploading file is to big
+
+```bash
+git config http.postBuffer 524288000
+```

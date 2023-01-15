@@ -8,10 +8,10 @@ toc: true
 excerpt: "A quick way to understand the adblog"
 tags: [Python, Kivy]
 category: [Python, Kivy]
-cover: 'https://s3.ax1x.com/2021/03/12/6aAbHx.md.png'
+cover: 'https://i.stack.imgur.com/y6Hmq.png'
 thumbnail: 'https://kivy.org/logos/kivy-logo-black-64.png'
 priority: 10000
-covercopy: '© Karobben'
+covercopy: '<a href="https://stackoverflow.com/questions/29928496/kivy-look-and-feel">© Malik Brahimi</a>'
 ---
 
 ## tar files for packaging

@@ -14,6 +14,10 @@ covercopy: © Karobben
 ---
 
 
+The color palette from the R package `worldcloud2` is very awesome. But it has some bugs. I can not set the mask for the world cloud. In python, this package is much user-friendly.
+
+To be notice, the mask picture is very important. You can only use the rgb format. The picture has "0, 0, 0" for the background, "255, 255, 255" for the background. rgbi format is not supported even if it is very similar to rgb.
+
 ```python
 from os import path
 from PIL import Image
@@ -23,19 +27,19 @@ import matplotlib.pyplot as plt
 from wordcloud import WordCloud, STOPWORDS
 
 ## Read the whole text.
-text = open('alice.txt').read()
+text = open('tmp.txt').read()
 
 ## read the mask image
 ## taken from
 ## http://www.stencilry.org/stencils/movies/alice%20in%20wonderland/255fk.jpg
-alice_mask = np.array(Image.open("alice_mask.png"))
+alice_mask = np.array(Image.open("/home/ken/Downloads/cloud.png"))
 
 stopwords = set(STOPWORDS)
 stopwords.add("said")
 
 wc = WordCloud(background_color="white",
-               max_words=200, mask=alice_mask,
-               max_font_size=200, # 根据你的图片大小定义
+               max_words=512, mask=alice_mask,
+               max_font_size=10, # 根据你的图片大小定义
                stopwords=stopwords)
 ## generate word cloud
 wc.generate(text)

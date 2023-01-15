@@ -21,6 +21,28 @@ curl -O https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
 sh Miniconda3-latest-Linux-x86_64.sh
 ```
 
+Conda would add code for initiate it at the end of the `.bashrc`. You may need to copy them in to the `~/.zshrc` if you are using `zsh`.
+An example of codes after you run `cat ~/.bashrc`
+<pre>
+
+And then, you can start the conda by `source ~/.zshrc` or open a new terminal.
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/ken/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/ken/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/ken/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/ken/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+</pre>
+
 ## 2. Setup Channels
 You may need to add the bin file in your environment
 ```bash
@@ -49,6 +71,11 @@ source deactivate
 conda deactivate
 ```
 
+## Delete you Environment
+
+```bash
+conda remove --name snpeff --all
+```
 ## Common Software for Bioinformatics
 
 ```bash
@@ -74,3 +101,25 @@ and use `conda config --show-sources` to view config file locations
 
 Soving his by run:
 `conda config --remove-key channels`
+
+### GLIBC_2.17
+
+<pre>
+ImportError: /lib64/libc.so.6: version 'GLIBC_2.14' not found
+ImportError: /lib64/libc.so.6: version 'GLIBC_2.15' not found
+ImportError: /lib64/libc.so.6: version 'GLIBC_2.17' not found
+</pre>
+
+This error is very wired. When you have sudo right, you can solve it easily. But when you don't have sudo right, I believe that the quickest way to "solve", bypass actually, this problem is donw-grade your libraries. Most of time, the conflict comes from `zlib` and  `Xz`. This is not the only way to solve it in CentOS 6.
+
+```bash
+conda install Xz==5.2.3 zlib==1.2.8 #numpy==1.9.3
+```
+
+
+<style>
+pre {
+  background-color:#38393d;
+  color: #5fd381;
+}
+</style>

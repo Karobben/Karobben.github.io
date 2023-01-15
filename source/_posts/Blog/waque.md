@@ -56,11 +56,11 @@ waque init
 通過`waque export ***.md` 便可以上傳同步筆記了!
 <span style="color:salmon;">注意:</span> 直接編輯文檔並上傳, 會出現:
 
-```bash
+<pre>
 ✖  error     更新 安卓手机 Turmux 搭建博客[is3vdm]
 { status: 400,
   message: '抱歉，语雀不允许通过 API 修改 Lake 格式文档，请到语雀进行操作。' }
-```
+</pre>
 
 只需要去網頁上, 把該文檔刪除, 然後就可以上傳了.
 
@@ -74,7 +74,7 @@ waque init
 [^A]: 择势勤; Markdown语法大全(超级版); 简书; 2019.05.02 16:37:47.
 
 
-#### 在语雀無法使用(hexo 可以):
+### 在语雀無法使用(hexo 可以):
 - 腦圖;流程圖等語法
 - `<details>`或region 摺疊標籤
 - html 的 height 屬性
@@ -86,9 +86,9 @@ waque init
 
 
 
-#### 可
+### 可
 
-##### 文字
+#### 文字
 - 註釋`[\\]:#` `<div style='display: none'>`
 - `<img>` 標籤
 - `<div align=right>` 排版標籤
@@ -99,29 +99,61 @@ waque init
 - `这是文字~右下角~` 这是文字~右下角~
 - `这是==高亮==文字` 这是==高亮==文字 (**hexo 失效**)
 - `这是加~~删除线~~的文字` 这是加~~删除线~~的文字
-- ``![图片alt](图片地址 ''图片title'')``
-- ```<s><sub><sup><u><b>```
+- `![图片alt](图片地址 ''图片title'')`
+- `<s><sub><sup><u><b>`
 - `flow`
 - `mermaid`
 
-##### 缩写
+#### 字体
 
+
+
+```html
+<font face="黑体">我是黑体字</font><br>
+<font face="微软雅黑">我是微软雅黑</font><br>
+<font face="STCAIYUN">我是华文彩云</font><br>
+<font color=red>我是红色</font><br>
+<font color=#008000>我是绿色</font><br>
+<font color=Blue>我是蓝色</font><br>
+<font size=5>我是尺寸</font><br>
+<font face="黑体" color=green size=5>我是黑体，绿色，尺寸为5</font>
 ```
+
+<font face="黑体">我是黑体字</font><br>
+<font face="微软雅黑">我是微软雅黑</font><br>
+<font face="STCAIYUN">我是华文彩云</font><br>
+<font color=red>我是红色</font><br>
+<font color=#008000>我是绿色</font><br>
+<font color=Blue>我是蓝色</font><br>
+<font size=5>我是尺寸</font><br>
+<font face="黑体" color=green size=5>我是黑体，绿色，尺寸为5</font>
+
+
+#### 缩写
+
+```md
 convert to HTML
 *[HTML]: HyperText Markup Language
+# Same as
+<a title="HyperText Markup Language">HTML</a>
 ```
-convert to HTML
+
+convert to HTML (hold you mouse on the HTML)
+<a title="HyperText Markup Language">HTML</a>
+
 *[HTML]: HyperText Markup Language
 
-##### 待办事项 (**hexo 失效**)
+#### 待办事项 (**hexo 失效**)
 `- [ ] item`
 - [ ] item
 
 `- [x] item2`
 - [x] item2
 
-##### 公式 (**hexo 失效**)
-解决办法： [链接](https://Karobben.github.io/2020/06/30/Blog/Hexo_math/)
+#### 公式 (**hexo 失效**)
+
+hexo 解决办法： [链接](https://Karobben.github.io/2020/06/30/Blog/Hexo_math/)
+
 ```md
 $$
 \Gamma(z) = \int_0^\infty t ^ {z-1} e ^ {-t}dt
@@ -134,6 +166,7 @@ $$
 
 公式对齐：
 参考： [芳草碧连天lc 2016](https://blog.csdn.net/leichaoaizhaojie/article/details/53463598)
+
 $$
 \begin{equation}
 \begin{aligned}
@@ -143,17 +176,32 @@ $$
 \end{equation}
 $$
 
-##### 表格
+
+#### 表格
+
+```md
+|表头1|表头2|表头3|表头4|5|
+|--|---------|:--|--:|:--:|
+|普通|加宽|靠左对齐|靠右对齐|居中|
+|普普通通|(无效))|我从左边开始|我向右看齐|我在中间|
 ```
 |表头1|表头2|表头3|表头4|5|
 |--|---------|:--|--:|:--:|
 |普通|加宽|靠左对齐|靠右对齐|居中|
 |普普通通|宽|我从左边开始|我向右看齐|我在中间|
+
+Tricks for 加宽无效:
+
+```md
+|表头1|表头2|
+|--|--|
+|1|2<font alpha=white>aaaaaaaaaaaaaaaaaaaaaaaaaaa</font>|
 ```
-|表头1|表头2|表头3|表头4|5|
-|--|---------|:--|--:|:--:|
-|普通|加宽|靠左对齐|靠右对齐|居中|
-|普普通通|宽|我从左边开始|我向右看齐|我在中间|
+
+|表头1|表头2|
+|--|--|
+|1|2<font color=white>aaaaaaaaaaaaaaaaaaaaaaaaaaa</font>|
+
 
 更多: [复杂表格 aladdin_sun 2018](https://blog.csdn.net/sunbocong/article/details/81033915)
 

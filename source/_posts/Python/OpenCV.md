@@ -143,6 +143,49 @@ lineType = 8
 cv.rectangle(img, ptLeftTop, ptRightBottom, point_color, thickness, lineType)
 ```
 
+#### Draw a oval / ellipse
+
+Source: [geeksforgeeks.org](https://www.geeksforgeeks.org/python-opencv-cv2-ellipse-method/)
+
+```python
+center_coordinates = (120, 100)
+axesLength = (100, 50)
+angle = 30
+startAngle = 0
+endAngle = 360
+# Blue color in BGR
+color = (255, 0, 0)
+# Line thickness of -1 px
+thickness = -1
+# Using cv2.ellipse() method
+# Draw a ellipse with blue line borders of thickness of -1 px
+image = cv2.ellipse(image, center_coordinates,
+                    axesLength, angle, startAngle,
+                    endAngle, color, thickness)
+# Displaying the image
+cv2.imshow("Ellipse", image)
+```
+#### Draw an arrow
+
+Source: [geeksforgeeks.org](https://www.geeksforgeeks.org/python-opencv-cv2-arrowedline-method/)
+
+```python
+start_point = (225, 0)
+# End coordinate
+end_point = (0, 90)
+# Red color in BGR
+color = (0, 0, 255)
+# Line thickness of 9 px
+thickness = 9
+# Using cv2.arrowedLine() method
+# Draw a red arrow line
+# with thickness of 9 px and tipLength = 0.5
+image = cv2.arrowedLine(image, start_point, end_point,
+                    color, thickness, tipLength = 0.5)
+# Displaying the image
+cv2.imshow("arrow", image)
+```
+
 #### Write on the image
 ```python
 img = cv2.imread('messi5.jpg',0)
@@ -180,7 +223,7 @@ while (True):
 ```python
 ## fps of this Video
 fps_c = cap.get(cv2.CAP_PROP_FPS)
-frame _total = cap.get(cv2.CAP_PROP_FRAME_COUNT)
+frame_total = cap.get(cv2.CAP_PROP_FRAME_COUNT)
 Video_h = cap.get(cv2.CAP_PROP_FRAME_HEIGHT)
 Video_w = cap.get(cv2.CAP_PROP_FRAME_WIDTH)
 ```

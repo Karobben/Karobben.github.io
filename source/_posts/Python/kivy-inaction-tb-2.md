@@ -9,9 +9,9 @@ excerpt: "Write a kivy toolbox for yourselves."
 description: "Write a kivy toolbox for yourselves."
 tags: [Python, Kivy]
 category: [Python, Kivy, Toolbox]
-cover: 'https://z3.ax1x.com/2021/04/29/gkxmWT.gif'
-thumbnail: 'https://z3.ax1x.com/2021/04/29/gkxmWT.gif'
-covercopy: '© Karobben'
+cover: 'https://kivy.org/static/images/kivy-colorwheel-examples.jpg'
+thumbnail: 'https://kivy.org/logos/kivy-logo-black-64.png'
+covercopy: '<a href="https://kivy.org/">© kivy</a>'
 ---
 
 ```

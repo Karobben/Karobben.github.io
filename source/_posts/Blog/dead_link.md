@@ -145,9 +145,8 @@ cat $(find public/ -name "*.html")| \
   awk -F"#" '{print $1}' |sed 's/"//g'| \
   sort|uniq| \
   grep -v ^\"\#|grep -v ^/ |\
-  grep -v "https://karobben.github.io/"| \
-  grep -v javascri | sed 's/^/[1](/;s/$/)/' > link_list.md
-
+  grep -vE "https://karobben.github.io/|javascri" |\
+  grep -E "^http|^ftp" |sed 's/^/[1](/;s/$/)/' > link_list.md
 ```
 
 Then, run another [script](https://karobben.github.io/2020/10/25/Blog/Py_url_Rtime/#1-Extract-and-Calculates-Responding-Time)

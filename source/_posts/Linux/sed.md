@@ -96,7 +96,31 @@ sed '5,$ d' filename
 equo
 sed '4 q' filename
 equo head -n 4 filename
-
-
-
 ```
+
+
+## Others
+
+### remove ^M
+
+!!! note Before
+    <pre>
+    TGCTGATCGATCGTAGCTAGCTAGCG<font color="red">^M</font>
+    CATGTCTGATCAGTGCTAGCTGATCG<font color="red">^M</font>
+    </pre>
+
+`sed -i 's/\r//' file`
+
+!!! note After
+    <pre>
+    TGCTGATCGATCGTAGCTAGCTAGCG
+    CATGTCTGATCAGTGCTAGCTGATCG
+    </pre>
+
+
+<style>
+pre {
+  background-color:#38393d;
+  color: #5fd381;
+}
+</style>

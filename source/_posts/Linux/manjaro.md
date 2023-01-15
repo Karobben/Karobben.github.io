@@ -1,7 +1,7 @@
 ---
 toc: true
 url: manjaro
-covercopy: <a herf="https://manjaro.org.cn/11109">© manjaro.org</a>
+covercopy: <a herf="https://forum.manjaro.org/t/manjaro-20-1-mikah-got-released/24173">© philm</a>
 priority: 10000
 date: 2021-05-13 14:31:08
 title: "To start with manjaro"
@@ -10,8 +10,8 @@ description: "Started with Manjaro"
 excerpt: "Started with Manjaro"
 tags:  [Linux]
 category: [Linux]
-cover: "https://manjaro.org.cn/wp-content/uploads/2019-07-13-19-33-38-%E7%9A%84%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png"
-thumbnail: "https://manjaro.org.cn/wp-content/uploads/2019-07-13-19-33-38-%E7%9A%84%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png"
+cover: "https://forum.manjaro.org/uploads/default/optimized/2X/6/63c8d1ff720cfb682ed046dd8e67c37d7083ed1b_2_690x388.jpeg"
+thumbnail: "https://forum.manjaro.org/uploads/default/optimized/2X/6/63c8d1ff720cfb682ed046dd8e67c37d7083ed1b_2_690x388.jpeg"
 ---
 
 ## Manjaro

@@ -2,7 +2,6 @@
 toc: true
 url: tsne
 covercopy: <a href="https://towardsdatascience.com/t-sne-python-example-1ded9953f26">© Cory Maklin</a>
-priority: 10000
 date: 2021-11-06 16:33:38
 title: "t-sne"
 ytitle: "t-sne"
@@ -12,6 +11,7 @@ tags: [Statistic, Cluster]
 category: [Notes, Statistic, Distribution]
 cover: "https://miro.medium.com/max/640/1*lKLB_1aghhnxQjMQziEyGQ.gif"
 thumbnail: "https://e7.pngegg.com/pngimages/339/67/png-clipart-science-technology-engineering-and-mathematics-logo-pi-math-white-text.png"
+priority: 4500
 ---
 
 ## t-SNE

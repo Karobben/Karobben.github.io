@@ -76,6 +76,27 @@ pv.out <- pathview(gene.data = gse16873.d[, 1:3],
 ## Start with your data
 
 ### Genelist
+
+!!! note Examples of acquire ko id through KGG API:
+
+```bash
+curl https://rest.kegg.jp/link/ko/dme:Dmel_CG7138+dme:Dmel_CG3936| sed 's/:/\t/g'| awk '{print $2,$4}'
+```
+
+```r
+Anno_TB = data.frame()
+for(i in c(1:(round(length(A)/200)+1)))
+{
+    AA <- paste("dme:Dmel_",A[c(((i-1)*200):(i*200))], sep = "", collapse = "+")
+    Anno <- read.table( paste("https://rest.kegg.jp/link/ko/", AA, sep = ""))
+    Anno_TB <- rbind(Anno_TB, Anno)
+}
+
+Anno_TB[[1]] <- as.data.frame(str_split_fixed(Anno_TB[[1]], "_", 2))[[2]]
+Anno_TB[[2]] <- as.data.frame(str_split_fixed(Anno_TB[[2]], ":", 2))[[2]]
+```
+
+
 1. Make your gene list
 ```bash
 echo "ID F
@@ -83,6 +104,8 @@ K18606 2
 K00457 -1
 K00815 -2"> gene.list
 ```
+
+
 2. run in R
 ```R
 library(pathview)

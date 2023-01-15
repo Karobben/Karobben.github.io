@@ -40,11 +40,20 @@ makeblastdb -in db.fasta -dbtype prot/nucl -parse_seqids -out dbname
 
 ### model of uniprot annotation
 ```bash
-blastx -query T0.05.fa -out blast.out -db /media/ken/Base/blastdb/uniprot_sprot.fasta -outfmt "6 qacc sacc evalue stitle sblastname" -evalue 1e-5 -max_target_seqs 1 -num_threads 8 -max_hsps 1
+blastx -query T0.05.fa -out blast.out -db /media/ken/Base/blastdb/uniprot_sprot.fasta -outfmt "6 qacc sacc evalue pident qcovs" -evalue 1e-5 -max_target_seqs 1 -num_threads 8 -max_hsps 1
 ```
 
+Output explanation for "6 qacc sacc evalue pident qcovs":
+- "qacc": Query ID
+- "sacc": Subject ID
+- "evalue": Evalue
+- "pident": Identity (Percentage)
+- "qcovs": Query coverage
+
+
 ## Output format
-```bash
+
+<pre>
 Options 6, 7 and 10 can be additionally configured to produce
 a custom format specified by space delimited format specifiers.
 The supported format specifiers are:
@@ -101,4 +110,12 @@ The supported format specifiers are:
       qcovs means Query Coverage Per Subject
     qcovhsp means Query Coverage Per HSP
      qcovus means Query Coverage Per Unique Subject (blastn only)
-```
+</pre>
+
+
+<style>
+pre {
+  background-color:#38393d;
+  color: #5fd381;
+}
+</style>

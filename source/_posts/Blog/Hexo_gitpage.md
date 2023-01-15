@@ -23,12 +23,30 @@ Date: 2020/6/14
 
 
 ## Quick to build a hexo folder
+Before doing that, make sure the version of nodejs:
 ```bash
-sudo apt upgrade node
+node -v
+```
+<pre>
+v18.8.0
+</pre>
+If the version is below 16, please upgrade it.
+[Brian Boucheron, 2020: Upgrade Node.js](https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-20-04)
+```bash
+wget https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh
+bash install.sh
+source ~/.bashrc
+nvm list-remote
+nvm install v18.8.0
+```
 
-hexo init /media/ken/Data/Github/hexo-icarus
-cd /media/ken/Data/Github/hexo-icarus
-sudo npm install -g hexo-cli
+```bash
+sudo apt install npm
+
+hexo init hexo
+cd hexo
+npm install node
+#npm install -g hexo-cli
 npm install
 ```
 
@@ -53,6 +71,7 @@ reference: [天魂_TH 2017](https://www.jianshu.com/p/2899bd2a0a20)
 
 ## 2. npm Download
 
+Change the mirror if you in China
 ```bash
 npm config set registry https://registry.npm.taobao.org
 ```
@@ -90,6 +109,7 @@ reference: [慧行说 2018](https://www.liuyude.com/How_to_make_your_HEXO_blog_s
 npm install --save hexo-filter-flowchart
 npm install --save hexo-filter-mermaid-diagrams
 npm install --save hexo-filter-sequence
+npm install hexo-renderer-pug hexo-renderer-stylus
 ```
 If you have any trouble with **mermaid**, please went to see: [荒野之萍 2019](https://blog.csdn.net/qq_36347375/article/details/90478335)
 

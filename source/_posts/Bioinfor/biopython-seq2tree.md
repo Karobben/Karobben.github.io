@@ -1,7 +1,7 @@
 ---
 toc: true
 url: biopython_seq2tree
-covercopy: © Karobben
+covercopy: <a href="https://www.pexels.com/photo/python-book-1181671/">© Christina Morillo</a>
 priority: 10000
 date: 2021-10-22 22:32:09
 title: "Biopython: The quickest way to biuld and visualize tree with python"
@@ -9,9 +9,9 @@ ytitle: "Biopython: 超快一键建树"
 description: "Quickest using python to build and visualize the tree from fasta file| Biopython; ggtree"
 excerpt: "Quickest using python to build and visualize the tree from fasta file| Biopython; ggtree"
 tags: [Bioinformatic, Scripts, Biopython, Python, Align]
-category: [Bio]
-cover: "https://z3.ax1x.com/2021/10/23/5g649f.png"
-thumbnail: "https://biopython.org/assets/images/biopython_logo_white.png"
+category: [Biology, Bioinformatics, Protocol]
+cover: "https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg?auto=compress&cs=tinysrgb&w=600&h=750&dpr=1"
+thumbnail: "https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg?auto=compress&cs=tinysrgb&w=600&h=750&dpr=1"
 ---
 
 ## Align your Sequence

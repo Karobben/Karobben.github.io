@@ -59,3 +59,33 @@ def main():
 if __name__ == '__main__':
     main()
 ```
+
+---
+
+PaddleGAN
+
+```bash
+python -m pip install munch scikit-image
+
+python -m pip install paddlepaddle-gpu==2.2.2
+```
+
+```python
+import paddle
+#paddle.set_device('cpu')
+paddle.set_device('gpu')
+from ppgan.apps import DeOldifyPredictor
+deoldify = DeOldifyPredictor()
+pred = deoldify.run_image("/mnt/8A26661926660713/Deng/Cell_segmentation/lgl4wd5d1_c2.tif")
+pred.save('deoldify_result.jpg')
+```
+
+
+$$\frac{r_C×C +rG×G}{(1-r_{CG})(C+G)}=r_T$$
+$C=53012;\ r_C=38.27\%$
+$G=19742.5;\ r_G=13\%$
+$TM=73304;\ r_{T}=36.7\%$
+$r_{CG}=10.725\%$
+
+$(G+C)*(1-r_{CG})=64951.58$
+$\frac{38.27\%×53012 + 13\%19742.5}{(1-10.725\%)(53012+19742.5)}≈38.811%$

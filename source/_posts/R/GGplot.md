@@ -19,6 +19,13 @@ priority: 4
 
 ##  ggsave
 
+<style>
+pre {
+  background-color:#38393d;
+  color: #5fd381;
+}
+</style>
+
 ```r
 ggsave(filename, plot = last_plot(), device = NULL, path = NULL, scale = 1, width = NA, height = NA, units = c("in", "cm", "mm"), dpi = 300, limitsize = TRUE, ...)
 ggsave('plot.pdf', width=7,height=3)
@@ -174,6 +181,7 @@ simplot(d) + scale_fill_gradientn(colors=cc(100)) + theme()
 ```
 
 
+
 ## Fan plot
 
 ```r
@@ -213,6 +221,9 @@ p1 <- ggplot(mtcars,aes(mpg)) + geom_histogram() + theme_light() + ggtitle('hist
 p2 <- ggplot(mtcars,aes(mpg)) + geom_freqpoly() + theme_light()  + ggtitle('freqpoly')
 
 p2/p1
+
+# order the legend
+P11/P33 + plot_layout(guides = "collect")  & theme(legend.position = "right")
 ```
 ![image.png](https://cdn.nlark.com/yuque/0/2020/png/691897/1580024415512-f1b4c1e4-5c56-4edf-a230-bee17cec80bf.png#align=left&display=inline&height=321&name=image.png&originHeight=321&originWidth=734&size=29404&status=done&style=none&width=734)
 <a name="vFIpv"></a>
@@ -269,6 +280,36 @@ reference: [九茶 2015](https://blog.csdn.net/Bone_ACE/article/details/47427453
 ```r
 + scale_x_reverse()
 + scale_y_reverse()
+```
+
+## Legends
+
+Basic usage:
+
+```r
++ theme( legend.position='none')
+```
+### Position
+
+```r
+legend.position = 'none'        # delete legend
+legend.position = "left"        # Position left
+legend.position = "right"       # Position right
+legend.position = "bottom"      # Position bottom
+legend.position = "top"         # Position Top
+legend.position = c(0.9, 0.1)   # relative postion in right-bottom.
+```
+
+### Legends' name
+
+```r
+# alter in the given scale
+scale_color_gradient2(name = "My title")
+
+# labs()
+labs(color = "title for color",
+     size  = "title for size",
+     fill  = "title for fill")
 ```
 
 ## Texts
@@ -393,14 +434,43 @@ table$X=factor(table$X, levels=table[[1]])
 ```
 
 
-###  Color patern
+###  Colors (scale_fill/scale_color)
+
+Default color palette for 4 samples:
+
+```r
+library(ggplot2)
+TB <- ChickWeight[ChickWeight$Chick %in% c(1,30, 40,50),]
+summary(TB)
+
+P <- ggplot(TB,aes(x=Time, y = weight, fill=Diet)) +
+    geom_bar(stat = 'identity', position = 'dodge') + theme_bw()
+P
+```
+<pre>
+    weight            Time           Chick    Diet  
+Min.   : 41.00   Min.   : 0.00   1      :12   1:12  
+1st Qu.: 66.75   1st Qu.: 5.50   30     :12   2:12  
+Median :117.50   Median :11.00   40     :12   3:12  
+Mean   :130.06   Mean   :10.92   50     :12   4:12  
+3rd Qu.:172.00   3rd Qu.:16.50   18     : 0         
+Max.   :321.00   Max.   :21.00   16     : 0         
+                             (Other): 0         
+</pre>
+
+![](https://s1.ax1x.com/2022/06/03/XNBPyV.png)
+
+If we have only few group like less than 13, we can use the preset color palette from `RColorBrewer` by `scale_color_brewer`
 
 ```r
 library("RColorBrewer")
 
-+ scale_color_brewer(palette =  "RdYlBu")
-+ scale_fill_brewer(palette =  "RdYlBu")
+#P + scale_color_brewer(palette =  "RdYlBu") # this is for line nad outline of the bar
+P + scale_fill_brewer(palette =  "RdYlBu")
 ```
+
+![](https://s1.ax1x.com/2022/06/03/XNBiLT.png)
+
 
 <pre>
 Palettes:
@@ -420,12 +490,34 @@ Palettes:
   YlGnBu, YlOrBr, YlOrRd
 </pre>
 
+If we only interesting in few of the color from the palette, we can print the color value and assign them with `scale_color_manual`/`scale_fill_manual`
+
+Show the value of the colors:
+
+```r
+brewer.pal(n = 12, name = "Paired")
+```
+
+<pre>
+'#A6CEE3''#1F78B4''#B2DF8A''#33A02C''#FB9A99''#E31A1C''#FDBF6F''#FF7F00''#CAB2D6''#6A3D9A''#FFFF99''#B15928'
+</pre>
 
 ```r
 ##Example
 scale_fill_manual(values=c("#FB882C","#5B88A0"))
-scale_fill_brewer + (..., type = "seq", palette = 1, direction = 1, aesthetics = "colour")
+```
 
+If the group number is larger than 3 and we still want to using the color from palette, one resolution is combine multiple color palettes. Another Resolution is using colors from a palette or a list again and again.
+
+```r
+library("RColorBrewer")
+
+G_number = 100
+N = 12
+P + scale_fill_manual(values= head(rep(brewer.pal(n = N, name = "Paired"),round(G_number/N)+1), G_number))
+```
+
+```r
 library("ggthemes")
 
 ## Gradient

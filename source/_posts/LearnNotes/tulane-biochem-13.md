@@ -19,374 +19,219 @@ thumbnail: "https://static-s.aa-cdn.net/img/ios/1535372364/8bea5e7d0cecf8c514881
 ### DAN
 ### Puring; Pyrimidine
 
+|![Puring; Pyrimidine](https://z3.ax1x.com/2021/11/25/oAgyCV.png)|
+|:-:|
+|© Zac Pursell|
 Nucleotides
-> ==Exam: Nucleotide synthesis==
 
 ## ==Biosynthesis of the DNA & RAN purines==
-AMP synthesis requires GTP hydrolysis and aspartate
-GPM syntehsis requries ATP and glutamine
+> ==Exam: Nucleotide synthesis==
 
-## ==Biosynthesis of the DNA & RAN Pyrimidine==
+### OverView
 
-### Ribonucleotide reductases reduction
-Tyrasine radical
+|![Puring; Pyrimidine](https://z3.ax1x.com/2021/11/25/oA2ydA.png)|
+|:-:|
+|© Zac Pursell|
 
-### Ribonucleotide ruduction is highly regulated
+==Adenine and guanine nucleotides originate from inosinic acid (IMP)==, which derives its atoms from phosphoribosyl pyrophosphate (==PRPP=), amino acids, formate and CO~2~
+
+|![IMP](https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Inosinic_acid_structure.svg/800px-Inosinic_acid_structure.svg.png)|![PRPP](https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Phosphoribosyl_pyrophosphate.svg/1920px-Phosphoribosyl_pyrophosphate.svg.png)|
+|:-:|:-:|
+|[© wikipedia](https://en.wikipedia.org/wiki/Inosinic_acid)|[© wikipedia](https://en.wikipedia.org/wiki/Phosphoribosyl_pyrophosphate)|
+
+<details><summary>
+
+  ==Click to see from PRPP to IMP==
+  </summary>
+
+  ![© Biochemistry](http://www.columbia.edu/cu/biology/courses/w3034/Larry/readings/PurineChapter/8883n27_03.jpg)
+</details><br>
+
+==AMP== synthesis requires ==GTP hydrolysis== and aspartate==
+==GPM== syntehsis requries ==ATP and glutamine==
+
+|![](http://www.columbia.edu/cu/biology/courses/w3034/Larry/readings/PurineChapter/8883n27_06.jpg)|
+|:-:|
+|[© Biochemistry; Garrett & Grisham](http://www.columbia.edu/cu/biology/courses/w3034/Larry/readings/PurineChapter/PurineChapter.html)|
+
+## Biosynthesis of the RNA Purine Ribonucleotides
+
+$$
+AMP+ATP \overset{NMK}{\leftrightharpoons}  2 ADP + 2NTP \overset{NDK}{\leftrightharpoons} 2ATP + 2NDP
+$$
+
+$$
+GMP+GTP \overset{NMK}{\leftrightharpoons} 2 GDP + 2NTP \overset{NDK}{\leftrightharpoons} 2GTP + 2NDP  
+$$
+
+NMK: Nuclioside Monophosphate Kinase
+NDK: Nuclioside Diphosphate Kinase
+
+
+
+### Regulation of the Nucleotide Synthesis
+
+Nucleotide Synthesis is Highly Regulated: Through **Feedback Inhibition**, **Feedforward Activation** and **Coordinate Regulation**
+
+|![](https://z3.ax1x.com/2021/11/25/oALCuR.png)|
+|:-:|
+|[© Fundamentals of Biochemistry, 3rd edition](https://www.amazon.com/Fundamentals-Biochemistry-Life-Molecular-Level/dp/0470129301/)|
+
+
+|![ribonucleotide reductase](http://www.columbia.edu/cu/biology/courses/w3034/Larry/readings/PurineChapter/8883n27_22.jpg)|
+|:-:|
+|[© Biochemistry; Garrett & Grisham](http://www.columbia.edu/cu/biology/courses/w3034/Larry/readings/PurineChapter/PurineChapter.html)|
+
+Activity-determining effector (Hexomerization site)
+
+Ribonucleotide reductase is a Allosteric enzyme. Schematic diagram of the quaternary structure. The enzyme consists of two identical pairs of subunits, R1~2~ and R2~2~. Each R2 subunit contains a binuclear Fe(III) complex that generates a phenoxy radical at Tyr 122. The R1 subunits each contain three different allosteric effector sites and five catalytically important Cys residues. The enzyme’s two active sites occur at the interface between the R1 and R2 subunits.
+
+### Ribonucleotide Reductases Reduce NDPs to dNDPs
+
+$$
+CDP \& UDP \underset{dTTP}{\overset{ATP}{\longrightarrow}} dCDP \& dUDP
+$$
+$$
+GDP \overset{dTTP}{\longrightarrow} dGDP
+$$
+$$
+NDP \overset{dATP}{\longrightarrow} dNDP
+$$
+
+### dTMP Is Synthesized from dUMP
+
+==Not TDP → dTDP reduction==
+
+$UDP \overset{RNR}{\longrightarrow} dUDP \overset{NDP\ kinase}{\longrightarrow} dUTP \overset{dUTPase}{\longrightarrow} dUMP \overset{thymidylate\ synthesis}{\longrightarrow} dTMP  → dTTP$
+
+$dUMP + THF \overset{thymidylate\ synthase}{\longrightarrow} dTMP + DHF$
+
+dUTP intermediates are quickly broken down into dUMP to avoid mutagenic dUTP incorporation. The concentration of DHF was quickly rescued by DHFR:
+
+$DHF  \overset{DHFR}{\longrightarrow} THF$
 
 ## FdU and Methotrexate are anticancer compounds thath disrupt dTMP Biosynthehsis
-Cancer require large amount of dTTP
 
-### Purines Can Also Be Salvaged
+Cancer require large amount of dTTP than do normal cells.
 
-Unlike de novo purine syntehsis, purine salvage is NOT conserved across species
+| ![Fluorodeoxyuridylate](https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/5-Fluorodeoxyuridine_monophosphate.svg/715px-5-Fluorodeoxyuridine_monophosphate.svg.png) | ![Methotrexate](https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Methotrexate_skeletal.svg/1280px-Methotrexate_skeletal.svg.png)     |
+| :-------------: | :-------------: |
+| [© wikipedia](https://en.wikipedia.org/wiki/Fluorodeoxyuridylate)       | [© wikipedia](https://en.wikipedia.org/wiki/Methotrexate)|
+|5-Fluorodeoxyuridylate(FdUMP): ==locks== dTMP synthesis by binding and irreversibly inhibiting thymidylate synthase|Methotrexate: ==DHF analog==; binds tightly and inhibits DHFR|
+
+### Purines Salvage
+
+Unlike de novo purine syntehsis, ==purine salvage is NOT conserved== across species.
+
+==Mammal==:
+$Adenosine + PRPP \overset{APRT}{\longrightarrow} AMP + PP_i$
+$Hypoxanthine/Guanine + PRPP\overset{HPRT}{\longrightarrow} AMP + PP_i$
 
 ### Animal purin catabolism
-PRPP synthesis
 
-Purube ubcreasm nuroue → = =
+|![purin catabolism](https://z3.ax1x.com/2021/11/26/oEZzTK.png)|
+|:-:|
+|[© Fundamentals of Biochemistry, 3rd edition](https://www.amazon.com/Fundamentals-Biochemistry-Life-Molecular-Level/dp/0470129301/)|
 
-## Watson & Crick
 
---
-## DNA polymerases
+## DNA structures and metabolism
 
-Some DNA polymerase have 3' → 5' syntehsis
+### The B-DNA Molecule
 
-### Inhibitors of DNA synthesis and their specificities
+|![Structure of the DNA](https://microbenotes.com/wp-content/uploads/2019/04/Different-forms-of-DNA.jpg)|
+|:-:|
+|[© Sagar Aryal, 2019](https://microbenotes.com/different-forms-of-dna-b-form-a-form-z-form/)|
 
-AZT and DDI: reverse transcriptase, chain terminate
+- Right Handed;
+- 20 Å in diameter with two grooves.
+- The distance between the bases (rise) is 3.4 Å, 10 bp
+- Major groove is ~1.2nm wide, 0.6~0.8nm deep.
+- minor groove is ~0.7nm Wide.
 
-nuceoside analogues of guanosine: phosphorylated by a viral kinase
+B-form by far most common
+dsDNA under dehydrating conditions can exist as A-form
 
-### Polymerase processivity Enhanced by a Clamp
+### Metabolic Instability of RNA
 
-β clamp in bacteria
-PCNA in eukayotes
-loaded onto dsDNA on calmp
+|![RNA self-hydrolysis](https://www.researchgate.net/profile/Shingo-Nakamura-2/publication/10654215/figure/fig3/AS:601657004011524@1520457616208/Mechanism-of-RNA-cleavage-under-mildly-acidic-conditions-In-the-range-of-approximately.png)|
+|:-:|
+|[© Gail Mitchell Emilsson, et al; 2003](https://www.researchgate.net/publication/10654215_Ribozyme_speed_limits)|
 
-Clamp loader couples ATP Hydrolysis to Clamp Loading
+==RNA is intrinsically unstable== in aqueous media and undergoes ==self-hydrolysis== due to nucleophylic attack of the 2 ’OH on the adjacent phosphodiester linkage. This instability ==increases at alkaline pH==.
 
-Sliding clamp + ATP: open and bind DNA; ATP → ADP, DNA releases
+### Base pairing
 
-### DNA ligases
+|![DNA Base pairing](https://www.researchgate.net/profile/William-Brown-21/publication/334974633/figure/fig2/AS:788647141986305@1565039539540/a-standard-base-pairing-arrangements-of-the-canonical-nucleotide-isomers-and-b.png)|
+|:-:|
+|[© William Brown](https://www.researchgate.net/publication/334974633_Unified_Physics_and_the_Entanglement_Nexus_of_Awareness)|
 
-Eukaryotic DAN ligase use ATP rather than NADP
 
-### initiation od DNA replication in E. coli
+### Syn- and anti-configurations: the basis for Z-DNA formation
 
-origin region (OriC) ~245bp
+|![purin catabolism](https://z3.ax1x.com/2021/11/26/oEeFld.png)|
+|:-:|
+|[© Fundamentals of Biochemistry, 3rd edition](https://www.amazon.com/Fundamentals-Biochemistry-Life-Molecular-Level/dp/0470129301/)|
 
-Duplex unwinding by DNA helicase
-- Exposed ssDNA allows SSB and helic ...
 
+Purine nucleotides, particularly guanine nucleotides, have a a tendency to exist in the “syn” configuration. A repeats of GC sequence causes a distortion in the double helix with the phosphates zig-zagging in the backbone.
 
-Initiation: OriC-DnaA intercation → Entry of SSB and DnaB (hexlicase) → ENtry of promase → RNA primers are synthesized and the elongation complexes for 2 DNA replication forks are assembled
+### Sugar-base configurations that affect the conformation of DNA and RNA molecules
 
-Elongation:
+|![Ribose ring in C2′endo and C3′ endo conformation](https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Ribose_ring_in_C2%E2%80%B2endo_and_C3%E2%80%B2_endo_conformation.svg/530px-Ribose_ring_in_C2%E2%80%B2endo_and_C3%E2%80%B2_endo_conformation.svg.png)|
+|:-:|
+|[© wikipedia](https://commons.wikimedia.org/wiki/File:Ribose_ring_in_C2%E2%80%B2endo_and_C3%E2%80%B2_endo_conformation.svg)|
 
-## Prokaryotic DNA replication
+C-2' endo (South): Distance of phosphates: 7.0 Å; Favored in B-Form DNA
+C-3' endo (North): Distance of phosphates: 5.9 Å; Favored in RNA and some DNA forms
 
+### helical conformations
 
-### A typical DNA replicsome
-synthesis of leading strand are coupled with lagging strand by clamploader complex.
+Polynucleotides have a natural tendency to form helical conformations due to stacking interactions between the adjacent hydrophobic bases of the polymer
 
-### The e.coli Pol III holoenzyme ...
 
-Pols enyzme subunit factors
+Hydrophobic forces on planar bases drive stacking interactions
 
-### Eukaryotic DNA replication:
+Random coils (unstacked polymers) are favored in alkaline solution, in some organic solvents and at high temperatures
 
-Pro: no cell cycle and start every time
+### Base Pair Geometry
 
-Eu: onece anc only once in S phase; highly regulated
+|![Base Pair Geometry](https://z3.ax1x.com/2021/11/26/oEfSfI.png)|
+|:-:|
+|© Zac Pursell|
 
-G1: Preparing
-Checkpoint: end of the S phase
+### Metabolic roles of cellular RNA
 
-Time is variatd
+|![Metabolic roles of cellular RNA](https://z3.ax1x.com/2021/11/26/oEfknS.png)|
+|:-:|
+|© Zac Pursell|
 
-### Eukaryotic chromaomse have multiple origins..
+### Structure of the RNA
 
-Pro: single initial site
-Euk: multiple initial site
+RNA double-helices exist in a variety of shapes
 
-### Eukaryotic replication initiation is hihgly oreder.. well regulated and complex...
-Helicase (Mcm2-7)
-Sld2/3 phosphorylated by CDK
+base-pairing, stacking interactions, covalently modified bases, 3 base hydrogen bonding all contribute to compact and complex structure
 
+### Ribosomal RNAs
+high degree of base pairing
 
-### Super Current Biochemical Reconstitution of Regulated replication origin firing
+large numbers of "stems" and "loops"
+unpaired bases can interact with ribosomal proteins or RNA bases from other RNAs
+base-paired segments are mostly α-helical
 
-### Termination in prokaryotes
+### Some RNAs Capable of Carrying Out Catalysis
 
-Ter sites, 2 converging new ds circular DNA molecules separated from each other by recombination and with assistance of
+self-splicing and self-cleavage reactions in vivo engineered catalysis in vitro
 
-### Cell are constantly exposed to agents that can cause damage to their genome
+### Genomes
 
-Repair, tolerant, destroy the cell
+- dsDNA, linear, e.g., eukaryotic nuclear DNA, many viruses.
+- dsDNA, circular, e.g., bacterial chromosomes, mitochondrial DNA, plasmids, some viruses.
+- ssDNA, circular or linear e.g., the genomes of some bacterial, plant and animal viruses.
+- ssRNA, e.g., the genomes of many viruses.
+- dsRNA, e.g., the genomes of many viruses.
 
-### ==Types of mutation==
-Transition: AT → G/C
-Transversion: A/T → C/G
-Frameshift: GGGGGG → GGGGG
+### Size of Genome
 
-## Base alteration
-Oxidation:
-8-oxodG(antl)-dC(antf)
-8-oxodG(synl)-dA(antf)
-
-The rotation of the bound which cause the shift of the side chain and attribute difference hydrogen bonds. 3 to 2, C to A
-
-Alkylation; Cross-links
-
-## Exogenous Damage: Exposure to ultraviolet radiation
-
-Absorbed by adjacent pyrimidine bind and form double bond and cause mutation or lethal during replication/transcription
-
-
-### Repair
-
-1. Base Excision Repair
-  - Single Nucleotide
-2. Nucleotide Excision Repair
-  - oligonucleotide
-3. Mismatch Excision Repair
-  - mismatched base
-
-## Base Excision Repair
-- how recognize
-- AP site
-- Donw string/ leading string doesn't matter
-- ligates involved
-
-
-## Nucleotide excission repair (NER)
-- recognize Enzymes (XPC)
-- recruit other factors
-- unwinding, mutation is exposed
-- Some protein was recruited and mistake was cut / rescued.
-
-Recognition → resynthesis
-
-## Xeroderma pigmentosum (XP)
-Accelerated skin cancer; mortality likely due to metastatic melanoma or squamous cell carcinoma
-
-## MMR pathway - E. Coli
-
-MutS, MutL, MutH, ATP
-MutH: cut the strand (down/leading)
-
-methelation is critical here
-
-
----
-
-
-## RNA polymerases
-
-- Transcription using DNA to RAN
-  - Bacterial: ON enzyme for all of RNA synthesis
-  - Eukaryotic: At leased Three I II III
-
-- Strangs 1:
-  - Template;
-  - Non-coding;
-  - Anti-sense:
-  - Completed strand
-
-- Strands 2:
-  - Sense strand: coding strange of the DNA
-  - Non-completed strand
-
-- Bacterial promoter consensus sequences
-  - UP Element; -35; -10; RNA stra +1
-  - -35; -10: promoters (similar to regulatories in Eukaryotic.)
-
-Expression controlled by interactions of promoter elements with RNA polymerase and specific repressor/Activators
-
-
-### Bacterial RNAP
-- Holoenyme versis core enzyme
-- Core subunits: α₂ββ'ω (400kDa)
-- Holoenzyme: core subunits plus factors
-- ...
-
-
-Five σ factirs in E. coli gene expression
-
-- Exp: (not important)
-  - σ 70: Most genes
-  - σ 32: Heat schock proteins
-- Trascription Elongation
-  - RANP trancks along the DNA template, ==synthesizes mRNA in te 5' to 3' direction== and unwinds and rewinds the DNA as it reads.
-  - ==Transcription elongation causing DNA supercoiling, relaxed by topisomerases==
-- Termination
-  - Transcription Terminattion
-    - A series of 4 - 10 base
-    - Sequence depended: CGGCGCTTTTTT (CG rich region; AT rich region)
-  - ρ factor-dependent
-    - The amino-termina domain of ρ factor binds to hte RNA sequence of ρ utilization site
-    - the carboxy-terminal domain of ρ hexameric ring closes
-    - Ring closure propels ρ moving close to RNAP
-    - ρ dis-engages RNA and RNAP from DNA
-
-### Eukaryotic Transcriotion
-
-- Three types of Nuclears RNAPs
-  - I: rRNA (28S, 18S)
-  - ==II==: mRNA; snRNAs; miRNAs
-  - III: tRNAs; 5S rRNA; snRNA U6 7S RNA; other stable short RNAs
-- Transcription
-  - Subunit compositions of nueclear RNAPs
-    - β'; β; αI; αII; ω
-    - All yeast RNAP has five subunits similar to Bacteria
-  - RNAP II
-    - Yeast RNAP II strcture resembling bacterial RNAPs
-      - A vrab claw-like strcuture
-  - RNA biosynthesis
-    - The clamp of the Rpb1 subunit moves down to trap DAN between the two claw
-    - Unwind DNA at the active site
-    - Wall of Rpb2 kinks the template by 90° out of the active site
-    - One vase of the template points at the active site
-    - This base is paired with the ribonucleotide
-  - RNA translocation
-  - Transcription promoters
-    - Class I, II, II to RAN poly I, II, III
-  - ==Mammalian Gene and proximal promoter (Class II)==
-    - Proximal region (-200 ~ -30), within 200 bp of transcription start; similar to the -10; -35 in the bacteria's
-    1. ==TATA Box (TATAAA)==
-      - Recruits TATA binding protein ...
-    2. Initiator region (Inr)
-    3. Other activation elements
-  - ==EPromoter and Activator proteins==
-    1. ==Transcriptional Activators==: DNA binding domain; activation domain;
-    2. Activator functions: Chromatin remodeling (acetylation-HAT); Mediator facilitates PIC assembly
-  - Repressor
-    - Bind UAS.enhancers → displace activators
-    - Prevent mediator → no PIC formation
-    - Attracts HDACs and HMTs → heterochromatin
-  - PIC Assmbled
-    - mediator facilitates TBP and TFIIB binding promoter
-    - Other basal TFs and Pol II bind
-    - phosphorylation of the CTD of Pol II by TFIIH → Transcription initiation
-  - Six transcription factors for clas II promoters (Not important)
-  - ==Phospho-code on RNAP II CTD
-    - TFIH: Phosphate the Ser5 would initiated the transcription activity
-    - P-TEFb: phospholate Ser2 to maintain the elongation state
-  - Non-canonical functions of transcription
-    - CENP-A defines centromeric chromatin
-  - ==RNA..==
-  - ==ChiP-Seq: Determine protein distributed on chromatins==
-  - RNA-Seq: Expression profiles
-
-
-### ==Transcription inhibition as a therapeutic target for cancer==
-
-1. mRANs of many oncogenes
-2. Transformed → RNA-directed agents: different sensitivity.
-
-- Alpha-amanitin: from mushroom
-  - directed binding to RNAP, adn block the bridge to repress the conformation change
-
-
-## Bacterial Transcription
-
-## Eukaryotic transcription
-
-## RNAP II CTD phospho-code
-
-## Non-canonical functions of transcription
-
-## Assays to study transcription
-
----
-
-## posttranscriptional Modification of Eukaryotic RNAs
-
-- Role of 5' cap
-  - Ribosomal recogintion during translation
-- Cap structure
- -  7-methylguanosin (m⁷G)
- - joined to the mRNA first nucleotide
- - Via a 5'-5' tri-P brifge
-- Involved Enzymes
-  - RNA riphosphatase removing the γ-P of the mRNA's 5' site
-  - mRNA guanlyltransferase (a capping enzyme) adding GMP. (Take GMP to the site)
-  - Guanine-7-methyltranserase (second capping enzyme) methylating guanine
-  - Capping enzymes **bind to RNAP-II**, which will switch RAN synthesis initiation to elongation ()
-
-### posttransicriptional Modification of Eukaryotic RANs
-
-- Poly A tails; ~250 nt
-  - Cleavage and polyadenylation specificity factor (CPASF), cleaving up to 35 nt past the **AAUAAA** sequence
-- Poly A polymerase generate poly A tail using ATP. (termination signals given to RNA-polymerase)
-- CPSF binds to RNAP-II, coupling polyadenylation to transcription termination.
-- Poly A tail binds to poly-binding protein, protecting from degradation, ==increasing mRNA stability==.
-
-### Exons and Introns
-- Precurso mRANs (pre-mRNAs) are processsed by the excision of introns and the splicing (joing) of exons.
-
-- Exon splicing in Two-Stage Reactions
-  - Invariant Sequences for splice junction
-    - GU at the intron's 5'
-    - AG at teh intron's 3
-      - (graph), the number under the NT means the ration you are supposed to see them on the Intron
-    - A branch point near the 3' splice site
-    - Free G, not paire to the intron...
-    1. A2'-5' P-diester bind between the tinron A (OH²') and the intron at teh 5' splice site, forming a "lariat" structure.
-    2. The Exon 1 OH³' group at the 5' splice site from a 3'-5' P-diester bind with the Exon 2' at the 3' splice site, releasing the intron with the free OH³' group.
-    3. The intron keeps the  lariat structure.
-    - Note: Splicing proceeds w/o free energy lose, Cleavage of one P-diseter bond and formation of a new bond.
-
-### ==Spliceosome-aided RNA splicing==
-
-Splicing could be focilited by the protein Splicesome.60S spliceosome particle containing five small nuclear RNAs + Ribonucleoproteins (U 1~6, no 3)
-1. U1 recognizes the 5' splice junction
-2. U2 recognizes the branch point (intron A)
-3. The binding of U4-U5-U6 forms spliceosome.
-4. RAN cleavage at the 5' splice site
-5. RNA cleavage at the 3' splice site
-6. Intron ..
-
-### Self-Splicing RNA
-- Group II Intron
-  - Exson 1 and Exon II aligned together
-  - the giant rondant was splicesd by themselves
-- Group I intron:
-  - not Intron A to initiated the reaction
-  - G , GTP, GDP, GMP... as the starting site
-  1. The 3'-OH of ...
-  2.
-  3.
-
-### ==Summary of spliceosome-aided Splicing and Self-Splicing==
-
-- In goup I introns, aguanosine cofactor (G) tat is not part of the RNA chain associates with the active site. The 3'-hydroxyl group of this G attacks the 5' splice sit;
-  - The reaction is similar to those involving the 2 hydroxyl groups of branch sites as in group II introns and RNA inrons spliced in spliceosomes.
-- The subsequent trans-e...
-
-### ==Interactions of RNAP-II with capping enzyme, splicing and CPSF==
-Figure 16-5
-
-### Aminoacyl-tRAN Synthetase
-
-- Attach amino acids to tRNAs
-- Two step reactions
-  - Amino acid activation by the reaction with ATP
-  (Aminoacyl-tRNA syntheiase)
-  - Formation of an aminoacyl-tRNA
-
-### Aminoacyl-tRAN SYnthetases
-- The synthetase enzymes have an elongated shape.
-- Binding the anticodon of tRNA near the one end of the enzyme.
-- Binding the A.a. acceptor stem of tRNA near th other end
-
-### Proofreading by Aminoacyl-tRAN Synthetase
-
-Binding to the amino acid substrate pocket of tRNA Synthetase that consists of the zinc ion.L-Group: Megan, Ryan, Ka
-- Threonine binds at this pocket b/c it can coordinate Zn^2+^ using it NH~2~ and OH groups
-
-- tRNA^thr^ is tRNA for threonin.
-  - Attaching ThR to tRNA^thr^ makes Thr-tRNA^thr^ (tRNA is correctly charged)
-  - Attaching Ser to tRNA^thr^ makes Ser-tRNA^thr^ (tRAN is mischarged)
-   
+|![Size of Genome](https://www.researchgate.net/profile/M-Golubovsky/publication/8154001/figure/tbl1/AS:669290105692175@1536582604279/Genome-size-gene-numbers-of-some-prokaryotes-and-eukaryotes.png)|
+|:-:|
+|[© M. D. Golubovsky, Kenneth Manton; 2005](https://www.researchgate.net/publication/8154001_Genome_organization_and_three_kinds_of_heritable_changes_General_description_and_stochastic_factors_a_review)|

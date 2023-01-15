@@ -586,3 +586,38 @@ esearch -db pubmed -query 23618408 | elink -name pubmed_pmc_refs -target pmc | \
 efetch -format docsum | \
 xtract -pattern DocumentSummary -element Title -element Source -block ArticleId -if "IdType" -equals pmcid -element Value
 ```
+
+
+
+## Xtract
+
+
+Exp1: aquire infor inner a tag
+
+```bash
+esearch -db bioproject -query "PRJNA356464" | elink -target sra | efetch -format docsum | \
+xtract -pattern DocumentSummary -ACC @acc -block DocumentSummary -element "&ACC"
+```
+
+
+<pre>
+SRA507436	SRX2439829	SRP095511	SRS1874418	SRR5125027
+SRA507436	SRX2439828	SRP095511	SRS1874418	SRR5125026
+SRA507436	SRX2439827	SRP095511	SRS1874418	SRR5125025
+SRA507436	SRX2439826	SRP095511	SRS1874418	SRR5125024
+</pre>
+
+Example of single `Runs`
+```
+<Runs>
+    <Run acc="SRR5125024"
+        total_spots="119613106"
+        total_bases="36123158012"
+        load_done="true"
+        is_public="true"
+        cluster_name="public"
+        static_data_available="true"/>
+</Runs>
+```
+
+As a result, we can aquire total spots with `@total_spots`

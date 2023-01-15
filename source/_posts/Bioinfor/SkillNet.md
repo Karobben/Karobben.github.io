@@ -6,7 +6,7 @@ date: 2020/09/05
 toc: true
 excerpt: "abi"
 tags: [Bioinformatics]
-category: [Biology, Bioinformatics, Intro]
+category: [Biology, Bioinformatics, others]
 cover: 'https://s1.ax1x.com/2020/06/26/Nro4d1.png'
 thumbnail: 'https://s1.ax1x.com/2020/06/26/Nro4d1.png'
 priority: 10000

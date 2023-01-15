@@ -14,6 +14,15 @@ priority: 10000
 
 ## samtools
 
+- [x] s
+
+<style>
+span
+    .tag {
+      background-color:#38393d;
+      color: #5fd381;
+    }
+</style>
 
 ## Quick start
 ```bash
@@ -51,3 +60,34 @@ samtools sort bwa.bam -o bwa.sorted.bam > bwa.sorted.bam
 ```bash
 samtools faidx genome.fna
 ```
+
+
+## Depth count
+
+```bash
+samtools depth -r 2R:24687896-24687900 out.bam
+```
+<pre>
+2R	24687896	41
+2R	24687897	41
+2R	24687898	41
+2R	24687899	41
+2R	24687900	41
+</pre>
+
+## Reads counts in bam
+
+
+```bash
+# counting all reads
+samtools view -c SAMPLE.bam
+# or
+samtools view SAMPLE.bam |wc
+# counting only mapped reads
+samtools view -c -F 260 SAMPLE.bam
+```
+
+Time cousts for `-c` and `wc`
+| `-c` | `|wc -l`     |
+| :--: | :--: |
+| 0m16.497s     |   0m44.720s     |

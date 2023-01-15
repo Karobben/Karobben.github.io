@@ -24,6 +24,8 @@ skip_render:
   - _posts/**/layout.md
   - _posts/**/summary.md
   - _posts/**/index.md
+  - _posts/cv/scripts/vendor/**.js
+  - _posts/cv/**.html
   - waque.sh
   - layout.md
 new_post_name: ':title.md'
@@ -73,7 +75,7 @@ deploy:
  repo: https://github.com/Karobben/Karobben.github.io.git
  branch: master
  token: ""
-
+ ignore_hidden: false
 
 
 
@@ -155,3 +157,33 @@ mermaid:
   theme: default
   cdn: //cdn.jsdelivr.net/npm/mermaid@8.4.8/dist/mermaid.min.js
   #cdn: //cdnjs.cloudflare.com/ajax/libs/mermaid/8.0.0/mermaid.min.js
+  #
+  #
+
+
+# hexo-seo-autopush
+hexo_seo_autopush:
+  cron: 0 4 * * *
+  baidu:
+    enable: true
+    date: created
+    count: 10
+  bing:
+    enable: true
+    date: created
+    count: 10
+  google:
+    enable: true
+    date: created
+    count: 10
+
+
+# hexo-auto-link-chekcer
+autoLinkChecker:
+  # enable: false  #Disable this plugin
+  verbose: true  #Console display of processing contents
+  rarelyChangePostsPath: 404/
+  cachePath: cache/hexo-auto-link-checker.json
+  exclusionURL:
+    - hoge-url/
+    - articles-toc

@@ -39,7 +39,7 @@ Seq-view1.3 -i LYSV-NCBI.fasta
 
 
 
-## ClustelW2
+## ClustalW2
 
 ### Install
 url: [click me](http://www.clustal.org/download/current/)
@@ -71,8 +71,11 @@ UPGAM Tree
 clustalw2 -QUICKTREE -OUTPUT=FASTA  -INFILE=LYSV-NCBI.fasta -CLUSTERING=UPGMA -BOOTSTRAP=1000
 
 clustalw2 -QUICKTREE -OUTPUT=FASTA  -INFILE=LYSV-NCBI.fasta -CLUSTERING=NJ -BOOTSTRAP=1000
-
 ```
+
+==PS:==
+ClustalW well not change the " ' " from the name of the sequence which may cause trouble in the tree file.
+
 
 ## Muscle
 
