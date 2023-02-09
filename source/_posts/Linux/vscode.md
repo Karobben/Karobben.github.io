@@ -25,7 +25,7 @@ I am a loyal Atom user. But Atom has died and I have to move on.
 
 - Fold all: `ctrl+k` `ctrl+0`
 - Release all: `ctrl+k` `ctrl+j`
-
+- wrap text: `Alt+z`
 
 ## Plugins List
 

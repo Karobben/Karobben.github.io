@@ -177,6 +177,24 @@ gseaplot2(gse, geneSetID = 1:7, title = "GSEA", color = 'salmon', pvalue_table =
 ==More FAQ== could be found at: [software.broadinstitute.org](https://software.broadinstitute.org/cancer/software/gsea/wiki/index.php/FAQ)
 
 
+## Other things you need to know
+
+
+> - **ES (enrichment score)**: reflects the degree to which a gene-set is overrepresented at the top or bottom of a ranked list of genes.
+> - **NES (normalized enrichment score)**: NES corrects for differences in ES between gene-sets due to differences in gene-set sizes. It enables to compare the scores of the different tested gene-sets with each other.
+    NES = actual ES / mean of all ESs obtained from all random permutations for the single gene-set that is being tested
+> - **nom p-value**: The nominal p value estimates the statistical significance of the enrichment score for a single gene set. The p-value is calculated from the null distribution.
+    Using gene-set permutation, the null distribution is created by generating, for each permutation, a random gene set the same size as your specified gene set by selecting that number of genes from all of the genes in your expression data set (or pre-ranked list), and then calculating the enrichment score for that randomly selected gene set. The distribution of those enrichment scores across all of the permutations constitutes the null distribution.
+> - **FDR**: corrects for multiple hypothesis testing and enable a more correct comparison of the different tested gene-sets with each other.
+>   - **note**: for a given gene-set S and observed NES, called NES*, FDR is [% of all NES (including permutations) >= NES*] / [% of all observed NES (=NES for all tested gene-sets) >= NES*]
+> - **relationships between ES, pvalue , NES and FDR**:
+>   - pvalue is calculated from ES
+>   - FDR is calculated from NES
+>   - the higher the ES or NES and the lowest the FDR or pvalue
+>   - NES above 1.4 will usually give significant results
+>
+> [© BADER LAB, 2016](http://www.baderlab.org/CancerStemCellProject/VeroniqueVoisin/AdditionalResources/GSEA#:~:text=ES%20(enrichment%20score)%3A%20reflects,differences%20in%20gene%2Dset%20sizes.)
+
 <style>
 pre {
   background-color:#38393d;

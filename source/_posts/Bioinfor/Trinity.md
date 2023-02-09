@@ -18,6 +18,12 @@ priority: 10000
 
 ## Install
 
+!!! info Prerequisite
+    ```bash
+    sudo apt install cmake
+    sudo apt-get install autoconf
+    ```
+
 - [Rlease page](https://github.com/trinityrnaseq/trinityrnaseq/releases)
 
 If you come with the error below as making, try the [full package](https://github.com/trinityrnaseq/trinityrnaseq/releases/download/v2.11.0/trinityrnaseq-v2.11.0.FULL.tar.gz). (See resolution at [GitHub issue](https://github.com/trinityrnaseq/trinityrnaseq/issues/870))

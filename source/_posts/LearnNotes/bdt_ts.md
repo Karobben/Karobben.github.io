@@ -16,14 +16,14 @@ priority: 10000
 [Link](https://www.thermofisher.com/search/results?query=4337458&persona=DocSupport&type=Product+FAQs&resultPage=1&resultsPerPage=60)
 
 1. 多久做一次 pGEM 质控呢?
-    <details  >
+    <details  > 
     <summary> 答案 </summary>
     pGEM 和 M13 (试剂盒自带). pGEM 和 M13 是用来做问题排查的.
     你可以用他来排查样本质量, 循环次数, 或者测序前清洗(沉淀)反应 的问题来优化你的实验.
     </details>
 
 2. BDT v1.1 和 v3.1 的区别
-    <details  >
+    <details>
     <summary> 答案 </summary>
     荧光染料不一样, dNTP 和 ddNTP 的比例也不一样.
 

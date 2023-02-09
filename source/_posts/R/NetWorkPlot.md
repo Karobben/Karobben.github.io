@@ -21,14 +21,12 @@ pre {
 
 ## NetWorkPlot
 
+
 ## Igraph
 
 [Document](https://igraph.org/r/doc/)
 
 ```r
-library(htmlwidgets)
-saveWidget(P,"_bar.html", selfcontained = F)
-
 library(igraph)
 
 ##Create data
@@ -42,6 +40,32 @@ plot(network)
 ```
 
 ![igraph networkplot](https://s1.ax1x.com/2020/06/20/Nlbi2F.png)
+
+### Tricks for Igraph
+
+#### nodes-distance; name of the nodes
+
+The trickiest way to achieve this goal is decreasing the size of nodes.
+```r
+library(igraph)
+
+##Create data
+set.seed(1)
+data=matrix(sample(0:1, 100, replace=TRUE, prob=c(0.8,0.2)), nc=10)
+network=graph_from_adjacency_matrix(data , mode='undirected', diag=F )
+
+V(network)$name <- paste("dot", c(1:10))
+
+##Default network
+par(mar=c(0,0,0,0))
+plot(network, vertex.size = 5)
+```
+
+|![](https://s1.ax1x.com/2023/02/06/pScSzh6.png)|![](https://s1.ax1x.com/2023/02/06/pScpFnH.png)|
+|:-:|:-:|
+
+
+### More examples
 ```r
 plot(network,
 vertex.color = rgb(0.8,0.2,0.2,0.9),           # Node color
@@ -97,6 +121,14 @@ More instructions:
 
 
 ## NetworkD3
+
+### dave it as html
+
+```r
+library(htmlwidgets)
+saveWidget(P,"_bar.html", selfcontained = F)
+```
+
 ```r
 library(networkD3)
 

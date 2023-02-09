@@ -4,8 +4,8 @@ url: tcga
 covercopy: <a href="https://www.cancer.gov/about-nci/organization/ccg/research/structural-genomics/tcga/studied-cancers">© NIH</a>
 priority: 10000
 date: 2022-12-06 13:02:44
-title: TCGA Database
-ytitle: TCGA Database
+title: TCGA Database with R
+ytitle: TCGA Database with R
 description: "TCGA Database usage. R packages, TCGA related API"
 excerpt: "TCGA Database usage. R packages, TCGA related API"
 tags: [TCGA, Bioinformatics, api]
@@ -121,14 +121,123 @@ You can't turn the "GDCprepare" results into data directly. You need to download
 Reference: [rdrr.io](https://rdrr.io/bioc/TCGAbiolinks/f/vignettes/analysis.Rmd)
 
 
-
-
-
-
-
-
-
+I am failed to get the expression matrix by using `GDCprepare`. According to [© g27182818, 2022], it caused by STAR-Count files has more infor than `GDCprepare` need. What ever, a modified solution could be like codes below:
 
 ```r
+library('TCGAbiolinks')
+library(stringr)
+
+project_name <- "TCGA-CHOL"
+
+# Defines the query to the GDC
+query <- GDCquery(project = project_name,
+                  data.category = "Transcriptome Profiling",
+                  data.type = "Gene Expression Quantification",
+                  experimental.strategy = "RNA-Seq",
+                  workflow.type = "STAR - Counts")
+
+# Get metadata matrix
+metadata <- query[[1]][[1]]
+
+# Get main directory where data is stored
+main_dir <- file.path("mRNA", project_name)
+# Get file list of downloaded files
+file_list <- file.path("mRNA", project_name,list.files(main_dir,recursive = TRUE)) 
+
+# Read first downloaded to get gene names
+test_tab <- read.table(file = file_list[1], sep = '\t', header = TRUE)
+# Delete header lines that don't contain usefull information
+test_tab <- test_tab[-c(1:4),]
+# STAR counts and tpm datasets
+tpm_data_frame <- data.frame(test_tab[,1])
+count_data_frame <- data.frame(test_tab[,1])
+
+# Append cycle to get the complete matrix
+for (i in c(1:length(file_list))) {
+  # Read table
+  test_tab <- read.table(file = file_list[i], sep = '\t', header = TRUE)
+  # Delete not useful lines
+  test_tab <- test_tab[-c(1:4),]
+  # Column bind of tpm and counts data
+  tpm_data_frame <- cbind(tpm_data_frame, test_tab[,7])
+  count_data_frame <- cbind(count_data_frame, test_tab[,4])
+  # Print progres from 0 to 1
+  print(i/length(file_list))
+}
+
+ID_list <- as.data.frame(str_split_fixed(file_list, '/', 7))[[6]]
+
+row.names(count_data_frame) <- count_data_frame[[1]]
+count_data_frame <- count_data_frame[-1]
+colnames(count_data_frame) <- metadata$cases[match(ID_list, metadata$id)]
+
+N_control = length(which(as.numeric(gsub("[^0-9.-]", "", as.data.frame(str_split_fixed(metadata$cases, '-', 5))[[4]])) >= 10))
 
 ```
+
+## The meaning of the barcode
+
+|![](https://docs.gdc.cancer.gov/Encyclopedia/pages/images/barcode.png)|
+|:-:|
+|[© NIH, GDC](https://docs.gdc.cancer.gov/Encyclopedia/pages/TCGA_Barcode/)|
+
+
+Label| Identifier for| Value | Value Description |Possible Values
+:-|:-|:-|:-|:-|
+Analyte| Molecular type of analyte for analysis| D| The analyte is a DNA sample| See Code Tables Report|
+Plate| Order of plate in a sequence of 96-well plates| 182| The 182nd plate |4-digit alphanumeric value
+Portion| Order of portion in a sequence of 100 - 120 mg sample portions | 1| The first portion of the sample| 01-99
+Vial| Order of sample in a sequence of samples| C| The third vial| A to Z
+Project |Project name| TCGA| TCGA project |TCGA
+Sample| Sample type| 1| A solid tumor| Tumor types range from 01 - 09, normal types from 10 - 19 and control samples from 20 - 29. See Code Tables Report for a complete list of sample codes
+Center| Sequencing or characterization center that will receive the aliquot for analysis| 1| The Broad InstituteGCC| See Code Tables Report
+Participant| Study participant| 1| The first participant from MD Anderson for GBM study | Any alpha-numeric value
+TSS| Tissue source site| 2| GBM (brain tumor) sample from MD Anderson |See Code Tables Report
+
+
+So, the most important information for us is the sample type: ==Tumor types range from 01 - 09, normal types from 10 - 19 and control samples from 20 - 29. See Code Tables Report for a complete list of sample codes==
+
+
+
+## Abbreviations of projects
+
+
+|Study Abbreviation | Study Name|
+|:-|:-|
+LAML|Acute Myeloid Leukemia
+ACC|Adrenocortical carcinoma
+BLCA|Bladder Urothelial Carcinoma
+LGG|Brain Lower Grade Glioma
+BRCA|Breast invasive carcinoma
+CESC|Cervical squamous cell carcinoma and endocervical adenocarcinoma
+CHOL|Cholangiocarcinoma
+LCML|Chronic Myelogenous Leukemia
+COAD|Colon adenocarcinoma
+CNTL|Controls
+ESCA|Esophageal carcinoma
+FPPP|FFPE Pilot Phase II
+GBM|Glioblastoma multiforme
+HNSC|Head and Neck squamous cell carcinoma
+KICH|Kidney Chromophobe
+KIRC|Kidney renal clear cell carcinoma
+KIRP|Kidney renal papillary cell carcinoma
+LIHC|Liver hepatocellular carcinoma
+LUAD|Lung adenocarcinoma
+LUSC|Lung squamous cell carcinoma
+DLBC|Lymphoid Neoplasm Diffuse Large B-cell Lymphoma
+MESO|Mesothelioma
+MISC|Miscellaneous
+OV|Ovarian serous cystadenocarcinoma
+PAAD|Pancreatic adenocarcinoma
+PCPG|Pheochromocytoma and Paraganglioma
+PRAD|Prostate adenocarcinoma
+READ|Rectum adenocarcinoma
+SARC|Sarcoma
+SKCM|Skin Cutaneous Melanoma
+STAD|Stomach adenocarcinoma
+TGCT|Testicular Germ Cell Tumors
+THYM|Thymoma
+THCA|Thyroid carcinoma
+UCS|Uterine Carcinosarcoma
+UCEC|Uterine Corpus Endometrial Carcinoma
+UVM|Uveal Melanoma

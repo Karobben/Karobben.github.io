@@ -23,6 +23,7 @@ sudo apt install libudunits2-dev
 
 ## Packages from Cran
 
+
 ```r
 'dplyr', 'ellipse', 'fastcluster', "reshape2",
 "htmlwidgets", "gapminder", "httr", "igraph",
@@ -44,7 +45,7 @@ sudo apt install libudunits2-dev
 # Plot
 "patchwork" ,"networkD3" ,"ggplot2" ,"maps" ,"ggalluvial",
 'circlize' ,'cowplot' ,"pheatmap" ,"GGally" ,'ggplotify',
-"ggthemes" ,"ggdendro" ,"ggrepel", "ggnewscale", "ggridges", "ggvenn", "svglite", "showtext", "remotes",
+"ggthemes" ,"ggdendro" ,"ggrepel", "ggnewscale", "ggridges", "ggvenn", "svglite", "showtext", "remotes", "venneuler",
 "wordcloud2" ,"ggupset" ,"plotly" ,"plotrix" ,'ggalt'
 
 # devtools::install_github("const-ae/ggupset")
@@ -61,6 +62,8 @@ sudo apt install libudunits2-dev
 
 ### Install with for loop
 
+- config for rJAVA: `sudo R CMD javareconf` [Jim Chen, 2018](https://stackoverflow.com/questions/3311940/r-rjava-package-install-failing)
+
 - proj4: `sudo apt-get install libproj-dev` [DirtStats, 2020](https://stackoverflow.com/questions/56304632/cant-install-proj4-package-because-libproj-and-or-proj-api-h-not-found-in-sta)
 - sf: `sudo apt install libgdal-dev` [Gayan Kavirathne, 2018](https://stackoverflow.com/questions/12141422/error-gdal-config-not-found-while-installing-r-dependent-packages-whereas-gdal)
 - magick:
@@ -76,7 +79,7 @@ List <- c('dplyr', 'ellipse', 'fastcluster', "reshape2",
           "randomForest", "rayrender", "readxl",
           "rpart", "Rwordseg", "SnowballC", "remotes",
           "sf", "swirl", "tidyr", "tidyverse",
-          "tm", "WGCNA", "xgboost", "fmsb",
+          "tm", "WGCNA", "xgboost", "fmsb", "venneuler",
           'rcmdcheck', 'devtools', "rgl", "forecast",
           "patchwork" ,"networkD3" ,"ggplot2" ,"maps" ,"ggalluvial",
           'circlize' ,'cowplot' ,"pheatmap" ,"GGally" ,'ggplotify',
@@ -127,7 +130,7 @@ if (!requireNamespace("BiocManager", quietly = TRUE))
 "org.Hs.eg.db", "org.Dr.eg.db", "org.Dm.eg.db", "ReactomePA", "meshes",
 
 # Plot
-"ggtree", "clue", "ComplexHeatmap",
+"ggtree", "clue", "ComplexHeatmap", 'ggtheme',
 # clue: for "ComplexHeatmap"
 # ComplexHeatmap: old version. New version can be found in Github
 
@@ -148,7 +151,8 @@ if (!requireNamespace("BiocManager", quietly = TRUE))
 ```r
 List <- c("Biobase", "edgeR", "Biostrings", "BSgenome", "clusterProfiler", "ggtree",
           "meshes", "pathview", "limma", "qvalue", "org.Hs.eg.db", "org.Dr.eg.db",
-          "org.Dm.eg.db","clue", "ComplexHeatmap", "GEOquery", "WGCNA", "ReactomePA")
+          "org.Dm.eg.db","clue", "ComplexHeatmap", "GEOquery", "WGCNA", "ReactomePA",
+          'ggtheme', "TCGAbiolinks")
 
 for(LIB in List){
   if (!requireNamespace(LIB, quietly = TRUE))

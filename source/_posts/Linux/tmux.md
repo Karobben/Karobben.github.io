@@ -28,8 +28,14 @@ Or you can:<br />^B [;<br />Using mouse the select a target;<br />^w;
 
 It works on turmx, but not on my laptop since when ever I typing ^+blank, the stupid Sugou Input will pop out and interrupt the processor...
 
+Panes: Each window could split into small panes which is the key feature for tmux.
 
 | Moves    | Keys     |
 | :------------- | :------------- |
 | Split Window horizontal | `ctrl`-`b` + `"` |
 | Split Window Vertical| `ctrl`-`b` + `%` |
+| Resize the width of the Panes | `ctrl`-`b` + `ctrl`-`→` |
+
+Tips:
+1. Panes resize:
+    After you executed `ctrl`-`b`, you can hold `ctrl` and press the up, down, left, or right as many as you can until it fits you the best.

@@ -15,13 +15,17 @@ priority: 10000
 ## Bioconda
 
 ## 1. Install
-Location: [link](https://bioconda.github.io/user/install.html)
+Location: [link for Miniconda](https://docs.conda.io/en/latest/miniconda.html)
 ```bash
+# this script might not work now
 curl -O https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
 sh Miniconda3-latest-Linux-x86_64.sh
 ```
 
-Conda would add code for initiate it at the end of the `.bashrc`. You may need to copy them in to the `~/.zshrc` if you are using `zsh`.
+!!! info For Zsh environment
+    Conda would add code for initiate it at the end of the `.bashrc`. You may need to copy them in to the `~/.zshrc` if you are using `zsh`.
+
+
 An example of codes after you run `cat ~/.bashrc`
 <pre>
 
@@ -99,7 +103,7 @@ Use `conda config --show channels` to view your configuration's current state,
 and use `conda config --show-sources` to view config file locations
 </pre>
 
-Soving his by run:
+Solving his by run:
 `conda config --remove-key channels`
 
 ### GLIBC_2.17
@@ -110,7 +114,7 @@ ImportError: /lib64/libc.so.6: version 'GLIBC_2.15' not found
 ImportError: /lib64/libc.so.6: version 'GLIBC_2.17' not found
 </pre>
 
-This error is very wired. When you have sudo right, you can solve it easily. But when you don't have sudo right, I believe that the quickest way to "solve", bypass actually, this problem is donw-grade your libraries. Most of time, the conflict comes from `zlib` and  `Xz`. This is not the only way to solve it in CentOS 6.
+This error is very wired. When you have sudo right, you can solve it easily. But when you don't have sudo right, I believe that the quickest way to "solve", bypass actually, this problem is down-grade your libraries. Most of time, the conflict comes from `zlib` and  `Xz`. This is not the only way to solve it in CentOS 6.
 
 ```bash
 conda install Xz==5.2.3 zlib==1.2.8 #numpy==1.9.3

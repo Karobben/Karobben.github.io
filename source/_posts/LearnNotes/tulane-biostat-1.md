@@ -134,6 +134,21 @@ else:
   print('Sample does not look Gaussian (reject H0)')
 ```
 
+!!! note Shapiro in R
+
+```r
+shapiro.test(my_data$len)
+```
+
+<pre>
+    Shapiro-Wilk normality test
+data:  my_data$len
+W = 0.96743, p-value = 0.1091
+</pre>
+
+!!! note
+    From the output, the p-value > 0.05 implying that the distribution of the data are not significantly different from normal distribution. In other words, we can assume the normality.
+
 ### D’Agostino’s K² Test (most widely and used by GraphPad)
 
 ```python

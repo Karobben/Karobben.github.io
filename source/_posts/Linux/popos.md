@@ -116,7 +116,11 @@ Python3 was pre-installed
 sudo apt install python3-pip
 ```
 
+## Go lang
 
+```bash
+sudo apt install golang-go
+```
 
 ## others
 
@@ -148,7 +152,15 @@ scrcpy
 
 ### Gotop
 
-Github: [cjbassi/gotop](https://github.com/cjbassi/gotop)
+Github: 
+- [cjbassi/gotop](https://github.com/cjbassi/gotop)
+- [Release](https://github.com/cjbassi/gotop/releases)
+
+```bash
+wget https://github.com/cjbassi/gotop/releases/download/3.0.0/gotop_3.0.0_linux_amd64.deb
+sudo dpkg -i gotop_3.0.0_linux_amd64.deb
+rm gotop_3.0.0_linux_amd64.deb
+```
 
 ```bash
 snap install gotop-cjbassi
@@ -386,6 +398,9 @@ After start the `Extesion`, choose `User themes` → `Settings` → select it
 
 A similar zsh environment from Manjaro.
 zsh theme: [source](https://juejin.cn/post/6985123210782212132)
+
+!!! info Fonts for powerlevel10k
+    Download fonts: [MesloLGS NF; from Github](https://github.com/romkatv/powerlevel10k#manual-font-installation)
 
 ```bash
 # Install zsh

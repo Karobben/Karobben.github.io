@@ -24,11 +24,14 @@ Examples: [Dash Galleries](https://dash.gallery/Portal/)
 
 ## Installation
 
-``bash`
+```bash
 pip install dash
 pip install jupyter-dash
 pip install pandas
-``
+pip install dash_bio dash_auth
+pip install matplotlib
+pip install openpyxl
+```
 
 ## Hello Word for Dash
 
@@ -81,10 +84,10 @@ if __name__ == '__main__':
 
 ![](https://s1.ax1x.com/2022/10/02/xKI759.png)
 
-<!--<details>-->
 
 <details>
 <summary>Codes for Dashboard</summary>
+
 ```python
 from dash import Dash, html, dcc
 import plotly.express as px
@@ -151,8 +154,8 @@ if __name__ == '__main__':
     app.run_server(debug=True)
 ```
 
+
 </details>
-<!--</details>-->
 
 
 
@@ -353,6 +356,13 @@ fig.update_layout(
 )
 ```
 
+### Pileup example
+
+
+This function if for make a igv like graph.
+The basic example is in this [link](https://dash.plotly.com/dash-bio/pileup). There is a few things worth to mention:
+- The reference genome is '2bit' format, which [is a binary file format designed for storing a genome consists of multiple chromosomal sequences.](https://biojulia.net/BioSequences.jl/v1.0/io/twobit.html)
+- To create a 2bi genome, you can follow the instruction from [UCSC](https://genome.ucsc.edu/goldenPath/help/twoBit.html)
 
 
 
@@ -363,10 +373,27 @@ fig.update_layout(
 
 
 
+```python
+import pysam
+import collections
+import pandas as pd
+import matplotlib.pyplot as plt
+
+samfile = pysam.AlignmentFile("WD-wts+wts149+wts149_3.s.bam", "rb")
 
 
+Depth = []
+for read in samfile.fetch('X', 3134870, 3172221):
+    Depth += [i[1] for i in read.aligned_pairs]
+
+frequency = collections.Counter(Depth)
+Dep_TB = pd.DataFrame(dict(frequency), index=['Freq']).T
+Dep_TB['Loc'] = Dep_TB.index
+Dep_TB.Loc = pd.to_numeric(Dep_TB.Loc)
 
 
+plt.plot(Dep_TB.Loc,  Dep_TB.Freq)
+```
 
 
 
