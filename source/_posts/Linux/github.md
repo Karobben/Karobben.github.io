@@ -61,3 +61,31 @@ git commit --amend -CHEAD
 git push
 # Push our rewritten, smaller commit
 ``` 
+
+## Git push with ssh
+
+Documentation: [Github](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/about-ssh)
+
+Follow the instructions from Github to generate a ssh public key first.
+Be sure about add the email for config the user
+
+Exp:
+
+```bash
+ssh-keygen -t ed25519 -C "your_email@example.com"
+ssh-add ~/.ssh/id_ed25519
+cat ~/.ssh/id_ed25519
+```
+
+After that, copy the key into github.
+
+You may still find that Username is needed for push.
+According [2240](https://stackoverflow.com/questions/6565357/git-push-requires-username-and-password), we need to change the type or remote link.
+
+Enter your github repository page and select the ssh link to configure the local repository as follow and the problem shell be solved.
+
+![](https://s1.ax1x.com/2023/02/11/pSh4zNT.png)
+
+```bash
+git remote set-url origin git@github.com:username/repo.git
+```
