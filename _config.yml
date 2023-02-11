@@ -1,0 +1,189 @@
+title: Karobben
+subtitle: 'Engjoy~'
+description: 'This is a blog for recording and sharing my studying notes and so.'
+keywords: Biology, Data Science, Bioinformatics, R, Python, Linux, ggplot, English
+author: Karobben
+language: en
+timezone: ''
+url: 'https://karobben.github.io/'
+root: /
+permalink: ':year/:month/:day/:title/'
+permalink_defaults: null
+pretty_urls:
+  trailing_index: true
+  trailing_html: true
+source_dir: source
+public_dir: public
+tag_dir: tags
+archive_dir: archives
+category_dir: categories
+code_dir: downloads/code
+i18n_dir: ':lang'
+skip_render:
+  - _posts/**/**.yml
+  - _posts/**/layout.md
+  - _posts/**/summary.md
+  - _posts/**/index.md
+  - _posts/cv/scripts/vendor/**.js
+  - _posts/cv/**.html
+  - waque.sh
+  - layout.md
+new_post_name: ':title.md'
+default_layout: post
+titlecase: false
+external_link:
+  enable: true
+  field: site
+  exclude: ''
+filename_case: 0
+render_drafts: false
+post_asset_folder: false
+relative_link: false
+future: true
+highlight:
+  enable: true
+  line_number: false
+  auto_detect: true
+  tab_replace: ''
+  wrap: true
+  hljs: true
+prismjs:
+  enable: false
+  preprocess: true
+  line_number: true
+  tab_replace: ''
+index_generator:
+  path: ''
+  per_page: 15
+  order_by: '-date'
+default_category: uncategorized
+category_map: null
+tag_map: null
+meta_generator: true
+date_format: YYYY-MM-DD
+time_format: 'HH:mm:ss'
+updated_option: mtime
+per_page: 15
+pagination_dir: page
+include: null
+exclude: null
+ignore: null
+theme: icarus
+deploy:
+ Username: Karobben
+ type: git
+ repo: https://github.com/Karobben/Karobben.github.io.git
+ branch: master
+ token: ""
+ ignore_hidden: false
+
+
+
+# Markdown-it config
+## Docs: https://github.com/celsomiranda/hexo-renderer-markdown-it/wiki
+markdown:
+  # 渲染设置
+  render:
+    # 置为true时，html内容保持不变；置为false时，html内容将被转义成普通字符串
+    html: true
+    # 是否生成与XHTML完全兼容的标签（虽然我不懂是什么意思）
+    xhtmlOut: false
+    # 置为true时，每个换行符都被渲染成一个<br>（即Hexo的默认表现）；置为false时，只有空行才会被渲染为<br>（GFM的默认表现）
+    breaks: true
+    # 是否自动识别链接并把它渲染成链接
+    linkify: true
+    # 是否自动识别印刷格式（意思是把(c)渲染为©这样的）
+    typographer: true
+    # 如果typographer被设置为true，则该选项用于设置将dumb quotes（""）自动替换为smart quotes
+    quotes: '“”‘’'
+  # 设置所需插件
+  plugins:
+    - markdown-it-abbr
+    - markdown-it-cjk-breaks
+    - markdown-it-container
+    - markdown-it-deflist
+    - markdown-it-emoji
+    - markdown-it-footnote
+    - markdown-it-ins
+    - markdown-it-mark
+    - markdown-it-sub
+    - markdown-it-sup
+    - markdown-it-task-checkbox
+
+
+  # 锚点设置（因为我没有尝试相关内容，所以就不翻译相关说明了）
+  anchors:
+    level: 2
+    collisionSuffix: 'v'
+    permalink: false
+    permalinkClass: header-anchor
+    permalinkSymbol: ""
+
+
+
+
+
+
+
+
+# Lived2D
+live2d:
+ enable: true
+ scriptFrom: local
+ pluginRootPath: live2dw/
+ pluginJsPath: lib/
+ pluginModelPath: assets/
+ tagMode: false
+ log: false
+ model:
+  use: shizuku
+ display:
+  position: left
+  width: 150
+  height: 300
+ mobile:
+  show: true
+ react:
+  opacity: 0.7
+
+
+
+
+
+# Mermaid
+mermaid:
+  enable: true
+  # Available themes: default | dark | forest | default
+  theme: default
+  cdn: //cdn.jsdelivr.net/npm/mermaid@8.4.8/dist/mermaid.min.js
+  #cdn: //cdnjs.cloudflare.com/ajax/libs/mermaid/8.0.0/mermaid.min.js
+  #
+  #
+
+
+# hexo-seo-autopush
+hexo_seo_autopush:
+  cron: 0 4 * * *
+  baidu:
+    enable: true
+    date: created
+    count: 10
+  bing:
+    enable: true
+    date: created
+    count: 10
+  google:
+    enable: true
+    date: created
+    count: 10
+
+
+# hexo-auto-link-chekcer
+autoLinkChecker:
+  # enable: false  #Disable this plugin
+  verbose: true  #Console display of processing contents
+  rarelyChangePostsPath: 404/
+  cachePath: cache/hexo-auto-link-checker.json
+  exclusionURL:
+    - hoge-url/
+    - articles-toc
