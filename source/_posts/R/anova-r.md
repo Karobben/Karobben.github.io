@@ -37,7 +37,7 @@ To be noticed, we should carefully select which protocol we use based on our dat
 
 ## Talk is cheap, show me the code
 
-raw posts: [Rebecca Bevans: ANOVA in R | A Complete Step-by-Step Guide with Examples](https://www.scribbr.com/statistics/anova-in-r/)
+raw posts: [Rebecca Bevans: ANOVA in R | A Complete Step-by-Step Guide with Examples](https://www.scribbr.com/statistics/anova-in-r/) 
 
 Example data: [Click to Download](https://cdn.scribbr.com/wp-content/uploads//2020/03/crop.data_.anova_.zip)
 
