@@ -83,9 +83,9 @@
     <category term="Bioinformatics" scheme="https://karobben.github.io/categories/Bioinformatics/"/>
     
     
-    <category term="Bioinformatics" scheme="https://karobben.github.io/tags/Bioinformatics/"/>
-    
     <category term="Machine Learning" scheme="https://karobben.github.io/tags/Machine-Learning/"/>
+    
+    <category term="Bioinformatics" scheme="https://karobben.github.io/tags/Bioinformatics/"/>
     
   </entry>
   
@@ -108,9 +108,9 @@
     <category term="Software" scheme="https://karobben.github.io/categories/Linux/Software/"/>
     
     
-    <category term="Linux" scheme="https://karobben.github.io/tags/Linux/"/>
-    
     <category term="Software" scheme="https://karobben.github.io/tags/Software/"/>
+    
+    <category term="Linux" scheme="https://karobben.github.io/tags/Linux/"/>
     
     <category term="IDE" scheme="https://karobben.github.io/tags/IDE/"/>
     
@@ -152,9 +152,9 @@
     <category term="Bioinfor" scheme="https://karobben.github.io/categories/Bioinfor/"/>
     
     
-    <category term="Bioinfor" scheme="https://karobben.github.io/tags/Bioinfor/"/>
-    
     <category term="Machine Learning" scheme="https://karobben.github.io/tags/Machine-Learning/"/>
+    
+    <category term="Bioinfor" scheme="https://karobben.github.io/tags/Bioinfor/"/>
     
   </entry>
   
@@ -293,9 +293,9 @@
     <category term="Alternative Splicing" scheme="https://karobben.github.io/categories/Biology/Bioinformatics/Protocol/Alternative-Splicing/"/>
     
     
-    <category term="RNA-Seq" scheme="https://karobben.github.io/tags/RNA-Seq/"/>
-    
     <category term="Protocol" scheme="https://karobben.github.io/tags/Protocol/"/>
+    
+    <category term="RNA-Seq" scheme="https://karobben.github.io/tags/RNA-Seq/"/>
     
     <category term="RNA-Seq Protocol" scheme="https://karobben.github.io/tags/RNA-Seq-Protocol/"/>
     
@@ -322,13 +322,13 @@
     <category term="Database" scheme="https://karobben.github.io/categories/Biology/Bioinformatics/Database/"/>
     
     
+    <category term="KEGG" scheme="https://karobben.github.io/tags/KEGG/"/>
+    
     <category term="Bioinformatics" scheme="https://karobben.github.io/tags/Bioinformatics/"/>
     
     <category term="Database" scheme="https://karobben.github.io/tags/Database/"/>
     
     <category term="api" scheme="https://karobben.github.io/tags/api/"/>
-    
-    <category term="KEGG" scheme="https://karobben.github.io/tags/KEGG/"/>
     
   </entry>
   
@@ -411,9 +411,9 @@
     <category term="RNA-Seq" scheme="https://karobben.github.io/categories/Biology/Bioinformatics/Protocol/RNA-Seq/"/>
     
     
-    <category term="Bioinformatics" scheme="https://karobben.github.io/tags/Bioinformatics/"/>
-    
     <category term="R" scheme="https://karobben.github.io/tags/R/"/>
+    
+    <category term="Bioinformatics" scheme="https://karobben.github.io/tags/Bioinformatics/"/>
     
     <category term="RNA-Seq" scheme="https://karobben.github.io/tags/RNA-Seq/"/>
     
