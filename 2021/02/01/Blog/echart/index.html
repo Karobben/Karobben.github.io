@@ -22,11 +22,11 @@
 <p>and then, insert codes below</p>
 <div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="code"><pre><code class="hljs hexo">&#123;% echarts 400 &#39;85%&#39; %&#125;<br>&#123;<br>    tooltip : &#123;<br>        trigger: &#39;axis&#39;,<br>        axisPointer : &#123;            &#x2F;&#x2F; 坐标轴指示器，坐标轴触发有效<br>            type : &#39;shadow&#39;        &#x2F;&#x2F; 默认为直线，可选为：&#39;line&#39; | &#39;shadow&#39;<br>        &#125;<br>    &#125;,<br>    legend: &#123;<br>        data:[&#39;利润&#39;, &#39;支出&#39;, &#39;收入&#39;]<br>    &#125;,<br>    grid: &#123;<br>        left: &#39;3%&#39;,<br>        right: &#39;4%&#39;,<br>        bottom: &#39;3%&#39;,<br>        containLabel: true<br>    &#125;,<br>    xAxis : [<br>        &#123;<br>            type : &#39;value&#39;<br>        &#125;<br>    ],<br>    yAxis : [<br>        &#123;<br>            type : &#39;category&#39;,<br>            axisTick : &#123;show: false&#125;,<br>            data : [&#39;周一&#39;,&#39;周二&#39;,&#39;周三&#39;,&#39;周四&#39;,&#39;周五&#39;,&#39;周六&#39;,&#39;周日&#39;]<br>        &#125;<br>    ],<br>    series : [<br>        &#123;<br>            name:&#39;利润&#39;,<br>            type:&#39;bar&#39;,<br>            itemStyle : &#123;<br>                normal: &#123;<br>                    label: &#123;show: true, position: &#39;inside&#39;&#125;<br>                &#125;<br>            &#125;,<br>            data:[200, 170, 240, 244, 200, 220, 210]<br>        &#125;,<br>        &#123;<br>            name:&#39;收入&#39;,<br>            type:&#39;bar&#39;,<br>            stack: &#39;总量&#39;,<br>            itemStyle: &#123;<br>                normal: &#123;<br>                    label : &#123;show: true&#125;<br>                &#125;<br>            &#125;,<br>            data:[320, 302, 341, 374, 390, 450, 420]<br>        &#125;,<br>        &#123;<br>            name:&#39;支出&#39;,<br>            type:&#39;bar&#39;,<br>            stack: &#39;总量&#39;,<br>            itemStyle: &#123;normal: &#123;<br>                label : &#123;show: true, position: &#39;left&#39;&#125;<br>            &#125;&#125;,<br>            data:[-120, -132, -101, -134, -190, -230, -210]<br>        &#125;<br>    ]<br>&#125;;<br>&#123;% endecharts %&#125;<br></code></pre></td></tr></table></figure></div>
 <p>This is how it looks like from the codes above:</p>
-<div id="echarts1598" style="width: 85%;height: 400px;margin: 0 auto"></div>
+<div id="echarts1074" style="width: 85%;height: 400px;margin: 0 auto"></div>
 <script src="https://cdn.bootcss.com/echarts/3.8.0/echarts.common.min.js"></script>
 <script type="text/javascript">
         // 基于准备好的dom，初始化echarts实例
-        var myChart = echarts.init(document.getElementById('echarts1598'));
+        var myChart = echarts.init(document.getElementById('echarts1074'));
         // 指定图表的配置项和数据
         var option = {
    tooltip: {
@@ -104,11 +104,11 @@
 </script>
 <h2 id="Line-chart">Line chart</h2>
 <div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="code"><pre><code class="hljs echart"><br>&#123;% echarts 400 &#39;85%&#39; %&#125;<br>option &#x3D; &#123;<br>    xAxis: &#123;<br>        type: &#39;category&#39;,<br>        name: &#39;Time&#39;,<br>        nameLocation: &quot;middle&quot;,<br>        nameTextStyle: &#123;fontSize: &quot;2rem&quot;&#125;,<br>        data: [1,2,3,4,5,6,7,]<br>    &#125;,<br>    yAxis: &#123;<br>        type: &#39;value&#39;,<br>        name: &quot;Velacity&quot;,<br>        nameLocation: &quot;middle&quot;,<br>        nameTextStyle: &#123;fontSize: &quot;2rem&quot;,<br>            padding: [0, 0, 20, 0] ,<br>        &#125;,<br>    &#125;,<br>    series: [&#123;<br>        data: [150, 230, 270, 285, 290, 295, 297],<br>        type: &#39;line&#39;<br>    &#125;]<br>&#125;;<br>&#123;% endecharts %&#125;<br></code></pre></td></tr></table></figure></div>
-<div id="echarts3272" style="width: 85%;height: 400px;margin: 0 auto"></div>
+<div id="echarts8756" style="width: 85%;height: 400px;margin: 0 auto"></div>
 <script src="https://cdn.bootcss.com/echarts/3.8.0/echarts.common.min.js"></script>
 <script type="text/javascript">
         // 基于准备好的dom，初始化echarts实例
-        var myChart = echarts.init(document.getElementById('echarts3272'));
+        var myChart = echarts.init(document.getElementById('echarts8756'));
         // 指定图表的配置项和数据
         var option = option = {
     xAxis: {
@@ -138,11 +138,11 @@
 <h3 id="The-name-of-axis">The name of axis</h3>
 <p><mark>info</mark>: In hexo widget, the you can give a <code>int</code> value to the <code>fontSize</code>. <code>2rem</code> is not supported.</p>
 <div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="CSS"><figure class="iseeu highlight /css"><table><tr><td class="code"><pre><code class="hljs css">xAxis: &#123;<br>    type: <span class="hljs-string">&#x27;category&#x27;</span>,<br>    name: <span class="hljs-string">&#x27;Time&#x27;</span>,<br>    nameLocation: <span class="hljs-string">&quot;middle&quot;</span>,<br>    nameTextStyle: &#123;fontSize: <span class="hljs-string">&quot;2rem&quot;</span>&#125;,<br></code></pre></td></tr></table></figure></div>
-<div id="echarts3171" style="width: 85%;height: 200px;margin: 0 auto"></div>
+<div id="echarts4289" style="width: 85%;height: 200px;margin: 0 auto"></div>
 <script src="https://cdn.bootcss.com/echarts/3.8.0/echarts.common.min.js"></script>
 <script type="text/javascript">
         // 基于准备好的dom，初始化echarts实例
-        var myChart = echarts.init(document.getElementById('echarts3171'));
+        var myChart = echarts.init(document.getElementById('echarts4289'));
         // 指定图表的配置项和数据
         var option = option = {
     xAxis: {
@@ -165,11 +165,11 @@
 </script>
 <h3 id="Multiple-Lines-with-legend">Multiple Lines with legend</h3>
 <div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="CSS"><figure class="iseeu highlight /css"><table><tr><td class="code"><pre><code class="hljs css">&#123;% echarts 400 &#x27;85%&#x27; %&#125;<br>option = &#123;<br>    xAxis: &#123;<br>        type: <span class="hljs-string">&#x27;category&#x27;</span>,<br>        name: <span class="hljs-string">&#x27;Time&#x27;</span>,<br>        nameLocation: <span class="hljs-string">&quot;middle&quot;</span>,<br>        nameTextStyle: &#123;fontSize: <span class="hljs-number">30</span>,<br>          padding: [<span class="hljs-number">10</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>] ,<br>            &#125;,<br>        data: [<span class="hljs-number">0</span>,<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>,<span class="hljs-number">6</span>,<span class="hljs-number">7</span>,]<br>    &#125;,<br>    yAxis: &#123;<br>        type: <span class="hljs-string">&#x27;value&#x27;</span>,<br>        name: <span class="hljs-string">&quot;Velacity&quot;</span>,<br>        nameLocation: <span class="hljs-string">&quot;middle&quot;</span>,<br>        nameTextStyle: &#123;fontSize: <span class="hljs-number">30</span>,<br>            padding: [<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">10</span>, <span class="hljs-number">0</span>] ,<br>        &#125;,<br>    &#125;,<br>    <span class="hljs-selector-tag">legend</span>: &#123;<br>        data: [<span class="hljs-string">&#x27;Measured Velocity&#x27;</span>, <span class="hljs-string">&quot;Expected Velocity&quot;</span>]<br>    &#125;,<br>    series: [&#123;<br>        name: <span class="hljs-string">&#x27;Measured Velocity&#x27;</span>,<br>        data: [<span class="hljs-number">0</span>, <span class="hljs-number">150</span>, <span class="hljs-number">230</span>, <span class="hljs-number">270</span>, <span class="hljs-number">285</span>, <span class="hljs-number">290</span>, <span class="hljs-number">295</span>, <span class="hljs-number">297</span>],<br>        type: <span class="hljs-string">&#x27;line&#x27;</span><br>    &#125;,<br>    &#123;<br>        name: <span class="hljs-string">&quot;Expected Velocity&quot;</span>,<br>        data: [, <span class="hljs-number">150</span>, <span class="hljs-number">230</span>, <span class="hljs-number">310</span>],<br>        type: <span class="hljs-string">&#x27;line&#x27;</span><br>    &#125;]<br>&#125;;<br>&#123;% endecharts %&#125;<br></code></pre></td></tr></table></figure></div>
-<div id="echarts242" style="width: 85%;height: 400px;margin: 0 auto"></div>
+<div id="echarts4371" style="width: 85%;height: 400px;margin: 0 auto"></div>
 <script src="https://cdn.bootcss.com/echarts/3.8.0/echarts.common.min.js"></script>
 <script type="text/javascript">
         // 基于准备好的dom，初始化echarts实例
-        var myChart = echarts.init(document.getElementById('echarts242'));
+        var myChart = echarts.init(document.getElementById('echarts4371'));
         // 指定图表的配置项和数据
         var option = option = {
     xAxis: {
