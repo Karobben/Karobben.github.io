@@ -72,7 +72,8 @@ theme: icarus
 deploy:
  Username: Karobben
  type: git
- repo: https://github.com/Karobben/Karobben.github.io.git
+ repo: git@github.com:Karobben/Karobben.github.io.git 
+ #https://github.com/Karobben/Karobben.github.io.git
  branch: master
  token: ""
  ignore_hidden: false
