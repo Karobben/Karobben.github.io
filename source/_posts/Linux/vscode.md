@@ -7,7 +7,7 @@ date: 2023-01-13 14:31:21
 title: "VS code"
 ytitle: "VS code"
 description: "VS code, ide for all"
-excerpt: "VS code, ide for all"
+excerpt: "VS Code is a free, open-source code editor developed by Microsoft. It provides a range of features for editing, debugging, and version control, including support for multiple programming languages, extensions for customization, and a built-in terminal. <a title='ChatGPT'>Who sad this?</a>"
 tags: [Linux, Software, IDE, vscode]
 category: [Linux, Software]
 cover: "https://vscode.dev/static/stable/social.png"

@@ -81,6 +81,14 @@ if cv2.waitKey(0) & 0xFF == ord('q'):
  cv2.resize(img, (10,10), interpolation = cv2.INTER_AREA)
 ```
 
+### rotate
+
+Cite: [geeksforgeeks.org, 2023](https://www.geeksforgeeks.org/python-opencv-cv2-rotate-method/)
+
+```python
+image = cv2.rotate(image, cv2.ROTATE_90_CLOCKWISE)
+```
+
 ### img wirte
 
 ```python

@@ -7,7 +7,7 @@ date: 2022-10-17 10:13:58
 title: "Venn Plot in R"
 ytitle: "维恩图"
 description: "Venn Plot in R"
-excerpt: "Venn Plot in R"
+excerpt: "Venn plot is a visualization tool to display overlapping or unique sets between two or more groups. In R, the 'VennDiagram' package provides an easy-to-use interface to create Venn plots with customizable colors, labels, and shapes. <a title='ChatGPT'>Who sad this?</a>"
 tags: [Plot, ggplot]
 category: [R, Plot, GGPLOT]
 cover: "https://statisticsglobe.com/wp-content/uploads/2021/01/figure-3-plot-ggvenn-r-package-programming-language.png"

@@ -7,7 +7,7 @@ date: 2023-01-09 21:01:48
 title: "String DB"
 ytitle: "String DB"
 description: ""
-excerpt: "String DB in action"
+excerpt: "STRING database is a web-based tool that provides information on protein-protein interactions, including physical and functional associations. It consolidates and scores data from multiple sources, making it a valuable resource for functional annotation and network analysis in the life sciences. <a title='ChatGPT'>Who sad this?</a>"
 tags: []
 category: []
 cover: "https://version11.string-db.org/images/string_logo_2015.png"

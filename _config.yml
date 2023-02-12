@@ -25,7 +25,8 @@ skip_render:
   - _posts/**/summary.md
   - _posts/**/index.md
   - _posts/cv/scripts/vendor/**.js
-  - _posts/cv/**.html
+  - _posts/cv/scripts/**
+  - _posts/cv/**
   - waque.sh
   - layout.md
 new_post_name: ':title.md'
@@ -74,7 +75,7 @@ deploy:
  type: git
  repo: https://github.com/Karobben/Karobben.github.io.git
  branch: master
- token: ""
+ token: $HEXO_TOKEN 
  ignore_hidden: false
 
 

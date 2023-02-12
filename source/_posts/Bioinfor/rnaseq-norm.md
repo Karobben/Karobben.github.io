@@ -7,7 +7,7 @@ date: 2022-10-04 13:00:32
 title: "FPKM, RPKM, CPM, TPM, TMM in RNA-Seq"
 ytitle: "FPKM, RPKM, CPM, TPM, TMM in RNA-Seq"
 description: "FPKM, RPKM, CPM, TPM, TMM in RNA-Seq"
-excerpt: "FPKM, RPKM, CPM, TPM, TMM in RNA-Seq"
+excerpt: "RNA-seq expression normalization is the process of adjusting the raw gene expression counts to account for differences in sequencing depth and other technical factors. It is important to perform normalization to enable comparisons between samples and increase the accuracy and reproducibility of downstream analyses. Common normalization methods include TPM, FPKM, and DESeq. <a title='ChatGPT'>Who sad this?</a>"
 tags: [Bioinformatics, RNA-Seq]
 category: [Biology, Bioinformatics, Protocol, RNA-Seq]
 cover: "https://pic1.zhimg.com/v2-d2b4e99108f94080eb1ddf9ade73e947_1440w.jpg?source=172ae18b"

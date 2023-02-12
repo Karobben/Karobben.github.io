@@ -7,7 +7,7 @@ date: 2022-12-05 14:49:59
 title: "flybase api"
 ytitle: "flybase api"
 description: "flybase api"
-excerpt: "flybase api write by python"
+excerpt: "Learning the API from FlyBase is important for accessing and integrating fly genetic and genomic data. It provides programmatic access to a variety of data, such as gene sequences, expression patterns, and genetic variants, allowing researchers to easily extract and analyze large datasets. This can facilitate the discovery of new insights and hypotheses in biological research. <a title='ChatGPT'>Who sad this?</a>"
 tags: [flybase, Bioinformatics, api]
 category: [Biology, Bioinformatics, Database]
 cover: 'https://www.researchgate.net/profile/Dr-Jean-Paul-Kamdem/publication/259184998/figure/fig3/AS:297072130576395@1447838923298/FlyBase-Home-Page-wwwflybaseorg.png'

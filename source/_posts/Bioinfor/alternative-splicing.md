@@ -7,7 +7,7 @@ date: 2022-11-07 14:44:12
 title: "RNA Seq: Alternative Splicing"
 ytitle: "RNA Seq: Alternative Splicing"
 description: "RNA Seq: Alternative Splicing"
-excerpt: "RNA Seq: Alternative Splicing"
+excerpt: "Alternative splicing research is important for understanding the diversity of gene expression and regulation, as it enables the production of multiple protein isoforms from a single gene, allowing cells to generate complex functional diversity and adapt to changing environmental conditions. <a title='ChatGPT'>Who sad this?</a>"
 tags: [RNA-Seq, Protocol, RNA-Seq Protocol]
 category: [Biology, Bioinformatics, Protocol, Alternative Splicing]
 cover: "https://rnaseq-mats.sourceforge.net/splicing.jpg"
@@ -203,9 +203,15 @@ conda install -c conda-forge bsddb3
 
 ### Plot the result by position
 
-With `rmats2sashimiplot`, you can plot the result by giving a region with `-c`. But it is very easily crapped. From my experience, there are a few things we need to look at:
-- make sure the location is the head or the end of an exon. By doing that, you can `grep` the name of the gene from GFF file to fetch the exact location of them
-- if you are trying to plot another location, you'd like to change the output directory because it would read the index you previously build and say something like 'no such location'. Or you can just delete previous results.
+
+By using the `rmats2sashimiplot` tool, you can create a plot of the output by specifying a region with the -c option. However, this can be prone to errors. Based on my experience, there are several factors that should be considered:
+- It is recommended that each position should have its own directory, as the tool generates an index for that position which may not update even if the parameters are changed.
+- It is possible to assign a random position, but it is preferable to assign a position based on the position of exons.
+- If there are no genes located within the region that has been specified, an error will occur.
+
+
+!!! info png result
+    It appears that the `rmats2sashimiplot` tool is not capable of producing the result as a PNG image format. As a solution, we can use other tools such as `pdftoppm` to convert the generated PDF file to the PNG format. For instance, a command example to convert a file named p1.pdf to a PNG file named p1.png with a resolution of 1000 can be: `pdftoppm p1.pdf p1.png -png -r 1000`.
 
 ## Result Explanation
 

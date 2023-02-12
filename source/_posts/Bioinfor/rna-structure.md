@@ -7,7 +7,7 @@ date: 2022-11-15 10:16:46
 title: "RNA-structure and Prediction"
 ytitle: "RNA-structure and Prediction"
 description: "RNA-structure and Prediction"
-excerpt: "RNA-structure and Prediction"
+excerpt: "RNA structure research is important for understanding RNA function and regulation, as the structure of RNA molecules can impact their interactions with other molecules, such as proteins and small molecules, and influence gene expression and protein synthesis. <a title='ChatGPT'>Who sad this?</a>"
 tags: [Software, miRNA-Seq, Protocol]
 category: [Biology, Bioinformatics, Protocol, miRNA]
 cover: "https://s1.ax1x.com/2022/11/16/zVg3Sf.png"

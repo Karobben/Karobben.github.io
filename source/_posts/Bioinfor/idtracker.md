@@ -7,7 +7,7 @@ date: 2023-01-24 16:41:05
 title: "IdTrackerAI"
 ytitle: "IdTrackerAI"
 description: "IdTrackerAI"
-excerpt: "IdTrackerAI"
+excerpt: "IdTrackerAI is an automated tracking software that uses deep learning algorithms to track individual animals in videos, even in challenging conditions such as occlusions and interactions between animals. The software can be used to extract a variety of metrics, including animal trajectories, activity levels, and social behavior, making it a useful tool for behavioral research in fields such as ecology, neuroscience, and psychology. <a title='ChatGPT'>Who sad this?</a>"
 tags: [Bioinformatics, Machine Learning]
 category: [Bioinformatics]
 cover: "https://s1.ax1x.com/2023/01/25/pSt1TnH.png"

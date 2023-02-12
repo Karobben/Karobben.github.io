@@ -7,7 +7,7 @@ date: 2022-12-06 13:02:44
 title: TCGA Database with R
 ytitle: TCGA Database with R
 description: "TCGA Database usage. R packages, TCGA related API"
-excerpt: "TCGA Database usage. R packages, TCGA related API"
+excerpt: "TCGAbiolinks is an R package that provides an easy-to-use interface to access and analyze data from The Cancer Genome Atlas (TCGA) project. It allows users to download TCGA data, perform quality control, differential expression analysis, and data visualization. TCGAbiolinks has contributed to a better understanding of the molecular basis of cancer and identified new potential biomarkers and therapeutic targets. <a title='ChatGPT'>Who sad this?</a>"
 tags: [TCGA, Bioinformatics, api]
 category: [Biology, Bioinformatics, Database]
 cover: "https://www.cancer.gov/sites/g/files/xnrzdm211/files/styles/cgov_article/public/cgov_image/media_image/100/700/5/files/Cancers%20selected%20labeled%20-%20article.jpg"

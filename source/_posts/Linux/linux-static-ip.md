@@ -7,7 +7,7 @@ date: 2023-01-31 10:40:12
 title: "How to set a static IP address for Linux"
 ytitle: "How to set a static IP address for Linux"
 description: "How to set a static IP address for Linux"
-excerpt: "How to set a static IP address for Linux"
+excerpt: "It is important to keep a PC's IP address from changing because it can cause connectivity issues with other devices and services that are configured to communicate with that specific IP address. If the IP address changes, these devices and services may not be able to find the PC or may connect to the wrong device, resulting in connection errors and other issues. Additionally, some security and access control systems may be configured to only allow access from specific IP addresses, so changing the IP address could prevent access to these systems. <a title='ChatGPT'>Who sad this?</a>"
 tags: [Linux]
 category: [Linux, System]
 cover: "https://s1.ax1x.com/2023/02/01/pS0LD5n.png"

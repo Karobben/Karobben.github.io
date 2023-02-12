@@ -7,7 +7,7 @@ date: 2022-10-28 16:00:41
 title: "KEGG API"
 ytitle: "KEGG API"
 description: "KEGG API"
-excerpt: "KEGG API"
+excerpt: "Learning KEGG API is important for accessing and integrating biological pathway data, enabling researchers to analyze and visualize complex biological systems, identify new potential drug targets, and explore the relationships between genes, proteins, and metabolic pathways. <a title='ChatGPT'>Who sad this?</a>"
 tags: [KEGG, Database, api, Bioinformatics]
 category: [Biology, Bioinformatics,  Database]
 cover: "https://s1.ax1x.com/2020/05/26/tieZcT.md.png"
