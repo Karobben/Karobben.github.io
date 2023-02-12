@@ -7,7 +7,7 @@ date: 2022-09-22 13:36:14
 title: "Riboviria, Something you'd like to know"
 ytitle: "RNA病毒"
 description: "About RNA virus, you like to know"
-excerpt: "About RNA virus, you like to know"
+excerpt: "Riboviruses are a type of RNA virus that infect bacteria. They have a unique replication strategy, using the host bacteria's own machinery to replicate their RNA genome. Riboviruses are thought to have potential as therapeutic agents, as they can specifically target harmful bacteria while leaving beneficial bacteria unharmed. Some studies have even explored using riboviruses as a new way to treat antibiotic-resistant bacterial infections. <a title='ChatGPT'>Who sad this?</a>"
 tags: [Biology]
 category: [Notes, Biology, Virus]
 cover: "https://journals.asm.org/cms/10.1128/mBio.02329-18/asset/f6b6021e-a7fb-4e6f-a45b-a03c3274cb66/assets/graphic/mbo0061842030010.jpeg"

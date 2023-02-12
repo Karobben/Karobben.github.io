@@ -7,7 +7,7 @@ date: 2022-09-28 12:37:34
 title: "Drosophila Parasites"
 ytitle: "果蠅身上的寄生蟲"
 description: "Drosophila Parasites"
-excerpt: "Drosophila Parasites"
+excerpt: "Drosophila (fruit fly) parasites can affect NGS (Next-Generation Sequencing) data by contaminating the sample and altering the results. These contaminants can lead to false readings and interfere with the accuracy of the data. To avoid this issue, it's important to properly handle and process the samples to minimize contamination from parasites. <a title='ChatGPT'>Who sad this?</a>"
 tags: [dme, flies, Paper]
 category: [Notes, Biology, Paper]
 cover: "https://ars.els-cdn.com/content/image/1-s2.0-S0145305X13001638-gr3.jpg"

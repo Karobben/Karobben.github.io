@@ -7,7 +7,7 @@ date: 2022-09-21 13:58:55
 title: "False Positives Made by Trinity"
 ytitle: "Trinity 的假陽性"
 description: "False Positives Made by Trinity"
-excerpt: "False Positives Made by Trinity"
+excerpt: "Trinity is a popular RNA-Seq assembly tool that can generate false positive results due to several reasons, such as incomplete or low-quality data, presence of genomic contaminants, low expression levels of certain transcripts, or technical artifacts. Improper usage of parameters and a lack of proper quality control can also lead to false positive results in the assembly process <a title='ChatGPT'>Who sad this?</a>"
 tags: [Bioinformatics, Trinity]
 category: [Biology, Bioinformatics, others]
 cover: "https://opengraph.githubassets.com/a06b3cbd989a43741004aa11ea92c3411bca4242b57f6fbe7fa024af3a8d0427/trinityrnaseq/trinityrnaseq"

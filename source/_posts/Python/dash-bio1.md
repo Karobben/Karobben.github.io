@@ -7,7 +7,7 @@ date: 2022-10-01 17:32:35
 title: "Dash-bio, powered by plotly, python"
 ytitle: "Dash-bio, powered by plotly, python"
 description: "Dash-bio, powered by plotly, python"
-excerpt: "Dash-bio, powered by plotly, python"
+excerpt: "Dash-bio is a library that enables the creation of interactive, dynamic dashboards for exploring and analyzing biological data using Plotly Dash. With its customizable components and support for various data formats, dash-bio is a convenient tool for bioinformatics professionals and researchers <a title='ChatGPT'>Who sad this?</a>"
 tags: [python, dash]
 category: []
 cover: "https://s1.ax1x.com/2022/10/02/xKI759.png"

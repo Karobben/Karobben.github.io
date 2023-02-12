@@ -14,6 +14,46 @@ cover: "https://s1.ax1x.com/2022/10/18/xr9g4H.png"
 thumbnail: "https://s1.ax1x.com/2022/10/18/xr96ED.png"
 ---
 
+
+## How it works and why it matters
+
+!!! info Here is an example explained by ChatGPT
+
+> Suppose we have a gene expression dataset consisting of 6 genes (A, B, C, D, E, and F) and 3 samples (S1, S2, and S3), and we want to test whether a pre-defined gene set called "MySet" is enriched in this dataset. Here's the dataset:
+>
+> |Gene|	S1|	S2|	S3|
+> |:-|:-|:-|:-|
+> |A	|1|	2|	1|
+> |B	|2|	4|	1|
+> |C	|3	|6|	2|
+> |D	|4	|8	|3|
+> |E	|1	|2	|1|
+> |F	|2	|4	|1|
+>
+>The first step in GSEA is to rank the genes based on their correlation with the phenotype of interest. In this example, we will use the sum of expression values across samples as the phenotype. The ranked list of genes based on this phenotype is:
+>
+> Gene|	Rank
+> -:|:-
+> D	|15
+> C	|11
+> B	|7
+> F|	7
+> A	|4
+> E|	4
+> The second step is to calculate an enrichment score for the gene set "MySet" by walking down the ranked list of genes, and computing a running sum of the signed correlation between each gene and the phenotype. If a gene is in "MySet", its correlation is positive; otherwise, it is negative. The enrichment score is the maximum deviation from zero of the running sum. Here's the calculation:
+>
+> Gene|	Rank|	In MySet?|	Correlation|	Running Sum
+> |:-|:-|:-|:-|:-
+> D|	15|	No|	-1|	-1
+> C|	11|	No|	-1|	-2
+> B|	7|	Yes|	+1|	-1
+> F|	7|	Yes|	+1|	0
+> A|	4|	Yes|	+1|	1
+> E|	4|	No|	-1|	0
+> The maximum deviation from zero of the running sum is 1, which occurs at gene A. Therefore, the enrichment score for "MySet" is 1.
+>
+> This example demonstrates the basic steps of GSEA, but in practice, GSEA is often applied to much larger datasets and gene sets, and the significance of the enrichment score is assessed using statistical tests such as permutation tests or gene set permutation tests.
+
 ## GESA
 
 In clusterProfiler, there are functions designed to do GESA based on GO and KEGG gene sets. Here I am trying to show you how to do GESA with your customized data set.

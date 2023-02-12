@@ -5,9 +5,9 @@ covercopy: <a href="https://www.researchgate.net/publication/237054383_SPATA_A_S
 priority: 10000
 date: 2022-09-25 15:29:16
 title: "Short reads aligner compartment"
-ytitle: "段序列比對比較"
+ytitle: "序列比對比較"
 description: "Short reads aligner compartment"
-excerpt: "Short reads aligner compartment"
+excerpt: "The choice of software for aligning short reads in NGS can have a significant impact on the results. Different software programs use different algorithms for aligning reads and handling mismatches, leading to different levels of accuracy and sensitivity. Some software may prioritize speed, while others may prioritize accuracy, and still others may have specific strengths or limitations in handling certain types of data. It's important to carefully consider the characteristics and limitations of each software before making a choice to ensure the best possible alignment results <a title='ChatGPT'>Who sad this?</a>"
 tags: [Bioinformatics]
 category: [Biology, Bioinformatics, others]
 cover: "https://www.researchgate.net/profile/Tin-Nguyen-32/publication/237054383/figure/fig2/AS:667856844886026@1536240888567/Stage-I-Localization-In-step-1-RNA-Seq-reads-are-aligned-to-the-reference-genome-using.ppm"

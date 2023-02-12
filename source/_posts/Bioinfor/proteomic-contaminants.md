@@ -7,7 +7,7 @@ date: 2022-09-20 09:55:46
 title: "Common Contaminants in NGS"
 ytitle: "組學中的常見污染物"
 description: "Common Contaminants in NGS Data; 各種組學中的常見污染物"
-excerpt: "Common Contaminants in Proteomic Data"
+excerpt: "The bacterial populations in UPW systems used in the semiconductor industry were studied, including 2 university and 4 full-scale industrial plants in different locations. Samples were taken from the polishing section, which can impact the quality of UPW used in the final stages of semiconductor production. These results provide an overview of the general bacterial diversity in UPW production. <a title='ChatGPT'>Who sad this?</a>"
 tags: [Bioinformatics, Proteomic]
 category: [Biology, Bioinformatics, Proteomic]
 cover: "https://cdn.technologynetworks.com/tn/images/body/ngsseo31615391054366.png"

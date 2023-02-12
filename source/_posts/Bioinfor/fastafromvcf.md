@@ -7,7 +7,7 @@ date: 2022-09-16 11:40:36
 title: "Extract Fasta from VCF"
 ytitle: "Extract Fasta from VCF"
 description: "Extract Fasta from VCF"
-excerpt: "Extract Fasta from VCF"
+excerpt: "To create a fasta file from a VCF file, use a script or software that can extract the genomic sequence information from the VCF file and format it into the fasta format. This allows you to generate a sequence-based representation of the genetic variation data stored in the VCF file, making it easier to visualize, analyze, and compare the variants. The fasta file can then be used as input for various bioinformatics tools and pipelines. <a title='ChatGPT'>Who sad this?</a>"
 tags: [Bioinformatics, fasta]
 category: [Biology, Bioinformatics, Protocol]
 cover: "https://www.sepmag.eu/hubfs/DNA%20extraction%20protocol.jpg"

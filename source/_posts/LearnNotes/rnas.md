@@ -7,7 +7,7 @@ date: 2022-09-29 10:10:59
 title: "Regulatory RNA"
 ytitle: "RNA 各種個樣的作用"
 description: "Different kinds of RNA"
-excerpt: "siRNA, miRNA, piRNA"
+excerpt: "Regulatory RNA refers to non-coding RNA molecules that play a role in regulating gene expression. These molecules can control gene expression by interacting with DNA and/or mRNA, influencing the process of transcription and translation. Examples of regulatory RNA include microRNAs, siRNAs, and long non-coding RNAs. <a title='ChatGPT'>Who sad this?</a>"
 tags: [Biology]
 category: [Notes, Biology, Genetics]
 cover: "https://universemagazine.com/wp-content/uploads/2022/06/20220511_on_rna.jpg"

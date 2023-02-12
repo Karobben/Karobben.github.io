@@ -2,6 +2,90 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://karobben.github.io/2022/10/03/Bioinfor/gsea/</loc>
+    
+    <lastmod>2023-02-12</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://karobben.github.io/2022/09/16/Bioinfor/genefromgenome/</loc>
+    
+    <lastmod>2023-02-12</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://karobben.github.io/2022/09/16/Bioinfor/fastafromvcf/</loc>
+    
+    <lastmod>2023-02-12</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://karobben.github.io/2022/09/20/Bioinfor/proteomic-contaminants/</loc>
+    
+    <lastmod>2023-02-12</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://karobben.github.io/2022/09/21/Bioinfor/trinity-false/</loc>
+    
+    <lastmod>2023-02-12</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://karobben.github.io/2022/09/22/Linux/slurm/</loc>
+    
+    <lastmod>2023-02-12</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://karobben.github.io/2022/09/22/LearnNotes/riboviria/</loc>
+    
+    <lastmod>2023-02-12</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://karobben.github.io/2022/09/25/Bioinfor/fq-aligner/</loc>
+    
+    <lastmod>2023-02-12</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://karobben.github.io/2022/09/28/LearnNotes/fly-parasite/</loc>
+    
+    <lastmod>2023-02-12</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://karobben.github.io/2022/09/29/LearnNotes/rnas/</loc>
+    
+    <lastmod>2023-02-12</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://karobben.github.io/2022/10/01/Python/dash-bio1/</loc>
+    
+    <lastmod>2023-02-12</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://karobben.github.io/2023/01/31/Linux/linux-static-ip/</loc>
+    
+    <lastmod>2023-02-12</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://karobben.github.io/2020/01/22/Python/pip/</loc>
     
     <lastmod>2023-02-12</lastmod>
@@ -205,13 +289,6 @@
   </url>
   
   <url>
-    <loc>https://karobben.github.io/2023/01/31/Linux/linux-static-ip/</loc>
-    
-    <lastmod>2023-02-12</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://karobben.github.io/2022/11/15/Bioinfor/rna-structure/</loc>
     
     <lastmod>2023-02-12</lastmod>
@@ -220,13 +297,6 @@
   
   <url>
     <loc>https://karobben.github.io/2023/02/07/R/igraph-ggplot2/</loc>
-    
-    <lastmod>2023-02-12</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://karobben.github.io/2022/10/03/Bioinfor/gsea/</loc>
     
     <lastmod>2023-02-12</lastmod>
     
@@ -1045,13 +1115,6 @@
   </url>
   
   <url>
-    <loc>https://karobben.github.io/2022/10/01/Python/dash-bio1/</loc>
-    
-    <lastmod>2023-02-11</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://karobben.github.io/2022/03/07/Python/data_skill/</loc>
     
     <lastmod>2023-02-11</lastmod>
@@ -1235,13 +1298,6 @@
   
   <url>
     <loc>https://karobben.github.io/2020/06/26/Linux/sed/</loc>
-    
-    <lastmod>2023-02-11</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://karobben.github.io/2022/09/22/Linux/slurm/</loc>
     
     <lastmod>2023-02-11</lastmod>
     
@@ -1717,13 +1773,6 @@
   </url>
   
   <url>
-    <loc>https://karobben.github.io/2022/09/28/LearnNotes/fly-parasite/</loc>
-    
-    <lastmod>2023-02-11</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://karobben.github.io/2021/05/23/LearnNotes/fourier-transforms/</loc>
     
     <lastmod>2023-02-11</lastmod>
@@ -1823,20 +1872,6 @@
   
   <url>
     <loc>https://karobben.github.io/2021/04/20/LearnNotes/readdaily1/</loc>
-    
-    <lastmod>2023-02-11</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://karobben.github.io/2022/09/22/LearnNotes/riboviria/</loc>
-    
-    <lastmod>2023-02-11</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://karobben.github.io/2022/09/29/LearnNotes/rnas/</loc>
     
     <lastmod>2023-02-11</lastmod>
     
@@ -2893,13 +2928,6 @@
   </url>
   
   <url>
-    <loc>https://karobben.github.io/2022/09/20/Bioinfor/proteomic-contaminants/</loc>
-    
-    <lastmod>2023-02-11</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://karobben.github.io/2021/09/17/Bioinfor/pymol/</loc>
     
     <lastmod>2023-02-11</lastmod>
@@ -2943,13 +2971,6 @@
   
   <url>
     <loc>https://karobben.github.io/2020/07/28/Bioinfor/sratools/</loc>
-    
-    <lastmod>2023-02-11</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://karobben.github.io/2022/09/21/Bioinfor/trinity-false/</loc>
     
     <lastmod>2023-02-11</lastmod>
     
@@ -3180,13 +3201,6 @@
   </url>
   
   <url>
-    <loc>https://karobben.github.io/2022/09/16/Bioinfor/fastafromvcf/</loc>
-    
-    <lastmod>2023-02-11</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://karobben.github.io/2020/07/28/Bioinfor/fastp/</loc>
     
     <lastmod>2023-02-11</lastmod>
@@ -3202,20 +3216,6 @@
   
   <url>
     <loc>https://karobben.github.io/2021/01/31/Bioinfor/food_gene_db/</loc>
-    
-    <lastmod>2023-02-11</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://karobben.github.io/2022/09/25/Bioinfor/fq-aligner/</loc>
-    
-    <lastmod>2023-02-11</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://karobben.github.io/2022/09/16/Bioinfor/genefromgenome/</loc>
     
     <lastmod>2023-02-11</lastmod>
     

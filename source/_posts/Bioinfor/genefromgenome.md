@@ -4,10 +4,10 @@ url: genefromgenome
 covercopy: <a href="https://www.smacgigworld.com/blog/principle-dna-extraction.php">© smacgigworld.com</a>
 priority: 10000
 date: 2022-09-16 11:01:08
-title: "Extract Genes from Non-annotated Genome"
+title: "Genome Annotation"
 ytitle: "Extract Genes from Non-annotated Genome"
 description: "Extract Genes from Non-annotated Genome"
-excerpt: "How to extract genes from non-annotated genome"
+excerpt: "Genome annotations help us understand the functions and roles of genes and genomic regions, leading to improved knowledge of biological processes and disease mechanisms. <a title='ChatGPT'>Who sad this?</a>"
 tags: [Bioinformatics, blast, python]
 category: [Biology, Bioinformatics, Protocol]
 cover: "https://www.smacgigworld.com/assets/blog-img/genomic-dna-extraction.webp"
