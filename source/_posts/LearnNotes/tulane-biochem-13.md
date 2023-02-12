@@ -10,7 +10,7 @@ description: "Class notes of Graduate Biochemistry in Tulane"
 excerpt: "Let's explore the function of proteins"
 tags: [Classes, Biochemistry, Tulane Classes]
 category: [Notes, Class, Tulane, Biochemistry]
-cover: ""
+cover: "https://z3.ax1x.com/2021/11/25/oAgyCV.png"
 thumbnail: "https://static-s.aa-cdn.net/img/ios/1535372364/8bea5e7d0cecf8c51488133d2c6a4f48?v=1"
 ---
 

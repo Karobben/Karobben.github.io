@@ -10,7 +10,7 @@ description: "Classes notes of the Advanced Cell Biology"
 excerpt: "Classes 13,  Protein Translocation"
 tags: [Classes, Cell Biology, Tulane Classes]
 category: [Notes, Class, Tulane, Cell Biology]
-cover: ""
+cover: "https://cms.rcsb.org/file-uploads/motm/58/58-G_Proteins-G-Protein.jpg"
 thumbnail: "https://www.researchgate.net/profile/Callixte-Yadufashije/publication/324543378/figure/fig26/AS:616049695285249@1523889101090/Onion-cell-before-staining.png"
 ---
 

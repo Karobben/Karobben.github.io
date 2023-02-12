@@ -10,8 +10,8 @@ description: "Jupyter Notebook"
 excerpt: "Jupyter Notebook"
 tags: [Python, Jupyter Notebook]
 category: [Python, others]
-cover: "https://923259.smushcdn.com/2321054/wp-content/uploads/2020/08/jupyter-notebook.webp?lossy=0&strip=1&webp=1"
-thumbnail: "https://tse4-mm.cn.bing.net/th/id/OIP.uTOM2B_iUkko5GTxOa3c-wAAAA"
+cover: "https://jupyter.org/assets/homepage/main-logo.svg"
+thumbnail: "https://jupyter.org/assets/homepage/main-logo.svg"
 ---
 
 

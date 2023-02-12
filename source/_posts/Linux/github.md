@@ -7,9 +7,10 @@ toc: true
 excerpt: "Basic commands for synchrony the local and cloud github repository."
 tags: [Linux, GitHub, bash]
 category: [Linux, GitHub]
-cover: 'https://cn.bing.com/th?id=AMMS_c45f125b765170342ef8efd07cb7a55f&w=410&h=110'
+cover: 'https://kinsta.com/wp-content/uploads/2018/04/what-is-github-1-1-1024x512.png'
 thumbnail: 'https://cn.bing.com/th?id=AMMS_c45f125b765170342ef8efd07cb7a55f&w=110&h=110'
 priority: 10000
+covercopy: <a href="https://kinsta.com/knowledgebase/what-is-github">© kinsta</a>
 ---
 
 ## github

@@ -10,8 +10,8 @@ description: "Single Cell RNA-Seq Notes from Seminal"
 excerpt: "Single Cell RNA-Seq Notes from Seminal"
 tags: [Bioinformatics, RNA-Seq, scRNA-Seq]
 category:
-cover: ""
-thumbnail: ""
+cover: "https://z3.ax1x.com/2021/10/31/IpH7j0.png"
+thumbnail: "https://z3.ax1x.com/2021/10/31/IpH7j0.png"
 ---
 
 ## Single Cell RNA-Seq Notes

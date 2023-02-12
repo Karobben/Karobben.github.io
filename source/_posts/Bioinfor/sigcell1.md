@@ -10,8 +10,8 @@ description: "Bioinformatics: scRNA-seq data processing practices, protocol from
 excerpt: "Bioinformatics: scRNA-seq data processing practices, protocol from seurat"
 tags: [scRNA-Seq, Bioinformatics]
 category:
-cover: ""
-thumbnail: ""
+cover: "https://z3.ax1x.com/2021/10/31/IpH7j0.png"
+thumbnail: "https://z3.ax1x.com/2021/10/31/IpH7j0.png"
 ---
 
 ## Single cell RNA-seq Data processing
