@@ -6,7 +6,7 @@
   <link href="https://karobben.github.io/atom.xml" rel="self"/>
   
   <link href="https://karobben.github.io/"/>
-  <updated>2023-02-12T01:22:27.130Z</updated>
+  <updated>2023-02-14T14:50:29.800Z</updated>
   <id>https://karobben.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Overlap calculation in R</title>
+    <link href="https://karobben.github.io/2023/02/14/R/r-overlap/"/>
+    <id>https://karobben.github.io/2023/02/14/R/r-overlap/</id>
+    <published>2023-02-14T07:25:30.000Z</published>
+    <updated>2023-02-14T14:50:29.800Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="overlap">overlap</h2><p><code>overlap</code>: The overlap package provides functions to calculate and visualize the overlap of two or more density distributions. The <code>overlapEst</code> function can be used to calculate the overlap of two density distributions, while the <code>overlapPlot</code> function can be used to visualize the overlap.</p><div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="R"><figure class="iseeu highlight /r"><table><tr><td class="code"><pre><code class="hljs r">library(overlap)<br>library(ggplot2)<br><br><span class="hljs-comment"># Generate two random lists of numbers</span><br>set.seed(<span class="hljs-number">123</span>)<br>list1 &lt;- rnorm(<span class="hljs-number">100</span>, mean = <span class="hljs-number">5</span>, sd = <span class="hljs-number">1</span>)<br>list2 &lt;- rnorm(<span class="hljs-number">100</span>, mean = <span class="hljs-number">8</span>, sd = <span class="hljs-number">1</span>)<br><br><span class="hljs-comment"># Calculate overlap density</span><br>overlapEst(list1, list2)<br><br>ggplot() + geom_density(aes(list1, fill = <span class="hljs-string">&quot;list1&quot;</span>), alpha = <span class="hljs-number">.5</span>) + <br>  geom_density(aes(list2, fill = <span class="hljs-string">&quot;list2&quot;</span>), alpha = <span class="hljs-number">.5</span>) + theme_bw()<br><br></code></pre></td></tr></table></figure></div><pre>    Dhat1     Dhat4     Dhat5 0.2460298        NA        NA </pre><p><img src="https://s1.ax1x.com/2023/02/14/pSTf79K.png" alt="Density overlapping estimate 1"></p><h2 id="pracma">pracma</h2><p><code>pracma</code>: This package provides a function called <code>intSimpson()</code> that can be used to calculate the overlap between two density distributions. Here’s an example code:</p><div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="R"><figure class="iseeu highlight /r"><table><tr><td class="code"><pre><code class="hljs r">library(overlapping)<br><br><span class="hljs-comment"># Generate two random lists of numbers</span><br>set.seed(<span class="hljs-number">123</span>)<br>list1 &lt;- rnorm(<span class="hljs-number">100</span>, mean = <span class="hljs-number">5</span>, sd = <span class="hljs-number">1</span>)<br>list2 &lt;- rnorm(<span class="hljs-number">100</span>, mean = <span class="hljs-number">8</span>, sd = <span class="hljs-number">1</span>)<br><br><span class="hljs-comment"># Calculate overlap density</span><br>overlap(<span class="hljs-built_in">list</span>(list1, list2))<br></code></pre></td></tr></table></figure></div><pre>$OV[1] 0.1431085</pre><p>I personally believe that this result is more reliable.</p><style>pre {  background-color:#38393d;  color: #5fd381;}</style>]]></content>
+    
+    
+    <summary type="html">Overlap calculation in R with library overlap and kerndwd</summary>
+    
+    
+    
+    <category term="Data" scheme="https://karobben.github.io/categories/Data/"/>
+    
+    <category term="Statistic" scheme="https://karobben.github.io/categories/Data/Statistic/"/>
+    
+    
+    <category term="R" scheme="https://karobben.github.io/tags/R/"/>
+    
+    <category term="Data" scheme="https://karobben.github.io/tags/Data/"/>
+    
+  </entry>
   
   <entry>
     <title>From igraph to ggplot2</title>
@@ -83,9 +108,9 @@
     <category term="Bioinformatics" scheme="https://karobben.github.io/categories/Bioinformatics/"/>
     
     
-    <category term="Machine Learning" scheme="https://karobben.github.io/tags/Machine-Learning/"/>
-    
     <category term="Bioinformatics" scheme="https://karobben.github.io/tags/Bioinformatics/"/>
+    
+    <category term="Machine Learning" scheme="https://karobben.github.io/tags/Machine-Learning/"/>
     
   </entry>
   
@@ -108,9 +133,9 @@
     <category term="Software" scheme="https://karobben.github.io/categories/Linux/Software/"/>
     
     
-    <category term="Software" scheme="https://karobben.github.io/tags/Software/"/>
-    
     <category term="Linux" scheme="https://karobben.github.io/tags/Linux/"/>
+    
+    <category term="Software" scheme="https://karobben.github.io/tags/Software/"/>
     
     <category term="IDE" scheme="https://karobben.github.io/tags/IDE/"/>
     
@@ -152,9 +177,9 @@
     <category term="Bioinfor" scheme="https://karobben.github.io/categories/Bioinfor/"/>
     
     
-    <category term="Machine Learning" scheme="https://karobben.github.io/tags/Machine-Learning/"/>
-    
     <category term="Bioinfor" scheme="https://karobben.github.io/tags/Bioinfor/"/>
+    
+    <category term="Machine Learning" scheme="https://karobben.github.io/tags/Machine-Learning/"/>
     
   </entry>
   
@@ -322,13 +347,13 @@
     <category term="Database" scheme="https://karobben.github.io/categories/Biology/Bioinformatics/Database/"/>
     
     
-    <category term="KEGG" scheme="https://karobben.github.io/tags/KEGG/"/>
-    
     <category term="Bioinformatics" scheme="https://karobben.github.io/tags/Bioinformatics/"/>
     
     <category term="Database" scheme="https://karobben.github.io/tags/Database/"/>
     
     <category term="api" scheme="https://karobben.github.io/tags/api/"/>
+    
+    <category term="KEGG" scheme="https://karobben.github.io/tags/KEGG/"/>
     
   </entry>
   
@@ -411,9 +436,9 @@
     <category term="RNA-Seq" scheme="https://karobben.github.io/categories/Biology/Bioinformatics/Protocol/RNA-Seq/"/>
     
     
-    <category term="R" scheme="https://karobben.github.io/tags/R/"/>
-    
     <category term="Bioinformatics" scheme="https://karobben.github.io/tags/Bioinformatics/"/>
+    
+    <category term="R" scheme="https://karobben.github.io/tags/R/"/>
     
     <category term="RNA-Seq" scheme="https://karobben.github.io/tags/RNA-Seq/"/>
     
@@ -518,31 +543,6 @@
     
     
     <category term="Bioinformatics" scheme="https://karobben.github.io/tags/Bioinformatics/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Riboviria, Something you&#39;d like to know</title>
-    <link href="https://karobben.github.io/2022/09/22/LearnNotes/riboviria/"/>
-    <id>https://karobben.github.io/2022/09/22/LearnNotes/riboviria/</id>
-    <published>2022-09-22T18:36:14.000Z</published>
-    <updated>2023-02-12T17:00:33.680Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="Riboviria">Riboviria</h2><p>Riboviria is a realm of viruses that includes all viruses that use a homologous RNA-dependent polymerase for <strong>replication</strong>.<br>It includes:</p><ol><li>RNA viruses that encode an RNA-dependent RNA polymerase(<abbr title="RNA-dependent RNA polymerase">RdRp</abbr>).</li><li>Reverse-transcribing viruses (with either RNA or DNA genomes) that encode an RNA-dependent DNA polymerase(<abbr title="RNA-dependent DNA polymerase">RdDp</abbr>).</li></ol><p><abbr title="RNA-dependent RNA polymerase">RdRp</abbr> and <abbr title="RNA-dependent DNA polymerase">RdDp</abbr> enzymes are essential for replicating the viral genome and transcribing viral genes into messenger RNA (mRNA) for translation of viral proteins.</p><p>Riboviria likely <strong>descended from non-viral elements</strong> that encode reverse transcriptase. It has <strong>few prokaryotic viruses</strong>, and includes <strong>most eukaryotic viruses</strong>.</p><p>Well known species are included:</p><ul><li>coronaviruses, ebola virus, HIV, influenza viruses, rabies virus, and Tobacco mosaic virus.</li></ul><h2 id="Characteristics">Characteristics</h2><ol><li><abbr title="RNA-dependent RNA polymerase">RdRp</abbr>: Based on the Baltimore classification system:<ul><li>positive sense single-stranded RNA (+ssRNA) viruses</li><li>negative sense single-stranded RNA (-ssRNA) viruses</li><li>double-stranded RNA viruses (dsRNA)</li></ul></li></ol><p>Viral mRNA is translated by the <strong>host cell’s ribosomes to produce viral proteins</strong>. In order to produce more viruses, viral RNA-dependent polymerases use copies of the viral genome as templates to replicate the viral genome.</p><ul><li>For +ssRNA viruses, an intermediate dsRNA genome is created from which +ssRNA is synthesized from the negative strand.</li><li>For -ssRNA viruses, genomes are synthesized from complementary positive sense strands. dsRNA viruses replicate their genomes from mRNA by synthesizing a complementary negative sense strand to form genomic dsRNA. For dsDNA-RT viruses, pregenomic RNA created from the cccDNA is retrotranscribed into new dsDNA genomes. For +ssRNA-RT viruses, the genome is replicated from the integrated genome. After replication and translation, the genome and the viral proteins are assembled into complete virions, which then leave the host cell.</li></ul><h2 id="Some-virus-photos">Some virus photos</h2><table><thead><tr><th style="text-align:center"><img src="https://www.microbiologyresearch.org/docserver/ahah/fulltext/jgv/87/10/3045fig1_thmb.gif" alt=""></th></tr></thead><tbody><tr><td style="text-align:center"><a href="https://www.microbiologyresearch.org/docserver/ahah/fulltext/jgv/87/10/3045fig1_thmb.gif">© Mazen S. Habayeb, 2006</a> Characterization of Nora virus in Rosiphila.</td></tr></tbody></table><style>pre {  background-color:#38393d;  color: #5fd381;}</style>]]></content>
-    
-    
-    <summary type="html">About RNA virus, you like to know</summary>
-    
-    
-    
-    <category term="Notes" scheme="https://karobben.github.io/categories/Notes/"/>
-    
-    <category term="Biology" scheme="https://karobben.github.io/categories/Notes/Biology/"/>
-    
-    <category term="Virus" scheme="https://karobben.github.io/categories/Notes/Biology/Virus/"/>
-    
-    
-    <category term="Biology" scheme="https://karobben.github.io/tags/Biology/"/>
     
   </entry>
   

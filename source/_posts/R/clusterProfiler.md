@@ -859,3 +859,94 @@ problem: lack of gcc-fortran
 ```bash
 sudo pacman -S gcc-fortran
 ```
+
+## Error in using
+
+<pre>
+fail to download KEGG data...
+Error in download.KEGG.Path(species) : 
+  'species' should be one of organisms listed in 'http://www.genome.jp/kegg/catalog/org_list.html'...
+Calls: gseKEGG ... prepare_KEGG -> download_KEGG -> download.KEGG.Path
+In addition: Warning message:
+In download.file(url, method = method, ...) :
+  URL 'https://rest.kegg.jp/link/hsa/pathway': status was 'Failure when receiving data from the peer'
+Execution halted
+</pre>
+
+This is such an annoying issue. The weird thing is that everything works fine when I use the code in the terminal, but as soon as I write the code into a script, it just doesn't seem to work. The author suggests that the issue could be resolved by updating to the latest version. However, this would mean that I would also need to update either the Bioconductor or R base. I don't want to update anything, I just want the job to be done. Thankfully, [Slohr](https://github.com/YuLab-SMU/clusterProfiler/issues/256)'s answer in 2022 provided a perfect solution to this problem.
+
+
+
+```r
+## https://www.genome.jp/kegg/rest/keggapi.html
+## kegg_link('hsa', 'pathway')
+ttp_kegg_link <- function(target_db, source_db) {
+    url <- paste0("https://rest.kegg.jp/link/", target_db, "/", source_db, collapse="")
+    local_mydownload <- function (url, method, quiet = TRUE, ...) 
+    {
+        if (capabilities("libcurl")) {
+            dl <- tryCatch(utils::download.file(url, quiet = quiet, 
+                method = "libcurl", ...), error = function(e) NULL)
+        }
+        else {
+            dl <- tryCatch(downloader::download(url, quiet = TRUE, 
+                method = method, ...), error = function(e) NULL)
+        }
+        return(dl)
+    }
+    local_kegg_rest <- function (rest_url) 
+    {
+        message("Reading KEGG annotation online:\n")
+        f <- tempfile()
+        dl <- local_mydownload(rest_url, destfile = f)
+        if (is.null(dl)) {
+            message("fail to download KEGG data...")
+            return(NULL)
+        }
+        content <- readLines(f)
+        content %<>% strsplit(., "\t") %>% do.call("rbind", .)
+        res <- data.frame(from = content[, 1], to = content[, 2])
+        return(res)
+    }
+    local_kegg_rest(url)
+}
+
+ttp_kegg_list <- function(db) {
+    url <- paste0("https://rest.kegg.jp/list/", db, collapse="")
+    local_mydownload <- function (url, method, quiet = TRUE, ...) 
+    {
+        if (capabilities("libcurl")) {
+            dl <- tryCatch(utils::download.file(url, quiet = quiet, 
+                method = "libcurl", ...), error = function(e) NULL)
+        }
+        else {
+            dl <- tryCatch(downloader::download(url, quiet = TRUE, 
+                method = method, ...), error = function(e) NULL)
+        }
+        return(dl)
+    }
+    local_kegg_rest <- function (rest_url) 
+    {
+        message("Reading KEGG annotation online:\n")
+        f <- tempfile()
+        dl <- local_mydownload(rest_url, destfile = f)
+        if (is.null(dl)) {
+            message("fail to download KEGG data...")
+            return(NULL)
+        }
+        content <- readLines(f)
+        content %<>% strsplit(., "\t") %>% do.call("rbind", .)
+        res <- data.frame(from = content[, 1], to = content[, 2])
+        return(res)
+    }
+    local_kegg_rest(url)
+}
+
+rlang::env_unlock(env = asNamespace('clusterProfiler'))
+rlang::env_binding_unlock(env = asNamespace('clusterProfiler'))
+assign('kegg_link', ttp_kegg_link, envir = asNamespace('clusterProfiler'))
+assign('kegg_list', ttp_kegg_list, envir = asNamespace('clusterProfiler'))
+rlang::env_binding_lock(env = asNamespace('clusterProfiler'))
+rlang::env_lock(asNamespace('clusterProfiler'))
+```
+

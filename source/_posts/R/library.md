@@ -30,7 +30,7 @@ sudo apt install libudunits2-dev
 "jiebaR", "jpeg", "htmlwidgets", "jsonlite",
 "magick", "modelr", "pacman", "psych",
 "randomForest", "rayrender", "readxl",
-"rpart", "Rwordseg", "SnowballC", "remotes"
+"rpart", "Rwordseg", "SnowballC", "remotes", "overlap", "overlaping"
 
 # Map data
 # relied libs: https://www.liujason.com/article/570.html
@@ -86,7 +86,7 @@ List <- c('dplyr', 'ellipse', 'fastcluster', "reshape2",
           "ggthemes" ,"ggdendro" ,"ggrepel", "ggnewscale", "ggridges",
           "ggvenn", "svglite", "showtext", "remotes",
           "wordcloud2" ,"ggupset" ,"plotly" ,"plotrix" ,'ggalt',
-          "BiocManager", "deSolve", "SciViews")
+          "BiocManager", "deSolve", "SciViews", "overlap")
 
 for(LIB in List){
   if (!requireNamespace(LIB, quietly = TRUE))
