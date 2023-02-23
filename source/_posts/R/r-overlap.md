@@ -45,9 +45,9 @@ ggplot() + geom_density(aes(list1, fill = "list1"), alpha = .5) +
 
 
 
-## pracma
+## overlapping
 
-`pracma`: This package provides a function called `intSimpson()` that can be used to calculate the overlap between two density distributions. Here's an example code:
+
 
 ```r
 library(overlapping)

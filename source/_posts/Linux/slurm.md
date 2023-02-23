@@ -60,6 +60,36 @@ sacct --format=jobid,elapsed,ncpus,ntasks,state|headsacct
 2218503.bat+   00:15:19          1        1  COMPLETED
 </pre>
 
+## Tricks
+
+### Hold the job submit when the waiting list is too long
+
+Sometimes, we need to upload a large number of jobs using a for loop. However, there is a limit to the number of jobs that can be submitted by each user. In such cases, we prefer to hold off on job submission and wait until some of the previously submitted jobs are completed. To achieve this, the easiest way is to use a while loop before submitting the jobs.
+
+```bash
+for i in {1..3000}; do
+  while [ $(squeue -u user| wc -l) -gt 900 ] ;do
+      echo $(squeue -u user| wc -l) too many jobs;
+      sleep 10;
+  done
+  sbatch job.sh
+done
+```
+
+In this while loop, we utilize the command squeue -u user | wc -l to determine the number of jobs in the user's list. When it exceeds 900, we enter a while loop that will pause the submission process until some jobs have completed.
+
+
+
+This is a bash script that will submit a batch job (`job.sh`) 3000 times. However, it will check if there are already 900 or more jobs running under the user account "user" using the `squeue` command. If there are, it will wait for 10 seconds and check again. This loop will continue until there are fewer than 900 jobs running, at which point it will submit the next batch job using the `sbatch` command.
+
+Here is a breakdown of the code:
+
+- `for i in {1..3000}; do` starts a loop that will run 3000 times. This is just a counter and is not used in the loop.
+- `while [ $(squeue -u user| wc -l) -gt 900 ] ;do` starts a while loop that will continue as long as there are 900 or more jobs running under the user account "user".
+- `echo $(squeue -u user| wc -l) too many jobs;` prints a message to the console indicating how many jobs are currently running.
+- `sleep 10;` pauses the script for 10 seconds before checking again.
+- `sbatch job.sh` submits the batch job job.sh to the queue for processing.
+
 
 <style>
 pre {

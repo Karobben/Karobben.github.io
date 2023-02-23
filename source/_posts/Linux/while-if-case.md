@@ -24,6 +24,54 @@ then
 fi
 ```
 
+[© Bash Test Operators](https://kapeli.com/cheat_sheets/Bash_Test_Operators.docset/Contents/Resources/Documents/index)
+
+|||
+|:-:|:-|
+-eq |is equal to
+-ne |is not equal to
+-gt|is greater than
+-ge|is greater than or equal to
+-lt|is less than
+-le|is less than or equal to
+<|is less than
+<=|is less than or equal to
+>|is greater tha
+>=|is greater than or equal to
+=|is equal to
+==|The == comparison operator behaves differently within a double-brackets test
+!=|is not equal to
+<|is less than, in ASCII alphabetical order
+>|is greater than, in ASCII alphabetical order.
+-z|string is null
+-n|string is not null.
+-e|file exists
+-a|is deprecated and its use is discouraged.
+-f|file is a regular file (not a directory or device file)
+-d|file is a directory
+-h|file is a symbolic link
+-L|file is a symbolic link
+-b|file is a block device
+-c|file is a character device
+-p|file is a pipe
+-S|file is a socket
+-s|file is not zero size
+-t|file (descriptor) is associated with a terminal device;
+-r|file has read permission (for the user running the test)
+-w|file has write permission (for the user running the test)
+-x|file has execute permission (for the user running the test)
+-g|set-group-id (sgid) flag set on file or directory
+-u|set-user-id (suid) flag set on file
+-k|sticky bit set
+-O|you are owner of file
+-G|group-id of file same as yours
+-N|file modified since it was last read
+-nt|file f1 is newer than f2 `if [ "$f1" -nt "$f2" ]`
+-ot|file f1 is older than f2 `if [ "$f1" -ot "$f2" ]`
+-ef| files f1 and f2 are hard links to the same file `if [ "$f1" -ef "$f2" ]`
+!|"not" -- reverses the sense of the tests above (returns true if condition absent).
+
+
 pairwise-compare with if loop
 
 [© Ole Tange; 2018](https://unix.stackexchange.com/questions/490649/pairwise-combinations-of-filenames)
