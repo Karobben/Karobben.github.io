@@ -4,14 +4,14 @@ url: brownian_motion
 covercopy: © Karobben
 priority: 10000
 date: 2022-11-23 12:56:12
-title:
-ytitle:
-description:
-excerpt:
-tags:
-category:
-cover:
-thumbnail:
+title: "Brownian Motion"
+ytitle: "Brownian Motion"
+description: "Brownian Motion"
+excerpt: "Brownian Motion"
+tags: [Python]
+category: [Python]
+cover: ""
+thumbnail: ""
 ---
 
 Codes from: [Tirthajyoti Sarkar](https://towardsdatascience.com/brownian-motion-with-python-9083ebc46ff0)
