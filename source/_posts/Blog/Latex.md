@@ -5,7 +5,7 @@ date: 2020/08/25
 url: latex
 toc: true
 excerpt: "Latex grammar highlight Plugin for Atom"
-tags: [Atom, Latex]
+tags: [IDE, Latex]
 category: [others, else]
 cover: 'https://imgconvert.csdnimg.cn/aHR0cDovL2ltZy5ibG9nLmNzZG4ubmV0LzIwMTcxMDA1MDkxNjM4ODYy'
 thumbnail: 'https://imgconvert.csdnimg.cn/aHR0cDovL2ltZy5ibG9nLmNzZG4ubmV0LzIwMTcxMDA1MDkxNjM4ODYy'

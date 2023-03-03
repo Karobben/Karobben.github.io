@@ -8,7 +8,7 @@ title: "From igraph to ggplot2"
 ytitle: "From igraph to ggplot2"
 description: "Turn igraph result to ggplot2 and more"
 excerpt: "ggplot is flexible, integrates well with igraph, and provides a consistent grammar for building plots, making it an ideal tool for creating informative, visually appealing, and reproducible visualizations of your network data. <a title='ChatGPT'>Who sad this?</a>"
-tags: [ggplot2, network]
+tags: [ggplot2, Network]
 category: [R, Plot, GGPLOT]
 cover: "https://s1.ax1x.com/2023/02/08/pS2UVIg.png"
 thumbnail: "https://s1.ax1x.com/2023/02/08/pS2UVIg.png"

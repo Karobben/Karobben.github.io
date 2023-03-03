@@ -4,7 +4,7 @@ description: "Basmap"
 url: basemap
 date: 2020/01/22
 toc: true
-excerpt: "basemap for matplotlib"
+excerpt: "Basemap is a Python library that provides a set of map projections and tools for plotting data on maps. It allows you to create maps with various cartographic projections, add features like coastlines and rivers, and plot data points on top of the map. Basemap can be used to create static maps or embedded in interactive web applications. <a title='GhatGPT'>Who said this?</a>"
 tags: [Python, Matplotlib, Plot]
 category: [Python, Plot]
 cover: 'https://miro.medium.com/v2/resize:fit:720/format:webp/1*PIpjPTlcrDyXLl2fDv34bA.png'

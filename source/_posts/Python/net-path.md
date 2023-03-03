@@ -1,17 +1,17 @@
 ---
 toc: true
 url: net-path
-covercopy: © Karobben
+covercopy: <a href="https://pixabay.com/users/buzcajun-7315165/">© buzcajun</a>
 priority: 10000
 date: 2023-02-26 11:22:57
 title: "path find in a network plot"
 ytitle: "path find in a network plot"
 description: "path find in a network plot"
-excerpt: "1"
+excerpt: "Dijkstra’s algorithm is a graph search algorithm that works by finding the shortest path from a starting node to all other nodes in the graph. The algorithm maintains a set of visited nodes and a set of unvisited nodes, with the distance from the starting node to each unvisited node initialized to infinity. At each step, the algorithm selects the unvisited node with the smallest distance from the starting node and adds it to the visited set... <a title='GhatGPT'>Who said this?</a>"
 tags: [Network]
 category: [Python]
-cover: ""
-thumbnail: ""
+cover: "https://cdn.pixabay.com/photo/2020/11/09/15/48/graph-5727061_960_720.png"
+thumbnail: "https://cdn.pixabay.com/photo/2020/11/09/15/48/graph-5727061_960_720.png"
 ---
 
 ## path find in a network plot
@@ -43,7 +43,20 @@ plt.show()
 # Find a path from node 'A' to node 'H'
 path = nx.shortest_path(G, 'A', 'H')
 print(path)
+
+
+# highlight the path
+edge_colors = ['red' if (u, v) in zip(path, path[1:]) else 'black' for u, v in G.edges()]
+nx.draw(G,  pos, with_labels=True, edge_color=edge_colors)
+plt.show()
 ```
+
+<pre>
+['A', 'B', 'C', 'E', 'G', 'H']
+</pre>
+
+
+![Net work path find](https://s1.ax1x.com/2023/03/02/ppFiGOf.png)
 
 In this code, we create a directed graph `G` using `nx.DiGraph()`. We add nodes to the graph using `G.add_nodes_from()`, and add edges to the graph using `G.add_edges_from()`. We can assign a weight to each edge using a dictionary, but in this example we don't do that.
 

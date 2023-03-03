@@ -5,7 +5,7 @@ date: 2021/02/21
 url: paper_bsflylavea_review
 toc: true
 excerpt: "Black soldier fly larvae (BSFL) meal, produced from the larvae of Hermetia illucens, has shown promise as a fish meal (FM) replacement in diets for rainbow trout, catfish and tilapia, but has not been examined as an alternative protein source in shrimp diets. Six isonitrogenous (35% crude protein, as fed) and isoenergetic (16.7 kJ available energy g− 1 of diet) diets containing graded levels of BSFL as replaceme..."
-tags: [Papers, Diet Switch, Fish, BSFL]
+tags: [Papers, Metabolism, Fish]
 category: [Notes, Paper, Biology]
 cover: 'https://cdn.pixabay.com/photo/2016/08/29/06/21/fly-1627592_960_720.jpg'
 thumbnail: 'https://cdn.pixabay.com/photo/2016/08/29/06/21/fly-1627592_960_720.jpg'

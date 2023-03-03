@@ -5,7 +5,7 @@ url: fishdietenzyme
 date: 2020/08/12
 toc: true
 excerpt: "Modifications of digestive enzymes in trout (Oncorhynchus mykiss) and sea bream"
-tags: [Papers, Diet Switch, Digestive Enzymes, Intestine, Fish]
+tags: [Papers, Metabolism, Fish]
 category: [Notes, Paper, Biology]
 cover: 'http://nyfalls.com/dev/wp-content/uploads/2013/04/Oncorhynchus-mykiss1-300x112.jpg'
 thumbnail: 'http://nyfalls.com/dev/wp-content/uploads/2013/04/Oncorhynchus-mykiss1-300x112.jpg'

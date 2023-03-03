@@ -4,8 +4,8 @@ description: "Matplotlib"
 url: matplotlib2
 date: 2020/01/22
 toc: true
-excerpt: "Buildozer install and android APK packaging"
-tags: [Python, Plot, Matplotlib]
+excerpt: "Matplotlib is a Python library used for data visualization, including creating graphs, charts, and plots. It offers a wide range of customization options and supports various output formats, including PDF, PNG, and SVG. <a title='GhatGPT'>Who said this?</a>"
+tags: [Python, Plot, matplotlib]
 category: [Python, Plot]
 cover: 'https://s1.ax1x.com/2020/06/22/NYYKFx.png'
 thumbnail: 'https://s1.ax1x.com/2020/06/22/NYYKFx.png'

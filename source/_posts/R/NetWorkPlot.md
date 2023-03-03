@@ -4,8 +4,8 @@ description: "NetWorkPlot"
 url: networkplot2
 date: 2020/08/13
 toc: true
-excerpt: "There are few libraries for draw the network Plot. Js library networkD3 is diffidently my favorite one!"
-tags: [R, 3D, Interoperable Plot]
+excerpt: "There are few libraries for draw the network Plot. JS library networkD3 is diffidently my favorite one!"
+tags: [R, Network, Plot]
 category: [R, Plot, others]
 cover: 'https://s1.ax1x.com/2020/08/13/dS6sCF.gif'
 thumbnail: 'https://s1.ax1x.com/2020/08/13/dS6sCF.gif'

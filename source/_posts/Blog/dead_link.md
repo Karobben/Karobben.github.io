@@ -5,7 +5,7 @@ url: dead_link
 date: 2021/02/28
 toc: true
 excerpt: "Dead links are really annoying and may damage your website's rankings and usability. So, it is important to check and delete them periodically."
-tags: [HTML, Blog]
+tags: [HTML]
 category: [others, Blog, more]
 cover: 'https://www.coreclimbing.com.au/wp-content/uploads/2018/12/Dead-Links-1-600x400.png'
 thumbnail: 'https://media.customon.com/unsafe/100x100/img.customon.com/art/2/1200/1200/1b9569/63523/943fee7011503cefa49ec2f65ad5df47.png.jpg'

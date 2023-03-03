@@ -5,8 +5,8 @@ description: "BigDye 的问题与解答"
 date: 2020/09/22
 toc: true
 excerpt: "BigDye 的问题与解答"
-tags: [BDT, Sanger Sequencing]
-category: [Notes, Biology]
+tags: [wet]
+category: [Notes, Biology, Wet Protocol]
 cover: 'https://s3.ax1x.com/2020/11/29/DgCjyR.png'
 thumbnail: 'https://s3.ax1x.com/2020/11/29/DgCjyR.png'
 priority: 10000

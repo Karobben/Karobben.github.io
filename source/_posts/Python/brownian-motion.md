@@ -7,11 +7,11 @@ date: 2022-11-23 12:56:12
 title: "Brownian Motion"
 ytitle: "Brownian Motion"
 description: "Brownian Motion"
-excerpt: "Brownian Motion"
-tags: [Python]
-category: [Python]
-cover: ""
-thumbnail: ""
+excerpt: "Brownian motion is the random and erratic movement of small particles in a fluid or gas due to collisions with molecules in the surrounding medium. It was first observed and explained by Robert Brown in 1827, and is an important concept in the study of diffusion and stochastic processes. <a title='GhatGPT'>Who said this?</a>"
+tags: [Python, Data]
+category: [Python, Data]
+cover: "https://s1.ax1x.com/2023/03/02/ppFi6mT.png"
+thumbnail: "https://s1.ax1x.com/2023/03/02/ppFi6mT.png"
 ---
 
 Codes from: [Tirthajyoti Sarkar](https://towardsdatascience.com/brownian-motion-with-python-9083ebc46ff0)
@@ -29,54 +29,42 @@ class Brownian():
         Init class
         """
         assert (type(x0)==float or type(x0)==int or x0 is None), "Expect a float or None for the initial value"
-
         self.x0 = float(x0)
-
     def gen_random_walk(self,n_step=100):
         """
         Generate motion by random walk
-
         Arguments:
             n_step: Number of steps
-
         Returns:
             A NumPy array with `n_steps` points
         """
         # Warning about the small number of steps
         if n_step < 30:
             print("WARNING! The number of steps is small. It may not generate a good stochastic process sequence!")
-
         w = np.ones(n_step)*self.x0
-
         for i in range(1,n_step):
             # Sampling from the Normal distribution with probability 1/2
             yi = np.random.choice([1,-1])
             # Weiner process
             w[i] = w[i-1]+(yi/np.sqrt(n_step))
-
         return w
 
     def gen_normal(self,n_step=100):
         """
         Generate motion by drawing from the Normal distribution
-
         Arguments:
             n_step: Number of steps
-
         Returns:
             A NumPy array with `n_steps` points
         """
         if n_step < 30:
             print("WARNING! The number of steps is small. It may not generate a good stochastic process sequence!")
-
         w = np.ones(n_step)*self.x0
-
         for i in range(1,n_step):
             # Sampling from the Normal distribution
             yi = np.random.normal()
             # Weiner process
             w[i] = w[i-1]+(yi/np.sqrt(n_step))
-
         return w
 
     def stock_price(
@@ -90,14 +78,12 @@ class Brownian():
         """
         Models a stock price S(t) using the Weiner process W(t) as
         `S(t) = S(0).exp{(mu-(sigma^2/2).t)+sigma.W(t)}`
-
         Arguments:
             s0: Iniital stock price, default 100
             mu: 'Drift' of the stock (upwards or downwards), default 1
             sigma: 'Volatility' of the stock, default 1
             deltaT: The time period for which the future prices are computed, default 52 (as in 52 weeks)
             dt (optional): The granularity of the time-period, default 0.1
-
         Returns:
             s: A NumPy array with the simulated stock prices over the time-period deltaT
         """
@@ -117,10 +103,13 @@ class Brownian():
 b1 = Brownian()
 b2 = Brownian()
 
-x = b1.gen_normal(1000)
-y = b2.gen_normal(1000)
+x = b1.gen_normal(10000)
+y = b2.gen_normal(10000)
 
-plt.plot(x,y,c='b')
+colors = np.linspace(0, 1, len(x))
+
+plt.plot(x,y, color = 'grey')
+plt.scatter(x,y, c=colors, cmap='viridis')
 xmax,xmin,ymax,ymin = x.max(),x.min(),y.max(),y.min()
 scale_factor = 1.25
 xmax,xmin,ymax,ymin = xmax*scale_factor,xmin*scale_factor,ymax*scale_factor,ymin*scale_factor
@@ -129,8 +118,9 @@ plt.ylim(ymin,ymax)
 plt.show()
 ```
 
+![network path find](https://s1.ax1x.com/2023/03/02/ppFic0U.png)
 
-Show it in openCV animation
+# Use Opencv to Show the Animation
 
 ```python
 import cv2
@@ -234,6 +224,8 @@ while (True):
 Collision by the center point
 
 ```python
+import pandas as pd
+
 # Overlap detection
 def Map_bonce(Point, X, Y):
     if Point['N'][0] <0:

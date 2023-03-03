@@ -201,3 +201,18 @@ for i in range(4):
 
 print v1,v2,v3
 ```
+
+
+## Dictionary
+
+Find the max value from a dictionary
+
+```python
+d = {'a': 10, 'b': 5, 'c': 20}
+max_value = max(d, key=d.get)
+print(max_value)
+```
+
+<pre>
+c
+</pre>

@@ -7,8 +7,8 @@ date: 2021-04-20 10:05:06
 title: "Develop a Binary Tree in R"
 ytitle: "在R语言中计算二叉树的延伸和衍生"
 description: "Build a visualize a binary tree in R by using for loop and igraph"
-excerpt: "Codes for R to build a binary tree by foo loop and visualize is with package igraph"
-tags: [R, others, Blog, more]
+excerpt: "A binary tree is a type of tree data structure in which each node has at most two child nodes, typically referred to as the left child and right child. The nodes in a binary tree are arranged in a hierarchical order, with the topmost node called the root node. <a title='GhatGPT'>Who said this?</a>"
+tags: [R, Network]
 category: [R, Plot, Blog, Algorithm]
 cover: "https://z3.ax1x.com/2021/04/20/c7vKXt.png"
 thumbnail: "https://z3.ax1x.com/2021/04/20/c7vKXt.png"

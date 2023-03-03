@@ -8,7 +8,7 @@ title: "Genome Annotation"
 ytitle: "Extract Genes from Non-annotated Genome"
 description: "Extract Genes from Non-annotated Genome"
 excerpt: "Genome annotations help us understand the functions and roles of genes and genomic regions, leading to improved knowledge of biological processes and disease mechanisms. <a title='ChatGPT'>Who sad this?</a>"
-tags: [Bioinformatics, blast, python]
+tags: [Bioinformatics, blast, Python]
 category: [Biology, Bioinformatics, Protocol]
 cover: "https://www.smacgigworld.com/assets/blog-img/genomic-dna-extraction.webp"
 thumbnail: "https://www.smacgigworld.com/assets/blog-img/genomic-dna-extraction.webp"

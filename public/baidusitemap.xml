@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://karobben.github.io/2020/09/12/Python/Pandas/</loc>
+    <lastmod>2023-03-01</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2021/05/19/Linux/Termux/</loc>
+    <lastmod>2023-02-28</lastmod>
+  </url>
+  <url>
     <loc>https://karobben.github.io/2022/11/23/Python/brownian-motion/</loc>
     <lastmod>2023-02-26</lastmod>
   </url>
@@ -82,10 +90,6 @@
   </url>
   <url>
     <loc>https://karobben.github.io/2020/01/22/Python/PIL_np.array/</loc>
-    <lastmod>2023-02-12</lastmod>
-  </url>
-  <url>
-    <loc>https://karobben.github.io/2020/09/12/Python/Pandas/</loc>
     <lastmod>2023-02-12</lastmod>
   </url>
   <url>
@@ -882,10 +886,6 @@
   </url>
   <url>
     <loc>https://karobben.github.io/2020/06/26/Linux/System/</loc>
-    <lastmod>2023-02-11</lastmod>
-  </url>
-  <url>
-    <loc>https://karobben.github.io/2021/05/19/Linux/Termux/</loc>
     <lastmod>2023-02-11</lastmod>
   </url>
   <url>

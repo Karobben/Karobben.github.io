@@ -8,7 +8,7 @@ title: "Cell-programmed nutrient partitioning in the tumour microenvironment."
 ytitle: "Cell-programmed nutrient partitioning in the tumour microenvironment."
 description: "Cell-programmed nutrient partitioning in the tumour microenvironment."
 excerpt: 'Cell-programmed nutrient partitioning in the tumour microenvironment.'
-tags: [Paper]
+tags: [Paper, Cancer]
 category: [Paper, Diseases]
 cover: "https://media.springernature.com/lw685/springer-static/image/art%3A10.1038%2Fs41586-021-03442-1/MediaObjects/41586_2021_3442_Fig1_HTML.png?as=webp"
 thumbnail: "https://z3.ax1x.com/2021/10/18/5a26Ve.png"

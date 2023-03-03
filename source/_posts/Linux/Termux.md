@@ -514,3 +514,20 @@ wget -c https://mirrors.tuna.tsinghua.edu.cn/anaconda/miniconda/Miniconda3-py39_
 # blast+
 apt install blast2 bowtie bowtie2
 ```
+
+
+## Hexo
+
+Reference: [便当的梅开四度](https://wzk0.github.io/hx/)
+```python
+# update first or you'll got error
+pkg upgrade && pkg update
+
+# hexo is based on the nodejs
+pkg install nodejs
+
+```
+
+
+
+

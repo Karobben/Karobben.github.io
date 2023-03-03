@@ -7,9 +7,9 @@ toc: true
 excerpt: "Class Notes of Python for Data Science from Edx"
 tags: [Classes, Python, Data Science]
 category: [Notes, Class, Python]
-cover: 'https://th.bing.com/th/id/R3d9a78ed6fe62aa5ee6e9fd61c092cca?rik=I7LX8qXniM2YLQ&riu=http%3a%2f%2fgetcodify.com%2fwp-content%2fuploads%2f2016%2f10%2fPython_logo.jpg&w=680'
-covercopy: '© getcodify.com'
-thumbnail: 'https://tse4-mm.cn.bing.net/th/id/OIP.uTOM2B_iUkko5GTxOa3c-wAAAA'
+cover: 'https://cdn.pixabay.com/photo/2016/07/11/12/16/mathematics-1509559_960_720.jpg'
+covercopy: '<a href="https://pixabay.com/users/geralt-9301/">© geralt</a>'
+thumbnail: 'https://cdn.pixabay.com/photo/2016/07/11/12/16/mathematics-1509559_960_720.jpg'
 priority: 10000
 ---
 

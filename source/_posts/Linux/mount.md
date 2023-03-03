@@ -7,8 +7,8 @@ date: 2022-09-14 14:17:31
 title: "Disk Mount and Manage in Linux"
 ytitle: "Disk Mount and Manage in Linux"
 description: "Disk Mount and Manage in Linux"
-excerpt: "Disk Mount and Manage in Linux"
-tags: [Linux, Disk, mount]
+excerpt: "Disk mount in Linux refers to the process of making a file system available for the operating system to access on a particular directory. This is done by mounting the file system on a directory, which makes it accessible to the system and its users. <a title='GhatGPT'>Who said this?</a>"
+tags: [Linux, Disk, System]
 category: [Linux, System]
 cover: "https://cdn.pixabay.com/photo/2015/01/22/07/03/hard-drive-607461_1280.jpg"
 thumbnail: "https://cdn.pixabay.com/photo/2015/01/22/07/03/hard-drive-607461_1280.jpg"
@@ -96,6 +96,9 @@ You may need to reboot and re-mount to work
 
 
 ## Mount online Web sever
+
+> The "sshfs" command in Linux is used to mount a remote file system on a local machine over an SSH connection. It allows users to securely access and manipulate files on a remote machine as if they were on the local machine. The command syntax typically involves specifying the remote host and directory to mount, as well as the local directory to mount it to. 
+> © ChatGPT
 
 ```bash
 sudo apt-get install sshfs

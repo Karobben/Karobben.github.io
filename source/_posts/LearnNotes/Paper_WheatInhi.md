@@ -5,7 +5,7 @@ url: wheatinhibitors
 date: 2020/07/07
 toc: true
 excerpt: "Nutritional Wheat Amylase-Trypsin Inhibitors Promote Intestinal Inflammation via Activation of Myeloid Cells (Sparus aurata) in response to dietary fish meal replacement by plant protein sources"
-tags: [Papers, Intestine, Anti-nutrition Factor, Mice]
+tags: [Papers, Metabolism, Mice]
 category: [Notes, Paper, Biology]
 cover: "http://woodstream.scene7.com/is/image/woodstream/hh_sba_mouse?"
 thumbnail: "http://woodstream.scene7.com/is/image/woodstream/hh_sba_mouse?"

@@ -4,8 +4,8 @@ date: 2020/06/29
 description: "How to Make Calcium Competent Cells"
 url: ca_competent
 toc: true
-excerpt: "How to Make Calcium Competent Cells"
-tags: [Biology, Cells]
+excerpt: "Calcium competent cells are bacterial cells that are treated with calcium chloride to increase their ability to uptake plasmid DNA. The calcium ions disrupt the cell membrane and make it more permeable to DNA, increasing the efficiency of transformation. These cells are commonly used in molecular biology experiments to introduce foreign DNA into bacterial cells. <a title='GhatGPT'>Who said this?</a>"
+tags: [Biology, Cell, Wet]
 category: [Biology, Wet Protocol]
 cover: 'https://tse3-mm.cn.bing.net/th/id/OIP.pg0lLEEeNeiUp31DPMKtRwHaCY'
 thumbnail: 'https://tse3-mm.cn.bing.net/th/id/OIP.pg0lLEEeNeiUp31DPMKtRwHaCY'

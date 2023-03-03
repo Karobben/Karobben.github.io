@@ -8,7 +8,7 @@ title: "VS code"
 ytitle: "VS code"
 description: "VS code, ide for all"
 excerpt: "VS Code is a free, open-source code editor developed by Microsoft. It provides a range of features for editing, debugging, and version control, including support for multiple programming languages, extensions for customization, and a built-in terminal. <a title='ChatGPT'>Who sad this?</a>"
-tags: [Linux, Software, IDE, vscode]
+tags: [Linux, Software, IDE]
 category: [Linux, Software]
 cover: "https://vscode.dev/static/stable/social.png"
 thumbnail: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/2048px-Visual_Studio_Code_1.35_icon.svg.png"

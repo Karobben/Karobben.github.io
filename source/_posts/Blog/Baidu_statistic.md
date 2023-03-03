@@ -4,11 +4,11 @@ description: "百度统计 API"
 url: egavw6
 date: 2020/07/28
 toc: true
-excerpt: "如何使用百度统计 API"
-tags: [API, 百度统计, Python]
+excerpt: "百度统计是百度公司推出的网站分析工具，可以帮助网站管理员深入了解网站的流量、访问者行为、来源和趋势等数据。用户可以通过在网站中添加代码，收集并分析访问数据，从而优化网站运营和提高用户体验。百度统计提供了丰富的分析工具和数据可视化功能，让用户轻松地获取并理解网站数据。"
+tags: [API, Web, Python]
 category: [Python, API]
-cover: 'https://th.bing.com/th/id/R3d9a78ed6fe62aa5ee6e9fd61c092cca?rik=I7LX8qXniM2YLQ&riu=http%3a%2f%2fgetcodify.com%2fwp-content%2fuploads%2f2016%2f10%2fPython_logo.jpg&w=680'
-covercopy: '© getcodify.com'
+cover: 'https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/030ce942338c4772b4edd8ec75957488~tplv-k3u1fbpfcp-zoom-crop-mark:892:892:892:502.awebp?'
+covercopy: '© 百度统计'
 thumbnail: 'https://tse4-mm.cn.bing.net/th/id/OIP.uTOM2B_iUkko5GTxOa3c-wAAAA'
 priority: 10000
 ---

@@ -5,7 +5,7 @@ url: paperrnaseqfish4
 date: 2020/07/07
 toc: true
 excerpt: "Transcriptomic response to soybean meal-based diets as the frst formulated feed in juvenile yellow perch (Perca favescens)"
-tags: [Papers, Fish, RNA-Seq]
+tags: [Papers, Fish, RNA-Seq, Metabolism]
 category: [Notes, Paper, Biology]
 cover: "http://thumbimg.dealmoon.com/dealmoon/382/4fd/098/97ab123e4c71e43e487b89e.jpg"
 thumbnail: "http://thumbimg.dealmoon.com/dealmoon/382/4fd/098/97ab123e4c71e43e487b89e.jpg"

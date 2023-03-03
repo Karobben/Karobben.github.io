@@ -8,7 +8,7 @@ title: "Fruchterman Reingold layout"
 ytitle: "Fruchterman Reingold layout"
 description: "Fruchterman Reingold"
 excerpt: "The Fruchterman-Reingold layout is a force-directed layout algorithm, which treats edges like springs that move vertices closer or further from each other in an attempt to find an equilibrium that minimizes the 'energy' of the system. <a href='https://www.sciencedirect.com/science/article/pii/B9780123822291000072#c0007'>© Bernie Hogan</a>"
-tags: ['Statistic', 'network']
+tags: ['Statistic', 'Network']
 category:  ['Notes', 'Statistic', 'others']
 cover: "https://ars.els-cdn.com/content/image/3-s2.0-B9780123822291000114-f11-05-9780123822291.jpg"
 thumbnail: "https://ars.els-cdn.com/content/image/3-s2.0-B9780123822291000114-f11-05-9780123822291.jpg"

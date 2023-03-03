@@ -5,7 +5,7 @@ url: liver_steroids
 date: 2020/07/07
 toc: true
 excerpt: "Liver and Steroid Hormones—Can a Touch of p53 Make a Difference?"
-tags: [Papers, Liver, Steroid Hormones]
+tags: [Papers]
 category: [Notes, Paper, Biology]
 cover: 'https://s1.ax1x.com/2020/05/21/Yqgjuq.png'
 thumbnail: 'https://s1.ax1x.com/2020/05/21/Yqgjuq.png'

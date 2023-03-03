@@ -5,7 +5,7 @@ date: 2020/07/07
 url: paper_bsfl_salmon_2019
 toc: true
 excerpt: "Black soldier fly larvae meal can replace fish meal in diets of sea-water phase Atlantic salmon (Salmo salar)"
-tags: [Papers, Diet Switch, Fish, BSFL]
+tags: [Papers, Metabolism, Fish]
 category: [Notes, Paper, Biology]
 cover: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/FMIB_44043_Salmon%2C_Salmo_Salar_Female_fresh_run_from_the_sea.jpeg/1200px-FMIB_44043_Salmon%2C_Salmo_Salar_Female_fresh_run_from_the_sea.jpeg'
 thumbnail: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/FMIB_44043_Salmon%2C_Salmo_Salar_Female_fresh_run_from_the_sea.jpeg/1200px-FMIB_44043_Salmon%2C_Salmo_Salar_Female_fresh_run_from_the_sea.jpeg'

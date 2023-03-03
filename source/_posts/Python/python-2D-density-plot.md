@@ -7,7 +7,7 @@ date: 2022-06-17 11:58:57
 title: "Pyhtnon: 2D Dengsity Plot"
 ytitle: "python: 2D 频率分布图"
 description: "2D desnity plot for Python"
-excerpt: "2D desnity plot for Python"
+excerpt: "A 2D Density Plot is a way to display the distribution of data as a 2D heat map. It uses color-coding to represent areas of high and low density in a scatterplot, with darker colors indicating areas of higher density. It is useful for visualizing large datasets and identifying patterns in the data. <a title='GhatGPT'>Who said this?</a>"
 tags: [Plot, Matplotlib, Seaborn, Python, Density Plot]
 category: [Python, Plot]
 cover: "https://s1.ax1x.com/2022/06/18/XLliRg.md.png"

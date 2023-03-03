@@ -5,7 +5,7 @@ url: soyfish
 date: 2020/07/07
 toc: true
 excerpt: "Transcriptomic analysis of juvenile Chinese sea bass (Lateolabrax maculatus) anesthetized by MS-222 (tricaine methanesulfonate) and eugenol"
-tags: [Papers, Fish, Diet Switch, Soy Protein]
+tags: [Papers, Fish, Metabolism]
 category: [Notes, Paper, Biology]
 cover: "https://th.bing.com/th/id/Re7b227f51b2a21b41db1e9907efa7fe1?rik=soRahoZ6UeUtTg"
 thumbnail: "http://www.hx888.com/hengxing/upload/cms/www/201501/13105851ei61.jpg"

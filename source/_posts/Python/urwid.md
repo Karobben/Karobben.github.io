@@ -6,7 +6,7 @@ url: urwid2
 date: 2020/06/23
 toc: true
 excerpt: "TUI libs"
-tags: [Python, TUI, urwid]
+tags: [Python, TUI, Urwid]
 category: [Python, TUI, Urwid]
 cover: 'https://s1.ax1x.com/2020/06/23/NtMszj.png'
 thumbnail: 'https://s1.ax1x.com/2020/06/23/NtMszj.png'

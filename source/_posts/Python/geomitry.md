@@ -27,6 +27,7 @@ pre {
 
 ### Polygon
 
+Draw a polygon
 
 ```python
 import numpy as np
@@ -37,27 +38,31 @@ x = [0, 1, 2]
 y = [0, 1, 0]
 
 def PolyArea(x,y):
-    return 0.5*np.abs(np.dot(x,np.roll(y,1))-np.dot(y,np.roll(x,1)))
+  # calculate the area of the polygon
+  return 0.5*np.abs(np.dot(x,np.roll(y,1))-np.dot(y,np.roll(x,1)))
 
 def sns_poly(x, y):
+  # function for plot the polygon
   x = x +x[:1]
   y = y +y[:1]
   return [sns.lineplot(x=[x[i], x[i+1]], y=[y[i], y[i+1]])
     for i in range(len(x) -1)]
 
 
-PolyArea(x,y)
 sns_poly(x, y)
 plt.show()
+PolyArea(x,y)
 ```
 <pre>
 1.0
 </pre>
 
+As we can see, the area of the polygon is 1
+
 |![](https://s1.ax1x.com/2022/04/09/LPKss0.png)|
 |:-:|
 
-***Examle 2***
+***Example 2: More complicated polygon***
 
 ```python
 x = [0, 0, 1, 2, 2]
@@ -77,16 +82,31 @@ plt.show()
 
 #### Aear by shapely
 
+library `shapely` could also calculate the areas of a giving polygon
+
 ```python
+# pip install shapely
 from shapely.geometry import Polygon
 
-Polygon([[i,j]for i,j in zip(x,y)]).area
+# create a polygon by following order:
+def creat_polygon(x, y):
+  return Polygon([[i,j]for i,j in zip(x,y)])
+
+
+x = [0, 0, 1, 2, 2]
+y = [0, 2, 1, 2, 0]
+P = creat_polygon(x, y)
+print(P.area)
+
 ```
 
 ### Circle
 
 Reference:
 - Plot the circle: [Yann; 2012](https://stackoverflow.com/questions/9215658/plot-a-circle-with-pyplot)
+
+Create a circle with `scipy`
+
 ```python
 import math
 import matplotlib.pyplot as plt
@@ -162,6 +182,14 @@ intersect Area
 x = [0, 0, 1, 2, 2]
 y = [0, 2, 1, 2, 0]
 P = Polygon([[i,j]for i,j in zip(x,y)])
+
+# p is the circle defined above
+Line = np.array([L1, L2])
+radius = euclidean(Center, P1)
+Inter_vertics = []
+p = Point(Center).buffer(radius)
+
+# intersection area of a circle and a polygon
 p.intersection(P).area
 
 

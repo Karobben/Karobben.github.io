@@ -346,3 +346,45 @@ Count the number of elelments and convert the result as a DataFrame
 ```python
 df2 = df.value_counts().rename_axis().reset_index()
 ```
+
+
+## Read huge file with pandas
+
+1. check the size of the file:
+
+```bash
+du -sh test.csv
+wc -l test.csv
+```
+
+<pre>
+1.4G	test.csv
+17504652 test.csv
+</pre>
+
+
+2. Check the normal reading time
+
+```python
+import pandas as pd
+import time
+
+T_A = time.time()
+TB = pd.read_csv('test.csv', sep= ' ')
+print(time.time() - T_A)
+```
+
+<pre>
+8.875486135482788
+</pre>
+
+It tacks 8.9s for it read a 1.4GB size file
+
+
+```python
+# Read the file in chunks of 1000 rows
+for chunk in pd.read_csv('test.csv', chunksize=1000, sep = ' '):
+    # Process each chunk of data
+    print(chunk.shape)
+
+```

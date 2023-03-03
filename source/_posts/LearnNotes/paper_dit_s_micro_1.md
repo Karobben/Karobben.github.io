@@ -5,7 +5,7 @@ description: "Impact of Fishmeal Replacement in Diets for Gilthead Sea Bream (Sp
 url: paper_dit_s_micro_1
 toc: true
 excerpt: "Impact of Fishmeal Replacement in Diets for Gilthead Sea Bream (Sparus aurata) on the Gastrointestinal Microbiota Determined by Pyrosequencing the 16S rRNA Gene"
-tags: [Papers, Diet Switch, Fish, 16s]
+tags: [Papers, Metabolism, Fish, Meta-omics]
 category: [Notes, Paper, Biology]
 cover: 'https://th.bing.com/th/id/R872fc959429a2f6f4ed7bda79cde5ea5?rik=cpz%2fzeX33DsI5A&riu=http%3a%2f%2fseamaxglobal.com%2fwp-content%2fuploads%2f2016%2f02%2fsea-bream.jpg'
 thumbnail: 'https://th.bing.com/th/id/R872fc959429a2f6f4ed7bda79cde5ea5?rik=cpz%2fzeX33DsI5A&riu=http%3a%2f%2fseamaxglobal.com%2fwp-content%2fuploads%2f2016%2f02%2fsea-bream.jpg'

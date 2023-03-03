@@ -8,8 +8,8 @@ title: "Python:Opencv Edge Detection"
 ytitle: "Pyhton:Opencv 边缘检测"
 description: "Detect the edge of the image by using python opencv"
 excerpt: "Detect the edge of the image by using python opencv"
-tags: [Pyhton, Opencv, image]
-category:
+tags: [Python, OpenCV]
+category: [Python, OpenCV]
 cover: "https://s1.ax1x.com/2022/06/22/jpCvRJ.png"
 thumbnail: "https://s1.ax1x.com/2022/06/22/jpCvRJ.png"
 ---

@@ -4,11 +4,11 @@ url: compouse_keys
 covercopy: <a href="https://duncanlock.net/blog/2013/05/03/how-to-set-your-compose-key-on-xfce-xubuntu-lxde-linux/">© Duncan Lock</a>
 priority: 10000
 date: 2021-10-02 16:57:27
-title: "Compose keys in Manjaro"
+title: "Compose keys in Linux"
 ytitle: "Manjaro 的 Compouse Manjaro"
-description: ""
-excerpt: "Frequent used Compose Key"
-tags: [Blog, Manjaro]
+description: "Compose keys in Linux"
+excerpt: "Compose keys are a feature in Linux and other operating systems that allows users to input special characters and symbols by typing a specific combination of keystrokes. This is useful for typing characters that may not be available on a standard keyboard, such as accents or diacritical marks. <a title='GhatGPT'>Who said this?</a>"
+tags: [Linux, System]
 category: [Linux, others]
 cover: "https://duncanlock.net/images/posts/how-to-set-your-compose-key-on-xfce-xubuntu-linux/compose-key-diagram.png"
 thumbnail: ""

@@ -5,7 +5,7 @@ url: paperrnaseqfish3
 date: 2020/07/07
 toc: true
 excerpt: "Physiological and transcriptomic responses to fishmeal-based diet and rapeseed meal-based diet in two strains of gibel carp (Carassius gibelio)"
-tags: [Papers, Fish, RNA-Seq]
+tags: [Papers, Fish, RNA-Seq, Metabolism]
 category: [Notes, Paper, Biology]
 cover: "http://www.naturephoto-cz.com/photos/others/carassius-auratus-gibelio-80021.jpg"
 thumbnail: "http://www.naturephoto-cz.com/photos/others/carassius-auratus-gibelio-80021.jpg"

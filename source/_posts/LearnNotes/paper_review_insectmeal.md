@@ -5,7 +5,7 @@ date: 2020/12/28
 url: paper_review_insectmeal
 toc: true
 excerpt: "Insect meal as renewable source of food for animal feeding: a review"
-tags: [Papers, Fish, Diet Switch]
+tags: [Papers, Fish, Metabolism]
 category: [Notes, Paper, Biology]
 cover: 'http://glamroz.com/wp-content/uploads/2014/11/eating-insects13.jpg'
 thumbnail: 'http://glamroz.com/wp-content/uploads/2014/11/eating-insects13.jpg'

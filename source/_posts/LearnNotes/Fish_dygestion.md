@@ -5,8 +5,8 @@ description: "Digestion System of Fish"
 url: fishdigestion
 date: 2020/08/12
 toc: true
-excerpt: "sd"
-tags: [Notes, Digestion System, Fish]
+excerpt: "Fish digestion is the process by which fish break down food and absorb nutrients. Studying fish digestion can help us understand how different fish species digest and utilize their food, which can be important for improving their diets and overall health. This knowledge can also inform aquaculture practices and help ensure sustainable fisheries. <a title='GhatGPT'>Who said this?</a>"
+tags: [Notes, Metabloism, Fish]
 category: [Notes, Biology]
 cover: 'http://ourmarinespecies.com/wp-content/uploads/2019/01/salmon_3-e1547995330751.jpg'
 thumbnail: 'http://ourmarinespecies.com/wp-content/uploads/2019/01/salmon_3-e1547995330751.jpg'

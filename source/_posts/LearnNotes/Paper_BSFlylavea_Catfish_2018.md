@@ -5,7 +5,7 @@ date: 2020/12/27
 url: paper_bsflylavea_catfish_2018
 toc: true
 excerpt: "Effects of black soldier fly (Hermetia illucens) larvae meal protein as a fishmeal replacement on the growth and immune index of yellow catfish (Pelteobagrus fulvidraco)"
-tags: [Papers, Diet Switch, Fish, BSFL]
+tags: [Papers, Metabolism, Fish]
 category: [Notes, Paper, Biology]
 cover: 'http://www.aquariumglaser.de/wp-content/uploads/News-Pics/2014/kw82014/456323-pelteobagrus-fulvidraco1.jpg'
 thumbnail: 'http://www.aquariumglaser.de/wp-content/uploads/News-Pics/2014/kw82014/456323-pelteobagrus-fulvidraco1.jpg'
