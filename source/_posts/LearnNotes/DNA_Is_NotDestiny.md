@@ -4,12 +4,13 @@ date: 2020/07/25
 description: "Reading notes of DNA is Not Destiny"
 url: dnaisnotd
 toc: true
-excerpt: "Reading notes of DNA is Not Destiny"
-tags: [Books, DNA, Nature&Nature]
+excerpt: "'DNA Is Not Destiny' is a book by Steven J. Heine that challenges the belief that genes determine human behavior and destiny. Heine argues that while genes play a role, many environmental factors also shape who we are, and he calls for a more nuanced view of the nature vs. nurture debate. <a title='ChatGPT'>Who said this?</a>"
+tags: [Book, Biology]
 category: [Notes, Biology, Book]
-cover: 'https://s3.ax1x.com/2020/11/11/BvV7qI.md.png'
-thumbnail: 'https://s3.ax1x.com/2020/11/11/BvV7qI.md.png'
+cover: 'https://i0.wp.com/post.healthline.com/wp-content/uploads/2019/08/DNA-01.jpg?w=640'
+thumbnail: 'https://i0.wp.com/post.healthline.com/wp-content/uploads/2019/08/DNA-01.jpg?w=640'
 priority: 10000
+covercopy: <a href="https://www.healthline.com/health/what-is-dna">© Ruth Basagoitia</a>
 ---
 
 ## DNA is Not Destiny

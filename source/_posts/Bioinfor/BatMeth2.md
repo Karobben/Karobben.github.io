@@ -5,7 +5,7 @@ url: "batmeth2"
 date: "2020/07/28"
 toc: true
 excerpt: "An Integrated Package for Bisulfite DNA Methylation Data Analysis with Indel-sensitive Mapping."
-tags: [Software, Bioinformatics]
+tags: [Software, Bioinformatics, NGS]
 category: [Biology, Bioinformatics, Software, Dna Methylation]
 cover: 'https://tse3-mm.cn.bing.net/th/id/OIP.pg0lLEEeNeiUp31DPMKtRwHaCY'
 thumbnail: 'https://tse3-mm.cn.bing.net/th/id/OIP.pg0lLEEeNeiUp31DPMKtRwHaCY'

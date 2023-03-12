@@ -4,13 +4,13 @@ date: 2021/01/17
 description: "Reading notes of the book: Stem Cells: An Insider's Guide"
 url: books_stemcell_ig
 toc: true
-excerpt: "Read-notes: Stem Cells: An Insider's Guide"
-tags: [Books, Stem Cell]
+excerpt: "'Stem Cells: An Insider's Guide' is a book that provides an overview of stem cells and their potential applications in medicine. Written by a leading expert in the field, the book covers the basics of stem cells, their role in development and disease, and the latest research and clinical applications. <a title='GhatGPT'>Who said this?</a>"
+tags: [Book, Biology]
 category: [Notes, Biology, Book]
-cover: 'https://s3.ax1x.com/2020/11/11/BvV7qI.md.png'
-thumbnail: 'https://s3.ax1x.com/2020/11/11/BvV7qI.md.png'
+cover: 'https://media.nature.com/lw767/magazine-assets/d41586-018-03268-4/d41586-018-03268-4_15548186.jpg'
+thumbnail: 'https://media.nature.com/lw767/magazine-assets/d41586-018-03268-4/d41586-018-03268-4_15548186.jpg'
 priority: 10000
-covercopy: '© Karobben'
+covercopy: '<a title="https://www.nature.com/articles/d41586-018-03268-4">© Rockefeller University</a>'
 ---
 
 

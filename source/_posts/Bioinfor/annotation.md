@@ -8,7 +8,7 @@ title: "RNA-Seq, Annotation and Enrichment"
 ytitle: "RNA-Seq, 注释和富集"
 description: "RNA-Seq annotation, GO, KEGG"
 excerpt: "RNA-Seq annotation, GO, KEGG"
-tags: [Biology, Bioinformatics, Protocol, Annotation]
+tags: [Biology, Bioinformatics, Protocol, NGS]
 category: [Biology, Bioinformatics, Protocol, Annotation]
 cover: "https://www.cshlpress.com/productgraphics/big/RNAManual_f.jpg"
 thumbnail: "https://www.cshlpress.com/productgraphics/big/RNAManual_f.jpg"

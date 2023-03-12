@@ -8,7 +8,7 @@ title: "Gene Set Enrichment Analysis (GESA) in R"
 ytitle: "Gene Set Enrichment Analysis (GESA) in R"
 description: "Gene Set Enrichment Analysis (GESA) in R"
 excerpt: "Gene Set Enrichment Analysis (GSEA) is a powerful tool for interpreting gene expression data in the context of predefined biological pathways and gene sets. It allows researchers to identify enriched gene sets, discover new relationships between genes, and gain insights into the underlying biological mechanisms. <a title='ChatGPT'>Who sad this?</a>"
-tags: [R, Bioinformatics, RNA-Seq, GSEA]
+tags: [R, Bioinformatics, NGS]
 category: [Biology, Bioinformatics, Protocol, RNA-Seq]
 cover: "https://s1.ax1x.com/2022/10/18/xr9g4H.png"
 thumbnail: "https://s1.ax1x.com/2022/10/18/xr96ED.png"

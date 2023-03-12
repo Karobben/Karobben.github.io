@@ -5,7 +5,7 @@ description: "糖尿病简介"
 url: diabetes
 toc: true
 excerpt: "Reading notes of the book: Stem Cells: An Insider's Guide"
-tags: [Diabetics]
+tags: [Metabolism]
 category: [Notes, Biology]
 cover: 'https://s3.ax1x.com/2020/11/11/BvV7qI.md.png'
 thumbnail: 'https://s3.ax1x.com/2020/11/11/BvV7qI.md.png'

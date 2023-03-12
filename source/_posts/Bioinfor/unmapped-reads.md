@@ -7,7 +7,7 @@ title: "Unmapped reads Annotations"
 ytitle: "Unmapped reads Annotations"
 description: "Unmapped reads Annotations by Kraken2 and bracken"
 excerpt: "Unmapped reads Annotations"
-tags: [Software, Bioinformatics, RNA-Seq, Trinity, Fastq QC]
+tags: [Software, Bioinformatics, NGS]
 category: [Biology, Bioinformatics, Software, De nove]
 cover: 'https://cdn.pixabay.com/photo/2017/01/07/00/07/bacteria-1959386_1280.jpg'
 thumbnail: 'https://cdn.pixabay.com/photo/2017/01/07/00/07/bacteria-1959386_1280.jpg'

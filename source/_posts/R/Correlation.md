@@ -3,8 +3,8 @@ title: "Correlation"
 url: correlation2
 date: 2020/06/28
 toc: true
-excerpt: "R package for Calculating and visualizing the correlation between your data"
-tags: [R, Statistic, Plot, Correlation]
+excerpt: "Correlation is a statistical measure that shows how closely two variables are related to each other. We are interested in correlation because it helps us understand the relationship between two variables, make better decisions and predictions, and is used in various fields like finance, economics, psychology, and biology. <a title='GhatGPT'>Who said this?</a>"
+tags: [R, Statistic, Plot, Cluster]
 category: [R, Plot, others]
 cover: 'https://s1.ax1x.com/2020/06/28/NguwK1.png'
 thumbnail: 'https://s1.ax1x.com/2020/06/28/NguwK1.png'

@@ -7,7 +7,7 @@ title: "Find novo transcripts based on Trinity de-nove assembly"
 ytitle: "Find novo transcripts based on Trinity de-nove assembly"
 description:
 excerpt: "This post would show you a pipeline to find the new or abnormal transcript isoforms after de-novo by Trinity"
-tags: [Software, Bioinformatics, RNA-Seq, Trinity, Fastq QC]
+tags: [Software, Bioinformatics, NGS]
 category: [Biology, Bioinformatics, Software, De nove]
 cover: 'https://s1.ax1x.com/2022/09/04/vo2oRg.png'
 thumbnail: 'https://s1.ax1x.com/2022/09/04/vo2oRg.png'

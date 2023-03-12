@@ -7,7 +7,7 @@ title: "DNA Seq Pipeline and General Infor statistics"
 ytitle: "DNA Seq Pipeline and General Infor statistics"
 description: "DNA Seq Pipelines and tricks"
 excerpt: "DNA Seq Pipelines and tricks"
-tags: [Software, Bioinformatics, RNA-Seq, Trinity, Fastq QC]
+tags: [Software, Bioinformatics, NGS]
 category: [Biology, Bioinformatics, Software, De nove]
 cover: 'https://cdn.pixabay.com/photo/2020/06/14/09/00/research-5297028_1280.jpg'
 thumbnail: 'https://cdn.pixabay.com/photo/2020/06/14/09/00/research-5297028_1280.jpg'

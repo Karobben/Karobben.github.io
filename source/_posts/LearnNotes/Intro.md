@@ -8,7 +8,7 @@ title: "Introduction to Drosophila"
 ytitle: "果蝇介绍"
 description: "Introduction to Drosophila"
 excerpt: "Introduction to Drosophila"
-tags: [Flies, Drosophila]
+tags: [Dme]
 category: [Notes, Biology, Dme]
 cover: "https://www.researchgate.net/profile/Carlos-Rinaldi-5/publication/262020995/figure/fig1/AS:613984990396433@1523396837556/Drosophila-life-cycle-Notes-all-stages-of-the-Drosophila-life-cycle-are-readily.png"
 thumbnail: "https://www.researchgate.net/profile/Peter-Witzgall/publication/230554616/figure/fig1/AS:746407300460547@1554968776346/Drosophila-melanogaster-fruit-flies-mating-on-a-fermenting-grape-berry-Photograph_Q640.jpg"

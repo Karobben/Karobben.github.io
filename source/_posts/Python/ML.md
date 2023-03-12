@@ -3,8 +3,8 @@ title: "Python Machine Learning"
 date: 2020/09/12
 url: ml
 toc: true
-excerpt: "Buildozer install and android APK packaging"
-tags: [Python, Data Science, Machine Learning]
+excerpt: "Machine Learning is a subset of artificial intelligence that involves training algorithms to make predictions or decisions based on data. It involves learning from patterns and trends in data and using that knowledge to make predictions or decisions without being explicitly programmed. It is used in various fields like finance, healthcare, and marketing. <a title='GhatGPT'>Who said this?</a>"
+tags: [Python, Data, Machine Learning]
 category: [Python, Data, Machine Learning]
 cover: 'https://s1.ax1x.com/2020/06/22/NYYKFx.png'
 thumbnail: 'https://s1.ax1x.com/2020/06/22/NYYKFx.png'

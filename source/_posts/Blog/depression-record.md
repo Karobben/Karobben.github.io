@@ -6,8 +6,8 @@ date: 2021-03-13 23:46:32
 title: "Just write a post for recording my depression..."
 description: "Go on hell, maybe?"
 excerpt: "Go on hell, maybe?"
-tags: [Diary]
-category: [others, Diary]
+tags: []
+category: []
 cover: "https://images.pexels.com/photos/2865901/pexels-photo-2865901.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
 thumbnail: "https://images.pexels.com/photos/2865901/pexels-photo-2865901.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=75&w=126"
 priority: 10000

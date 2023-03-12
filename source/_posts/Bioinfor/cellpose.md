@@ -8,8 +8,8 @@ title: "Cellpose"
 ytitle: "Cellpose"
 description: "A quick note of how to use the cellpose to do cell segmentation"
 excerpt: "Cellpose is a deep learning-based software that automates cell segmentation and classification from fluorescence microscopy images. It provides a user-friendly interface and can process a large number of images in a short time, making it a valuable tool for biologists and biomedical researchers studying cell morphology and behavior. <a title='ChatGPT'>Who sad this?</a>"
-tags: [Bioinfor, Machine Learning]
-category: [Bioinfor]
+tags: [Bioinformatics, Image, Machine Learning]
+category: [Biology, Bioinformatics, Software]
 cover: "https://cellpose.readthedocs.io/en/latest/_images/ex_seg.png"
 thumbnail: "https://cellpose.readthedocs.io/en/latest/_images/ex_seg.png"
 ---

@@ -20,7 +20,12 @@ Tutorial: [yulab](https://yulab-smu.github.io/clusterProfiler-book/)
 ```r
 BiocManager::install("clusterProfiler")
 ```
+## Enrichment analysis and GSEA
 
+> Enrichment analysis is a computational method used in bioinformatics to determine whether a given set of genes or proteins is enriched for specific functions, pathways, or biological processes. It involves comparing the input gene set to a reference database, such as Gene Ontology, KEGG, or Reactome, and identifying the over-represented terms using statistical methods.
+>
+> Gene Set Enrichment Analysis (GSEA) is a type of enrichment analysis that determines whether a particular gene set shows statistically significant differences between two biological states. Unlike traditional enrichment analysis, GSEA considers the entire gene set, rather than individual genes, and evaluates whether the gene set is significantly enriched at the top or bottom of a ranked list of genes based on their differential expression or correlation with a phenotype. GSEA is commonly used in transcriptomics and genomics studies to identify pathways or biological processes that are differentially regulated between disease and control samples.
+> © ChatGPT
 
 ## Go ontology
 

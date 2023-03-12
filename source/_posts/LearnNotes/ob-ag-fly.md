@@ -8,8 +8,8 @@ title: "Obesity and Aging in the Drosophila Model"
 ytitle: "果蝇的肥胖和衰老模型"
 description: "Obesity and Aging in the Drosophila Model"
 excerpt: "Obesity and Aging in the Drosophila Model; Review"
-tags: [Fly]
-category: []
+tags: [Dme, Metabolism, Aging]
+category: [Notes, Paper, Biology, Dme]
 cover: "https://ars.els-cdn.com/content/image/1-s2.0-S1388198121000500-gr3.jpg"
 thumbnail: ""
 ---

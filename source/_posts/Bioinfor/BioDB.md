@@ -47,12 +47,6 @@ priority: 10000
 
 [EPD](https://epd.epfl.ch//index.php)  (123) -- Eukaryotic Promotor Database, 真核生物启动子数据库
 
-[TRANSFAC](http://gene-regulation.com/pub/databases.html) (Update:06/06/20; 5.599736s) -- <b title="TRANSFAC® provides data on eukaryotic transcription factors, their experimentally-proven binding sites, consensus binding sequences (positional weight matrices) and regulated genes. TRANSCompel contains data on eukaryotic transcription factors experimentally proven to act together in a synergistic or antagonistic manner.">eukaryotic transcription factors, 真核生物基因表达调控因子的数据库</b>
-
-[TRRD](http://wwwmgs.bionet.nsc.ru/mgs/gnw/trrd/) (Update:06/06/20; 0.817254s) -- <b title="TRRD is a unique information resource, accumulating information on structural and functional organization of transcription regulatory regions of eukaryotic genes. Only experimentally confirmed information is included into TRRD."> transcription regulatory regions of eukaryotic genes, 真核生物基因组转录调控区数据库。</b>
-
-[OOTFD](http://www.ifti.org/) (Update:06/06/20; 11.796405s) -- <b title ="MIRAGE (Molecular Informatics Resource for the Analysis of Gene Expression) is a web site dedicated to methodologies, tools, and technologies relating to gene expression information. MIRAGE is a web resource of the Institute for Transcriptional Informatics. Buttons to the right link to IFTI sequence analysis and database services. Buttons in the lower frame offer links to other resources in the area of gene expression and regulation. For information on bioinformatics products using IFTI materials, please visit the Products page. For questions and comments regarding this web resource, please send a message to IFTI.  ">Molecular Informatics Resource for the Analysis of Gene Expression, 转录因子和基因表达数据库</b>
-
 
 [MicroSatellite (paper)](https://academic.oup.com/nar/article/48/D1/D155/5584837) (Update:06/06/20; OutOfTime) -- 微衛星片段數據
 - [MTRD: Microorganism Tandem Repeats Database](http://minisatellites.u-psud.fr) (Update:06/06/20; 3.29666s)
@@ -65,6 +59,27 @@ priority: 10000
 [dbEST](http://www.ncbi.nlm.nih.gov/dbEST/) (Update:06/06/20; OutOfTime) -- 这是GenBank的重要组成部分,它包含若干物种的已表达的序列标记信息.
 
 [NUCLEOSOME](ftp://ftp.ebi.ac.uk/pub/databases/nucleosomal_dna/) -- 数据库,收集实验测定的核小体数据,用于预测DNA中与组蛋白八聚体结合的位点.
+
+
+## Transcriptional Factors
+
+
+A list of TF database: [Gene expression regulatory sites and transcription factors](https://www.hsls.pitt.edu/obrc/index.php?page=promoter_transcription_factors)
+
+1. JASPAR - JASPAR is a database of **TF binding profiles** and matrices for a wide range of eukaryotic TFs. It provides information on TF binding sites, PWMs, and DNA-binding domains.
+
+2. [TRANSFAC](http://gene-regulation.com/pub/databases.html)(Update:06/06/20; 5.599736s)  - TRANSFAC is a database of transcription factors, their binding sites, and DNA-binding domains. It also provides information on the regulatory networks of TFs and their interactions with other proteins.
+
+3. [ENCODE](https://www.encodeproject.org/) - ENCODE is a project that aims to identify all functional elements in the human genome, including TF binding sites. It provides a comprehensive list of TF binding sites, regulatory networks, and gene expression data.
+
+4. [ChIP-Atlas](https://chip-atlas.org/) - ChIP-Atlas is a database of genome-wide TF binding profiles from ChIP-seq experiments. It provides information on TF binding sites, target genes, and functional annotations.
+
+5. Cistrome - Cistrome is a database of TF binding profiles and regulatory networks for a wide range of eukaryotic TFs. It also provides tools for analyzing and visualizing TF binding data.
+
+
+[TRRD](http://wwwmgs.bionet.nsc.ru/mgs/gnw/trrd/) (Update:06/06/20; 0.817254s) -- <b title="TRRD is a unique information resource, accumulating information on structural and functional organization of transcription regulatory regions of eukaryotic genes. Only experimentally confirmed information is included into TRRD."> transcription regulatory regions of eukaryotic genes, 真核生物基因组转录调控区数据库。</b>
+
+[OOTFD](http://www.ifti.org/) (Update:06/06/20; 11.796405s) -- <b title ="MIRAGE (Molecular Informatics Resource for the Analysis of Gene Expression) is a web site dedicated to methodologies, tools, and technologies relating to gene expression information. MIRAGE is a web resource of the Institute for Transcriptional Informatics. Buttons to the right link to IFTI sequence analysis and database services. Buttons in the lower frame offer links to other resources in the area of gene expression and regulation. For information on bioinformatics products using IFTI materials, please visit the Products page. For questions and comments regarding this web resource, please send a message to IFTI.  ">Molecular Informatics Resource for the Analysis of Gene Expression, 转录因子和基因表达数据库</b>
 
 
 

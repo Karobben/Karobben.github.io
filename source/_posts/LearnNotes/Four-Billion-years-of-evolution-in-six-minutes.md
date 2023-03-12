@@ -5,7 +5,7 @@ url: ted_bio_1
 date: 2020/08/12
 toc: true
 excerpt: "Now, knowing you are a fish and not a monkey is actually really important to understanding where we came from."
-tags: [Notes, Ted, Evolution]
+tags: [Notes, Ted]
 category: [Notes, Ted]
 cover: 'https://s1.ax1x.com/2020/06/26/NsAeW8.png'
 thumbnail: 'https://s1.ax1x.com/2020/06/26/NsAeW8.png'

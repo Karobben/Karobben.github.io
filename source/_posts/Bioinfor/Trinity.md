@@ -6,8 +6,8 @@ date: 2020/07/28
 covercopy:
 toc: true
  trinityrnaseq
-excerpt: "Trinity is one of the greatest tools for RNA-Seq de-nove"
-tags: [Software, Bioinformatics, RNA-Seq, Trinity, Fastq QC]
+excerpt: "Trinity RNA-seq is a de novo transcriptome assembly software that uses RNA-seq data to reconstruct transcript sequences and estimate expression levels. It allows for comprehensive analysis of gene expression and isoform diversity in non-model organisms without a reference genome. <a title='ChatGPT'>Who said this?</a>"
+tags: [Software, Bioinformatics, NGS]
 category: [Biology, Bioinformatics, Software, De nove]
 cover: 'https://raw.githubusercontent.com/wiki/trinityrnaseq/trinityrnaseq/images/TrinityCompositeLogo.png'
 thumbnail: 'https://raw.githubusercontent.com/wiki/trinityrnaseq/trinityrnaseq/images/TrinityCompositeLogo.png'

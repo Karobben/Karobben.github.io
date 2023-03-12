@@ -8,7 +8,7 @@ title: "Wet Lab Techs with Brief Explained"
 ytitle: "Wet Lab Techs with Brief Explained"
 description: "Wet Lab Techs with Brief Explained"
 excerpt: "Wet Lab Techs with Brief Explained"
-tags: [Biology, Wet Protocol]
+tags: [Biology, Wet, Protocol]
 category: [Biology, Wet Protocol]
 cover: "https://s1.ax1x.com/2022/11/10/zSvqbD.png"
 thumbnail: "https://s1.ax1x.com/2022/11/10/zSvqbD.png"

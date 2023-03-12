@@ -4,8 +4,8 @@ url: r_xgboost
 date: 2020/09/20
 description: "Machine Learning With R|XGboost"
 toc: true
-excerpt: "Machine Learning With R|XGboost"
-tags: [R, Machine Learning, XGboost]
+excerpt: "XGBoost (Extreme Gradient Boosting) is a popular open-source machine learning library used for classification and regression tasks. It is designed to improve upon the performance of traditional gradient boosting algorithms by adding additional regularization and optimizing the gradient descent algorithm. It is widely used in industry and has won several machine learning competitions. <a title='GhatGPT'>Who said this?</a>"
+tags: [R, Machine Learning]
 category: [R, Data, Machine Learning]
 cover: 'https://s1.ax1x.com/2020/06/26/NskWaq.png'
 thumbnail: 'https://s1.ax1x.com/2020/06/26/NskWaq.png'

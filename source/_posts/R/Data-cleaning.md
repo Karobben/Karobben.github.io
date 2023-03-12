@@ -106,3 +106,20 @@ Exm_center <- function(primary_data){
   return (data)
 }
 ```
+
+
+## String 
+
+### remove numbers from str
+
+```r
+string_with_numbers <- "The quick brown fox 123 jumps over the lazy dog 456"
+string_without_numbers <- gsub("\\d+", "", string_with_numbers)
+print(string_without_numbers)
+```
+
+<pre>
+[1] "The quick brown fox  jumps over the lazy dog "
+</pre>
+
+In this example, string_with_numbers is the original string that contains numbers. The \\d+ regular expression matches one or more digits, and the gsub() function replaces all matches with an empty string. The resulting string without numbers is stored in string_without_numbers. <a title='ChatCPT'>Who said this?</a>

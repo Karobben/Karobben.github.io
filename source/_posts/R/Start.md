@@ -5,7 +5,7 @@ url: start_r
 date: 2020/06/03
 toc: true
 excerpt: "几个在线自学R的平台"
-tags: [R, learn]
+tags: [R, Beginner]
 category: [R, Beginner]
 cover: 'https://s1.ax1x.com/2020/06/03/taYsKI.md.png'
 thumbnail: 'https://s1.ax1x.com/2020/06/03/taYsKI.md.png'

@@ -7,8 +7,8 @@ date: 2022-11-07 14:44:12
 title: "RNA Seq: Alternative Splicing"
 ytitle: "RNA Seq: Alternative Splicing"
 description: "RNA Seq: Alternative Splicing"
-excerpt: "Alternative splicing research is important for understanding the diversity of gene expression and regulation, as it enables the production of multiple protein isoforms from a single gene, allowing cells to generate complex functional diversity and adapt to changing environmental conditions. <a title='ChatGPT'>Who sad this?</a>"
-tags: [RNA-Seq, Protocol, RNA-Seq Protocol]
+excerpt: "Alternative splicing research is important for understanding the diversity of gene expression and regulation, as it enables the production of multiple protein isoforms from a single gene, allowing cells to generate complex functional diversity and adapt to changing environmental conditions. <a title='ChatGPT'>Who said this?</a>"
+tags: [RNA, Protocol, NGS]
 category: [Biology, Bioinformatics, Protocol, Alternative Splicing]
 cover: "https://rnaseq-mats.sourceforge.net/splicing.jpg"
 thumbnail: "https://rnaseq-mats.sourceforge.net/splicing.jpg"

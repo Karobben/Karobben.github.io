@@ -4,7 +4,7 @@ url: biostrings2
 date: 2020/05/01
 excerpt: "R library for fasta sequences handling."
 toc: true
-tags: [R, Bioinformatics, Fasta]
+tags: [R, Bioinformatics, NGS]
 category: [R, Bio, Fasta]
 cover: 'https://www.r-project.org/Rlogo.png'
 thumbnail: 'https://www.r-project.org/Rlogo.png'

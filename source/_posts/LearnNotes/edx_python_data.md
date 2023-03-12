@@ -4,8 +4,8 @@ date: 2020/12/28
 description: "Class Notes of Python for Data Science from Edx"
 url: edx_python_data
 toc: true
-excerpt: "Class Notes of Python for Data Science from Edx"
-tags: [Classes, Python, Data Science]
+excerpt: "Data science is a field that combines statistical and computational techniques to extract insights and knowledge from data. It involves collecting, cleaning, analyzing, and interpreting large and complex data sets using tools such as machine learning, data mining, and visualization. The goal is to make data-driven decisions and predictions. <a title='GhatGPT'>Who said this?</a>"
+tags: [Classes, Python, Data]
 category: [Notes, Class, Python]
 cover: 'https://cdn.pixabay.com/photo/2016/07/11/12/16/mathematics-1509559_960_720.jpg'
 covercopy: '<a href="https://pixabay.com/users/geralt-9301/">© geralt</a>'

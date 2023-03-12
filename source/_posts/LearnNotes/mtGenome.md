@@ -5,7 +5,7 @@ description: "Bioinformatics: mtGenome"
 url: mtgenome
 toc: true
 excerpt: "A paper of mitochondria Genome; The complete mitochondrial genome of Taxus cuspidata (Taxaceae): eight proteincoding genes have transferred to the nuclear genome"
-tags: [Papers, Digestive Enzymes, Intestine, Fish]
+tags: [Papers, NGS]
 category: [Notes, Paper, Biology]
 cover: 'https://media.springernature.com/full/springer-static/image/art%3A10.1186%2Fs12862-020-1582-1/MediaObjects/12862_2020_1582_Fig1_HTML.png'
 thumbnail: 'https://media.springernature.com/full/springer-static/image/art%3A10.1186%2Fs12862-020-1582-1/MediaObjects/12862_2020_1582_Fig1_HTML.png'

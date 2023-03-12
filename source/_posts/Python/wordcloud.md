@@ -4,9 +4,9 @@ description: "wordcloud"
 url: wordcloud2
 date: 2020/06/23
 toc: true
-excerpt: "Reversing play video by using OpenCV"
-tags: [Python, WordCloud]
-category: [Python, Data, String]
+excerpt: "Wordcloud is a data visualization technique used to represent text data in a graphical format. In Python, the wordcloud library is used to generate wordclouds. It takes a text file or a string of text as input, and generates an image where the size of each word is proportional to its frequency in the input text. <a title='GhatGPT'>Who said this?</a>"
+tags: [Python, WordCloud, Plot]
+category: [Python, Plot]
 cover: 'https://s1.ax1x.com/2020/06/22/NY0CDS.png'
 thumbnail: 'https://s1.ax1x.com/2020/06/22/NY0CDS.png'
 priority: 10000

@@ -5,8 +5,8 @@ description: "Pheatmap"
 url: pheatmap2
 date: 2020/06/20
 toc: true
-excerpt: "heatmap is fun!"
-tags: [R, Plot, heatmap]
+excerpt: "pheatmap is an R package for creating heatmaps to visualize large and complex data sets. It provides advanced features such as clustering and annotation, and allows customization of color schemes, row and column labels, and more. The resulting heatmaps can be used to identify patterns and relationships in the data. <a title='ChatGPT'>Who said this?</a>"
+tags: [R, Plot]
 category: [R, Plot, Heatmap]
 cover: 'https://s1.ax1x.com/2020/08/15/dFpkUH.png'
 thumbnail: 'https://s1.ax1x.com/2020/08/15/dFpkUH.png'

@@ -4,9 +4,9 @@ description: "fastp| reads clean"
 url: "fastp"
 date: 2020/07/28
 toc: true
-excerpt: "Fastp, a fastq reads QC software"
-tags: [Software, Bioinformatics, Fastq QC]
-category: [Biology, Bioinformatics, Software, Fastq QC]
+excerpt: "fastp is a fast and efficient tool for quality control and preprocessing of high-throughput sequencing data. It can perform adapter trimming, quality filtering, and read correction in a single pass, and supports various sequencing platforms and data formats."
+tags: [Software, Bioinformatics, NGS, QC]
+category: [Biology, Bioinformatics, Software, FastQC]
 cover: 'https://tse3-mm.cn.bing.net/th/id/OIP.pg0lLEEeNeiUp31DPMKtRwHaCY'
 thumbnail: 'https://tse3-mm.cn.bing.net/th/id/OIP.pg0lLEEeNeiUp31DPMKtRwHaCY'
 priority: 10000

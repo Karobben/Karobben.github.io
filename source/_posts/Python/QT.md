@@ -5,10 +5,10 @@ url: qt2
 date: 2020/01/22
 toc: true
 excerpt: "Qt for Python is the project that provides the official set of Python bindings (PySide2) that will supercharge your Python applications. While the Qt APIs are world renowned, there are more reasons why you should consider Qt for Python."
-tags: [Python, QT, GUI]
+tags: [Python]
 category: [Python, GUI, others]
-cover: 'https://th.bing.com/th/id/R3d9a78ed6fe62aa5ee6e9fd61c092cca?rik=I7LX8qXniM2YLQ&riu=http%3a%2f%2fgetcodify.com%2fwp-content%2fuploads%2f2016%2f10%2fPython_logo.jpg&w=680'
-covercopy: '© getcodify.com'
+cover: 'https://realpython.com/cdn-cgi/image/width=960,format=auto/https://files.realpython.com/media/Building-a-Python-Calculator-With-PyQt_Watermarked.e4c1a5cf2018.jpg'
+covercopy: '<a href="https://realpython.com/python-pyqt-gui-calculator/">© realpython</a>'
 thumbnail: 'https://tse4-mm.cn.bing.net/th/id/OIP.uTOM2B_iUkko5GTxOa3c-wAAAA'
 priority: 10000
 ---

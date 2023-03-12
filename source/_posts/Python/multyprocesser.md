@@ -4,8 +4,8 @@ description: "Multiprocessing"
 url: multiprocessing
 date: 2020/09/12
 toc: true
-excerpt: "Buildozer install and android APK packaging"
-tags: [Python, Data Science, Machine Learning]
+excerpt: "Multiprocessing in Python is a way to run multiple processes simultaneously using multiple CPUs or cores. It allows for faster processing of data by dividing the task into smaller sub-tasks that can be executed in parallel. Python's multiprocessing module provides easy-to-use APIs for implementing multiprocessing in Python. <a title='GhatGPT'>Who said this?</a>"
+tags: [Python, Script]
 category: [Python, Scripting, Module]
 cover: 'https://files.realpython.com/media/An-Overview-of-Concurrency-in-Python_Watermarked.c54c399ccb32.jpg'
 covercopy: '<a href="https://realpython.com/python-concurrency/">© realpython.com</a>'

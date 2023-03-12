@@ -1,11 +1,11 @@
 ---
 title: "OpenCV examples for beginners| Python"
 ytitle: "OpenCV 简单入门| Python"
-description: "Examples and basic grammar of OpenCV for beginners"
+description: "OpenCV tutorials: basic grammar for OpenCV"
 url: opencv2
 date: 2020/09/12
 toc: true
-excerpt: "OpenCV tutorials: basic grammar for OpenCV"
+excerpt: "The Python library cv2 is an open-source computer vision library used for real-time image processing and analysis. It provides a variety of image processing functions, including object detection, face recognition, and video analysis. It is often used in fields such as robotics, self-driving cars, and augmented reality. <a title='ChatGPT'>Who said this?</a>"
 tags: [Python, OpenCV]
 category: [Python, OpenCV]
 cover: 'https://opencv.org/wp-content/uploads/2021/01/OpenCV-logo.png'
@@ -272,21 +272,6 @@ PlayVideo(video_path)
 ### Video write
 
 ```python
-## for normal output
-fourcc = cv2.VideoWriter_fourcc(*'XVID')
-out = cv2.VideoWriter('output.avi',fourcc, 20.0, (640,480))
-while true:
- out.write(frame)
-## For Gray outpu
-fourcc = cv2.VideoWriter_fourcc('M','J','P','G')
-out = cv2.VideoWriter("outfilename.mp4", fourcc, 15, (640,480), 0)
-```
-
-
-### Img to Video
-
-
-```python
 import cv2, os
 
 File = "Up"
@@ -303,6 +288,40 @@ for i in List:
     videowriter.write(img)
 videowriter.release()
 ```
+
+`cv2.VideoWriter_fourcc('M','J','P','G')`: It creates a VideoWriter fourcc object in OpenCV, which is used to specify the codec to be used for writing video files.
+
+The `cv2.VideoWriter_fourcc()` function takes four characters as input to create a fourcc code. In this case, the four characters are `'M', 'J', 'P', and 'G'`, which correspond to the MPEG-1 codec.
+
+So the `fourcc` variable will hold the fourcc code for the MPEG-1 codec, which will be used when writing the video file.
+
+
+### Grey iamge to video
+
+```python
+import cv2
+import numpy as np
+
+# Create a list of grayscale images
+img_list = [...]  # insert your list of images here
+
+# Define the video writer object
+fourcc = cv2.VideoWriter_fourcc(*'XVID')
+out = cv2.VideoWriter('output.avi', fourcc, 10.0, (img_list[0].shape[1], img_list[0].shape[0]), False)
+
+# Write each image to the video
+for img in img_list:
+    # Convert to grayscale if not already
+    if len(img.shape) == 3 and img.shape[2] == 3:
+        img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+    # Write to video
+    out.write(img)
+
+# Release the video writer
+out.release()
+```
+
+In this code, `img_list` is the list of grayscale images you want to output as a video. The code first defines the `VideoWriter` object with the desired filename, codec, frame rate, and frame size. Then, it iterates through each image in `img_list`, converts it to grayscale (if it isn't already), and `writes` it to the video using the write method of the `VideoWriter` object. Finally, it releases the `VideoWriter` object to close the video file.
 
 
 ### vedio to gif
