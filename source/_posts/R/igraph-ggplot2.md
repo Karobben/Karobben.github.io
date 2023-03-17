@@ -26,6 +26,21 @@ thumbnail: "https://s1.ax1x.com/2023/02/08/pS2UVIg.png"
 
 Basic idea of this post is from [© Christopher Chizinski, 2014](https://chrischizinski.github.io/rstats/igraph-ggplotll/). It is an old post but all codes work just fine!
 
+## install igraph
+
+```r
+install.packages('igraph')
+```
+
+- Errors
+  <pre>
+  libopenblas.so.0: cannot open shared object file: No such file or directory
+  </pre>
+
+  ```bash
+  sudo apt-get install libopenblas-dev
+  ```
+
 ## Example data for igraph
 
 ```r
