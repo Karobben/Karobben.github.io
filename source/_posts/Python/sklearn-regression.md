@@ -8,7 +8,7 @@ title: "Regression Examples in Scikit-learn|Python"
 ytitle: "用 Scikit 做回归线"
 description: "Regression Examples in Scikit-learn|Python"
 excerpt: "Regression Examples in Scikit-learn|Python"
-tags: [Python, Data]
+tags: [Python, Data, Machine Learning]
 category: [Python, Data, Machine Learning]
 cover: "https://scikit-learn.org/stable/_images/sphx_glr_plot_multi_task_lasso_support_002.png"
 thumbnail: "https://scikit-learn.org/stable/_images/sphx_glr_plot_multi_task_lasso_support_002.png"

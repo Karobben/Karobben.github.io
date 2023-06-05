@@ -6,8 +6,8 @@ url: fastqc_crawl
 date: 2022/07/20
 toc: true
 excerpt: "python"
-tags: [Python, HTML]
-category: [Python]
+tags: [Python, HTML, QC]
+category: [Python, Data]
 cover: 'https://s1.ax1x.com/2022/07/23/jXHAeg.png'
 covercopy: '© Karobben'
 thumbnail: 'https://s1.ax1x.com/2022/07/23/jXHAeg.png'
@@ -40,7 +40,7 @@ Result_TB = pd.DataFrame()
 for Sample in [i for i in os.listdir() if "fastqc.html" in i]:
     Result_TB = pd.concat([Result_TB, Tab_grep(Sample)])
 
-Result_TB.to_csv(QC.csv)
+Result_TB.to_csv("QC.csv")
 ```
 
 Plot in R

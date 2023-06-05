@@ -6,8 +6,8 @@ priority: 10000
 date: 2023-03-07 19:58:47
 title: "Python 3D Plot"
 ytitle: "Python 3D Plot"
-description: "123"
-excerpt: "132"
+description: "3D plot in python"
+excerpt: "To create 3D plots in Python, you can use the <b>Matplotlib</b> library. Matplotlib provides a toolkit called <b>mplot3d</b>, which allows you to create 3D plots using functions such as plot_surface, plot_wireframe, and scatter. You can customize the appearance of the plots by setting properties such as color, marker type, and line style."
 tags: [Python, Plot, 3D]
 category: [Python]
 cover: "https://s1.ax1x.com/2023/03/08/ppeRwtS.png"

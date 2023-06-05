@@ -1,17 +1,17 @@
 ---
 toc: true
 url: wnt
-covercopy: © Karobben
+covercopy: <a href="https://www.cell.com/fulltext/S0092-8674%2809%2901242-2">© Hans Clevers</a>
 priority: 10000
 date: 2023-03-12 12:07:47
 title: "Wnt signal pathways"
 ytitle: "Wnt signal pathways"
 description: "Wnt signal pathways"
-excerpt: "Wnt signal pathways"
-tags: []
-category: []
-cover: ""
-thumbnail: ""
+excerpt: "The Wnt signaling pathway is a pathway that regulates cell proliferation, differentiation, and cell fate determination during embryonic development and in adult tissues. Dysregulation of this pathway is implicated in various diseases, including cancer. It is studied to understand the mechanisms of cell signaling and to develop targeted therapies. <a title='ChatGPT3'>Who said this?</a>"
+tags: [Biology]
+category: [Notes, Biology, Dme]
+cover: "https://www.cell.com/cms/attachment/a6596f6a-4893-49ce-b2fb-e359a57e315c/gr1.jpg"
+thumbnail: "https://www.cell.com/cms/attachment/a6596f6a-4893-49ce-b2fb-e359a57e315c/gr1.jpg"
 ---
 
 ## Canonical Wnt Signal Pathway

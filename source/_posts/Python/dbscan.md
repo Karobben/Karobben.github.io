@@ -227,14 +227,17 @@ plt.show()
 
 Reference:
 - [Jörn's Blog; 2016; SciPy Hierarchical Clustering and Dendrogram Tutorial](https://joernhees.de/blog/2015/08/26/scipy-hierarchical-clustering-and-dendrogram-tutorial/)
-- [coradek; 2018; Display cluster labels for a scipy dendrogram](https://stackoverflow.com/questions/35873273/display-cluster-labels-for-a-scipy-dendrogram)
+- [coradek; 2018; Display cluster labels for a scipy dendrogram](https://stackoverflow.com/questions/35873273/display-cluster-labels-`for-a-scipy-dendrogram)
 
 ```python
 from scipy.cluster.hierarchy import dendrogram, linkage
 import scipy.stats as stats
 from scipy.cluster.hierarchy import cophenet
 from scipy.spatial.distance import pdist
+from sklearn.datasets import make_blobs
 
+
+X, y = make_blobs(n_samples=350, centers=4, cluster_std=0.60)
 XX= X[:20]
 
 Z = linkage(stats.zscore(XX) , 'ward')

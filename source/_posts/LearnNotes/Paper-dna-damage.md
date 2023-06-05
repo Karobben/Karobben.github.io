@@ -1,17 +1,17 @@
 ---
 toc: true
 url: paper_dna_damage
-covercopy: © Karobben
+covercopy: <a href="https://www.nature.com/collections/hwnqqcstyj">© Vicky Summersby</a>
 priority: 10000
 date: 2023-03-12 11:32:35
 title: "DNA Damage"
 ytitle: 'DNA Damage'
 description: 'DNA Damage'
-excerpt: 'DNA Damage'
-tags: [Paper]
+excerpt: 'Cells are continuously faced with endogenous stress (for example, during replication) and exogenous stress (for example, during exposure to ultraviolet radiation) that can ultimately lead to DNA damage. To preserve genomic integrity, cells have an arsenal of repair proteins that engage the appropriate repair pathway or, if damage is irreparable, induce cell cycle arrest and/or apoptosis. This article series explores the pathways that detect and repair different types of DNA damage, highlighting new regulation mechanisms of the DNA damage response and the implications of disrupted DNA repair for disease. (© Nat Rev Mol Cell Biol; 13 February 2023)'
+tags: [Paper, Biology]
 category: []
-cover: ""
-thumbnail: ""
+cover: "https://media.springernature.com/w580h326/nature-cms/uploads/collections/DNA-damage-hero-new-8d4941a65946b70c04ab8d8703b5ed87.png"
+thumbnail: "https://media.springernature.com/w580h326/nature-cms/uploads/collections/DNA-damage-hero-new-8d4941a65946b70c04ab8d8703b5ed87.png"
 ---
 
 ## DNA Damage

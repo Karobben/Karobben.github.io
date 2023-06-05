@@ -158,3 +158,35 @@ ggsave('KEGG_tree.png',wi=20.4,hei=11)
 ```
 ![NlG6Ag.md.png](https://s1.ax1x.com/2020/06/20/NlG6Ag.md.png)
 ## More
+
+
+
+## Get a KEGG results first
+
+codes from: [ClusterProfiler](https://yulab-smu.top/biomedical-knowledge-mining-book/clusterprofiler-kegg.html)
+
+```r
+library(clusterProfiler)
+
+data(geneList, package="DOSE")
+gene <- names(geneList)[abs(geneList) > 2]
+
+kk <- enrichKEGG(gene         = gene,
+                 organism     = 'hsa',
+                 pvalueCutoff = 0.05)
+head(kk)
+```
+
+
+$Cos\alpha = \frac{tA}{tC}$
+$Sin\alpha = \frac{\sqrt{tC^2 - tA^2}}{tC}$
+$mC = \frac{mB_1}{Sin\alpha}$
+$mtC = mC * \frac{mB_1 - mB_2}{mB_2}$
+$S = mtC/tC$
+$S = \frac{mC * \frac{mB_1 - mB_2}{mB_2}}{tC}$
+$S = \frac{\frac{mB_1}{Sin\alpha} * \frac{mB_1 - mB_2}{mB_2}}{tC}$
+$S = \frac{\frac{mB_1}{\frac{\sqrt{tC^2 - tA^2}}{tC}} * \frac{mB_1 - mB_2}{mB_2}}{tC}$
+$S = \frac{\frac{mB_1}{\frac{\sqrt{tC^2 - tA^2}}{tC}} * \frac{mB_1 - mB_2}{mB_2}}{tC}$
+$S = \frac{\frac{mB_1^2 - mB_1 * mB_2 }{\frac{mB_2\sqrt{tC^2 - tA^2}}{tC}}}{tC}$
+$S = \frac{mB_1^2 - mB_1 * mB_2 }{\frac{mB_2\sqrt{tC^2 - tA^2}}{tC^2}}$
+$S = \frac{mB_1^2 - mB_1 * mB_2 }{tC^2 * mB_2\sqrt{tC^2 - tA^2}}$

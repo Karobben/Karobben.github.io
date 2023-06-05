@@ -6,8 +6,8 @@ priority: 10000
 date: 2023-03-07 20:25:35
 title: "Image skills for python"
 ytitle: "Image skills for python"
-description: ""
-excerpt: " "
+description: "Image skills for python"
+excerpt: "Python is a popular programming language used in image processing and analysis due to its simplicity, ease of use, and large collection of libraries such as OpenCV, NumPy, and scikit-image. Python allows developers to easily manipulate and analyze images, apply complex algorithms, and create custom image processing pipelines. <a title='ChatGPT3'>Who said this?</a>"
 tags: [Python, Image]
 category: [Python]
 cover: "https://docs.scipy.org/doc/scipy/_images/scipy-ndimage-gaussian_filter-1.png"

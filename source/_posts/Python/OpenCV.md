@@ -73,13 +73,39 @@ if cv2.waitKey(0) & 0xFF == ord('q'):
 ```
 
 
-
 ### resize
-
 
 ```python
  cv2.resize(img, (10,10), interpolation = cv2.INTER_AREA)
 ```
+
+
+### Slice
+
+Slice the image based on the center, width, and height
+```python
+import cv2
+import numpy as np
+
+# Load the image
+img = cv2.imread('example.jpg')
+
+# Get the center point of the rectangular region
+center_x, center_y = 100, 100
+# Get the width and height of the rectangular region
+width, height = 50, 80
+
+def img_slice(center_x, center_y, width, height):
+  # Calculate the coordinates of the top-left and bottom-right corners of the rectangular region
+  x1 = int(center_x - (width / 2))
+  y1 = int(center_y - (height / 2))
+  x2 = int(center_x + (width / 2))
+  y2 = int(center_y + (height / 2))
+
+  # Slice the rectangular region from the original image
+  return img[y1:y2, x1:x2]
+```
+
 
 ### rotate
 
@@ -141,14 +167,31 @@ cv2.destroyAllWindows()
 #### Draw a Rectangle
 reference: [AlanWang4523 2018](https://blog.csdn.net/u011520181/java/article/details/84036425)
 
+With know top-left and bottom-right:
+
 ```python
 ## 绘制一个红色矩形
 ptLeftTop = (120, 100)
 ptRightBottom = (200, 150)
-point_color = (0, 0, 255) # BGR
-thickness = 1
-lineType = 8
-cv.rectangle(img, ptLeftTop, ptRightBottom, point_color, thickness, lineType)
+
+def Draw_rect(img, ptLeftTop, ptRightBottom,
+  point_color = (0, 0, 255), # BGR
+  thickness = 1,
+  lineType = 8):
+  return cv.rectangle(img, ptLeftTop, ptRightBottom, point_color, thickness, lineType)
+```
+
+With know center, width, and height
+
+```python
+def Draw_rect(img, Ccenter_x, center_y, width, height,
+  point_color = (0, 0, 255), # BGR)
+  thickness = 2,
+  lineType = 8):
+  ptLeftTop = (int(center_x - (width / 2)), int(center_y - (height / 2)))
+  ptRightBottom = (int(center_x + (width / 2)), int(center_y + (height / 2)))
+  # Draw the rectangle on the image
+  return cv.rectangle(img, ptLeftTop, ptRightBottom, point_color, thickness, lineType)
 ```
 
 #### Draw a oval / ellipse
@@ -537,4 +580,42 @@ if __name__ == "__main__":
     image = fig2data(figure)
     cv2.imshow("image", image)
     cv2.waitKey(0)
+```
+
+
+
+
+```python
+
+img1 = Overed_fly.copy()
+img2 = ID_lay_img.copy()
+gray1 = cv2.cvtColor(img1, cv2.COLOR_BGR2GRAY)
+gray2 = cv2.cvtColor(img2, cv2.COLOR_BGR2GRAY)
+
+# Initialize SIFT detector
+sift = cv2.SIFT_create()
+
+# Find keypoints and descriptors for both images
+kp1, des1 = sift.detectAndCompute(gray1, None)
+kp2, des2 = sift.detectAndCompute(gray2, None)
+
+# Initialize brute-force matcher
+bf = cv2.BFMatcher()
+
+# Match descriptors from both images
+matches = bf.knnMatch(des1, des2, k=2)
+
+# Apply ratio test to remove false matches
+good_matches = []
+for m, n in matches:
+    if m.distance < 0.75 * n.distance:
+        good_matches.append(m)
+
+# Draw the matched keypoints
+result = cv2.drawMatches(img1, kp1, img2, kp2, good_matches, None)
+
+cv2.imshow("video",result)
+if cv2.waitKey(0)&0xFF==ord('q'):
+    cv2.destroyAllWindows()
+
 ```

@@ -483,3 +483,79 @@ for Source in neiList.keys():
       else:
         Adjacent_dic[Source+1] += [Target+1]
 ```
+
+
+## Ellipse Regression (Fit)
+
+```python
+import cv2
+import numpy as np
+from matplotlib.patches import Ellipse
+
+img = cv2.imread('mask.png', 0)
+
+img[img>=63.22401581839193] = 255
+img[img<=24.62768758842168,] = 255
+TMP = pd.DataFrame(img)
+TMP['Y'] = TMP.index
+TMP_L = TMP.melt(id_vars='Y')
+TMP_L = TMP_L[TMP_L.value!= 255]
+
+# Convert data to the correct format
+X = np.array([[i, ii] for i,ii in zip(x_points, y_points)])
+
+# Fit ellipse
+ellipse = cv2.fitEllipse(TMP_L[['Y', "variable"]].to_numpy().astype(int))
+
+fig, ax = plt.subplots()
+ax.scatter(TMP_L.Y, TMP_L.variable)
+#ax.set_aspect("equal")
+ellipse_patch = Ellipse(ellipse[0], width=ellipse[1][0], height=ellipse[1][1], angle=ellipse[2], facecolor='red', alpha=0.5)
+ax.add_artist(ellipse_patch)
+plt.show()
+```
+
+center: ellipse[0]
+major axis: ellipse[1][1]
+minor axis: ellipse[1][0]
+angle: ellipse[2]
+
+|![Ellipse Regression (Fit)](https://s1.ax1x.com/2023/05/11/p9sNqHS.png)|
+|:-:|
+
+Calculate the point if it is in the ellipse
+
+```python
+from numpy.linalg import eig, inv
+
+def point_in_ellipse(point, center, width, height, angle):
+    # Convert the point and center to the ellipse-centered coordinate system
+    cos_a = np.cos(angle)
+    sin_a = np.sin(angle)
+    x, y = point[0] - center[0], point[1] - center[1]
+    x_ = cos_a*x + sin_a*y
+    y_ = -sin_a*x + cos_a*y
+    cx, cy = 0, 0
+
+    # Calculate the semi-major and semi-minor axes of the transformed ellipse
+    a_ = width/2
+    b_ = height/2
+
+    # Check if the transformed point is inside the unit circle
+    if ((x_ - cx)/a_)**2 + ((y_ - cy)/b_)**2 <= 1:
+        return True
+    else:
+        return False
+
+
+# TMP_L is from the code above
+TMP_L['Color'] = [point_in_ellipse(TMP_L[['Y', 'variable']].iloc[i], ellipse[0], ellipse[1][0], ellipse[1][1], np.radians(ellipse[2])) for i in range(len(TMP_L))]
+
+plt.scatter(TMP_L.Y, TMP_L.variable, c = TMP_L.Color)
+plt.show()
+```
+
+|![Ellipse Regression (Fit)](https://s1.ax1x.com/2023/05/11/p9sUzIe.png)|
+|:-:|
+
+

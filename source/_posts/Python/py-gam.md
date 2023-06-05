@@ -20,6 +20,8 @@ thumbnail: "https://s1.ax1x.com/2022/06/18/XLliRg.md.png"
 Source: [pygam](https://pygam.readthedocs.io/en/latest/notebooks/tour_of_pygam.html)
 
 ```python
+from pygam import GAM, s, te
+
 X =  np.array([ [i] for i in Cell_fit.Class_size.to_list()])
 y =  np.array(Cell_fit.Size.to_list())
 
