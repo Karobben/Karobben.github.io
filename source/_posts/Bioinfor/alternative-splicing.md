@@ -177,7 +177,7 @@ The first column is rMATS results. the second column is result folder. The last 
 Tools: [Xinglab/rmats2sashimiplot](https://github.com/Xinglab/rmats2sashimiplot)
 
 !!! note This tool is based ob python2, not python3!
-
+    Quickies way to install it: `conda create --name Splicing -c bioconda rmats2sashimiplot python=2.7`
 An example of code could be: ([Omics-Hunter](https://evvail.com/2021/05/05/2400.html))
 
 ```bash

@@ -82,6 +82,7 @@ needed by 'server/scrcpy-server', missing and no known rule to make it
 ## 最后
 插入数据线， 打开USB调试模式，输入scrcpy后手机勾选确认
 ```bash
+adb tcpip 5555
 scrcpy
 ```
 
