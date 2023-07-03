@@ -1,8 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://karobben.github.io/2023/01/24/Bioinfor/idtracker/</loc>
+    <lastmod>2023-06-29</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2020/06/23/R/PCA/</loc>
+    <lastmod>2023-06-26</lastmod>
+  </url>
+  <url>
     <loc>https://karobben.github.io/2022/11/07/Bioinfor/alternative-splicing/</loc>
-    <lastmod>2023-06-22</lastmod>
+    <lastmod>2023-06-25</lastmod>
   </url>
   <url>
     <loc>https://karobben.github.io/2020/06/26/Linux/Deepin_scrcpy/</loc>
@@ -518,10 +526,6 @@
   </url>
   <url>
     <loc>https://karobben.github.io/2020/08/13/R/NetWorkPlot/</loc>
-    <lastmod>2023-06-06</lastmod>
-  </url>
-  <url>
-    <loc>https://karobben.github.io/2020/06/23/R/PCA/</loc>
     <lastmod>2023-06-06</lastmod>
   </url>
   <url>
@@ -1534,10 +1538,6 @@
   </url>
   <url>
     <loc>https://karobben.github.io/2022/10/03/Bioinfor/gsea/</loc>
-    <lastmod>2023-06-06</lastmod>
-  </url>
-  <url>
-    <loc>https://karobben.github.io/2023/01/24/Bioinfor/idtracker/</loc>
     <lastmod>2023-06-06</lastmod>
   </url>
   <url>
