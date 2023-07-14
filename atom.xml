@@ -6,7 +6,7 @@
   <link href="https://karobben.github.io/atom.xml" rel="self"/>
   
   <link href="https://karobben.github.io/"/>
-  <updated>2023-07-04T05:00:50.334Z</updated>
+  <updated>2023-07-10T23:59:57.273Z</updated>
   <id>https://karobben.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Progress Bar in Python</title>
+    <link href="https://karobben.github.io/2023/07/10/Python/progressbar/"/>
+    <id>https://karobben.github.io/2023/07/10/Python/progressbar/</id>
+    <published>2023-07-10T23:38:28.000Z</published>
+    <updated>2023-07-10T23:59:57.273Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="tqdm">tqdm</h2><p>The tqdm package in Python provides a fast, extensible progress bar for loops and other iterable objects. It was used in pip intall. Here’s a simple example:</p><div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">from</span> tqdm <span class="hljs-keyword">import</span> tqdm<br><span class="hljs-keyword">import</span> time<br><br><span class="hljs-comment"># Create a list of numbers</span><br>numbers = <span class="hljs-built_in">range</span>(<span class="hljs-number">100</span>)<br><br><span class="hljs-comment"># Wrap your iterable with tqdm()</span><br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> tqdm(numbers):<br>    <span class="hljs-comment"># Simulate some work</span><br>    time.sleep(<span class="hljs-number">0.01</span>)<br></code></pre></td></tr></table></figure></div><p><img src="https://s1.ax1x.com/2023/07/11/pCRXjDH.png" alt="Progress bar, tqdm"></p><h2 id="rich">rich</h2><div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">from</span> rich.progress <span class="hljs-keyword">import</span> track<br><span class="hljs-keyword">import</span> time<br><br><span class="hljs-comment"># Create a list of numbers</span><br>numbers = <span class="hljs-built_in">range</span>(<span class="hljs-number">100</span>)<br><br><span class="hljs-comment"># Wrap your iterable with track()</span><br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> track(numbers, description=<span class="hljs-string">&quot;Processing...&quot;</span>):<br>    <span class="hljs-comment"># Simulate some work</span><br>    time.sleep(<span class="hljs-number">0.01</span>)<br></code></pre></td></tr></table></figure></div><p><code>track()</code> works similarly to tqdm’s wrapper. It takes an iterable and a description for the task, and returns an iterator that produces the same values as the original, but also updates a progress bar in the console as it iterates over the items.</p><p>The <code>description</code> parameter allows you to set a text description for the task that is displayed next to the progress bar.</p><p>Like tqdm, rich offers a variety of options to customize the appearance and behavior of the progress bar. You can find more details in the rich documentation.<br><img src="https://s1.ax1x.com/2023/07/11/pCRXvbd.png" alt="Progress bar, rich"></p><h2 id="progressbar">progressbar</h2><p>cite: <a href="https://www.geeksforgeeks.org/progress-bars-in-python/">sanjaydokula</a></p><div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> time<br><span class="hljs-keyword">import</span> progressbar<br> <br>widgets = [<span class="hljs-string">&#x27; [&#x27;</span>,<br>         progressbar.Timer(<span class="hljs-built_in">format</span>= <span class="hljs-string">&#x27;elapsed time: %(elapsed)s&#x27;</span>),<br>         <span class="hljs-string">&#x27;] &#x27;</span>,<br>           progressbar.Bar(<span class="hljs-string">&#x27;*&#x27;</span>),<span class="hljs-string">&#x27; (&#x27;</span>,<br>           progressbar.ETA(), <span class="hljs-string">&#x27;) &#x27;</span>,<br>          ]<br> <br>bar = progressbar.ProgressBar(max_value=<span class="hljs-number">200</span>,<br>                              widgets=widgets).start()<br> <br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">200</span>):<br>    time.sleep(<span class="hljs-number">0.1</span>)<br>    bar.update(i)<br></code></pre></td></tr></table></figure></div><p><img src="https://s1.ax1x.com/2023/07/11/pCRXzVA.png" alt="Progress bar, progressbar"></p><h2 id="light-progress">light-progress</h2><p>cite: <a href="https://qiita.com/itkr/items/fab6a5e492b28bb07fab">@itkr</a></p><div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">from</span> time <span class="hljs-keyword">import</span> sleep<br><span class="hljs-keyword">from</span> light_progress.commandline <span class="hljs-keyword">import</span> ProgressBar<br><br>n = <span class="hljs-number">42</span><br>progress_bar = ProgressBar(n)<br>progress_bar.start()<br><br><span class="hljs-keyword">for</span> item <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(n):<br>    sleep(<span class="hljs-number">0.01</span>)<br>    progress_bar.forward()<br><br>progress_bar.finish()<br></code></pre></td></tr></table></figure></div><p><img src="https://s1.ax1x.com/2023/07/11/pCRjp5t.png" alt="Progress bar, light-progress"></p><div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="code"><pre><code class="hljs python"><br><span class="hljs-keyword">from</span> time <span class="hljs-keyword">import</span> sleep<br><span class="hljs-keyword">from</span> light_progress.commandline <span class="hljs-keyword">import</span> ProgressBar<br><br>n = <span class="hljs-number">42</span><br>progress_bar = ProgressBar(n)<br>progress_bar.start()<br><br><span class="hljs-keyword">for</span> item <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(n):<br>    sleep(<span class="hljs-number">0.01</span>)<br>    progress_bar.forward()<br><br>progress_bar.finish()<br><span class="hljs-keyword">import</span> time<br><span class="hljs-keyword">import</span> progressbar<br> <br>widgets = [<span class="hljs-string">&#x27; [&#x27;</span>,<br>         progressbar.Timer(<span class="hljs-built_in">format</span>= <span class="hljs-string">&#x27;elapsed time: %(elapsed)s&#x27;</span>),<br>         <span class="hljs-string">&#x27;] &#x27;</span>,<br>           progressbar.Bar(<span class="hljs-string">&#x27;*&#x27;</span>),<span class="hljs-string">&#x27; (&#x27;</span>,<br>           progressbar.ETA(), <span class="hljs-string">&#x27;) &#x27;</span>,<br>          ]<br> <br>bar = progressbar.ProgressBar(max_value=<span class="hljs-number">20</span>,<br>                              widgets=widgets).start()<br> <br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">20</span>):<br>    time.sleep(<span class="hljs-number">0.1</span>)<br>    bar.update(i)<br><span class="hljs-keyword">from</span> rich.progress <span class="hljs-keyword">import</span> track<br><span class="hljs-keyword">import</span> time<br><br><span class="hljs-comment"># Create a list of numbers</span><br>numbers = <span class="hljs-built_in">range</span>(<span class="hljs-number">100</span>)<br><br><span class="hljs-comment"># Wrap your iterable with track()</span><br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> track(numbers, description=<span class="hljs-string">&quot;Processing...&quot;</span>):<br>    <span class="hljs-comment"># Simulate some work</span><br>    time.sleep(<span class="hljs-number">0.01</span>)<br><span class="hljs-keyword">from</span> tqdm <span class="hljs-keyword">import</span> tqdm<br><span class="hljs-keyword">import</span> time<br><br><span class="hljs-comment"># Create a list of numbers</span><br>numbers = <span class="hljs-built_in">range</span>(<span class="hljs-number">100</span>)<br><br><span class="hljs-comment"># Wrap your iterable with tqdm()</span><br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> tqdm(numbers):<br>    <span class="hljs-comment"># Simulate some work</span><br>    time.sleep(<span class="hljs-number">0.01</span>)<br></code></pre></td></tr></table></figure></div><style>pre {  background-color:#38393d;  color: #5fd381;}</style>]]></content>
+    
+    
+    <summary type="html">Progress Bar in Python</summary>
+    
+    
+    
+    <category term="Python" scheme="https://karobben.github.io/categories/Python/"/>
+    
+    <category term="Scripting" scheme="https://karobben.github.io/categories/Python/Scripting/"/>
+    
+    <category term="Module" scheme="https://karobben.github.io/categories/Python/Scripting/Module/"/>
+    
+    
+    <category term="Python" scheme="https://karobben.github.io/tags/Python/"/>
+    
+    <category term="Script" scheme="https://karobben.github.io/tags/Script/"/>
+    
+  </entry>
   
   <entry>
     <title>torch: Start with Deep Learning</title>
@@ -482,35 +509,6 @@
     
     
     
-    
-  </entry>
-  
-  <entry>
-    <title>Cellpose</title>
-    <link href="https://karobben.github.io/2022/12/21/Bioinfor/cellpose/"/>
-    <id>https://karobben.github.io/2022/12/21/Bioinfor/cellpose/</id>
-    <published>2022-12-21T23:55:36.000Z</published>
-    <updated>2023-06-06T21:42:32.122Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="CellPose">CellPose</h2><p>CellPose is an awesome machine learning-based tool that could segment cells very easily. The pre-trained model could suit multiple scenarios and fit the basic usages. And it can do more than cell segmentation (Though the cell pose looks fancy, I still didn’t know who to work with the results.) To learn more, please read the <a href="https://cellpose.readthedocs.io/en/latest/index.html">documentation</a></p><div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">from</span> cellpose <span class="hljs-keyword">import</span> models<br><span class="hljs-keyword">from</span> cellpose.io <span class="hljs-keyword">import</span> imread<br><br><span class="hljs-comment"># model_type=&#x27;cyto&#x27; or model_type=&#x27;nuclei&#x27;</span><br>model = models.Cellpose(gpu=<span class="hljs-literal">False</span>, model_type=<span class="hljs-string">&#x27;cyto&#x27;</span>)<br><br>files = [<span class="hljs-string">&#x27;img0.tif&#x27;</span>, <span class="hljs-string">&#x27;img1.tif&#x27;</span>]<br>imgs = [imread(f) <span class="hljs-keyword">for</span> f <span class="hljs-keyword">in</span> files]<br>masks, flows, styles, diams = model.<span class="hljs-built_in">eval</span>(imgs, diameter=<span class="hljs-literal">None</span>, channels=[<span class="hljs-number">0</span>,<span class="hljs-number">1</span>],<br>                                         flow_threshold=<span class="hljs-number">0.4</span>, do_3D=<span class="hljs-literal">False</span>)<br><br><br><br></code></pre></td></tr></table></figure></div><style>pre {  background-color:#38393d;  color: #5fd381;}</style>]]></content>
-    
-    
-    <summary type="html">A quick note of how to use the cellpose to do cell segmentation</summary>
-    
-    
-    
-    <category term="Biology" scheme="https://karobben.github.io/categories/Biology/"/>
-    
-    <category term="Bioinformatics" scheme="https://karobben.github.io/categories/Biology/Bioinformatics/"/>
-    
-    <category term="Software" scheme="https://karobben.github.io/categories/Biology/Bioinformatics/Software/"/>
-    
-    
-    <category term="Bioinformatics" scheme="https://karobben.github.io/tags/Bioinformatics/"/>
-    
-    <category term="Image" scheme="https://karobben.github.io/tags/Image/"/>
-    
-    <category term="Machine Learning" scheme="https://karobben.github.io/tags/Machine-Learning/"/>
     
   </entry>
   

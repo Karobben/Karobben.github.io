@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://karobben.github.io/2022/07/20/Python/fastqc_crawl/</loc>
+    <lastmod>2023-07-14</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2023/07/10/Python/progressbar/</loc>
+    <lastmod>2023-07-10</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2020/09/12/Python/multyprocesser/</loc>
+    <lastmod>2023-07-10</lastmod>
+  </url>
+  <url>
     <loc>https://karobben.github.io/2023/07/03/Python/torch-dp/</loc>
     <lastmod>2023-07-04</lastmod>
   </url>
@@ -338,10 +350,6 @@
   </url>
   <url>
     <loc>https://karobben.github.io/2021/09/18/Python/lsm2tif/</loc>
-    <lastmod>2023-06-06</lastmod>
-  </url>
-  <url>
-    <loc>https://karobben.github.io/2020/09/12/Python/multyprocesser/</loc>
     <lastmod>2023-06-06</lastmod>
   </url>
   <url>
@@ -782,10 +790,6 @@
   </url>
   <url>
     <loc>https://karobben.github.io/2022/12/05/Python/flybase-api/</loc>
-    <lastmod>2023-06-06</lastmod>
-  </url>
-  <url>
-    <loc>https://karobben.github.io/2022/07/20/Python/fastqc_crawl/</loc>
     <lastmod>2023-06-06</lastmod>
   </url>
   <url>
