@@ -1,0 +1,15 @@
+<html>
+    <script>
+        function getD1(){
+          var date = new Date();
+          var d1=date.toLocaleString();
+          document.getElementById("datetime").innerHTML = d1;
+        }
+        setInterval("getD1()", 1000);
+      </script>
+      
+      <body onload = getD1()>
+      <div id="datetime"></div>
+      </body>
+      
+</html>

@@ -1,0 +1,238 @@
+Reading for this week: Book:
+Molecular Biology Chapters 7.1, 7.2
+Review: Transcription activation by catabolite activator protein (CAP). Busby, S. and Ebright, R.H. J Mol Biol. 1999 Oct 22;293(2):199-213.
+Bacterial nucleoid-associated proteins, nucleoid structure and gene expression. Dillon, S.C. and Dorman C.J. Nat Rev Microbiol. 2010 Mar;8(3):185-95.
+Journal Club Paper (to be presented the following week): A phage-encoded nucleoid associated protein compacts both host and phage DNA and derepresses H-NS silencing. Son B, Patterson-West J, Arroyo-Mendoza M, Ramachandran R, Iben JR, Zhu J, Rao V, Dimitriadis EK, Hinton DM. Nucleic Acids Res. 2021 doi: 10.1093/nar/gkab678.
+1Points for the lecture:
+Transcription can be actively regulated
+Small molecules can control gene programs
+Operons help balance protein expression in a pathway
+Protein allostery
+Transcription factors can bend DNA
+2Role of Regulatory Proteins in Transcription Initiation
+•Regulatory proteins bind to specific DNA sequences (operator/response element)
+and control initiation of transcription
+•Repressors - regulatory proteins that prevent transcription of a negatively regulated
+gene
+*negatively regulated genes can only be transcribed in the absence of
+the repressor
+•Activators - regulatory proteins that activate transcription of a positively regulated
+gene
+•Repressors and Activators are often allosteric proteins modified by ligand binding
+•Agonist - positively acting ligand
+•Antagonist - negatively acting ligand
+3Activator Strategies for Transcriptional Regulation
+Ligand binding triggers promoter association
+and RNA is produced
+Ligand binding triggers promoter dissociation
+and RNA is not produced
+4Repressor Strategies for Transcriptional Regulation
+Ligand binding triggers promoter dissociation
+and RNA is produced
+Ligand binding triggers promoter association
+and RNA is not produced
+5Operators (bacteria)/Response Elements (eukaryotes)
+How do you find an Operator/Response Element?
+6What and Where are Operators?
+Many TFs bind inverted
+repeats as dimers
+More interactions =
+greater affinity
+7Promoter ‘Bashing’
+lacZ
+lacZ
+lacZ
+lacZ
+lacZ
+lacZ
+lacZ
+lacZ
+lacZ
+lacZ
+8Linker-scanner Mutagenesis to Refine Position of Promoter Proximal Elements
+9Operon
+Bacteria and viruses often express functionally
+operative genes from a single promoter to help insure
+uniform expression
+10Lactose (Lac) Operon
+11The Operon Model
+A landmark in the history of Molecular Biology was the
+proposal of the operon model of genetic regulation by
+François Jacob and Jacques Monod in 1961.
+The core of the model was that the level of proteins in cells
+was controlled at a genetic level. The theory also predicted
+the existence of mRNA-an unstable intermediate between
+the genome and the expressed protein.
+Before this work the prevailing model was called the
+instruction hypothesis that stated that all proteins were
+present in a cell, but that in the absence of an inducer they
+were not properly folded and were inactive.
+Jacob and Monod were awarded the Nobel Prize in 1965
+for their work on characterising genes involved in lactose
+utilization
+12Differential Growth based on Carbon Source
+Glucose
+Lactose
+Glucose is more rapidly used than
+lactose, so cells grow faster on
+glucose.
+Time
+Mix of glucose
+and lactose
+When both present growth is bi-
+phasic, which is called a diauxic
+shift.
+13
+Cell numberBiological Purpose of Lac Operon
+LacZ gene: encodes  -galactosidase
+enzyme that breaks down disaccharide
+lactose into glucose and galactose to
+be used as source of energy for cell.
+LacY gene: encodes  -galactoside
+permease, a membrane-bound protein
+that helps transport lactose across the
+membrane of cell.
+LacA gene: encodes  -galactoside
+transacetylase enzyme involved in
+catabolism of disaccharide (exact role
+is less clear)
+14Genetic Screen Based on Enzymatic Activity
+5-bromo-4-chloro-3-indolyl-D-galactoside
+‘X-GAL’
+15Natural & Synthetic Small Molecules
+IPTG is a non-metabolized analog of
+allolactose that induces Lac operon
+but is not broken down by enzymes.
+Lactose is a disaccharide composed of galactose and glucose linked in a  configuration (1->4). -galactosidase, the product
+of the lacZ gene, cleaves this disaccharide into galactose and glucose which can then both be metabolized by the cell. E. coli
+does not always make this enzyme. It is an inducible enzyme which is synthesized only when lactose is present and when
+glucose is absent from the growth media. Glucose is one of the few sugars which E. coli will use preferentially over all other
+sugars because it can be directly routed into glycolysis after phosphorylation without any other modifications.
+16Merodiploids Helped to Unravel the Role of Genes in the lac operon
+17Studying the Lac Operon
+Isolation and analysis of mutants defective in Lac operon function allowed Jacob and Monod to formulate an accurate Lac operon
+model PRIOR to the advent of molecular cloning
+e.g., wild type E. coli form colonies that are blue on IPTG/ XGAL plates and white on XGAL plates
+Mutants that form white colonies on IPTG/XGAL plates can be isolated
+* this phenotype is often due to a mutation in a Lac structural gene
+* the number and location of Lac structural genes can be identified by complementation analysis
+Mutants that form blue colonies on XGAL (no IPTG) can be isolated
+* this phenotype is often due to a mutation in either the Lac repressor gene or Lac operator
+* Lac repressor versus operator mutations can be distinguished by cis-trans test
+F' plasmids carrying different pieces of E. coli chromosome can be isolated in HFR strains, allowing the creation of partial diploids.
+F' plasmid can carry wild type or mutant versions of Lac operon between strains
+18Complementation Analysis and Cis-Trans Tests
+Phenotypes and Genotypes of Mutants Defective in Lac Operon Function
+* Lower case letter with superscript asterisk indicates location of mutation
+* In practice, you would not know the location; you would only know the phenotypes (blue or white color on
+XGAL/IPTG or XGAL) of the haploid (or homozygous diploid) and the heterozygous diploid
+e.g., The diploid resulting from conjugating mutants 2 and 3 give a normal phenotype, consistent with mutations 1 and 2 being
+recessive and located in different structural genes (i.e., in the diploid there is at least one normal copy of each gene and a
+correspondingly normal protein)
+Trans
+Cis
+19‘Trans’ and ‘Cis’
+In genetic terminology:
+The lac repressor is a trans-
+acting element
+trans = across
+The operator is a cis-acting
+element
+cis=near
+The lac repressor is a sequence-specific DNA-binding protein that Negatively regulates
+expression of the lac operon structural genes.
+20Trans Complementation
+Merodiploid: lacZ - / F’ lacY -
+lacI
+lacO lacZ
+lacY
+lacA
+lacI
+lacO
+lacZ
+lacY lacA
+21‘Simple’ Mechanism for Gene Regulation by Lac Repressor
+22Lactose Levels “Tune” the Response
+In the absence of
+lactose there are only 1
+-5 molecules of each of
+the lacZYA proteins in
+the cell. Following
+induction, up to 5000
+molecules of -
+galactosidase can
+accumulate within
+minutes.
+As lactose is cleaved and used as a carbon source for growth the
+lactose levels drop. Eventually free repressor molecules will
+accumulate once more and the lac operon will be switched off.
+23Impact of Inducer on Repressor DNA binding
+24Protein Allostery (Induced Conformational Changes)
+25Repression by Steric Interference?
+1 -- DNA sequence ladder
+2 -- DNA sequence ladder
+3 -- No protein
+4 -- (+) RNA polymerase
+5 -- (+) lac repressor
+26Lac Repressor Does Not Prevent RNAP Binding
+Abortive
+Transcripts
+27What is the Mechanism of Repression?
+28Influence of Regulators on RNAP:Promoter Complexes
+A great deal of information about RNA polymerase and its interactions with promoters can be obtained by measuring the two parameters
+of promoter strength: KB and k2. The effect of auxilliary proteins such as repressors or activators on these two parameters can also be
+measured to see whether formation of a closed complex or formation of an open complex is affected by the presence of the additional
+protein.
+Since KB is, to a first approximation, a measure of the binding of RNA polymerase to a promoter, any effect of a repressor or an activator
+on the value of this parameter may be interpreted as an indicator that binding of RNA polymerase is affected by the repressor or
+activator.
+It is more difficult to ascribe any physical meaning to k2 since this parameter measures the rate-limiting step in open complex formation
+which may not necessarily be the same for any two promoters. Still, any effect of a repressor or an activator on the value of this parameter
+can be interpreted as influencing an aspect of RNA polymerase - promoter interaction.
+29Impact of Repressor on RNAP
+At the lacUV5 promoter, the values of KB and k2 in the presence or absence of repressor are:
+KB k2
+No repressor1.9 x 107 M-1
+With repressor2.5 x 109 M-1
+6.7 x 10-2 s-1
+2.5 x 10-2 s-1
+(1) Data from Straney & Crothers (1987) Cell 51: 699-707.
+(2) The UV5 mutation changes the -10 region of the lacP promoter so that it more
+closely resembles the consensus -10 sequence. It is a stronger promoter than lacP.
+These data indicate that the lactose repressor INCREASES the binding of RNAP 130-fold; suggest that repressor might be
+considered a activator. Repressor DECREASES k2 3-fold.
+30Repressor Dimers Bind on Same Face of DNA
+Repression maxima were observed when two operators were spaced apart at distances of 59.5, 70.5, 81.5, 92.5,
+115.5 and 150.5 nm -- i.e., distances which are integral multiples of the pitch of a DNA double helix. The 92.5
+spacer distance is exactly that found in the wild-type lac operon; the 115.5 spacer distance is exactly that found
+between the two operators in the gal operon.
+This effect could be observed over longer spacer distances, though in those cases, it was a smaller effect.
+Distances longer than 400 bp showed little or no effect.
+At all spacer distances that were not integral multiples of the pitch of a DNA double helix, no repression was
+observed. This is consistent with a DNA looping model in which two proteins bound on the same face of a DNA
+molecule can interact relatively easily but as soon as interaction requires any torsional change in DNA, then it
+becomes negligible.
+Effects could not be measured at distances less than 59.5 since those constructs would interfere with the
+promoter.
+From the repression maxima, they estimated that the DNA pitch in vivo is 11.1 bp or 3.4 nm.
+31Repressor Binds as a Tetramer
+32DNA Bending Enables
+Proteins to Bind Cooperatively to Separated Sites
+No bending
+bending
+BEND FORMATION REQUIRES
+THAT BOTH PROTEINS BIND TO
+THE SAME FACE OF THE DNA
+PROTEINS BOUND TO SITES ON
+OPPOSITE SIDES OF DNA HELIX
+CANNOT INTERACT
+33Lac Tetramer Stabilizes Bent DNA
+34Detected by EMSA
+35Promoter Contains 3 Operator Sites
+36How to Resolve if Operator 2 or 3 is preferred?
+Chromatin Immunoprecipitation (ChIP) Assay
+Determines the relative DNA Occupancy of a Target
+Protein at a Particular Site in vivo
+37ChIP-Seq can Determine Genome-wide Binding Site Useage of a Target Protein
+38Lac Repressor Binding
+39Multiple Regulators

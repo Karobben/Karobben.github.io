@@ -11,7 +11,7 @@ excerpt: "Single Cell RNA-Seq Notes from Seminal"
 tags: [Bioinformatics, RNA-Seq, scRNA-Seq]
 category:
 cover: "https://z3.ax1x.com/2021/10/31/IpH7j0.png"
-thumbnail: "https://z3.ax1x.com/2021/10/31/IpH7j0.png"
+thumbnail: "https://d33wubrfki0l68.cloudfront.net/abc16e23a8293f1b0961651473861345c5a019b8/92ccd/img/icons/network.svg"
 ---
 
 ## Single Cell RNA-Seq Notes

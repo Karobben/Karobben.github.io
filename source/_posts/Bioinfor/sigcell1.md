@@ -8,10 +8,10 @@ title: "Single cell RNA-Seq Practice: Seurat"
 ytitle: "scRNA-Seq 数据分析练习"
 description: "Bioinformatics: scRNA-seq data processing practices, protocol from seurat"
 excerpt: "Bioinformatics: scRNA-seq data processing practices, protocol from seurat"
-tags: [scRNA-Seq, Bioinformatics]
+tags: [Bioinformatics, RNA-Seq, scRNA-Seq]
 category:
 cover: "https://z3.ax1x.com/2021/10/31/IpH7j0.png"
-thumbnail: "https://z3.ax1x.com/2021/10/31/IpH7j0.png"
+thumbnail: "https://d33wubrfki0l68.cloudfront.net/abc16e23a8293f1b0961651473861345c5a019b8/92ccd/img/icons/network.svg"
 ---
 
 ## Single cell RNA-seq Data processing

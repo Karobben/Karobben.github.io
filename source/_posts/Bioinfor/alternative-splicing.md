@@ -1,7 +1,7 @@
 ---
 toc: true
 url: alternative_splicing
-covercopy: © Karobben
+covercopy: <a href="https://www.nature.com/articles/s41580-022-00545-z">© Luciano E. Marasco, 2022</a>
 priority: 10000
 date: 2022-11-07 14:44:12
 title: "RNA Seq: Alternative Splicing"
@@ -10,8 +10,8 @@ description: "RNA Seq: Alternative Splicing"
 excerpt: "Alternative splicing research is important for understanding the diversity of gene expression and regulation, as it enables the production of multiple protein isoforms from a single gene, allowing cells to generate complex functional diversity and adapt to changing environmental conditions. <a title='ChatGPT'>Who said this?</a>"
 tags: [RNA, Protocol, NGS]
 category: [Biology, Bioinformatics, Protocol, Alternative Splicing]
-cover: "https://rnaseq-mats.sourceforge.net/splicing.jpg"
-thumbnail: "https://rnaseq-mats.sourceforge.net/splicing.jpg"
+cover: "https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs41580-022-00545-z/MediaObjects/41580_2022_545_Fig5_HTML.png"
+thumbnail: "https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs41580-022-00545-z/MediaObjects/41580_2022_545_Fig5_HTML.png?as=webp"
 ---
 
 - [SpliceTools](https://github.com/flemingtonlab/SpliceTools)
@@ -24,6 +24,58 @@ thumbnail: "https://rnaseq-mats.sourceforge.net/splicing.jpg"
 In seminar recording form [OHSU Informatics](https://www.youtube.com/watch?v=LknDQw08P5w), they talked about how rMATS worked and the limits of rMATS in overlapped genes and complicated splicing events.
 Julian
 
+### Epigenetics and alternative splicing
+
+Splicing and transcription can be regulated by epigenetic modifications, such as alterations in histone and DNA structures[^luco_11][^khan_12]. The organization of chromatin can regulate the splicing process by influencing the availability and recruitment of splicing factors[^gunderson_09]. Alternative spoicing could also be affect by histonmadification[^spies_09] and DNA modificatiom, like cytosine methylation[^ehrlich_14] 
+
+[^spies_09]: Spies N, Nielsen CB, Padgett RA, Burge CB. 2009 Biased chromatin signatures around polyadenylation sites and exons. Mol. Cell 36, 245–254. (doi:10.1016/j.molcel.2009.10.008)
+[^ehrlich_14]: Ehrlich M, Ehrlich KC. 2014 DNA cytosine methylation and hydroxymethylation at the borders. Epigenomics 6, 563–566. (doi:10.2217/epi.14.48)
+
+## Softwares for study alternative splicing
+
+|![Illustrate two types of software for alternative splicing](https://royalsocietypublishing.org/cms/asset/c59a613f-5ebe-4c7b-97fc-ce72f0dacb01/rstb20170073f02.jpg)|
+|:-:|
+|[© Magdalena J. Koziol, 2018](https://royalsocietypublishing.org/doi/10.1098/rstb.2017.0073)|
+
+| Tool        | Biological Replicates | Model               | Experimental Design | Reference |
+|-------------|-----------------------|---------------------|---------------------|-----------|
+| JunctionSeq | Yes                   | Exon & Junction     | Design Matrix       | [^deamer_16]      |
+| Tuxedo 2    | Yes                   | Isoform, Exon & Junction | Design Matrix | [^blake_15]      |
+| DEXSeq      | Yes                   | Exon                | Design Matrix       | [^Le_15]      |
+| MATS        | No                    | Exon & Junction     | Two Sample          | [^fisher_07]      |
+| MISO        | No                    | Isoform             | Two Sample          | [^markowetz_10]      |
+| Cuffdiff 2  | Yes                   | Isoform & Exon      | Two Groups          | [^bellman_57]    |
+| DSGseq      | Yes                   | Exon                | Two Groups          | [^robinson_10]      |
+| DiffSplice  | Yes                   | Exon & Junction     | Two Groups          | [^gaod_10]      |
+| ARH-seq     | Yes                   | Exon & Junction     | Two Sample          | [^kitano_02]     |
+
+
+[^deamer_16]: Deamer D, Akeson M, Branton D. 2016 Three decades of nanopore sequencing. Nat. Biotechnol. 34, 518–524. (doi:10.1038/nbt.3423)
+
+[^blake_15]: Blake JA et al. 2015 Gene ontology consortium: going forward. Nucleic Acids Res. 43, D1049–D1056. (doi:10.1093/nar/gku1179)
+
+[^Le_15]: Le Nove`re N. 2015 Quantitative and logic modelling of molecular and gene networks. Nat. Rev. Genet. 16, 146–158. (doi:10.1038/nrg3885)
+
+[^fisher_07]: Fisher J, Henzinger TA. 2007 Executable cell biology. Nat. Biotechnol. 25, 1239–1249. (doi:10.1038/nbt1356)
+
+[^markowetz_10]: Markowetz F. 2010 How to understand the cell by breaking it: network analysis of gene perturbation screens. PLoS Comput. Biol. 6, e1000655. (doi:10. 1371/journal.pcbi.1000655)
+
+[^bellman_57]: Bellman RE. 1957 Dynamic programming. Princeton, NJ: Princeton University Press.
+
+[^robinson_10]: Robinson MD, McCarthy DJ, Smyth GK. 2010 edgeR: a Bioconductor package for differential expression analysis of digital gene expression data. Bioinformatics 26, 139–140. (doi:10.1093/ bioinformatics/btp616)
+
+[^gaod_10]: Gao D, Kim J, Kim H, Phang TL, Selby H, Tan AC, Tong T. 2010 A survey of statistical software for analysing RNA-seq data. Hum. Genomics 5, 56–60. (doi:10.1186/1479-7364-5-1-56)
+
+[^kitano_02]: Kitano H. 2002 Systems biology: a brief overview. Science 295, 1662–1664. (doi:10.1126/science.1069492)
+
+
+
+
+
+
+[^gunderson_09]: Gunderson FQ, Johnson TL. 2009 Acetylation by the transcriptional coactivator Gcn5 plays a novel role in co-transcriptional spliceosome assembly. PLoS Genet. 5, e1000682. (doi:10.1371/journal.pgen.1000682) 
+[^khan_12]: Khan DH, Jahan S, Davie JR. 2012 Pre-mRNA splicing: role of epigenetics and implications in disease. Adv. Biol. Regul. 52, 377–388. (doi:10.1016/j.jbior.2012.04.003)
+[^luco_11]: Luco RF, Allo M, Schor IE, Kornblihtt AR, Misteli T. 2011 Epigenetics in alternative Pre-mRNA splicing. Cell 144, 16–26. (doi:10.1016/j.cell.2010.11.056)
 
 ## rMARS
 

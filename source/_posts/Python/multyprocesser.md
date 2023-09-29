@@ -63,3 +63,55 @@ if __name__ == '__main__':
 for i in return_dict.values():
   print(i)
 ```
+
+
+## why pool.join() is taking a long time
+
+ If `pool.join()` takes a long time, it typically indicates that there are still ongoing tasks in the pool. The duration is largely determined by the longest task in the pool. Issues such as inter-process communication, waiting for shared resources, and insufficient CPU cores can also cause slowdowns.
+
+
+## startmap()
+
+
+Generally, `startmap` could work faster than `map`.
+
+```python
+import multiprocessing as mp
+
+def calculate_overlap(i, Ther):
+    row = TB_NST_FP.iloc[i]
+    TB_TMP = TB_NST[TB_NST.Frame == row['Frame']]
+    over_N = TB_TMP.apply(lambda x: overlap_area(row, x, Ther), axis=1).sum()
+    return (i, over_N)
+
+# Assuming you have a list/array of i and Ther values
+i_values = range(len(TB_NST_FP))  # Replace this with your actual i values
+Ther_values = [0.5] * len(TB_NST_FP)  # Replace this with your actual Ther values
+
+# Pair up i_values and Ther_values
+args = list(zip(i_values, Ther_values))
+# Create a Pool of subprocesses
+with mp.Pool() as p:
+    results = p.starmap(calculate_overlap, args)
+```
+
+In this code, it only consume 6.3s.
+
+```python
+def calculate_overlap(args):
+    i, Ther = args
+    row = TB_NST_FP.iloc[i]
+    TB_TMP = TB_NST[TB_NST.Frame == row['Frame']]
+    over_N = TB_TMP.apply(lambda x: overlap_area(row, x, Ther), axis=1).sum()
+    return (i, over_N)
+# Create a pool of processes
+
+Ther = 0.5
+with Pool(cpu_count()) as p:
+    # Map calculate_overlap function to each index in TB_NST_FP
+    results = p.map(calculate_overlap, [(i, Ther) for i in range(len(TB_NST_FP))])
+# Filter results to only include indices where over_N < 1
+FP_lst = [i for i in results if i[1] < 1]
+```
+
+In this code, it cost 8.9s

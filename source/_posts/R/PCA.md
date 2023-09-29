@@ -1,6 +1,6 @@
 ---
-title: "PCA"
-description: "PCA"
+title: "PCA and PCoA"
+description: "PCA and PCoA in R"
 url: pca2
 date: 2020/06/23
 toc: true
@@ -162,3 +162,22 @@ CAAAAAAE
 p0+p1+p2+p3+p4  +plot_layout(design = GGlay)
 ```
 ![NtRu8S.png](https://s1.ax1x.com/2020/06/23/NtRu8S.png)
+
+
+
+
+## PCoA
+
+!!! question What's different between PCA and PCoA?
+        Principal Component Analysis (PCA) and Principal Coordinates Analysis (PCoA, also known as Multidimensional Scaling, MDS) are both techniques used for dimensionality reduction, which is the process of reducing the number of random variables under consideration by obtaining a set of principal variables. However, they are used in different contexts and have different underlying methodologies.
+
+        PCA is a technique that is used when you have a multivariate data set and you want to identify new variables that will represent the variability of your entire data set as much as possible. The new variables, or principal components, are linear combinations of the original variables. PCA operates on a covariance (or correlation) matrix, which implies that it is a parametric method.
+
+        On the other hand, PCoA is a method used in ecology and biology to transform a matrix of distances (or dissimilarities) between samples into a new set of orthogonal axes, the most important of which can be plotted against each other. PCoA can be applied to any symmetric distance or dissimilarity matrix. Unlike PCA, PCoA is non-parametric and makes no assumptions about the distribution of the original variables.
+
+        So, the main difference lies in the type of data they work with: PCA works with the actual data matrix and is used when you have a set of observations and measurements, while PCoA works with a matrix of pairwise distances and is used when you have a set of pairwise dissimilarities (like geographical distances between cities or genetic distances between individuals or species).
+        
+        © ChatGPT4
+
+
+Interesting

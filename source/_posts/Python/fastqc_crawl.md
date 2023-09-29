@@ -1,7 +1,7 @@
 ---
-title: "Collect FastqQC results by python"
+title: "Comprehensive Analysis of Large-Scale FastQC Results using Python"
 ytitle: "用python收集FastaQC的结果"
-description: "Using Python to collect the results from FastqQC"
+description: "Comprehensive Analysis of Large-Scale FastQC Results using Python"
 url: fastqc_crawl
 date: 2022/07/20
 toc: true
@@ -15,7 +15,10 @@ priority: 10000
 ---
 
 ## FastqQC
-FastqQC aim to a simple way to do quality control checks on raw sequence data from high through put sequencing pipeline.
+
+FastQC aims to provide a simple way to do some quality control checks on raw sequence data coming from high throughput sequencing pipelines. It provides a modular set of analyses which you can use to give a quick impression of whether your data has any problems of which you should be aware before doing any further analysis. [© illumina](https://www.illumina.com/products/by-type/informatics-products/basespace-sequence-hub/apps/fastqc.html)
+
+When dealing with a large number of samples, it's crucial to conduct quality control (QC) and scrutinize the results to identify any outliers. Filtering out low-quality data can significantly influence subsequent processes. Below is an example illustrating how we use all QC results from FastQC for cluster analysis.
 
 ## Summary information collect
 

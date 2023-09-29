@@ -16,7 +16,7 @@ thumbnail: "https://s1.ax1x.com/2023/01/25/pSt1TnH.png"
 
 ## Set up/Install
 
-[Documentation](http://localhost:4000/2023/01/24/Bioinfor/idtracker/)
+[Documentation](https://idtracker.ai/en/latest/user_guide/installation.html)
 
 how to install correct pytorch and cuda: https://pytorch.org/get-started/previous-versions/
 
@@ -26,6 +26,30 @@ conda activate idtrackerai
 pip install "idtrackerai[gui]"
 ```
 
+## General information for utility
+
+![IDtracker.AI](https://s1.ax1x.com/2023/06/28/pCwm69f.png)
+
+As shown above, the interface is very user-friendly. It can be divided into six regions:
+
+1. Video Load
+2. Arguments for Tracking
+3. Arguments for Object Segmentation:
+    - Blob Intensity: This represents the threshold of the targets based on the grey value, which ranges from 0 (dark) to 255 (light).
+    - Blob Area: This is the area of the object, measured in pixels.
+4. Tracking Related Arguments
+5. Number of Objects and their corresponding sizes: Objects that are significantly larger than others usually indicate occlusion from multiple targets.
+6. Area to illustrate the segmentation results for the current frame.
+
+
+First, we use this interface to select the most appropriate parameters and `Save parameters` as a **.toml file. Then, we simply need to run the following command:
+```bash
+idtrackerai --load mix.toml --track
+```
+This command will load the parameters from the .toml file and initiate the tracking process.
+
+
+
 ## Idtracker Data analysis
 
 ```python
@@ -33,14 +57,14 @@ import numpy as np
 import trajectorytools as tt
 import matplotlib.pyplot as plt
 
-trajectories_file_path = 'trajectories_wo_gaps/trajectories_wo_gaps.npy'
+trajectories_file_path = 'trajectories/trajectories_wo_gaps.npy'
 trajectories_dict = np.load(trajectories_file_path, allow_pickle=True).item()
 trajectories = trajectories_dict['trajectories']
 tr = tt.Trajectories.from_positions(trajectories)
 
 
 fig, ax_trajectories = plt.subplots(figsize=(5,5))
-frame_range = range(30*30) 
+frame_range = range(13883) 
 
 for i in range(tr.number_of_individuals):
     ax_trajectories.plot(tr.s[frame_range,i,0], tr.s[frame_range,i,1])
@@ -68,7 +92,7 @@ V_loc = '/mnt/Ken_lap/Vlog/upload/promE-fru-IR-v330035/20220116-promE-v330035-29
 
 cap=cv2.VideoCapture(V_loc)
 fourcc = cv2.VideoWriter_fourcc(*'XVID')
-out = cv2.VideoWriter('output.avi',fourcc, 20.0, (1920,1080))
+out = cv2.VideoWriter('output.avi',fourcc, 30.0, (1920,1080))
 
 while (True):
   ret,frame=cap.read()
@@ -77,12 +101,14 @@ while (True):
     C = np.array(colors.to_rgba(Palette[id]))[:-1] * 225
     cv2.putText(frame, str(id) ,(XY[0], XY[1]), cv2.FONT_HERSHEY_COMPLEX, 1, C, 2)
 
-  cv2.imshow("video",frame)
+  #cv2.imshow("video",frame)
   Num +=1 
   out.write(frame)
-  if cv2.waitKey(30)&0xFF==ord('q'):
-      cv2.destroyAllWindows()
-      break
+  #if cv2.waitKey(30)&0xFF==ord('q'):
+  #    cv2.destroyAllWindows()
+  #    break
+
+out.release()
 ```
 
 
