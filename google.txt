@@ -1,3 +1,4 @@
+https://karobben.github.io/2023/10/16/Bioinfor/scATAC/
 https://karobben.github.io/2023/10/06/Blog/spacial-disEvl/
 https://karobben.github.io/2023/10/04/Bioinfor/scRNA-marker/
 https://karobben.github.io/2023/10/04/R/geom-point/
@@ -7,4 +8,3 @@ https://karobben.github.io/2023/09/28/Bioinfor/scRNA-start/
 https://karobben.github.io/2023/09/27/Python/sparse-datasets/
 https://karobben.github.io/2023/09/07/LearnNotes/UIUC-AdMC-6/
 https://karobben.github.io/2023/09/05/LearnNotes/UIUC-AdMC-5/
-https://karobben.github.io/2023/08/31/LearnNotes/UIUC-AdMC-4/
