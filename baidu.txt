@@ -1,3 +1,6 @@
+https://karobben.github.io/2024/01/17/LearnNotes/BioChem/
+https://karobben.github.io/2024/01/17/LearnNotes/BioCell/
+https://karobben.github.io/2023/10/31/LearnNotes/immun/
 https://karobben.github.io/2023/10/30/Bioinfor/PacBio/
 https://karobben.github.io/2023/10/20/Bioinfor/ATAC-Seq/
 https://karobben.github.io/2023/10/19/Bioinfor/scMonocle/
@@ -5,6 +8,3 @@ https://karobben.github.io/2023/10/16/Bioinfor/scATAC/
 https://karobben.github.io/2023/10/06/Blog/spacial-disEvl/
 https://karobben.github.io/2023/10/04/Bioinfor/scRNA-marker/
 https://karobben.github.io/2023/10/04/R/geom-point/
-https://karobben.github.io/2023/10/03/Bioinfor/scRNA-integration/
-https://karobben.github.io/2023/10/03/Bioinfor/scRNA-batch/
-https://karobben.github.io/2023/09/28/Bioinfor/scRNA-start/
