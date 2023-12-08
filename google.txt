@@ -1,5 +1,5 @@
-https://karobben.github.io/2024/01/17/LearnNotes/BioChem/
-https://karobben.github.io/2024/01/17/LearnNotes/BioCell/
+https://karobben.github.io/2023/12/07/LearnNotes/h3n2na/
+https://karobben.github.io/2023/12/07/LearnNotes/fdr/
 https://karobben.github.io/2023/12/06/Bioinfor/pymol2pyvista/
 https://karobben.github.io/2023/11/22/LearnNotes/panHA/
 https://karobben.github.io/2023/10/31/LearnNotes/immun/
