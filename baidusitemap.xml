@@ -1,12 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://karobben.github.io/2023/12/13/Bioinfor/cdhit/</loc>
-    <lastmod>2023-12-14</lastmod>
+    <loc>https://karobben.github.io/2023/12/18/Bioinfor/phylogenetic/</loc>
+    <lastmod>2023-12-18</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2023/11/22/LearnNotes/panHA/</loc>
+    <lastmod>2023-12-18</lastmod>
   </url>
   <url>
     <loc>https://karobben.github.io/2023/12/07/LearnNotes/h3n2na/</loc>
-    <lastmod>2023-12-12</lastmod>
+    <lastmod>2023-12-18</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2023/10/31/LearnNotes/immun/</loc>
+    <lastmod>2023-12-18</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2023/12/13/Bioinfor/cdhit/</loc>
+    <lastmod>2023-12-14</lastmod>
   </url>
   <url>
     <loc>https://karobben.github.io/2023/12/06/Bioinfor/pymol2pyvista/</loc>
@@ -25,16 +37,8 @@
     <lastmod>2023-12-07</lastmod>
   </url>
   <url>
-    <loc>https://karobben.github.io/2023/11/22/LearnNotes/panHA/</loc>
-    <lastmod>2023-12-07</lastmod>
-  </url>
-  <url>
     <loc>https://karobben.github.io/2020/07/28/Bioinfor/sratools/</loc>
     <lastmod>2023-11-29</lastmod>
-  </url>
-  <url>
-    <loc>https://karobben.github.io/2023/10/31/LearnNotes/immun/</loc>
-    <lastmod>2023-11-23</lastmod>
   </url>
   <url>
     <loc>https://karobben.github.io/2020/06/23/Linux/github/</loc>
@@ -1646,10 +1650,6 @@
   </url>
   <url>
     <loc>https://karobben.github.io/2020/08/22/LearnNotes/Ted2-Selfdecipline/</loc>
-    <lastmod>2023-06-06</lastmod>
-  </url>
-  <url>
-    <loc>https://karobben.github.io/2020/09/22/LearnNotes/bdt_ts/</loc>
     <lastmod>2023-06-06</lastmod>
   </url>
   <url>
