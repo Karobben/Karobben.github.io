@@ -5,7 +5,7 @@ url: grep2
 date: 2020/06/26
 toc: true
 excerpt: "grep is a command-line utility for searching plain-text data sets for lines that match a regular expression. Its name comes from the ed command g/re/p, which has the same effect."
-tags: [Linux, grep, bash]
+tags: [Linux, awk/sed/grep, bash]
 category: [Linux, Bash, awk/grep/sed]
 cover: 'https://tse3-mm.cn.bing.net/th/id/OIP.QohK_-okTvuh7r82wJlhNAHaE9?w=465&h=180'
 thumbnail: 'https://tse3-mm.cn.bing.net/th/id/OIP.QohK_-okTvuh7r82wJlhNAHaE9?w=180&h=180'

@@ -24,6 +24,8 @@ There are some dependency problems. So, conda would be the easist way to get thi
 conda install -c bioconda sra-tools
 ```
 
+I tried it at 2023/11/29. It could download 2.8 automatically but `prefetch` ==doesn't work==. So, please use the way below.
+
 Or download and configure
 
 ```bash
@@ -62,3 +64,4 @@ fastq-dump --defline-seq '@$sn[_$rn]/$ri' --split-files file.sra
 
 Trinity --seqType fq --max_memory 55G --single Seq.fastq --CPU 8 --full_cleanup
 ```
+

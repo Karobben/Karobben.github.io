@@ -5,7 +5,7 @@ url: mirna_pip
 date: "2020/07/28"
 toc: true
 excerpt: "An standard pipeline for miRNA-Seq data processing. "
-tags: [Software, miRNA-Seq, Protocol]
+tags: [Software, miRNA-Seq, NGS, Protocol]
 category: [Biology, Bioinformatics, Protocol, miRNA]
 cover: 'https://tse3-mm.cn.bing.net/th/id/OIP.pg0lLEEeNeiUp31DPMKtRwHaCY'
 thumbnail: 'https://tse3-mm.cn.bing.net/th/id/OIP.pg0lLEEeNeiUp31DPMKtRwHaCY'

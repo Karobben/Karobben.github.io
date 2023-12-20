@@ -46,6 +46,27 @@ git push -u IO master
 git config http.postBuffer 524288000
 ```
 
+## ignore files
+
+Cite: [Git-scm](https://git-scm.com/docs/gitignore)
+
+the name of the file: `.gitignore` should keep in the home directory rather than the `.git` directory
+
+```txt
+$ cat .gitignore
+# exclude everything except directory foo/bar
+/*
+!/foo
+/foo/*
+!/foo/bar
+```
+
+- An optional prefix "!" which negates the pattern; any matching file excluded by a previous pattern will become included again. It is not possible to re-include a file if a parent directory of that file is excluded.
+- An asterisk "*" matches anything except a slash. 
+- A trailing "/**" matches everything inside. For example, "abc/**" matches all files inside directory "abc", relative to the location of the .gitignore file, with infinite depth.
+- A slash followed by two consecutive asterisks then a slash matches zero or more directories. For example, "a/**/b" matches "a/b", "a/x/b", "a/x/y/b" and so on.
+
+
 
 ## Delete large files
 
@@ -62,6 +83,13 @@ git commit --amend -CHEAD
 git push
 # Push our rewritten, smaller commit
 ``` 
+
+Another way to solve the same problem
+
+[© Clark McCauley; 2022](https://stackoverflow.com/questions/19573031/cant-push-to-github-because-of-large-file-which-i-already-deleted)
+```bash
+git filter-branch --index-filter 'git rm -r --cached --ignore-unmatch <file/dir>' HEAD
+```
 
 ## Git push with ssh
 

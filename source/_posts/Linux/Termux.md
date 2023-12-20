@@ -5,7 +5,7 @@ url: termux
 date: 2021/05/19
 toc: true
 excerpt: "Termux Termux is an Android terminal emulator and Linux environment app that works directly with no rooting or setup required. A minimal base system is installed automatically - additional packages are available using the APT package manager. Read the wiki to learn more..."
-tags: [Linux]
+tags: [Linux, Android]
 category: [Linux, Termux]
 cover: 'https://descargarparapc.club/wp-content/uploads/2020/06/termux.jpg'
 thumbnail: 'https://descargarparapc.club/wp-content/uploads/2020/06/termux.jpg'

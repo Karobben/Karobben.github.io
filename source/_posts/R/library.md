@@ -16,9 +16,12 @@ priority: 10000
 
 ## library prepare
 
+
+
 ```bash
 # for unit and sf
-sudo apt install libudunits2-dev
+# cite: https://stackoverflow.com/questions/61733376/r-rgdal-install-fails-on-ubuntu-20-04-with-error-double-red-or-corruption-prev
+sudo apt install libudunits2-dev libspatialite-dev 
 ```
 
 ## Packages from Cran

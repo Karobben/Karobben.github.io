@@ -5,7 +5,7 @@ url: qiime2
 date: 2020/07/28
 toc: true
 excerpt: "I didn't update this post..."
-tags: [Software, Bioinformatics, MateGenome]
+tags: [Software, Bioinformatics, NGS, MateGenome]
 category: [Biology, Bioinformatics, Software]
 cover: 'https://tse3-mm.cn.bing.net/th/id/OIP.pg0lLEEeNeiUp31DPMKtRwHaCY'
 thumbnail: 'https://tse3-mm.cn.bing.net/th/id/OIP.pg0lLEEeNeiUp31DPMKtRwHaCY'

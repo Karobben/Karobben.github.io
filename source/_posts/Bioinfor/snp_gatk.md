@@ -5,7 +5,7 @@ url: snp_gatk
 date: "2020/07/28"
 toc: true
 excerpt: "Denove Prokaryotic Genome with Spader"
-tags: [Software, SNP, Protocol, GATK, Bioinformatics]
+tags: [Software, SNP, Protocol, GATK, NGS, Bioinformatics]
 category: [Biology, Bioinformatics, Protocol, SNP]
 cover: 'https://tse3-mm.cn.bing.net/th/id/OIP.pg0lLEEeNeiUp31DPMKtRwHaCY'
 thumbnail: 'https://tse3-mm.cn.bing.net/th/id/OIP.pg0lLEEeNeiUp31DPMKtRwHaCY'

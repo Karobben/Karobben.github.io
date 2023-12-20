@@ -5,7 +5,7 @@ url: trinity_rna_seq
 date: 2020/07/28
 toc: true
 excerpt: "I didn't update this post..."
-tags: [Software, Bioinformatics, RNA-Seq, Trinity]
+tags: [Software, Bioinformatics, NGS, RNA-Seq, Trinity]
 category: [Biology, Bioinformatics, Protocol, RNA-Seq]
 cover: 'https://s1.ax1x.com/2020/06/26/Nro4d1.png'
 thumbnail: 'https://s1.ax1x.com/2020/06/26/Nro4d1.png'

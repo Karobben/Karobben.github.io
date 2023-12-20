@@ -23,8 +23,8 @@ priority: 10000
 
 ```r
 ## install ggbioplot
-##install_github("vqv/ggbiplot")
-##install.packages('plyr')
+## remotes::install_github("vqv/ggbiplot")
+## install.packages('plyr')
 
 library(plyr)
 library(ggbiplot)
@@ -79,20 +79,24 @@ varname.abbrev # 标签是否缩写
 ```r
 library(psych)
 library(ggplot2)
+
+# calculate PCA
 PC <- principal(wine, nfactors=2, rotate ="none")
 pc <- data.frame(PC$scores)
-p  <- ggplot(pc, aes(x=PC1, y=PC2,color=wine.class )) +
-  geom_point(size=4,alpha=0.5)+
-  theme(axis.text= element_text(size=20))+
-  theme(panel.grid.major =element_blank(),
-        panel.grid.minor = element_line(color="steelblue"),
-        panel.background = element_blank(),
-        axis.line = element_line(colour = "black"))+
-  stat_ellipse(lwd=1,level = 0.8)
+
+# calculate the location of labels
+Label_pos <- aggregate(cbind(PC1, PC2) ~ wine.class, data=pc, FUN=median)
+
+# Plot the PCA scatter graph
+ggplot(pc, aes(x=PC1, y=PC2,color=wine.class )) + 
+    geom_point(size=4,alpha=0.5)+ theme_light() +  
+    geom_label(data = Label_pos, aes(label = wine.class), alpha = .3)+ 
+    stat_ellipse(lwd=1,level = 0.95, alpha= .8, linetype = 4)
 ```
 
 
-![Nlb7ZR.png](https://s1.ax1x.com/2020/06/20/Nlb7ZR.png)
+|![PCA plot](https://z1.ax1x.com/2023/10/05/pPOv6mR.png)|
+|:-:|
 
 <a name="wsYAL"></a>
 ### 3 qplot

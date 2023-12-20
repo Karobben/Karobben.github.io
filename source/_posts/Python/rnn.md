@@ -1,7 +1,7 @@
 ---
 toc: true
 url: rnn
-covercopy: <a href="https://developer.nvidia.com/discover/recurrent-neural-network">© NVIDIA</a>
+covercopy: <a href='https://www.simplilearn.com/tutorials/deep-learning-tutorial/rnn'>© simplilearn.com Parmar</a>
 priority: 10000
 date: 2023-05-02 10:17:32
 title: RNN, Recurrent Neural Network
@@ -10,8 +10,8 @@ description: RNN, Recurrent Neural Network
 excerpt: "A Recurrent Neural Network (RNN) is a class of artificial neural network that has memory or feedback loops that allow it to better recognize patterns in data. RNNs are an extension of regular artificial neural networks that add connections feeding the hidden layers of the neural network back into themselves - these are called recurrent connections. The recurrent connections provide a recurrent network with visibility of not just the current data sample it has been provided, but also it's previous hidden state. A recurrent network with a feedback loop can be visualized as multiple copies of a neural network, with the output of one serving as an input to the next. Unlike traditional neural networks, recurrent nets use their understanding of past events to process the input vector rather than starting from scratch every time. (© 2023 NVIDIA Corporation)"
 tags: [Python, Data, Machine Learning, RNN]
 category: [Python, Data, Machine Learning, RNN]
-cover: "https://developer.nvidia.com/sites/default/files/pictures/2018/recurrentneuralnetwork.png"
-thumbnail: "https://developer.nvidia.com/sites/default/files/pictures/2018/recurrentneuralnetwork.png"
+cover: "https://www.simplilearn.com/ice9/free_resources_article_thumb/Simple_Recurrent_Neural_Network.png"
+thumbnail: "https://www.simplilearn.com/ice9/free_resources_article_thumb/Simple_Recurrent_Neural_Network.png"
 ---
 
 ## RNN, Recurrent Neural Network

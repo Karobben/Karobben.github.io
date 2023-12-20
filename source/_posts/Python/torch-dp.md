@@ -8,7 +8,7 @@ title: "torch: Start with Deep Learning"
 ytitle: "torch: Start with Deep Learning"
 description: "torch: Start with Deep Learning"
 excerpt: "torch: Start with Deep Learning"
-tags: [torch, Deep Learning, Machine Learning, AI]
+tags: [torch, Deep Learning, Machine Learning]
 category: [Python, Data, Machine Learning, Deep Learning]
 cover: "https://miro.medium.com/v2/1*N8UXaiUKWurFLdmEhEHiWg.jpeg"
 thumbnail: "https://miro.medium.com/v2/1*N8UXaiUKWurFLdmEhEHiWg.jpeg"

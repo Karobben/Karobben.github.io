@@ -8,8 +8,10 @@ title: "Integrins Form an Expanding Diffusional Barrier that Coordinates Phagocy
 ytitle: "Integrins Form an Expanding Diffusional Barrier that Coordinates Phagocytosis"
 description: "Integrins Form an Expanding Diffusional Barrier that Coordinates Phagocytosis"
 excerpt: "Integrins Form an Expanding Diffusional Barrier that Coordinates Phagocytosis"
-tags: [Papers, Immune]
-category: [Paper, Biology, Immune]
+tags: [Papers, 
+Immunology]
+category: [Paper, Biology, 
+Immunology]
 cover: "https://www.ncbi.nlm.nih.gov/pmc/articles/instance/4715264/bin/nihms741302f3.jpg"
 thumbnail: "https://z3.ax1x.com/2021/10/18/5a26Ve.png"
 ---

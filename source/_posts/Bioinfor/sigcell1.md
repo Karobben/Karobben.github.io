@@ -8,8 +8,8 @@ title: "Single cell RNA-Seq Practice: Seurat"
 ytitle: "scRNA-Seq 数据分析练习"
 description: "Bioinformatics: scRNA-seq data processing practices, protocol from seurat"
 excerpt: "Bioinformatics: scRNA-seq data processing practices, protocol from seurat"
-tags: [Bioinformatics, RNA-Seq, scRNA-Seq]
-category:
+tags: [Bioinformatics, RNA-Seq, NGS, scRNA-Seq]
+category: [Biology, Bioinformatics, Single Cell]
 cover: "https://z3.ax1x.com/2021/10/31/IpH7j0.png"
 thumbnail: "https://d33wubrfki0l68.cloudfront.net/abc16e23a8293f1b0961651473861345c5a019b8/92ccd/img/icons/network.svg"
 ---
@@ -175,7 +175,7 @@ dim(pbmc)
 
 ## Data Normalization
 
-> By default, we employ a global-scaling normalization method “LogNormalize” that normalizes the feature expression measurements for each cell by the total expression, multiplies this by a scale factor (10,000 by default), and log-transforms the result. Normalized values are stored in pbmc[["RNA"]]@data.
+By default, we employ a global-scaling normalization method “LogNormalize” that normalizes the feature expression measurements for each cell by the total expression, multiplies this by a scale factor (10,000 by default), and log-transforms the result. Normalized values are stored in pbmc[["RNA"]]@data.
 
 ```r
 # pbmc <- NormalizeData(pbmc, normalization.method = "LogNormalize", scale.factor = 10000)
@@ -188,6 +188,8 @@ Performing log-normalization
 [----|----|----|----|----|----|----|----|----|----|
 **************************************************|
 </pre>
+
+
 
 ## Identify of highly variable features (feature selection)
 
@@ -224,11 +226,29 @@ pbmc <- ScaleData(pbmc, features = all.genes)
 
 ```
 
+## Why The order of the Normalization → Variable Finding → Scaling matters
+
+1. **Normalization**: This step is necessary to account for differences in sequencing depth across cells. ==Without normalization, cells with more total reads would dominate any downstream analysis.==
+
+2. **Finding Variable Features**: The primary goal of this step is to identify genes that vary ==significantly across cells==, as these genes can be **informative** for <u>clustering or other downstream analyses</u>. If you scale the data before this step, you would be artificially ==inflating the variance of lowly expressed genes and diminishing the variance of highly expressed ones==, which might impact the accuracy of variable feature detection.
+
+3. **Scaling**: Scaling is performed on the variable features to ensure that they have a ==mean of 0== and a ==standard deviation of 1==. This step is crucial for ==dimensionality reduction== techniques like PCA, where you don't want the magnitude of gene expression values to influence the results. If a gene has a high magnitude of expression (let's say in the thousands) compared to another gene (with values in the tens), without scaling, the gene with higher magnitude values would disproportionately influence the PCA, even if its variance across cells is not particularly informative.
+
+The reason `ScaleData` is performed after `FindVariableFeatures` is to ensure that the detection of variable features is based on the actual biological variance in the data, not on the artificial variance introduced by scaling. Once variable features are identified based on their true variance, then we scale them so that no ==single gene dominates== the downstream analyses due to its magnitude.
+
+In simpler terms:
+- We want to identify variable features based on "real" biological differences, not differences introduced by scaling.
+- Once we've identified the truly variable features, we scale them so that each has an equal opportunity to influence downstream analyses like PCA or clustering, regardless of its absolute expression level.
+
+Scaling before identifying variable features might lead to a situation where genes that aren't truly variable (in a biological sense) are given undue importance in the analysis.
+
+
+
 
 ## Perform linear dimensional reduction
 
 ```r
-pbmc <- RunPCA(pbmc, features = VariableFeatures(object = pbmc)
+pbmc <- RunPCA(pbmc, features = VariableFeatures(object = pbmc))
 # Examine and visualize PCA results a few different ways
 print(pbmc[["pca"]], dims = 1:5, nfeatures = 5)
 ```

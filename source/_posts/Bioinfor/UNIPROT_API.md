@@ -5,7 +5,7 @@ url: uniprot_api2
 date: 2020/06/03
 toc: true
 excerpt: "Uniprot api for R"
-tags: [Bioinformatic, Uniprot, R, Python, api, Database]
+tags: [Bioinformatic, Protein, R, Python, api, Database]
 category: [Biology, Bioinformatics, Database]
 cover: 'https://www.uniprot.org/uniprot-logo.img.0df091.svg'
 thumbnail: 'https://www.uniprot.org/uniprot-logo.img.0df091.svg'

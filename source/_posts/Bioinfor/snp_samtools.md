@@ -5,7 +5,7 @@ url: snp_samtools
 date: "2020/07/28"
 toc: true
 excerpt: "SNP Calling: samtools"
-tags: [Software, SNP, Bioinformatics]
+tags: [Software, SNP, NGS, Bioinformatics]
 category: [Biology, Bioinformatics, Protocol, SNP]
 cover: 'https://tse3-mm.cn.bing.net/th/id/OIP.pg0lLEEeNeiUp31DPMKtRwHaCY'
 thumbnail: 'https://tse3-mm.cn.bing.net/th/id/OIP.pg0lLEEeNeiUp31DPMKtRwHaCY'

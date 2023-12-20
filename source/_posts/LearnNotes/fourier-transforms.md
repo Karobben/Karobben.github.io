@@ -8,7 +8,7 @@ title: "Fourier Transforms"
 ytitle: "傅立叶几何变换"
 description: "Fourier Transforms"
 excerpt: "Fourier Transforms"
-tags: [math]
+tags: [Data Science]
 category: [Notes, Statistic, others]
 cover: "https://i1.wp.com/aavos.eu/wp-content/uploads/2017/11/Fourier-transform.gif?fit=900%2C522&ssl=1"
 thumbnail: "https://i1.wp.com/aavos.eu/wp-content/uploads/2017/11/Fourier-transform.gif?fit=900%2C522&ssl=1"

@@ -5,13 +5,13 @@ url: fasta_counts
 date: 2020/08/04
 toc: true
 excerpt: "Delete low maped reads from count or expression matrix"
-tags: [Plot, RNA-seq]
+tags: [Plot, RNA-Seq, QC]
 category: [R, Bio, DEG]
 cover: 'https://i.loli.net/2020/06/10/Chmd1WI8z3TFjfX.png'
 thumbnail: 'https://i.loli.net/2020/06/10/Chmd1WI8z3TFjfX.png'
 priority: 10000
 ---
-## 刪除第map的reads
+## 刪除低map的reads
 
 ## 1. 讀取counts文件並篩選
 
@@ -49,7 +49,7 @@ ggplot(A[c("ID2","Sum")])+ geom_density(aes(x=Sum)) + xlim(c(0,25)) + theme_line
 A_sub = A[which(A$Sum>10),]
 paste(round((nrow(A_sub)/nrow(A))*100,2),"%",sep="")
 ```
-可知， 剩餘`"52.86%%"`的reads被保存了
+可知， 剩餘`"52.86%"`的reads被保存了
 
 輸出ID：
 ```r

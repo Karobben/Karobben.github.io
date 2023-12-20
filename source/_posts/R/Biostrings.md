@@ -4,9 +4,9 @@ url: biostrings2
 date: 2020/05/01
 excerpt: "R library for fasta sequences handling."
 toc: true
-tags: [R, Bioinformatics, NGS]
+tags: [R, Bioinformatics, NGS, Fasta]
 category: [R, Bio, Fasta]
-cover: 'https://www.r-project.org/Rlogo.png'
+cover: 'https://imgur.com/JsTmbyM.png'
 thumbnail: 'https://www.r-project.org/Rlogo.png'
 priority: 10000
 ---
@@ -46,9 +46,78 @@ A <-readDNAStringSet('predict.coding.fa.transdecoder.pep.sel.fa')
 head(DNAStringSet(A))
 ```
 
-```
+<pre>
   width seq names               
 [1]   604 ASSVASTASSAHHHASAASTGTV...  TRINITY_DN100000_...
 [2]   616 MDYMDSGRYTKSDKDWDTNVASD...  TRINITY_DN100001_...
 [3]   157 SRAKKVKKDSKKGGGGGGGGSSW...  TRINITY_DN100002_...
+</pre>
+
+
+## Get the Distance Matrix from the Tree
+
+[Raw post](https://yulab-smu.top/treedata-book/chapter13.html?q=distance%20matrix)
+
+```bash
+library(TDbook) # example data
+library(Biostrings)
+
+tree <- tree_HPV58
+
+
+tl <- tree$tip.label
+acc <- sub("\\w+\\|", "", tl)
+names(tl) <- acc
+
+tipseq <- ape::read.GenBank(acc) %>% as.character %>% 
+    lapply(., paste0, collapse = "") %>% unlist %>% 
+    Biostrings::DNAStringSet
+
+tipseq_aln <- muscle::muscle(tipseq)
+tipseq_aln <- DNAStringSet(tipseq_aln)
+
+tipseq_dist <- stringDist(tipseq_aln, method = "hamming")
+as.matrix(tipseq_dist)[1:5, 1:5]
 ```
+
+|           | FJ385264 | D90400 | FJ385265 | FJ385263 | FJ385261 |
+|-----------|----------|--------|----------|----------|----------|
+| FJ385264  |        0 |     15 |       16 |       18 |       20 |
+| D90400    |       15 |      0 |        7 |        7 |        9 |
+| FJ385265  |       16 |      7 |        0 |        8 |       12 |
+| FJ385263  |       18 |      7 |        8 |        0 |       12 |
+| FJ385261  |       20 |      9 |       12 |       12 |        0 |
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style>
+pre {
+  background-color:#38393d;
+  color: #5fd381;
+}
+</style>

@@ -252,9 +252,6 @@ widgets:
             #Dribbble:
             #    icon: fab fa-dribbble
             #    url: 'https://dribbble.com'
-            Bilibili:
-                icon: fas fa-video
-                url: 'https://space.bilibili.com/393056819'
             RSS:
                 icon: fas fa-rss
                 url: 'atom.xml'
@@ -316,7 +313,6 @@ widgets:
         type: links
         # Names and URLs of the sites
         links:
-            Bilibili: 'https://space.bilibili.com/393056819'
             卖萌哥:    'https://www.jianshu.com/u/77fc519c6fa2'
 
 

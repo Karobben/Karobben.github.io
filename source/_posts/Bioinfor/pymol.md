@@ -8,8 +8,8 @@ title: "Pymol: the best protein structure viewer"
 ytitle: "Pymol"
 description: 'Pymol: the best protein structure viewer'
 excerpt: "Pymol: the best protein structure viewer"
-tags: [Software]
-category: [Biology, Bioinformatics, Software]
+tags: [Software, Protein, PyMol]
+category: [Biology, Bioinformatics, Protein Structure]
 cover: "https://pymol.org/2/img/screenshot2.png"
 thumbnail: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/PyMOL_logo.svg/64px-PyMOL_logo.svg.png"
 ---
@@ -47,6 +47,46 @@ remove resn hoh
 remove solvent
 ```
 
+## Get informations
+
+### Chain information
+
+```bash
+get_chains 4fqi
+```
+
+<pre>
+ cmd.get_chains:  ['A', 'B', 'C', 'H', 'L']
+PyMOL>replace C,4,4
+</pre>
+
+
+## Object manipulation  
+
+### movement
+```bash
+rotate y,-.2, 4fqh
+rotate x,-.2, 4fqh
+rotate z,-.2, 4fqh
+```
+
+### hide chain
+
+```bash
+hide representation [,object]
+hide representation [,(selection)]
+hide (selection)
+```
+
+### Show Chain
+
+```bash
+show cartoon, Mos99 and chain A chain B
+```
+
+## Colors for Pymol
+
+pymolwiki: [Colors for Pymol](https://pymolwiki.org/index.php/Color_Values)
 
 ## Strcture align
 
