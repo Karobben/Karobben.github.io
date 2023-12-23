@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://karobben.github.io/2023/12/21/Bioinfor/igblast/</loc>
+    <lastmod>2023-12-22</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2020/07/28/Bioinfor/blast/</loc>
+    <lastmod>2023-12-22</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2023/12/21/Bioinfor/scvdj-seq/</loc>
+    <lastmod>2023-12-21</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2021/10/31/Bioinfor/sigcellnote1/</loc>
+    <lastmod>2023-12-21</lastmod>
+  </url>
+  <url>
     <loc>https://karobben.github.io/2023/12/18/Bioinfor/phylogenetic/</loc>
     <lastmod>2023-12-20</lastmod>
   </url>
@@ -62,10 +78,6 @@
   </url>
   <url>
     <loc>https://karobben.github.io/2022/11/07/Bioinfor/alternative-splicing/</loc>
-    <lastmod>2023-12-19</lastmod>
-  </url>
-  <url>
-    <loc>https://karobben.github.io/2021/10/31/Bioinfor/sigcellnote1/</loc>
     <lastmod>2023-12-19</lastmod>
   </url>
   <url>
@@ -1986,10 +1998,6 @@
   </url>
   <url>
     <loc>https://karobben.github.io/2021/10/22/Bioinfor/biopython-seq2tree/</loc>
-    <lastmod>2023-06-06</lastmod>
-  </url>
-  <url>
-    <loc>https://karobben.github.io/2020/07/28/Bioinfor/blast/</loc>
     <lastmod>2023-06-06</lastmod>
   </url>
   <url>
