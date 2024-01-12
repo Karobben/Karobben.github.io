@@ -128,15 +128,8 @@ In summary, Molecular Identifiers and Template Switch Oligos are integral to the
 
 
 
+|![](https://imgur.com/uarbCYv.png)|
+|:-:|
+|5ʹ Gene Expression (GEX) Library Construction|
 
-|![](https://imgur.com/PxRTphj.png)|![](https://imgur.com/uarbCYv.png)|
-|:-:|:-:|
-|V(D)J Library Construction|5ʹ Gene Expression (GEX) Library Construction|
 
-1. <font style="background-color: red">V</font> (Variable): These are gene segments that code for the variable region of an antibody or T-cell receptor. The variable region is responsible for binding to antigens.
-
-2. <font style="background-color: gold">D</font> (Diversity): These segments are found in some classes of antibodies and in T-cell receptors. They provide an additional level of diversity to the antigen-binding region.
-
-3. <font style="background-color: green">J</font> (Joining): These gene segments join with the V (and D, where present) segments to complete the variable region of the receptor.
-
-4. <font style="background-color: royalblue">C</font> (Constant): The constant region of the antibody or T-cell receptor is encoded by these segments. This region does not vary much between different antibodies and is responsible for the effector functions of the antibody, such as recruiting other parts of the immune system.

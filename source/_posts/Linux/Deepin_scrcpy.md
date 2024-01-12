@@ -5,7 +5,7 @@ url: scrcpy2
 date: 2020/06/26
 toc: true
 excerpt: "This application provides display and control of Android devices connected on USB (or over TCP/IP). It does not require any root access. It works on GNU/Linux, Windows and macOS."
-tags: [Linux, Software, bash]
+tags: [Linux, Scripting, bash, CLI Tools]
 category: [Linux, Software]
 cover: 'https://s1.ax1x.com/2020/06/26/NsEzKe.png'
 thumbnail: 'https://s1.ax1x.com/2020/06/26/NsEzKe.png'

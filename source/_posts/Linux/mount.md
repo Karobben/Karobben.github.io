@@ -8,7 +8,7 @@ title: "Disk Mount and Manage in Linux"
 ytitle: "Disk Mount and Manage in Linux"
 description: "Disk Mount and Manage in Linux"
 excerpt: "Disk mount in Linux refers to the process of making a file system available for the operating system to access on a particular directory. This is done by mounting the file system on a directory, which makes it accessible to the system and its users. <a title='GhatGPT'>Who said this?</a>"
-tags: [Linux, Disk, System]
+tags: [Linux, Scripting, bash, CLI Tools, Disk, System]
 category: [Linux, System]
 cover: "https://cdn.pixabay.com/photo/2015/01/22/07/03/hard-drive-607461_1280.jpg"
 thumbnail: "https://cdn.pixabay.com/photo/2015/01/22/07/03/hard-drive-607461_1280.jpg"

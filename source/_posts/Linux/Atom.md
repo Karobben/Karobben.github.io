@@ -5,7 +5,7 @@ url: atom2
 date: 2020/06/26
 toc: true
 excerpt: "Atom install, packages install. Some awesome packages for atom"
-tags: [Linux, Software, IDE]
+tags: [Linux]
 category: [Linux, Software]
 cover: 'https://s1.ax1x.com/2020/06/26/NsA2lD.png'
 thumbnail: 'https://s1.ax1x.com/2020/06/26/NsA2lD.png'

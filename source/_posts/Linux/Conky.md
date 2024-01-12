@@ -5,7 +5,7 @@ url: conky
 date: 2020/06/23
 toc: true
 excerpt: "Conky is a free software desktop system monitor for the X Window System. It is available for Linux, FreeBSD, and OpenBSD. Conky is highly configurable and is able to monitor many system variables including the status of the CPU, memory, swap space, disk storage, temperatures, processes, network interfaces, battery power, system messages, e-mail inboxes, Arch Linux updates, many popular music players, weather updates, breaking news, and much more. Unlike system monitors that use high-level widget toolkits to render their information, Conky is drawn directly in an X window. This allows it to be configured such that it consumes relatively few system resources."
-tags: [Linux, Desktop, Conky]
+tags: [Linux, System, Conky]
 category: [Linux, 'Monitor: top\Conky']
 cover: 'https://s1.ax1x.com/2020/06/26/NsAq1S.jpg?w=480&h=180'
 thumbnail: 'https://s1.ax1x.com/2020/06/26/NsAq1S.jpg?w=480&h=180'

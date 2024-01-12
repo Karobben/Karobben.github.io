@@ -8,7 +8,7 @@ title: "Linux Bluetooth Trouble Shoot"
 ytitle: "Linux 蓝牙问题"
 description: "Bluetooth is a bit odd. There are a lot of factors that go into whether Bluetooth devices work together as expected."
 excerpt: "Bluetooth is a bit odd. There are a lot of factors that go into whether Bluetooth devices work together as expected."
-tags: [Linux]
+tags: [Linux, System]
 category: [Linux]
 cover: "https://s1.ax1x.com/2022/05/28/XnaoSP.png"
 thumbnail: "https://s1.ax1x.com/2022/05/28/XnaoSP.png"

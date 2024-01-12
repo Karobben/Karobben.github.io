@@ -5,7 +5,7 @@ date: "2020-07-30"
 url: hexo_live2d
 toc: true
 excerpt: "hexo live2d|給博客加一個板娘"
-tags: [Hexo, live2d]
+tags: [Hexo]
 category: [others, Blog, Hexo]
 cover: 'https://s1.ax1x.com/2020/07/30/amxSmQ.png'
 thumbnail: 'https://s1.ax1x.com/2020/07/30/amxSmQ.png'

@@ -5,7 +5,7 @@ url: gtop2
 date: 2020/06/23
 toc: true
 excerpt: "gotop is a terminal-based (TUI) system monitor for Linux and macOS. The software is inspired by gtop and vtop, but while these 2 utilities use Node.js, gotop is written in Go. The command line tool supports mouse clicking and scrolling, comes with vi-keys, and it displays the CPU, memory and network usage history using colored graphs, while also displaying their current values."
-tags: [Linux, Deepin,  Software, System]
+tags: [Deepin, System, Linux, Scripting, bash, CLI Tools]
 category: [Linux, 'Monitor: top\Conky']
 cover: 'https://s1.ax1x.com/2020/06/26/NsElcD.gif'
 thumbnail: 'https://s1.ax1x.com/2020/06/26/NsElcD.gif'

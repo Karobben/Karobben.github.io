@@ -8,7 +8,7 @@ title: "Slurm Workload Manager"
 ytitle: "Slurm 工作调度工具"
 description: "slurm, sbatch"
 excerpt: "SLURM (Simple Linux Utility for Resource Management) is an open-source, highly scalable, and highly customizable cluster management and job scheduling system. It is widely used for managing high-performance computing (HPC) systems, allowing users to efficiently allocate resources, manage workloads, and monitor job progress. SLURM provides a simple and flexible interface for submitting, scheduling, and managing large-scale computing jobs, making it a popular choice for researchers, engineers, and other HPC users. <a title='ChatGPT'>Who sad this?</a>"
-tags: [Linux, System]
+tags: [Linux, System, Scripting, bash, CLI Tools]
 category: [Linux, System]
 cover: "https://storage.googleapis.com/gweb-cloudblog-publish/images/slurm.max-900x900.jpg"
 thumbnail: "https://storage.googleapis.com/gweb-cloudblog-publish/images/slurm.max-900x900.jpg"

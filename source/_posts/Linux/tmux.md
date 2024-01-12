@@ -5,7 +5,7 @@ url: tmux2
 date: 2020/06/26
 toc: true
 excerpt: "Termux Termux is an Android terminal emulator and Linux environment app that works directly with no rooting or setup required. A minimal base system is installed automatically - additional packages are available using the APT package manager. Read the wiki to learn more..."
-tags: [Linux]
+tags: [Linux, CLI Tools]
 category: [Linux, others]
 cover: 'https://s1.ax1x.com/2020/06/26/NsmGxf.png'
 thumbnail: 'https://s1.ax1x.com/2020/06/26/NsmGxf.png'

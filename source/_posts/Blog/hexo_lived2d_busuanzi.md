@@ -5,7 +5,7 @@ date: "2021-02-21"
 url: hexo_live2d_busuanzi
 toc: true
 excerpt: "Sometimes, the busuanzi works, but sometimes it doesn't work. By checking the code, we can find that the script runs well but it was hidden for some reason."
-tags: [Hexo, live2d, busuanzi]
+tags: [Hexo, HTML]
 category: [others, Blog, Hexo]
 cover: 'https://s1.ax1x.com/2020/07/30/amxSmQ.png'
 thumbnail: 'https://s1.ax1x.com/2020/07/30/amxSmQ.png'

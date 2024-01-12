@@ -20,6 +20,14 @@ priority: 10000
 
 ## Install
 
+### By Bioconda
+
+```bash
+conda install -c bioconda transdecoder 
+```
+
+### Build from Source
+
 Downloading the file and make a test (16M)
 ```bash
 wget -c https://github.com/TransDecoder/TransDecoder/archive/TransDecoder-v5.5.0.tar.gz
@@ -57,21 +65,14 @@ Now, you can ENJOY the TransDecoder.
 ## Running TransDecoder
 
 Preparing a fasta file as `HitMe.fa`
-### 1 Extract the long open reading frames
+
+### Extract the long open reading frames
+
 ```bash
 TransDecoder.LongOrfs -t HitMe.fa
 ```
 
-
-
-
-
-
-
-
-
-
-
+The result should be the `longest_orfs.pep`
 
 
 ## Debug  

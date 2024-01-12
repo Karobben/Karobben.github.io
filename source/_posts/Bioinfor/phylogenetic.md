@@ -60,7 +60,9 @@ A distance matrix in phylogenetics is a tool to quantify and visualize the genet
 |![](https://upload.wikimedia.org/wikipedia/commons/8/80/Additive_distance_matrix.png)|
 |:-:|
 |[© academic accelerator](https://academic-accelerator.com/encyclopedia/distance-matrix)|
-|This graph illustrates the distance matrix and how it gives sense to the phylogenetic tree. According to the tree, the distance between **b** and **c** is 1+2=3. Similarly, we can deduce from the tree that the distance between **a** and **d** is 4+4+1=9.|
+
+!!! note How to make the sense of the  dendrogram?
+    This graph illustrates the distance matrix and how it gives sense to the phylogenetic tree. According to the tree, the distance between **b** and **c** is 1+2=3. Similarly, we can deduce from the tree that the distance between **a** and **d** is 4+4+1=9.
 
 
 ### Methods for Calculating the Distance Matrix (GPT4)
@@ -178,6 +180,139 @@ The popularity and suitability of the Neighbor-Joining (NJ) and Maximum Likeliho
 ### Conclusion
 
 The choice between NJ and ML largely depends on the specific requirements of your phylogenetic analysis. For preliminary or rapid analyses with large datasets, NJ remains popular due to its speed. However, for in-depth studies where accuracy and model-based statistical rigor are crucial, ML is often considered superior, albeit at the cost of greater computational demand. With ongoing advancements in computational methods and resources, ML is becoming increasingly accessible and popular in phylogenetic studies.
+
+## Maximum Likelihood
+
+Maximum Likelihood (ML) is a statistical method used in the construction of phylogenetic trees, which represent the evolutionary relationships among various species or genetic sequences. This method is based on the principle of finding the tree topology (i.e., the arrangement of branches and nodes) that has the highest probability of producing the observed set of genetic data. Here's a simplified explanation of how it works:
+
+1. **Model of Sequence Evolution**: ML requires a model of sequence evolution. This model includes parameters such as the rates of different types of mutations (e.g., transitions and transversions in nucleotide sequences), the frequency of each nucleotide or amino acid, and potentially other factors like the rate at which different parts of the sequence evolve. These models attempt to approximate the real biological processes that lead to changes in genetic sequences over time.
+
+2. **Tree Topologies**: The algorithm considers different possible tree topologies. A topology is a specific arrangement of species or sequences on a tree, indicating how they are related to each other.
+
+3. **Calculating Likelihoods**: For each tree topology, the likelihood that the observed data (genetic sequences of the species or taxa being studied) would evolve according to the specified model is calculated. This involves complex computations where the algorithm assesses the probability of changes occurring along the branches of the tree to result in the observed sequences at the tree's tips (leaves).
+
+4. **Comparing Trees**: The likelihoods of different tree topologies are compared. The tree with the highest likelihood is considered the best estimate of the true evolutionary relationships among the sequences. This is because, under the chosen model, this tree would be the most likely to produce the observed data.
+
+5. **Optimization and Searching**: Because there are usually an extraordinarily large number of possible tree topologies (increasing exponentially with the number of sequences), it's impractical to evaluate every possible tree. Therefore, heuristic algorithms are used to search tree space efficiently, focusing on those areas where higher likelihood trees are more likely to be found.
+
+6. **Statistical Testing**: Often, statistical methods such as bootstrap analysis are used to test the reliability of the tree. This involves resampling the data and recalculating trees to see how often certain groupings appear, providing a measure of confidence in the tree's branches.
+
+Maximum Likelihood is favored for its statistical rigor and its ability to provide a clear criterion (likelihood) for choosing among trees. However, it is computationally intensive, especially for large datasets, and the results can be sensitive to the choice of the evolutionary model. Despite these challenges, ML remains a popular and powerful method in phylogenetic analysis.
+
+
+### A Simple Practice
+
+In this practice, we generated genetic data for two species and their common ancestor. We then used the Jukes-Cantor model to calculate the likelihood of the observed sequences given a tree topology and a mutation rate. Here's a summary of the process and results:
+
+- Generated Data: We created random genetic sequences for a common ancestor and two descendant species.
+- Jukes-Cantor Model: This model was used to estimate the likelihood of one sequence evolving into another under a uniform mutation rate.
+- Initial Likelihood Calculation: For the given tree topology (where the common ancestor is the parent of both species), we calculated the likelihood of this tree using a mutation rate of 0.1. The likelihood was found to be approximately 20.46.
+- Optimization: We used an optimization algorithm to find the mutation rate that maximizes the likelihood of the observed data given the tree structure. The optimal mutation rate was found to be 1.0.
+- Optimized Likelihood: Recalculating the likelihood with the optimized mutation rate, we obtained an improved likelihood of approximately 7.05.
+
+This demonstration shows how Maximum Likelihood is used in phylogenetics to find the most likely tree structure and parameters (like mutation rate) that explain the observed genetic data. In real-world scenarios, the data and models are much more complex, and the computations are more intensive, but the underlying principles remain the same. ​
+
+```python
+# Corrected implementation for demonstrating Maximum Likelihood in phylogenetics
+
+# Generate a simple example dataset with direct ancestor-descendant relationships
+np.random.seed(0)
+# Assume we have two species and their common ancestor
+data = {
+    "Common_Ancestor": np.random.choice(['A', 'T', 'G', 'C'], 10),
+    "Species_A": np.random.choice(['A', 'T', 'G', 'C'], 10),
+    "Species_B": np.random.choice(['A', 'T', 'G', 'C'], 10)
+}
+df = pd.DataFrame(data)
+print("Generated Genetic Data:\n", df)
+
+# Define a simple model of sequence evolution
+def jukes_cantor_model(seq1, seq2, mu):
+    """
+    Jukes-Cantor model to calculate the likelihood of seq2 evolving from seq1
+    under a uniform mutation rate mu.
+    """
+    diff = sum(c1 != c2 for c1, c2 in zip(seq1, seq2))
+    same = len(seq1) - diff
+    p_diff = 3/4 * (1 - np.exp(-4/3 * mu))
+    p_same = 1/4 + 1/4 * np.exp(-4/3 * mu)
+
+    likelihood = (p_diff ** diff) * (p_same ** same)
+    return likelihood
+
+# Function to calculate the likelihood of a tree given the data
+def tree_likelihood(tree, data, mu):
+    """
+    Calculate the likelihood of a given tree topology.
+    The tree is represented as a dictionary where keys are nodes and values are the sequences.
+    """
+    likelihood = 1.0
+    for parent, child in tree.items():
+        parent_seq = data[parent]
+        child_seq = data[child]
+        likelihood *= jukes_cantor_model(parent_seq, child_seq, mu)
+    return -log(likelihood)  # negative log-likelihood for optimization
+
+# Example tree topology (parent: child)
+tree_example = {
+    "Common_Ancestor": "Species_A",
+    "Common_Ancestor": "Species_B",
+}
+
+# Assume a mutation rate (mu)
+mu = 0.1
+
+# Calculate the likelihood of this tree
+likelihood = tree_likelihood(tree_example, df, mu)
+print("\nLikelihood of the tree:", likelihood)
+
+# Now we will use optimization to find the mutation rate that maximizes the likelihood
+def optimize_mu(mu, tree, data):
+    return tree_likelihood(tree, data, mu)
+
+result = minimize(optimize_mu, x0=mu, args=(tree_example, df), bounds=[(0.001, 1)])
+optimal_mu = result.x[0]
+print("\nOptimal mutation rate:", optimal_mu)
+
+# Recalculate the likelihood with the optimized mutation rate
+optimized_likelihood = tree_likelihood(tree_example, df, optimal_mu)
+print("\nOptimized likelihood of the tree:", optimized_likelihood)
+```
+
+<pre>
+Generated Genetic Data:
+   Common_Ancestor Species_A Species_B
+0               A         T         G
+1               C         G         C
+2               T         A         C
+3               A         C         G
+4               C         G         A
+5               C         A         T
+6               C         A         T
+7               C         A         T
+8               T         G         T
+9               C         T         A
+
+Likelihood of the tree: 20.463275567320334
+Optimal mutation rate: 1.0
+Optimized likelihood of the tree: 7.05394379820434
+</pre>
+
+### Things You'd Like to Know
+
+1. **Pairwise Comparisons**: In the ML approach, the focus is ==not typically on pairwise comparisons between sequences== (as it is in methods like distance matrix or neighbor-joining). Instead, ML ==evaluates the likelihood of entire tree topologies==. It looks at how likely it is for a given tree structure, with its branching pattern and lengths, to have produced the observed set of genetic sequences under a specific evolutionary model.
+
+2. **Likelihood Calculations**: For each possible tree topology, ML calculates the likelihood that the proposed tree would result in the observed data (e.g., DNA, RNA, or protein sequences). This calculation involves estimating the probability of changes in the sequences along each branch of the tree. The likelihood depends on both the tree topology (how the branches are arranged) and the model parameters (like mutation rates).
+
+3. **Optimization**: The ==goal== is to find the tree topology (and associated model parameters) that ==maximizes the likelihood==. Due to the vast number of possible trees, especially with larger datasets, ==heuristic search== algorithms are used to navigate the space of possible trees efficiently.
+
+4. **Likelihood Matrix**: Unlike methods that rely on a distance matrix, ==ML doesn’t typically produce a matrix of pairwise likelihoods==. Instead, it directly evaluates the likelihood of entire tree topologies.
+
+5. **Resulting Tree**: The end result of an ML analysis is ==a single tree== (or sometimes a set of trees) that has the highest likelihood given the data and the chosen model. This tree represents the estimated evolutionary relationships among the sequences.
+
+6. **Dendrogram/Phylogenetic Tree**: The final output is a phylogenetic tree (often visualized as a dendrogram) that represents the ==hypothesized evolutionary relationships== among the species or sequences analyzed. This tree is based on the topology that provided the highest likelihood.
+
+In summary, while ML involves complex calculations involving the entire tree, it doesn't use a pairwise likelihood matrix in the same way that distance-based methods use a distance matrix. The primary focus of ML is on evaluating and comparing the likelihoods of different tree topologies to find the one that best explains the observed data under a given evolutionary model.
 
 <style>
 pre {

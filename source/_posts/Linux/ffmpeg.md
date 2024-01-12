@@ -5,16 +5,14 @@ url: ffmpeg
 date: 2020/06/23
 toc: true
 excerpt: "FFmpeg is a free and open-source software project consisting of a large suite of libraries and programs for handling video, audio, and other multimedia files and streams. At its core is the FFmpeg program itself, designed for command-line-based processing o…"
-tags: [Linux, Software, Multimedia, bash]
+tags: [Linux, Scripting, bash, CLI Tools]
 category: [Linux, Software]
-cover: 'https://cn.bing.com/th?id=AMMS_f767fc15742ef6a9b129e406618c0ef3&w=410&h=110'
-thumbnail: 'https://cn.bing.com/th?id=AMMS_f767fc15742ef6a9b129e406618c0ef3&w=110&h=110'
+cover: 'https://user-images.githubusercontent.com/88981/194717684-9919353b-8d51-4920-9980-3193fd895390.png'
+thumbnail: 'https://user-images.githubusercontent.com/88981/194717684-9919353b-8d51-4920-9980-3193fd895390.png'
 priority: 10000
+covercopy: <a href='https://blog.miniasp.com/post/2022/10/08/Useful-tool-FFmpeg'>© Will Huang</a>
 ---
 
-## ffmpeg
-
-![](https://cn.bing.com/th?id=AMMS_f767fc15742ef6a9b129e406618c0ef3&w=410&h=110)
 
 ## Mp4
 ```bash

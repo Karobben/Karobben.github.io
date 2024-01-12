@@ -8,7 +8,7 @@ title: "How to copy files in linux faster than cp"
 ytitle: "How to copy files in linux faster than cp"
 description: "How to copy files in linux faster than cp"
 excerpt: "How to copy files in linux faster than cp"
-tags: [Linux, bash]
+tags: [Linux, Scripting, bash, CLI Tools]
 category: [Linux, System]
 cover: "https://static.vecteezy.com/system/resources/previews/004/871/788/non_2x/keyboard-keys-ctrl-c-and-ctrl-v-copy-and-paste-the-key-shortcuts-computer-icon-on-yellow-background-free-vector.jpg"
 thumbnail: "https://static.vecteezy.com/system/resources/previews/004/871/788/non_2x/keyboard-keys-ctrl-c-and-ctrl-v-copy-and-paste-the-key-shortcuts-computer-icon-on-yellow-background-free-vector.jpg"

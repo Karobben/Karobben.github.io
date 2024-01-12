@@ -5,7 +5,7 @@ description: "How to compress and decompress files and directories in linux comm
 date: 2020/06/26
 toc: true
 excerpt: "'tar' is a command-line utility in Linux used for archiving and compressing files and directories into a single file. It stands for 'tape archive' and can create files in various formats, including .tar, .tar.gz, and .tar.bz2. It can also extract files from archives and display their contents.<a title='chatgpt'> Who said this?<a>"
-tags: [Linux, bash]
+tags: [Linux, Scripting, bash, CLI Tools]
 category: [Linux, Bash, More]
 cover: 'https://tse3-mm.cn.bing.net/th/id/OIP.QohK_-okTvuh7r82wJlhNAHaE9?w=465&h=180'
 thumbnail: 'https://tse3-mm.cn.bing.net/th/id/OIP.QohK_-okTvuh7r82wJlhNAHaE9?w=180&h=180'

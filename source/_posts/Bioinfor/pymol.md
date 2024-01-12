@@ -21,6 +21,13 @@ thumbnail: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/PyMOL_logo
 bg_color grey30
 ```
 
+### Display Amino Acid
+
+```bash
+set seq_view, on
+set seq_view_format, 0
+```
+
 ## Add something
 
 ### Add Hydrogen bonds
@@ -60,6 +67,30 @@ get_chains 4fqi
 PyMOL>replace C,4,4
 </pre>
 
+### Amino Acid Sequence
+
+source: [pymolwiki](https://pymolwiki.org/index.php/Get_fastastr)
+
+```bash
+print(cmd.get_fastastr('all'))
+
+# for only show chain B:
+print(cmd.get_fastastr('5WL2 and chain B'))
+```
+
+<pre>
+>5WL2_H
+QVQLVQSGAEVKKPGSSVKVSCKASGGTFSSYAISWVRQAPGQGLEWMGGIIPIFGTANYAQKFQGRVTI
+TADESTSTAYMELSSLRSEDTAVYYCARHGNYYYYSGMDVWGQGTTVTVSSASTKGPSVFPLAPSSKSTS
+GGTAALGCLVKDYFPEPVTVSWNSGALTSGVHTFPAVLQSSGLYSLSSVVTVPSSSLGTQTYICNVNHKP
+SNTKVDKRVEPKSCHHHHHH
+>5WL2_L
+QSVLTQPPSVSEAPRQRVTISCSGSSSNIGNNAVNWYQQLPGKAPKLLIYYDDLLPSGVSDRFSGSKSGT
+SASLAISGLQSEDEADYYCAAWDDSLNGAVFGGGTQLTVLGQPKAAPSVTLFPPSSEELQANKATLVCLI
+SDFYPGAVTVAWKADSSPVKAGVETTTPSKQSNNKYAASSYLSLTPEQWKSHRSYSCQVTHEGSTVEKTV
+APTECS
+...
+</pre>
 
 ## Object manipulation  
 
@@ -152,3 +183,13 @@ select aas, resn ASP+GLU in 2xxl
 ```
 
 Create a variate ass which contain all ASP and GLU residues.
+
+
+
+
+<style>
+pre {
+  background-color:#38393d;
+  color: #5fd381;
+}
+</style>

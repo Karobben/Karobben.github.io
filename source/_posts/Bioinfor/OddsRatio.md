@@ -5,7 +5,7 @@ url: odds
 date: 2020/07/28
 toc: true
 excerpt: "Odds of an event happening is defined as the likelihood that an event will occur, expressed as a proportion of the like..."
-tags: [Statistic, Odds Ratio]
+tags: [Statistic, Data Science]
 category: [Notes, Statistic, others]
 cover: 'https://psychscenehub.com/wp-content/uploads/2016/09/Screenshot-2016-09-03-16.30.35.png'
 thumbnail: 'https://psychscenehub.com/wp-content/uploads/2016/09/Screenshot-2016-09-03-16.30.35.png'

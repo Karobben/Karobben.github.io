@@ -5,7 +5,7 @@ url: blast
 date: "2020/07/28"
 toc: true
 excerpt: "The Basic Local Alignment Search Tool (BLAST) finds regions of local similarity between sequences. The program compares nucleotide or protein sequences to sequence databases and calculates the statistical significance of matches. BLAST can be used to infer functional and evolutionary relationships between sequences as well as help identify members of gene families."
-tags: [Software, Database]
+tags: [Software, Database, Align]
 category: [Biology, Bioinformatics, Software, Align]
 cover: 'https://tse3-mm.cn.bing.net/th/id/OIP.pg0lLEEeNeiUp31DPMKtRwHaCY'
 thumbnail: 'https://tse3-mm.cn.bing.net/th/id/OIP.pg0lLEEeNeiUp31DPMKtRwHaCY'

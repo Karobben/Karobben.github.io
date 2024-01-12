@@ -5,7 +5,7 @@ url: download2
 date: 2020/06/23
 toc: true
 excerpt: "AWK (awk) is a domain-specific language designed for text processing and typically used as a data extraction and reporting tool. Like sed and grep, it is a filter, and is a standard feature of most Unix-like operating systems."
-tags: [Linux, apt]
+tags: [Linux, apt, Scripting, bash, CLI Tools]
 category: [Linux, Software]
 cover: 'https://tse3-mm.cn.bing.net/th/id/OIP.QohK_-okTvuh7r82wJlhNAHaE9?w=465&h=180'
 thumbnail: 'https://tse3-mm.cn.bing.net/th/id/OIP.QohK_-okTvuh7r82wJlhNAHaE9?w=180&h=180'

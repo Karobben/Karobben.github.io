@@ -5,7 +5,7 @@ url: github2
 date: 2020/06/23
 toc: true
 excerpt: "Basic commands for synchrony the local and cloud github repository."
-tags: [Linux, GitHub, bash]
+tags: [Linux, Scripting, bash, CLI Tools, git]
 category: [Linux, GitHub]
 cover: 'https://kinsta.com/wp-content/uploads/2018/04/what-is-github-1-1-1024x512.png'
 thumbnail: 'https://cn.bing.com/th?id=AMMS_c45f125b765170342ef8efd07cb7a55f&w=110&h=110'

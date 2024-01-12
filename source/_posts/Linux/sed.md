@@ -5,7 +5,7 @@ url: sed2
 date: 2020/06/26
 toc: true
 excerpt: "sed ('stream editor') is a Unix utility that parses and transforms text, using a simple, compact programming language. sed was developed from 1973 to 1974 by Lee E. McMahon of Bell Labs, and is available today for most operating systems."
-tags: [Linux, awk/sed/grep, bash]
+tags: [Linux, Scripting, bash, CLI Tools]
 category: [Linux, Bash, awk/grep/sed]
 cover: 'https://tse3-mm.cn.bing.net/th/id/OIP.QohK_-okTvuh7r82wJlhNAHaE9?w=465&h=180'
 thumbnail: 'https://tse3-mm.cn.bing.net/th/id/OIP.QohK_-okTvuh7r82wJlhNAHaE9?w=180&h=180'

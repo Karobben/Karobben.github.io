@@ -5,7 +5,7 @@ url: conky_si_fi
 date: 2021/02/28
 toc: true
 excerpt: "This is an example of a conky theme written by me. Some scripts may not work very well. Feel free to fork or alter it from GitHub"
-tags: [Linux, Desktop, Conky]
+tags: [Linux, System, Conky]
 category: [Linux, 'Monitor: top\Conky']
 cover: 'https://s3.ax1x.com/2021/02/28/69aTKA.md.png'
 thumbnail: 'https://s3.ax1x.com/2021/02/28/69aTKA.md.png'
