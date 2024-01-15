@@ -75,6 +75,19 @@ source deactivate
 conda deactivate
 ```
 
+## Install into Non-default Location
+
+Reference: [saturncloud](https://saturncloud.io/blog/how-to-specify-a-new-environment-location-for-conda-create-a-guide/)
+
+
+```bash
+# you can use --prefix or -p to replace the -n/--name
+conda create --prefix /path/to/directory python=3.8 numpy
+
+# this is how you can activate this environment
+conda activate /path/to/directory
+```
+
 ## Delete you Environment
 
 ```bash

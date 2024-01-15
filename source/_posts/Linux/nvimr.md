@@ -249,10 +249,12 @@ Press ENTER or type command to continue
 ```bash
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 cat "$HOME/.cargo/env" >> ~/.zshrc
+source ~/.zshrc
 
 # install LunarVim
 LV_BRANCH='release-1.3/neovim-0.9' bash <(curl -s https://raw.githubusercontent.com/LunarVim/LunarVim/release-1.3/neovim-0.9/utils/installer/install.sh)
 
+rm -rf ~/.config/lvim/
 git clone https://github.com/Karobben/kickstart.nvim.git ~/.config/lvim
 ```
 
@@ -265,15 +267,49 @@ cd ~/.local/share/fonts && curl -fLO https://github.com/ryanoasis/nerd-fonts/raw
 fc-cache -f -v
 ```
 
-### Basic Editing
+### Words Editing
+
+For editing the word, we need to switch the model of read, visual, and editing. Press `i` enable the editing mode. Type `Esc` or `Ctrl + c` exist the editing mode and back to the reading mode. `v` enable selection model so you could select words.
+
 
 
 ```
+i                   enter editing mode
+dd                  cut the selected line into paste board
+p                   paste the coppied contents
 v                   selecte mode to selecte multiple words and lines
     wd              delete the selected words/lines
     y               copy the selected words/lines
     p               repalce the selected workds/lines with coppied contents
+o                   Start a new line
+:>                  Intend the selected line 
+:>>                 Intend tiwce
+:<                  Undo the intend
+: m 10              Move the selected words/line into line 10
+Alt+ j/k        Move selected words/lines up/donw
+```
 
+
+### Cursor Related
+
+```
+h                   moving left
+j                   moving down
+k                   moving up
+l                   moving right
+:10                 moving to line 10
+w                   moving to the head of the next word
+e                   moving to the end of the word
+b                   moving to the head of the previous word
+ge                  moving back to the end of the word
+
+gg                  moving to the top of the file
+G                   moving to the end of the file
+Ctrl + f            page foward (donw)
+Ctrl + b            page back (up)
+```
+
+```
 <leader> e          open directory exploer
 <leader> w          save the edit file (:w)
 
@@ -285,6 +321,8 @@ v                   selecte mode to selecte multiple words and lines
 <Alt> 1/2/3         open a terminal (only when you installed the pluges)
 <Ctrl> w            swtich between windows
 
+:set mouse-=a       Disable the mouse selection
+:set mouse=a        Inable the mouse 
 ```
 
 <style>

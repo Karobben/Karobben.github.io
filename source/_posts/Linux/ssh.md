@@ -75,6 +75,21 @@ Using SSH typically involves two primary components: an SSH client and an SSH se
 
 6. **Exiting SSH**: To end your SSH session, simply type `exit` or press `Ctrl+D`.
 
+## Configure file
+
+`vim ~/.ssh/config`
+
+<pre>
+Host home_pc
+    HostName 192.168.3.1
+    User john
+    Port 2322
+</pre>
+
+How to login this host:
+`ssh home_pc`
+
+
 ### Security Considerations
 
 - **SSH Keys**: For better security, it’s recommended to use SSH keys instead of passwords. SSH keys are a pair of cryptographic keys that can be used to authenticate to an SSH server as an alternative to password-based logins.
