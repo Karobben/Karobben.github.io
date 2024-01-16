@@ -123,6 +123,7 @@ plt.title('Scatter Plot')
 ```
 
 ![NYY3lD.png](https://s1.ax1x.com/2020/06/22/NYY3lD.png)
+
 <a name="x9oul"></a>
 #### 2.2.2 scatter()
 
@@ -134,8 +135,7 @@ plt.xlabel('1st')
 plt.ylabel('2nd')
 plt.title('Scatter Plot')
 ```
-<a name="VeB2w"></a>
-###
+
 <a name="7F9HK"></a>
 #### 2.2.3 Adding color: c = c
 
@@ -150,7 +150,22 @@ plt.ylabel('2nd')
 plt.title('Scatter Plot')
 ```
 ![NYYakt.png](https://s1.ax1x.com/2020/06/22/NYYakt.png)
-<a name="l20I2"></a>
+
+#### Edge of the Scatter Points
+
+```python
+# default plot
+plt.scatter(x= TB_Sp.Frame, y = TB_Sp.value, color = 'black', alpha = .1)
+# Adding color to the edge
+plt.scatter(x= TB_Sp.Frame, y = TB_Sp.value, color = 'black', alpha = .1, edgecolors = 'steelblue')
+# remove the edges from each point
+plt.scatter(x= TB_Sp.Frame, y = TB_Sp.value, color = 'black', alpha = .1, linewidths= 0 )
+```
+
+| Default | Edge with Color | No Edge |
+| :-: | :-: | :-: |
+| ![matplotlib: default scatter plot](https://imgur.com/QFB71uS.png)| ![matplotlib: scatter plot, change edge color](https://imgur.com/L7gFVkp.png)   | ![matplotlib: scatter plot, remove edge](https://imgur.com/NSYWGGk.png)|
+
 ### 2.3 Line plot
 
 ```python
