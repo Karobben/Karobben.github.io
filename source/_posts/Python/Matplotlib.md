@@ -360,3 +360,68 @@ plt.arrow(0, 0, 2, 2, width = 0.05)
 plt.arrow(P1[0], P1[1], P2[0]-P1[0], P2[1]-P1[1], width = 1)
 plt.arrow(P3[0], P3[1], P4[0]-P3[0], P4[1]-P3[1], width = 1)
 ```
+
+## Animation
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+import matplotlib.animation as animation
+import math
+
+y = []
+for t in range(100):
+    y += [np.sin(2*math.pi * (0 - t/100))]
+
+x = np.array([0] * 100)
+y = np.array(y)
+
+fig, ax = plt.subplots()
+line, = ax.plot(x, y, 'o')
+
+def update(num, x, y, line):
+    line.set_data(x[num], y[num])
+    return line,
+
+ani = animation.FuncAnimation(fig, update, len(x), interval=10,
+                              fargs=[x, y, line], blit=True)
+ani.save('animation_drawing.gif', writer='imagemagick', fps=60)
+
+plt.plot(np.array(range(100))/10, y, 'o')
+plt.savefig('wave.png')
+plt.show()
+```
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+import matplotlib.animation as animation
+import math
+
+frame = 100 
+Y = []
+for x in range(10):
+    y = []
+    for t in range(frame):
+        y += [np.sin(2*math.pi * (x/10 - t/10/10))]
+    Y += [np.array(y)]
+
+Y = np.array(Y)
+X = np.array([[i] * frame for i in range(len(Y))])
+
+fig, ax = plt.subplots()
+line, = ax.plot([0, 10], [-1, 1], 'o')
+ax.set_ylim(-1)
+
+def update(num, x, y, line):
+    line.set_data(x[:,num], y[:,num])
+    return line,
+
+ani = animation.FuncAnimation(fig, update, frame, interval=100,
+                              fargs=[X, Y, line], blit=True )
+ani.save('animation_drawing.gif', writer='imagemagick', fps=60)
+
+plt.plot(np.array(range(100))/10, y, 'o')
+plt.savefig('wave.png')
+plt.show()
+`
