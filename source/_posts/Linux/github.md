@@ -119,7 +119,17 @@ Enter your github repository page and select the ssh link to configure the local
 git remote set-url origin git@github.com:username/repo.git
 ```
 
+## Re-base the Local by Deleting all Local Change
 
+```bahs
+git stash
+git pull
+```
+
+Reference: [Cameron McKenzie](https://www.theserverside.com/blog/Coffee-Talk-Java-News-Stories-and-Opinions/remove-revert-discard-local-uncommitted-changes-Git-how-to)
+- The git stash command, which saves uncommitted changes and reset your workspace.
+- The git reset command, which only touches tracked files.
+- The git clean command, that deletes every untracked file.
 
 ## Errors
 

@@ -78,18 +78,25 @@ call plug#end()
 
 By following the instruction from [rohitfarmer](https://gist.github.com/rohitfarmer/68cdadeaeeb196e8a6ecdebdee6e76a5)'s post, we could add more things at the end of the `init.vim` file:
 
+
+!!! note folding behavior
+    <pre>
+    " Set foldbehavior
+
+    set tabstop=2        " Number of spaces that a <Tab> in the file counts for
+    set shiftwidth=2     " Number of spaces to use for each step of (auto)indent
+    set softtabstop=2    " Number of spaces that a <Tab> counts for while performing editing operations
+    set expandtab        " Use spaces instead of tabs
+
+    set foldmethod=indent
+    set foldlevelstart=2    " Start folding at an indent level greater than 2
+    </pre>
+
+    For quick unfold all codes:
+    <pre>:set nofoldenable</pre>
+
+
 <pre>
-" Set foldbehavior
-
-set tabstop=2        " Number of spaces that a <Tab> in the file counts for
-set shiftwidth=2     " Number of spaces to use for each step of (auto)indent
-set softtabstop=2    " Number of spaces that a <Tab> counts for while performing editing operations
-set expandtab        " Use spaces instead of tabs
-
-set foldmethod=indent
-set foldlevelstart=2    " Start folding at an indent level greater than 2
-
-
 " Set a Local Leader
 
 " With a map leader it's possible to do extra key combinations
