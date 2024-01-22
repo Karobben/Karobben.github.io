@@ -1,7 +1,7 @@
 ---
 toc: true
 url: light
-covercopy: © Karobben
+covercopy: <a href = "https://www.eoas.ubc.ca/courses/atsc113/sailing/met_concepts/08-met-waves/8b-wave-characteristics/index.html">© eoas</a> 
 priority: 10000
 date: 2024-01-18 21:30:37
 title: "Light in Physics"
@@ -10,8 +10,8 @@ description: "Light in Physics"
 excerpt: "Light in Physics"
 tags: []
 category: []
-cover: ""
-thumbnail: ""
+cover: "https://www.eoas.ubc.ca/courses/atsc113/sailing/met_concepts/08-met-waves/8b-wave-characteristics/img-8b/8-wave-characteristics.gif"
+thumbnail: "https://www.eoas.ubc.ca/courses/atsc113/sailing/met_concepts/08-met-waves/8b-wave-characteristics/img-8b/8-wave-characteristics.gif"
 ---
 
 
@@ -55,6 +55,10 @@ If we observe more positions, let's say, 0 to 10, and using the full function, w
 
 ![The propagating wave](https://imgur.com/KdWk5PU.gif)
 
+|![Wave Motion in Time and Space](https://www.acs.psu.edu/drussell/Demos/wave-x-t/wave-x-t.gif)|
+|:-:|
+|[© psu](https://www.acs.psu.edu/drussell/Demos/wave-x-t/wave-x-t.html)|
+
 ## Direction of the Wave
 
 When t increases, x increases => "+" direction on x;
@@ -68,6 +72,60 @@ $velocity = \frac{\lambda}{T} = \lambda \nu$
 
 So, the light of the wave is:
   - $c = \lambda \nu$
+
+
+## Energy of the Wave
+
+Energy of a wave is proportional to the square of the amplitude (in classical mechanics)
+
+$\rho(\nu)$: energy per unit volume
+
+$$
+\rho(\nu) = constant\ x (E^ o)^ 2
+$$
+
+- ==Classic==: Energy is dependent on amplitude
+- ==QM==: Energy is dependent on frequency
+
+
+The image you've uploaded contains a set of equations that describe a wave, likely in the context of electromagnetic theory. Here is an explanation of the concepts:
+
+1. **Wave Vector ($k$)**: The wave vector is defined as $\frac{2\pi}{\lambda}$, where $\lambda$ is the wavelength of the wave. The wave vector points in the direction of the wave's propagation and has a magnitude equal to the number of wave cycles per unit distance. The notation $\hat{k}$ represents a unit vector in the direction of $k$, so the wave vector $k$ is sometimes written as $\frac{2\pi}{\lambda} \hat{k}$, emphasizing its direction.
+
+2. **Angular Frequency ($\omega$)**: This is defined as $2\pi\nu$, where $\nu$ is the frequency of the wave. It represents how many radians the wave cycles through per unit time.
+
+3. **Phase ($\phi$)**: The phase is a term that allows us to specify where in its cycle the wave is at $t = 0$ and $x = 0$. It lets us define **the "zero point" or starting point** of the wave at a place other than the origin of our coordinate system.
+
+$$E(x,t) = E^0 \sin(kx - \omega t + \phi)$$
+$$H(x,t) = H^0 \sin(kx - \omega t + \phi)$$
+
+<details> <summary>More descriptions</summary>
+These equations describe how the electric and magnetic fields oscillate as a function of space and time, which is characteristic of electromagnetic waves such as light. The quantities $E^0$ and $H^0$ are the maximum strengths of the electric and magnetic fields, respectively.
+
+In an electromagnetic wave, the electric and magnetic fields are perpendicular to each other and to the direction of wave propagation. The equations show that both fields oscillate in sync (they have the same phase $\phi$) but are described by separate equations since they are perpendicular components.
+
+The term $kx - \omega t$ indicates that the wave is moving in the positive $x$-direction. If the wave were moving in the negative $x$-direction, the sign in front of $\omega t$ would be positive.
+
+The factor $\sin(kx - \omega t + \phi)$ varies between \(-1\) and \(1\), causing the electric and magnetic field strengths to oscillate between $-E^0$ to $E^0$ and $-H^0$ to $H^0$, respectively. The wave thus carries energy and, if it is light, can be observed as it interacts with matter.
+</details>
+
+
+## Diffraction
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <style>
 pre {
