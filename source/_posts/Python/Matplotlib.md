@@ -264,11 +264,10 @@ plt.grid(True)
 Result
 
 
-<a name="cyLz9"></a>
 ## 3. Plot 3D
 
-<a name="Nk4gV"></a>
 #### 3.1 
+
 ```python
 ## Preparing for Data set
 strike = np.linspace(50, 150, 24)
@@ -276,10 +275,7 @@ ttm = np.linspace(0.5, 2.5, 24)
 strike, ttm = np.meshgrid(strike, ttm)
 iv = (strike - 100) ** 2 / (100 * strike) / ttm
 
-from mpl_toolkits.mplot3d import Axes3D
-
-fig = plt.figure(figsize=(9,6))
-ax = fig.gca(projection='3d')
+fig, ax = plt.subplots(subplot_kw={"projection": "3d"})
 surf = ax.plot_surface(strike, ttm, iv, rstride=2, cstride=2, cmap=plt.cm.coolwarm, linewidth=0.5, antialiased=True)
 ax.set_xlabel('strike')
 ax.set_ylabel('time-to-maturity')
@@ -287,11 +283,10 @@ ax.set_zlabel('implied volatility')
 fig.colorbar(surf, shrink=0.5, aspect=5)
 ```
 
-![NYYYmd.png](https://s1.ax1x.com/2020/06/22/NYYYmd.png)
+![matplotlib, 3D surface plot](https://s1.ax1x.com/2020/06/22/NYYYmd.png)
 
 
-<a name="WVm3Q"></a>
-#### 3.2 switch to dot
+#### 3.2 From Surface data to Dot
 
 ```python
 fig = plt.figure(figsize=(8, 5))
@@ -303,9 +298,39 @@ ax.scatter(strike, ttm, iv, zdir='z', s=25, c='b', marker='^')
 ax.set_xlabel('strike')
 ax.set_ylabel('time-to-maturity')
 ax.set_zlabel('implied volatility')
+plt.show()
 ```
 
-![NYYwff.png](https://s1.ax1x.com/2020/06/22/NYYwff.png)
+![matplotlib, 3D dots plot](https://s1.ax1x.com/2020/06/22/NYYwff.png)
+
+#### From 3D Dots into Surface Plot
+
+Cite: [Adobe, 2014](https://stackoverflow.com/questions/12423601/simplest-way-to-plot-3d-surface-given-3d-points)
+
+```python
+from matplotlib.ticker import MaxNLocator
+
+X = range(10)
+Y = range(10)
+Points = []
+for x in X:
+    for y in Y:
+        Points += [[x*10, y*10, x**y]]
+
+Points = np.array(Points)
+
+fig, ax = plt.subplots(subplot_kw={"projection": "3d"}, figsize=(6,6))
+surf = ax.plot_trisurf(Points[:, 0], Points[:, 1], Points[:,2])
+
+ax.xaxis.set_major_locator(MaxNLocator(5))
+ax.yaxis.set_major_locator(MaxNLocator(6))
+ax.zaxis.set_major_locator(MaxNLocator(5))
+plt.show()
+```
+
+|![Matplotlib, 3D dots plot](https://imgur.com/FQdH74C.png)|![Matplotlib, from 3D dots into surface plot](https://imgur.com/RurDloP.png)|
+|:-:|:-:|
+|Raw 3D dots plot| Converte the 3D dots plot into surface plot|
 
 ## Save
 ```python

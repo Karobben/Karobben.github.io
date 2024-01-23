@@ -50,6 +50,13 @@ Output explanation for "6 qacc sacc evalue pident qcovs":
 - "pident": Identity (Percentage)
 - "qcovs": Query coverage
 
+## Different Commands
+
+- `BLASTP`: For comparing Protein sequences to Protein databases.
+- `BLASTN`: For comparing Nucleotide sequences to Nucleotide databases.
+- `BLASTX`: For comparing a Nucleotide query sequence translated in all reading frames to a Protein database.
+- `TBLASTN`: For comparing a Protein sequence to a Nucleotide database that is translated in all reading frames.
+- `TBLASTX`: For comparing the six-frame translations of a Nucleotide query sequence against the six-frame translations of a Nucleotide database.
 
 ## Output format
 
