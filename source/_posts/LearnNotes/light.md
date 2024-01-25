@@ -66,7 +66,6 @@ Points = np.array(Points)
 plt.figure(figsize=(7, 5))
 plt.scatter(Points[:, 0], Points[:, 1] + 0.5, c= Points[:, 2], marker='o', cmap=plt.cm.coolwarm,)
 plt.show()
-
 ```
 </details>
 
@@ -256,3 +255,95 @@ pre {
   color: #5fd381;
 }
 </style>
+
+## Extra Explore
+
+Becuase we konw:
+- $E(x,t) = E^0 \sin\left[2\pi \left(\frac{x}{\lambda} - \frac{t}{T}\right)\right]$
+
+So, when we move to the 2D wave, we could have function:
+- $E(x, y, t) = E^0 \sin\left[2\pi \left(\frac{\sqrt{x^2 - y^2}}{\lambda} - \frac{t}{T}\right)\right]$
+
+In order to calcualte the 2D wave from the different emission location, we need to introduce the initial point b=(b~x~, b~y~) 
+- $E(x, y, b_x, b_y, t) = E^0 \sin\left[2\pi \left(\frac{\sqrt{(x-b_x)^2 - (y-b_y)^2}}{\lambda} - \frac{t}{T}\right)\right]$
+
+
+
+```python
+import matplotlib.pyplot as plt
+import numpy as np
+import pandas as pd
+from sklearn.neighbors import NearestNeighbors
+import pyvista as pv
+
+def waveFun(x, y, bx =0, by = 0, t = 0, lamb = 1, pi = np.pi, T = 1, E0 = 1):
+    E = E0 * np.sin(2 * pi * ((np.sqrt((x-bx)**2+(y-by)**2))/lamb - t/T))
+    return E     
+
+Y = range(-100,100)
+X = range(0,20000)
+Points = []
+for x in X:
+    x /=10
+    for y in Y:
+        y /=10
+        E = 0
+        for by in np.arange(-10,11, .1):
+            E += waveFun(x, y, 0, by)
+        Points += [[x, y, E] ]
+
+points_array = np.array(Points)
+#plt.scatter(points_array[:, 0], points_array[:, 1] + 0.5, c= points_array[:, 2], marker='o', cmap=plt.cm.coolwarm,)
+#plt.show()
+# Create a PyVista point cloud
+point_cloud = pv.PolyData(points_array)
+point_cloud['point_color'] = point_cloud.points[:, 2]
+point_cloud.plot(point_size=5,scalars='point_color', cmap="jet", show_bounds=True)
+
+
+
+point_cloud = pv.PolyData(Points)
+volume = point_cloud.delaunay_3d(alpha = 5)
+shell = volume.extract_geometry()
+shell.plot(show_edges=True)
+
+TB = pd.DataFrame(Points, columns = ['x', 'y', 'E'])
+
+fig, ax = plt.subplots(subplot_kw={"projection": "3d"}, figsize=(6,6))
+P = ax.plot_trisurf(TB.x, TB.y, TB.E, vmin=TB.E.min() * 2, cmap=plt.cm.coolwarm)
+plt.show()
+
+
+from scipy.interpolate import griddata
+
+df =TB
+x1 = np.linspace(df['x'].min(), df['x'].max(), len(df['x'].unique()))
+y1 = np.linspace(df['y'].min(), df['y'].max(), len(df['y'].unique()))
+"""
+x, y via meshgrid for vectorized evaluation of
+2 scalar/vector fields over 2-D grids, given
+one-dimensional coordinate arrays x1, x2,..., xn.
+"""
+x2, y2 = np.meshgrid(x1, y1)
+# Interpolate unstructured D-dimensional data.
+z2 = griddata((df['x'], df['y']), df['E'], (x2, y2), method='cubic')
+
+
+
+# Ready to plot
+fig = plt.figure()
+ax = fig.subplots(subplot_kw = {"projection":'3d'})
+
+surf = ax.plot_surface(x2, y2, z2, rstride=1, cstride=1, cmap=plt.cm.coolwarm,
+                       linewidth=0, antialiased=False)
+ax.set_zlim(-1.01, 1.01)
+
+ax.zaxis.set_major_locator(LinearLocator(10))
+ax.zaxis.set_major_formatter(FormatStrFormatter('%.02f'))
+fig.colorbar(surf, shrink=0.5, aspect=5)
+plt.title('Meshgrid Created from 3 1D Arrays')
+
+plt.show()
+
+```
+

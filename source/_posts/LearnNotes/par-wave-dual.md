@@ -98,9 +98,7 @@ Explained:
         = $h\nu × \frac{8\pi \nu ^2 }{c^ 3} × \frac{1}{exp(\frac{h\nu}{k_BT})-1}$
         = $\frac{8\pi h \nu^3}{ c^3 } \frac{1}{e^{\frac{hv}{k_ BT}} - 1 }$
 
-
 In Planck Low, it show either high temperature or low frequency would case the "Ultralviolet catastrophe":
-
 
 ![planck Law](https://imgur.com/rWBTB6C.png)
 - From the left to the right:
@@ -201,8 +199,28 @@ $$
 - &\Phi; Work to remove electron from target (independently determined)
 - &nu;: Determine the value of &\beta;
 
+!!! note Einstein concluded that light must be behaving like a particle in this experiment: PHOTON
+    E = *h&nu;*
 
+### Duality in partical with mass
 
+- **Electron diffraction**: This is a typical diffraction pattern of a beam of electrons diffracted by a crystalline solid
+
+from Planck's equation to Einstein's equestion:
+- *E = h&nu* → *E = mc^2^*
+
+$v = h\nu$
+$mv = P = m\lambda\nu$
+$v = \frac{P}{m\lambda}$
+$E = h\nu = \frac(hP){m\lambda} → E = \frac{p^2 }{m}$
+
+De Broglie Equation:
+$\lambda = \frac{h}{p} = \frac{h}{m\nu}$
+
+### About Weight Terms in Spectral Density
+
+$g(\nu) = \frac{N(E)}{V} = \frac{Number of States (E)}{Volumne}$
+ 
 
 <style>
 pre {
