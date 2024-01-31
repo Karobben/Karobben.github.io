@@ -1,7 +1,7 @@
 ---
 toc: true
 url: par_wave_dual
-covercopy: © Karobben
+covercopy: <a hreh="https://www.livescience.com/24509-light-wave-particle-duality-experiment.html">© Clara Moskowitz</a>
 priority: 10000
 date: 2024-01-23 09:57:26
 title: "PARTICLE-WAVE DUALITY"
@@ -10,8 +10,8 @@ description: "PARTICLE-WAVE DUALITY"
 excerpt: "PARTICLE-WAVE DUALITY"
 tags: []
 category: []
-cover: ""
-thumbnail: ""
+cover: "https://cdn.mos.cms.futurecdn.net/gyuT23ZwvfNoevmxW6XMte-650-80.jpg.webp"
+thumbnail: "https://cdn.mos.cms.futurecdn.net/gyuT23ZwvfNoevmxW6XMte-650-80.jpg.webp"
 ---
 
 ## Failure of Classical Mechanics 

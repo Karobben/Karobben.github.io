@@ -269,6 +269,8 @@ In order to calcualte the 2D wave from the different emission location, we need 
 
 
 
+<details><summary>Plot codes</details>
+
 ```python
 import matplotlib.pyplot as plt
 import numpy as np
@@ -346,4 +348,4 @@ plt.title('Meshgrid Created from 3 1D Arrays')
 plt.show()
 
 ```
-
+</details>
