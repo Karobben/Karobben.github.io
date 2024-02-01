@@ -282,8 +282,42 @@ def waveFun(x, y, bx =0, by = 0, t = 0, lamb = 1, pi = np.pi, T = 1, E0 = 1):
     E = E0 * np.sin(2 * pi * ((np.sqrt((x-bx)**2+(y-by)**2))/lamb - t/T))
     return E     
 
+
+X = np.arange(100, step = .1)
+Y = np.arange(-50,50, step = .1)
+X, Y = np.meshgrid(X, Y)
+Points = waveFun(X,X)
+
+X = np.arange(-50, 50, step = .1)
+Y = np.arange(-50, 50, step = .1)
+X, Y = np.meshgrid(X, Y)
+Points += waveFun(X,Y, lamb = .7, T = .7)
+
+plt.imshow(Points)
+plt.show()
+
+for i in range(200):
+    i = (i-100)/20  
+    X = np.arange(100, step = .1)
+    Y = np.arange(-50 + i,50 + i, step = .1)
+    X, Y = np.meshgrid(X, Y)
+    Points += waveFun(X,Y)
+
+
+#plt.scatter(points_array[:, 0], points_array[:, 1] + 0.5, c= points_array[:, 2], marker='o', cmap=plt.cm.coolwarm,)
+#plt.show()
+# Create a PyVista point cloud
+point_cloud = pv.PolyData(points_array)
+point_cloud['point_color'] = point_cloud.points[:, 2]
+point_cloud.plot(point_size=5,scalars='point_color', cmap="jet", show_bounds=True)
+
+
+
+
+
+
 Y = range(-100,100)
-X = range(0,20000)
+X = range(0,200)
 Points = []
 for x in X:
     x /=10
