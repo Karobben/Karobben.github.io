@@ -212,14 +212,6 @@ We can minimize the probability of error by designing ***f(x)*** so that ***f(x)
 |![Minimum Probability of Error](https://imgur.com/qFXNGic.png)|
 |:-:|
 
-#### MPE = MAP
-
-- The "minimum probability of error" (MPE) decision rule is the rule that chooses ***f(X)*** in order to minimize the probability of error:
-    - ***f(x) = argmin P(Error|X = x)***
-- The “maximum a posteriori” (MAP) decision rule is the rule that chooses ***f(x)*** in order to maximize the posteriori probability:
-    - ***f(x) = argmin P(Y = f(x)|X = x)***
-- Those two decision rules are the same: **MPE = MAP**
-
 ### The Bayesian Scenario
 
 |![Bayes](https://upload.wikimedia.org/wikipedia/commons/d/d4/Thomas_Bayes.gif)|
@@ -233,14 +225,129 @@ We can minimize the probability of error by designing ***f(x)*** so that ***f(x)
 #### Example: spam detection 
 
 !!! question  how can we estimate the P(Y=y|X=x)?
-    The prior probability of spam might be obvious. If 80% of all email on the internet is spam, that means that
+    - The prior probability of spam might be obvious. If 80% of all email on the internet is spam, that means that
+    ***P(Y=1)=0.8, P(Y=0)=0.2***<br>
+    - The probability of X given Y is also easy. Suppose we have a database full of sample emails, some known to be spam, some known to be ham. We count how often any word occurs in spam vs. ham emails, and estimate:<br>
+    1. ***P(X=x|Y=1)=*** frequency of the words ***x*** in emails known to be spam<br>
+    2. ***P(X=x|Y=0)=*** frequency of the words ***x*** in emails known to be ham<br>
+    - Now we have ***P( X=x|Y=y)*** and ***P(Y=y)*** . How do we get ***P(Y=y|X=x)***<br>
+    For solve this problem, Bayes come with an idea: **Bayes' Rule**<br>
+    $P(Y=y|X=x) = \frac{P(X=x, Y=y)}{P(X=x)}$<br>
+    $\frac{P(X=x|Y=y)P(Y=y)}{P(X=x)}$
+
+### The four Bayesian probabilities
+
+$$
+P(Y=y|X=x) =\frac{P(X=x|Y=y)P(Y=y)}{P(X=x)}
+$$
+
+This equation shows the relationship among four probabilities. This equation has become so world-famous, since 1763, that these four probabilities have standard universally recognized names that you need to know:
+- ***P(Y=y|X=x)*** is the a **posteriori** (after-the-fact) probability, or **posterior**
+- ***P(Y=y)*** is the **a priori** (before-the-fact) probability, or **prior**
+- ***P(X=x|Y=y)*** is the **likelihood**
+- ***P(X=x)*** is the **evidence**
+Bayes' rule: the posterior equals the prior times the likelihood over the evidence.
 
 
+#### MPE = MAP
+
+- The "minimum probability of error" (MPE) decision rule is the rule that chooses ***f(X)*** in order to minimize the probability of error:
+    - ***f(x) = argmin P(Error|X = x)***
+- The “maximum a posteriori” (MAP) decision rule is the rule that chooses ***f(x)*** in order to maximize the posteriori probability:
+    - ***f(x) = argmin P(Y = f(x)|X = x)***
+- Those two decision rules are the same: **MPE = MAP**
+
+Using Bayes' Rule:
+- MPE = MAP: to minimize the probability of error, design f(X) so that:
+    $f(x) = \underset{y}{argmaxP}(Y = y|X = x)$
+- Bayes' Rule 
+    $P(Y=y|X=x) =\frac{P(X=x|Y=y)P(Y=y)}{P(X=x)}$
+- Putting the two together:
+    $f(x) = \underset{y}{argmaxP}\frac{P(X=x|Y=y)P(Y=y)}{P(X=x)}$
+    $\ \ \ =\underset{y}{argmaxP}(X=x|Y=y)P(Y=y)$
 
 
+- Accuracy
+    When we train a classifier, the metric that we usually report is "accuracy"
+    $Accuracy = \frac{n tokens\ correctly\ classified}{n\ tokens\ total}$
+- Error Rate
+    Equivalently, we could report error rate, which is just 1-accuracy:
+    $Error Rate = \frac{n\ tokens\ incorrectly\ classified}{n\ tokens\ total}$
+- Bayes Error Rate
+    The "Bayes Error Rate" is the smallest possible error rate of any classifier with labels "y" and features "x":
+    $Error Rate = \sum_x P(X=x)\underset{y}{min} P(Y \neq y |x=x)$
+    It’s called the “Bayes error rate” because it’s the error rate of the Bayesian classifier 
+
+## The problem with accuracy
+
+- In most real-world problems, there is one class label that is much more frequent than all others.
+    - Words: most words are nouns
+    - Animals: most animals are insects
+- Disease: most people are healthy
+- It is therefore easy to get a very high accuracy. All you need to do is write a program that completely ignores its input, and always guesses the majority class. The accuracy of this classifier is called the "chance accuracy."
+- It is sometimes very hard to beat the chance accuracy. If chance=90%, and your classifier gets 89% accuracy, is that good, or bad?
+
+The solution: ==Confusion Matrix==:
+Confusion Matrix =
+• ***(m, n)^th^*** element is the number of tokens of the ***m^th^*** class that were labeled, by the classifier, as belonging to the ***n^th^*** class.
+
+|![](https://cdn.analyticsvidhya.com/wp-content/uploads/2020/04/Basic-Confusion-matrix.png)|
+|:-:|
+|[© Aniruddha Bhandari](https://www.analyticsvidhya.com/blog/2020/04/confusion-matrix-machine-learning/)|
+
+!!! note Confusion matrix for a binary classifier
+    - Suppose that the correct label is either 0 or 1. Then the confusion matrix is just 2x2.<br>
+    - For example, in this box, you would write the # tokens of class 1 that were misclassified as class 0<br>
+    - Than, you got TP (True Positives), FN (False Negatives), FP (False Positives), and TN (True Negative)<br>
+    - The binary confusion matrix is standard in many fields, but different fields summarize its content in different ways.<br>
+    - In medicine, it is summarized using Sensitivity and Specificity.
+    - In information retrieval (IR) and AI, we usually summarize it using Recall and Precision.
+
+#### Specificity and Sensitivity
+
+- Specificity = True Negative Rate (TNR):
+    - $TNR = P(f(X) =0|Y=0) = \frac{TN}{TN+FP}$
+- Sensitivity = True Positive Rate (TPR):
+    - $TRP = P(f(X) =1|Y=1) = \frac{TP}{TP+FN}$
+- Precision:
+    - $P=P(Y =1|f(x)=1)=\frac{TP}{TP+FP}$
+- Recall:
+    - Recall = Sensitivity = TPR:
+    - $R = TRP = P(f(X) =1|Y=1) = \frac{TP}{TP+FN}$
 
 
+#### Training Corpora
 
+- Training vs. Test Corpora
+    **Training Corpus**: a set of data that you use in order to optimize the parameters of your classifier (for example, optimize which features you measure, how you use those features to make decisions, and so on).
+    **Test Corpus**: a set of data that is non-overlapping with the training set (none of the test tokens are also in the training dataset) that you can use to measure the accuracy.
+    - Measuring the training corpus accuracy is useful for debugging: if your training algorithm is working, then training corpus accuracy should always go up.
+    - Measuring the test corpus accuracy is the only way to estimate how your classifier will work on new data (data that you’ve never yet seen).
+
+!!! note Accuracy on which corpus?
+    - Large Scale Visual Recognition Challenge 2015: Each competing institution was allowed to test up to 2 different fully-trained classifiers per week.<br>
+    - One institution used 30 different e-mail addresses so that they could test a lot more classifiers (200, total). One of their systems achieved <46% error rate – the competition’s best, at that time.<br>
+    - Is it correct to say that that institution’s algorithm was the best?
+
+- Training vs. development test vs. evaluation test corpora
+    - **Training Corpus**: a set of data that you use in order to optimize the parameters of your classifier (for example, optimize which features you measure, what are the weights of those features, what are the thresholds, and so on). 
+    - **Development Test (DevTest or Validation) Corpus**: a dataset, separate from the training dataset, on which you test 200 different fully-trained classifiers (trained, e.g., using different training algorithms, or different features) to find the best.
+    - **Evaluation Test Corpus**: a dataset that is used only to test the ONE classifier that does best on DevTest. From this corpus, you learn how well your classifier will perform in the real world.
+
+
+### Summary
+
+1. Bayes Error Rate:
+$$
+Error Rate = \sum_x P(X=x)\underset{y}{min} P(Y \neq y |x=x)
+$$
+
+2. Confusion Matrix, Precision & Recall (Sensitivity)
+$$P=P(Y =1|f(x)=1)=\frac{TP}{TP+FP}$$
+$$R = TRP = P(f(X) =1|Y=1) = \frac{TP}{TP+FN}$$
+
+
+#### Training Corpora
 
 
 
