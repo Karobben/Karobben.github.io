@@ -83,6 +83,68 @@ Remember that the bag-of-words model is unable to represent this fact:
 
 ### Parameter estimation: Prior
 
+The prior, ***P(x)***, is usually estimated in one of two ways.
+- If we believe that the test corpus is like the training corpus, then we just use frequencies in the training corpus:
+$$
+P(Y = Spam) = \frac{Docs(Y=Spam)}{Docs(Y=Spam) + Docs(Y \neq Spam)}
+$$
+where ***Docs(Y=Spam)*** means the number of documents in the training corpus that have the label Y=Spam.
+- If we believe that the test corpus is different from the training corpus, then we set ***P(Y = Spam)*** = the frequency with which we believe spam will occur in the test corpus.
+
+### Parameter estimation: Likelihood
+
+The likelihood, ***P(W = w~i~|Y = y), is also estimated by counting. The “maximum likelihood estimate of the likelihood parameter” is the most intuitively obvious estimate:
+$$
+P(W=w_i| Y = Spam) = \frac{Count(W=w_i, Y = Spam)}{Count(Y = Spam)}
+$$
+where ***Count(W=w~i~, Y = Spam)*** means the number of times that the word ***w~i~*** occurs in the Spam portion of the training corpus, and ***Count(Y = Spam)*** is the total number of words in the Spam portion.
+
+### Laplace Smoothing for Naïve Bayes
+
+One of the biggest challenge for Bayes is it can't handle unobserved situation.
+
+- The basic idea: add $k$ “unobserved observations” to the count of every unigram
+  - If a word occurs 2000 times in the training data, Count = 2000+k
+  - If a word occur once in training data, Count = 1+k
+  - If a word never occurs in the training data, then it gets a pseudo-Count of $k$
+
+- Estimated probability of a word that occurred Count(w) times in the training data:
+  $$ P(W = w) = \frac{k + \text{Count}(W = w)}{k + \sum_v (k + \text{Count}(W = v))} $$
+
+- Estimated probability of a word that never occurred in the training data (an “out of vocabulary” or OOV word):
+  $$ P(W = \text{OOV}) = \frac{k}{k + \sum_v (k + \text{Count}(W = v))} $$
+
+- Notice that
+  $$ P(W = \text{OOV}) + \sum_w P(W = w) = 1 $$
+
+
+
+## Bayesian Networks
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -117,7 +117,22 @@ show cartoon, Mos99 and chain A chain B
 
 ## Colors for Pymol
 
-pymolwiki: [Colors for Pymol](https://pymolwiki.org/index.php/Color_Values)
+pymolwiki: [Colors' name and values](https://pymolwiki.org/index.php/color_values)
+
+Assign the name of color into an object
+```bash
+# assign the color into an object
+color red, Mos99
+# assign the color into selected molecules 
+select part1, Mos99 and chain A and resi 50+56+60
+color hotpink, part1
+```
+
+Example of set a color by RGB value and assign it into an object
+```bash
+set_color red2, [1,0.3,0.01]
+color red2, Mos99 
+```
 
 ## Strcture align
 
