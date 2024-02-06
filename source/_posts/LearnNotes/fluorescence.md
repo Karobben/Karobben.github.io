@@ -18,7 +18,13 @@ thumbnail: ""
 
 !!! note What happens after the molecule is excited?
     ![](https://imgur.com/nD2T2sw.png)
-    Fluorescence properties depend on what happens to the molecule during the ~10-8 sec during which it is excited
+    Fluorescence properties depend on what happens to the molecule during the ~10-8 sec during which it is excited<br>
+    Fluorescence happens very fast because it back to the ground state very fast. In general, the decay brings the electron from excited state to the ground state (decay defines as events per sec ($k_f$))<br>
+    Nan-radiative decay (exp: form of heat), the decay faster and does not generate photon. The energy transfer into solid molecules and spreed away. They don't went to exited state and generate photons.
+
+- the quantum yields for phosphorescence are usually very low because ==the radiative decay rates are slow compared to typical nonradiative rates== and quenching processes[^decay].
+
+[^decay]: Hurtubise RJ (1990) Phosphorimetry: Theory, Instrumentation, and Applications, VCH, New York.
 
 ### What are the processes of non-radiative decay?
 
@@ -26,6 +32,7 @@ thumbnail: ""
 |:-:|:-|
 |![](https://imgur.com/uYOhyLM.png)|Black = Non-radiative<br> Red = Radiative (photon)<br> ABS = absorption (10^15^)<br>**IC** = internal conversion <br> (k~IC~ ≈ 10^11~12^)<br> **Q** = quenching<br>**IX**=intersystem crossing<br>S~1~→T~0~: 10^8^; T~1~→S~0~: 10^2^<br> **Chem**=photochemistry<br>k~f~ ≈ 10^8^; k~p~ ≈ 10^2^<br> **F** = fluorescence<br> **P** = phosphorescence<br> Trans = energy transfer<br>k~collision~ ≈ 10^10^ M^-1^sec^-1^|
 
+Only apart of electron went to the S~1~ and they decay back to the ground state to generate fluorescence. Most of them when to S~2~ and decay faster., In this case, less energy lost through fluorescence. Those change are internal Change. When they when to T~1~ it transferred to other states (intersystem crossing) and generate phosphorescence. This state state decay very slow (phosphorescence decays for a few seconds or even more slow)
 
 - Internal Conversion: energy loss due to collisions with solvent molecules
     - collision rate = k~coll~ [solvent]
@@ -42,6 +49,11 @@ thumbnail: ""
     <li> [M] = 55 mol/1 L = 55 M
 
 
+The processes from the S~2~ to S~1~ is very fast and easily be absorbed and stored in the solvent.
+The processes from the S~1~ to the S~0~, the processes relatively slow.
+Concentration of bonds for solvent like water is very high, so it could store lots of energy.
+
+
 #### Solvent reorganization and the Stokes Shift
 
 Measure fluorescence at fixed λ~ex~ as a function of ***λ~em~***
@@ -53,7 +65,20 @@ Measure fluorescence at fixed λ~ex~ as a function of ***λ~em~***
 |[© libretexts.org](https://chem.libretexts.org/Bookshelves/Physical_and_Theoretical_Chemistry_Textbook_Maps/Supplemental_Modules_(Physical_and_Theoretical_Chemistry)/Spectroscopy/Electronic_Spectroscopy/Jablonski_diagram)|[© wikipedia](https://en.wikipedia.org/wiki/Stokes_shift)|
 ||Franck-Condon Overlap Factors<br>Prob (0’→2’) ≅ Prob (2’←0’) etc|
 
-![](https://imgur.com/3c7E6y8.png)
+
+The vibrational relaxation looks almost symitry. So, the peaks from the solvent reorganization should corresponded the states change in the vibrational relaxation.
+The emission shift (Stokes Shift) always as red-shifted (into right). So, the fluorescence always as less energy as the excited state.
+
+
+|Solvent Effect|
+|:-:|
+|![](https://imgur.com/3c7E6y8.png)|
+
+The larger, the more effects (?)
+
+1. Dipole changes after absorption. But the solvent dipole doesn't change. But this is not the favorite result, the dipole of the molecule changes
+2. (right) the solvent changes with the molecule. When the molecule back to the ground state and emitting fluorescence. But the solvent delay and change the ground the state of the molecule. It means the path from the S~1~ to S~0~ became shorter and the energy would used lesser. This phenomenon could be intensify by using more polar solvent.
+
 
 Absorption: ~ 10^-15^ sec
 Solvent reorganization (relaxation): ~ 10^-10^ sec
@@ -66,36 +91,46 @@ Step 2: The dipole-dipole interaction in turn stabilizes S1 and destabilizes S0.
 
 ### How long can a molecule stay in its excited state?
 
-Excite some molecules to $ S_1 $ with a brief pulse of light at $ t = 0 $, $ N_0^* $ excited state molecules
-Decay of the excited state population is exponential: $ \frac{dN^*(t)}{dt} = -(k_f + k_{NR})N^*(t) $
-So: $ N^ *(t) = N_0^ * e ^ {-(k_f+k_{NR})t} = N_0^ * e^ {-t/\tau} \quad$ where $N^* (t)$ is the number of excited molecules at time ***t***.
+Excite some molecules to $ S_1 $ with a brief pulse of light at $ t = 0 $, $ N_0^ * $ excited state molecules
+Decay of the excited state population is exponential: 
+$$ \frac{dN^ *(t)}{dt} = -(k_ f + k_{NR})N^ *(t) $$
 
-Define: lifetime $ \tau $
+left: ?. right: Chemical rate total decay rate * total concentration
+
+So: $ N ^ * (t) = N_ 0 ^ * e ^ {-(k_f+k_ {NR})t} = N_0 ^ * e^ {-t/\tau} \quad$ 
+where $N ^ * (t)$ is the number of excited molecules at time ***t***.
+
+Define: fluorescence lifetime $ \tau $
     $ \tau = \frac{1}{k_f + k_{NR}} $
+    the processes when 1/e ?  
+
 Hence, the equation for the decay of the excited state population:
-    $ N^*(t) = N_0^* e^ {-t/\tau} $
+    $ N^ *(t) = N_0^ * e^ {-t/\tau} $
 
 
 !!! note The meaning of the fluorescence lifetime
     ***τ*** has units of time (seconds) <br>
     $[N_ {t=\tau}^ *] = \frac{N_ 0^ *}{e} \approx 0/37N_ 0^ *$<br>
-    After one lifetime following excitation, the probability of a molecule still being in the excited state is about 37%
+    After one lifetime following excitation, the probability of a molecule still being in the excited state is about 37%. The shorter the ***&tau;*** the faster the decay.<br>
+    Commonly used fluorescence in biological system, the  ***&tau;*** ~ 1-10 ns
 
 #### How bright can a molecule be?
 
-Rate up: $S_0 \rightarrow S_1 = I_0$, unit: [# of photons absorbed/sec]
-Rate down: $S_1 \rightarrow S_0 = -(k_f + k_{NR}) \cdot N^*(t)$
-Unit: [1/sec][# of photons]
 
-$N^*(t)$ = concentration of excited state molecules at any time, $t$
-$k_{NR}$ = sum of all non-radiative rate constants
-$N^*(t) = [S_1(t)]$, [# of molecules]
+
+**Rate up**: $S_ 0 \rightarrow S_ 1 = I_ 0$, unit: [# of photons absorbed/sec]
+**Rate down**: $S_ 1 \rightarrow S_ 0 = -(k_ f + k_ {NR}) \cdot N ^*(t)$
+*Unit*: [1/sec][# of photons]
+
+$N^ *(t)$ = concentration of excited state molecules at any time, $t$
+$k_  {NR}$ = sum of all non-radiative rate constants
+$N^ *(t) = [S_1(t)]$, [# of molecules]
 
 Steady state: rate up = rate down
-$0 = \frac{dN^*(t)}{dt} = I_0 - (k_f + k_{NR}) N^*(t)$
+$0 = \frac{dN ^ *(t)}{dt} = I_ 0 - (k_ f + k_ {NR}) N ^ *(t)$
 
-In the steady state $N^*(t)$ is constant $= N^*_{SS}$
-$I_0 = (k_f + k_{NR}) N^*_{SS}$
+In the steady state $N ^ *(t)$ is constant $= N ^ * _ {SS}$
+$I_0 = (k_f + k_{NR}) N ^ *_{SS}$
 
 #### Fluorescence quantum yield (QY)
 
@@ -103,7 +138,7 @@ $Q_f$ (QY): fraction of excited-state molecules that relax to the ground state b
 
 photons/sec emitted in steady state
 
-$Q_f = \frac{k_f N^*_{SS}}{I_0} = \frac{k_f N^*_{SS}}{(k_f + k_{NR})N^*_{SS}}$
+$$ Q_f = \frac{k_ f N^ *_ {SS}}{I_ 0} = \frac{k_ f N^ *_ {SS}}{(k_ f + k_{NR})N^ *_ {SS}} $$
 
 Since $I_0 = (k_f + k_{NR})N^*_{SS}$
 
