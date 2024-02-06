@@ -28,6 +28,13 @@ make
 sudo make install
 ```
 
+Just download the build version:
+```bash
+wget http://opengene.org/fastp/fastp
+chmod a+x fastp
+```
+
+
 !!! info Bioconda
     `conda install -c bioconda fastp`
 
@@ -38,3 +45,10 @@ fastp -i in.fq -o out.fq
 ## for paired end data (gzip compressed)
 fastp -i in.R1.fq.gz -I in.R2.fq.gz -o out.R1.fq.gz -O out.R2.fq.gz
 ```
+
+## Some Examples
+
+!!! note delete reads with mean score value >= 20
+    - To remove reads with a mean quality score lower than 20 using fastp, you can use the -e option. This option sets the minimum mean quality score required for a read to be kept. If the mean quality score of a read is below this threshold, the read will be discarded.<br>
+    - for single end: `fastp -i input.fq -o filtered_output.fq -e 20` <br>
+    - for paired-ends: `fastp -i in1.fq -I in2.fq -o out1.fq -O out2.fq -e 20`
