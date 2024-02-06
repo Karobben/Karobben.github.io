@@ -1,0 +1,836 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>OPTICAL SPECTROSCOPY – THE ABSORPTION PROCESS - Karobben</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="Karobben"><meta name="msapplication-TileImage" content="https://s3.ax1x.com/2021/02/11/yBZjYQ.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Karobben"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="OPTICAL SPECTROSCOPY – THE ABSORPTION PROCESS"><meta property="og:type" content="blog"><meta property="og:title" content="OPTICAL SPECTROSCOPY – THE ABSORPTION PROCESS"><meta property="og:url" content="https://karobben.github.io/2024/01/30/LearnNotes/absorption/"><meta property="og:site_name" content="Karobben"><meta property="og:description" content="OPTICAL SPECTROSCOPY – THE ABSORPTION PROCESS"><meta property="og:locale" content="en_US"><meta property="og:image" content="http://hyperphysics.phy-astr.gsu.edu/hbase/imgmod/qpro1.png"><meta property="article:published_time" content="2024-01-31T05:37:02.000Z"><meta property="article:modified_time" content="2024-02-06T08:40:49.156Z"><meta property="article:author" content="Karobben"><meta property="article:tag" content="Biology, Data Science, Bioinformatics, R, Python, Linux, ggplot, English"><meta property="twitter:card" content="summary"><meta property="twitter:image" content="http://hyperphysics.phy-astr.gsu.edu/hbase/imgmod/qpro1.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://karobben.github.io/2024/01/30/LearnNotes/absorption/"},"headline":"Karobben","image":["http://hyperphysics.phy-astr.gsu.edu/hbase/imgmod/qpro1.png"],"datePublished":"2024-01-31T05:37:02.000Z","dateModified":"2024-02-06T08:40:49.156Z","author":{"@type":"Person","name":"Karobben"},"description":"OPTICAL SPECTROSCOPY – THE ABSORPTION PROCESS"}</script><link rel="canonical" href="https://karobben.github.io/2024/01/30/LearnNotes/absorption/"><link rel="alternate" href="/atom.xml" title="Karobben" type="application/atom+xml"><link rel="icon" href="https://s3.ax1x.com/2021/02/11/yBZjYQ.png"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><script>var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?8442e6ecc87d878298ba7d3bd0a5484c";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();</script><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css"><script src="https://www.googletagmanager.com/gtag/js?id=G-0DHWCVQ6K0" async></script><script>window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+    
+        gtag('config', 'G-0DHWCVQ6K0');</script><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script><!--!--><!--!--><meta name="generator" content="Hexo 5.4.0"></head><body class="is-3-column"><nav class="navbar navbar-main"><div class="container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="https://s1.ax1x.com/2022/09/27/xZnL6K.png" alt="Karobben" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/Karobben"><i class="fab fa-github"></i></a><a class="navbar-item is-hidden-tablet catalogue" title="Catalogue" href="javascript:;"><i class="fas fa-list-ul"></i></a><a class="navbar-item search" title="Search" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-6-widescreen"><div class="card"><div class="card-image"><span class="image is-7by3"><img class="fill" src="http://hyperphysics.phy-astr.gsu.edu/hbase/imgmod/qpro1.png" alt="OPTICAL SPECTROSCOPY – THE ABSORPTION PROCESS"></span><span class="ccopy" style="position: absolute; bottom: 0; right: 0; padding-right:3px; padding-left:4px; background-color: rgba(255, 255, 255, 0.6)"><a href = 'http://hyperphysics.phy-astr.gsu.edu/hbase/mod5.html'>© gsu.edu</a></span></div><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><i class="far fa-eye"></i><span> </span><span id="busuanzi_container_page_pv" style="display: inline;"><span id="busuanzi_value_page_pv">0</span> </span><span class="level-item">Posted&nbsp;<time dateTime="2024-01-31T05:37:02.000Z" title="1/30/2024, 11:37:02 PM">2024-01-30</time></span><span class="level-item">Updated&nbsp;<time dateTime="2024-02-06T08:40:49.156Z" title="2/6/2024, 2:40:49 AM">2024-02-06</time></span><span class="level-item">18 minutes read (About 2731 words)</span></div></div><h1 class="title is-3 is-size-4-mobile">OPTICAL SPECTROSCOPY – THE ABSORPTION PROCESS</h1><div class="content"><h2 id="OPTICAL-SPECTROSCOPY-–-THE-ABSORPTION-PROCESS">OPTICAL SPECTROSCOPY – THE ABSORPTION PROCESS</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"><img src="https://upload.wikimedia.org/wikipedia/commons/1/14/EM_Spectrum_Properties_%28Amplitude_Corrected%2C_Bitmap%29.png" alt="Eelctromagenetic spectrum"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">© wiki</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Small wavelength; High frequency; Blue end of the visible spectrum</li>
+<li>Long wavelength; Low frequency; Red end of the visible spectrum</li>
+<li>Energy of visible light is about 100-500 kJ/mol</li>
+</ul>
+<h2 id="Beer’s-Law-and-Absorbance">Beer’s Law and Absorbance</h2>
+<p>$$<br>
+\frac{I}{I_ 0} = 10^ {-\frac{kc(\Delta y)}{2.303}} = 10^ {- \epsilon c (\Delta y)} = 10^ {-A}<br>
+$$</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"><img src="https://imgur.com/66fOitE.png" alt="Beer’s Law"></th>
+<th style="text-align:left"><mark>Define of absorbance</mark>: <li> $ A = \epsilon c (\Delta y)$ or $A=\epsilon c l $<li> <em><strong>ε</strong></em>: Molar extinction coefficient<li> <em><strong>c</strong></em>: concentration in <em><strong>M</strong></em><li> <em><strong>Δy</strong></em>: path length in <em><strong>cm</strong></em> (some place use <em><strong>l</strong></em> as <em><strong>Δy</strong></em>)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><a target="_blank" rel="noopener" href="https://imamagnets.com/en/blog/the-beer-lambert-law/">© imamagnets</a></td>
+<td style="text-align:left"></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note"><p class="admonition-title">Application of Absorbance
+</p><p>Use UV-Vis absorbance to calculate the concentration of the molecules like DNA, protein, etc.</p>
+<p>$A=\epsilon (\lambda) c l$</p>
+</div>
+<table>
+<thead>
+<tr>
+<th>Molecule</th>
+<th>λ (nm)</th>
+<th>ε (×10<sup>-3</sup>) (M<sup>-1</sup>cm<sup>-1</sup>)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Adenine</td>
+<td>260.5</td>
+<td>13.4</td>
+</tr>
+<tr>
+<td>Adenosine</td>
+<td>259.5</td>
+<td>14.9</td>
+</tr>
+<tr>
+<td>NADH</td>
+<td>340, 259</td>
+<td>6.23, 14.4</td>
+</tr>
+<tr>
+<td>NAD+</td>
+<td>260</td>
+<td>18</td>
+</tr>
+<tr>
+<td>FAD</td>
+<td>450</td>
+<td>11.2</td>
+</tr>
+<tr>
+<td>Tryptophan</td>
+<td>280, 219</td>
+<td>5.6, 47</td>
+</tr>
+<tr>
+<td>Tyrosine</td>
+<td>274,222,193</td>
+<td>1.4, 8, 48</td>
+</tr>
+<tr>
+<td>Phenylalanine</td>
+<td>257, 206, 188</td>
+<td>0.2, 9.3, 60</td>
+</tr>
+<tr>
+<td>Histidine</td>
+<td>211</td>
+<td>5.9</td>
+</tr>
+<tr>
+<td>Cysteine</td>
+<td>250</td>
+<td>0.3</td>
+</tr>
+</tbody>
+</table>
+<h2 id="Quantum-Mechanical-Transition-Probability">Quantum Mechanical Transition Probability</h2>
+<p><img src="https://imgur.com/63nZqbL.png" alt="Transition Probability"></p>
+<p>The probability per unit time that a molecule in state 1 will end up in state 2 in the presence of an oscillating electromagnetic field at the resonance frequency<br>
+<mark>Energy of the light = Difference between energy levels</mark></p>
+<p>$$<br>
+Rate_ {1 → 2} = B_ {12} \rho (\nu)[S_ 1]<br>
+$$</p>
+<ul>
+<li><em><strong>B<sub>12</sub></strong></em>: rate constant</li>
+<li><em><strong>ρ(ν)</strong></em>: radiation field density</li>
+<li><em><strong>S<sub>1</sub></strong></em>: Concentration of molecules in the ground state</li>
+</ul>
+<div class="admonition note"><p class="admonition-title">Rate constant dependents on the transition dipole moment 
+</p><p>$B_{12} \propto \langle \mu \rangle^2$<br>
+$\langle \mu \rangle = \int \Psi_2 (q_e\vec{r})\Psi dV$<br>
+Transition dipole moment:<br>
+$\langle \mu \rangle \propto$ overlap between $\Psi_1$ and $\Psi_2$<br></p>
+</div>
+<h3 id="Dipole-approximation">Dipole approximation</h3>
+<p>When a light wave hit hydrogen atom, the <em><strong>r</strong></em> from the atom into electron is far smaller than the <em><strong>λ</strong></em>.</p>
+<ul>
+<li>$\because r &lt;&lt; \lambda$</li>
+<li>$\vec{\mu} = - q\vec{r}$</li>
+<li>$Energy = -\vec{\mu}\cdot\vec{E}$
+<ul>
+<li>$\vec{\mu}$: matter</li>
+<li>$\vec{E}$: Electric Field (amplitude of light)</li>
+</ul>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"><img src="https://i.stack.imgur.com/Dmk1Z.png" alt="Transition of the Dipole"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><a target="_blank" rel="noopener" href="https://chemistry.stackexchange.com/questions/90956/are-there-any-simple-molecules-with-very-different-absorption-and-emission-dip">© Sentry</a></td>
+</tr>
+<tr>
+<td style="text-align:center">The transition dipole reflects the change of electron distribution by excitation</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"><img src="https://upload.wikimedia.org/wikipedia/commons/e/e0/StationaryStatesAnimation.gif" alt="Transition of the Dipole"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Transition_dipole_moment">© wikipedia</a></td>
+</tr>
+<tr>
+<td style="text-align:center">Transition dipole moment</td>
+</tr>
+</tbody>
+</table>
+<h3 id="Overlap-of-wavefunctions-and-transition-probability">Overlap of wavefunctions and transition probability</h3>
+<p>$$\mu_{mn} = \int_{-\infty}^{\infty} \Psi_n^* \left( \sum_{i=1}^{N} q_e \vec{r}_i \right) \Psi_m , dr $$</p>
+<p>Where:</p>
+<ul>
+<li>$N$: Number of electrons in a molecule</li>
+<li>$\vec{r}_i$: Position of each electron</li>
+<li>$q_e$: electron charge</li>
+<li>$\Psi_n$: Excited state (or final state) molecular wave function</li>
+<li>$\Psi_m$: Ground state (or initial state) molecular wave function</li>
+</ul>
+<p>Note: each molecular wavefunction depends on the position of BOTH Nucleus AND electron but for now, let’s focus on electron wavefunction (i.e. no structural change of molecular structure or atom position).<br>
+Larger overlap of initial and final state wavefunctions means higher transition probability, which generates higher extinction coefficient (Fermi’s golden rule).</p>
+<p><strong>Wavefunction overlap:</strong> Larger wavefunction overlap of initial and final state means higher transition probability, which generates higher extinction coefficient (Fermi’s golden rule).</p>
+<p><strong>Orbital Symmetry:</strong></p>
+<p>$\int_{-\infty}^{\infty} f(r ) , dr = 0 \quad \text{if} \quad f(r )$ is an odd function; i.e., $f(-x) = -f(x)$<br>
+$\int_{-\infty}^{\infty} f(r ) , dr \neq 0 \quad \text{if} \quad f(r )$ is an even function; i.e., $f(-x) = f(x)$</p>
+<p>So: $\Psi_n^* \tilde{\Psi}_m$ must be an even function;<br>
+or: $\Psi_n^* \Psi_m$ must be an odd function (e.g., } $\pi$ and $\pi^ *$ state</p>
+<h3 id="Dipole-strength-and-Oscillator-strength">Dipole strength and Oscillator strength</h3>
+<p>Traditional ways to quantify the “strength of a transition”</p>
+<p><strong>Dipole strength</strong>: $D_{mn} = |\mu_{mn}|^2 = 9.18 \times 10^{-3} \int \left( \frac{\varepsilon}{\nu} \right) d\nu $<br>
+<strong>Oscillator strength</strong>: $f_{mn} = 4.315 \times 10^{-9} \int \varepsilon(\nu) d\nu $<br>
+Area under the spectrum associated with the <em><strong>m→n</strong></em> transition</p>
+<p>$ f_{mn} \approx 0.1-1 $ Strong absorption (heme, chlorophyll, organic dyes)<br>
+$ f_{mn} \approx 10^{-5} $ Weak absorption</p>
+<h3 id="Kuhn-Thomas-sum-rule-for-oscillator-strengths">Kuhn-Thomas sum rule for oscillator strengths</h3>
+<p>In any molecule with N electrons the sum of the oscillator strengths from any one state to all of the other states is equal to the sum of the electrons<br>
+$$<br>
+\sum_j f_{ij} = N<br>
+$$</p>
+<p>This means that <strong>the area underneath the absorption spectrum is a constant</strong> (ground state is the initial state).<br>
+If a molecule is perturbed (change environments) then if one transition goes down, another must go up.</p>
+<div class="admonition note"><p class="admonition-title">Every transition is associated with a transition dipole
+</p><p>The transition dipole is a vector:</p>
+<ul>
+<li>Direction: point in the direction of the electron displacement</li>
+<li>Amplitude: Strength of the absorption.</li>
+</ul>
+</div>
+<h3 id="Possible-transitions-in-UV-Vis-light-range">Possible transitions in UV-Vis light range</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"><img src="http://www.chem.ucla.edu/~bacher/UV-vis/electronic_energy_diagram.jpg" alt=""></th>
+<th style="text-align:center"><img src="http://www.chem.ucla.edu/~bacher/UV-vis/UV_vis_tetracyclone.jpg" alt=""></th>
+</tr>
+</thead>
+<tbody></tbody>
+</table>
+<p><a target="_blank" rel="noopener" href="http://www.chem.ucla.edu/~bacher/UV-vis/uv_vis_tetracyclone.html.html">© ucla.edu</a></p>
+<p><em><strong>σ→σ<sup>*</sup></strong></em> often requires absorption of photons higher than the UV- vis range (200-700 nm).</p>
+<h3 id="What-determines-the-probability-of-a-transition-strength-of-the-absorption-band">What determines the probability of a transition? (strength of the absorption band)</h3>
+<ol>
+<li>Orbital overlap (wavefunction)<br>
+π →π * Large overlap, more likely to happen, strong absorption<br>
+n →π * Small overlap, weak absorption</li>
+<li>Spin multiplicity<br>
+Electrons prefer not to change its intrinsic spin direction after absorption.</li>
+</ol>
+<p><img src="https://imgur.com/zDYufIq.png" alt=""></p>
+<h3 id="Effective-light-matter-interaction">Effective light-matter interaction</h3>
+<p><img src="https://imgur.com/xIpNElQ.png" alt=""></p>
+<ul>
+<li>
+<p><strong>Transition Rate:</strong><br>
+$$ Rate_{1 \rightarrow 2} = B_{12} \rho(\nu) [S_1]$$<br>
+Radiation field density</p>
+</li>
+<li>
+<p><strong>Component of the Electric Field:</strong><br>
+$$ E_{\parallel} = |\vec{E}| \cos \theta$$</p>
+</li>
+<li>
+<p><strong>Density of States:</strong><br>
+$$ \rho(\nu) \propto |E_{\parallel}|^2 = |\vec{E}|^2 \cos^2 \theta$$</p>
+</li>
+</ul>
+<h3 id="Effective-light-matter-interaction-v2">Effective light-matter interaction</h3>
+<p>The density of states $\rho(\nu)$ is proportional to the square of the parallel component of the electric field:</p>
+<p>$$ \rho(\nu) \propto |E_{\parallel}|^2 = |\vec{E}|^2 \cos^2 \theta$$</p>
+<p>This relationship is depicted through diagrams that illustrate the electric field vector $\vec{E}$ relative to the molecular transition dipole moment $\vec{\mu}$. The alignment of $\vec{E}$ with $\vec{\mu}$ affects the absorption, with maximum absorption when they are parallel and zero absorption when they are perpendicular. This is exemplified by the molecular orientations of adenine shown in the image.</p>
+<h3 id="Absorption-emission-and-stimulated-emission">Absorption, emission, and stimulated emission</h3>
+<p>The rates of absorption, emission, and stimulated emission can be described by the following equations:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Rates</th>
+<th style="text-align:left">Equetion</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>Absorption Rate</strong></td>
+<td style="text-align:left">$ Rate_{abs} = B_{12} \rho(\nu) [S_1] $</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Emission Rate</strong></td>
+<td style="text-align:left">$ Rate_{emi} = -A_{21} [S_2] $</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Stimulated Emission Rate</strong></td>
+<td style="text-align:left">$ Rate_{se} = -B_{21} \rho(\nu) [S_2] $</td>
+</tr>
+</tbody>
+</table>
+<p>At steady state, the rate of upward transitions (absorption) equals the rate of downward transitions (emission and stimulated emission):<br>
+$$ B_{12} \rho(\nu) [S_1] = A_{21} [S_2] + B_{21} \rho(\nu) [S_2] $$</p>
+<p><mark>A<sub>21</sub>, B<sub>12</sub>, and B<sub>21</sub> are called Einstein coefficients.</mark></p>
+<p><img src="https://imgur.com/xLU05Eh.png" alt=""></p>
+<p>It can be shown that:</p>
+<ol>
+<li>B<sub>12</sub>=B<sub>21</sub></li>
+<li>$\frac{A_ {21}}{B_ {21}} = \frac{16\pi^ 2 \hbar \nu^ 3}{c^ 3}$</li>
+</ol>
+<p>Faster spontaneous emission at higher Frequency</p>
+<p>In a typical UV-Vis spectroscopy (electronic transitions)</p>
+<p><strong>Conditions:</strong> $ A \gg B \rho(\nu) $<br>
+<strong>Einstein coefficients relationships:</strong> $ B_{12} \rho(\nu) [S_1] = A_{21} [S_2] + B_{21} \rho(\nu) [S_2] \approx A_{21} [S_2] $<br>
+<strong>Approximations:</strong> $ \frac{B_{12} \rho(\nu)}{A_{21}} \frac{[S_2]}{[S_1]} \ll 1 $<br>
+<strong>Population of states:</strong> $ [S_2] \ll [S_1] $<br>
+The population of the excited state never builds up to a significant amount.</p>
+<p>laser requires stimulated emission rate constant, i.e. B21, to be much larger than the spontaneous emission rate constant, i.e. A21.<br>
+So, UV laser is harder to make than visible light laser</p>
+<h2 id="Boltzmann-Distribution">Boltzmann Distribution</h2>
+<p>The probability $P_i$ of a system being in a state i with energy $E_i$ at temperature T is given by:</p>
+<p>$$ P_i = \frac{e^{-\frac{E_i}{k_B T}}}{\sum_{i=0}^{M} e^{-\frac{E_i}{k_B T}}} = \frac{e^{-\frac{E_i}{k_B T}}}{Q} $$</p>
+<p>Where:</p>
+<ul>
+<li>$Q$: Partition function</li>
+<li>$E_i$: Energy of the ith state</li>
+<li>$k_B$: Boltzmann constant $= 1.38 \times 10^{-23} J/K$</li>
+<li>$T$: Temperature (K)</li>
+</ul>
+<p>The ratio of probabilities between two states i and j is given by:</p>
+<p>$$ \frac{P_i}{P_j} = e^{-\frac{(E_i - E_j)}{k_B T}} = e^{-\frac{\Delta E}{k_B T}} $$</p>
+<h3 id="Quantum-Mechanical-Harmonic-Oscillator">Quantum Mechanical Harmonic Oscillator</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"><img src="https://www.researchgate.net/profile/Mauricio-Palafox/publication/277716088/figure/fig6/AS:651496681140224@1532340321204/Light-behaves-in-exactly-the-same-way-as-a-quantum-harmonic-oscillator-and-has-the-same.png" alt=""></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><a target="_blank" rel="noopener" href="https://www.researchgate.net/publication/277716088_Spectra_and_structure_of_benzonitriles_and_some_of_its_simple_derivatives_Spectra_and_structure_of_benzonitriles_and_some_of_its_simple_derivatives?_tp=eyJjb250ZXh0Ijp7ImZpcnN0UGFnZSI6Il9kaXJlY3QiLCJwYWdlIjoiX2RpcmVjdCJ9fQ">© Mauricio Alcolea Palafox</a></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"><img src="https://www.researchgate.net/profile/Anas-Al-Rabadi/publication/228529042/figure/fig3/AS:393722123571205@1470882077644/Harmonic-oscillator-HO-potential-and-wavefunctions-a-wavefunctions-for-various.png" alt=""></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><a target="_blank" rel="noopener" href="https://www.researchgate.net/figure/Harmonic-oscillator-HO-potential-and-wavefunctions-a-wavefunctions-for-various_fig3_228529042">© Anas Al-Rabadi</a> The panel left: wave funciton, the panel right: porbability of finding a nuclei</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Solve the time-independent Schrödinger Equation (for the nucleus) with
+<ul>
+<li>$ V(x) = \frac{1}{2}kx^2 $</li>
+</ul>
+</li>
+<li>The time-independent Schrödinger Equation is:
+<ul>
+<li>$ -\frac{\hbar^2}{2m} \frac{d^ 2\Psi(x)}{dx^2} + V(x)\Psi(x) = E\Psi(x) $</li>
+</ul>
+</li>
+<li>We get a set of wave functions and a set of energies:
+<ul>
+<li>$ \Psi_n(x) \quad$ (set of wave functions)</li>
+<li>$ E_n \quad $ (set of energies)</li>
+</ul>
+</li>
+<li>For a <mark>harmonic oscillator potential</mark>, the energy levels are given by:
+<ul>
+<li>$ E_n = \left(n + \frac{1}{2}\right)\hbar\omega $</li>
+<li>$ \omega_0 = \sqrt{\frac{k}{m_r}} = 2\pi\nu_0 $<br>
+where $ n = 0,1,2,3,\ldots $</li>
+</ul>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Franck-Condon-diagram.png/800px-Franck-Condon-diagram.png" alt=""></th>
+<th style="text-align:center"><img src="https://api.oe1.com/upload/2023/06/1_638205815647121689-20230606104546661.jpg" alt=""></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Deslandres_table">© wikipedia</a> Vibrational energy of the nuclei on top of electronic energy</td>
+<td style="text-align:center"><a target="_blank" rel="noopener" href="https://www.oe1.com/article/7071678131478081536.html">© oe1.com</a> Jablonski energy diagram</td>
+</tr>
+</tbody>
+</table>
+<p><mark>VERTICAL TRANSITION</mark>: consider the nuclei to remain in the same place during an electronic transition.<br>
+At thermal equilibrium, most molecules will be in the lowest vibrational state</p>
+<h3 id="Franck-Condon-factor-nuclear">Franck-Condon factor (nuclear)</h3>
+<p>The total wavefunction $\Psi(r, R)$ is a product of the electronic $\Psi_{el}(r, R)$ and nuclear $\Psi_{nuc}®$ wavefunctions:</p>
+<p>$$ \Psi(r, R) = \Psi_{el}(r, R)\Psi_{nuc}( R) $$</p>
+<ul>
+<li><code>electrons</code> refers to $\Psi_{el}(r, R)$</li>
+<li><code>nuclei</code> refers to $\Psi_{nuc}(R )$</li>
+</ul>
+<p>Transition from vibrational level i of the ground electronic state to the vibrational level j of the exited electronic state is given by:</p>
+<p>$$ \vec{\mu}_ {g \rightarrow ex,j} = \left( \vec{\mu}_ {g \rightarrow ex} \right) \int \Psi_ {nuc(j)}^* \Psi_ {nuc(i)} dR $$</p>
+<ul>
+<li>The electron transition dipole moment $\vec{\mu}_{g \rightarrow ex}$ represents the <code>Electron transition dipole moment</code>.</li>
+<li>Rest of the integral represents the <code>Nuclear overlap Factor</code>, also known as the Franck-Condon factor.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Vibrational structure and the Franck- Condon principle: vertical transitions</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><img src="https://imgur.com/tykLmAg.png" alt=""></td>
+</tr>
+</tbody>
+</table>
+<h3 id="Spectroscopic-broadening">Spectroscopic broadening</h3>
+<h4 id="Intrinsic">Intrinsic</h4>
+<table>
+<thead>
+<tr>
+<th>Column1</th>
+<th>Column2</th>
+<th>Column3</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Vibrational Structure</td>
+<td><img src="https://imgur.com/pmgO3tQ.png" alt=""></td>
+<td><img src="https://imgur.com/eEq28Js.png" alt=""></td>
+</tr>
+<tr>
+<td>Overlapping Electronic Bands</td>
+<td><img src="https://imgur.com/g55mveQ.png" alt=""></td>
+<td><img src="https://imgur.com/WxAS0gX.png" alt=""></td>
+</tr>
+</tbody>
+</table>
+<h4 id="Environment-solvent-effect">Environment: solvent effect</h4>
+<p><img src="https://imgur.com/UzP9Z1j.png" alt=""></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"></th>
+<th style="text-align:center"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><li>25% λ1 (state 1)<li> 50% λ2 (state 2)<li> 25% λ3 (state 3)</td>
+<td style="text-align:center"><img src="https://imgur.com/FIuq6xu.png" alt=""></td>
+</tr>
+</tbody>
+</table>
+<h3 id="Solvent-effects-on-the-absorption-spectrum-of-anisole">Solvent effects on the absorption spectrum of anisole</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"><img src="https://psiberg.com/wp-content/uploads/2021/09/chromophoric-shift-path.svg" alt="Hypochromic shift"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><a target="_blank" rel="noopener" href="https://psiberg.com/uv-vis-spectroscopy">© PSIBERG Team</a></td>
+</tr>
+</tbody>
+</table>
+<p><img src="https://imgur.com/eU4ljWs.png" alt=""></p>
+<p>to left: Bathochromic or <mark>Red shift</mark><br>
+to right: Hypsochromic or <mark>Blue shift</mark><br>
+The nature of the changes are not always simple to predict.</p>
+<div class="admonition note"><p class="admonition-title">How does the solvent influence the ground and excited states?
+</p><ol>
+<li>SOLVENT POLARITY: permanent dipole of the solvent molecules measured by the static dielectric constant. <em><strong>ε~r~</strong></em></li>
+<li>SOLVENT POLARIZABILITY: electron polarizability measured by index of refraction. <em><strong>n</strong></em></li>
+<li>Hydrogen bonding (protic vs. aprotic solvent)</li>
+</ol>
+</div>
+<p><img src="https://imgur.com/q6g0Azf.png" alt=""></p>
+<div class="admonition note"><p class="admonition-title">More on the dielectric constant
+</p></div>
+<p><strong>Material 1</strong>: High <em><strong>ε<sub>r</sub></strong></em>, therefore higher ability to cancel out (stabilize) the original source charge<br>
+<strong>Material 2</strong>: Low <em><strong>ε<sub>r</sub></strong></em>, The ability to insulate charge or The ability to stabilize charges</p>
+<p>The relative permittivity $\varepsilon_r$ as a function of frequency $\omega$ is given by:</p>
+<p>$$ \varepsilon_r(\omega) = \frac{\varepsilon(\omega)}{\varepsilon_0} $$</p>
+<p>Where:</p>
+<ul>
+<li>$\varepsilon_0$: vacuum permittivity (= 1.0)</li>
+<li>$\varepsilon$: material’s absolute permittivity</li>
+<li>$\varepsilon_r$: relative permittivity or dielectric constant</li>
+</ul>
+<p>Examples of relative permittivity for different materials:</p>
+<ul>
+<li>$\varepsilon_r$ (styrofoam) = 1.03</li>
+<li>$\varepsilon_r$ (dry wood) = 1.4 - 2.9</li>
+<li>$\varepsilon_r$ = 20</li>
+</ul>
+<p>Relative permittivity values for various solvents:</p>
+<table>
+<thead>
+<tr>
+<th>Solvent</th>
+<th>Hexane</th>
+<th>Ether</th>
+<th>Ethanol</th>
+<th>Methanol</th>
+<th>Water</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$\varepsilon_r$</td>
+<td>2</td>
+<td>4.3</td>
+<td>25.8</td>
+<td>31</td>
+<td>81</td>
+</tr>
+</tbody>
+</table>
+<p>Small value means it is non-polar solvent. Large value means it is a polar solvent.</p>
+<h3 id="Polar-effects-on-transitions-between-molecular-orbitals">Polar effects on transitions between molecular orbitals</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"><img src="https://ars.els-cdn.com/content/image/1-s2.0-S0030402617306472-gr9_lrg.jpg" alt=""></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S0030402617306472#fig0045">© Vaishali Gupta</a></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Compound</th>
+<th>λ(nm)</th>
+<th>Intensity/ε</th>
+<th>Transition with lowest energy</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CH₄</td>
+<td>122</td>
+<td>intense</td>
+<td>σ→σ* (C-H)</td>
+</tr>
+<tr>
+<td>CH₃CH₃</td>
+<td>130</td>
+<td>intense</td>
+<td>σ→σ* (C-C)</td>
+</tr>
+<tr>
+<td>CH₃OH</td>
+<td>183</td>
+<td>200</td>
+<td>n→σ* (C-O)</td>
+</tr>
+<tr>
+<td>CH₃SH</td>
+<td>235</td>
+<td>180</td>
+<td>n→σ* (C-S)</td>
+</tr>
+<tr>
+<td>CH₃NH₂</td>
+<td>210</td>
+<td>800</td>
+<td>n→σ* (C-N)</td>
+</tr>
+<tr>
+<td>CH₃Cl</td>
+<td>173</td>
+<td>200</td>
+<td>n→σ* (C-Cl)</td>
+</tr>
+<tr>
+<td>CH₃I</td>
+<td>258</td>
+<td>380</td>
+<td>n→σ* (C-I)</td>
+</tr>
+<tr>
+<td>CH₂=CH₂</td>
+<td>165</td>
+<td>16000</td>
+<td>π→π* (C=C)</td>
+</tr>
+<tr>
+<td>CH₃COCH₃</td>
+<td>187</td>
+<td>950</td>
+<td>π→π* (C=O)</td>
+</tr>
+<tr>
+<td>CH₃COCH₃</td>
+<td>273</td>
+<td>14</td>
+<td>n→π* (C=O)</td>
+</tr>
+<tr>
+<td>CH₃CSCl₃</td>
+<td>460</td>
+<td>weak</td>
+<td>n→π* (C=S)</td>
+</tr>
+<tr>
+<td>CH₃N=NCCH₃</td>
+<td>347</td>
+<td>15</td>
+<td>n→π* (N=N)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="Polarity-effect-on-π-π-transitions">Polarity effect on π-π* transitions</h3>
+<p><strong>Typical π-π<sup>*</sup> transitions</strong>: the dipole gets larger in the same direction<br>
+More stabilization, energy increases; <em><strong>high solvent polarity results in a RED SHIFT (of the absorption peak)</strong></em>.<br>
+<img src="https://imgur.com/gvx01OG.png" alt=""><br>
+In a more polar state: More stabilization, energy increases; high solvent polarity results in a RED SHIFT (of the absorption peak).</p>
+<p><strong>Typical n-π<sup>*</sup> transitions</strong>: the dipole of the chromophore <strong>gets smaller</strong> or shifts direction after excitation.<br>
+<img src="https://imgur.com/OIis4vS.png" alt=""><br>
+Less stabilization, energy increases; <strong>high solvent polarity</strong> results in a <strong>BLUE SHIFT (of the absorption peak)</strong></p>
+<h3 id="Example-spectral-shifts-of-mesityl-oxide">Example: spectral shifts of mesityl oxide</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"><img src="https://upload.wikimedia.org/wikipedia/commons/d/d8/Mesityl_oxide.png" alt="Mesityl oxide"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Mesityl_oxide">© wikipedia</a></td>
+</tr>
+</tbody>
+</table>
+<p>The solvent effects on the absorption maxima (λmax) for the π→π* and n→π* transitions in acetone:</p>
+<table>
+<thead>
+<tr>
+<th>solvent</th>
+<th>Static dielectric constant</th>
+<th>λmax (nm) π→π* (Red shift)</th>
+<th>λmax (nm) n→π* (Blue shift)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Hexane</td>
+<td>2</td>
+<td>229.5</td>
+<td>327</td>
+</tr>
+<tr>
+<td>Ether</td>
+<td>4.3</td>
+<td>230</td>
+<td>326</td>
+</tr>
+<tr>
+<td>Ethanol</td>
+<td>25.8</td>
+<td>237</td>
+<td>315</td>
+</tr>
+<tr>
+<td>Methanol</td>
+<td>31</td>
+<td>238</td>
+<td>312</td>
+</tr>
+<tr>
+<td>Water</td>
+<td>81</td>
+<td>244.5</td>
+<td>305</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><mark>Red shift</mark> indicates a lower energy transition as the dielectric constant increases.</li>
+<li><mark>Blue shift</mark> indicates a higher energy transition as the dielectric constant decreases.</li>
+</ul>
+<p>The transitions are characterized by their molar absorptivities (ε):</p>
+<ul>
+<li>n→π*: ε = 40M⁻¹cm⁻¹</li>
+<li>π→π*: ε = 12,600M⁻¹cm⁻¹</li>
+</ul>
+<h3 id="Indol-Tryptophan-π-π-transitions">Indol (Tryptophan) π-π* transitions</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"><img src="https://ars.els-cdn.com/content/image/1-s2.0-S1386142506001314-gr1.jpg" alt=""></th>
+<th style="text-align:center"><img src="https://ars.els-cdn.com/content/image/1-s2.0-S1386142506001314-gr3.gif" alt=""></th>
+</tr>
+</thead>
+<tbody></tbody>
+</table>
+<p><a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S1386142506001314?via%3Dihub">© Neera Sharma</a><br>
+<em><strong>L<sub>a</sub></strong></em>: large excited state dipole (lower energy state)<br>
+<em><strong>L<sub>b</sub></strong></em>: Smaller excited state dipole</p>
+<h3 id="Solvent-polarizability-measured-by-the-index-of-refraction">Solvent polarizability measured by the index of refraction</h3>
+<p>dipole is induced in the solvent by the dipole of the chromophore (ground state and excited state)<br>
+No nuclear movement involved. Purely due to electrons</p>
+<p><img src="https://imgur.com/qK3vQLw.png" alt=""><br>
+ground state dipole ( ← )<br>
+excited state (↑)<br>
+induced dipoles in solvent ( ← )</p>
+<h3 id="Some-values-of-solvent-index-of-refraction">Some values of solvent index of refraction</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">solvent</th>
+<th style="text-align:center">Index of refraction</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Perfluoropentane</td>
+<td style="text-align:center">1.239</td>
+</tr>
+<tr>
+<td style="text-align:left">Water</td>
+<td style="text-align:center">1.333</td>
+</tr>
+<tr>
+<td style="text-align:left">Ethanol</td>
+<td style="text-align:center">1.362</td>
+</tr>
+<tr>
+<td style="text-align:left">Iso-octane</td>
+<td style="text-align:center">1.392</td>
+</tr>
+<tr>
+<td style="text-align:left">Chloroform</td>
+<td style="text-align:center">1.446</td>
+</tr>
+<tr>
+<td style="text-align:left">Carbontetrachloride</td>
+<td style="text-align:center">1.463</td>
+</tr>
+</tbody>
+</table>
+<p>Note that water is less polarizable than iso-octane although clearly water is a much more polar solvent (larger dielectric constant)</p>
+<h3 id="Influence-on-the-energy-levels-of-π-n-π-orbitals-by-solvent-polarizability">Influence on the energy levels of π, n, π* orbitals by solvent polarizability</h3>
+<p><img src="https://imgur.com/g0UTFzH.png" alt=""></p>
+<ul>
+<li>π - π* transitions: red shift in more polarizable solvent<br>
+π* interacts with solvent dipoles more strongly than π</li>
+<li>n - π* transitions: blue shift in more polarizable solvent<br>
+n interacts with solvent dipoles more strongly than π*</li>
+</ul>
+<h3 id="Solvent-can-influence-the-energy-of-both-the-ground-and-the-excited-states">Solvent can influence the energy of both the ground and the excited states</h3>
+<p><img src="https://imgur.com/WPrGRUi.png" alt=""></p>
+<h3 id="Rhodopsin-a-protein-“solvent”-effect-on-the-absorption-spectrum-of-retinal">Rhodopsin: a protein “solvent” effect on the absorption spectrum of retinal</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"></th>
+<th style="text-align:left"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><img src="https://imgur.com/fwb7LLC.png" alt=""></td>
+<td style="text-align:left">vision is due to same pigment proteins in <strong><mark>rod</mark></strong> and <strong><mark>cone</mark></strong> cells:<li> λmax = 500 nm (rod cell)<li> λmax = 414 nm (blue cone)<li> λmax = 533 nm (green cone)<li> λmax = 560 nm (red cone) <br><br> Same chromophore: 11-cis retinal <br> “spectral tuning” by interaction with amino acid residues nearby</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"></th>
+<th style="text-align:left"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><img src="https://imgur.com/zpUcJAg.png" alt=""></td>
+<td style="text-align:left"><li>WT: 500 nm<li> G90S: 487 nm<li> T118A: 484 nm<li> E122D: 477 nm<li> A292S: 489 nm<li> A295S: 498 nm<li> T/E/A triple mutant: 453 nm</td>
+</tr>
+</tbody>
+</table>
+<style>
+pre {
+  background-color:#38393d;
+  color: #5fd381;
+}
+</style>
+</div><div class="article-licensing box"><div class="licensing-title"><p>OPTICAL SPECTROSCOPY – THE ABSORPTION PROCESS</p><p><a href="https://karobben.github.io/2024/01/30/LearnNotes/absorption/">https://karobben.github.io/2024/01/30/LearnNotes/absorption/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>Author</h6><p>Karobben</p></div></div><div class="level-item is-narrow"><div><h6>Posted on</h6><p>2024-01-30</p></div></div><div class="level-item is-narrow"><div><h6>Updated on</h6><p>2024-02-06</p></div></div><div class="level-item is-narrow"><div><h6>Licensed under</h6><p><a class="icon" rel="noopener" target="_blank" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a><a class="icon" rel="noopener" target="_blank" title="Attribution" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a><a class="icon" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/css/share.min.css"><div class="social-share"></div><script src="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/js/social-share.min.js"></script></article></div><div class="card"><div class="card-content"><h3 class="menu-label has-text-centered">Like this article? Support the author with</h3><div class="buttons is-centered"><a class="button donate" data-type="alipay"><span class="icon is-small"><i class="fab fa-alipay"></i></span><span>Alipay</span><span class="qrcode"><img src="/alipay.jpg" alt="Alipay"></span></a><a class="button donate" data-type="wechat"><span class="icon is-small"><i class="fab fa-weixin"></i></span><span>Wechat</span><span class="qrcode"><img src="/wepay.png" alt="Wechat"></span></a></div></div></div><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2024/02/01/LearnNotes/bayes/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">Naive Bayes and Bayes NetWork</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2024/01/26/LearnNotes/AI1/"><span class="level-item">Artificial Intelligent 1</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><div class="card"><div class="card-content"><h3 class="title is-5">Comments</h3></div><span styl="max-width: 95%"><script src="https://giscus.app/client.js" data-repo="karobben/utterances" data-repo-id="MDEwOlJlcG9zaXRvcnkyNzUwNjUwODg=" data-category="Announcements" data-category-id="DIC_kwDOEGUpAM4B-wRL" data-mapping="pathname" data-reactions-enabled="1" data-emit-metadata="0" data-theme="light" crossorigin="anonymous" async></script></span></div></div><div class="column column-left is-4-tablet is-4-desktop is-3-widescreen  order-1"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar is-rounded" src="https://s1.ax1x.com/2022/09/27/xZnWOU.jpg" alt="Karobben"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">Karobben</p><p class="is-size-6 is-block">Enjoy!</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>China</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">Posts</p><a href="/archives"><p class="title">514</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">Categories</p><a href="/categories"><p class="title">145</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">Tags</p><a href="/tags"><p class="title">160</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://github.com/karobben" target="_blank" rel="noopener">Follow</a></div><div class="level is-mobile is-multiline"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Github" href="https://github.com/karobben"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="RSS" href="/atom.xml"><i class="fas fa-rss"></i></a></div></div><div class="card"><script type="text/javascript" src="//rf.revolvermaps.com/0/0/7.js?i=5obi4wthjqz&amp;m=0c&amp;c=f03b11&amp;cr1=ffffff&amp;sx=0&amp;cw=ffffff&amp;cb=3472cd" async="async"></script></div></div><div class="card widget is-sticky" id="toc" data-type="toc"><div class="card-content"><div class="menu"><h3 class="menu-label">Catalogue</h3><ul class="menu-list"><li><a class="level is-mobile" href="#OPTICAL-SPECTROSCOPY-–-THE-ABSORPTION-PROCESS"><span class="level-left"><span class="level-item">1</span><span class="level-item">OPTICAL SPECTROSCOPY – THE ABSORPTION PROCESS</span></span></a></li><li><a class="level is-mobile" href="#Beer’s-Law-and-Absorbance"><span class="level-left"><span class="level-item">2</span><span class="level-item">Beer’s Law and Absorbance</span></span></a></li><li><a class="level is-mobile" href="#Quantum-Mechanical-Transition-Probability"><span class="level-left"><span class="level-item">3</span><span class="level-item">Quantum Mechanical Transition Probability</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#Dipole-approximation"><span class="level-left"><span class="level-item">3.1</span><span class="level-item">Dipole approximation</span></span></a></li><li><a class="level is-mobile" href="#Overlap-of-wavefunctions-and-transition-probability"><span class="level-left"><span class="level-item">3.2</span><span class="level-item">Overlap of wavefunctions and transition probability</span></span></a></li><li><a class="level is-mobile" href="#Dipole-strength-and-Oscillator-strength"><span class="level-left"><span class="level-item">3.3</span><span class="level-item">Dipole strength and Oscillator strength</span></span></a></li><li><a class="level is-mobile" href="#Kuhn-Thomas-sum-rule-for-oscillator-strengths"><span class="level-left"><span class="level-item">3.4</span><span class="level-item">Kuhn-Thomas sum rule for oscillator strengths</span></span></a></li><li><a class="level is-mobile" href="#Possible-transitions-in-UV-Vis-light-range"><span class="level-left"><span class="level-item">3.5</span><span class="level-item">Possible transitions in UV-Vis light range</span></span></a></li><li><a class="level is-mobile" href="#What-determines-the-probability-of-a-transition-strength-of-the-absorption-band"><span class="level-left"><span class="level-item">3.6</span><span class="level-item">What determines the probability of a transition? (strength of the absorption band)</span></span></a></li><li><a class="level is-mobile" href="#Effective-light-matter-interaction"><span class="level-left"><span class="level-item">3.7</span><span class="level-item">Effective light-matter interaction</span></span></a></li><li><a class="level is-mobile" href="#Effective-light-matter-interaction-v2"><span class="level-left"><span class="level-item">3.8</span><span class="level-item">Effective light-matter interaction</span></span></a></li><li><a class="level is-mobile" href="#Absorption-emission-and-stimulated-emission"><span class="level-left"><span class="level-item">3.9</span><span class="level-item">Absorption, emission, and stimulated emission</span></span></a></li></ul></li><li><a class="level is-mobile" href="#Boltzmann-Distribution"><span class="level-left"><span class="level-item">4</span><span class="level-item">Boltzmann Distribution</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#Quantum-Mechanical-Harmonic-Oscillator"><span class="level-left"><span class="level-item">4.1</span><span class="level-item">Quantum Mechanical Harmonic Oscillator</span></span></a></li><li><a class="level is-mobile" href="#Franck-Condon-factor-nuclear"><span class="level-left"><span class="level-item">4.2</span><span class="level-item">Franck-Condon factor (nuclear)</span></span></a></li><li><a class="level is-mobile" href="#Spectroscopic-broadening"><span class="level-left"><span class="level-item">4.3</span><span class="level-item">Spectroscopic broadening</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#Intrinsic"><span class="level-left"><span class="level-item">4.3.1</span><span class="level-item">Intrinsic</span></span></a></li><li><a class="level is-mobile" href="#Environment-solvent-effect"><span class="level-left"><span class="level-item">4.3.2</span><span class="level-item">Environment: solvent effect</span></span></a></li></ul></li><li><a class="level is-mobile" href="#Solvent-effects-on-the-absorption-spectrum-of-anisole"><span class="level-left"><span class="level-item">4.4</span><span class="level-item">Solvent effects on the absorption spectrum of anisole</span></span></a></li><li><a class="level is-mobile" href="#Polar-effects-on-transitions-between-molecular-orbitals"><span class="level-left"><span class="level-item">4.5</span><span class="level-item">Polar effects on transitions between molecular orbitals</span></span></a></li><li><a class="level is-mobile" href="#Polarity-effect-on-π-π-transitions"><span class="level-left"><span class="level-item">4.6</span><span class="level-item">Polarity effect on π-π* transitions</span></span></a></li><li><a class="level is-mobile" href="#Example-spectral-shifts-of-mesityl-oxide"><span class="level-left"><span class="level-item">4.7</span><span class="level-item">Example: spectral shifts of mesityl oxide</span></span></a></li><li><a class="level is-mobile" href="#Indol-Tryptophan-π-π-transitions"><span class="level-left"><span class="level-item">4.8</span><span class="level-item">Indol (Tryptophan) π-π* transitions</span></span></a></li><li><a class="level is-mobile" href="#Solvent-polarizability-measured-by-the-index-of-refraction"><span class="level-left"><span class="level-item">4.9</span><span class="level-item">Solvent polarizability measured by the index of refraction</span></span></a></li><li><a class="level is-mobile" href="#Some-values-of-solvent-index-of-refraction"><span class="level-left"><span class="level-item">4.10</span><span class="level-item">Some values of solvent index of refraction</span></span></a></li><li><a class="level is-mobile" href="#Influence-on-the-energy-levels-of-π-n-π-orbitals-by-solvent-polarizability"><span class="level-left"><span class="level-item">4.11</span><span class="level-item">Influence on the energy levels of π, n, π* orbitals by solvent polarizability</span></span></a></li><li><a class="level is-mobile" href="#Solvent-can-influence-the-energy-of-both-the-ground-and-the-excited-states"><span class="level-left"><span class="level-item">4.12</span><span class="level-item">Solvent can influence the energy of both the ground and the excited states</span></span></a></li><li><a class="level is-mobile" href="#Rhodopsin-a-protein-“solvent”-effect-on-the-absorption-spectrum-of-retinal"><span class="level-left"><span class="level-item">4.13</span><span class="level-item">Rhodopsin: a protein “solvent” effect on the absorption spectrum of retinal</span></span></a></li></ul></li></ul></div></div><style>#toc .menu-list > li > a.is-active + .menu-list { display: block; }#toc .menu-list > li > a + .menu-list { display: none; }</style><script src="/js/toc.js" defer></script></div><div class="card widget" data-type="tags"><div class="card-content"><div class="menu"><h3 class="menu-label">Tags</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/3D/"><span class="tag">3D</span><span class="tag">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/API/"><span class="tag">API</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/ATAC-Seq/"><span class="tag">ATAC-Seq</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Advanced-Mathematics/"><span class="tag">Advanced Mathematics</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Aging/"><span class="tag">Aging</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Align/"><span class="tag">Align</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Android/"><span class="tag">Android</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Antibody/"><span class="tag">Antibody</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Audio/"><span class="tag">Audio</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Behavior/"><span class="tag">Behavior</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/BiliBili/"><span class="tag">BiliBili</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/BioStatistics/"><span class="tag">BioStatistics</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Biochemistry/"><span class="tag">Biochemistry</span><span class="tag">43</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Bioinformatic/"><span class="tag">Bioinformatic</span><span class="tag">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Bioinformatics/"><span class="tag">Bioinformatics</span><span class="tag">72</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Biology/"><span class="tag">Biology</span><span class="tag">42</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Biopython/"><span class="tag">Biopython</span><span class="tag">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Book/"><span class="tag">Book</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/CLI-Tools/"><span class="tag">CLI Tools</span><span class="tag">15</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Cancer/"><span class="tag">Cancer</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Cell/"><span class="tag">Cell</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Cell-Biology/"><span class="tag">Cell Biology</span><span class="tag">24</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Chip-Seq/"><span class="tag">Chip-Seq</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Classes/"><span class="tag">Classes</span><span class="tag">74</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Cluster/"><span class="tag">Cluster</span><span class="tag">6</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Conky/"><span class="tag">Conky</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Crawler/"><span class="tag">Crawler</span><span class="tag">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Data/"><span class="tag">Data</span><span class="tag">12</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Data-Science/"><span class="tag">Data Science</span><span class="tag">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Database/"><span class="tag">Database</span><span class="tag">9</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Deep-Learning/"><span class="tag">Deep Learning</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Deepin/"><span class="tag">Deepin</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Disk/"><span class="tag">Disk</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Distribution/"><span class="tag">Distribution</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Dme/"><span class="tag">Dme</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/English/"><span class="tag">English</span><span class="tag">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/FASTA-Q/"><span class="tag">FASTA/Q</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/FTP/"><span class="tag">FTP</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Fasta/"><span class="tag">Fasta</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Fish/"><span class="tag">Fish</span><span class="tag">17</span></a></div><div class="control"><a class="tags has-addons" href="/tags/GATK/"><span class="tag">GATK</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/GO/"><span class="tag">GO</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Genome/"><span class="tag">Genome</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/GitPage/"><span class="tag">GitPage</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Graphviz/"><span class="tag">Graphviz</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/HTML/"><span class="tag">HTML</span><span class="tag">14</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Hexo/"><span class="tag">Hexo</span><span class="tag">19</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Hexo-Plugin/"><span class="tag">Hexo Plugin</span><span class="tag">6</span></a></div><div class="control"><a class="tags has-addons" href="/tags/IDE/"><span class="tag">IDE</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Image/"><span class="tag">Image</span><span class="tag">10</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Immunology/"><span class="tag">Immunology</span><span class="tag">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Interoperable-Plot/"><span class="tag">Interoperable Plot</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Japanese/"><span class="tag">Japanese</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Jupyter-Notebook/"><span class="tag">Jupyter Notebook</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/KEGG/"><span class="tag">KEGG</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/KEGG-pathway/"><span class="tag">KEGG pathway</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Kivy/"><span class="tag">Kivy</span><span class="tag">31</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Latex/"><span class="tag">Latex</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Links/"><span class="tag">Links</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Linux/"><span class="tag">Linux</span><span class="tag">43</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Logistic/"><span class="tag">Logistic</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Machine-Learning/"><span class="tag">Machine Learning</span><span class="tag">15</span></a></div><div class="control"><a class="tags has-addons" href="/tags/MarkDown/"><span class="tag">MarkDown</span><span class="tag">7</span></a></div><div class="control"><a class="tags has-addons" href="/tags/MateGenome/"><span class="tag">MateGenome</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Math/"><span class="tag">Math</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Matplotlib/"><span class="tag">Matplotlib</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Matrix/"><span class="tag">Matrix</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Meta-omics/"><span class="tag">Meta-omics</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Metabloism/"><span class="tag">Metabloism</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Metabolism/"><span class="tag">Metabolism</span><span class="tag">14</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Mice/"><span class="tag">Mice</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Mind-Plot/"><span class="tag">Mind Plot</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Mysql/"><span class="tag">Mysql</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/NGS/"><span class="tag">NGS</span><span class="tag">27</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Network/"><span class="tag">Network</span><span class="tag">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Neuron/"><span class="tag">Neuron</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Notes/"><span class="tag">Notes</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Nutrition-matrix/"><span class="tag">Nutrition matrix</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/OpenCV/"><span class="tag">OpenCV</span><span class="tag">17</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Others/"><span class="tag">Others</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/PCA/"><span class="tag">PCA</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/PDF/"><span class="tag">PDF</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/PacBio/"><span class="tag">PacBio</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Paper/"><span class="tag">Paper</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Papers/"><span class="tag">Papers</span><span class="tag">22</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Physics/"><span class="tag">Physics</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Plot/"><span class="tag">Plot</span><span class="tag">62</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Protein/"><span class="tag">Protein</span><span class="tag">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Proteomic/"><span class="tag">Proteomic</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Protocol/"><span class="tag">Protocol</span><span class="tag">9</span></a></div><div class="control"><a class="tags has-addons" href="/tags/PyMol/"><span class="tag">PyMol</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Python/"><span class="tag">Python</span><span class="tag">132</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Pyvista/"><span class="tag">Pyvista</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/QC/"><span class="tag">QC</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/R/"><span class="tag">R</span><span class="tag">86</span></a></div><div class="control"><a class="tags has-addons" href="/tags/R-packages/"><span class="tag">R packages</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/RNA-Seq/"><span class="tag">RNA-Seq</span><span class="tag">24</span></a></div><div class="control"><a class="tags has-addons" href="/tags/RNN/"><span class="tag">RNN</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/RasperryPi/"><span class="tag">RasperryPi</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Regression/"><span class="tag">Regression</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Response-Surface-Methodology/"><span class="tag">Response Surface Methodology</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/SNP/"><span class="tag">SNP</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Sanger-Sequencing/"><span class="tag">Sanger Sequencing</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Scientific-American/"><span class="tag">Scientific American</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Script/"><span class="tag">Script</span><span class="tag">7</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Scripting/"><span class="tag">Scripting</span><span class="tag">13</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Scripts/"><span class="tag">Scripts</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Seaborn/"><span class="tag">Seaborn</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/SeqKit/"><span class="tag">SeqKit</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Sequencing/"><span class="tag">Sequencing</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Software/"><span class="tag">Software</span><span class="tag">47</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Statistic/"><span class="tag">Statistic</span><span class="tag">14</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Super-Conductor/"><span class="tag">Super Conductor</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Synthetic-Cell/"><span class="tag">Synthetic Cell</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/System/"><span class="tag">System</span><span class="tag">8</span></a></div><div class="control"><a class="tags has-addons" href="/tags/TCGA/"><span class="tag">TCGA</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/TUI/"><span class="tag">TUI</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/TUI-lib/"><span class="tag">TUI lib</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Tensorflow/"><span class="tag">Tensorflow</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Termux/"><span class="tag">Termux</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Tools/"><span class="tag">Tools</span><span class="tag">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Transfer-Learning/"><span class="tag">Transfer Learning</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Translation/"><span class="tag">Translation</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Trinity/"><span class="tag">Trinity</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Tulane-Classes/"><span class="tag">Tulane Classes</span><span class="tag">39</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Tutorials/"><span class="tag">Tutorials</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/UIUC-Classes/"><span class="tag">UIUC Classes</span><span class="tag">8</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Urwid/"><span class="tag">Urwid</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/VCF/"><span class="tag">VCF</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Video/"><span class="tag">Video</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Vocabulary/"><span class="tag">Vocabulary</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/WGCNA/"><span class="tag">WGCNA</span><span class="tag">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Waque/"><span class="tag">Waque</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Web/"><span class="tag">Web</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Wet/"><span class="tag">Wet</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/WordCloud/"><span class="tag">WordCloud</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Writing/"><span class="tag">Writing</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Yuque/"><span class="tag">Yuque</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/abi/"><span class="tag">abi</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/api/"><span class="tag">api</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/apt/"><span class="tag">apt</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/bash/"><span class="tag">bash</span><span class="tag">19</span></a></div><div class="control"><a class="tags has-addons" href="/tags/blast/"><span class="tag">blast</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/bug/"><span class="tag">bug</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/dash/"><span class="tag">dash</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/email/"><span class="tag">email</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/flybase/"><span class="tag">flybase</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/ggkaboom/"><span class="tag">ggkaboom</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/ggplot/"><span class="tag">ggplot</span><span class="tag">43</span></a></div><div class="control"><a class="tags has-addons" href="/tags/ggplot-splitbar/"><span class="tag">ggplot_splitbar</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/git/"><span class="tag">git</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/map/"><span class="tag">map</span><span class="tag">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/matplotlib/"><span class="tag">matplotlib</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/miRNA-Seq/"><span class="tag">miRNA-Seq</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/nCov/"><span class="tag">nCov</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/orc/"><span class="tag">orc</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/scATAC-Seq/"><span class="tag">scATAC-Seq</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/scRNA-Seq/"><span class="tag">scRNA-Seq</span><span class="tag">9</span></a></div><div class="control"><a class="tags has-addons" href="/tags/torch/"><span class="tag">torch</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/vim/"><span class="tag">vim</span><span class="tag">1</span></a></div></div></div></div></div><div class="card widget" data-type="subscribe-email"><div class="card-content"><div class="menu"><h3 class="menu-label">Subscribe for updates</h3><form action="https://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open(&#039;https://feedburner.google.com/fb/a/mailverify?uri=&#039;,&#039;popupwindow&#039;,&#039;scrollbars=yes,width=550,height=520&#039;);return true"><input type="hidden" value="" name="uri"><input type="hidden" name="loc" value="en_US"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button" type="submit" value="Subscribe"></div></div></form></div></div></div><div class="card widget" data-type="links"><div class="card-content"><div class="menu"><h3 class="menu-label">Links</h3><ul class="menu-list"><li><a class="level is-mobile" href="https://www.jianshu.com/u/77fc519c6fa2" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">卖萌哥</span></span><span class="level-right"><span class="level-item tag">www.jianshu.com</span></span></a></li></ul></div></div></div><div class="column-right-shadow is-hidden-widescreen is-sticky"></div></div><div class="column column-right is-4-tablet is-4-desktop is-3-widescreen is-hidden-touch is-hidden-desktop-only order-3 is-sticky"><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">Recommends</h3><article class="media"><figure class="media-left"><a class="image" href="/2021/02/11/Blog/hexo_icarus/"><img src="https://camo.githubusercontent.com/fd83d8c9f8b8dbe85686812e2e186dceec728bbabad2d331aa44e0bfeee8628c/68747470733a2f2f70706f66666963652e6769746875622e696f2f6865786f2d7468656d652d6963617275732f67616c6c6572792f707265766965772e706e673f31" alt="Hexo theme: icarus| Highly personalize it"></a></figure><div class="media-content"><p class="date"><time dateTime="2021-02-11T06:00:00.000Z">2021-02-11</time></p><p class="title"><a href="/2021/02/11/Blog/hexo_icarus/">Hexo theme: icarus| Highly personalize it</a></p><p class="categories"><a href="/categories/others/">others</a> / <a href="/categories/others/Blog/">Blog</a> / <a href="/categories/others/Blog/Hexo/">Hexo</a></p></div></article><article class="media"><figure class="media-left"><a class="image" href="/2020/12/16/Python/kivy_Cross-platform-App/"><img src="https://kivy.org/logos/kivy-logo-black-64.png" alt="Kivy: hello world (Cross-platform GUI) for python"></a></figure><div class="media-content"><p class="date"><time dateTime="2020-12-16T06:00:00.000Z">2020-12-16</time></p><p class="title"><a href="/2020/12/16/Python/kivy_Cross-platform-App/">Kivy: hello world (Cross-platform GUI) for python</a></p><p class="categories"><a href="/categories/Python/">Python</a> / <a href="/categories/Python/Kivy/">Kivy</a></p></div></article><article class="media"><figure class="media-left"><a class="image" href="/2020/06/26/Blog/waque/"><img src="https://gw.alipayobjects.com/zos/rmsportal/xwaMkpycAdwCBrdgyWiT.png" alt="为什么我要使用瓦雀| markdown 语法大全"></a></figure><div class="media-content"><p class="date"><time dateTime="2020-06-26T05:00:00.000Z">2020-06-26</time></p><p class="title"><a href="/2020/06/26/Blog/waque/">为什么我要使用瓦雀| markdown 语法大全</a></p><p class="categories"><a href="/categories/others/">others</a> / <a href="/categories/others/Blog/">Blog</a> / <a href="/categories/others/Blog/Yuque/">Yuque</a></p></div></article><article class="media"><figure class="media-left"><a class="image" href="/2020/06/12/R/GGplot/"><img src="https://www.rstudio.com/wp-content/uploads/2014/04/ggplot2.png" alt="GGplot | A tutorials for beginner"></a></figure><div class="media-content"><p class="date"><time dateTime="2020-06-12T05:00:00.000Z">2020-06-12</time></p><p class="title"><a href="/2020/06/12/R/GGplot/">GGplot | A tutorials for beginner</a></p><p class="categories"><a href="/categories/R/">R</a> / <a href="/categories/R/Plot/">Plot</a> / <a href="/categories/R/Plot/GGPLOT/">GGPLOT</a></p></div></article><article class="media"><figure class="media-left"><a class="image" href="/2020/08/21/R/logistic_curve/"><img src="https://s1.ax1x.com/2022/10/21/x6dNZ9.png" alt="logistic regression in R"></a></figure><div class="media-content"><p class="date"><time dateTime="2020-08-21T05:00:00.000Z">2020-08-21</time></p><p class="title"><a href="/2020/08/21/R/logistic_curve/">logistic regression in R</a></p><p class="categories"><a href="/categories/R/">R</a> / <a href="/categories/R/Data/">Data</a> / <a href="/categories/R/Data/Statistic/">Statistic</a> / <a href="/categories/R/Data/Statistic/Regression/">Regression</a></p></div></article><article class="media"><figure class="media-left"><a class="image" href="/2020/06/29/Bioinfor/Competent_c/"><img src="https://tse3-mm.cn.bing.net/th/id/OIP.pg0lLEEeNeiUp31DPMKtRwHaCY" alt="Calcium Competent Cells"></a></figure><div class="media-content"><p class="date"><time dateTime="2020-06-29T05:00:00.000Z">2020-06-29</time></p><p class="title"><a href="/2020/06/29/Bioinfor/Competent_c/">Calcium Competent Cells</a></p><p class="categories"><a href="/categories/Biology/">Biology</a> / <a href="/categories/Biology/Wet-Protocol/">Wet Protocol</a></p></div></article><article class="media"><figure class="media-left"><a class="image" href="/2020/06/20/R/pheatmap/"><img src="https://s1.ax1x.com/2020/08/15/dFpkUH.png" alt="Pheatmap"></a></figure><div class="media-content"><p class="date"><time dateTime="2020-06-20T05:00:00.000Z">2020-06-20</time></p><p class="title"><a href="/2020/06/20/R/pheatmap/">Pheatmap</a></p><p class="categories"><a href="/categories/R/">R</a> / <a href="/categories/R/Plot/">Plot</a> / <a href="/categories/R/Plot/Heatmap/">Heatmap</a></p></div></article><article class="media"><figure class="media-left"><a class="image" href="/2021/02/21/LearnNotes/Paper_BSFlylavea_review/"><img src="https://cdn.pixabay.com/photo/2016/08/29/06/21/fly-1627592_960_720.jpg" alt="Diet switch| Black soldier fly larvae (BSFL) meal"></a></figure><div class="media-content"><p class="date"><time dateTime="2021-02-21T06:00:00.000Z">2021-02-21</time></p><p class="title"><a href="/2021/02/21/LearnNotes/Paper_BSFlylavea_review/">Diet switch| Black soldier fly larvae (BSFL) meal</a></p><p class="categories"><a href="/categories/Notes/">Notes</a> / <a href="/categories/Notes/Paper/">Paper</a> / <a href="/categories/Notes/Paper/Biology/">Biology</a></p></div></article></div></div><div class="card widget" data-type="categories"><div class="card-content"><div class="menu"><h3 class="menu-label">Categories</h3><ul class="menu-list"><li><a class="level is-mobile" href="/categories/Bioinformatics/"><span class="level-start"><span class="level-item">Bioinformatics</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/Biology/"><span class="level-start"><span class="level-item">Biology</span></span><span class="level-end"><span class="level-item tag">74</span></span></a><ul><li><a class="level is-mobile" href="/categories/Biology/Bioinformatics/"><span class="level-start"><span class="level-item">Bioinformatics</span></span><span class="level-end"><span class="level-item tag">68</span></span></a><ul><li><a class="level is-mobile" href="/categories/Biology/Bioinformatics/Chip-Seq/"><span class="level-start"><span class="level-item">Chip-Seq</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/Biology/Bioinformatics/Database/"><span class="level-start"><span class="level-item">Database</span></span><span class="level-end"><span class="level-item tag">5</span></span></a></li><li><a class="level is-mobile" href="/categories/Biology/Bioinformatics/Protein-Structure/"><span class="level-start"><span class="level-item">Protein Structure</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile" href="/categories/Biology/Bioinformatics/Proteomic/"><span class="level-start"><span class="level-item">Proteomic</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/Biology/Bioinformatics/Protocol/"><span class="level-start"><span class="level-item">Protocol</span></span><span class="level-end"><span class="level-item tag">18</span></span></a><ul><li><a class="level is-mobile" href="/categories/Biology/Bioinformatics/Protocol/Align/"><span class="level-start"><span class="level-item">Align</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/Biology/Bioinformatics/Protocol/Alternative-Splicing/"><span class="level-start"><span class="level-item">Alternative Splicing</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/Biology/Bioinformatics/Protocol/Annotation/"><span class="level-start"><span class="level-item">Annotation</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/Biology/Bioinformatics/Protocol/GO/"><span class="level-start"><span class="level-item">GO</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/Biology/Bioinformatics/Protocol/Genome/"><span class="level-start"><span class="level-item">Genome</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/Biology/Bioinformatics/Protocol/RNA-Seq/"><span class="level-start"><span class="level-item">RNA-Seq</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile" href="/categories/Biology/Bioinformatics/Protocol/SNP/"><span class="level-start"><span class="level-item">SNP</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile" href="/categories/Biology/Bioinformatics/Protocol/miRNA/"><span class="level-start"><span class="level-item">miRNA</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/Biology/Bioinformatics/Single-Cell/"><span class="level-start"><span class="level-item">Single Cell</span></span><span class="level-end"><span class="level-item tag">9</span></span></a></li><li><a class="level is-mobile" href="/categories/Biology/Bioinformatics/Software/"><span class="level-start"><span class="level-item">Software</span></span><span class="level-end"><span class="level-item tag">23</span></span></a><ul><li><a class="level is-mobile" href="/categories/Biology/Bioinformatics/Software/Align/"><span class="level-start"><span class="level-item">Align</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/Biology/Bioinformatics/Software/Bioconda/"><span class="level-start"><span class="level-item">Bioconda</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/Biology/Bioinformatics/Software/De-nove/"><span class="level-start"><span class="level-item">De nove</span></span><span class="level-end"><span class="level-item tag">7</span></span></a></li><li><a class="level is-mobile" href="/categories/Biology/Bioinformatics/Software/Dna-Methylation/"><span class="level-start"><span class="level-item">Dna Methylation</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/Biology/Bioinformatics/Software/Download/"><span class="level-start"><span class="level-item">Download</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/Biology/Bioinformatics/Software/FastQC/"><span class="level-start"><span class="level-item">FastQC</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/Biology/Bioinformatics/Software/Fastq-QC/"><span class="level-start"><span class="level-item">Fastq QC</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/Biology/Bioinformatics/Software/List/"><span class="level-start"><span class="level-item">List</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/Biology/Bioinformatics/Software/Sam/"><span class="level-start"><span class="level-item">Sam</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/Biology/Bioinformatics/Software/Trans/"><span class="level-start"><span class="level-item">Trans</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/Biology/Bioinformatics/Software/Visualization/"><span class="level-start"><span class="level-item">Visualization</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/Biology/Bioinformatics/Software/more/"><span class="level-start"><span class="level-item">more</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/Biology/Bioinformatics/others/"><span class="level-start"><span class="level-item">others</span></span><span class="level-end"><span class="level-item tag">5</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/Biology/Database/"><span class="level-start"><span class="level-item">Database</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile" href="/categories/Biology/Wet-Protocol/"><span class="level-start"><span class="level-item">Wet Protocol</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/Biology/others/"><span class="level-start"><span class="level-item">others</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/Data/"><span class="level-start"><span class="level-item">Data</span></span><span class="level-end"><span class="level-item tag">1</span></span></a><ul><li><a class="level is-mobile" href="/categories/Data/Statistic/"><span class="level-start"><span class="level-item">Statistic</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/Linux/"><span class="level-start"><span class="level-item">Linux</span></span><span class="level-end"><span class="level-item tag">41</span></span></a><ul><li><a class="level is-mobile" href="/categories/Linux/Arch/"><span class="level-start"><span class="level-item">Arch</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/Linux/Bash/"><span class="level-start"><span class="level-item">Bash</span></span><span class="level-end"><span class="level-item tag">7</span></span></a><ul><li><a class="level is-mobile" href="/categories/Linux/Bash/Beginner/"><span class="level-start"><span class="level-item">Beginner</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/Linux/Bash/More/"><span class="level-start"><span class="level-item">More</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile" href="/categories/Linux/Bash/awk-grep-sed/"><span class="level-start"><span class="level-item">awk/grep/sed</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/Linux/Data/"><span class="level-start"><span class="level-item">Data</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/Linux/GitHub/"><span class="level-start"><span class="level-item">GitHub</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/Linux/Monitor-top-Conky/"><span class="level-start"><span class="level-item">Monitor: top\Conky</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile" href="/categories/Linux/RasperryPi/"><span class="level-start"><span class="level-item">RasperryPi</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/Linux/Software/"><span class="level-start"><span class="level-item">Software</span></span><span class="level-end"><span class="level-item tag">11</span></span></a></li><li><a class="level is-mobile" href="/categories/Linux/System/"><span class="level-start"><span class="level-item">System</span></span><span class="level-end"><span class="level-item tag">5</span></span></a></li><li><a class="level is-mobile" href="/categories/Linux/Termux/"><span class="level-start"><span class="level-item">Termux</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/Linux/Ubuntu/"><span class="level-start"><span class="level-item">Ubuntu</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/Linux/others/"><span class="level-start"><span class="level-item">others</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/Notes/"><span class="level-start"><span class="level-item">Notes</span></span><span class="level-end"><span class="level-item tag">133</span></span></a><ul><li><a class="level is-mobile" href="/categories/Notes/Biology/"><span class="level-start"><span class="level-item">Biology</span></span><span class="level-end"><span class="level-item tag">13</span></span></a><ul><li><a class="level is-mobile" href="/categories/Notes/Biology/Bioinformatic/"><span class="level-start"><span class="level-item">Bioinformatic</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/Notes/Biology/Book/"><span class="level-start"><span class="level-item">Book</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/Notes/Biology/Dme/"><span class="level-start"><span class="level-item">Dme</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/Notes/Biology/Genetics/"><span class="level-start"><span class="level-item">Genetics</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/Notes/Biology/Immunity/"><span class="level-start"><span class="level-item">Immunity</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile" href="/categories/Notes/Biology/Virus/"><span class="level-start"><span class="level-item">Virus</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/Notes/Class/"><span class="level-start"><span class="level-item">Class</span></span><span class="level-end"><span class="level-item tag">75</span></span></a><ul><li><a class="level is-mobile" href="/categories/Notes/Class/Biochemistry/"><span class="level-start"><span class="level-item">Biochemistry</span></span><span class="level-end"><span class="level-item tag">25</span></span></a></li><li><a class="level is-mobile" href="/categories/Notes/Class/Cell-Biology/"><span class="level-start"><span class="level-item">Cell Biology</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/Notes/Class/Math/"><span class="level-start"><span class="level-item">Math</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/Notes/Class/Python/"><span class="level-start"><span class="level-item">Python</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/Notes/Class/Tulane/"><span class="level-start"><span class="level-item">Tulane</span></span><span class="level-end"><span class="level-item tag">39</span></span></a><ul><li><a class="level is-mobile" href="/categories/Notes/Class/Tulane/BioStatistics/"><span class="level-start"><span class="level-item">BioStatistics</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile" href="/categories/Notes/Class/Tulane/Biochemistry/"><span class="level-start"><span class="level-item">Biochemistry</span></span><span class="level-end"><span class="level-item tag">17</span></span></a></li><li><a class="level is-mobile" href="/categories/Notes/Class/Tulane/Bioinformatics/"><span class="level-start"><span class="level-item">Bioinformatics</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/Notes/Class/Tulane/Cell-Biology/"><span class="level-start"><span class="level-item">Cell Biology</span></span><span class="level-end"><span class="level-item tag">16</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/Notes/Class/UIUC/"><span class="level-start"><span class="level-item">UIUC</span></span><span class="level-end"><span class="level-item tag">8</span></span></a><ul><li><a class="level is-mobile" href="/categories/Notes/Class/UIUC/Biochemistry/"><span class="level-start"><span class="level-item">Biochemistry</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/Notes/Class/UIUC/Cell-Biology/"><span class="level-start"><span class="level-item">Cell Biology</span></span><span class="level-end"><span class="level-item tag">7</span></span></a></li></ul></li></ul></li><li><a class="level is-mobile" href="/categories/Notes/English/"><span class="level-start"><span class="level-item">English</span></span><span class="level-end"><span class="level-item tag">5</span></span></a></li><li><a class="level is-mobile" href="/categories/Notes/Japanese/"><span class="level-start"><span class="level-item">Japanese</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/Notes/Paper/"><span class="level-start"><span class="level-item">Paper</span></span><span class="level-end"><span class="level-item tag">23</span></span></a><ul><li><a class="level is-mobile" href="/categories/Notes/Paper/Biology/"><span class="level-start"><span class="level-item">Biology</span></span><span class="level-end"><span class="level-item tag">23</span></span></a><ul><li><a class="level is-mobile" href="/categories/Notes/Paper/Biology/Dme/"><span class="level-start"><span class="level-item">Dme</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/Notes/Paper/Biology/Reading-Notes/"><span class="level-start"><span class="level-item">Reading Notes</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li></ul></li><li><a class="level is-mobile" href="/categories/Notes/Statistic/"><span class="level-start"><span class="level-item">Statistic</span></span><span class="level-end"><span class="level-item tag">12</span></span></a><ul><li><a class="level is-mobile" href="/categories/Notes/Statistic/Data-Scientists/"><span class="level-start"><span class="level-item">Data Scientists</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile" href="/categories/Notes/Statistic/Distribution/"><span class="level-start"><span class="level-item">Distribution</span></span><span class="level-end"><span class="level-item tag">5</span></span></a></li><li><a class="level is-mobile" href="/categories/Notes/Statistic/others/"><span class="level-start"><span class="level-item">others</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/Notes/others/"><span class="level-start"><span class="level-item">others</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/Paper/"><span class="level-start"><span class="level-item">Paper</span></span><span class="level-end"><span class="level-item tag">2</span></span></a><ul><li><a class="level is-mobile" href="/categories/Paper/Biology/"><span class="level-start"><span class="level-item">Biology</span></span><span class="level-end"><span class="level-item tag">1</span></span></a><ul><li><a class="level is-mobile" href="/categories/Paper/Biology/Immunology/"><span class="level-start"><span class="level-item">Immunology</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/Paper/Diseases/"><span class="level-start"><span class="level-item">Diseases</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/Python/"><span class="level-start"><span class="level-item">Python</span></span><span class="level-end"><span class="level-item tag">127</span></span></a><ul><li><a class="level is-mobile" href="/categories/Python/API/"><span class="level-start"><span class="level-item">API</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile" href="/categories/Python/Beginner/"><span class="level-start"><span class="level-item">Beginner</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile" href="/categories/Python/Bio/"><span class="level-start"><span class="level-item">Bio</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile" href="/categories/Python/Crawler/"><span class="level-start"><span class="level-item">Crawler</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile" href="/categories/Python/Data/"><span class="level-start"><span class="level-item">Data</span></span><span class="level-end"><span class="level-item tag">17</span></span></a><ul><li><a class="level is-mobile" href="/categories/Python/Data/Machine-Learning/"><span class="level-start"><span class="level-item">Machine Learning</span></span><span class="level-end"><span class="level-item tag">7</span></span></a><ul><li><a class="level is-mobile" href="/categories/Python/Data/Machine-Learning/Deep-Learning/"><span class="level-start"><span class="level-item">Deep Learning</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/Python/Data/Machine-Learning/RNN/"><span class="level-start"><span class="level-item">RNN</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/Python/Data/Matrix/"><span class="level-start"><span class="level-item">Matrix</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/Python/GUI/"><span class="level-start"><span class="level-item">GUI</span></span><span class="level-end"><span class="level-item tag">1</span></span></a><ul><li><a class="level is-mobile" href="/categories/Python/GUI/others/"><span class="level-start"><span class="level-item">others</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/Python/Kivy/"><span class="level-start"><span class="level-item">Kivy</span></span><span class="level-end"><span class="level-item tag">30</span></span></a><ul><li><a class="level is-mobile" href="/categories/Python/Kivy/Toolbox/"><span class="level-start"><span class="level-item">Toolbox</span></span><span class="level-end"><span class="level-item tag">10</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/Python/OpenCV/"><span class="level-start"><span class="level-item">OpenCV</span></span><span class="level-end"><span class="level-item tag">17</span></span></a></li><li><a class="level is-mobile" href="/categories/Python/Plot/"><span class="level-start"><span class="level-item">Plot</span></span><span class="level-end"><span class="level-item tag">7</span></span></a></li><li><a class="level is-mobile" href="/categories/Python/Scripting/"><span class="level-start"><span class="level-item">Scripting</span></span><span class="level-end"><span class="level-item tag">14</span></span></a><ul><li><a class="level is-mobile" href="/categories/Python/Scripting/Module/"><span class="level-start"><span class="level-item">Module</span></span><span class="level-end"><span class="level-item tag">9</span></span></a></li><li><a class="level is-mobile" href="/categories/Python/Scripting/Practice/"><span class="level-start"><span class="level-item">Practice</span></span><span class="level-end"><span class="level-item tag">5</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/Python/TUI/"><span class="level-start"><span class="level-item">TUI</span></span><span class="level-end"><span class="level-item tag">6</span></span></a><ul><li><a class="level is-mobile" href="/categories/Python/TUI/Urwid/"><span class="level-start"><span class="level-item">Urwid</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile" href="/categories/Python/TUI/others/"><span class="level-start"><span class="level-item">others</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/Python/others/"><span class="level-start"><span class="level-item">others</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/R/"><span class="level-start"><span class="level-item">R</span></span><span class="level-end"><span class="level-item tag">84</span></span></a><ul><li><a class="level is-mobile" href="/categories/R/Beginner/"><span class="level-start"><span class="level-item">Beginner</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/R/Bio/"><span class="level-start"><span class="level-item">Bio</span></span><span class="level-end"><span class="level-item tag">10</span></span></a><ul><li><a class="level is-mobile" href="/categories/R/Bio/Abi/"><span class="level-start"><span class="level-item">Abi</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/R/Bio/Anno-Enrich/"><span class="level-start"><span class="level-item">Anno/Enrich</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/R/Bio/DEG/"><span class="level-start"><span class="level-item">DEG</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/R/Bio/Fasta/"><span class="level-start"><span class="level-item">Fasta</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/R/Bio/WGCNA/"><span class="level-start"><span class="level-item">WGCNA</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/R/Data/"><span class="level-start"><span class="level-item">Data</span></span><span class="level-end"><span class="level-item tag">9</span></span></a><ul><li><a class="level is-mobile" href="/categories/R/Data/Data-Clean/"><span class="level-start"><span class="level-item">Data Clean</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/R/Data/Machine-Learning/"><span class="level-start"><span class="level-item">Machine Learning</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile" href="/categories/R/Data/Statistic/"><span class="level-start"><span class="level-item">Statistic</span></span><span class="level-end"><span class="level-item tag">3</span></span></a><ul><li><a class="level is-mobile" href="/categories/R/Data/Statistic/Regression/"><span class="level-start"><span class="level-item">Regression</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li></ul></li></ul></li><li><a class="level is-mobile" href="/categories/R/Image/"><span class="level-start"><span class="level-item">Image</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/R/Pack-your-pack/"><span class="level-start"><span class="level-item">Pack your pack</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/R/Plot/"><span class="level-start"><span class="level-item">Plot</span></span><span class="level-end"><span class="level-item tag">56</span></span></a><ul><li><a class="level is-mobile" href="/categories/R/Plot/Blog/"><span class="level-start"><span class="level-item">Blog</span></span><span class="level-end"><span class="level-item tag">1</span></span></a><ul><li><a class="level is-mobile" href="/categories/R/Plot/Blog/Algorithm/"><span class="level-start"><span class="level-item">Algorithm</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/R/Plot/GGPLOT/"><span class="level-start"><span class="level-item">GGPLOT</span></span><span class="level-end"><span class="level-item tag">39</span></span></a></li><li><a class="level is-mobile" href="/categories/R/Plot/Heatmap/"><span class="level-start"><span class="level-item">Heatmap</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/R/Plot/Maps/"><span class="level-start"><span class="level-item">Maps</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/R/Plot/VisuaProtocol/"><span class="level-start"><span class="level-item">VisuaProtocol</span></span><span class="level-end"><span class="level-item tag">5</span></span></a></li><li><a class="level is-mobile" href="/categories/R/Plot/others/"><span class="level-start"><span class="level-item">others</span></span><span class="level-end"><span class="level-item tag">9</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/R/libraries/"><span class="level-start"><span class="level-item">libraries</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/R/others/"><span class="level-start"><span class="level-item">others</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/others/"><span class="level-start"><span class="level-item">others</span></span><span class="level-end"><span class="level-item tag">30</span></span></a><ul><li><a class="level is-mobile" href="/categories/others/Android/"><span class="level-start"><span class="level-item">Android</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/others/Blog/"><span class="level-start"><span class="level-item">Blog</span></span><span class="level-end"><span class="level-item tag">25</span></span></a><ul><li><a class="level is-mobile" href="/categories/others/Blog/HTML/"><span class="level-start"><span class="level-item">HTML</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/others/Blog/Hexo/"><span class="level-start"><span class="level-item">Hexo</span></span><span class="level-end"><span class="level-item tag">17</span></span></a></li><li><a class="level is-mobile" href="/categories/others/Blog/Sharing/"><span class="level-start"><span class="level-item">Sharing</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/others/Blog/Yuque/"><span class="level-start"><span class="level-item">Yuque</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/others/Blog/more/"><span class="level-start"><span class="level-item">more</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/others/Tools/"><span class="level-start"><span class="level-item">Tools</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/others/else/"><span class="level-start"><span class="level-item">else</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li></ul></li></ul></div></div></div></div></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="https://s1.ax1x.com/2022/09/27/xZnL6K.png" alt="Karobben" height="28"></a><script async src="/js/busuanzi.pure.js"></script><span id="busuanzi_container_site_pv">Visitied by <span id="busuanzi_value_site_pv"></span> times</span><p class="is-size-7"><span>&copy; 2024 Karobben</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/Karobben"><i class="fab fa-github"></i></a></p></div></div></div></div><script src="https://cdnjs.cloudflare.com/ajax/libs/viz.js/1.7.1/viz.js"></script></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("en");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="Back to top" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
+      window.cookieconsent.initialise({
+        type: "info",
+        theme: "edgeless",
+        static: false,
+        position: "bottom-left",
+        content: {
+          message: "This website uses cookies to improve your experience.",
+          dismiss: "Got it!",
+          allow: "Allow cookies",
+          deny: "Decline",
+          link: "Learn more",
+          policy: "Cookie Policy",
+          href: "https://www.cookiesandyou.com/",
+        },
+        palette: {
+          popup: {
+            background: "#edeff5",
+            text: "#838391"
+          },
+          button: {
+            background: "#4b81e8"
+          },
+        },
+      });
+    });</script><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><script type="text/x-mathjax-config">MathJax.Hub.Config({
+            'HTML-CSS': {
+                matchFontHeight: false
+            },
+            SVG: {
+                matchFontHeight: false
+            },
+            CommonHTML: {
+                matchFontHeight: false
+            },
+            tex2jax: {
+                inlineMath: [
+                    ['$','$'],
+                    ['\\(','\\)']
+                ]
+            }
+        });</script><script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/unpacked/MathJax.js?config=TeX-MML-AM_CHTML" defer></script><!--!--><!--!--><!--!--><script src="/js/main.js" defer></script><script src="https://unpkg.com/mermaid@8.8.4/dist/mermaid.min.js"></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="Type something..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"Type something...","untitled":"(Untitled)","posts":"Posts","pages":"Pages","categories":"Categories","tags":"Tags"});
+        });</script><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"left","width":150,"height":300},"mobile":{"show":true},"react":{"opacity":0.7}});</script></body></html>
