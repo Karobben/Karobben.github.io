@@ -99,10 +99,356 @@ Putting it all together,
 
 
 
+## Perceptron
+
+Perceptron is invented before the loss function 
+
+Linear classifier: Notation
+• The observation x^T^ = [x~1~, … , x~n~] is a real-valued vector (d is the number of feature dimensions)
+• The class label y ∈ Y is drawn from some finite set of class labels.
+• Usually the output vocabulary, Y, is some set of strings. For
+convenience, though, we usually map the class labels to a sequence
+of integers, Y = [1, … , v} , where � is the vocabulary size
+
+## Linear classifier: Definition
+
+A linear classifier is defined by
+
+$$
+f(x) = \text{argmax } Wx + b
+$$
+
+where:
+
+![](https://imgur.com/zuycCx8.png)
+
+$w_k, b_k$ are the weight vector and bias corresponding to class $k$, and the argmax function finds the element of the vector $wx$ with the largest value.
+
+There are a total of $v(d + 1)$ trainable parameters: the elements of the matrix $w$.
+
+![](https://imgur.com/undefined.png)
+
+# Example
+
+Notice that in the two-class case, the equation
+
+$$
+f(x) = \text{argmax } Wx + b
+$$
+
+Simplifies to
+
+![](https://imgur.com/QAGB3Ur.png)
+
+The class boundary is the line whose equation is
+
+$$
+(w_2 - w_1)^T x + (b_2 - b_1) = 0
+$$
+
+## Gradient descent
+
+# Gradient descent
+
+Suppose we have training tokens $(x_i, y_i)$, and we have some initial class vectors $w_1$ and $w_2$. We want to update them as
+
+$$
+w_1 \leftarrow w_1 - \eta \frac{\partial \mathcal{L}}{\partial w_1}
+$$
+
+$$
+w_2 \leftarrow w_2 - \eta \frac{\partial \mathcal{L}}{\partial w_2}
+$$
+
+...where $\mathcal{L}$ is some loss function. What loss function makes sense?
+
+![](https://imgur.com/YaSOBI6.png)
+
+### Zero-one loss function
+
+# Zero-one loss function
+
+The most obvious loss function for a classifier is its classification error rate,
+
+$$
+\mathcal{L} = \frac{1}{n} \sum_{i=1}^{n} \ell(f(x_i), y_i)
+$$
+
+Where $\ell(\hat{y}, y)$ is the zero-one loss function,
+
+$$
+\ell(f(x), y) =
+\begin{cases}
+0 & \text{if } f(x) = y \\
+1 & \text{if } f(x) \neq y
+\end{cases}
+
+
+### Non-differentiable!
+
+The problem with the zero -one loss function is that it’s not differentiable:
+![](https://imgur.com/tuIgHI9.png)
+
+### 
+
+Integer vectors: One-hot vectors, A one-hot vector is a binary vector in which all elements are 0 except for a single element that’s equal to 1.
 
 
 
 
+
+
+
+
+Drive the perceptron
+
+
+
+### The perceptron learning algorithm
+
+a mistake happens here (function)
+
+## Softmax
+
+
+### The perceptron learning algorithm
+
+1. Compute the classifier output $\hat{y} = \text{argmax}_k (w_k^T x + b_k)$
+
+2. Update the weight vectors as:
+
+$$
+w_k \leftarrow
+\begin{cases}
+w_k - \eta x & \text{if } k = \hat{y} \\\\
+w_k + \eta x & \text{if } k = y \\\\
+w_k & \text{otherwise}
+\end{cases}
+$$
+
+where $\eta \approx 0.01$ is the learning rate.
+
+
+Key idea: $f_c(x) =$ posterior probability of cass $c$
+
+- A perceptron has a one-hot output vector, in which $f_c(x) = 1$ if the
+neural net thinks $c$ is the most likely value of $y$, and 0 otherwise
+- A softmax computes $f_c(x) \approx Pr(Y =c |x)$. The conditions for this to be true are:
+    - It needs to satisfy the axioms of probability:
+        $$ 0 \leq f_c(x) \leq 1, \quad \sum_{c=1}^{v} f_c(x) = 1$$
+    - The weight matrix, $W$, is trained using a loss function that encourages $f(x)$ to approximate posterior probability of the labels on some training dataset:
+    $$f_c(x) \approx \Pr(Y = c|x)$$
+
+### Softmax satisfies the axioms of probability
+
+- Axiom #1, probabilities are non-negative $(f_k(x) \geq 0)$. There are many ways to do this, but one way that works is to choose:
+  
+  $$
+  f_c(x) \propto \exp(w_c^T x + b_c)
+  $$
+
+- Axiom #2, probabilities should sum to one $(\sum_{k=1}^{v} f_k(x) = 1)$. This can be done by normalizing:
+
+$$
+f(x) = [f_1(x), ..., f_v(x)]^T
+$$
+$$
+f_c(x) = \frac{\exp(w_c^T x + b_c)}{\sum_{k=0}^{v-1} \exp(w_k^T x + b_k)}
+$$
+
+where $w_k^T$ is the $k^{th}$ row of the matrix $W$.
+
+### The logistic sigmoid function
+
+For a two-class classifier, we don’t really need the vector label. If we define $w = w_2 - w_1$ and $b = b_2 - b_1$, then the softmax simplifies to:
+
+$$
+f(Wx + b) = 
+\begin{bmatrix}
+\text{Pr}(Y = 1|x) \\\\
+\text{Pr}(Y = 2|x)
+\end{bmatrix} =
+\begin{bmatrix}
+\frac{1}{1+e^ {-(w^ Tx+b)}} \\\\
+\frac{e^ {-(w^ Tx+b)}}{1+e^ {-(w^ Tx+b)}}
+\end{bmatrix} =
+\begin{bmatrix}
+\sigma(w^Tx + b) \\\\
+1 - \sigma(w^Tx + b)
+\end{bmatrix}
+$$
+
+... so instead of the softmax, we use a scalar function called the logistic sigmoid function:
+
+$$
+\sigma(z) = \frac{1}{1+e^{-z}}
+$$
+
+This function is called sigmoid because it is S-shaped.
+
+For $z \to -\infty$, $\sigma(z) \to 0$
+
+For $z \to +\infty$, $\sigma(z) \to 1$
+
+### Gradient descent
+
+Suppose we have training tokens $(x_i, y_i)$, and we have some initial class vectors $w_1$ and $w_2$. We want to update them as
+
+$$
+w_1 \leftarrow w_1 - \eta \frac{\partial \mathcal{L}}{\partial w_1}
+$$
+
+$$
+w_2 \leftarrow w_2 - \eta \frac{\partial \mathcal{L}}{\partial w_2}
+$$
+
+...where $\mathcal{L}$ is some loss function. What loss function makes sense?
+
+
+### Zero-one loss function
+
+The most obvious loss function for a classifier is its classification error rate,
+
+$$
+\mathcal{L} = \frac{1}{n} \sum_{i=1}^{n} \ell(\hat{f}(x_i), y_i)
+$$
+
+Where $\ell(\hat{y}, y)$ is the zero-one loss function,
+
+$$
+\ell(f(x), y) = 
+\begin{cases}
+0 & \text{if } f(x) = y \\\\
+1 & \text{if } f(x) \neq y
+\end{cases}
+$$
+
+The problem with zero-one loss is that it’s not differentiable.
+
+### A loss function that learns probabilities
+
+Suppose we have a softmax output, so we want $f_c(x) \approx \Pr(Y = c|x)$. We can train this by learning $W$ and $b$ to maximize the probability of the training corpus. If we assume all training tokens are independent, we get:
+
+$$
+W, b = \underset{W,b}{\text{argmax}} \prod_{i=1}^{n} \Pr(Y = y_i|x_i) = \underset{W,b}{\text{argmax}} \sum_{i=1}^{n} \ln \Pr(Y = y_i|x_i)
+$$
+
+But remember that $f_c(x) \approx \Pr(Y = c|x)$! Therefore, maximizing the log probability of training data is the same as minimizing the cross entropy between the neural net and the ground truth:
+
+$$
+W, b = \underset{W,b}{\text{argmin}} -\frac{1}{n} \sum_{i=1}^{n} \mathcal{L}_ i, \quad \mathcal{L}_ i = - \log f_ {y_ i}(x_ i)
+$$
+
+### Cross-entropy
+
+This loss function:
+
+$$
+\mathcal{L} = - \ln f_{y}(x)
+$$
+
+is called cross-entropy. It measures the difference in randomness between:
+
+- Truth: $Y = y$ with probability 1.0, $\ln(1.0) = 0$, minus the
+- Neural net estimate: $Y = y$ with probability $f_{y}(x)$.
+
+Thus
+
+$$
+\mathcal{L} = 0 - \ln f_{y}(x)
+$$
+
+### Gradient of the cross-entropy of the softmax
+
+Since we have these definitions:
+
+$$
+\mathcal{L} = - \ln f_{y}(x), \quad f_{y}(x) = \frac{\exp(z_{y})}{\sum_{k=1}^{v} \exp(z_{k})}, \quad z_{c} = w_c^T x + b_c
+$$
+
+Then:
+
+$$
+\frac{\partial \mathcal{L}}{\partial w_c} = \left( \frac{\partial \mathcal{L}}{\partial z_c} \right) \left( \frac{\partial z_c}{\partial w_c} \right) = \left( \frac{\partial \mathcal{L}}{\partial z_c} \right) x
+$$
+
+...where:
+
+$$
+\frac{\partial \mathcal{L}}{\partial z_c} =
+\begin{cases}
+f_{c}(x_i) - 1 & c = y \\\\
+f_{c}(x_i) & c \neq y
+\end{cases}
+$$
+
+### Similarity to linear regression
+
+For linear regression, we had:
+
+$$
+\frac{\partial \mathcal{L}}{\partial w} = \epsilon x, \quad \epsilon = f(x) - y
+$$
+
+For the softmax classifier with cross-entropy loss, we have
+
+$$
+\frac{\partial \mathcal{L}}{\partial w_c} = \epsilon_c x
+$$
+
+$$
+\epsilon_c =
+\begin{cases}
+f_c(x_i) - 1 & c = y \text{ (output should be 1)} \\\\
+f_c(x_i) & \text{otherwise (output should be 0)}
+\end{cases}
+$$
+
+### Similarity to perceptron
+
+Suppose we have a training token $(x, y)$, and we have some initial class vectors $w_c$. Using softmax and cross-entropy loss, we can update the weight vectors as
+
+$$
+w_c \leftarrow w_c - \eta \epsilon_c x
+$$
+
+...where
+
+$$
+\epsilon_c =
+\begin{cases}
+f_c(x_i) - 1 & c = y_i \\\\
+f_c(x_i) & \text{otherwise}
+\end{cases}
+$$
+
+In other words, like a perceptron,
+
+$$
+\epsilon_c =
+\begin{cases}
+\epsilon_c < 0 & c = y_i \\\\
+\epsilon_c > 0 & \text{otherwise}
+\end{cases}
+$$
+
+### Outline
+
+- Softmax: 
+  $$ f_c(x) = \frac{\exp(w_c^T x + b_c)}{\sum_{k=1}^{v} \exp(w_k^T x + b_k)} \approx \Pr(Y = c|x) $$
+
+- Cross-entropy: 
+  $$ \mathcal{L} = - \ln f_{y}(x) $$
+
+- Derivative of the cross-entropy of a softmax:
+  $$ \frac{\partial \mathcal{L}}{\partial w_c} = \epsilon_c x, \quad \epsilon_c = 
+  \begin{cases}
+    f_c(x_i) - 1 & c = y \text{ (output should be 1)} \\\\
+    f_c(x_i) & \text{otherwise (output should be 0)}
+  \end{cases} $$
+
+- Gradient descent:
+  $$ w_c \leftarrow w_c - \eta \epsilon_c x $$
 
 
 <style>

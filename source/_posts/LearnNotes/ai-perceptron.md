@@ -4,7 +4,7 @@ url: ai_perceptron
 covercopy: © Karobben
 priority: 10000
 date: 2024-02-07 13:03:23
-title:
+title: 
 ytitle:
 description:
 excerpt:
