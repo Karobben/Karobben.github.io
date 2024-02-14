@@ -1,39 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://karobben.github.io/2020/07/28/Bioinfor/fastp/</loc>
-    <lastmod>2024-02-06</lastmod>
+    <loc>https://karobben.github.io/2024/02/11/LearnNotes/math-cal/</loc>
+    <lastmod>2024-02-14</lastmod>
   </url>
   <url>
-    <loc>https://karobben.github.io/2024/01/30/LearnNotes/absorption/</loc>
-    <lastmod>2024-02-06</lastmod>
+    <loc>https://karobben.github.io/2020/07/28/Bioinfor/Trimmomatic/</loc>
+    <lastmod>2024-02-14</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2020/07/28/Bioinfor/fastp/</loc>
+    <lastmod>2024-02-14</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2020/07/28/Bioinfor/fastqc/</loc>
+    <lastmod>2024-02-14</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2023/01/24/Bioinfor/idtracker/</loc>
+    <lastmod>2024-02-14</lastmod>
   </url>
   <url>
     <loc>https://karobben.github.io/2024/02/05/Bioinfor/seqkit/</loc>
-    <lastmod>2024-02-06</lastmod>
-  </url>
-  <url>
-    <loc>https://karobben.github.io/2024/02/05/LearnNotes/ai-linear/</loc>
-    <lastmod>2024-02-06</lastmod>
-  </url>
-  <url>
-    <loc>https://karobben.github.io/2024/02/06/LearnNotes/fluorescence/</loc>
-    <lastmod>2024-02-06</lastmod>
-  </url>
-  <url>
-    <loc>https://karobben.github.io/2021/09/17/Bioinfor/pymol/</loc>
-    <lastmod>2024-02-03</lastmod>
+    <lastmod>2024-02-14</lastmod>
   </url>
   <url>
     <loc>https://karobben.github.io/2024/02/02/LearnNotes/ai-learning/</loc>
-    <lastmod>2024-02-03</lastmod>
+    <lastmod>2024-02-14</lastmod>
   </url>
   <url>
-    <loc>https://karobben.github.io/2024/02/01/LearnNotes/bayes/</loc>
-    <lastmod>2024-02-03</lastmod>
+    <loc>https://karobben.github.io/2024/02/05/LearnNotes/ai-linear/</loc>
+    <lastmod>2024-02-14</lastmod>
   </url>
   <url>
-    <loc>https://karobben.github.io/2024/01/26/LearnNotes/AI1/</loc>
+    <loc>https://karobben.github.io/2024/02/01/LearnNotes/ai-bayes/</loc>
+    <lastmod>2024-02-14</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2024/02/12/LearnNotes/ai-hmm/</loc>
+    <lastmod>2024-02-14</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2024/01/26/LearnNotes/ai-probability/</loc>
+    <lastmod>2024-02-14</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2024/02/07/LearnNotes/ai-perceptron/</loc>
+    <lastmod>2024-02-14</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2024/02/06/LearnNotes/fluorescence/</loc>
+    <lastmod>2024-02-08</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2024/01/30/LearnNotes/absorption/</loc>
+    <lastmod>2024-02-05</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2021/09/17/Bioinfor/pymol/</loc>
     <lastmod>2024-02-02</lastmod>
   </url>
   <url>
@@ -415,10 +439,6 @@
   <url>
     <loc>https://karobben.github.io/2023/07/10/Python/progressbar/</loc>
     <lastmod>2023-07-10</lastmod>
-  </url>
-  <url>
-    <loc>https://karobben.github.io/2023/01/24/Bioinfor/idtracker/</loc>
-    <lastmod>2023-06-29</lastmod>
   </url>
   <url>
     <loc>https://karobben.github.io/2020/08/25/Blog/Latex/</loc>
@@ -1917,10 +1937,6 @@
     <lastmod>2023-06-06</lastmod>
   </url>
   <url>
-    <loc>https://karobben.github.io/2020/07/28/Bioinfor/fastqc/</loc>
-    <lastmod>2023-06-06</lastmod>
-  </url>
-  <url>
     <loc>https://karobben.github.io/2021/01/31/Bioinfor/food_gene_db/</loc>
     <lastmod>2023-06-06</lastmod>
   </url>
@@ -2026,10 +2042,6 @@
   </url>
   <url>
     <loc>https://karobben.github.io/2020/07/28/Bioinfor/Tophat/</loc>
-    <lastmod>2023-06-06</lastmod>
-  </url>
-  <url>
-    <loc>https://karobben.github.io/2020/07/28/Bioinfor/Trimmomatic/</loc>
     <lastmod>2023-06-06</lastmod>
   </url>
   <url>

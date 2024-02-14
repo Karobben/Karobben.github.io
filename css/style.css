@@ -10879,14 +10879,15 @@ article.article .content blockquote footer strong + cite {
 article.article .content span .mjx-chtml {
   overflow: auto;
   max-width: 100%;
-  font-size: 1.5em;
+  max-height: 100%;
+  font-size: 1.1em;
   z-index: 999;
 }
 article.article .content span .mjx-math {
-  font-size: 1.1em;
+  font-size: 1em;
   background-color: #fff;
   font-weight: 700;
-  color: SteelBlue;
+  color: Black;
 }
 article.article .content .message.message-immersive {
   border-radius: 0;

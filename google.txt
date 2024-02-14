@@ -1,10 +1,10 @@
+https://karobben.github.io/2024/02/12/LearnNotes/ai-hmm/
+https://karobben.github.io/2024/02/11/LearnNotes/math-cal/
+https://karobben.github.io/2024/02/07/LearnNotes/ai-perceptron/
 https://karobben.github.io/2024/02/06/LearnNotes/fluorescence/
 https://karobben.github.io/2024/02/05/Bioinfor/seqkit/
 https://karobben.github.io/2024/02/05/LearnNotes/ai-linear/
 https://karobben.github.io/2024/02/02/LearnNotes/ai-learning/
-https://karobben.github.io/2024/02/01/LearnNotes/bayes/
+https://karobben.github.io/2024/02/01/LearnNotes/ai-bayes/
 https://karobben.github.io/2024/01/30/LearnNotes/absorption/
-https://karobben.github.io/2024/01/26/LearnNotes/AI1/
-https://karobben.github.io/2024/01/25/LearnNotes/schrodinger/
-https://karobben.github.io/2024/01/23/LearnNotes/par-wave-dual/
-https://karobben.github.io/2024/01/18/LearnNotes/light/
+https://karobben.github.io/2024/01/26/LearnNotes/ai-probability/
