@@ -8,8 +8,8 @@ title: "Naive Bayes and Bayes NetWork"
 ytitle:  "Naive Bayes and Bayes NetWork"
 description: "Naive Bayes and Bayes NetWork"
 excerpt: "Naive Bayes and Bayes NetWork"
-tags: []
-category: []
+tags: [Machine Learning, Data Science]
+category: [Notes, Class, UIUC, AI]
 cover: "https://miro.medium.com/v2/resize:fit:720/format:webp/1*39U1Ln3tSdFqsfQy6ndxOA.png"
 thumbnail: "https://miro.medium.com/v2/resize:fit:720/format:webp/1*39U1Ln3tSdFqsfQy6ndxOA.png"
 ---
@@ -50,10 +50,12 @@ In this context, $W$ represents a word in a document, $X$ represents the documen
     We use naïve Bayes a lot because, even though we know it's wrong, it gives us computationally efficient algorithms that work remarkably well in practice. 
 
 
-- Floating-point underflow
-    That equation has a computational issue. Suppose that the probability of any given word is roughly ***P(W = W~i~|Y = y) ≈ 10^-3^***, and suppose that there are 103 words in an email. Then ***∏^n^~i=1~ P(W = W~i~|Y = y) = 10^-309^***,which gets rounded off to zero. This phenomenon is called "floating-point underflow".
-- Solution
-    $f(x) = \underset{y}{\mathrm{argmax}} \left( \ln P(Y = y) + \sum^n_{i=1} \ln P(W = w_i | Y = y) \right)$
+### Floating-point underflow
+
+That equation has a computational issue. Suppose that the probability of any given word is roughly ***P(W = W~i~|Y = y) ≈ 10^-3^***, and suppose that there are 103 words in an email. Then ***∏^n^~i=1~ P(W = W~i~|Y = y) = 10^-309^***,which gets rounded off to zero. This phenomenon is called "floating-point underflow".
+
+!!! note Solution
+    $$f(x) = \underset{y}{\mathrm{argmax}} \left( \ln P(Y = y) + \sum^n_{i=1} \ln P(W = w_i | Y = y) \right)$$
 
 ### Reducing the naivety of naïve Bayes
 Remember that the bag-of-words model is unable to represent this fact: 
@@ -159,14 +161,59 @@ $$
 
 ### Variables are independent and/or conditionally independent
 
+#### Independence
+
+```mermaid
+graph TD
+B --> A
+E --> A
+```
 - Variables are independent if they have no common ancestors
-  $ P(B = T, E = T) = P(B = T)P(E = T) $
+  $ P(B = \top, E = \top) = P(B = \top)P(E = \top)= P(B = \top) $
+
+!!! Independent variables may not be conditionally independent
+
+- The variables B and E are not conditionally independent of one another given knowledge of A
+- If your alarm is ringing, then you probably have an earthquake OR a burglary. If there is an earthquake, then the conditional probability of a burglary goes down:
+    - $P(B = \top| E = \top, A = \top) \neq P(B = \top| E = \bot, A = \top)$
+- This is called the "explaining away" effect. The earthquake "explains away" the alarm, so you become less worried about a burglary.
+
+
+#### Conditional Independence
+
+```mermaid
+graph TD
+A --> J
+A --> M
+```
+- The variables J and M are conditionally independent of one another given knowledge of A
+- If you know that there was an alarm, then knowing that John texted gives no extra knowledge about whether Mary will text:
+$P(M = \top | J = \top , A = \top)=P(M = \top | J = \bot, A = \top)= P(M = \top| A = \top)$
+
+!!! note Conditionally Independent variables may not be independent
+    - The variables J and M are not independent!
+    - If you know that John texted, that tells you that there was probably an alarm. Knowing that there was an alarm tells you that Mary will probably text you too:
+    - $P(M = \top| J = \top) \neq P(M= \top| J = \bot)$
 
 - Variables are conditionally independent of one another, given their common ancestors, if (1) they have no common descendants, and (2) none of the descendants of one are ancestors of the other
   $ P(U = T, M = T \mid A = T) = P(U = T \mid A = T)P(M = T \mid A = T) $
 
+#### How to tell at a glance if variables are independent and/or conditionally independent
 
+```mermaid
+graph LR
+    B --> A
+    E --> A
+    A --> J
+    A --> M
+```
 
+- Variables are independent if they have no common ancestors
+    - $P(B = \top, E = \top) = P(B=\top)P(E =\top)$
+- Variables are conditionally independent of one another, given their common ancestors, if:
+    1. they have no common descendants, and 
+    2. none of the descendants of one are ancestors of the other
+    - $P(J = \top, M = \top| A = \top) = P(J = \top| A = \top) P (M = \top| A = \top)$
 
 
 

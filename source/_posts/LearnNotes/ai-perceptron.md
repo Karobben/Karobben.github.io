@@ -1,17 +1,17 @@
 ---
 toc: true
 url: ai_perceptron
-covercopy: © Karobben
+covercopy: <a href="https://towardsdatascience.com/perceptrons-the-first-neural-network-model-8b3ee4513757">© Dr. Roi Yehoshua</a>
 priority: 10000
 date: 2024-02-07 13:03:23
-title: 
-ytitle:
-description:
-excerpt:
-tags:
-category:
-cover:
-thumbnail:
+title: "Perceptron"
+ytitle: "Perceptron"
+description: "Perceptron"
+excerpt: "Perceptron"
+tags: [Machine Learning, Data Science]
+category: [Notes, Class, UIUC, AI]
+cover: "https://miro.medium.com/v2/resize:fit:720/format:webp/1*gGmqkjA0VJCe5EhJnoQDNg.png"
+thumbnail: "https://miro.medium.com/v2/resize:fit:720/format:webp/1*gGmqkjA0VJCe5EhJnoQDNg.png"
 ---
 
 ## Perceptron

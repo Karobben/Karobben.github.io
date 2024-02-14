@@ -8,8 +8,8 @@ title: "Learning Progress"
 ytitle: "Learning Progress" 
 description: "Learning Progress"
 excerpt: "Learning Progress"
-tags: []
-category: []
+tags: [Machine Learning, Data Science]
+category: [Notes, Class, UIUC, AI]
 cover: "https://editor.analyticsvidhya.com/uploads/52606ML-stage.png"
 thumbnail: "https://editor.analyticsvidhya.com/uploads/52606ML-stage.png"
 ---

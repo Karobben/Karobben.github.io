@@ -8,8 +8,8 @@ title: "Artificial Intelligent 1"
 ytitle: "Artificial Intelligent 1"
 description: "Artificial Intelligent"
 excerpt: "Artificial Intelligent"
-tags: []
-category: []
+tags: [Machine Learning, Data Science]
+category: [Notes, Class, UIUC, AI]
 cover: "https://imgur.com/25I7oBF.png"
 thumbnail: "https://imgur.com/25I7oBF.png"
 ---
@@ -147,129 +147,67 @@ The expected value of a function is its weighted average, weighted by its pmf or
 
 The covariance of two random variables is the expected product of their deviations:
 
-**Covar(X,Y) = E[(X- E[X])(Y-E[Y])]**
+$$
+Covar(X,Y) = E[(X- E[X])(Y-E[Y])]
+$$
+
+- \( E[X] \) is the expected value (or mean) of the random variable X.
+- \( E[Y] \) is the expected value (or mean) of the random variable Y.
+- \( X - E[X] \) is the deviation of X from its mean (how far X is from its mean).
+- \( Y - E[Y] \) is the deviation of Y from its mean (how far Y is from its mean).
+- \( E\left[(X - E[X])(Y - E[Y])\right] \) is the expected value of the product of these deviations.
+
+!!! note Example
+    Suppose we have two random variables, X and Y, with the following values:
+    - X: 1, 2, 3
+    - Y: 2, 3, 4
+    First, we calculate the $E[X]$ and $E(Y)$:
+    - $E[X] = \sum_{i=i}^3 f(x_i)P(x_i) = 1×\frac{1}{3}+ 2×\frac{1}{3}+3×\frac{1}{3} = 2$
+    - $E[Y] = \sum_{i=i}^3 f(y_i)P(y_i) = 2×\frac{1}{3}+ 3×\frac{1}{3}+4×\frac{1}{3} = 3$
+    - **PS**: $E[X] = mean(X)$ because when we calculating them through the whole list, we would count them one by one even though they are duplicated. In this case, if one element for example, the frequent of the x in X is 50% and the lenghth of the X is 10, we list x 5 times as the frequent of 1/10 equals doing one time by $x * \frac{1}{2}$
+    Next, we calculate the deviations of each value from their means:
+    - Deviations for $X-E[X] = [1-2, 2-2, 3-2] = [-1, 0, 1]$
+    - Deviations for $Y-E[Y] = [2-3, 3-3, 4-3] = [-1, 0, 1]$
+
+    Now we multiply these deviations pairwise and sum them up:
+    - $ (-1 \times -1) + (0 \times 0) + (1 \times 1) = 1 + 0 + 1 = 2 $
+
+    Since we have three observations, we divide the sum by 3-1 (in the case of sample covariance) or simply by 3 (if we are dealing with a population).
+    So, if we treat these as a population, the covariance is:
+    - Covar$(X, Y) = \frac{2}{3}$
+    This positive value suggests that X and Y tend to increase together.
+
+for python code:
+
+```python
+import numpy as np
+from collections import Counter
+
+X = np.array([1, 2, 3, 4, 4, 6])
+Y = np.array([1, 2, 3, 3, 5, 6])
+(X - X.mean()) @ (Y - Y.mean()) / (len(X))
+
+X = np.array([1, 2, 3, 4, 4, 6])
+Y = np.array([6, 5, 4, 3, 2, 1])
+(X - X.mean()) @ (Y - Y.mean()) / (len(X))
+```
+<pre>
+2.5556
+-2.6665
+</pre>
+
+In this case, the covariance > 0 means it is positively associated, covariance < 0 means X and Y are negative-associated. Covariance = 0 means they are not associated at all.
 
 Covariance Matrix:
 Suppose *X = [X~1~, … , X~n~]* is a random vector. Its matrix of variances and covariances (a.k.a. covariance matrix) is
 
-|![Covariance Matrix](https://imgur.com/AHw4vkP.png)|
-|:-:|
-
-## Decision Theory
-
-- Suppose we have an experiment with two random variables, X and Y.
-    - X is something we can observe, like the words in an email.
-    - Y is something we can’t observe, but we want to know. For example, Y=1 means the email is spam (junk mail), Y=0 means it’s ham (desirable mail).
-- Can we train an AI to read the email, and determine whether it’s spam or not?
-
-In this case, we have:
-
-- *Y* = the correct label
-    - *Y* = the correct label as a random variable (“in general”)
-    - *y* = the label observed in a particular experiment (“in particular”)
-- *f(X)* = the decision that we make, after observing the datum, *X*.
-    - *f(X)* = the function applied to random variable *X* (“in general”)
-    - *f(x)* = the function applied to a particular value of *x* (“in particular”)
-
-### Deciding how to Decide: Loss and Risk
- 
-
-- Suppose that deciding $f(x)$, when the correct label is $Y = y$, costs us a certain amount of money (or prestige, or safety, or points, or whatever) – call that the loss, $L(f(x), y)$
-
-- In general, we would like to lose as few points as possible (negative losses are good...)
-
-- Define the risk, $R(f)$, to be the expected loss incurred by using the decision rule $f(X)$:
-
-$$ R(f) = E[L(f(X), Y)] = \sum_y \sum_x L(f(x), y)P(X = x, Y = y) $$
-
-### Minimum-Risk Decisions
-
-- If we want to the smallest average loss (the smallest risk), then our
-decision rule should be
- ***f = argmin R(f)***
-- In other words, for each possible *x*, we find the value of *f(x)* that minimizes our expected loss given that *x*, and that is the *f(x)* that our algorithm should produce.
-
-#### Zero-One Loss
-
-
-Suppose that $f(x)$ is an estimate of the correct label, and
-- We lose one point if $f(x) \neq y$
-- We lose zero points if $f(x) = y$
-
-Then the loss function $L(f(x), y)$ is defined as:
-
-|![Zero-One Loss](https://imgur.com/y5yAXn9.png)|
-|:-:|
-
-Then the risk is
-
-$$ R(f) = E[L(f(X), Y)] = Pr(f(X) \neq Y) $$
-
-#### Minimum Probability of Error 
-
-We can minimize the probability of error by designing ***f(x)*** so that ***f(x) = 1*** when ***Y= 1*** is more probable, and ***f(x) = 0*** when ***Y= 0*** is more probable.
-
-|![Minimum Probability of Error](https://imgur.com/qFXNGic.png)|
-|:-:|
-
-### The Bayesian Scenario
-
-|![Bayes](https://upload.wikimedia.org/wikipedia/commons/d/d4/Thomas_Bayes.gif)|
-|:-:|
-|[© wikipedia]|
-
-- Let’s use ***x~X*** to mean that ***x*** is an instance of random variable ***X***, and similarly ***y~Y***.
-- In order to minimize the probability of error, we just need to know ***P(Y = y|X = x)*** for every pair of values ***x~X*** and
-***y~Y***. Then we choose $f(x) = \underset{y}{argmaxP}(Y = y|X = x)$.
-
-#### Example: spam detection 
-
-!!! question  how can we estimate the P(Y=y|X=x)?
-    - The prior probability of spam might be obvious. If 80% of all email on the internet is spam, that means that
-    ***P(Y=1)=0.8, P(Y=0)=0.2***<br>
-    - The probability of X given Y is also easy. Suppose we have a database full of sample emails, some known to be spam, some known to be ham. We count how often any word occurs in spam vs. ham emails, and estimate:<br>
-    1. ***P(X=x|Y=1)=*** frequency of the words ***x*** in emails known to be spam<br>
-    2. ***P(X=x|Y=0)=*** frequency of the words ***x*** in emails known to be ham<br>
-    - Now we have ***P( X=x|Y=y)*** and ***P(Y=y)*** . How do we get ***P(Y=y|X=x)***<br>
-    For solve this problem, Bayes come with an idea: **Bayes' Rule**<br>
-    $P(Y=y|X=x) = \frac{P(X=x, Y=y)}{P(X=x)}$<br>
-    $\frac{P(X=x|Y=y)P(Y=y)}{P(X=x)}$
-
-### The four Bayesian probabilities
-
+In other places, the covariance equation are mostly write as:
 $$
-P(Y=y|X=x) =\frac{P(X=x|Y=y)P(Y=y)}{P(X=x)}
+Cov(X,Y) = \frac{\sum(X_i-\bar{X})(Y_j-\bar{Y})}{n} 
 $$
 
-This equation shows the relationship among four probabilities. This equation has become so world-famous, since 1763, that these four probabilities have standard universally recognized names that you need to know:
-- ***P(Y=y|X=x)*** is the a **posteriori** (after-the-fact) probability, or **posterior**
-- ***P(Y=y)*** is the **a priori** (before-the-fact) probability, or **prior**
-- ***P(X=x|Y=y)*** is the **likelihood**
-- ***P(X=x)*** is the **evidence**
-Bayes' rule: the posterior equals the prior times the likelihood over the evidence.
-
-
-#### MPE = MAP
-
-- The "minimum probability of error" (MPE) decision rule is the rule that chooses ***f(X)*** in order to minimize the probability of error:
-    - ***f(x) = argmin P(Error|X = x)***
-- The “maximum a posteriori” (MAP) decision rule is the rule that chooses ***f(x)*** in order to maximize the posteriori probability:
-    - ***f(x) = argmin P(Y = f(x)|X = x)***
-- Those two decision rules are the same: **MPE = MAP**
-
-Using Bayes' Rule:
-- MPE = MAP: to minimize the probability of error, design f(X) so that:
-    $f(x) = \underset{y}{argmaxP}(Y = y|X = x)$
-- Bayes' Rule 
-    $P(Y=y|X=x) =\frac{P(X=x|Y=y)P(Y=y)}{P(X=x)}$
-- Putting the two together:
-    $f(x) = \underset{y}{argmaxP}\frac{P(X=x|Y=y)P(Y=y)}{P(X=x)}$
-    $\ \ \ =\underset{y}{argmaxP}(X=x|Y=y)P(Y=y)$
-
-
-- Accuracy
-    When we train a classifier, the metric that we usually report is "accuracy"
-    $Accuracy = \frac{n tokens\ correctly\ classified}{n\ tokens\ total}$
+We can expected that they are the same because mostly, we expected the mean value is the expected value for a random variable. 
+\ tokens\ correctly\ classified}{n\ tokens\ total}$
 - Error Rate
     Equivalently, we could report error rate, which is just 1-accuracy:
     $Error Rate = \frac{n\ tokens\ incorrectly\ classified}{n\ tokens\ total}$

@@ -11,7 +11,7 @@ excerpt: "Basic Mathematics Calculating"
 tags: []
 category: []
 cover: "https://images.ctfassets.net/cnu0m8re1exe/6FXIifvsqgc4djOGE4klDa/d08c250a062604e29226a8572727c5aa/shutterstock_376537891-_1_.jpg_mw_900_mh_600"
-thumbnail: ""
+thumbnail: "https://images.ctfassets.net/cnu0m8re1exe/6FXIifvsqgc4djOGE4klDa/d08c250a062604e29226a8572727c5aa/shutterstock_376537891-_1_.jpg_mw_900_mh_600"
 ---
 
 ## Sum

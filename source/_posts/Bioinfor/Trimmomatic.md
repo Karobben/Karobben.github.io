@@ -6,7 +6,7 @@ date: 2020/07/28
 toc: true
 excerpt: "Trimmomatic is a java tool for cut and filter reads"
 tags: [Software, Bioinformatics, RNA-Seq]
-category: [Biology, Bioinformatics, Software, Fastq QC]
+category: [Biology, Bioinformatics, Software, Fasta/q]
 cover: 'https://tse3-mm.cn.bing.net/th/id/OIP.pg0lLEEeNeiUp31DPMKtRwHaCY'
 thumbnail: 'https://tse3-mm.cn.bing.net/th/id/OIP.pg0lLEEeNeiUp31DPMKtRwHaCY'
 priority: 10000

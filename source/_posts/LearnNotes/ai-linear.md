@@ -1,17 +1,17 @@
 ---
 toc: true
 url: ai_linear
-covercopy: © Karobben
+covercopy: <a href="https://www.geeksforgeeks.org/ml-linear-regression/">© geeksforgeeks</a>
 priority: 10000
 date: 2024-02-05 12:26:13
 title: "Linear Regression"
 ytitle: "Linear Regression"
 description: "Linear Regression"
 excerpt: "Linear Regression"
-tags: []
-category: []
-cover: ""
-thumbnail: ""
+tags: [Machine Learning, Data Science]
+category: [Notes, Class, UIUC, AI]
+cover: "https://media.geeksforgeeks.org/wp-content/uploads/20231129130431/11111111.png"
+thumbnail: "https://media.geeksforgeeks.org/wp-content/uploads/20231129130431/11111111.png"
 ---
 
 ## Linear Regression
