@@ -21,16 +21,83 @@ thumbnail: "https://media.geeksforgeeks.org/wp-content/uploads/20231129130431/11
 In numpy, the dot product can be written np.dot(w,x) or w@x.
 Vectors will always be column vectors. Thus:
 
-|![](https://imgur.com/Zq0RMO8.png)|![](https://imgur.com/TF5NMbz.png)|
-|:-:|:-:|
-|Vectors are lowercase bold letters|Matrices are uppercase bold letters|
+$$
+x = 
+\begin{bmatrix}
+x_{1} \\\\
+\vdots \\\\
+x_{n}
+\end{bmatrix}
+, \quad w^T = [w_{1}, \ldots, w_{n}]
+$$
 
-Vector and Matrix Gradients
+$$
+w^Tx = [w_{1}, \ldots, w_{n}]
+\begin{bmatrix}
+x_{1} \\\\
+\vdots \\\\
+x_{n}
+\end{bmatrix}
+= \sum_{i=1}^{n} w_{i}x_{i}
+$$
+
+<br><br>
+$$
+x = 
+\begin{bmatrix}
+x_{1} \\\\
+\vdots \\\\
+x_{n}
+\end{bmatrix}
+, \quad
+W = 
+\begin{bmatrix}
+w_{1,1} & \ldots & w_{1,n} \\\\
+\vdots & \ddots & \vdots \\\\
+w_{m,1} & \ldots & w_{m,n}
+\end{bmatrix}
+$$
+
+$$Wx = 
+\begin{bmatrix}
+w_{1,1} & \ldots & w_{1,n} \\\\
+\vdots & \ddots & \vdots \\\\
+w_{m,1} & \ldots & w_{m,n}
+\end{bmatrix}
+\begin{bmatrix}
+x_{1} \\\\
+\vdots \\\\
+x_{n}
+\end{bmatrix} =
+\begin{bmatrix}
+\sum_{i=1}^{n} w_{1,i}x_{i} \\\\
+\vdots \\\\
+\sum_{i=1}^{n} w_{m,i}x_{i}
+\end{bmatrix}
+$$
+
+
+### Vector and Matrix Gradients
 The gradient of a scalar function with respect to a vector or matrix is:
 The symbol $\frac{\sigma f}{\sigma x_ 1}$ means "partial derivative of f with respect to *x~1~*"
 
-|![](https://imgur.com/2b5hSHK.png)|
-|:-:|
+$$
+\frac{\partial f}{\partial x} = 
+\begin{bmatrix}
+\frac{\partial f}{\partial x_1} \\\\
+\vdots \\\\
+\frac{\partial f}{\partial x_n}
+\end{bmatrix}
+,
+\quad
+\frac{\partial f}{\partial W} = 
+\begin{bmatrix}
+\frac{\partial f}{\partial w_{1,1}} & \cdots & \frac{\partial f}{\partial w_{1,n}} \\\\
+\vdots & \ddots & \vdots \\\\
+\frac{\partial f}{\partial w_{m,1}} & \cdots & \frac{\partial f}{\partial w_{m,n}}
+\end{bmatrix}
+$$
+
 
 |![](https://www.researchgate.net/profile/Vladimir-Nasteski/publication/328146111/figure/fig4/AS:702757891751937@1544561946700/Visual-representation-of-the-linear-regression-22.ppm)|
 |:-:|
@@ -55,9 +122,10 @@ The factor $\frac{1}{2}$ is included so that, so that when you differentiate ℒ
 
 !!! note MSE = Parabola 
     Notice that MSE is a non -negative quadratic function of *f(**x**~i~) = **w**^T^ x~i~ + b*, therefore it’s a non negative quadratic function of ***w*** . Since it’s a non -negative quadratic function of ***w***, it has a unique minimum that you can compute in closed form! We won’t do that today. 
-$\mathcal{L} = \frac{1}{2n} \sum_{i=1}^ {n} (f(x_ i) - y_ i)^ 2$
+    $\mathcal{L} = \frac{1}{2n} \sum_{i=1}^ {n} (f(x_ i) - y_ i)^ 2$
 
-**The iterative solution to linear regression** (gradient descent):
+### The iterative solution to linear regression (gradient descent):
+
 - Instead of minimizing MSE in closed form, we’re going to use an iterative algorithm called gradient descent. It works like this:
     -  Start: random initial ***w*** and *b* (at *t=0*)
     - Adjust ***w*** and *b* to reduce MSE (*t=1*)
@@ -67,36 +135,60 @@ $ w \leftarrow w - \eta \frac{\partial \mathcal{L}}{\partial w} $
 $ b \leftarrow b - \eta \frac{\partial \mathcal{L}}{\partial b} $
 
 
-### Finding the gradient
+#### Finding the gradient
 
-The loss function \( \mathcal{L} \) is defined as:
-
-\[ \mathcal{L} = \frac{1}{2n} \sum_{i=1}^{n} L_i, \quad L_i = \varepsilon_i^2, \quad \varepsilon_i = w^T x_i + b - y_i \]
-
+The loss function $ \mathcal{L} $ is defined as:
+$$ \mathcal{L} = \frac{1}{2n} \sum_{i=1}^{n} L_i, \quad L_i = \varepsilon_i^2, \quad \varepsilon_i = w^T x_i + b - y_i $$
 To find the gradient, we use the chain rule of calculus:
-
-\[ \frac{\partial \mathcal{L}}{\partial w} = \frac{1}{2n} \sum_{i=1}^{n} \frac{\partial L_i}{\partial w}, \quad \frac{\partial L_i}{\partial w} = 2\varepsilon_i \frac{\partial \varepsilon_i}{\partial w}, \quad \frac{\partial \varepsilon_i}{\partial w} = x_i \]
+$$ \frac{\partial \mathcal{L}}{\partial w} = \frac{1}{2n} \sum_{i=1}^{n} \frac{\partial L_i}{\partial w}, \quad \frac{\partial L_i}{\partial w} = 2\varepsilon_i \frac{\partial \varepsilon_i}{\partial w}, \quad \frac{\partial \varepsilon_i}{\partial w} = x_i $$
 
 Putting it all together,
+$$ \frac{\partial \mathcal{L}}{\partial w} = \frac{1}{n} \sum_{i=1}^{n} \varepsilon_i x_i $$
 
-\[ \frac{\partial \mathcal{L}}{\partial w} = \frac{1}{n} \sum_{i=1}^{n} \varepsilon_i x_i \]
 
-### The iterative solution to linear regression
-• Start from random initial values of
-� and � (at � = 0).
-• Adjust � and � according to:
+• Start from random initial values of $w$ and $b(at\ t= 0)$.
+• Adjust $w$ and $b$ according to:
 
-\[ w \leftarrow w - \frac{\eta}{n} \sum_{i=1}^{n} \varepsilon_i x_i \]
-\[ b \leftarrow b - \frac{\eta}{n} \sum_{i=1}^{n} \varepsilon_i \]
+$$ w \leftarrow w - \frac{\eta}{n} \sum_{i=1}^{n} \varepsilon_i x_i $$
+$$ b \leftarrow b - \frac{\eta}{n} \sum_{i=1}^{n} \varepsilon_i $$
 
-- Intuition:
+#### Intuition:
+
 - Notice the sign:
-\[ w \leftarrow w - \frac{\eta}{n} \sum_{i=1}^{n} \varepsilon_i x_i \]
-- If \( \varepsilon_i \) is positive (\( f(x_i) > y_i \)), then we want to *reduce* \( f(x_i) \), so we make \( w \) less like \( x_i \)
-- If \( \varepsilon_i \) is negative (\( f(x_i) < y_i \)), then we want to *increase* \( f(x_i) \), so we make \( w \) more like \( x_i \)
+    - $ w \leftarrow w - \frac{\eta}{n} \sum_{i=1}^{n} \varepsilon_i x_i $
+- If $ \varepsilon_i $ is positive ($ f(x_i) > y_i $), then we want to ==reduce== $ f(x_i) $, so we make $ w $ less like $ x_i $
+- If $ \varepsilon_i $ is negative ($ f(x_i) < y_i $), then we want to ==increase== $ f(x_i) $, so we make $ w $ more like $ x_i $
 
 
+### Gradient Descent
 
+- If $n$ is large, computing or differentiating MSE can be expensive.
+- The stochastic gradient descent algorithm picks one training token $(x_i, y_i)$ at random ("stochastically"), and adjusts $w$ in order to reduce the error a little bit for that one token:
+  $$ w \leftarrow w - \eta \frac{\partial \mathcal{L}_i}{\partial w} $$
+  ...where
+  $$ \mathcal{L}_i = \varepsilon_i^2 = \frac{1}{2}(f(x_i) - y_i)^2 $$
+
+### Stochastic gradient descent
+
+$$
+\mathcal{L}_i = \varepsilon_i^2 = \frac{1}{2}(w^T x_i + b - y_i)^2
+$$
+
+If we differentiate that, we discover that:
+
+$$
+\frac{\partial \mathcal{L}_i}{\partial w} = \varepsilon_i x_i,
+\quad
+\frac{\partial \mathcal{L}_i}{\partial b} = \varepsilon_i
+$$
+
+So the stochastic gradient descent algorithm is:
+
+$$
+w \leftarrow w - \eta \varepsilon_i x_i,
+\quad
+b \leftarrow b - \eta \varepsilon_i
+$$
 
 
 ## Perceptron
@@ -128,7 +220,7 @@ There are a total of $v(d + 1)$ trainable parameters: the elements of the matrix
 
 ![](https://imgur.com/undefined.png)
 
-# Example
+### Example
 
 Notice that in the two-class case, the equation
 
@@ -146,9 +238,8 @@ $$
 (w_2 - w_1)^T x + (b_2 - b_1) = 0
 $$
 
-## Gradient descent
+### Gradient descent
 
-# Gradient descent
 
 Suppose we have training tokens $(x_i, y_i)$, and we have some initial class vectors $w_1$ and $w_2$. We want to update them as
 
@@ -166,7 +257,6 @@ $$
 
 ### Zero-one loss function
 
-# Zero-one loss function
 
 The most obvious loss function for a classifier is its classification error rate,
 
@@ -189,7 +279,6 @@ $$
 The problem with the zero -one loss function is that it’s not differentiable:
 ![](https://imgur.com/tuIgHI9.png)
 
-### 
 
 Integer vectors: One-hot vectors, A one-hot vector is a binary vector in which all elements are 0 except for a single element that’s equal to 1.
 

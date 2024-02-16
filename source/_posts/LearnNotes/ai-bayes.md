@@ -50,6 +50,18 @@ In this context, $W$ represents a word in a document, $X$ represents the documen
     We use naïve Bayes a lot because, even though we know it's wrong, it gives us computationally efficient algorithms that work remarkably well in practice. 
 
 
+### MPE = MAP using Bayes’ rule
+
+$$
+P(Y= y | X= x) = \frac{P(X =x| Y=y)P(Y = y)}{P(X =x)}
+$$
+
+Definition of conditional probability:
+
+$$
+P(Y|f(X), A) = \frac{P(f(X)|Y, A)P(Y|A)}{P(f(X)|A)}
+$$
+
 ### Floating-point underflow
 
 That equation has a computational issue. Suppose that the probability of any given word is roughly ***P(W = W~i~|Y = y) ≈ 10^-3^***, and suppose that there are 103 words in an email. Then ***∏^n^~i=1~ P(W = W~i~|Y = y) = 10^-309^***,which gets rounded off to zero. This phenomenon is called "floating-point underflow".
