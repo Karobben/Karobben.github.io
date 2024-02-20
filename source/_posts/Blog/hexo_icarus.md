@@ -7,9 +7,9 @@ url: hexo_icarus
 excerpt: "Build your blog with hexo theme icarus and stylize it"
 tags: [Hexo, GitPage]
 category: [others, Blog, Hexo]
-cover: 'https://camo.githubusercontent.com/fd83d8c9f8b8dbe85686812e2e186dceec728bbabad2d331aa44e0bfeee8628c/68747470733a2f2f70706f66666963652e6769746875622e696f2f6865786f2d7468656d652d6963617275732f67616c6c6572792f707265766965772e706e673f31'
+cover: 'https://ppoffice.github.io/hexo-theme-icarus/img/og_image.png'
 covercopy: '© ppoffice'
-thumbnail: 'https://camo.githubusercontent.com/fd83d8c9f8b8dbe85686812e2e186dceec728bbabad2d331aa44e0bfeee8628c/68747470733a2f2f70706f66666963652e6769746875622e696f2f6865786f2d7468656d652d6963617275732f67616c6c6572792f707265766965772e706e673f31'
+thumbnail: 'https://imgur.com/cm7mDjj.png'
 priority: 1
 ---
 

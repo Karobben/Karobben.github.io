@@ -190,6 +190,73 @@ w \leftarrow w - \eta \varepsilon_i x_i,
 b \leftarrow b - \eta \varepsilon_i
 $$
 
+### Code Example
+
+
+
+```python
+import numpy as np
+from functools import partial
+from matplotlib.animation import FuncAnimation
+import matplotlib.pyplot as plt
+
+def updatew(x, y, W, b, e=0.01):
+    E = np.sum(W*x +b - y)
+    W -= np.sum(e*E*x)
+    b -= e*E
+    return W, b
+
+slope = 1
+intercept = 3
+std_dev = 1
+size = 100  # Size of the dataset
+
+# Generate x values
+X = np.random.uniform(low=-10, high=10, size=size)
+
+# Generate y values based on the equation y = x + 3
+# Add normal distributed noise with standard deviation of 0.4
+Y = slope * X + intercept + np.random.normal(0, std_dev, size)
+
+W = 0
+b = 0
+XX = []
+for i in range(len(X)):
+    W,b = updatew(X[i], Y[i], W, b, .01)
+    XX +=[[W, b]]    
+
+plt.plot(X, Y, 'o')
+plt.plot(X, X*W + b)
+plt.text(-9, 9, f'slop = {round(W, 2)}\nintercept = {round(b, 2)}')
+plt.show()
+
+# Your update function for the animation
+def update(frame):
+    # Update the data for the animated line plot, for example
+    ln.set_data(X, X * XX[frame][0] + XX[frame][1] )
+     # Update the text for the current frame
+    txt.set_text(str(int(frame)) +': $y = {:.2f}x + {:.2f}$'.format(XX[frame][0], XX[frame][1]))
+    return ln, txt
+# Set up the figure and the line to animate
+fig, ax = plt.subplots()
+ln, = ax.plot([], [], 'r-', animated=True)
+txt = ax.text(-9, 9, '', animated=True)  # Create a text object at (-9, 9)
+# Plot the background points
+ax.plot(X, Y, 'o')  # Static background points
+# Init function to set up the background of each frame (if necessary)
+def init():
+    ax.set_xlim(min(X), max(X))
+    ax.set_ylim(min(Y), max(Y))
+    txt.set_text('')
+    return ln,
+# Create the animation
+ani = FuncAnimation(fig, update, frames=100,
+                    init_func=init, blit=True)
+ani.save('animation_drawing.gif', writer='imagemagick', fps=10)
+```
+
+|![linear reguression](https://imgur.com/1O0dz1d.png)|
+|:-:|
 
 ## Perceptron
 
@@ -202,7 +269,7 @@ Linear classifier: Notation
 convenience, though, we usually map the class labels to a sequence
 of integers, Y = [1, … , v} , where � is the vocabulary size
 
-## Linear classifier: Definition
+### Linear classifier: Definition
 
 A linear classifier is defined by
 
@@ -212,15 +279,41 @@ $$
 
 where:
 
-![](https://imgur.com/zuycCx8.png)
+$$
+Wx + b = 
+\begin{bmatrix}
+w_{1,1} & \ldots & w_{1,d} \\\\
+\vdots & \ddots & \vdots \\\\
+w_{v,1} & \ldots & w_{v,d}
+\end{bmatrix}
+\begin{bmatrix}
+x_{1} \\\\
+\vdots \\\\
+x_{d}
+\end{bmatrix}
++
+\begin{bmatrix}
+b_{1} \\\\
+\vdots \\\\
+b_{v}
+\end{bmatrix}=
+\begin{bmatrix}
+w_{1}^T x + b_{1} \\\\
+\vdots \\\\
+w_{v}^T x + b_{v}
+\end{bmatrix}
+$$
 
 $w_k, b_k$ are the weight vector and bias corresponding to class $k$, and the argmax function finds the element of the vector $wx$ with the largest value.
-
 There are a total of $v(d + 1)$ trainable parameters: the elements of the matrix $w$.
 
-![](https://imgur.com/undefined.png)
-
 ### Example
+
+![](https://imgur.com/9kmw2fe.png)
+
+Consider a two -class classification problem, with
+-  $W^T_1 = [w_{1,1}, w_{1,2}] = [2,1]$
+-  $W^T_2 = [w_{2,1}, w_{2,2}] = [1,2]$
 
 Notice that in the two-class case, the equation
 
@@ -230,13 +323,34 @@ $$
 
 Simplifies to
 
-![](https://imgur.com/QAGB3Ur.png)
+$$
+f(x) = 
+\begin{cases} 
+1 & \ if\ w_1^T x + b_1 > w_2^T x + b_2 \\\\
+2 & \ if\ w_1^T x + b_1 \leq w_2^T x + b_2 
+\end{cases}
+$$
+
 
 The class boundary is the line whose equation is
-
 $$
 (w_2 - w_1)^T x + (b_2 - b_1) = 0
 $$
+
+!!! note Extend: Multi-class linear classifier 
+
+    ![](https://imgur.com/TNWvhKX.png)
+    
+    The boundary between class $k$ and class $l$ is the line (or plane, or hyperplane) given by the equation
+
+|$f(x) = argmax Wx + b$| $(w_k - w_l)^T x + (b_k - b_l) = 0$|
+|:-:|:-:|
+
+The classification regions in a linear classifier are called Voronoi regions.
+A **Voronoi region** is a region that is
+• Convex (if $u$ and $v$ are points in the region, then every point on the line segment $\bar{u}\bar{v}$ connecting them is also in the region)
+• Bounded by piece-wise linear boundaries
+
 
 ### Gradient descent
 
@@ -255,7 +369,7 @@ $$
 
 ![](https://imgur.com/YaSOBI6.png)
 
-### Zero-one loss function
+#### Zero-one loss function
 
 
 The most obvious loss function for a classifier is its classification error rate,
@@ -269,53 +383,216 @@ Where $\ell(\hat{y}, y)$ is the zero-one loss function,
 $$
 \ell(f(x), y) =
 \begin{cases}
-0 & \text{if } f(x) = y \\
+0 & \text{if } f(x) = y \\\\
 1 & \text{if } f(x) \neq y
 \end{cases}
+$$
 
 
-### Non-differentiable!
+#### Non-differentiable!
 
 The problem with the zero -one loss function is that it’s not differentiable:
-![](https://imgur.com/tuIgHI9.png)
+
+$$
+\frac{\partial \ell(f(x), y)}{\partial f(x)} = 
+\begin{cases} 
+0 & \text{if } f(x) \neq y \\\\
++\infty & \text{if } f(x) = y^+ \\\\
+-\infty & \text{if } f(x) = y^-
+\end{cases}
+$$
 
 
 Integer vectors: One-hot vectors, A one-hot vector is a binary vector in which all elements are 0 except for a single element that’s equal to 1.
 
+### One-hot vectors
+
+A one-hot vector is a binary vector in which all elements are 0 except for a single element that’s equal to 1.
+
+#### Exp1: Binary classifier
+
+
+$$
+f(x) = 
+\begin{bmatrix}
+f_1(x) \\\\
+f_2(x)
+\end{bmatrix} =
+\begin{bmatrix}
+1_{\arg\max Wx=1} \\\\
+1_{\arg\max Wx=2}
+\end{bmatrix}
+$$
+
+…where $1$ is called the “indicator function,” and it means:
+
+$$
+1_P = 
+\begin{cases}
+1\ \ \ P\ is\ true\\\\
+0\ \ \ P\ is\ false
+\end{cases}
+$$
+
+#### Exp2: Multi-Class
+
+Consider the classifier
+
+$$
+f(x) = 
+\begin{bmatrix}
+f_1(x) \\\\
+\vdots \\\\
+f_v(x)
+\end{bmatrix} =
+\begin{bmatrix}
+1_{\arg\max Wx=1} \\\\
+\vdots \\\\
+1_{\arg\max Wx=v}
+\end{bmatrix}
+$$
+
+... with 20 classes. Then some of the classifications might look like this.
+
+
+#### One-hot ground truth
+
+We can also use one-hot vectors to describe the ground truth. Let’s call the one-hot vector $y$, and the integer label $y$, thus 
+
+$$
+y = \begin{bmatrix}
+y_1 \\\\
+y_2 \\\\ \end{bmatrix} = \begin{bmatrix}
+1_{y=1} \\\\
+2_{y=2} \end{bmatrix}
+$$
+
+Ground truth might differ from classifier output.
+
+Instead of a one-zero loss, the perceptron uses a weird loss function that gives great results when differentiated. The perceptron loss function is:
+
+$$
+\ell(x, y) = (f(x) - y)^T (Wx + b)
+$$
+
+$$
+= \left[ f_1(x) - y_1, \ldots, f_v(x) - y_v \right]
+\left(\begin{bmatrix}
+W_{1,1} & \ldots & W_{1,d} \\\\
+\vdots & \ddots & \vdots \\\\
+W_{v,1} & \ldots & W_{v,d}
+\end{bmatrix}
+\begin{bmatrix}
+x_{1} \\\\
+\vdots \\\\
+x_{d}
+\end{bmatrix}
++
+\begin{bmatrix}
+b_{1} \\\\
+\vdots \\\\
+b_{v}
+\end{bmatrix}\right)
+$$
+
+$$
+= \sum_{k=1}^{v} (f_k(x) - y_k)(W_k^T x + b_k)
+$$
 
 
 
+#### The perceptron loss
+
+The perceptron loss function is defined as:
+
+$$
+\ell(x, y) = \sum_{k=1}^{v} (f_k(x) - y_k)(W_k^T x + b_k)
+$$
+
+Notice that:
+
+$$
+(f_k(x) - y_k) = 
+\begin{cases} 
++1 & \text{if } f_k(x) = 1, y_k = 0 \\\\
+-1 & \text{if } f_k(x) = 0, y_k = 1 \\\\
+0 & \text{otherwise}
+\end{cases}
+$$
+
+So what the loss really means is:
+
+$$
+\ell(x, y) = (w_{\hat{y}}^T x + b_{\hat{y}}) - (w_y^T x + b_y)
+$$
+
+Where:
+
+- $y$ is the correct class label for this training token
+- $\hat{y} = \arg\max_k (w_k^T x + b_k)$ is the classifier output
+- $\ell(x, y) > 0$ if $\hat{y} \neq y$
+- $\ell(x, y) = 0$ if $\hat{y} = y$
 
 
+### Perceptron learning algorithm
 
+#### Gradient of the perceptron loss
 
-Drive the perceptron
+The perceptron loss function is:
 
+$$
+\ell(x, y) = (w_{\hat{y}}^T x + b_{\hat{y}}) - (w_y^T x + b_y)
+$$
 
+Its derivative is:
 
-### The perceptron learning algorithm
+$$
+\frac{\partial \ell(x, y)}{\partial w_k} = 
+\begin{cases} 
+x & \text{if } k = \hat{y} \\\\
+-x & \text{if } k = y \\\\
+0 & \text{otherwise}
+\end{cases}
+$$
 
-a mistake happens here (function)
+#### The perceptron learning algorithm
 
-## Softmax
-
-
-### The perceptron learning algorithm
-
-1. Compute the classifier output $\hat{y} = \text{argmax}_k (w_k^T x + b_k)$
+1. Compute the classifier output $\hat{y} = \arg\max_k (w_k^T x + b_k)$
 
 2. Update the weight vectors as:
 
 $$
-w_k \leftarrow
-\begin{cases}
+w_k \leftarrow w_k - \eta \frac{\partial \ell(x, y)}{\partial w_k} = 
+\begin{cases} 
 w_k - \eta x & \text{if } k = \hat{y} \\\\
 w_k + \eta x & \text{if } k = y \\\\
-w_k & \text{otherwise}
+w & \text{otherwise}
 \end{cases}
 $$
 
 where $\eta \approx 0.01$ is the learning rate.
+
+
+#### Special case: two classes
+
+If there are only two classes, then we only need to learn one weight vector, $w = w_1 - w_2$. We can learn it as:
+
+1. Compute the classifier output $\hat{y} = \arg\max_k (w_k^T x + b_k)$
+
+2. Update the weight vectors as:
+
+$$
+w \leftarrow 
+\begin{cases} 
+w - \eta x & \text{if } \hat{y} \neq y, y = 2 \\\\
+w + \eta x & \text{if } \hat{y} \neq y, y = 1 \\\\
+w & \text{if } \hat{y} = y
+\end{cases}
+$$
+
+where $\eta \approx 0.01$ is the learning rate. Sometimes we say $y \in \{1, -1\}$ instead of $y \in \{1,2\}$.
+
+## Softmax
 
 
 Key idea: $f_c(x) =$ posterior probability of cass $c$
