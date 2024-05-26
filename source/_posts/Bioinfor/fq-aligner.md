@@ -153,6 +153,17 @@ Reference|bowtie2|bowtie|bwa
 8_SNP|8_SNP|8_SNP|8_SNP
 Ref|1_Perfect_match|1_Perfect_match|1_Perfect_match
 
+### Aligning Reads with Multiple Hits Using Bowtie2
+
+By default, Bowtie2 reports only one alignment (the best one) for each read. However, you can configure it to report multiple alignments using the -k or -a options:
+
+- k <int>: Report up to <int> alignments per read (useful for getting multiple alignments if they exist).
+- a: Report all valid alignments (this can produce a large output if there are many alignments).
+Example command to report up to 5 alignments per read:
+
+```bahs
+bowtie2 -x index -U reads.fq -k 5 -S output.sam
+```
 
 ## TopHat
 
