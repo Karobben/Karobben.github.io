@@ -1,0 +1,1704 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>Acoustics - Karobben</title><link rel="manifest" href="public/manifest.json"><meta name="application-name" content="Karobben"><meta name="msapplication-TileImage" content="https://s3.ax1x.com/2021/02/11/yBZjYQ.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Karobben"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="Acoustics"><meta property="og:type" content="blog"><meta property="og:title" content="Acoustics"><meta property="og:url" content="https://karobben.github.io/2023/08/23/LearnNotes/acoustics/"><meta property="og:site_name" content="Karobben"><meta property="og:description" content="Acoustics"><meta property="og:locale" content="en_US"><meta property="og:image" content="https://karobben.github.io/2023/08/23/LearnNotes/acoustics/public/"><meta property="article:published_time" content="2023-08-23T16:27:03.000Z"><meta property="article:modified_time" content="2024-01-12T00:29:13.776Z"><meta property="article:author" content="Karobben"><meta property="article:tag" content="Biology, Data Science, Bioinformatics, R, Python, Linux, ggplot, English"><meta property="twitter:card" content="summary"><meta property="twitter:image" content="public/"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://karobben.github.io/2023/08/23/LearnNotes/acoustics/"},"headline":"Karobben","image":[],"datePublished":"2023-08-23T16:27:03.000Z","dateModified":"2024-01-12T00:29:13.776Z","author":{"@type":"Person","name":"Karobben"},"description":"Acoustics"}</script><link rel="canonical" href="https://karobben.github.io/2023/08/23/LearnNotes/acoustics/"><link rel="alternate" href="public/atom.xml" title="Karobben" type="application/atom+xml"><link rel="icon" href="https://s3.ax1x.com/2021/02/11/yBZjYQ.png"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="public/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><script>var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?8442e6ecc87d878298ba7d3bd0a5484c";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();</script><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css"><script src="https://www.googletagmanager.com/gtag/js?id=G-0DHWCVQ6K0" async></script><script>window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+    
+        gtag('config', 'G-0DHWCVQ6K0');</script><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script><!--!--><!--!--><meta name="generator" content="Hexo 5.4.0"></head><body class="is-3-column"><nav class="navbar navbar-main"><div class="container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="public/"><img src="https://s1.ax1x.com/2022/09/27/xZnL6K.png" alt="Karobben" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="public/">Home</a><a class="navbar-item" href="public/archives">Archives</a><a class="navbar-item" href="public/categories">Categories</a><a class="navbar-item" href="public/tags">Tags</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/Karobben"><i class="fab fa-github"></i></a><a class="navbar-item is-hidden-tablet catalogue" title="Catalogue" href="javascript:;"><i class="fas fa-list-ul"></i></a><a class="navbar-item search" title="Search" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-6-widescreen"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><i class="far fa-eye"></i><span> </span><span id="busuanzi_container_page_pv" style="display: inline;"><span id="busuanzi_value_page_pv">0</span> </span><span class="level-item">Posted&nbsp;<time dateTime="2023-08-23T16:27:03.000Z" title="8/23/2023, 11:27:03 AM">2023-08-23</time></span><span class="level-item">Updated&nbsp;<time dateTime="2024-01-12T00:29:13.776Z" title="1/11/2024, 6:29:13 PM">2024-01-11</time></span><span class="level-item">an hour read (About 6816 words)</span></div></div><h1 class="title is-3 is-size-4-mobile">Acoustics</h1><div class="content"><h2 id="Acoustics">Acoustics</h2>
+<p><strong>waveform</strong>, <strong>phase</strong>, <strong>amplitude</strong> (usually expressed in log units known as decibels, abbreviated dB), and <strong>frequency</strong>.</p>
+<p>For human listeners, the <strong>amplitude</strong> and <strong>frequency</strong> of a sound pressure change at the ear roughly correspond to <strong>loudness</strong> and <strong>pitch</strong>, respectively.</p>
+<p>Humans can detect sounds in a frequency range from about 20 Hz to 20<br>
+kHz. Most small mammals are sensitive to very high frequencies, but not to low frequencies.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"><img src="https://cmtext.indiana.edu/acoustics/img/ear_anatomy2.png" alt="ANATOMY OF THE HUMAN EAR"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><a target="_blank" rel="noopener" href="https://commons.wikimedia.org/wiki/File:Anatomy_of_the_Human_Ear.svg">© Lars Chittka; Axel Brockmann</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="Fragile-X-Syndrome-FXS-Sensory-Processing-Deficits">Fragile X Syndrome (<abbr title="Fragile X Syndrome">FXS</abbr>) - Sensory Processing Deficits</h2>
+<ol>
+<li>
+<p><strong>Introduction</strong></p>
+<ul>
+<li><strong>Definition</strong>: <abbr title="Fragile X Syndrome">FXS</abbr> is a neurodevelopmental disorder leading to intellectual disability.</li>
+<li><strong>Link to Autism</strong>: Leading known genetic cause of autism.</li>
+</ul>
+</li>
+<li>
+<p><strong>Sensory Processing in <abbr title="Fragile X Syndrome">FXS</abbr></strong></p>
+<ul>
+<li><strong>General Characteristics</strong>: Abnormal sensory processing, particularly <mark>sensory hypersensitivity</mark>.</li>
+<li><strong>Manifestations</strong>:
+<ul>
+<li>Auditory, tactile, or visual defensiveness or avoidance.</li>
+<li>Clinical and behavioral studies show auditory hypersensitivity, <strong>impaired habituation</strong> to repeated sounds, and <strong>reduced auditory attention</strong>.</li>
+</ul>
+</li>
+<li><strong>Visuospatial Impairments</strong>: Significant deficits observed.
+<ul>
+<li>Noted problems in processing texture-defined motion stimuli, temporal flicker, perceiving ordinal numerical sequences, and maintaining dynamic object identity during occlusion.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Animal Models: Fmr1 KO Rodents</strong></p>
+<ul>
+<li><strong>General</strong>: Fragile X mental retardation 1 (Fmr1) gene knockout (KO) rodents used as <abbr title="Fragile X Syndrome">FXS</abbr> models.</li>
+<li><strong>Findings</strong>:
+<ul>
+<li>Seizures.</li>
+<li>Abnormal visual-evoked responses.</li>
+<li>Auditory hypersensitivity.</li>
+<li>Altered acoustic startle responses.</li>
+<li>Abnormal processing in the auditory system.</li>
+</ul>
+</li>
+<li><strong>Tactile Symptoms</strong>:
+<ul>
+<li>Individuals with <abbr title="Fragile X Syndrome">FXS</abbr> show tactile defensiveness.</li>
+<li>Fmr1 KO mice have impaired tactile stimulation frequency encoding and larger receptive fields in the somatosensory cortex.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Review Focus</strong>:</p>
+<ul>
+<li>Discusses clinical, functional, and structural studies on sensory processing deficits in <abbr title="Fragile X Syndrome">FXS</abbr> across:
+<ul>
+<li>Auditory. (We only focus on Auditory in this note)</li>
+<li>Visual.</li>
+<li>Somatosensory domains.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Significance of Animal Models</strong>:</p>
+<ul>
+<li>Observations in <abbr title="Fragile X Syndrome">FXS</abbr> humans and Fmr1 KO rodents are similar, suggesting conservation of basic sensory processing circuits across species.</li>
+<li>Offers a translational platform to develop biomarkers and understand underlying mechanisms.</li>
+</ul>
+</li>
+<li>
+<p><strong>Conclusion</strong>:</p>
+<ul>
+<li>Emphasizes the value of pre-clinical studies in animal models of <abbr title="Fragile X Syndrome">FXS</abbr>.</li>
+<li>Belief: Understanding mechanisms in basic sensory processing circuits/behaviors can boost the search for new therapeutic approaches in <abbr title="Fragile X Syndrome">FXS</abbr>.</li>
+</ul>
+</li>
+</ol>
+<h3 id="Introduction">Introduction</h3>
+<ol>
+<li>
+<p><strong>Prevalence and Impact</strong>: <strong>intellectual disability</strong>, <strong>Link to Autism</strong>: One of the leading genetic causes.</p>
+<ul>
+<li><strong>Statistics</strong>: Affects 1 in 4,000 boys and 1 in 8,000 girls.</li>
+</ul>
+</li>
+<li>
+<p><strong>Genetic Origin</strong>:</p>
+<ul>
+<li><strong>Gene Impacted</strong>: Fragile X mental retardation 1 (<abbr title="Fragile X mental retardation 1">FMR1</abbr>) gene.</li>
+<li><strong>Causes</strong>:
+<ul>
+<li>Silencing, Deletion, Loss-of-function mutation.</li>
+</ul>
+</li>
+<li><strong>Consequences</strong>: Results in the non-expression or nonfunctionality of the fragile X mental retardation protein (FMRP).</li>
+</ul>
+</li>
+</ol>
+<ol start="3">
+<li><strong>About FMRP</strong>:
+<ul>
+<li><strong>Type</strong>: A messenger RNA (mRNA)-binding protein.</li>
+<li><strong>Functions</strong>:
+<ul>
+<li>Regulates several aspects of mRNA metabolism, including:
+<ul>
+<li>Nuclear export.</li>
+<li>Transport to synaptic terminals.</li>
+<li>Activity-dependent ribosome stalling.</li>
+<li>Protein translation.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<p><strong>FMRP’s Role in Synaptic Function and Translation Regulation</strong></p>
+<ol>
+<li>
+<p><strong>Translation Regulation</strong>:</p>
+<ul>
+<li>FMRP regulates the translation of mRNAs at synapses.</li>
+<li>Some of these mRNAs encode proteins linked to synaptic plasticity.</li>
+</ul>
+</li>
+<li>
+<p><strong>Impact of Absence of FMRP</strong>:</p>
+<ul>
+<li>Results in dysregulation of protein translation and increased protein synthesis.</li>
+<li>This may contribute to altered signaling of metabotropic glutamate receptor 5 (mGluR5).</li>
+<li>This altered signaling may lead to exaggerated long-term depression (LTD) in the hippocampus.</li>
+</ul>
+</li>
+<li>
+<p><strong>Matrix Metalloproteinase-9 (MMP-9)</strong>:</p>
+<ul>
+<li>FMRP negatively regulates MMP-9 translation in neurons because MMP-9 levels are elevated in <abbr title="Fragile X Syndrome">FXS</abbr>.</li>
+<li>mGluR5 and MMP-9 potentially mediate changes in synaptic functions.
+<ul>
+<li>They might signal through the phosphatidylinositol-3-kinase (PI3K)/mammalian target of rapamycin complex 1 (mTORC1) and extracellular signal-regulated kinase pathways to amplify cap-dependent translation.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Recent Data on FMRP</strong>:</p>
+<ul>
+<li>Suggests that FMRP might directly regulate PI3K and mTORC1 signaling.
+<ul>
+<li>This regulation could occur through other signaling proteins like phosphatidylinositol-3-kinase enhancer, phosphatase and tensin homolog, neurofibromin 1, and tuberous sclerosis 2.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>FMRP Targets</strong>:</p>
+<ul>
+<li>All three isoforms of eukaryotic translation initiation factor 4 G.</li>
+<li>Eukaryotic translation elongation factor 1 and 2.</li>
+<li>Argonaute proteins.</li>
+<li>Dicer.</li>
+<li>Dysregulation of these targets might contribute to enhanced neuronal translation in <abbr title="Fragile X Syndrome">FXS</abbr>.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Role of Dysregulated Pathways and FMRP in Dendritic Spine Morphology and Neurophysiology</strong></p>
+<ol>
+<li>
+<p><strong>Dysregulated Pathways in <abbr title="Fragile X Syndrome">FXS</abbr></strong>:</p>
+<ul>
+<li>Dysregulated PI3K/mTOR signaling.</li>
+<li>Enhanced mGluR5-dependent LTD.</li>
+<li>Increased MMP-9 activity.</li>
+<li>Reduced activity of the voltage and $Ca^{2+}$ activated ( K^+ ) (BKCa or BK) channel.</li>
+<li>These might contribute to the immature dendritic spine morphology in rodent models of <abbr title="Fragile X Syndrome">FXS</abbr>.</li>
+</ul>
+</li>
+<li>
+<p><strong>FMRP’s Role in Mice</strong>:</p>
+<ul>
+<li>Might regulate neuronal branching.</li>
+<li>Regulates dendritic spine development.</li>
+</ul>
+</li>
+<li>
+<p><strong>Clinical Studies in Humans</strong>:</p>
+<ul>
+<li>Alterations observed in dendritic spine number and morphology in the cortex of <abbr title="Fragile X Syndrome">FXS</abbr> humans.
+<ul>
+<li>A notable prevalence of immature dendritic spines.</li>
+</ul>
+</li>
+<li>Dendritic abnormalities are consistent anatomical features linked with intellectual disability.</li>
+</ul>
+</li>
+<li>
+<p><strong>FMRP’s Predominant Activity</strong>:</p>
+<ul>
+<li>Mainly related to the regulation of synaptic functions.</li>
+<li>Yet, there’s limited knowledge about:
+<ul>
+<li>How synaptic alterations due to the absence of FMRP lead to neurophysiological and behavioral deficits in humans with <abbr title="Fragile X Syndrome">FXS</abbr>.</li>
+<li>The reason why abnormal dendritic spine development alone doesn’t explain the increased cortical excitability seen in <abbr title="Fragile X Syndrome">FXS</abbr>.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h2 id="Using-auditory-reaction-time-to-measure-loudness-growth-in-rats">Using auditory reaction time to measure loudness growth in rats</h2>
+<h3 id="Abstract">Abstract</h3>
+<ol>
+<li>
+<p><strong>Introduction</strong>:</p>
+<ul>
+<li><strong>Auditory Reaction Time (RT)</strong>: Established as a reliable proxy for loudness perception in humans.</li>
+<li><strong>Reaction Time-Intensity (RT-I) Functions</strong>:
+<ul>
+<li>Effectively mirror equal loudness contours in humans.</li>
+<li>Easier to obtain than equal loudness judgments, particularly in animal subjects.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Factors Affecting Loudness Estimation</strong>:</p>
+<ul>
+<li><strong>Sound Intensity</strong>: Primary factor.</li>
+<li><strong>Other Acoustic Factors</strong>:
+<ul>
+<li>Stimulus duration.</li>
+<li>Bandwidth.</li>
+</ul>
+</li>
+<li><strong>Background Noise Effect</strong>:
+<ul>
+<li>Simulates loudness recruitment.</li>
+<li>Rapid loudness growth near threshold, but stabilizes at suprathreshold levels.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Study Objectives</strong>:</p>
+<ul>
+<li>Examine if RT-I functions can reliably measure loudness growth in rats.</li>
+<li>Obtain auditory RTs across varying:
+<ul>
+<li>Stimulus intensities.</li>
+<li>Durations.</li>
+<li>Bandwidths.</li>
+</ul>
+</li>
+<li>Experiments conducted in both quiet conditions and amidst background/masking noise.</li>
+</ul>
+</li>
+<li>
+<p><strong>Findings</strong>:</p>
+<ul>
+<li>Reaction time patterns across different stimulus parameters:
+<ul>
+<li>Repeated consistently over several months in rats.</li>
+<li>Generally align with human loudness perceptual data.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Significance</strong>:</p>
+<ul>
+<li>Results lay foundational understanding for upcoming studies on loudness perception in animal models.</li>
+<li>Potential to explore loudness perceptual disorders in animals.</li>
+</ul>
+</li>
+</ol>
+<h3 id="Introduction-v2">Introduction</h3>
+<p><strong>Exploring Loudness Perception Beyond Traditional Methods</strong></p>
+<ol>
+<li>
+<p><strong>Standard Tool</strong>:</p>
+<ul>
+<li>Pure Tone Audiogram: Essential for hearing research but limited in scope.</li>
+</ul>
+</li>
+<li>
+<p><strong>Loudness Perception</strong>:</p>
+<ul>
+<li>Beyond hearing threshold, loudness perception for louder sounds is crucial.</li>
+</ul>
+</li>
+<li>
+<p><strong>Clinical Metrics</strong>:</p>
+<ul>
+<li>Uses scales like ULL and LDL where listeners rate discomfort from various sound intensities.</li>
+</ul>
+</li>
+<li>
+<p><strong>Human Psychophysical Studies</strong>:</p>
+<ul>
+<li>Equal loudness contours: Listeners compare sound loudness to a standard tone, a labor-intensive method.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Measuring Loudness Perception in Animals</strong></p>
+<ol>
+<li>
+<p><strong>Traditional Measures</strong>:</p>
+<ul>
+<li>LDLs and equal loudness contours: Useful for humans but impractical for animals.</li>
+</ul>
+</li>
+<li>
+<p><strong>Auditory Reaction Time (RT)</strong>:</p>
+<ul>
+<li>Used as an indirect metric of loudness in animals.</li>
+<li>In humans, a faster RT correlates with perceived loudness.</li>
+</ul>
+</li>
+<li>
+<p><strong>Advantages of RT</strong>:</p>
+<ul>
+<li>Reliable for both normal-hearing and hearing-impaired listeners.</li>
+<li>Easier to obtain than traditional measures, making it useful for various species.</li>
+</ul>
+</li>
+</ol>
+<p>Certainly! I’ll further condense and clarify the content:</p>
+<p><strong>Loudness Perception Factors in Humans</strong></p>
+<ol>
+<li>
+<p><strong>Intensity</strong>:</p>
+<ul>
+<li>Main determinant, but not the sole factor.</li>
+</ul>
+</li>
+<li>
+<p><strong>Duration</strong>:</p>
+<ul>
+<li>Longer sounds (up to 300 ms) seem louder.</li>
+</ul>
+</li>
+<li>
+<p><strong>Bandwidth</strong>:</p>
+<ul>
+<li>Wider bandwidths make sounds feel louder.</li>
+</ul>
+</li>
+<li>
+<p><strong>Background Noise</strong>:</p>
+<ul>
+<li>Can mimic “loudness recruitment”, where sounds just above threshold feel quiet but get rapidly louder.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Evaluating Reaction Time-Intensity (RT-I) Functions in Rats</strong></p>
+<ol>
+<li>
+<p><strong>Objective</strong>:</p>
+<ul>
+<li>Check if RT-I in rats matches human patterns of perceived loudness.</li>
+</ul>
+</li>
+<li>
+<p><strong>Method</strong>:</p>
+<ul>
+<li>Measured auditory RTs in rats for various:
+<ul>
+<li>Intensities</li>
+<li>Durations</li>
+<li>Bandwidths</li>
+</ul>
+</li>
+<li>Conducted in quiet and with background noise.</li>
+</ul>
+</li>
+<li>
+<p><strong>Expectations</strong>:</p>
+<ul>
+<li>If rats and humans perceive loudness similarly:
+<ul>
+<li>RTs should decrease as intensity, duration, and bandwidth increase.</li>
+<li>RTs should rise near the hearing threshold when background noise is present.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<p><strong>Aims and Challenges in Developing an Animal Behavioral Model for Loudness Perceptual Disorders</strong></p>
+<ol>
+<li>
+<p><strong>Primary Goal</strong>:</p>
+<ul>
+<li>Develop a behavioral model in animals to study loudness perceptual disorders, specifically loudness recruitment and hyperacusis.</li>
+</ul>
+</li>
+<li>
+<p><strong>Challenges</strong>:</p>
+<ul>
+<li>Accounting for effects of drug or noise on hearing.
+<ul>
+<li>E.g., High-dose salicylate can cause hearing loss, tinnitus, and possibly hyperacusis.</li>
+<li>Noise often leads to hearing loss, loudness recruitment, and potentially tinnitus and hyperacusis in some listeners.</li>
+</ul>
+</li>
+<li>A successful model should distinguish:
+<ul>
+<li>Loudness recruitment from hyperacusis.</li>
+<li>Hyperacusis from tinnitus.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Tinnitus-like Percept Study</strong>:</p>
+<ul>
+<li>Effect of broadband noise vs. tonal masker on RTs was studied.</li>
+<li>Goal: Understand the influence of a “tinnitus-like” percept on loudness growth.</li>
+<li>Hypothesis:
+<ul>
+<li>Tinnitus-like 16 kHz masker won’t affect RT-I functions for 4 kHz tones but might impact the loudness growth of 16 kHz tones.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Stability of RTs in Rats</strong>:</p>
+<ul>
+<li>Beyond comparing rat RT-I functions to humans, the study aimed to test RT stability over time.</li>
+<li>This is crucial as animal psychoacoustic studies span weeks or months.</li>
+<li>A consistent loudness perception metric is needed, especially when no experimental manipulations are applied.</li>
+</ul>
+</li>
+</ol>
+<h3 id="Result">Result</h3>
+<p><strong>Impact of Stimulus Duration on Auditory Reaction Time (RT)</strong></p>
+<ol>
+<li>
+<p><strong>Experiment Setup</strong>:</p>
+<ul>
+<li>Reaction time-intensity (RT-I) functions were measured for broadband noise bursts (BBN) across three durations: 20 ms, 100 ms, and 300 ms.</li>
+</ul>
+</li>
+<li>
+<p><strong>Main Findings</strong>:</p>
+<ul>
+<li>RTs for BBN decreased with rising stimulus intensity for all tested durations.</li>
+<li>Rats had quicker RTs (i.e., reacted faster) with longer stimulus durations.</li>
+<li>No significant interaction found between sound level and stimulus duration.</li>
+<li>Results imply rats perceived longer sounds as louder, similar to human perception.</li>
+</ul>
+</li>
+<li>
+<p><strong>Detailed Results</strong>:</p>
+<ul>
+<li>RTs for 300 ms BBN were significantly faster than for 100 ms and 20 ms BBN.</li>
+<li>Significant differences were observed:
+<ul>
+<li>Between 20 ms and 300 ms BBN across all sound levels.</li>
+<li>Between 100 ms and 300 ms BBN at specific dB levels: 40, 50, 60, and 80 dB SPL.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"><img src="https://ars.els-cdn.com/content/image/1-s2.0-S0378595520302975-gr1.jpg" alt=""></th>
+</tr>
+</thead>
+<tbody></tbody>
+</table>
+<p><strong>Impact of Stimulus Bandwidth on Auditory Reaction Time (RT) in Rats</strong></p>
+<ol>
+<li>
+<p><strong>Hypothesis</strong>:</p>
+<ul>
+<li>Wider band stimuli would sound louder (and thus induce faster RTs in rats) compared to narrower band or pure tone stimuli, based on human data.</li>
+</ul>
+</li>
+<li>
+<p><strong>Key Findings</strong>:</p>
+<ul>
+<li>Rats reacted faster to stimuli with increased bandwidth, aligning with the hypothesis that wideband stimuli sound louder.</li>
+</ul>
+</li>
+<li>
+<p><strong>Detailed Observations</strong>:</p>
+<ul>
+<li>RTs for Broadband Noise Bursts (BBN) were faster than for 16 kHz pure tones at most sound levels, excluding 30 dB SPL.</li>
+<li>RTs for BBN were also faster compared to 16–20 kHz Narrow Band Noise (NBN) for specific dB levels: 30, 40, 50, and 60 dB SPL.</li>
+</ul>
+</li>
+<li>
+<p><strong>Conclusion</strong>:</p>
+<ul>
+<li>Just as with duration, these results indicate that RT is a reliable metric for loudness perception in rats, mirroring known human data on loudness perceptions of different bandwidth sounds.</li>
+</ul>
+</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"><img src="https://ars.els-cdn.com/content/image/1-s2.0-S0378595520302975-gr2.jpg" alt=""></th>
+</tr>
+</thead>
+<tbody></tbody>
+</table>
+<p><strong>Effects of Background Noise on Loudness Perception in Rats</strong></p>
+<ol>
+<li>
+<p><strong>Experiment Setup</strong>:</p>
+<ul>
+<li>Measured RT-I functions for Broadband Noise Bursts (BBN) in quiet and with low-level background noise (2-20 kHz, 60 dB SPL).</li>
+</ul>
+</li>
+<li>
+<p><strong>Main Findings</strong>:</p>
+<ul>
+<li>In the presence of background noise, rats had:
+<ul>
+<li>Slower RTs for lower intensity sounds.</li>
+<li>Regular RTs for higher intensity sounds.</li>
+</ul>
+</li>
+<li>These patterns suggest the rats experienced recruitment-like perceptions in noise.</li>
+<li>As intensity increased just above threshold, RT decrease was sharper in noise than in quiet, aligning with loudness recruitment patterns.</li>
+</ul>
+</li>
+<li>
+<p><strong>Background Noise Effects</strong>:</p>
+<ul>
+<li>Significant effects found on RTs for lower intensity stimuli when compared to quiet conditions.</li>
+<li>In particular, differences were noted at 30, 40, and 50 dB SPL BBN levels.</li>
+<li>This indicates that, like humans, rats experience a recruitment-like loudness growth in the presence of background noise.</li>
+</ul>
+</li>
+<li>
+<p><strong>Effects of 16 kHz Masker</strong>:</p>
+<ul>
+<li>No recruitment-like effects on RTs for 4 kHz tones.</li>
+<li>Rats reacted slightly faster at 40 and 50 dB SPL tones with the 16 kHz masker.</li>
+<li>However, the effect might be due to task performance variability.</li>
+<li>For 16 kHz tones, the masker had a significant effect, especially at 60 dB SPL.</li>
+<li>This suggests that animals with tinnitus might show recruitment-like behaviors for sounds close to the tinnitus frequency.</li>
+</ul>
+</li>
+</ol>
+<h3 id="Discussion">Discussion</h3>
+<ul>
+<li>RT-I functions in rats align with established human loudness perception research, suggesting they’re a valid measure of rat loudness growth.</li>
+<li>Their consistency over four months indicates the RT-I approach reliably reflects loudness perception in rats.</li>
+</ul>
+<p><strong>Key Findings on Noise Exposure and Hearing</strong></p>
+<ol>
+<li>
+<p><strong>Loudness Recruitment</strong>:</p>
+<ul>
+<li>Noise and drugs can cause hearing loss.</li>
+<li>This loss can lead to “loudness recruitment,” where soft sounds seem quickly loud, but this doesn’t affect louder sounds.</li>
+</ul>
+</li>
+<li>
+<p><strong>Using Rats to Understand Loudness</strong>:</p>
+<ul>
+<li>In our tests, rats exposed to background noise showed symptoms similar to loudness recruitment.</li>
+</ul>
+</li>
+<li>
+<p><strong>Hyperacusis</strong>:</p>
+<ul>
+<li>This is when everyday sounds seem too loud.</li>
+<li>Certain studies, including ours, used reaction times to detect hyperacusis in animals.</li>
+<li>Our tests found that a high aspirin dose made rats more sensitive to certain sound levels.</li>
+</ul>
+</li>
+<li>
+<p><strong>Noise Exposure’s Role</strong>:</p>
+<ul>
+<li>Extended noise exposure in rats caused both loudness recruitment and hyperacusis-like behaviors.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Reaction Time-Intensity (RT-I) as a Model for Loudness Growth</strong>:</p>
+<ol>
+<li>
+<p><strong>Loudness Growth in Animals</strong>:</p>
+<ul>
+<li>Our RT-I conditioning model effectively maps loudness growth in animals.</li>
+<li>It can predict how noise or drug exposure influences loudness perception.</li>
+</ul>
+</li>
+<li>
+<p><strong>Hyperacusis vs. Loudness Recruitment</strong>:</p>
+<ul>
+<li>Hyperacusis: Faster reaction times at moderate-high sound intensities.</li>
+<li>Loudness Recruitment: Regular reaction times at these intensities.</li>
+<li>Differentiating between tinnitus and hyperacusis is crucial.</li>
+</ul>
+</li>
+<li>
+<p><strong>Studying Tinnitus</strong>:</p>
+<ul>
+<li>Prior studies on tinnitus using RT-I functions lacked comprehensive results.</li>
+<li>In our experiment, using a “tinnitus-like” background showed recruitment-like loudness growth for tones at tinnitus pitch. Other tones remained unaffected.</li>
+<li>Hyperacusis showed a different pattern than tinnitus. Thus, RT-I functions can potentially distinguish between the two.</li>
+<li>However, the overlap of tinnitus with hearing loss complicates this distinction.</li>
+</ul>
+</li>
+<li>
+<p><strong>Conclusion and Future Directions</strong>:</p>
+<ul>
+<li>Auditory reaction time mirrors loudness perception both in rats and humans.</li>
+<li>RT-I functions can screen for hearing disorders in rats post noise/drug exposure.</li>
+<li>Our goal is to expand this model, compare it with human loudness contours, and integrate neural and biochemical measures in future studies.</li>
+</ul>
+</li>
+</ol>
+<h2 id="Testing-the-Central-Gain-Model-Loudness-Growth-Correlates-with-Central-Auditory-Gain-Enhancement-in-a-Rodent-Model-of-Hyperacusis">Testing the Central Gain Model: Loudness Growth Correlates with Central Auditory Gain Enhancement in a Rodent Model of Hyperacusis</h2>
+<h3 id="Abstract-v2">Abstract</h3>
+<p><strong>Central Gain Model of Hyperacusis</strong></p>
+<ul>
+<li><strong>Theory</strong>:
+<ul>
+<li>Auditory input ↓ → Neuronal gain ↑ → Over-amplification &amp; loudness ↑.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Study Objective</strong></p>
+<ul>
+<li>Link: Sound-evoked activity changes ↔ Loudness perceptual alterations.</li>
+</ul>
+<p><strong>Methodology</strong></p>
+<ul>
+<li><strong>Operant Conditioning Task</strong>:
+<ul>
+<li>Measure: Loudness via auditory stimuli reaction time.</li>
+</ul>
+</li>
+<li><strong>Chronic Electrophysiological Recordings</strong>:
+<ul>
+<li>Locations: Auditory cortex &amp; inferior colliculus (awake animals).</li>
+<li>Goal: Daily loudness perception ↔ Neurophysiological sound encoding.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Salicylate-induced Model</strong></p>
+<ul>
+<li>Purpose: Validate the paradigm.</li>
+<li>Effects of high sodium salicylate doses:
+<ul>
+<li>Temporary hearing loss.</li>
+<li>Neural hyperactivity.</li>
+<li>Auditory disruptions (e.g., tinnitus, hyperacusis).</li>
+</ul>
+</li>
+</ul>
+<p><strong>Findings</strong></p>
+<ul>
+<li>Salicylate effects:
+<ul>
+<li>Alters: Loudness growth &amp; Evoked response-intensity.</li>
+</ul>
+</li>
+<li>Results:
+<ul>
+<li>Consistent with: Temporary hearing loss &amp; hyperacusis.</li>
+<li>Correlation: Loudness growth ↔ Sound-evoked activity (individual animals).</li>
+</ul>
+</li>
+</ul>
+<p><strong>Conclusion</strong></p>
+<ul>
+<li>Strong support: Central gain model of hyperacusis.</li>
+<li>Value: Experimental design for within-subject comparison.</li>
+</ul>
+<h3 id="Introduction-v3">Introduction</h3>
+<h4 id="part-1">part 1</h4>
+<p><strong>Hyperacusis</strong></p>
+<ul>
+<li>Definition: Auditory disorder where moderate sounds → intolerably loud/painful.</li>
+<li>Type: Common with sensorineural hearing loss.</li>
+</ul>
+<p><strong>Central Gain Model (CGM)</strong></p>
+<ul>
+<li>Concept: Maladaptive response in auditory system due to hearing loss.</li>
+<li>Mechanism:
+<ul>
+<li>Central auditory system adjusts for hearing sensitivity.</li>
+</ul>
+<ul>
+<li>Dysregulation &amp; central auditory pathway over-amplification → normal sounds perceived as excessively loud.</li>
+</ul>
+</li>
+<li>Support:
+<ul>
+<li>Accounts for major hyperacusis features.</li>
+<li>Strong evidence backing.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Validation Need</strong>: Relate central gain changes &amp; loudness perception.</p>
+<p><strong>Human Imaging</strong></p>
+<ul>
+<li>Findings: Hyperacusis patients → increased sound-evoked activity.</li>
+<li>Limitation: Can’t link neurophysiological changes &amp; hyperacusis development.</li>
+</ul>
+<p><strong>Animal Models</strong></p>
+<ul>
+<li>Advantage: Detailed hyperacusis examination.</li>
+<li>Findings: Hearing loss (due to noise/drugs) → central gain increase.</li>
+<li>Limitation:
+<ul>
+<li>Between-group comparisons.</li>
+</ul>
+<ul>
+<li>Acute measurements from anesthetized subjects.<br>
+→ Focus on specific auditory areas.</li>
+<li>Few studies link central gain &amp; loudness.</li>
+</ul>
+</li>
+</ul>
+<h4 id="part-2">part 2</h4>
+<p><strong>Challenges in Hyperacusis Study</strong></p>
+<ol>
+<li><strong>Direct Relationship Needs</strong>:
+<ul>
+<li>Objective loudness perception indicators.</li>
+<li>Indicators should reflect both hearing loss &amp; hyperacusis in single animals.</li>
+</ul>
+</li>
+<li><strong>Inter-subject Variability</strong>:
+<ul>
+<li>Hearing loss is a hyperacusis trigger but not a guaranteed outcome.</li>
+<li>Not all animals develop hyperacusis even under similar conditions.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Loudness Perception Indicator: RT-I</strong></p>
+<ul>
+<li><strong>RT-I</strong>: Measures loudness growth via subject’s reaction time (RT) to varied sound intensities.
+<ul>
+<li>Closely linked with human loudness growth &amp; equal loudness contours.</li>
+</ul>
+</li>
+<li><strong>Usage</strong>:
+<ul>
+<li>Reflects loudness recruitment in hearing impaired humans &amp; animals.</li>
+<li>Captures hyperacusis-like changes (example: rats treated with sodium salicylate).</li>
+</ul>
+</li>
+</ul>
+<p><strong>Animal Models &amp; Hyperacusis Variability</strong></p>
+<ol>
+<li><strong>Need</strong>: Relate neural hyperactivity with hyperacusis-like behavior in each animal.</li>
+<li><strong>Our Approach</strong>:
+<ul>
+<li>Combine psychophysical &amp; electrophysiological methods.</li>
+<li>Track changes in both loudness perception &amp; sound-evoked activity longitudinally.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Methodology</strong></p>
+<ol>
+<li><strong>Chronic Implants</strong>:
+<ul>
+<li>Locations: Auditory cortex (AC) &amp; inferior colliculus (IC).</li>
+<li>Purpose: Monitor sound-evoked activity in awake animals &amp; avoid anesthesia issues.</li>
+</ul>
+</li>
+<li><strong>Benefit</strong>: Directly link sound encoding with daily loudness growth assessment per animal.</li>
+</ol>
+<p><strong>Validation of Combined Approach</strong></p>
+<ul>
+<li><strong>Test</strong>: Effect of salicylate on RT-I &amp; neural activity in the same animals.</li>
+<li><strong>Findings</strong>:
+<ul>
+<li>Salicylate-induced changes in RT-I &amp; sound-evoked activity coexist in individual animals.</li>
+</ul>
+<ul>
+<li>Supports the central gain model.</li>
+<li>Validates the combined behavioral-electrophysiological paradigm.</li>
+</ul>
+</li>
+</ul>
+<h3 id="Result-v2">Result</h3>
+<h4 id="Stable-behavioral-and-electrophysiological-measures-of-loudness-growth">Stable behavioral and electrophysiological measures of loudness growth</h4>
+<p><strong>Experiment Overview</strong></p>
+<ul>
+<li><strong>Tested Animals</strong>: 8 rats.</li>
+<li><strong>Procedure</strong>:
+<ul>
+<li>Go/No-go operant conditioning paradigm.</li>
+<li>Electrodes chronically implanted in primary AC &amp; central nucleus of the IC.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Observations</strong></p>
+<ol>
+<li>
+<p><strong>LFP Tuning Curves</strong>:</p>
+<ul>
+<li>Well-tuned for frequency.</li>
+<li>AC &amp; IC electrodes matched for characteristic frequency in each hemisphere.</li>
+</ul>
+</li>
+<li>
+<p><strong>Baseline RT-I &amp; LFP I/O Functions</strong> (broadband noise burst 30–90 dB SPL):</p>
+<ul>
+<li><strong>RTs</strong>:
+<ul>
+<li>Decreased from ~325 ms (30 dB SPL) to ~140 ms (90 dB SPL).</li>
+</ul>
+</li>
+<li><strong>AC I/O Functions</strong>:
+<ul>
+<li>Amplitude increased from ~30 mV (30 dB SPL) to ~70 mV (90 dB SPL).</li>
+</ul>
+</li>
+<li><strong>IC I/O Functions</strong>:
+<ul>
+<li>Amplitude grew from ~40 mV (30 dB SPL) to ~125 mV (90 dB SPL).</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Consistency</strong>:</p>
+<ul>
+<li>No significant differences observed across baseline sessions in RT-I, AC, or IC I/O functions.</li>
+</ul>
+</li>
+<li>
+<p><strong>Conclusion</strong>:</p>
+<ul>
+<li>Behavioral &amp; electrophysiological responses are stable without any explicit manipulation.</li>
+</ul>
+</li>
+</ol>
+<h4 id="Salicylate-induced-hyperacusis-and-hyperactivity">Salicylate-induced hyperacusis and hyperactivity</h4>
+<p><strong>Post-Baseline Testing with Sodium Salicylate (SS) Treatment</strong></p>
+<ol>
+<li>
+<p><strong>Procedure</strong>:</p>
+<ul>
+<li>Animals received 200 mg/kg SS injection (i.p.).</li>
+<li>Assessments made 2 hours post-SS and again after 24 hours.</li>
+</ul>
+</li>
+<li>
+<p><strong>Data Analysis</strong>:</p>
+<ul>
+<li>RTs &amp; AC/IC LFP amplitudes normalized to maximum average baseline values.</li>
+</ul>
+</li>
+<li>
+<p><strong>Observations 2 Hours Post-SS</strong>:</p>
+<ul>
+<li><strong>Low-Intensity Noise Bursts (30 dB SPL)</strong>:
+<ul>
+<li>RTs → Slower than baseline.</li>
+<li>AC/IC Amplitudes → Smaller than baseline.</li>
+<li><strong>Interpretation</strong>: Cochlear hearing loss likely from SS-mediated ototoxicity.</li>
+</ul>
+</li>
+<li><strong>Moderate-to-High Intensities (70-90 dB SPL)</strong>:
+<ul>
+<li>RTs → Faster than baseline → Suggests sounds perceived louder (possible hyperacusis).</li>
+<li>AC/IC Amplitudes → Larger than baseline → Indicates enhanced central gain.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Observations 24 Hours Post-SS</strong>:</p>
+<ul>
+<li>Both behavioral and electrophysiological changes observed at 2 hours post-SS were reversed.</li>
+<li>Likely due to drug washout.</li>
+</ul>
+</li>
+</ol>
+<h4 id="Salicylate-induced-gain-modulation">Salicylate-induced gain modulation</h4>
+<p><strong>Results Analysis Based on Fig. 2A-C</strong></p>
+<ol>
+<li>
+<p><strong>Observation</strong>:</p>
+<ul>
+<li>SS alters loudness growth &amp; LFP responses.</li>
+<li>At low intensities: Slower RTs &amp; decreased LFPs.</li>
+<li>At high intensities: Faster RTs &amp; enhanced LFPs.</li>
+<li>Result: Steeper slope of response functions → Central gain theory hallmark.</li>
+</ul>
+</li>
+<li>
+<p><strong>Response Gain Assessment - Approach 1</strong>:</p>
+<ul>
+<li>Fit RT-I &amp; AC/IC LFP response functions with linear regression.</li>
+<li>Check slope changes (normalized response/dB) due to SS.</li>
+<li><strong>2 hours post-SS</strong>:
+<ul>
+<li>RT, AC, IC functions → Greater slopes than baseline.</li>
+</ul>
+</li>
+<li><strong>24 hours post-SS</strong>:
+<ul>
+<li>Slopes → No significant deviation from baseline.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Response Gain Assessment - Approach 2</strong>:</p>
+<ul>
+<li>Transform baseline RT/AC/IC response function to post-SS equivalent.</li>
+<li>Scatter plots depict change in response magnitude at each intensity post-SS.</li>
+<li>Interpretation:
+<ul>
+<li>Below 45° line → Decreased response post-SS.</li>
+<li>Above 45° line → Increased response post-SS.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Scatter Plot Analysis</strong>:</p>
+<ul>
+<li>Plots fitted with linear regression (2 &amp; 24 hours post-SS).</li>
+<li>Slope (R Gain) describes magnitude of gain modulation by SS:
+<ul>
+<li>( R \text{ Gain} &gt; 1 ) → Enhanced response gain.</li>
+<li>( R \text{ Gain} &lt; 1 ) → Decreased response gain.</li>
+<li>( R \text{ Gain} = 1 ) → No change in response gain.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Key Findings</strong>:</p>
+<ul>
+<li>Baseline sessions: Response gain consistent across RT-I or AC/IC LFP functions.</li>
+<li>2 hours post-SS: Slope &gt; 1 for RT, AC, IC → Increased response gain.</li>
+<li>More robust gain increase observed in AC than IC.</li>
+<li>24 hours post-SS: Response growth rate reverted to baseline.</li>
+</ul>
+</li>
+</ol>
+<h4 id="Within-subject-relationship-between-RT-AC-and-IC-gain-changes">Within-subject relationship between RT, AC and IC gain changes</h4>
+<p><strong>Results Analysis Based on Fig. 2 &amp; 3</strong></p>
+<ol>
+<li>
+<p><strong>Salicylate’s Effects</strong>:</p>
+<ul>
+<li>Alters response gain for RT and LFP I/O functions.</li>
+<li>Central gain enhancement linked with altered loudness perception.</li>
+</ul>
+</li>
+<li>
+<p><strong>Individual Animal Analysis (Fig. 3)</strong>:</p>
+<ul>
+<li>Animal with substantial RT-I alteration post-SS also had pronounced changes in AC/IC I/O functions.</li>
+<li>Animal with modest RT-I alteration post-SS exhibited minor changes in AC/IC I/O functions.</li>
+<li>RT-I &amp; AC/IC I/O functions reverted to baseline levels 24h post-SS in both cases.</li>
+</ul>
+</li>
+<li>
+<p><strong>Subject-by-Subject Analysis</strong>:</p>
+<ul>
+<li>Behavioral &amp; electrophysiological changes due to salicylate are correlated within individual animals.</li>
+<li>Majority of subjects exhibited increased response gain (R G +) post-SS.
+<ul>
+<li>RT-I function: 7/8 animals had significant change.</li>
+<li>AC I/O function: 6/8 animals had significant increase.</li>
+<li>IC I/O function: 5/8 animals had significant change.</li>
+</ul>
+</li>
+<li>All gain changes reverted to baseline 24h post-SS.</li>
+</ul>
+</li>
+<li>
+<p><strong>Hypothesis Testing</strong>:</p>
+<ul>
+<li>Correlation found between individual AC &amp; RT-I and between individual IC &amp; RT-I response gains.</li>
+<li>AC and RT-I gain changes showed close concordance in magnitude.</li>
+</ul>
+</li>
+<li>
+<p><strong>Distinguishing Hyperacusis from Loudness Recruitment</strong>:</p>
+<ul>
+<li>Increase in response gain doesn’t necessarily indicate hyperacusis.</li>
+<li>Response gain doesn’t determine if responses overshoot baseline.</li>
+<li>Changes in loudness &amp; neural activity post-SS were significantly correlated.</li>
+<li>Decreased sensitivity to low-intensity sounds post-SS linked to response changes in AC and IC.</li>
+<li>Hyperacusis-like behavior at moderate-to-high intensities more correlated with cortical than subcortical response changes.</li>
+</ul>
+</li>
+</ol>
+<h3 id="Discussion-v2">Discussion</h3>
+<p><strong>Discussion</strong>:<br>
+→ Objective: Link hyperacusis &amp; central gain enhancement.</p>
+<p><strong>Methods</strong>:</p>
+<ul>
+<li>Psychophysical-electrophysiological approach.</li>
+<li>Stable loudness &amp; auditory-evoked functions from animals.</li>
+<li>Assessed salicylate effects on RT-I &amp; AC/IC I/O.</li>
+</ul>
+<p><strong>Findings</strong>:</p>
+<ul>
+<li>Salicylate: Alters RT-I &amp; AC/IC I/O → Suggests hearing loss &amp; hyperacusis.</li>
+<li>Loudness &amp; sound-evoked activity affected by salicylate are correlated.</li>
+</ul>
+<p><strong>Significance</strong>:</p>
+<ul>
+<li>Supports central gain model of hyperacusis.</li>
+<li>Within-subject comparisons valuable; inter-subject variability is a strength.</li>
+</ul>
+<h2 id="Mutations-causing-syndromic-autism-define-an-axis-of-synaptic-pathophysiology">Mutations causing syndromic autism define an axis of synaptic pathophysiology</h2>
+<h3 id="Abstraction">Abstraction</h3>
+<p><strong>Topic</strong>:<br>
+Tuberous sclerosis complex (TSC) &amp; fragile X syndrome (<abbr title="Fragile X Syndrome">FXS</abbr>): Genetic diseases with intellectual disability &amp; autism.</p>
+<p><strong>Hypothesis</strong>:</p>
+<ul>
+<li>Cause: Mutations in genes regulating neuronal protein synthesis.</li>
+<li>Excessive protein synthesis might be a core mechanism for intellectual disability &amp; autism.</li>
+</ul>
+<p><strong>Method &amp; Findings</strong>:</p>
+<ul>
+<li>Used: Electrophysiological &amp; biochemical assays in the hippocampus of Tsc2<sup>+/-</sup> and Fmr1<sup>-/y</sup> mice.</li>
+</ul>
+<ul>
+<li>Result: Synaptic dysfunction due to mutations falls at opposite ends of a physiological spectrum.</li>
+<li>Synaptic, biochemical, cognitive defects in mutants can be corrected by modulating metabotropic glutamate receptor 5 (mGluR5) in opposite directions.</li>
+<li>Deficits vanish when mice carry both mutations.</li>
+</ul>
+<p><strong>Conclusion</strong>:</p>
+<ul>
+<li>Optimal synaptic plasticity &amp; cognition occur within a specific range of mGluR5-mediated protein synthesis.</li>
+<li>Deviating from this range results in shared behavioural impairments.</li>
+</ul>
+<h3 id="Introduction-v4">Introduction</h3>
+<p><strong>Background</strong>:</p>
+<ul>
+<li>&gt;1% have Autism Spectrum Disorder (ASD).</li>
+<li>50% of them also have intellectual disability (ID).</li>
+<li>Main cause: Unknown.</li>
+<li>Some known: Genetic syndromes.</li>
+</ul>
+<p><strong>Fragile X Syndrome (<abbr title="Fragile X Syndrome">FXS</abbr>)</strong>:</p>
+<ul>
+<li>Caused by <abbr title="Fragile X mental retardation 1">FMR1</abbr> gene silencing.</li>
+<li>Fmr1 knockout mouse: ↑ protein synthesis via mGluR5.</li>
+<li>Inhibiting mGluR5 corrects <abbr title="Fragile X Syndrome">FXS</abbr>.</li>
+</ul>
+<p><strong>Hypothesis</strong>:</p>
+<ul>
+<li>Some ASD &amp; ID from gene mutations affecting synaptic mRNA.</li>
+<li>Altered protein synthesis common in autism &amp; ID?</li>
+</ul>
+<p><strong>Study Aim</strong>:</p>
+<ul>
+<li>Examine: TSC mutation → same protein synthesis abnormalities as <abbr title="Fragile X Syndrome">FXS</abbr>?</li>
+<li>If yes, one treatment could benefit both disorders.</li>
+</ul>
+<h3 id="Result-v3">Result</h3>
+<h4 id="TSC-mutations-affect-synaptic-function">TSC mutations affect synaptic function</h4>
+<p><strong>Reasons</strong>:</p>
+<ol>
+<li>Single-gene disorder → ASD &amp; ID symptoms like <abbr title="Fragile X Syndrome">FXS</abbr>.</li>
+<li>Affected gene in receptor-to-mRNA translation pathway.</li>
+<li>Valid mouse models available.</li>
+<li>Some mouse models respond to protein synthesis treatments.</li>
+</ol>
+<p><strong>TSC Details</strong>:</p>
+<ul>
+<li>Caused by TSC1 or TSC2 gene mutations.</li>
+<li>Form TSC1/2 complex.</li>
+<li>TSC1/2 inhibits Rheb → specific for mTOR in mTORC1 complex.</li>
+<li>Excessive mTORC1 → ↑ mRNA translation &amp; cell growth.</li>
+<li>TSC symptoms: Hamartoma growths due to functional allele inactivation.</li>
+<li>Some TSC neurological symptoms: Tumor growth in cortex.</li>
+<li>Other symptoms (cognitive &amp; autism): Abnormal synaptic signaling.</li>
+</ul>
+<p><strong>Mouse Model</strong>:</p>
+<ul>
+<li>Tsc1 or Tsc2 mutants → hippocampus-dependent learning/memory deficits.</li>
+<li>No brain tumors or seizures.</li>
+<li>Used Tsc2<sup>+/-</sup> model.
+<ul>
+<li>TSC2 mutations more severe &amp; common in humans.</li>
+<li>Tsc2<sup>+/-</sup> mice treated with mTORC1 inhibitor (rapamycin) → improved hippocampal memory.</li>
+<li>Potential drug treatment for TSC &amp; <abbr title="Fragile X Syndrome">FXS</abbr>.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Hypothesis</strong>:</p>
+<ul>
+<li>TSC synaptic dysfunction → ↑ protein synthesis (due to ↑ mTORC1).</li>
+<li>mTORC1 links mGluR5 to protein synthesis.</li>
+<li>mTOR ↑ protein synthesis also in Fmr1<sup>-/y</sup> mouse (controversial).</li>
+</ul>
+<p><strong>mGluR-LTD</strong>:</p>
+<ul>
+<li>Electrophysiological measure of local mRNA translation.</li>
+<li>Exaggerated LTD in Fmr1<sup>-/y</sup> → led to mGluR <abbr title="Fragile X Syndrome">FXS</abbr> theory.</li>
+<li>Study: Examine mGluR-LTD in Tsc2<sup>+/-</sup> mouse hippocampus.</li>
+</ul>
+<h4 id="Protein-synthesis-and-mGluR-LTD-in-Tsc2-mice">Protein synthesis and mGluR-LTD in Tsc2<sup>+/-</sup> mice</h4>
+<ol>
+<li>
+<p><strong>LTD Induction</strong>:</p>
+<ul>
+<li>Used Gp1 mGluRs (mGluR 1 &amp; 5) activation with DHPG in hippocampal slices.</li>
+<li>Tsc2<sup>+/-</sup> mice showed deficient DHPG-induced LTD compared to WT (Fig. 1a).</li>
+<li>Similar deficit observed with patterned electrical stimulation (Fig. 1b).</li>
+</ul>
+</li>
+<li>
+<p><strong>Tsc2<sup>+/-</sup> Synaptic Function</strong>:</p>
+<ul>
+<li>Basal synaptic transmission in CA1 was normal (Supplementary Fig. 1).</li>
+<li>NMDA-receptor-dependent LTD was also similar between Tsc2<sup>+/-</sup> and WT (Fig. 1c).</li>
+<li>DHPG-induced ERK1/2 phosphorylation (indicator of Gp1 mGluR signalling) unchanged in Tsc2<sup>+/-</sup> (Fig. 1d).</li>
+<li>Concluded: Deficit in mGluR-LTD isn’t from global synaptic or Gp1 mGluR signalling disruption.</li>
+</ul>
+</li>
+<li>
+<p><strong>LTD Mechanisms</strong>:</p>
+<ul>
+<li>Two mechanisms in WT:
+<ol>
+<li>Reduced presynaptic glutamate release probability.</li>
+<li>Reduced postsynaptic AMPA receptors.</li>
+</ol>
+</li>
+<li>Postsynaptic change needs immediate mRNA translation in hippocampal pyramidal neurons.</li>
+<li>Cycloheximide (protein synthesis inhibitor) reduced LTD in WT (Fig. 2a) but not in Tsc2<sup>+/-</sup> (Fig. 2b).</li>
+<li>Suggests: Tsc2<sup>+/-</sup> has selective loss of protein-synthesis-dependent component of LTD.</li>
+</ul>
+</li>
+<li>
+<p><strong>Comparison with Fmr1<sup>-/y</sup> Mouse</strong>:</p>
+<ul>
+<li>Tsc2<sup>+/-</sup>'s electrophysiological results contrast Fmr1<sup>-/y</sup>, where mGluR-LTD is enhanced.</li>
+<li>Fmr1<sup>-/y</sup> has increased basal mRNA translation downstream of mGluR5.</li>
+<li>Tsc2<sup>+/-</sup> showed decreased [<sup>35</sup>S] methionine/cysteine protein incorporation under basal conditions (Fig. 2d).</li>
+</ul>
+</li>
+<li>
+<p><strong>Arc Protein</strong>:</p>
+<ul>
+<li>Reduced Arc expression in Tsc2<sup>+/-</sup> hippocampal slices (Fig. 2e).</li>
+<li>Arc is synthesized in response to Gp1 mGluR activation and required for mGluR-LTD.</li>
+<li>Significant reduction in Arc translation in Tsc2<sup>+/-</sup> hippocampus (Fig. 2f).</li>
+<li>Indicates: mGluR-LTD deficiency in Tsc2<sup>+/-</sup> due to decreased translation of LTD-stabilizing proteins, including Arc.</li>
+</ul>
+</li>
+</ol>
+<h4 id="LTD-deficit-caused-by-excess-mTOR-activity">LTD deficit caused by excess mTOR activity</h4>
+<ol>
+<li><strong>Goal</strong>: Understand if the Tsc2<sup>+/-</sup> mutation’s impact on mGluR-LTD is due to unchecked mTOR activity.</li>
+<li><strong>Key Findings</strong>:
+<ul>
+<li>Rapamycin restored mGluR-LTD in Tsc2<sup>+/-</sup> to normal levels.</li>
+<li>This treatment didn’t affect the WT mice.</li>
+<li>The rescue in Tsc2<sup>+/-</sup> was due to restored protein synthesis.</li>
+</ul>
+</li>
+<li><strong>Conclusion</strong>: Uncontrolled mTOR activity in Tsc2<sup>+/-</sup> hinders the protein synthesis needed for mGluR-LTD.</li>
+</ol>
+<h4 id="Effect-of-mGluR5-positive-allosteric-modulation">Effect of mGluR5-positive allosteric modulation</h4>
+<p><strong>mGluR5’s Role in Tsc2<sup>+/-</sup> Model of TSC</strong>:</p>
+<ol>
+<li>
+<p><strong>Background</strong>:</p>
+<ul>
+<li><abbr title="Fragile X Syndrome">FXS</abbr> issues are fixed by lowering mGluR5 signaling.</li>
+<li>Thought of boosting mGluR5 signaling for TSC.</li>
+</ul>
+</li>
+<li>
+<p><strong>mGluR5 PAM’s Impact</strong>:</p>
+<ul>
+<li>A PAM boosts mGluR-LTD in Tsc2<sup>+/-</sup> mice.</li>
+<li>This corrects the protein-dependent part of LTD.</li>
+<li>PAM (CDPPB) also fixes protein and Arc synthesis issues.</li>
+</ul>
+</li>
+<li>
+<p><strong>Behavioral Effects</strong>:</p>
+<ul>
+<li>Tsc2<sup>+/-</sup> mice struggle in a fear task.</li>
+<li>mGluR5 and new protein synthesis are crucial for this.</li>
+<li>CDPPB treatment before training helps Tsc2<sup>+/-</sup> mice.</li>
+</ul>
+</li>
+<li>
+<p><strong>Conclusion</strong>: Boosting mGluR5 might help treat TSC cognitive problems.</p>
+</li>
+</ol>
+<h4 id="Fmr2-y-and-Tsc21-2-mutations-cancel-each-other">Fmr2/y and Tsc21/2 mutations cancel each other</h4>
+<p><strong>Contrasting Effects of <abbr title="Fragile X Syndrome">FXS</abbr> and TSC Mutations on mGluR5 and Memory</strong>:</p>
+<ol>
+<li>
+<p><strong>Initial Findings</strong>:</p>
+<ul>
+<li><abbr title="Fragile X Syndrome">FXS</abbr> and TSC mutations show opposite impacts on protein-synthesis-dependent LTD.</li>
+<li>They respond oppositely to mGluR5 treatments.</li>
+</ul>
+</li>
+<li>
+<p><strong>Experiment with Combined Mutations</strong>:</p>
+<ul>
+<li>Introduced an Fmr1 deletion to Tsc2<sup>+/-</sup> background.</li>
+<li>mGluR-LTD was reduced in Tsc2<sup>+/-</sup> and increased in Fmr1<sup>-/y</sup>.</li>
+<li>Mice with both mutations showed mGluR-LTD similar to WT.</li>
+</ul>
+</li>
+<li>
+<p><strong>Memory Impairment Comparison</strong>:</p>
+<ul>
+<li>Tsc2<sup>+/-</sup> and Fmr1<sup>-/y</sup> have similar cognitive issues, despite opposite synaptic alterations.</li>
+<li>Both have a context discrimination memory deficit.</li>
+<li>However, double mutants don’t show this deficit, suggesting both mutations might counteract each other’s effects on behavior.</li>
+</ul>
+</li>
+</ol>
+<h3 id="Discussion-v3">Discussion</h3>
+<p><strong>LTD, Protein Synthesis, and Genetic Disorders:</strong></p>
+<ol>
+<li>
+<p><strong>Context</strong>:</p>
+<ul>
+<li>LTD and mGluR5-related protein synthesis are significant in <abbr title="Fragile X Syndrome">FXS</abbr>.</li>
+<li><abbr title="Fragile X Syndrome">FXS</abbr> arises from the absence of FMRP, an mRNA-binding protein inhibiting translation.</li>
+<li>In the Fmr1<sup>-/y</sup> mouse, there’s heightened protein synthesis and exaggerated LTD via an mGluR5-ERK1/2 pathway.</li>
+</ul>
+</li>
+<li>
+<p><strong>mTOR Significance</strong>:</p>
+<ul>
+<li>Elevated mTOR activity suppresses protein synthesis vital for LTD in Tsc2<sup>+/-</sup> mice.</li>
+<li>Hyperphosphorylation of FMRP or increased translation of certain mRNAs might explain this suppression.</li>
+<li>Arc, crucial for mGluR5-related long-term plasticity, is under-translated in Tsc2<sup>+/-</sup> mice.</li>
+<li>mGluR-LTD differences in Tsc2<sup>+/-</sup> and Fmr1<sup>-/y</sup> mice suggest distinct regulation by FMRP and TSC1/2.</li>
+</ul>
+</li>
+<li>
+<p><strong>Potential Treatments</strong>:</p>
+<ul>
+<li>Rapamycin, though beneficial, has limitations due to immunosuppressive properties.</li>
+<li>mGluR5 PAMs might target synaptic mechanisms causing cognitive and behavioral issues in TSC.</li>
+</ul>
+</li>
+<li>
+<p><strong>Implications for ASD</strong>:</p>
+<ul>
+<li>TSC and <abbr title="Fragile X Syndrome">FXS</abbr> are significant genetic risk factors for ASD and intellectual disability.</li>
+<li>While Fmr1 mutation leads to exaggerated protein synthesis and LTD, Tsc2 mutation causes the opposite. Both can be balanced out in combined mutations.</li>
+<li>This suggests that ASD’s genetic causes might produce similar effects by deviations from the norm.</li>
+<li>Therapies for one type of ASD might not work for all, emphasizing personalized treatments.</li>
+</ul>
+</li>
+</ol>
+<h2 id="Deletion-of-Fmr1-from-Forebrain-Excitatory-Neurons-Triggers-Abnormal-Cellular-EEG-and-Behavioral-Phenotypes-in-the-Auditory-Cortex-of-a-Mouse-Model-of-Fragile-X-Syndrome">Deletion of Fmr1 from Forebrain Excitatory Neurons Triggers Abnormal Cellular, EEG, and Behavioral Phenotypes in the Auditory Cortex of a Mouse Model of Fragile X Syndrome</h2>
+<h3 id="Abstract-v3">Abstract</h3>
+<p><strong>Fragile X Syndrome and Sensory Processing Deficits:</strong></p>
+<ol>
+<li>
+<p><strong>Context</strong>:</p>
+<ul>
+<li>Fragile X syndrome (<abbr title="Fragile X Syndrome">FXS</abbr>) is a primary genetic cause of autism, marked by sensory processing anomalies.</li>
+<li>In humans with <abbr title="Fragile X Syndrome">FXS</abbr> and Fmr1 knockout (KO) mouse model: EEG shows enhanced resting gamma power and diminished sound-evoked gamma synchrony.</li>
+</ul>
+</li>
+<li>
+<p><strong>Matrix Metalloproteinase-9 (MMP-9)</strong>:</p>
+<ul>
+<li>Past studies indicate elevated MMP-9 levels might influence these EEG anomalies by affecting perineuronal nets (PNNs) around parvalbumin (PV) interneurons in the auditory cortex of Fmr1 KO mice.</li>
+</ul>
+</li>
+<li>
+<p><strong>Effects of Fmr1 Deletion in Excitatory Neurons</strong>:</p>
+<ul>
+<li>Cortical MMP-9 gelatinase activity, mTOR/Akt phosphorylation, and resting EEG gamma power increase.</li>
+<li>Density of PV/PNN cells decrease.</li>
+<li>Cre<sup>Nex1</sup> /Fmr1<sup>Flox/y</sup> cKO mice show heightened locomotor activity but not anxiety-like behaviors.</li>
+</ul>
+</li>
+<li>
+<p><strong>Implications</strong>:</p>
+<ul>
+<li>FMRP changes in cortical excitatory neurons can produce cellular, electrophysiological, and behavioral phenotypes in Fmr1 KO mice.</li>
+<li>Suggests local cortical circuit abnormalities play a role in sensory processing deficits in autism spectrum disorders.</li>
+</ul>
+<p><strong>Fragile X Syndrome and Sensory Processing Deficits: An In-depth Study</strong></p>
+</li>
+</ol>
+<h3 id="Introduction-v5">Introduction</h3>
+<ol>
+<li>
+<p><strong>Introduction &amp; Background</strong>:</p>
+<ul>
+<li>Fragile X syndrome (<abbr title="Fragile X Syndrome">FXS</abbr>) is a monogenic form of autism spectrum disorders (ASD).</li>
+<li>Caused by a CGG repeat expansion in the Fmr1 gene, leading to downregulation of fragile X mental retardation protein (FMRP).</li>
+<li>Symptoms include anxiety, intellectual disability, and abnormal sensory processing, particularly auditory hypersensitivity.</li>
+</ul>
+</li>
+<li>
+<p><strong>Auditory Hypersensitivity in <abbr title="Fragile X Syndrome">FXS</abbr></strong>:</p>
+<ul>
+<li>Both humans with <abbr title="Fragile X Syndrome">FXS</abbr> and Fmr1 knockout (KO) mice exhibit auditory hypersensitivity.</li>
+<li>Electroencephalographic (EEG) studies in these subjects have shown increased resting EEG gamma band power, which could underlie sensory hypersensitivity.</li>
+</ul>
+</li>
+<li>
+<p><strong>The Role of Matrix Metalloproteinase-9 (MMP-9)</strong>:</p>
+<ul>
+<li>MMP-9 levels are elevated in <abbr title="Fragile X Syndrome">FXS</abbr> brains and could affect the development of parvalbumin (PV)-expressing inhibitory interneurons.</li>
+<li>MMP-9 is secreted from various cell types including astrocytes and neurons.</li>
+<li>It can also mediate changes in synaptic functions through the PI3K/Akt/mTOR pathway.</li>
+</ul>
+</li>
+<li>
+<p><strong>Cell-Specific Effects</strong>:</p>
+<ul>
+<li>FMRP is expressed in multiple levels and cell types in the auditory pathway.</li>
+<li>The origin and cell type specificity of abnormal EEG recordings are still unknown.</li>
+</ul>
+</li>
+<li>
+<p><strong>Objective of the Current Study</strong>:</p>
+<ul>
+<li>To understand the impact of deleting Fmr1 specifically from forebrain excitatory neurons.</li>
+</ul>
+</li>
+<li>
+<p><strong>Findings</strong>:</p>
+<ul>
+<li>Deletion of FMRP from forebrain excitatory neurons was sufficient to elicit <abbr title="Fragile X Syndrome">FXS</abbr>-associated symptoms.</li>
+<li>This includes enhanced MMP-9 activity, increased mTOR/Akt signaling, impaired PV/PNN expression, and hyperactive behaviors.</li>
+</ul>
+</li>
+<li>
+<p><strong>Implications</strong>:</p>
+<ul>
+<li>The study suggests that FMRP in excitatory neurons is critical for normal cortical activity.</li>
+<li>Highlights novel mechanisms potentially leading to sensory hypersensitivity in <abbr title="Fragile X Syndrome">FXS</abbr> and possibly other forms of ASD.</li>
+</ul>
+</li>
+</ol>
+<h3 id="Result-v4">Result</h3>
+<ol>
+<li><strong>Goals</strong>:</li>
+</ol>
+<ul>
+<li>Check if issues in auditory cortex of Fmr1 KO mice persist in adulthood.</li>
+<li>Examine effects of FMRP deletion on brain and behavior.</li>
+</ul>
+<ol start="2">
+<li><strong>Key Results</strong>:</li>
+</ol>
+<ul>
+<li>Reduced density of PV cells in layer 4 of auditory cortex in Fmr1 KO mice.</li>
+<li>Lower density of WFA+ PNN cells in both layer 4 and 2/3 in Fmr1 KO mice.</li>
+<li>Poor formation of PNNs around PV cells in Fmr1 KO mice.</li>
+</ul>
+<ol start="3">
+<li><strong>Implications</strong>:</li>
+</ol>
+<ul>
+<li>The observed deficits are long-lasting, suggesting they may cause enhanced sound sensitivity in Fmr1 KO mice.</li>
+</ul>
+<h4 id="FMRP-Immunoreactivity-Was-Significantly-Reduced-in-Excitatory-Neurons-of-Auditory-Cortex-of-Adult-CreNex1-Fmr1Flox-y-cKO-Mice">FMRP Immunoreactivity Was Significantly Reduced in Excitatory Neurons of Auditory Cortex of Adult Cre<sup>Nex1</sup> /Fmr1<sup>Flox/y</sup> cKO Mice</h4>
+<ol>
+<li><strong>Method</strong>:</li>
+</ol>
+<ul>
+<li>Used Cre<sup>Nex1</sup> and Fmr1flox/flox KO mice to specifically delete FMRP in forebrain excitatory neurons.</li>
+</ul>
+<ol start="2">
+<li><strong>Key Results</strong>:</li>
+</ol>
+<ul>
+<li>Significant reduction in FMRP in the auditory cortex of Cre<sup>Nex1</sup>/Fmr1<sup>Flox/y</sup> cKO mice compared to controls.</li>
+<li>No significant change in cell density in the auditory cortex.</li>
+<li>No significant changes in FMRP expression in other parts of the auditory pathway like the inferior colliculus and auditory thalamus.</li>
+</ul>
+<ol start="3">
+<li><strong>Implications</strong>:</li>
+</ol>
+<ul>
+<li>The deletion of FMRP is specific to forebrain excitatory neurons in the auditory cortex and doesn’t affect other regions, confirming the targeted nature of the genetic manipulation.</li>
+</ul>
+<h4 id="Deletion-of-FMRP-from-Excitatory-Neurons-Reduces-PV-PNN-and-PV-PNN-Colocalization-in-the-Auditory-Cortex-of-Adult-CreNex1-Fmr1-Flox-y-cKO-Mice">Deletion of FMRP from Excitatory Neurons Reduces PV, PNN, and PV/PNN Colocalization in the Auditory Cortex of Adult CreNex1 /Fmr1 Flox/y cKO Mice</h4>
+<ol>
+<li>
+<p><strong>Method</strong>:</p>
+<ul>
+<li>Studied cell density in the auditory cortex of specific knockout mice (CreNex1/Fmr1Flox/y cKO) and control mice (Fmr1Flox/y).</li>
+</ul>
+</li>
+<li>
+<p><strong>Results</strong>:</p>
+<ul>
+<li>Fewer PV cells in knockout mice in two brain layers (L4 and L2/3).</li>
+<li>Fewer WFA+ PNN cells in the same layers in knockout mice.</li>
+<li>Less overlap of PV and WFA+ PNN cells in knockout mice in both layers.</li>
+</ul>
+</li>
+<li>
+<p><strong>Implications</strong>:</p>
+<ul>
+<li>Loss of FMRP in excitatory neurons affects these cells.</li>
+<li>This could disrupt overall brain network function.</li>
+</ul>
+</li>
+</ol>
+<h4 id="Total-Aggrecan-Levels-Are-Reduced-While-Cleaved-Aggrecan-Levels-and-Gelatinase-Activity-Are-Enhanced-in-the-Auditory-Cortex-of-Adult-CreNex1-Fmr1-Flox-y-cKO-Mice">Total Aggrecan Levels Are Reduced, While Cleaved Aggrecan Levels and Gelatinase Activity Are Enhanced in the Auditory Cortex of Adult CreNex1 /Fmr1 Flox/y cKO Mice</h4>
+<ol>
+<li>
+<p><strong>Method</strong>:</p>
+<ul>
+<li>Conducted a gelatinase activity assay and measured aggrecan levels in the auditory cortex of specific mouse models.</li>
+</ul>
+</li>
+<li>
+<p><strong>Results</strong>:</p>
+<ul>
+<li>Higher gelatinase activity in both Fmr1 KO and Cre Nex1/Fmr1 Flox/y cKO mice compared to controls.</li>
+<li>Lower levels of full-length aggrecan and higher levels of cleaved aggrecan in both Fmr1 KO and Cre Nex1/Fmr1 Flox/y cKO mice.</li>
+<li>Increased ratio of cleaved aggrecan to total aggrecan in these mice.</li>
+</ul>
+</li>
+<li>
+<p><strong>Implications</strong>:</p>
+<ul>
+<li>The increased gelatinase activity, likely due to elevated MMP-9 levels, may contribute to the loss of PNNs.</li>
+<li>The cleavage of aggrecan, a key component of PNNs, is also affected.</li>
+<li>The loss of FMRP in excitatory neurons may underlie these molecular changes, affecting overall neural network integrity.</li>
+</ul>
+</li>
+</ol>
+<h4 id="Deletion-of-FMRP-from-Excitatory-Neurons-Triggers-a-Decrease-in-PV-Levels-While-Akt-and-mTOR-Phosphorylation-Is-Increased-in-Auditory-Cortex-of-Adult-CreNex1-Fmr1-Flox-y-cKO-Mice">Deletion of FMRP from Excitatory Neurons Triggers a Decrease in PV Levels, While Akt and mTOR Phosphorylation Is Increased in Auditory Cortex of Adult CreNex1 /Fmr1 Flox/y cKO Mice</h4>
+<p><strong>Key Findings on PV Levels and Akt/mTOR Signaling</strong></p>
+<ol>
+<li>
+<p><strong>Method</strong>:</p>
+<ul>
+<li>Measured levels of Parvalbumin (PV) and phosphorylated forms of Akt and mTOR in the auditory cortex of specific mouse models.</li>
+</ul>
+</li>
+<li>
+<p><strong>Results</strong>:</p>
+<ul>
+<li>Significant decrease in PV levels in the auditory cortex of Fmr1 KO and Cre Nex1/Fmr1 Flox/y cKO mice.</li>
+<li>Higher levels of phosphorylated (i.e., active) forms of Akt and mTOR in these mouse models compared to their controls.</li>
+</ul>
+</li>
+<li>
+<p><strong>Implications</strong>:</p>
+<ul>
+<li>The decrease in PV levels is consistent with earlier findings in autism mouse models and might be linked to network dysfunction.</li>
+<li>Enhanced Akt/mTOR signaling could contribute to synaptic changes and hyperexcitability seen in <abbr title="Fragile X Syndrome">FXS</abbr> and other autism spectrum disorders.</li>
+<li>The deletion of FMRP in excitatory neurons is sufficient to trigger these molecular changes, pointing to its pivotal role in the auditory cortex of adult mice.</li>
+</ul>
+</li>
+</ol>
+<h4 id="Resting-EEG-Gamma-Power-Is-Enhanced-in-the-Auditory-Cortex-of-Adult-CreNex1-Fmr1-Flox-y-cKO-Mice">Resting EEG Gamma Power Is Enhanced in the Auditory Cortex of Adult CreNex1 /Fmr1 Flox/y cKO Mice</h4>
+<p><strong>Key Findings on Impaired Neural Oscillations and Local Circuit Defects</strong></p>
+<ol>
+<li>
+<p><strong>Objective</strong>:</p>
+<ul>
+<li>To determine if deficits in forebrain excitatory neurons cause abnormal neural oscillations similar to global Fmr1 KO mice.</li>
+</ul>
+</li>
+<li>
+<p><strong>Methods</strong>:</p>
+<ul>
+<li>Baseline EEG raw power in auditory cortex examined for Cre Nex1/Fmr1 Flox/y cKO mice (n=9) and control Fmr1Flox/y mice (n=9).</li>
+<li>Analyzed various frequency bands during a 5-minute resting period.</li>
+</ul>
+</li>
+<li>
+<p><strong>Results</strong>:</p>
+<ul>
+<li>Enhanced high-frequency oscillations observed in the auditory cortex of Cre Nex1/Fmr1 Flox/y cKO mice.</li>
+<li>Significant increase in low gamma power (30-55 Hz) in the auditory cortex of these mice.</li>
+</ul>
+</li>
+<li>
+<p><strong>Implications</strong>:</p>
+<ul>
+<li>The abnormal low gamma power likely stems from local circuit defects, similar to global Fmr1 KO mice.</li>
+<li>These local circuit defects may be related to observed increases in gelatinase activity and reduced PV+ cell density and WFA+ PNNs around PV+ neurons.</li>
+<li>The results suggest that specific types of neurons may be critical for the neural oscillation abnormalities observed in <abbr title="Fragile X Syndrome">FXS</abbr> and potentially other autism spectrum disorders.</li>
+</ul>
+</li>
+</ol>
+<p>This study adds to the understanding that local cortical circuit abnormalities, possibly related to impaired PV+ interneuron function, contribute to neural oscillation deficits in <abbr title="Fragile X Syndrome">FXS</abbr>.</p>
+<h4 id="Gamma-Synchronization-Is-Not-Affected-in-Adult-CreNex1-Fmr1-Flox-y-cKO-Mouse-Auditory-Cortex">Gamma Synchronization Is Not Affected in Adult CreNex1 /Fmr1 Flox/y cKO Mouse Auditory Cortex</h4>
+<p><strong>Key Findings on Phase Locking and Gamma Synchronization</strong></p>
+<ol>
+<li>
+<p><strong>Objective</strong>:</p>
+<ul>
+<li>To investigate if increased baseline gamma in Cre Nex1/Fmr1 Flox/y cKO mice impacts the consistency of sound-evoked gamma synchronization.</li>
+</ul>
+</li>
+<li>
+<p><strong>Methods</strong>:</p>
+<ul>
+<li>Used “chirp” stimuli with varying modulation frequencies, both up and down, presented 300 times each.</li>
+<li>Employed Inter-Trial Phase Coherence (ITPC) analysis to measure phase consistency across trials.</li>
+</ul>
+</li>
+<li>
+<p><strong>Results</strong>:</p>
+<ul>
+<li>Despite increased baseline gamma in Cre Nex1/Fmr1 Flox/y cKO mice, there were no significant differences in gamma band ITPC compared to controls.</li>
+<li>Similar patterns observed for both up- and down-chirps.</li>
+</ul>
+</li>
+<li>
+<p><strong>Implications</strong>:</p>
+<ul>
+<li>The lack of difference in gamma ITPC suggests that the gamma synchronization deficits in global Fmr1 KO mice are not solely due to excitatory neurons in the forebrain.</li>
+<li>This opens up the possibility that other cell types in the cortex or subcortical sites could be responsible for these deficits.</li>
+</ul>
+</li>
+</ol>
+<p>The study suggests that while local circuit defects may contribute to baseline gamma power, they may not be the sole factor affecting gamma synchronization in response to auditory stimuli in <abbr title="Fragile X Syndrome">FXS</abbr>.</p>
+<h4 id="Increased-Non–Phase-Locked-STP-Is-Observed-in-the-Auditory-Cortex-of-Adult-CreNex1-Fmr1-Flox-y-cKO-Mice-during-Chirp-Stimulation">Increased Non–Phase-Locked STP Is Observed in the Auditory Cortex of Adult CreNex1 /Fmr1 Flox/y cKO Mice during Chirp Stimulation</h4>
+<ol>
+<li>Studied gamma power in Cre Nex1/Fmr1 Flox/y cKO mice.</li>
+<li>Found increased lower gamma power.</li>
+<li>Suggests local circuit issues.</li>
+</ol>
+<h4 id="Induced-Power-Is-Significantly-Enhanced-in-the-Auditory-Cortex-of-Adult-CreNex1-Fmr1-Flox-y-cKO-Mice">Induced Power Is Significantly Enhanced in the Auditory Cortex of Adult CreNex1 /Fmr1 Flox/y cKO Mice</h4>
+<ol>
+<li>Tested auditory cortex responses to noise bursts at 4 Hz and 0.25 Hz rates.</li>
+<li>Cre Nex1/Fmr1 Flox/y cKO mice showed reduced phase locking in the beta range (20-30 Hz).</li>
+<li>Increased “ongoing” response was observed in the beta to low gamma range (10-50 Hz).</li>
+<li>These effects persisted in repeated sound stimulation.</li>
+<li>Results suggest increased variability and reduced suppression of ongoing activity in cKO mice.</li>
+</ol>
+<h4 id="Excitatory-Neuron-Specific-Adult-CreNex1-Fmr1-Flox-y-cKO-Mice-Display-Increased-Locomotor-Activity-but-No-Anxiety-Like-Behavior">Excitatory Neuron-Specific Adult CreNex1 /Fmr1 Flox/y cKO Mice Display Increased Locomotor Activity, but No Anxiety-Like Behavior</h4>
+<ol>
+<li>Mice were tested for activity and anxiety using elevated plus maze and open field (OF) tests.</li>
+<li>Cre Nex1/Fmr1 Flox/y cKO mice showed more arm entries and higher speed, indicating increased locomotor activity.</li>
+<li>No difference was observed in time spent in open arms, suggesting no change in anxiety levels.</li>
+<li>In the OF test, cKO mice also crossed more lines and moved faster, confirming increased activity.</li>
+<li>No significant difference in time spent in center or thigmotaxis, again suggesting no change in anxiety.</li>
+<li>Conclusion: Deleting FMRP from forebrain excitatory neurons increases activity but doesn’t affect anxiety-like behaviors.</li>
+</ol>
+<h3 id="Discussion-v4">Discussion</h3>
+<ol>
+<li>Study aims to understand sensory processing issues in Fragile X Syndrome (<abbr title="Fragile X Syndrome">FXS</abbr>), a genetic cause of Autism Spectrum Disorder (ASD).</li>
+<li>Deleting Fmr1 from forebrain excitatory neurons causes abnormal EEG patterns in adult auditory cortex.</li>
+<li>This deletion also increases gelatinase activity, affecting Perineuronal Nets (PNNs) around Parvalbumin (PV) neurons.</li>
+<li>PV neurons are crucial for sensory processing; their dysfunction may underlie sensory issues in <abbr title="Fragile X Syndrome">FXS</abbr>.</li>
+<li>The study also finds higher mTOR/Akt phosphorylation in the cortex, suggesting altered signaling pathways.</li>
+<li>Reduced excitation to PV neurons may lead to their decreased activity and function.</li>
+<li>Low-gamma band power in auditory cortex is specifically increased; this could influence sensory and cognitive processes.</li>
+<li>Both cortical and sub-cortical structures likely contribute to auditory processing deficits in <abbr title="Fragile X Syndrome">FXS</abbr>.</li>
+<li>Future research is needed to explore effects of Fmr1 deletion in other brain areas and cell types for a system-level understanding.</li>
+</ol>
+<h4 id="Role-of-Enhanced-Gelatinase-Activity-in-CreNex1-Fmr1Flox-y-cKO-Mice">Role of Enhanced Gelatinase Activity in CreNex1 /Fmr1Flox/y cKO Mice</h4>
+<p>The study elaborates on the intricate relationship between the loss of the FMRP protein and various neural and behavioral phenomena in Fragile X Syndrome (<abbr title="Fragile X Syndrome">FXS</abbr>). Here’s a breakdown:</p>
+<h3 id="Molecular-Mechanisms">Molecular Mechanisms</h3>
+<ol>
+<li><strong>Perineuronal Nets (PNNs) and Parvalbumin (PV) Neurons</strong>: PNNs surround PV neurons and are crucial for their function. Aggrecan, a component of PNNs, is degraded by gelatinases (MMP-2, MMP-9), affecting the structure and function of PNNs.</li>
+<li><strong>Gelatinase Activity</strong>: The study found increased gelatinase activity in the auditory cortex of mice lacking FMRP, indicating that this may contribute to impaired PNN formation.</li>
+<li><strong>Signaling Pathways</strong>: Increased gelatinase activity can also affect the mTOR and Akt signaling pathways, which are implicated in <abbr title="Fragile X Syndrome">FXS</abbr> and regulate neuronal excitability.</li>
+</ol>
+<h3 id="Auditory-Cortex-and-Sensory-Processing">Auditory Cortex and Sensory Processing</h3>
+<ol>
+<li><strong>MMP-9 and Sensory Responses</strong>: Deletion or reduction of MMP-9 activity in mice normalized auditory responses and PNN formation, highlighting its therapeutic potential.</li>
+<li><strong>Subcortical Contributions</strong>: While the study indicates cortical deficits, it also suggests that subcortical areas may contribute to the observed abnormalities.</li>
+</ol>
+<h3 id="Behavioral-Aspects">Behavioral Aspects</h3>
+<ol>
+<li><strong>Locomotor Activity</strong>: Mice with FMRP deletion in forebrain excitatory neurons showed increased locomotor activity but no anxiety-like behaviors.</li>
+<li><strong>Role of FMRP in Other Areas</strong>: FMRP loss in other brain regions like the hippocampus may contribute to other <abbr title="Fragile X Syndrome">FXS</abbr> symptoms like learning and memory deficits.</li>
+</ol>
+<h3 id="Future-Directions">Future Directions</h3>
+<ol>
+<li><strong>Astrocytes and MMP-9</strong>: The study proposes to investigate how astrocytes may be involved in regulating MMP-9 activity and PNN formation.</li>
+<li><strong>Multi-Electrode EEGs</strong>: To get a comprehensive understanding, the study recommends exploring electrocortical activity in different brain areas.</li>
+</ol>
+<p>Overall, the study provides a multi-faceted understanding of how FMRP loss impacts neural circuits and behaviors, offering potential therapeutic targets like MMP-9 for <abbr title="Fragile X Syndrome">FXS</abbr>.</p>
+<p>Certainly! Here’s a more elegant and concise summary of the research findings and their implications.</p>
+<h3 id="Conclusion">Conclusion</h3>
+<p><strong>Key Insights</strong></p>
+<ol>
+<li>
+<p><strong>Parvalbumin Neurons</strong>: Deletion of the Fmr1 gene in forebrain excitatory neurons impinges upon the integrity and function of parvalbumin-positive (PV+) inhibitory neurons.</p>
+</li>
+<li>
+<p><strong>Matrix Enzymology</strong>: Elevated activity of the enzyme MMP-9 remodels the extracellular scaffolding around PV+ neurons, potentially altering cellular signaling cascades.</p>
+</li>
+<li>
+<p><strong>Electrophysiological Nuances</strong>: The study discerns a specific alteration in resting low-gamma EEG power, correlated with hyperactive behaviors but not with anxiety.</p>
+</li>
+<li>
+<p><strong>Symptomatic Specificity</strong>: The research delineates that cortical deficits are responsible for some, but not all, features of Fragile X Syndrome, underscoring a nuanced impact of the Fmr1 deletion.</p>
+</li>
+</ol>
+<p><strong>Clinical Implications</strong></p>
+<ul>
+<li>The findings elegantly illuminate avenues for targeted therapeutic strategies, offering the prospect of interventions honed to specific cellular actors and neural circuits implicated in Fragile X Syndrome.</li>
+</ul>
+<p>By delving into the intricacies of cellular and circuit-level changes, this study enriches our understanding of Fragile X Syndrome and opens new horizons for targeted therapeutic interventions.</p>
+<style>
+pre {
+  background-color:#38393d;
+  color: #5fd381;
+}
+</style>
+</div><div class="article-licensing box"><div class="licensing-title"><p>Acoustics</p><p><a href="https://karobben.github.io/2023/08/23/LearnNotes/acoustics/">https://karobben.github.io/2023/08/23/LearnNotes/acoustics/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>Author</h6><p>Karobben</p></div></div><div class="level-item is-narrow"><div><h6>Posted on</h6><p>2023-08-23</p></div></div><div class="level-item is-narrow"><div><h6>Updated on</h6><p>2024-01-11</p></div></div><div class="level-item is-narrow"><div><h6>Licensed under</h6><p><a class="icon" rel="noopener" target="_blank" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a><a class="icon" rel="noopener" target="_blank" title="Attribution" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a><a class="icon" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/css/share.min.css"><div class="social-share"></div><script src="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/js/social-share.min.js"></script></article></div><div class="card"><div class="card-content"><h3 class="menu-label has-text-centered">Like this article? Support the author with</h3><div class="buttons is-centered"><a class="button donate" data-type="alipay"><span class="icon is-small"><i class="fab fa-alipay"></i></span><span>Alipay</span><span class="qrcode"><img src="public/alipay.jpg" alt="Alipay"></span></a><a class="button donate" data-type="wechat"><span class="icon is-small"><i class="fab fa-weixin"></i></span><span>Wechat</span><span class="qrcode"><img src="public/wepay.png" alt="Wechat"></span></a></div></div></div><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="public/2023/08/23/LearnNotes/UIUC-AdMC-2/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">Advanced Molecular &amp; Cell Biology 2</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="public/2023/08/22/LearnNotes/UIUC-AdMC-1/"><span class="level-item">Advanced Molecular &amp; Cell Biology 1</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><div class="card"><div class="card-content"><h3 class="title is-5">Comments</h3></div><span styl="max-width: 95%"><script src="https://giscus.app/client.js" data-repo="karobben/utterances" data-repo-id="MDEwOlJlcG9zaXRvcnkyNzUwNjUwODg=" data-category="Announcements" data-category-id="DIC_kwDOEGUpAM4B-wRL" data-mapping="pathname" data-reactions-enabled="1" data-emit-metadata="0" data-theme="light" crossorigin="anonymous" async></script></span></div></div><div class="column column-left is-4-tablet is-4-desktop is-3-widescreen  order-1"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar is-rounded" src="https://s1.ax1x.com/2022/09/27/xZnWOU.jpg" alt="Karobben"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">Karobben</p><p class="is-size-6 is-block">Enjoy!</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>China</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">Posts</p><a href="public/archives"><p class="title">528</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">Categories</p><a href="public/categories"><p class="title">149</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">Tags</p><a href="public/tags"><p class="title">162</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://github.com/karobben" target="_blank" rel="noopener">Follow</a></div><div class="level is-mobile is-multiline"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Github" href="https://github.com/karobben"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="RSS" href="public/atom.xml"><i class="fas fa-rss"></i></a></div></div><div class="card"><script type="text/javascript" src="//rf.revolvermaps.com/0/0/7.js?i=5obi4wthjqz&amp;m=0c&amp;c=f03b11&amp;cr1=ffffff&amp;sx=0&amp;cw=ffffff&amp;cb=3472cd" async="async"></script></div></div><div class="card widget is-sticky" id="toc" data-type="toc"><div class="card-content"><div class="menu"><h3 class="menu-label">Catalogue</h3><ul class="menu-list"><li><a class="level is-mobile" href="#Acoustics"><span class="level-left"><span class="level-item">1</span><span class="level-item">Acoustics</span></span></a></li><li><a class="level is-mobile" href="#Fragile-X-Syndrome-FXS-Sensory-Processing-Deficits"><span class="level-left"><span class="level-item">2</span><span class="level-item">Fragile X Syndrome (FXS) - Sensory Processing Deficits</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#Introduction"><span class="level-left"><span class="level-item">2.1</span><span class="level-item">Introduction</span></span></a></li></ul></li><li><a class="level is-mobile" href="#Using-auditory-reaction-time-to-measure-loudness-growth-in-rats"><span class="level-left"><span class="level-item">3</span><span class="level-item">Using auditory reaction time to measure loudness growth in rats</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#Abstract"><span class="level-left"><span class="level-item">3.1</span><span class="level-item">Abstract</span></span></a></li><li><a class="level is-mobile" href="#Introduction-v2"><span class="level-left"><span class="level-item">3.2</span><span class="level-item">Introduction</span></span></a></li><li><a class="level is-mobile" href="#Result"><span class="level-left"><span class="level-item">3.3</span><span class="level-item">Result</span></span></a></li><li><a class="level is-mobile" href="#Discussion"><span class="level-left"><span class="level-item">3.4</span><span class="level-item">Discussion</span></span></a></li></ul></li><li><a class="level is-mobile" href="#Testing-the-Central-Gain-Model-Loudness-Growth-Correlates-with-Central-Auditory-Gain-Enhancement-in-a-Rodent-Model-of-Hyperacusis"><span class="level-left"><span class="level-item">4</span><span class="level-item">Testing the Central Gain Model: Loudness Growth Correlates with Central Auditory Gain Enhancement in a Rodent Model of Hyperacusis</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#Abstract-v2"><span class="level-left"><span class="level-item">4.1</span><span class="level-item">Abstract</span></span></a></li><li><a class="level is-mobile" href="#Introduction-v3"><span class="level-left"><span class="level-item">4.2</span><span class="level-item">Introduction</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#part-1"><span class="level-left"><span class="level-item">4.2.1</span><span class="level-item">part 1</span></span></a></li><li><a class="level is-mobile" href="#part-2"><span class="level-left"><span class="level-item">4.2.2</span><span class="level-item">part 2</span></span></a></li></ul></li><li><a class="level is-mobile" href="#Result-v2"><span class="level-left"><span class="level-item">4.3</span><span class="level-item">Result</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#Stable-behavioral-and-electrophysiological-measures-of-loudness-growth"><span class="level-left"><span class="level-item">4.3.1</span><span class="level-item">Stable behavioral and electrophysiological measures of loudness growth</span></span></a></li><li><a class="level is-mobile" href="#Salicylate-induced-hyperacusis-and-hyperactivity"><span class="level-left"><span class="level-item">4.3.2</span><span class="level-item">Salicylate-induced hyperacusis and hyperactivity</span></span></a></li><li><a class="level is-mobile" href="#Salicylate-induced-gain-modulation"><span class="level-left"><span class="level-item">4.3.3</span><span class="level-item">Salicylate-induced gain modulation</span></span></a></li><li><a class="level is-mobile" href="#Within-subject-relationship-between-RT-AC-and-IC-gain-changes"><span class="level-left"><span class="level-item">4.3.4</span><span class="level-item">Within-subject relationship between RT, AC and IC gain changes</span></span></a></li></ul></li><li><a class="level is-mobile" href="#Discussion-v2"><span class="level-left"><span class="level-item">4.4</span><span class="level-item">Discussion</span></span></a></li></ul></li><li><a class="level is-mobile" href="#Mutations-causing-syndromic-autism-define-an-axis-of-synaptic-pathophysiology"><span class="level-left"><span class="level-item">5</span><span class="level-item">Mutations causing syndromic autism define an axis of synaptic pathophysiology</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#Abstraction"><span class="level-left"><span class="level-item">5.1</span><span class="level-item">Abstraction</span></span></a></li><li><a class="level is-mobile" href="#Introduction-v4"><span class="level-left"><span class="level-item">5.2</span><span class="level-item">Introduction</span></span></a></li><li><a class="level is-mobile" href="#Result-v3"><span class="level-left"><span class="level-item">5.3</span><span class="level-item">Result</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#TSC-mutations-affect-synaptic-function"><span class="level-left"><span class="level-item">5.3.1</span><span class="level-item">TSC mutations affect synaptic function</span></span></a></li><li><a class="level is-mobile" href="#Protein-synthesis-and-mGluR-LTD-in-Tsc2-mice"><span class="level-left"><span class="level-item">5.3.2</span><span class="level-item">Protein synthesis and mGluR-LTD in Tsc2+/- mice</span></span></a></li><li><a class="level is-mobile" href="#LTD-deficit-caused-by-excess-mTOR-activity"><span class="level-left"><span class="level-item">5.3.3</span><span class="level-item">LTD deficit caused by excess mTOR activity</span></span></a></li><li><a class="level is-mobile" href="#Effect-of-mGluR5-positive-allosteric-modulation"><span class="level-left"><span class="level-item">5.3.4</span><span class="level-item">Effect of mGluR5-positive allosteric modulation</span></span></a></li><li><a class="level is-mobile" href="#Fmr2-y-and-Tsc21-2-mutations-cancel-each-other"><span class="level-left"><span class="level-item">5.3.5</span><span class="level-item">Fmr2/y and Tsc21/2 mutations cancel each other</span></span></a></li></ul></li><li><a class="level is-mobile" href="#Discussion-v3"><span class="level-left"><span class="level-item">5.4</span><span class="level-item">Discussion</span></span></a></li></ul></li><li><a class="level is-mobile" href="#Deletion-of-Fmr1-from-Forebrain-Excitatory-Neurons-Triggers-Abnormal-Cellular-EEG-and-Behavioral-Phenotypes-in-the-Auditory-Cortex-of-a-Mouse-Model-of-Fragile-X-Syndrome"><span class="level-left"><span class="level-item">6</span><span class="level-item">Deletion of Fmr1 from Forebrain Excitatory Neurons Triggers Abnormal Cellular, EEG, and Behavioral Phenotypes in the Auditory Cortex of a Mouse Model of Fragile X Syndrome</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#Abstract-v3"><span class="level-left"><span class="level-item">6.1</span><span class="level-item">Abstract</span></span></a></li><li><a class="level is-mobile" href="#Introduction-v5"><span class="level-left"><span class="level-item">6.2</span><span class="level-item">Introduction</span></span></a></li><li><a class="level is-mobile" href="#Result-v4"><span class="level-left"><span class="level-item">6.3</span><span class="level-item">Result</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#FMRP-Immunoreactivity-Was-Significantly-Reduced-in-Excitatory-Neurons-of-Auditory-Cortex-of-Adult-CreNex1-Fmr1Flox-y-cKO-Mice"><span class="level-left"><span class="level-item">6.3.1</span><span class="level-item">FMRP Immunoreactivity Was Significantly Reduced in Excitatory Neurons of Auditory Cortex of Adult CreNex1 /Fmr1Flox/y cKO Mice</span></span></a></li><li><a class="level is-mobile" href="#Deletion-of-FMRP-from-Excitatory-Neurons-Reduces-PV-PNN-and-PV-PNN-Colocalization-in-the-Auditory-Cortex-of-Adult-CreNex1-Fmr1-Flox-y-cKO-Mice"><span class="level-left"><span class="level-item">6.3.2</span><span class="level-item">Deletion of FMRP from Excitatory Neurons Reduces PV, PNN, and PV/PNN Colocalization in the Auditory Cortex of Adult CreNex1 /Fmr1 Flox/y cKO Mice</span></span></a></li><li><a class="level is-mobile" href="#Total-Aggrecan-Levels-Are-Reduced-While-Cleaved-Aggrecan-Levels-and-Gelatinase-Activity-Are-Enhanced-in-the-Auditory-Cortex-of-Adult-CreNex1-Fmr1-Flox-y-cKO-Mice"><span class="level-left"><span class="level-item">6.3.3</span><span class="level-item">Total Aggrecan Levels Are Reduced, While Cleaved Aggrecan Levels and Gelatinase Activity Are Enhanced in the Auditory Cortex of Adult CreNex1 /Fmr1 Flox/y cKO Mice</span></span></a></li><li><a class="level is-mobile" href="#Deletion-of-FMRP-from-Excitatory-Neurons-Triggers-a-Decrease-in-PV-Levels-While-Akt-and-mTOR-Phosphorylation-Is-Increased-in-Auditory-Cortex-of-Adult-CreNex1-Fmr1-Flox-y-cKO-Mice"><span class="level-left"><span class="level-item">6.3.4</span><span class="level-item">Deletion of FMRP from Excitatory Neurons Triggers a Decrease in PV Levels, While Akt and mTOR Phosphorylation Is Increased in Auditory Cortex of Adult CreNex1 /Fmr1 Flox/y cKO Mice</span></span></a></li><li><a class="level is-mobile" href="#Resting-EEG-Gamma-Power-Is-Enhanced-in-the-Auditory-Cortex-of-Adult-CreNex1-Fmr1-Flox-y-cKO-Mice"><span class="level-left"><span class="level-item">6.3.5</span><span class="level-item">Resting EEG Gamma Power Is Enhanced in the Auditory Cortex of Adult CreNex1 /Fmr1 Flox/y cKO Mice</span></span></a></li><li><a class="level is-mobile" href="#Gamma-Synchronization-Is-Not-Affected-in-Adult-CreNex1-Fmr1-Flox-y-cKO-Mouse-Auditory-Cortex"><span class="level-left"><span class="level-item">6.3.6</span><span class="level-item">Gamma Synchronization Is Not Affected in Adult CreNex1 /Fmr1 Flox/y cKO Mouse Auditory Cortex</span></span></a></li><li><a class="level is-mobile" href="#Increased-Non–Phase-Locked-STP-Is-Observed-in-the-Auditory-Cortex-of-Adult-CreNex1-Fmr1-Flox-y-cKO-Mice-during-Chirp-Stimulation"><span class="level-left"><span class="level-item">6.3.7</span><span class="level-item">Increased Non–Phase-Locked STP Is Observed in the Auditory Cortex of Adult CreNex1 /Fmr1 Flox/y cKO Mice during Chirp Stimulation</span></span></a></li><li><a class="level is-mobile" href="#Induced-Power-Is-Significantly-Enhanced-in-the-Auditory-Cortex-of-Adult-CreNex1-Fmr1-Flox-y-cKO-Mice"><span class="level-left"><span class="level-item">6.3.8</span><span class="level-item">Induced Power Is Significantly Enhanced in the Auditory Cortex of Adult CreNex1 /Fmr1 Flox/y cKO Mice</span></span></a></li><li><a class="level is-mobile" href="#Excitatory-Neuron-Specific-Adult-CreNex1-Fmr1-Flox-y-cKO-Mice-Display-Increased-Locomotor-Activity-but-No-Anxiety-Like-Behavior"><span class="level-left"><span class="level-item">6.3.9</span><span class="level-item">Excitatory Neuron-Specific Adult CreNex1 /Fmr1 Flox/y cKO Mice Display Increased Locomotor Activity, but No Anxiety-Like Behavior</span></span></a></li></ul></li><li><a class="level is-mobile" href="#Discussion-v4"><span class="level-left"><span class="level-item">6.4</span><span class="level-item">Discussion</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#Role-of-Enhanced-Gelatinase-Activity-in-CreNex1-Fmr1Flox-y-cKO-Mice"><span class="level-left"><span class="level-item">6.4.1</span><span class="level-item">Role of Enhanced Gelatinase Activity in CreNex1 /Fmr1Flox/y cKO Mice</span></span></a></li></ul></li><li><a class="level is-mobile" href="#Molecular-Mechanisms"><span class="level-left"><span class="level-item">6.5</span><span class="level-item">Molecular Mechanisms</span></span></a></li><li><a class="level is-mobile" href="#Auditory-Cortex-and-Sensory-Processing"><span class="level-left"><span class="level-item">6.6</span><span class="level-item">Auditory Cortex and Sensory Processing</span></span></a></li><li><a class="level is-mobile" href="#Behavioral-Aspects"><span class="level-left"><span class="level-item">6.7</span><span class="level-item">Behavioral Aspects</span></span></a></li><li><a class="level is-mobile" href="#Future-Directions"><span class="level-left"><span class="level-item">6.8</span><span class="level-item">Future Directions</span></span></a></li><li><a class="level is-mobile" href="#Conclusion"><span class="level-left"><span class="level-item">6.9</span><span class="level-item">Conclusion</span></span></a></li></ul></li></ul></div></div><style>#toc .menu-list > li > a.is-active + .menu-list { display: block; }#toc .menu-list > li > a + .menu-list { display: none; }</style><script src="public/js/toc.js" defer></script></div><div class="card widget" data-type="tags"><div class="card-content"><div class="menu"><h3 class="menu-label">Tags</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="public/tags/3D/"><span class="tag">3D</span><span class="tag">6</span></a></div><div class="control"><a class="tags has-addons" href="public/tags/AI/"><span class="tag">AI</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="public/tags/API/"><span class="tag">API</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="public/tags/ATAC-Seq/"><span class="tag">ATAC-Seq</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="public/tags/Advanced-Mathematics/"><span class="tag">Advanced Mathematics</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="public/tags/Aging/"><span class="tag">Aging</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="public/tags/Algorithm/"><span class="tag">Algorithm</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="public/tags/Align/"><span class="tag">Align</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="public/tags/Android/"><span class="tag">Android</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="public/tags/Antibody/"><span class="tag">Antibody</span><span class="tag">6</span></a></div><div class="control"><a class="tags has-addons" href="public/tags/Audio/"><span class="tag">Audio</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="public/tags/Behavior/"><span class="tag">Behavior</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="public/tags/BiliBili/"><span class="tag">BiliBili</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="public/tags/BioStatistics/"><span class="tag">BioStatistics</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="public/tags/Biochemistry/"><span class="tag">Biochemistry</span><span class="tag">43</span></a></div><div class="control"><a class="tags has-addons" href="public/tags/Bioinformatic/"><span class="tag">Bioinformatic</span><span class="tag">5</span></a></div><div class="control"><a class="tags has-addons" href="public/tags/Bioinformatics/"><span class="tag">Bioinformatics</span><span class="tag">76</span></a></div><div class="control"><a class="tags has-addons" href="public/tags/Biology/"><span class="tag">Biology</span><span class="tag">44</span></a></div><div class="control"><a class="tags has-addons" href="public/tags/Biopython/"><span class="tag">Biopython</span><span class="tag">5</span></a></div><div class="control"><a class="tags has-addons" href="public/tags/Book/"><span class="tag">Book</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="public/tags/CLI-Tools/"><span class="tag">CLI Tools</span><span class="tag">15</span></a></div><div class="control"><a class="tags has-addons" href="public/tags/Cancer/"><span class="tag">Cancer</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="public/tags/Cell/"><span class="tag">Cell</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="public/tags/Cell-Biology/"><span class="tag">Cell Biology</span><span class="tag">24</span></a></div><div class="control"><a class="tags has-addons" href="public/tags/Chip-Seq/"><span class="tag">Chip-Seq</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="public/tags/Classes/"><span class="tag">Classes</span><span class="tag">74</span></a></div><div class="control"><a class="tags has-addons" href="public/tags/Cluster/"><span class="tag">Cluster</span><span class="tag">6</span></a></div><div class="control"><a class="tags has-addons" href="public/tags/Conky/"><span class="tag">Conky</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="public/tags/Crawler/"><span class="tag">Crawler</span><span class="tag">5</span></a></div><div class="control"><a class="tags has-addons" href="public/tags/Data/"><span class="tag">Data</span><span class="tag">12</span></a></div><div class="control"><a class="tags has-addons" href="public/tags/Data-Science/"><span class="tag">Data Science</span><span class="tag">12</span></a></div><div class="control"><a class="tags has-addons" href="public/tags/Database/"><span class="tag">Database</span><span class="tag">9</span></a></div><div class="control"><a class="tags has-addons" href="public/tags/Deep-Learning/"><span class="tag">Deep Learning</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="public/tags/Deepin/"><span class="tag">Deepin</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="public/tags/Disk/"><span class="tag">Disk</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="public/tags/Distribution/"><span class="tag">Distribution</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="public/tags/Dme/"><span class="tag">Dme</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="public/tags/English/"><span class="tag">English</span><span class="tag">5</span></a></div><div class="control"><a class="tags has-addons" href="public/tags/FTP/"><span class="tag">FTP</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="public/tags/Fasta/"><span class="tag">Fasta</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="public/tags/Fish/"><span class="tag">Fish</span><span class="tag">17</span></a></div><div class="control"><a class="tags has-addons" href="public/tags/GATK/"><span class="tag">GATK</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="public/tags/GO/"><span class="tag">GO</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="public/tags/Genome/"><span class="tag">Genome</span><span class="tag">6</span></a></div><div class="control"><a class="tags has-addons" href="public/tags/GitPage/"><span class="tag">GitPage</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="public/tags/Graphviz/"><span class="tag">Graphviz</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="public/tags/HTML/"><span class="tag">HTML</span><span class="tag">14</span></a></div><div class="control"><a class="tags has-addons" href="public/tags/Hexo/"><span class="tag">Hexo</span><span class="tag">19</span></a></div><div class="control"><a class="tags has-addons" href="public/tags/Hexo-Plugin/"><span class="tag">Hexo Plugin</span><span class="tag">6</span></a></div><div class="control"><a class="tags has-addons" href="public/tags/IDE/"><span class="tag">IDE</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="public/tags/Image/"><span class="tag">Image</span><span class="tag">10</span></a></div><div class="control"><a class="tags has-addons" href="public/tags/Immunology/"><span class="tag">Immunology</span><span class="tag">8</span></a></div><div class="control"><a class="tags has-addons" href="public/tags/Interoperable-Plot/"><span class="tag">Interoperable Plot</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="public/tags/Japanese/"><span class="tag">Japanese</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="public/tags/Jupyter-Notebook/"><span class="tag">Jupyter Notebook</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="public/tags/KEGG/"><span class="tag">KEGG</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="public/tags/KEGG-pathway/"><span class="tag">KEGG pathway</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="public/tags/Kivy/"><span class="tag">Kivy</span><span class="tag">31</span></a></div><div class="control"><a class="tags has-addons" href="public/tags/Latex/"><span class="tag">Latex</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="public/tags/Links/"><span class="tag">Links</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="public/tags/Linux/"><span class="tag">Linux</span><span class="tag">43</span></a></div><div class="control"><a class="tags has-addons" href="public/tags/Logistic/"><span class="tag">Logistic</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="public/tags/Machine-Learning/"><span class="tag">Machine Learning</span><span class="tag">23</span></a></div><div class="control"><a class="tags has-addons" href="public/tags/MarkDown/"><span class="tag">MarkDown</span><span class="tag">7</span></a></div><div class="control"><a class="tags has-addons" href="public/tags/MateGenome/"><span class="tag">MateGenome</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="public/tags/Math/"><span class="tag">Math</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="public/tags/Matplotlib/"><span class="tag">Matplotlib</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="public/tags/Matrix/"><span class="tag">Matrix</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="public/tags/Meta-omics/"><span class="tag">Meta-omics</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="public/tags/Metabloism/"><span class="tag">Metabloism</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="public/tags/Metabolism/"><span class="tag">Metabolism</span><span class="tag">14</span></a></div><div class="control"><a class="tags has-addons" href="public/tags/Mice/"><span class="tag">Mice</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="public/tags/Mind-Plot/"><span class="tag">Mind Plot</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="public/tags/Mysql/"><span class="tag">Mysql</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="public/tags/NGS/"><span class="tag">NGS</span><span class="tag">31</span></a></div><div class="control"><a class="tags has-addons" href="public/tags/Network/"><span class="tag">Network</span><span class="tag">5</span></a></div><div class="control"><a class="tags has-addons" href="public/tags/Neuron/"><span class="tag">Neuron</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="public/tags/Notes/"><span class="tag">Notes</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="public/tags/Nutrition-matrix/"><span class="tag">Nutrition matrix</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="public/tags/OpenCV/"><span class="tag">OpenCV</span><span class="tag">17</span></a></div><div class="control"><a class="tags has-addons" href="public/tags/Others/"><span class="tag">Others</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="public/tags/PCA/"><span class="tag">PCA</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="public/tags/PDF/"><span class="tag">PDF</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="public/tags/PacBio/"><span class="tag">PacBio</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="public/tags/Paper/"><span class="tag">Paper</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="public/tags/Papers/"><span class="tag">Papers</span><span class="tag">22</span></a></div><div class="control"><a class="tags has-addons" href="public/tags/Physics/"><span class="tag">Physics</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="public/tags/Plot/"><span class="tag">Plot</span><span class="tag">62</span></a></div><div class="control"><a class="tags has-addons" href="public/tags/Protein/"><span class="tag">Protein</span><span class="tag">5</span></a></div><div class="control"><a class="tags has-addons" href="public/tags/Protein-Structure/"><span class="tag">Protein Structure</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="public/tags/Proteomic/"><span class="tag">Proteomic</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="public/tags/Protocol/"><span class="tag">Protocol</span><span class="tag">9</span></a></div><div class="control"><a class="tags has-addons" href="public/tags/PyMol/"><span class="tag">PyMol</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="public/tags/Python/"><span class="tag">Python</span><span class="tag">132</span></a></div><div class="control"><a class="tags has-addons" href="public/tags/Pyvista/"><span class="tag">Pyvista</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="public/tags/QC/"><span class="tag">QC</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="public/tags/R/"><span class="tag">R</span><span class="tag">86</span></a></div><div class="control"><a class="tags has-addons" href="public/tags/R-packages/"><span class="tag">R packages</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="public/tags/RNA-Seq/"><span class="tag">RNA-Seq</span><span class="tag">24</span></a></div><div class="control"><a class="tags has-addons" href="public/tags/RNN/"><span class="tag">RNN</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="public/tags/RasperryPi/"><span class="tag">RasperryPi</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="public/tags/Regression/"><span class="tag">Regression</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="public/tags/Response-Surface-Methodology/"><span class="tag">Response Surface Methodology</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="public/tags/SNP/"><span class="tag">SNP</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="public/tags/Sanger-Sequencing/"><span class="tag">Sanger Sequencing</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="public/tags/Scientific-American/"><span class="tag">Scientific American</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="public/tags/Script/"><span class="tag">Script</span><span class="tag">7</span></a></div><div class="control"><a class="tags has-addons" href="public/tags/Scripting/"><span class="tag">Scripting</span><span class="tag">13</span></a></div><div class="control"><a class="tags has-addons" href="public/tags/Scripts/"><span class="tag">Scripts</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="public/tags/Seaborn/"><span class="tag">Seaborn</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="public/tags/Sequencing/"><span class="tag">Sequencing</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="public/tags/Software/"><span class="tag">Software</span><span class="tag">47</span></a></div><div class="control"><a class="tags has-addons" href="public/tags/Statistic/"><span class="tag">Statistic</span><span class="tag">14</span></a></div><div class="control"><a class="tags has-addons" href="public/tags/Super-Conductor/"><span class="tag">Super Conductor</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="public/tags/Synthetic-Cell/"><span class="tag">Synthetic Cell</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="public/tags/System/"><span class="tag">System</span><span class="tag">8</span></a></div><div class="control"><a class="tags has-addons" href="public/tags/TCGA/"><span class="tag">TCGA</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="public/tags/TUI/"><span class="tag">TUI</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="public/tags/TUI-lib/"><span class="tag">TUI lib</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="public/tags/Tensorflow/"><span class="tag">Tensorflow</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="public/tags/Termux/"><span class="tag">Termux</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="public/tags/Tools/"><span class="tag">Tools</span><span class="tag">5</span></a></div><div class="control"><a class="tags has-addons" href="public/tags/Transfer-Learning/"><span class="tag">Transfer Learning</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="public/tags/Translation/"><span class="tag">Translation</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="public/tags/Trinity/"><span class="tag">Trinity</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="public/tags/Tulane-Classes/"><span class="tag">Tulane Classes</span><span class="tag">39</span></a></div><div class="control"><a class="tags has-addons" href="public/tags/Tutorials/"><span class="tag">Tutorials</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="public/tags/UIUC-Classes/"><span class="tag">UIUC Classes</span><span class="tag">8</span></a></div><div class="control"><a class="tags has-addons" href="public/tags/Urwid/"><span class="tag">Urwid</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="public/tags/VCF/"><span class="tag">VCF</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="public/tags/Video/"><span class="tag">Video</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="public/tags/Vocabulary/"><span class="tag">Vocabulary</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="public/tags/WGCNA/"><span class="tag">WGCNA</span><span class="tag">5</span></a></div><div class="control"><a class="tags has-addons" href="public/tags/WGS/"><span class="tag">WGS</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="public/tags/Waque/"><span class="tag">Waque</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="public/tags/Web/"><span class="tag">Web</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="public/tags/Wet/"><span class="tag">Wet</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="public/tags/WordCloud/"><span class="tag">WordCloud</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="public/tags/Writing/"><span class="tag">Writing</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="public/tags/Yuque/"><span class="tag">Yuque</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="public/tags/abi/"><span class="tag">abi</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="public/tags/api/"><span class="tag">api</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="public/tags/apt/"><span class="tag">apt</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="public/tags/bash/"><span class="tag">bash</span><span class="tag">19</span></a></div><div class="control"><a class="tags has-addons" href="public/tags/blast/"><span class="tag">blast</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="public/tags/bug/"><span class="tag">bug</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="public/tags/dash/"><span class="tag">dash</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="public/tags/email/"><span class="tag">email</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="public/tags/flybase/"><span class="tag">flybase</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="public/tags/ggkaboom/"><span class="tag">ggkaboom</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="public/tags/ggplot/"><span class="tag">ggplot</span><span class="tag">43</span></a></div><div class="control"><a class="tags has-addons" href="public/tags/ggplot-splitbar/"><span class="tag">ggplot_splitbar</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="public/tags/git/"><span class="tag">git</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="public/tags/map/"><span class="tag">map</span><span class="tag">5</span></a></div><div class="control"><a class="tags has-addons" href="public/tags/matplotlib/"><span class="tag">matplotlib</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="public/tags/miRNA-Seq/"><span class="tag">miRNA-Seq</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="public/tags/nCov/"><span class="tag">nCov</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="public/tags/orc/"><span class="tag">orc</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="public/tags/scATAC-Seq/"><span class="tag">scATAC-Seq</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="public/tags/scRNA-Seq/"><span class="tag">scRNA-Seq</span><span class="tag">9</span></a></div><div class="control"><a class="tags has-addons" href="public/tags/torch/"><span class="tag">torch</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="public/tags/vim/"><span class="tag">vim</span><span class="tag">1</span></a></div></div></div></div></div><div class="card widget" data-type="subscribe-email"><div class="card-content"><div class="menu"><h3 class="menu-label">Subscribe for updates</h3><form action="https://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open(&#039;https://feedburner.google.com/fb/a/mailverify?uri=&#039;,&#039;popupwindow&#039;,&#039;scrollbars=yes,width=550,height=520&#039;);return true"><input type="hidden" value="" name="uri"><input type="hidden" name="loc" value="en_US"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button" type="submit" value="Subscribe"></div></div></form></div></div></div><div class="card widget" data-type="links"><div class="card-content"><div class="menu"><h3 class="menu-label">Links</h3><ul class="menu-list"><li><a class="level is-mobile" href="https://www.jianshu.com/u/77fc519c6fa2" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">卖萌哥</span></span><span class="level-right"><span class="level-item tag">www.jianshu.com</span></span></a></li></ul></div></div></div><div class="column-right-shadow is-hidden-widescreen is-sticky"></div></div><div class="column column-right is-4-tablet is-4-desktop is-3-widescreen is-hidden-touch is-hidden-desktop-only order-3 is-sticky"><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">Recommends</h3><article class="media"><figure class="media-left"><a class="image" href="public/2021/02/11/Blog/hexo_icarus/"><img src="https://imgur.com/cm7mDjj.png" alt="Hexo theme: icarus| Highly personalize it"></a></figure><div class="media-content"><p class="date"><time dateTime="2021-02-11T06:00:00.000Z">2021-02-11</time></p><p class="title"><a href="public/2021/02/11/Blog/hexo_icarus/">Hexo theme: icarus| Highly personalize it</a></p><p class="categories"><a href="public/categories/others/">others</a> / <a href="public/categories/others/Blog/">Blog</a> / <a href="public/categories/others/Blog/Hexo/">Hexo</a></p></div></article><article class="media"><figure class="media-left"><a class="image" href="public/2020/12/16/Python/kivy_Cross-platform-App/"><img src="https://kivy.org/logos/kivy-logo-black-64.png" alt="Kivy: hello world (Cross-platform GUI) for python"></a></figure><div class="media-content"><p class="date"><time dateTime="2020-12-16T06:00:00.000Z">2020-12-16</time></p><p class="title"><a href="public/2020/12/16/Python/kivy_Cross-platform-App/">Kivy: hello world (Cross-platform GUI) for python</a></p><p class="categories"><a href="public/categories/Python/">Python</a> / <a href="public/categories/Python/Kivy/">Kivy</a></p></div></article><article class="media"><figure class="media-left"><a class="image" href="public/2020/06/26/Blog/waque/"><img src="https://gw.alipayobjects.com/zos/rmsportal/xwaMkpycAdwCBrdgyWiT.png" alt="为什么我要使用瓦雀| markdown 语法大全"></a></figure><div class="media-content"><p class="date"><time dateTime="2020-06-26T05:00:00.000Z">2020-06-26</time></p><p class="title"><a href="public/2020/06/26/Blog/waque/">为什么我要使用瓦雀| markdown 语法大全</a></p><p class="categories"><a href="public/categories/others/">others</a> / <a href="public/categories/others/Blog/">Blog</a> / <a href="public/categories/others/Blog/Yuque/">Yuque</a></p></div></article><article class="media"><figure class="media-left"><a class="image" href="public/2020/06/12/R/GGplot/"><img src="https://www.rstudio.com/wp-content/uploads/2014/04/ggplot2.png" alt="GGplot | A tutorials for beginner"></a></figure><div class="media-content"><p class="date"><time dateTime="2020-06-12T05:00:00.000Z">2020-06-12</time></p><p class="title"><a href="public/2020/06/12/R/GGplot/">GGplot | A tutorials for beginner</a></p><p class="categories"><a href="public/categories/R/">R</a> / <a href="public/categories/R/Plot/">Plot</a> / <a href="public/categories/R/Plot/GGPLOT/">GGPLOT</a></p></div></article><article class="media"><figure class="media-left"><a class="image" href="public/2020/08/21/R/logistic_curve/"><img src="https://s1.ax1x.com/2022/10/21/x6dNZ9.png" alt="logistic regression in R"></a></figure><div class="media-content"><p class="date"><time dateTime="2020-08-21T05:00:00.000Z">2020-08-21</time></p><p class="title"><a href="public/2020/08/21/R/logistic_curve/">logistic regression in R</a></p><p class="categories"><a href="public/categories/R/">R</a> / <a href="public/categories/R/Data/">Data</a> / <a href="public/categories/R/Data/Statistic/">Statistic</a> / <a href="public/categories/R/Data/Statistic/Regression/">Regression</a></p></div></article><article class="media"><figure class="media-left"><a class="image" href="public/2020/06/29/Bioinfor/Competent_c/"><img src="https://tse3-mm.cn.bing.net/th/id/OIP.pg0lLEEeNeiUp31DPMKtRwHaCY" alt="Calcium Competent Cells"></a></figure><div class="media-content"><p class="date"><time dateTime="2020-06-29T05:00:00.000Z">2020-06-29</time></p><p class="title"><a href="public/2020/06/29/Bioinfor/Competent_c/">Calcium Competent Cells</a></p><p class="categories"><a href="public/categories/Biology/">Biology</a> / <a href="public/categories/Biology/Wet-Protocol/">Wet Protocol</a></p></div></article><article class="media"><figure class="media-left"><a class="image" href="public/2020/06/20/R/pheatmap/"><img src="https://s1.ax1x.com/2020/08/15/dFpkUH.png" alt="Pheatmap"></a></figure><div class="media-content"><p class="date"><time dateTime="2020-06-20T05:00:00.000Z">2020-06-20</time></p><p class="title"><a href="public/2020/06/20/R/pheatmap/">Pheatmap</a></p><p class="categories"><a href="public/categories/R/">R</a> / <a href="public/categories/R/Plot/">Plot</a> / <a href="public/categories/R/Plot/Heatmap/">Heatmap</a></p></div></article><article class="media"><figure class="media-left"><a class="image" href="public/2021/02/21/LearnNotes/Paper_BSFlylavea_review/"><img src="https://cdn.pixabay.com/photo/2016/08/29/06/21/fly-1627592_960_720.jpg" alt="Diet switch| Black soldier fly larvae (BSFL) meal"></a></figure><div class="media-content"><p class="date"><time dateTime="2021-02-21T06:00:00.000Z">2021-02-21</time></p><p class="title"><a href="public/2021/02/21/LearnNotes/Paper_BSFlylavea_review/">Diet switch| Black soldier fly larvae (BSFL) meal</a></p><p class="categories"><a href="public/categories/Notes/">Notes</a> / <a href="public/categories/Notes/Paper/">Paper</a> / <a href="public/categories/Notes/Paper/Biology/">Biology</a></p></div></article></div></div><div class="card widget" data-type="categories"><div class="card-content"><div class="menu"><h3 class="menu-label">Categories</h3><ul class="menu-list"><li><a class="level is-mobile" href="public/categories/AI/"><span class="level-start"><span class="level-item">AI</span></span><span class="level-end"><span class="level-item tag">2</span></span></a><ul><li><a class="level is-mobile" href="public/categories/AI/LM/"><span class="level-start"><span class="level-item">LM</span></span><span class="level-end"><span class="level-item tag">1</span></span></a><ul><li><a class="level is-mobile" href="public/categories/AI/LM/Protein/"><span class="level-start"><span class="level-item">Protein</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li><li><a class="level is-mobile" href="public/categories/AI/Math/"><span class="level-start"><span class="level-item">Math</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li><li><a class="level is-mobile" href="public/categories/Biology/"><span class="level-start"><span class="level-item">Biology</span></span><span class="level-end"><span class="level-item tag">80</span></span></a><ul><li><a class="level is-mobile" href="public/categories/Biology/Bioinformatics/"><span class="level-start"><span class="level-item">Bioinformatics</span></span><span class="level-end"><span class="level-item tag">74</span></span></a><ul><li><a class="level is-mobile" href="public/categories/Biology/Bioinformatics/Chip-Seq/"><span class="level-start"><span class="level-item">Chip-Seq</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="public/categories/Biology/Bioinformatics/Database/"><span class="level-start"><span class="level-item">Database</span></span><span class="level-end"><span class="level-item tag">5</span></span></a></li><li><a class="level is-mobile" href="public/categories/Biology/Bioinformatics/Protein-Structure/"><span class="level-start"><span class="level-item">Protein Structure</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile" href="public/categories/Biology/Bioinformatics/Proteomic/"><span class="level-start"><span class="level-item">Proteomic</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="public/categories/Biology/Bioinformatics/Protocol/"><span class="level-start"><span class="level-item">Protocol</span></span><span class="level-end"><span class="level-item tag">18</span></span></a><ul><li><a class="level is-mobile" href="public/categories/Biology/Bioinformatics/Protocol/Align/"><span class="level-start"><span class="level-item">Align</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="public/categories/Biology/Bioinformatics/Protocol/Alternative-Splicing/"><span class="level-start"><span class="level-item">Alternative Splicing</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="public/categories/Biology/Bioinformatics/Protocol/Annotation/"><span class="level-start"><span class="level-item">Annotation</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="public/categories/Biology/Bioinformatics/Protocol/GO/"><span class="level-start"><span class="level-item">GO</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="public/categories/Biology/Bioinformatics/Protocol/Genome/"><span class="level-start"><span class="level-item">Genome</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="public/categories/Biology/Bioinformatics/Protocol/RNA-Seq/"><span class="level-start"><span class="level-item">RNA-Seq</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile" href="public/categories/Biology/Bioinformatics/Protocol/SNP/"><span class="level-start"><span class="level-item">SNP</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile" href="public/categories/Biology/Bioinformatics/Protocol/miRNA/"><span class="level-start"><span class="level-item">miRNA</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li></ul></li><li><a class="level is-mobile" href="public/categories/Biology/Bioinformatics/Single-Cell/"><span class="level-start"><span class="level-item">Single Cell</span></span><span class="level-end"><span class="level-item tag">9</span></span></a></li><li><a class="level is-mobile" href="public/categories/Biology/Bioinformatics/Software/"><span class="level-start"><span class="level-item">Software</span></span><span class="level-end"><span class="level-item tag">28</span></span></a><ul><li><a class="level is-mobile" href="public/categories/Biology/Bioinformatics/Software/Align/"><span class="level-start"><span class="level-item">Align</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="public/categories/Biology/Bioinformatics/Software/Bioconda/"><span class="level-start"><span class="level-item">Bioconda</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="public/categories/Biology/Bioinformatics/Software/De-nove/"><span class="level-start"><span class="level-item">De nove</span></span><span class="level-end"><span class="level-item tag">7</span></span></a></li><li><a class="level is-mobile" href="public/categories/Biology/Bioinformatics/Software/Dna-Methylation/"><span class="level-start"><span class="level-item">Dna Methylation</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="public/categories/Biology/Bioinformatics/Software/Download/"><span class="level-start"><span class="level-item">Download</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="public/categories/Biology/Bioinformatics/Software/Fasta-q/"><span class="level-start"><span class="level-item">Fasta/q</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile" href="public/categories/Biology/Bioinformatics/Software/List/"><span class="level-start"><span class="level-item">List</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="public/categories/Biology/Bioinformatics/Software/Sam/"><span class="level-start"><span class="level-item">Sam</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="public/categories/Biology/Bioinformatics/Software/Trans/"><span class="level-start"><span class="level-item">Trans</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="public/categories/Biology/Bioinformatics/Software/Visualization/"><span class="level-start"><span class="level-item">Visualization</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="public/categories/Biology/Bioinformatics/Software/more/"><span class="level-start"><span class="level-item">more</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li></ul></li><li><a class="level is-mobile" href="public/categories/Biology/Bioinformatics/WGS/"><span class="level-start"><span class="level-item">WGS</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="public/categories/Biology/Bioinformatics/others/"><span class="level-start"><span class="level-item">others</span></span><span class="level-end"><span class="level-item tag">5</span></span></a></li></ul></li><li><a class="level is-mobile" href="public/categories/Biology/Database/"><span class="level-start"><span class="level-item">Database</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile" href="public/categories/Biology/Wet-Protocol/"><span class="level-start"><span class="level-item">Wet Protocol</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="public/categories/Biology/others/"><span class="level-start"><span class="level-item">others</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li><li><a class="level is-mobile" href="public/categories/Data/"><span class="level-start"><span class="level-item">Data</span></span><span class="level-end"><span class="level-item tag">1</span></span></a><ul><li><a class="level is-mobile" href="public/categories/Data/Statistic/"><span class="level-start"><span class="level-item">Statistic</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li><li><a class="level is-mobile" href="public/categories/Linux/"><span class="level-start"><span class="level-item">Linux</span></span><span class="level-end"><span class="level-item tag">41</span></span></a><ul><li><a class="level is-mobile" href="public/categories/Linux/Arch/"><span class="level-start"><span class="level-item">Arch</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="public/categories/Linux/Bash/"><span class="level-start"><span class="level-item">Bash</span></span><span class="level-end"><span class="level-item tag">7</span></span></a><ul><li><a class="level is-mobile" href="public/categories/Linux/Bash/Beginner/"><span class="level-start"><span class="level-item">Beginner</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="public/categories/Linux/Bash/More/"><span class="level-start"><span class="level-item">More</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile" href="public/categories/Linux/Bash/awk-grep-sed/"><span class="level-start"><span class="level-item">awk/grep/sed</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li></ul></li><li><a class="level is-mobile" href="public/categories/Linux/Data/"><span class="level-start"><span class="level-item">Data</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="public/categories/Linux/GitHub/"><span class="level-start"><span class="level-item">GitHub</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="public/categories/Linux/Monitor-top-Conky/"><span class="level-start"><span class="level-item">Monitor: top\Conky</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile" href="public/categories/Linux/RasperryPi/"><span class="level-start"><span class="level-item">RasperryPi</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="public/categories/Linux/Software/"><span class="level-start"><span class="level-item">Software</span></span><span class="level-end"><span class="level-item tag">11</span></span></a></li><li><a class="level is-mobile" href="public/categories/Linux/System/"><span class="level-start"><span class="level-item">System</span></span><span class="level-end"><span class="level-item tag">5</span></span></a></li><li><a class="level is-mobile" href="public/categories/Linux/Termux/"><span class="level-start"><span class="level-item">Termux</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="public/categories/Linux/Ubuntu/"><span class="level-start"><span class="level-item">Ubuntu</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="public/categories/Linux/others/"><span class="level-start"><span class="level-item">others</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li></ul></li><li><a class="level is-mobile" href="public/categories/Notes/"><span class="level-start"><span class="level-item">Notes</span></span><span class="level-end"><span class="level-item tag">142</span></span></a><ul><li><a class="level is-mobile" href="public/categories/Notes/Biology/"><span class="level-start"><span class="level-item">Biology</span></span><span class="level-end"><span class="level-item tag">15</span></span></a><ul><li><a class="level is-mobile" href="public/categories/Notes/Biology/Bioinformatic/"><span class="level-start"><span class="level-item">Bioinformatic</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="public/categories/Notes/Biology/Book/"><span class="level-start"><span class="level-item">Book</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="public/categories/Notes/Biology/Dme/"><span class="level-start"><span class="level-item">Dme</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="public/categories/Notes/Biology/Genetics/"><span class="level-start"><span class="level-item">Genetics</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="public/categories/Notes/Biology/Immunity/"><span class="level-start"><span class="level-item">Immunity</span></span><span class="level-end"><span class="level-item tag">5</span></span></a></li><li><a class="level is-mobile" href="public/categories/Notes/Biology/Virus/"><span class="level-start"><span class="level-item">Virus</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li><li><a class="level is-mobile" href="public/categories/Notes/Class/"><span class="level-start"><span class="level-item">Class</span></span><span class="level-end"><span class="level-item tag">82</span></span></a><ul><li><a class="level is-mobile" href="public/categories/Notes/Class/Biochemistry/"><span class="level-start"><span class="level-item">Biochemistry</span></span><span class="level-end"><span class="level-item tag">25</span></span></a></li><li><a class="level is-mobile" href="public/categories/Notes/Class/Cell-Biology/"><span class="level-start"><span class="level-item">Cell Biology</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="public/categories/Notes/Class/Math/"><span class="level-start"><span class="level-item">Math</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="public/categories/Notes/Class/Python/"><span class="level-start"><span class="level-item">Python</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="public/categories/Notes/Class/Tulane/"><span class="level-start"><span class="level-item">Tulane</span></span><span class="level-end"><span class="level-item tag">39</span></span></a><ul><li><a class="level is-mobile" href="public/categories/Notes/Class/Tulane/BioStatistics/"><span class="level-start"><span class="level-item">BioStatistics</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile" href="public/categories/Notes/Class/Tulane/Biochemistry/"><span class="level-start"><span class="level-item">Biochemistry</span></span><span class="level-end"><span class="level-item tag">17</span></span></a></li><li><a class="level is-mobile" href="public/categories/Notes/Class/Tulane/Bioinformatics/"><span class="level-start"><span class="level-item">Bioinformatics</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="public/categories/Notes/Class/Tulane/Cell-Biology/"><span class="level-start"><span class="level-item">Cell Biology</span></span><span class="level-end"><span class="level-item tag">16</span></span></a></li></ul></li><li><a class="level is-mobile" href="public/categories/Notes/Class/UIUC/"><span class="level-start"><span class="level-item">UIUC</span></span><span class="level-end"><span class="level-item tag">15</span></span></a><ul><li><a class="level is-mobile" href="public/categories/Notes/Class/UIUC/AI/"><span class="level-start"><span class="level-item">AI</span></span><span class="level-end"><span class="level-item tag">7</span></span></a></li><li><a class="level is-mobile" href="public/categories/Notes/Class/UIUC/Biochemistry/"><span class="level-start"><span class="level-item">Biochemistry</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="public/categories/Notes/Class/UIUC/Cell-Biology/"><span class="level-start"><span class="level-item">Cell Biology</span></span><span class="level-end"><span class="level-item tag">7</span></span></a></li></ul></li></ul></li><li><a class="level is-mobile" href="public/categories/Notes/English/"><span class="level-start"><span class="level-item">English</span></span><span class="level-end"><span class="level-item tag">5</span></span></a></li><li><a class="level is-mobile" href="public/categories/Notes/Japanese/"><span class="level-start"><span class="level-item">Japanese</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="public/categories/Notes/Paper/"><span class="level-start"><span class="level-item">Paper</span></span><span class="level-end"><span class="level-item tag">23</span></span></a><ul><li><a class="level is-mobile" href="public/categories/Notes/Paper/Biology/"><span class="level-start"><span class="level-item">Biology</span></span><span class="level-end"><span class="level-item tag">23</span></span></a><ul><li><a class="level is-mobile" href="public/categories/Notes/Paper/Biology/Dme/"><span class="level-start"><span class="level-item">Dme</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="public/categories/Notes/Paper/Biology/Reading-Notes/"><span class="level-start"><span class="level-item">Reading Notes</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li></ul></li><li><a class="level is-mobile" href="public/categories/Notes/Statistic/"><span class="level-start"><span class="level-item">Statistic</span></span><span class="level-end"><span class="level-item tag">12</span></span></a><ul><li><a class="level is-mobile" href="public/categories/Notes/Statistic/Data-Scientists/"><span class="level-start"><span class="level-item">Data Scientists</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile" href="public/categories/Notes/Statistic/Distribution/"><span class="level-start"><span class="level-item">Distribution</span></span><span class="level-end"><span class="level-item tag">5</span></span></a></li><li><a class="level is-mobile" href="public/categories/Notes/Statistic/others/"><span class="level-start"><span class="level-item">others</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li></ul></li><li><a class="level is-mobile" href="public/categories/Notes/others/"><span class="level-start"><span class="level-item">others</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li></ul></li><li><a class="level is-mobile" href="public/categories/Paper/"><span class="level-start"><span class="level-item">Paper</span></span><span class="level-end"><span class="level-item tag">2</span></span></a><ul><li><a class="level is-mobile" href="public/categories/Paper/Biology/"><span class="level-start"><span class="level-item">Biology</span></span><span class="level-end"><span class="level-item tag">1</span></span></a><ul><li><a class="level is-mobile" href="public/categories/Paper/Biology/Immunology/"><span class="level-start"><span class="level-item">Immunology</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li><li><a class="level is-mobile" href="public/categories/Paper/Diseases/"><span class="level-start"><span class="level-item">Diseases</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li><li><a class="level is-mobile" href="public/categories/Python/"><span class="level-start"><span class="level-item">Python</span></span><span class="level-end"><span class="level-item tag">127</span></span></a><ul><li><a class="level is-mobile" href="public/categories/Python/API/"><span class="level-start"><span class="level-item">API</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile" href="public/categories/Python/Beginner/"><span class="level-start"><span class="level-item">Beginner</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile" href="public/categories/Python/Bio/"><span class="level-start"><span class="level-item">Bio</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile" href="public/categories/Python/Crawler/"><span class="level-start"><span class="level-item">Crawler</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile" href="public/categories/Python/Data/"><span class="level-start"><span class="level-item">Data</span></span><span class="level-end"><span class="level-item tag">17</span></span></a><ul><li><a class="level is-mobile" href="public/categories/Python/Data/Machine-Learning/"><span class="level-start"><span class="level-item">Machine Learning</span></span><span class="level-end"><span class="level-item tag">7</span></span></a><ul><li><a class="level is-mobile" href="public/categories/Python/Data/Machine-Learning/Deep-Learning/"><span class="level-start"><span class="level-item">Deep Learning</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="public/categories/Python/Data/Machine-Learning/RNN/"><span class="level-start"><span class="level-item">RNN</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li><li><a class="level is-mobile" href="public/categories/Python/Data/Matrix/"><span class="level-start"><span class="level-item">Matrix</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li></ul></li><li><a class="level is-mobile" href="public/categories/Python/GUI/"><span class="level-start"><span class="level-item">GUI</span></span><span class="level-end"><span class="level-item tag">1</span></span></a><ul><li><a class="level is-mobile" href="public/categories/Python/GUI/others/"><span class="level-start"><span class="level-item">others</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li><li><a class="level is-mobile" href="public/categories/Python/Kivy/"><span class="level-start"><span class="level-item">Kivy</span></span><span class="level-end"><span class="level-item tag">30</span></span></a><ul><li><a class="level is-mobile" href="public/categories/Python/Kivy/Toolbox/"><span class="level-start"><span class="level-item">Toolbox</span></span><span class="level-end"><span class="level-item tag">10</span></span></a></li></ul></li><li><a class="level is-mobile" href="public/categories/Python/OpenCV/"><span class="level-start"><span class="level-item">OpenCV</span></span><span class="level-end"><span class="level-item tag">17</span></span></a></li><li><a class="level is-mobile" href="public/categories/Python/Plot/"><span class="level-start"><span class="level-item">Plot</span></span><span class="level-end"><span class="level-item tag">7</span></span></a></li><li><a class="level is-mobile" href="public/categories/Python/Scripting/"><span class="level-start"><span class="level-item">Scripting</span></span><span class="level-end"><span class="level-item tag">14</span></span></a><ul><li><a class="level is-mobile" href="public/categories/Python/Scripting/Module/"><span class="level-start"><span class="level-item">Module</span></span><span class="level-end"><span class="level-item tag">9</span></span></a></li><li><a class="level is-mobile" href="public/categories/Python/Scripting/Practice/"><span class="level-start"><span class="level-item">Practice</span></span><span class="level-end"><span class="level-item tag">5</span></span></a></li></ul></li><li><a class="level is-mobile" href="public/categories/Python/TUI/"><span class="level-start"><span class="level-item">TUI</span></span><span class="level-end"><span class="level-item tag">6</span></span></a><ul><li><a class="level is-mobile" href="public/categories/Python/TUI/Urwid/"><span class="level-start"><span class="level-item">Urwid</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile" href="public/categories/Python/TUI/others/"><span class="level-start"><span class="level-item">others</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li></ul></li><li><a class="level is-mobile" href="public/categories/Python/others/"><span class="level-start"><span class="level-item">others</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li></ul></li><li><a class="level is-mobile" href="public/categories/R/"><span class="level-start"><span class="level-item">R</span></span><span class="level-end"><span class="level-item tag">84</span></span></a><ul><li><a class="level is-mobile" href="public/categories/R/Beginner/"><span class="level-start"><span class="level-item">Beginner</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="public/categories/R/Bio/"><span class="level-start"><span class="level-item">Bio</span></span><span class="level-end"><span class="level-item tag">10</span></span></a><ul><li><a class="level is-mobile" href="public/categories/R/Bio/Abi/"><span class="level-start"><span class="level-item">Abi</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="public/categories/R/Bio/Anno-Enrich/"><span class="level-start"><span class="level-item">Anno/Enrich</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="public/categories/R/Bio/DEG/"><span class="level-start"><span class="level-item">DEG</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="public/categories/R/Bio/Fasta/"><span class="level-start"><span class="level-item">Fasta</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="public/categories/R/Bio/WGCNA/"><span class="level-start"><span class="level-item">WGCNA</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li></ul></li><li><a class="level is-mobile" href="public/categories/R/Data/"><span class="level-start"><span class="level-item">Data</span></span><span class="level-end"><span class="level-item tag">9</span></span></a><ul><li><a class="level is-mobile" href="public/categories/R/Data/Data-Clean/"><span class="level-start"><span class="level-item">Data Clean</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="public/categories/R/Data/Machine-Learning/"><span class="level-start"><span class="level-item">Machine Learning</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile" href="public/categories/R/Data/Statistic/"><span class="level-start"><span class="level-item">Statistic</span></span><span class="level-end"><span class="level-item tag">3</span></span></a><ul><li><a class="level is-mobile" href="public/categories/R/Data/Statistic/Regression/"><span class="level-start"><span class="level-item">Regression</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li></ul></li></ul></li><li><a class="level is-mobile" href="public/categories/R/Image/"><span class="level-start"><span class="level-item">Image</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="public/categories/R/Pack-your-pack/"><span class="level-start"><span class="level-item">Pack your pack</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="public/categories/R/Plot/"><span class="level-start"><span class="level-item">Plot</span></span><span class="level-end"><span class="level-item tag">56</span></span></a><ul><li><a class="level is-mobile" href="public/categories/R/Plot/Blog/"><span class="level-start"><span class="level-item">Blog</span></span><span class="level-end"><span class="level-item tag">1</span></span></a><ul><li><a class="level is-mobile" href="public/categories/R/Plot/Blog/Algorithm/"><span class="level-start"><span class="level-item">Algorithm</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li><li><a class="level is-mobile" href="public/categories/R/Plot/GGPLOT/"><span class="level-start"><span class="level-item">GGPLOT</span></span><span class="level-end"><span class="level-item tag">39</span></span></a></li><li><a class="level is-mobile" href="public/categories/R/Plot/Heatmap/"><span class="level-start"><span class="level-item">Heatmap</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="public/categories/R/Plot/Maps/"><span class="level-start"><span class="level-item">Maps</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="public/categories/R/Plot/VisuaProtocol/"><span class="level-start"><span class="level-item">VisuaProtocol</span></span><span class="level-end"><span class="level-item tag">5</span></span></a></li><li><a class="level is-mobile" href="public/categories/R/Plot/others/"><span class="level-start"><span class="level-item">others</span></span><span class="level-end"><span class="level-item tag">9</span></span></a></li></ul></li><li><a class="level is-mobile" href="public/categories/R/libraries/"><span class="level-start"><span class="level-item">libraries</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="public/categories/R/others/"><span class="level-start"><span class="level-item">others</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li></ul></li><li><a class="level is-mobile" href="public/categories/others/"><span class="level-start"><span class="level-item">others</span></span><span class="level-end"><span class="level-item tag">30</span></span></a><ul><li><a class="level is-mobile" href="public/categories/others/Android/"><span class="level-start"><span class="level-item">Android</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="public/categories/others/Blog/"><span class="level-start"><span class="level-item">Blog</span></span><span class="level-end"><span class="level-item tag">25</span></span></a><ul><li><a class="level is-mobile" href="public/categories/others/Blog/HTML/"><span class="level-start"><span class="level-item">HTML</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="public/categories/others/Blog/Hexo/"><span class="level-start"><span class="level-item">Hexo</span></span><span class="level-end"><span class="level-item tag">17</span></span></a></li><li><a class="level is-mobile" href="public/categories/others/Blog/Sharing/"><span class="level-start"><span class="level-item">Sharing</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="public/categories/others/Blog/Yuque/"><span class="level-start"><span class="level-item">Yuque</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="public/categories/others/Blog/more/"><span class="level-start"><span class="level-item">more</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li></ul></li><li><a class="level is-mobile" href="public/categories/others/Tools/"><span class="level-start"><span class="level-item">Tools</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="public/categories/others/else/"><span class="level-start"><span class="level-item">else</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li></ul></li></ul></div></div></div></div></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="public/"><img src="https://s1.ax1x.com/2022/09/27/xZnL6K.png" alt="Karobben" height="28"></a><script async src="/js/busuanzi.pure.js"></script><span id="busuanzi_container_site_pv">Visitied by <span id="busuanzi_value_site_pv"></span> times</span><p class="is-size-7"><span>&copy; 2024 Karobben</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/Karobben"><i class="fab fa-github"></i></a></p></div></div></div></div><script src="https://cdnjs.cloudflare.com/ajax/libs/viz.js/1.7.1/viz.js"></script></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("en");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="public/js/column.js"></script><script src="public/js/animation.js"></script><a id="back-to-top" title="Back to top" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="public/js/back_to_top.js" defer></script><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
+      window.cookieconsent.initialise({
+        type: "info",
+        theme: "edgeless",
+        static: false,
+        position: "bottom-left",
+        content: {
+          message: "This website uses cookies to improve your experience.",
+          dismiss: "Got it!",
+          allow: "Allow cookies",
+          deny: "Decline",
+          link: "Learn more",
+          policy: "Cookie Policy",
+          href: "https://www.cookiesandyou.com/",
+        },
+        palette: {
+          popup: {
+            background: "#edeff5",
+            text: "#838391"
+          },
+          button: {
+            background: "#4b81e8"
+          },
+        },
+      });
+    });</script><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><script type="text/x-mathjax-config">MathJax.Hub.Config({
+            'HTML-CSS': {
+                matchFontHeight: false
+            },
+            SVG: {
+                matchFontHeight: false
+            },
+            CommonHTML: {
+                matchFontHeight: false
+            },
+            tex2jax: {
+                inlineMath: [
+                    ['$','$'],
+                    ['\\(','\\)']
+                ]
+            }
+        });</script><script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/unpacked/MathJax.js?config=TeX-MML-AM_CHTML" defer></script><!--!--><!--!--><!--!--><script src="public/js/main.js" defer></script><script src="https://unpkg.com/mermaid@8.8.4/dist/mermaid.min.js"></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="Type something..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="public/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"public/content.json"}, {"hint":"Type something...","untitled":"(Untitled)","posts":"Posts","pages":"Pages","categories":"Categories","tags":"Tags"});
+        });</script><script src="public/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"public/live2dw/assets/shizuku.model.json"},"display":{"position":"left","width":150,"height":300},"mobile":{"show":true},"react":{"opacity":0.7}});</script></body></html>
