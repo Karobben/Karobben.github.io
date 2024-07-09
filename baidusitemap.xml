@@ -1,24 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://karobben.github.io/2020/06/13/Blog/Hexo_gitpage/</loc>
-    <lastmod>2024-07-01</lastmod>
+    <loc>https://karobben.github.io/2024/07/06/Bioinfor/foldx/</loc>
+    <lastmod>2024-07-06</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2024/06/27/Bioinfor/juicer/</loc>
+    <lastmod>2024-07-05</lastmod>
   </url>
   <url>
     <loc>https://karobben.github.io/2024/06/30/Bioinfor/LongReads/</loc>
+    <lastmod>2024-07-05</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2024/06/17/Bioinfor/wholegenomesequencing/</loc>
+    <lastmod>2024-07-04</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2020/06/23/Linux/github/</loc>
+    <lastmod>2024-07-03</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2020/06/13/Blog/Hexo_gitpage/</loc>
     <lastmod>2024-07-01</lastmod>
   </url>
   <url>
     <loc>https://karobben.github.io/2024/06/26/Bioinfor/NextDenovo/</loc>
     <lastmod>2024-06-30</lastmod>
-  </url>
-  <url>
-    <loc>https://karobben.github.io/2024/06/27/Bioinfor/juicer/</loc>
-    <lastmod>2024-06-30</lastmod>
-  </url>
-  <url>
-    <loc>https://karobben.github.io/2024/06/17/Bioinfor/wholegenomesequencing/</loc>
-    <lastmod>2024-06-26</lastmod>
   </url>
   <url>
     <loc>https://karobben.github.io/2020/07/28/Bioinfor/sratools/</loc>
@@ -150,10 +158,6 @@
   </url>
   <url>
     <loc>https://karobben.github.io/2024/01/03/Linux/nvimr/</loc>
-    <lastmod>2024-01-20</lastmod>
-  </url>
-  <url>
-    <loc>https://karobben.github.io/2020/06/23/Linux/github/</loc>
     <lastmod>2024-01-20</lastmod>
   </url>
   <url>
