@@ -2,7 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://karobben.github.io/2024/07/06/Bioinfor/foldx/</loc>
-    <lastmod>2024-07-09</lastmod>
+    <lastmod>2024-07-18</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2024/06/17/Bioinfor/wholegenomesequencing/</loc>
+    <lastmod>2024-07-17</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2024/01/02/LearnNotes/igstructure/</loc>
+    <lastmod>2024-07-15</lastmod>
   </url>
   <url>
     <loc>https://karobben.github.io/2024/06/27/Bioinfor/juicer/</loc>
@@ -11,10 +19,6 @@
   <url>
     <loc>https://karobben.github.io/2024/06/30/Bioinfor/LongReads/</loc>
     <lastmod>2024-07-05</lastmod>
-  </url>
-  <url>
-    <loc>https://karobben.github.io/2024/06/17/Bioinfor/wholegenomesequencing/</loc>
-    <lastmod>2024-07-04</lastmod>
   </url>
   <url>
     <loc>https://karobben.github.io/2020/06/23/Linux/github/</loc>
@@ -1298,10 +1302,6 @@
   </url>
   <url>
     <loc>https://karobben.github.io/2023/02/20/LearnNotes/fruchterman-reingold/</loc>
-    <lastmod>2024-01-12</lastmod>
-  </url>
-  <url>
-    <loc>https://karobben.github.io/2024/01/02/LearnNotes/igstructure/</loc>
     <lastmod>2024-01-12</lastmod>
   </url>
   <url>
