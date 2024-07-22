@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://karobben.github.io/2024/01/02/LearnNotes/igstructure/</loc>
+    <lastmod>2024-07-22</lastmod>
+  </url>
+  <url>
     <loc>https://karobben.github.io/2024/07/06/Bioinfor/foldx/</loc>
     <lastmod>2024-07-21</lastmod>
   </url>
@@ -11,10 +15,6 @@
   <url>
     <loc>https://karobben.github.io/2024/06/17/Bioinfor/wholegenomesequencing/</loc>
     <lastmod>2024-07-17</lastmod>
-  </url>
-  <url>
-    <loc>https://karobben.github.io/2024/01/02/LearnNotes/igstructure/</loc>
-    <lastmod>2024-07-15</lastmod>
   </url>
   <url>
     <loc>https://karobben.github.io/2024/06/27/Bioinfor/juicer/</loc>
