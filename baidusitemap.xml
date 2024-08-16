@@ -1,12 +1,84 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://karobben.github.io/2024/01/02/LearnNotes/igstructure/</loc>
-    <lastmod>2024-07-22</lastmod>
+    <loc>https://karobben.github.io/2024/08/16/LearnNotes/DLVOtheory/</loc>
+    <lastmod>2024-08-16</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2024/08/16/AI/KernelDensityEstimation/</loc>
+    <lastmod>2024-08-16</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2024/08/09/AI/taylorseries/</loc>
+    <lastmod>2024-08-16</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2024/05/29/AI/protein3dml/</loc>
+    <lastmod>2024-08-16</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2024/05/30/AI/SAnnealing/</loc>
+    <lastmod>2024-08-16</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2021/11/06/Python/dbscan/</loc>
+    <lastmod>2024-08-14</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2020/06/23/R/PCA/</loc>
+    <lastmod>2024-08-14</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2020/06/26/Linux/tmux/</loc>
+    <lastmod>2024-08-14</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2021/09/17/Bioinfor/pymol/</loc>
+    <lastmod>2024-07-25</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2020/01/22/Python/Transfer_Learning/</loc>
+    <lastmod>2024-07-23</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2022/10/01/Python/dash-bio1/</loc>
+    <lastmod>2024-07-23</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2020/09/12/Python/npyscreen/</loc>
+    <lastmod>2024-07-23</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2022/06/17/Python/python-2D-density-plot/</loc>
+    <lastmod>2024-07-23</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2020/05/26/R/pathview/</loc>
+    <lastmod>2024-07-23</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2024/01/03/Linux/nvimr/</loc>
+    <lastmod>2024-07-23</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2020/01/22/Python/BaseMap/</loc>
+    <lastmod>2024-07-23</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2020/11/29/Python/Bio_SSP/</loc>
+    <lastmod>2024-07-23</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2020/01/22/Python/Matplotlib/</loc>
+    <lastmod>2024-07-23</lastmod>
   </url>
   <url>
     <loc>https://karobben.github.io/2024/07/06/Bioinfor/foldx/</loc>
-    <lastmod>2024-07-21</lastmod>
+    <lastmod>2024-07-23</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2024/01/02/LearnNotes/igstructure/</loc>
+    <lastmod>2024-07-22</lastmod>
   </url>
   <url>
     <loc>https://karobben.github.io/2020/06/23/Linux/awk/</loc>
@@ -61,10 +133,6 @@
     <lastmod>2024-06-06</lastmod>
   </url>
   <url>
-    <loc>https://karobben.github.io/2024/05/29/AI/protein3dml/</loc>
-    <lastmod>2024-06-01</lastmod>
-  </url>
-  <url>
     <loc>https://karobben.github.io/2024/02/05/AI/ai-linear/</loc>
     <lastmod>2024-06-01</lastmod>
   </url>
@@ -75,10 +143,6 @@
   <url>
     <loc>https://karobben.github.io/2024/02/18/AI/ai-multilayer/</loc>
     <lastmod>2024-05-31</lastmod>
-  </url>
-  <url>
-    <loc>https://karobben.github.io/2024/05/30/AI/SAnnealing/</loc>
-    <lastmod>2024-05-30</lastmod>
   </url>
   <url>
     <loc>https://karobben.github.io/2024/05/18/LearnNotes/ab1223rule/</loc>
@@ -141,10 +205,6 @@
     <lastmod>2024-02-09</lastmod>
   </url>
   <url>
-    <loc>https://karobben.github.io/2021/09/17/Bioinfor/pymol/</loc>
-    <lastmod>2024-02-04</lastmod>
-  </url>
-  <url>
     <loc>https://karobben.github.io/2024/01/18/LearnNotes/light/</loc>
     <lastmod>2024-02-02</lastmod>
   </url>
@@ -157,16 +217,8 @@
     <lastmod>2024-01-31</lastmod>
   </url>
   <url>
-    <loc>https://karobben.github.io/2020/01/22/Python/Matplotlib/</loc>
-    <lastmod>2024-01-23</lastmod>
-  </url>
-  <url>
     <loc>https://karobben.github.io/2020/07/28/Bioinfor/blast/</loc>
     <lastmod>2024-01-23</lastmod>
-  </url>
-  <url>
-    <loc>https://karobben.github.io/2024/01/03/Linux/nvimr/</loc>
-    <lastmod>2024-01-20</lastmod>
   </url>
   <url>
     <loc>https://karobben.github.io/2022/03/31/Python/py-gam/</loc>
@@ -230,10 +282,6 @@
   </url>
   <url>
     <loc>https://karobben.github.io/2020/06/20/R/nCov/</loc>
-    <lastmod>2024-01-12</lastmod>
-  </url>
-  <url>
-    <loc>https://karobben.github.io/2020/05/26/R/pathview/</loc>
     <lastmod>2024-01-12</lastmod>
   </url>
   <url>
@@ -405,10 +453,6 @@
     <lastmod>2024-01-12</lastmod>
   </url>
   <url>
-    <loc>https://karobben.github.io/2020/06/23/R/PCA/</loc>
-    <lastmod>2024-01-12</lastmod>
-  </url>
-  <url>
     <loc>https://karobben.github.io/2020/06/20/R/Ploty/</loc>
     <lastmod>2024-01-12</lastmod>
   </url>
@@ -545,10 +589,6 @@
     <lastmod>2024-01-12</lastmod>
   </url>
   <url>
-    <loc>https://karobben.github.io/2022/06/17/Python/python-2D-density-plot/</loc>
-    <lastmod>2024-01-12</lastmod>
-  </url>
-  <url>
     <loc>https://karobben.github.io/2022/04/07/Python/py_cellmask/</loc>
     <lastmod>2024-01-12</lastmod>
   </url>
@@ -610,10 +650,6 @@
   </url>
   <url>
     <loc>https://karobben.github.io/2020/09/12/Python/multyprocesser/</loc>
-    <lastmod>2024-01-12</lastmod>
-  </url>
-  <url>
-    <loc>https://karobben.github.io/2020/09/12/Python/npyscreen/</loc>
     <lastmod>2024-01-12</lastmod>
   </url>
   <url>
@@ -765,19 +801,11 @@
     <lastmod>2024-01-12</lastmod>
   </url>
   <url>
-    <loc>https://karobben.github.io/2022/10/01/Python/dash-bio1/</loc>
-    <lastmod>2024-01-12</lastmod>
-  </url>
-  <url>
     <loc>https://karobben.github.io/2023/03/01/Python/dictionary/</loc>
     <lastmod>2024-01-12</lastmod>
   </url>
   <url>
     <loc>https://karobben.github.io/2022/07/20/Python/fastqc_crawl/</loc>
-    <lastmod>2024-01-12</lastmod>
-  </url>
-  <url>
-    <loc>https://karobben.github.io/2021/11/06/Python/dbscan/</loc>
     <lastmod>2024-01-12</lastmod>
   </url>
   <url>
@@ -829,19 +857,11 @@
     <lastmod>2024-01-12</lastmod>
   </url>
   <url>
-    <loc>https://karobben.github.io/2020/01/22/Python/Transfer_Learning/</loc>
-    <lastmod>2024-01-12</lastmod>
-  </url>
-  <url>
     <loc>https://karobben.github.io/2020/06/23/Python/VedioSlice.py/</loc>
     <lastmod>2024-01-12</lastmod>
   </url>
   <url>
     <loc>https://karobben.github.io/2020/06/23/Python/Vedio_reverse.py/</loc>
-    <lastmod>2024-01-12</lastmod>
-  </url>
-  <url>
-    <loc>https://karobben.github.io/2020/11/29/Python/Bio_SSP/</loc>
     <lastmod>2024-01-12</lastmod>
   </url>
   <url>
@@ -897,10 +917,6 @@
     <lastmod>2024-01-12</lastmod>
   </url>
   <url>
-    <loc>https://karobben.github.io/2020/06/26/Linux/tmux/</loc>
-    <lastmod>2024-01-12</lastmod>
-  </url>
-  <url>
     <loc>https://karobben.github.io/2023/06/15/Linux/ubuntuarm/</loc>
     <lastmod>2024-01-12</lastmod>
   </url>
@@ -914,10 +930,6 @@
   </url>
   <url>
     <loc>https://karobben.github.io/2020/06/22/Python/Animation-Text/</loc>
-    <lastmod>2024-01-12</lastmod>
-  </url>
-  <url>
-    <loc>https://karobben.github.io/2020/01/22/Python/BaseMap/</loc>
     <lastmod>2024-01-12</lastmod>
   </url>
   <url>
