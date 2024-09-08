@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://karobben.github.io/2024/02/01/LearnNotes/ai-bayes/</loc>
+    <lastmod>2024-09-08</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2020/06/26/Linux/tar/</loc>
+    <lastmod>2024-08-31</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2020/06/26/Linux/System/</loc>
+    <lastmod>2024-08-28</lastmod>
+  </url>
+  <url>
     <loc>https://karobben.github.io/2024/08/16/LearnNotes/DLVOtheory/</loc>
     <lastmod>2024-08-16</lastmod>
   </url>
@@ -158,10 +170,6 @@
   </url>
   <url>
     <loc>https://karobben.github.io/2024/02/12/LearnNotes/ai-hmm/</loc>
-    <lastmod>2024-02-16</lastmod>
-  </url>
-  <url>
-    <loc>https://karobben.github.io/2024/02/01/LearnNotes/ai-bayes/</loc>
     <lastmod>2024-02-16</lastmod>
   </url>
   <url>
@@ -913,10 +921,6 @@
     <lastmod>2024-01-12</lastmod>
   </url>
   <url>
-    <loc>https://karobben.github.io/2020/06/26/Linux/tar/</loc>
-    <lastmod>2024-01-12</lastmod>
-  </url>
-  <url>
     <loc>https://karobben.github.io/2023/06/15/Linux/ubuntuarm/</loc>
     <lastmod>2024-01-12</lastmod>
   </url>
@@ -1038,10 +1042,6 @@
   </url>
   <url>
     <loc>https://karobben.github.io/2020/06/26/Linux/Shop-store/</loc>
-    <lastmod>2024-01-12</lastmod>
-  </url>
-  <url>
-    <loc>https://karobben.github.io/2020/06/26/Linux/System/</loc>
     <lastmod>2024-01-12</lastmod>
   </url>
   <url>
