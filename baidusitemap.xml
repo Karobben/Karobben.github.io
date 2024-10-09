@@ -1,6 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://karobben.github.io/2021/09/17/Bioinfor/pymol/</loc>
+    <lastmod>2024-10-01</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2020/06/23/Linux/github/</loc>
+    <lastmod>2024-10-01</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2020/09/12/Python/numpy/</loc>
+    <lastmod>2024-10-01</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2024/09/29/AI/supportvectormachine/</loc>
+    <lastmod>2024-09-30</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2024/09/29/AI/randomforest/</loc>
+    <lastmod>2024-09-30</lastmod>
+  </url>
+  <url>
     <loc>https://karobben.github.io/2024/02/01/LearnNotes/ai-bayes/</loc>
     <lastmod>2024-09-08</lastmod>
   </url>
@@ -43,10 +63,6 @@
   <url>
     <loc>https://karobben.github.io/2020/06/26/Linux/tmux/</loc>
     <lastmod>2024-08-14</lastmod>
-  </url>
-  <url>
-    <loc>https://karobben.github.io/2021/09/17/Bioinfor/pymol/</loc>
-    <lastmod>2024-07-25</lastmod>
   </url>
   <url>
     <loc>https://karobben.github.io/2020/01/22/Python/Transfer_Learning/</loc>
@@ -107,10 +123,6 @@
   <url>
     <loc>https://karobben.github.io/2024/06/30/Bioinfor/LongReads/</loc>
     <lastmod>2024-07-05</lastmod>
-  </url>
-  <url>
-    <loc>https://karobben.github.io/2020/06/23/Linux/github/</loc>
-    <lastmod>2024-07-03</lastmod>
   </url>
   <url>
     <loc>https://karobben.github.io/2020/06/13/Blog/Hexo_gitpage/</loc>
@@ -662,10 +674,6 @@
   </url>
   <url>
     <loc>https://karobben.github.io/2023/02/26/Python/net-path/</loc>
-    <lastmod>2024-01-12</lastmod>
-  </url>
-  <url>
-    <loc>https://karobben.github.io/2020/09/12/Python/numpy/</loc>
     <lastmod>2024-01-12</lastmod>
   </url>
   <url>
