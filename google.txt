@@ -1,3 +1,4 @@
+https://karobben.github.io/2024/10/09/AI/softmax/
 https://karobben.github.io/2024/09/29/AI/supportvectormachine/
 https://karobben.github.io/2024/09/29/AI/randomforest/
 https://karobben.github.io/2024/08/16/LearnNotes/DLVOtheory/
@@ -7,4 +8,3 @@ https://karobben.github.io/2024/07/06/Bioinfor/foldx/
 https://karobben.github.io/2024/06/30/Bioinfor/LongReads/
 https://karobben.github.io/2024/06/27/Bioinfor/juicer/
 https://karobben.github.io/2024/06/26/Bioinfor/NextDenovo/
-https://karobben.github.io/2024/06/24/Bioinfor/IgCaller/
