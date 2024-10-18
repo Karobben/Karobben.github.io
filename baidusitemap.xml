@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://karobben.github.io/2024/10/17/Bioinfor/ncbisubmit/</loc>
+    <lastmod>2024-10-18</lastmod>
+  </url>
+  <url>
     <loc>https://karobben.github.io/2024/10/15/AI/proteindock/</loc>
-    <lastmod>2024-10-15</lastmod>
+    <lastmod>2024-10-16</lastmod>
   </url>
   <url>
     <loc>https://karobben.github.io/2024/05/29/AI/protein3dml/</loc>
