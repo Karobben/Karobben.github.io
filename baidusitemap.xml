@@ -1,8 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://karobben.github.io/2023/12/21/Bioinfor/igblast/</loc>
+    <lastmod>2024-10-24</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2024/10/23/AI/hdf5/</loc>
+    <lastmod>2024-10-24</lastmod>
+  </url>
+  <url>
     <loc>https://karobben.github.io/2024/10/19/Bioinfor/blender-molecular-nodes/</loc>
-    <lastmod>2024-10-23</lastmod>
+    <lastmod>2024-10-24</lastmod>
   </url>
   <url>
     <loc>https://karobben.github.io/2024/10/17/Bioinfor/ncbisubmit/</loc>
@@ -2006,10 +2014,6 @@
   </url>
   <url>
     <loc>https://karobben.github.io/2022/09/16/Bioinfor/genefromgenome/</loc>
-    <lastmod>2024-01-12</lastmod>
-  </url>
-  <url>
-    <loc>https://karobben.github.io/2023/12/21/Bioinfor/igblast/</loc>
     <lastmod>2024-01-12</lastmod>
   </url>
   <url>
