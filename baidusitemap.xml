@@ -1,15 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://karobben.github.io/2023/12/21/Bioinfor/igblast/</loc>
-    <lastmod>2024-10-24</lastmod>
+    <loc>https://karobben.github.io/2024/10/19/Bioinfor/blender-molecular-nodes/</loc>
+    <lastmod>2024-11-02</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2024/10/15/AI/proteindock/</loc>
+    <lastmod>2024-11-02</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2020/07/28/Bioinfor/samtools/</loc>
+    <lastmod>2024-11-01</lastmod>
   </url>
   <url>
     <loc>https://karobben.github.io/2024/10/23/AI/hdf5/</loc>
-    <lastmod>2024-10-24</lastmod>
+    <lastmod>2024-10-30</lastmod>
   </url>
   <url>
-    <loc>https://karobben.github.io/2024/10/19/Bioinfor/blender-molecular-nodes/</loc>
+    <loc>https://karobben.github.io/2020/06/26/Linux/tmux/</loc>
+    <lastmod>2024-10-30</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2020/06/26/Linux/System/</loc>
+    <lastmod>2024-10-29</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2023/12/21/Bioinfor/igblast/</loc>
     <lastmod>2024-10-24</lastmod>
   </url>
   <url>
@@ -19,10 +35,6 @@
   <url>
     <loc>https://karobben.github.io/2020/06/23/Linux/Download-Software/</loc>
     <lastmod>2024-10-18</lastmod>
-  </url>
-  <url>
-    <loc>https://karobben.github.io/2024/10/15/AI/proteindock/</loc>
-    <lastmod>2024-10-16</lastmod>
   </url>
   <url>
     <loc>https://karobben.github.io/2024/05/29/AI/protein3dml/</loc>
@@ -81,10 +93,6 @@
     <lastmod>2024-08-31</lastmod>
   </url>
   <url>
-    <loc>https://karobben.github.io/2020/06/26/Linux/System/</loc>
-    <lastmod>2024-08-28</lastmod>
-  </url>
-  <url>
     <loc>https://karobben.github.io/2024/08/16/LearnNotes/DLVOtheory/</loc>
     <lastmod>2024-08-16</lastmod>
   </url>
@@ -98,10 +106,6 @@
   </url>
   <url>
     <loc>https://karobben.github.io/2020/06/23/R/PCA/</loc>
-    <lastmod>2024-08-14</lastmod>
-  </url>
-  <url>
-    <loc>https://karobben.github.io/2020/06/26/Linux/tmux/</loc>
     <lastmod>2024-08-14</lastmod>
   </url>
   <url>
@@ -1934,10 +1938,6 @@
   </url>
   <url>
     <loc>https://karobben.github.io/2022/11/15/Bioinfor/rna-structure/</loc>
-    <lastmod>2024-01-12</lastmod>
-  </url>
-  <url>
-    <loc>https://karobben.github.io/2020/07/28/Bioinfor/samtools/</loc>
     <lastmod>2024-01-12</lastmod>
   </url>
   <url>
