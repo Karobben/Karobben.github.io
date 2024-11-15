@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://karobben.github.io/2022/12/06/Bioinfor/tcga/</loc>
+    <lastmod>2024-11-11</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2023/12/21/Bioinfor/scvdj-seq/</loc>
+    <lastmod>2024-11-09</lastmod>
+  </url>
+  <url>
     <loc>https://karobben.github.io/2020/06/26/Linux/System/</loc>
     <lastmod>2024-11-08</lastmod>
   </url>
@@ -1921,10 +1929,6 @@
     <lastmod>2024-01-12</lastmod>
   </url>
   <url>
-    <loc>https://karobben.github.io/2022/12/06/Bioinfor/tcga/</loc>
-    <lastmod>2024-01-12</lastmod>
-  </url>
-  <url>
     <loc>https://karobben.github.io/2023/01/09/Bioinfor/string-db/</loc>
     <lastmod>2024-01-12</lastmod>
   </url>
@@ -1970,10 +1974,6 @@
   </url>
   <url>
     <loc>https://karobben.github.io/2023/09/28/Bioinfor/scRNA-start/</loc>
-    <lastmod>2024-01-12</lastmod>
-  </url>
-  <url>
-    <loc>https://karobben.github.io/2023/12/21/Bioinfor/scvdj-seq/</loc>
     <lastmod>2024-01-12</lastmod>
   </url>
   <url>
