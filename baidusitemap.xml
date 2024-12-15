@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://karobben.github.io/2024/12/15/R/ggplot-heatmap/</loc>
+    <lastmod>2024-12-15</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2024/12/15/R/ggplot-prismStyle/</loc>
+    <lastmod>2024-12-15</lastmod>
+  </url>
+  <url>
     <loc>https://karobben.github.io/2024/12/08/Bioinfor/openMM/</loc>
     <lastmod>2024-12-11</lastmod>
   </url>

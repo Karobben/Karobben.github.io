@@ -1,3 +1,5 @@
+https://karobben.github.io/2024/12/15/R/ggplot-heatmap/
+https://karobben.github.io/2024/12/15/R/ggplot-prismStyle/
 https://karobben.github.io/2024/12/08/Bioinfor/openMM/
 https://karobben.github.io/2024/10/23/AI/hdf5/
 https://karobben.github.io/2024/10/19/Bioinfor/blender-molecular-nodes/
@@ -6,5 +8,3 @@ https://karobben.github.io/2024/10/15/AI/proteindock/
 https://karobben.github.io/2024/10/09/AI/softmax/
 https://karobben.github.io/2024/09/29/AI/supportvectormachine/
 https://karobben.github.io/2024/09/29/AI/randomforest/
-https://karobben.github.io/2024/08/16/LearnNotes/DLVOtheory/
-https://karobben.github.io/2024/08/16/AI/KernelDensityEstimation/
