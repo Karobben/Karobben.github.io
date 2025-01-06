@@ -1,10 +1,10 @@
+https://karobben.github.io/2025/01/01/AI/highdimension/
+https://karobben.github.io/2024/12/30/AI/ai-logistic-reg/
+https://karobben.github.io/2024/12/30/AI/linearoptimal/
+https://karobben.github.io/2024/12/30/AI/regularization/
 https://karobben.github.io/2024/12/20/Bioinfor/pyrosetta/
 https://karobben.github.io/2024/12/15/R/ggplot-heatmap/
 https://karobben.github.io/2024/12/15/R/ggplot-prismStyle/
 https://karobben.github.io/2024/12/08/Bioinfor/openMM/
 https://karobben.github.io/2024/10/23/AI/hdf5/
 https://karobben.github.io/2024/10/19/Bioinfor/blender-molecular-nodes/
-https://karobben.github.io/2024/10/17/Bioinfor/ncbisubmit/
-https://karobben.github.io/2024/10/15/AI/proteindock/
-https://karobben.github.io/2024/10/09/AI/softmax/
-https://karobben.github.io/2024/09/29/AI/supportvectormachine/
