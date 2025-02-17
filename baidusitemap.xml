@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://karobben.github.io/2020/06/26/Linux/tmux/</loc>
+    <lastmod>2025-02-17</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2025/02/06/AI/alexnet/</loc>
+    <lastmod>2025-02-06</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2020/06/23/Linux/github/</loc>
+    <lastmod>2025-01-31</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2020/06/26/Linux/To-Start-With-Linux/</loc>
+    <lastmod>2025-01-31</lastmod>
+  </url>
+  <url>
     <loc>https://karobben.github.io/2024/07/06/Bioinfor/foldx/</loc>
     <lastmod>2025-01-24</lastmod>
   </url>
@@ -11,10 +27,6 @@
   <url>
     <loc>https://karobben.github.io/2025/01/22/Bioinfor/esm/</loc>
     <lastmod>2025-01-22</lastmod>
-  </url>
-  <url>
-    <loc>https://karobben.github.io/2020/06/23/Linux/github/</loc>
-    <lastmod>2025-01-21</lastmod>
   </url>
   <url>
     <loc>https://karobben.github.io/2020/07/28/Bioinfor/Bioconda/</loc>
@@ -83,10 +95,6 @@
   <url>
     <loc>https://karobben.github.io/2024/12/15/R/ggplot-heatmap/</loc>
     <lastmod>2024-12-15</lastmod>
-  </url>
-  <url>
-    <loc>https://karobben.github.io/2020/06/26/Linux/tmux/</loc>
-    <lastmod>2024-11-22</lastmod>
   </url>
   <url>
     <loc>https://karobben.github.io/2022/12/06/Bioinfor/tcga/</loc>
@@ -1066,10 +1074,6 @@
   </url>
   <url>
     <loc>https://karobben.github.io/2021/05/19/Linux/Termux/</loc>
-    <lastmod>2024-01-12</lastmod>
-  </url>
-  <url>
-    <loc>https://karobben.github.io/2020/06/26/Linux/To-Start-With-Linux/</loc>
     <lastmod>2024-01-12</lastmod>
   </url>
   <url>
