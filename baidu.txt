@@ -1,3 +1,4 @@
+https://karobben.github.io/2025/04/05/AI/alphafold/
 https://karobben.github.io/2025/03/13/LearnNotes/hemagglutinin/
 https://karobben.github.io/2025/03/03/Bioinfor/protein-loop/
 https://karobben.github.io/2025/02/06/AI/alexnet/
@@ -7,4 +8,3 @@ https://karobben.github.io/2025/01/01/AI/highdimension/
 https://karobben.github.io/2024/12/30/AI/ai-logistic-reg/
 https://karobben.github.io/2024/12/30/AI/linearoptimal/
 https://karobben.github.io/2024/12/30/AI/regularization/
-https://karobben.github.io/2024/12/20/Bioinfor/pyrosetta/
