@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://karobben.github.io/2024/05/29/AI/protein3dml/</loc>
+    <lastmod>2025-04-10</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2025/04/05/AI/alphafold/</loc>
+    <lastmod>2025-04-10</lastmod>
+  </url>
+  <url>
     <loc>https://karobben.github.io/2024/10/15/AI/proteindock/</loc>
     <lastmod>2025-04-07</lastmod>
   </url>
   <url>
     <loc>https://karobben.github.io/2020/06/23/Linux/github/</loc>
     <lastmod>2025-04-06</lastmod>
-  </url>
-  <url>
-    <loc>https://karobben.github.io/2025/04/05/AI/alphafold/</loc>
-    <lastmod>2025-04-06</lastmod>
-  </url>
-  <url>
-    <loc>https://karobben.github.io/2024/05/29/AI/protein3dml/</loc>
-    <lastmod>2025-04-05</lastmod>
   </url>
   <url>
     <loc>https://karobben.github.io/2020/07/28/Bioinfor/samtools/</loc>
