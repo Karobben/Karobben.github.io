@@ -1,11 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://karobben.github.io/2025/04/28/AI/backpropagation/</loc>
-    <lastmod>2025-04-28</lastmod>
+    <loc>https://karobben.github.io/2025/04/23/AI/gnn/</loc>
+    <lastmod>2025-07-17</lastmod>
   </url>
   <url>
-    <loc>https://karobben.github.io/2025/04/23/AI/gnn/</loc>
+    <loc>https://karobben.github.io/2025/07/06/Bioinfor/scRNA-read/</loc>
+    <lastmod>2025-07-17</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2025/07/09/Bioinfor/cellranger-scRNA/</loc>
+    <lastmod>2025-07-17</lastmod>
+  </url>
+  <url>
+    <loc>https://karobben.github.io/2025/04/28/AI/backpropagation/</loc>
     <lastmod>2025-04-28</lastmod>
   </url>
   <url>
